@@ -38,5 +38,35 @@ class LayersWidget(QtGui.QWidget):
 	def init(self):
 		
 		lst = layers.layers_list()
-		print lst
 		
+		for l in lst:
+			item = QtGui.QTreeWidgetItem()
+			item.setText(0, str(l['layer']))
+			item.setFirstColumnSpanned(True)
+			self.tree.addTopLevelItem(item)
+			self.tree.setFirstItemColumnSpanned(item, True)
+			self.tree.setItemExpanded(item, True)
+			dic = l
+			del dic['layer']
+			self.add_dict(item, dic)
+			
+			#for d in dic:
+			#	sitem = QtGui.QTreeWidgetItem(item)
+			#	sitem.setText(0, str(d))
+			#	sitem.setText(1, str(dic[d]))
+			
+			
+	def add_dict(self, pItem, dic):
+		
+		for d in dic:
+			sitem = QtGui.QTreeWidgetItem(pItem)
+			sitem.setText(0, str(d))
+			
+			if isinstance(dic[d], dict):
+				kItem = self.add_dict(sitem, dic[d])
+				#self.tree.setItemExpanded(sitem, True)
+			else:	
+				sitem.setText(1, str(dic[d]))
+			
+			
+				

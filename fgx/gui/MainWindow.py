@@ -67,6 +67,10 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		self.addToolBar(self.topToolBar)
 	
 	
+		self.topToolBar.addAction("Make Docs", self.on_make_docs)
+	
+	
+		##======================================
 		## Left Dock
 		dockLayers = QtGui.QDockWidget( "Map Layers", self)
 		dockLayers.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea | QtCore.Qt.RightDockWidgetArea)
@@ -79,13 +83,10 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		layersWidget.init()
 	
 	
+		##======================================
 		## Right Doc widget
-		proj_list = projects.projects_list()
-		print proj_list
-		
-		
-		
-		
+		# @todo: move this to ProjectwWidget
+		proj_list = projects.projects_list()		
 		for p in proj_list:
 			
 			dock = QtGui.QDockWidget( p['project'], self)
@@ -96,7 +97,7 @@ class FGxMainWindow( QtGui.QMainWindow ):
 			projWidget.set_project(p)
 			
 			self.addDockWidget( QtCore.Qt.RightDockWidgetArea, dock)
-			print p
+			#print p
 		
 		
 		
@@ -112,7 +113,7 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		links.append( ["Project", "http://fgx.ch/projects/fgx-map"] )
 		
 		
-		
+		## @todo Move to config
 		for link in links:
 			browser = BrowserWidget(self, page=link[1])
 			print link
@@ -128,3 +129,9 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		if ret == QtGui.QMessageBox.Yes:
 			#G.settings.save_window( "Window", self )
 			sys.exit( 0 )
+
+			
+	def on_make_docs(self):
+		
+		print "make docs"
+		

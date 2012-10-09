@@ -8,26 +8,26 @@ import yaml
 from fgx import app_global as G 
 
 
-## Return the projects.yaml in text format
+## Return the layers.yaml in text format
 # @return string with yaml contents
 def layers_raw():
 	s = G.read_file("/config/layers.yaml")
 	return s
 
-## Return a list of projects from the config
+## Return a list of layers from the config
 # @return dict of data
 def layers_dict():
-	dic = yaml.load( projects_raw() )
+	dic = yaml.load( layers_raw() )
 	return dic
 
-## Return a list of projects from the config
+## Return a list of layers from the config
 # @return list of data
 def layers_list():
-	projects_dic = projects_dict()
+	layers_dic = layers_dict()
 	lst = []
-	for d in projects_dic:
-		dic = projects_dic[d]
-		#dic['project'] = d
+	for d in layers_dic:
+		dic = layers_dic[d]
+		dic['layer'] = d
 		lst.append(dic)
 	return lst
 
