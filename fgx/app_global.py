@@ -46,3 +46,4 @@ def write_file(path, contents):
 	s = f.write(contents)
 	f.close()
 	return 
+	
