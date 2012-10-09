@@ -42,10 +42,11 @@ class FGxMainWindow( QtGui.QMainWindow ):
         self.setMinimumWidth(600)
         self.setMinimumHeight(600)
         
+        ##====================================================================
         ##==== Menus ====
         self.menuFile = self.menuBar().addMenu( "System" )
         #self.actionLogin = self.menuFile.addAction( dIco.icon( dIco.Login ), "Login as different user", self.on_logout )
-       # self.actionLogin.setIconVisibleInMenu( True )
+        # self.actionLogin.setIconVisibleInMenu( True )
 
         #self.menuFile.addSeparator()
 
@@ -56,12 +57,22 @@ class FGxMainWindow( QtGui.QMainWindow ):
         self.actionQuit = self.menuFile.addAction( "Quit", self.on_quit )
         self.actionQuit.setIconVisibleInMenu( True )
         
+        
+        ##====================================================================
+        ##== Toolbar ==
+        
+        
+        
+        
+        
+        
         ##====================================================================
         ##== TabWidget ==
         self.tabsWidget = QtGui.QTabWidget(self)
         self.setCentralWidget( self.tabsWidget )
         
         links = []
+        links.append( ["Local static map", "file://%s/www_static/index.html" % config.PROJECT_ROOT] )
         links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % config.PROJECT_ROOT] )
         links.append( ["map.fgx.ch", "http://map.fgx.ch/"] )
         links.append( ["Project", "http://fgx.ch/projects/fgx-map"] )
