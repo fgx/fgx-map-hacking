@@ -7,7 +7,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
 
-from fgx import config
+import fgx.app_global as G
 from fgx.projects import projects
 
 from BrowserWidget import BrowserWidget
@@ -65,7 +65,7 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		
 	
 		## Left Doc widget
-		proj_list = projects.projects()
+		proj_list = projects.projects_list()
 		print proj_list
 		for p in proj_list:
 			print p
@@ -78,8 +78,8 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		self.setCentralWidget( self.tabsWidget )
 		
 		links = []
-		links.append( ["Local static map", "file://%s/www_static/index.html" % config.PROJECT_ROOT] )
-		links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % config.PROJECT_ROOT] )
+		links.append( ["Local static map", "file://%s/www_static/index.html" % G.PROJECT_ROOT] )
+		links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % G.PROJECT_ROOT] )
 		links.append( ["map.fgx.ch", "http://map.fgx.ch/"] )
 		links.append( ["Project", "http://fgx.ch/projects/fgx-map"] )
 		

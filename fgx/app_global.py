@@ -1,14 +1,18 @@
 ## 
 # @file app_global.py 
-# @package fgx
 # Application Globals 
 # 
-# Normaly used as import app_global as G
+# 
+# \code 
+# #Normaly used as 
+# import app_global as G
+# \endcode
 
 import os.path
 import yaml
 
-## @var The absolute path to project root
+## @var PROJECT_ROOT
+# @brief The absolute path to project root
 PROJECT_ROOT =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
 #print PROJECT_ROOT
 
