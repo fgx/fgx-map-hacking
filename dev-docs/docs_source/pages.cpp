@@ -1,7 +1,24 @@
 /*!
 \mainpage The Fgx Map Project
 
-Yipee.....
+\section Intro Introduction
+
+@todo: Gral to write sppech
+
+\section ProjectLayout Project Layout
+
+\subsection d_config  config/
+	- This contains the configuration for data, apps and projects
+	
+\subsection d_dev_docs dev-docs/
+	- The documentation for this project is created with \ref doxygen 
+	- The source for this test you are reading is in dev_docs/doc_source/pages.cpp 
+	
+\subsection d_fgx fgx/
+	- This is the \b fgx python lib
+	- Hopefully we can make this a bit more of a global lib
+	- This \b fgx/ directory is documented with \ref doxygen
+
 
 Check:
   - \ref www_static 
@@ -20,6 +37,9 @@ Proj4js is a JavaScript library to transform point coordinates
 from one coordinate system to another, including datum transformations.
 
 - \b website http://trac.osgeo.org/proj4js/
+
+\section doxygen Doxygen
+	- http://doxygen.org
 
 
 

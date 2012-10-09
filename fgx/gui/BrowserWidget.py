@@ -78,7 +78,7 @@ class BrowserWidget( QtGui.QWidget ):
         if self.init_loaded:
             return
         url_str = self.cmbLocations.itemData( self.cmbLocations.currentIndex() ).toString()
-        print "init_load = url_str", url_str
+        #print "init_load = url_str", url_str
         self.send_request( url_str )
         self.init_loaded = True
 
@@ -105,7 +105,7 @@ class BrowserWidget( QtGui.QWidget ):
 
 
     def on_location_combo( self, idx ):
-        print "on_location_combo", idx, self.cmbLocations.itemData( idx ).toString()
+        #print "on_location_combo", idx, self.cmbLocations.itemData( idx ).toString()
         url = QtCore.QUrl( self.cmbLocations.itemData( idx ).toString() )
         self.browser.load( url )
 
@@ -132,16 +132,16 @@ class BrowserWidget( QtGui.QWidget ):
     #################################################
     ## Browser Events
     def on_browser_status_message( self, string ):
-        print "status=", string # does nothing ????
+        #print "status=", string # does nothing ????
         self.statusBar.showMessage( string )
 
     def on_browser_url_changed( self, url ):
         return # doesnt trigger ???
-        print "url=", url, url.toString()
+        #print "url=", url, url.toString()
         self.txtUrl.setText( url.toString() )
 
     def on_browser_link_clicked( self, url ):
-        print "url=", url, url.toString() # doesnt trigger ???
+        #print "url=", url, url.toString() # doesnt trigger ???
         self.txtUrl.setText( url.toString() )
 
 
@@ -152,13 +152,13 @@ class BrowserWidget( QtGui.QWidget ):
         self.progress.setValue( v )
 
     def on_browser_load_finished( self, foo ):
-        print "Finished"
+        #print "Finished"
         self.progress.setVisible( False )
         cookies = self.browser.page().networkAccessManager().cookieJar().allCookies()
-        print "-------- REC COOKIES----------------_"
+        #print "-------- REC COOKIES----------------_"
         G.settings.settings.beginGroup( "cookies" )
         for cookie in cookies:
             G.settings.setValue( "%s" % str( cookie.name() ), str( cookie.value() ) )
-            print "SAVE", cookie.name(), cookie.value()
+            #print "SAVE", cookie.name(), cookie.value()
         G.settings.settings.endGroup()
         G.settings.settings.sync()
