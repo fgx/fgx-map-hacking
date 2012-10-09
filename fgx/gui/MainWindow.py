@@ -3,7 +3,7 @@
 @author: Peter Morgan 
 
 """
-
+import os
 import sys
 from PyQt4 import QtGui, QtCore
 
@@ -110,8 +110,8 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		self.tabsWidget.addTab( self.layersWidget, "Map Layers" ) 
 		
 		links = []
-		links.append( ["Local static map", "file://%s/www_static/index.html" % G.PROJECT_ROOT] )
-		links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % G.PROJECT_ROOT] )
+		links.append( ["Local static map", "file://%s/www_static/index.html" % G.ROOT] )
+		links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % G.ROOT] )
 		links.append( ["map.fgx.ch", "http://map.fgx.ch/"] )
 		links.append( ["Project", "http://fgx.ch/projects/fgx-map"] )
 			
@@ -139,4 +139,12 @@ class FGxMainWindow( QtGui.QMainWindow ):
 	def on_make_docs(self):
 		
 		print "make docs"
+		os.chdir(G.ROOT + "/dev_docs")
+		#if self.V > 0:
+		print "  > curdir: %s" % os.path.abspath( os.curdir )
+		
+		dox_cmd =  "doxygen ./doxygen.conf "
+		#if self.V > 0:
+		print "  > command: %s" % dox_cmd
+		os.system( dox_cmd  )
 		

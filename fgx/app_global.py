@@ -11,10 +11,10 @@
 import os.path
 import yaml
 
-## @var PROJECT_ROOT
+## @var ROOT
 # @brief The absolute path to project root
-PROJECT_ROOT =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
-#print PROJECT_ROOT
+ROOT =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
+#print ROOT
 
 
 ## List of apt-get packes to checkfor
@@ -33,10 +33,16 @@ mapnick
 
 """
 
-## Reads file from project relative to PROJECT_ROOT
+## Reads file from project relative to ROOT
 def read_file(path):
-	f = open(PROJECT_ROOT + path)
+	f = open(ROOT + path, "r")
 	s = f.read()
 	f.close()
 	return s
 	
+## Reads file from project relative to ROOT
+def write_file(path, contents):
+	f = open(ROOT + path, "w")
+	s = f.write(contents)
+	f.close()
+	return 

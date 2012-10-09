@@ -16,20 +16,20 @@ from optparse import OptionParser
 
 ## Handle Command Args
 usage = "usage: %prog [options]\n"
-#usage += "    commands are\n"
-#usage += "       config_js  - sets up js\n"
-#usage += "       build proj1 proj2 - Build one or more projects\n"
-#usage += "       buildall - Build all projects\n"
 parser = OptionParser(usage=usage)
-parser.add_option(	"-j", "--js", 
-					action="store_false", dest="js", default=False, 
+parser.add_option(	"-j", 
+					action="store_true", dest="js", default=False, 
 					help="Write javascript configuration to `/www_static/js/layers.js`"
 					)   
-parser.add_option(	"-n", "--nginx", 
-					action="store_false", dest="js", default=False, 
+parser.add_option(	"-n", 
+					action="store_true", dest="nginx", default=False, 
 					help="Write nginx config to `/etc/nginx.conf`"
-					)  
-parser.add_option(	"-v", "--verbose", nargs=1,
+					) 
+parser.add_option(	"-s", 
+					action="store_true", dest="ln", default=False, 
+					help="Write simlinks"
+					) 
+parser.add_option(	"-v", nargs=1,
 					action="store", type="int", dest="v", default=1,
 					help="Prints more output 0-4 (0=none, 4=loads)"
                   )
@@ -38,6 +38,15 @@ parser.add_option(	"-v", "--verbose", nargs=1,
 
 
 print opts, args
+#print "js=", opts.js
+
+
+
+if opts.js:
+	#print "Write js"
+	from fgx.config import config
+	config.write_js(ln=opts.ln)
+	
 
 
 
