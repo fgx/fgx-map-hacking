@@ -3,12 +3,11 @@
 @author: Peter Morgan
 """
 
-
-
 from PyQt4 import QtCore, QtGui
 
+from fgx.maps import layers
 
-class ProjectWidget(QtGui.QWidget):
+class LayersWidget(QtGui.QWidget):
 	
 	
 	def __init__(self):
@@ -25,7 +24,7 @@ class ProjectWidget(QtGui.QWidget):
 		
 		
 		
-	def set_project(self, dic):
+	def set_layers(self, dic):
 		
 		#self.tree
 		for d in dic:
@@ -36,5 +35,8 @@ class ProjectWidget(QtGui.QWidget):
 			
 			
 		
-	
-	
+	def init(self):
+		
+		lst = layers.layers_list()
+		print lst
+		

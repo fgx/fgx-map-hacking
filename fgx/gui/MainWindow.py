@@ -12,7 +12,7 @@ from fgx.projects import projects
 
 from BrowserWidget import BrowserWidget
 from projects import ProjectWidget
-
+from maps import LayersWidget
 
 class FGxMainWindow( QtGui.QMainWindow ):
 
@@ -66,7 +66,20 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		self.topToolBar.setAllowedAreas(QtCore.Qt.TopToolBarArea)
 		self.addToolBar(self.topToolBar)
 	
-		## Left Doc widget
+	
+		## Left Dock
+		dockLayers = QtGui.QDockWidget( "Map Layers", self)
+		dockLayers.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea | QtCore.Qt.RightDockWidgetArea)
+			
+		layersWidget = LayersWidget()
+		dockLayers.setWidget(layersWidget)
+		
+	
+		self.addDockWidget( QtCore.Qt.LeftDockWidgetArea, dockLayers)
+		layersWidget.init()
+	
+	
+		## Right Doc widget
 		proj_list = projects.projects_list()
 		print proj_list
 		
