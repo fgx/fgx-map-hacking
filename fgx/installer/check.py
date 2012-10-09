@@ -90,13 +90,38 @@ def check_py(as_string=False):
 		ob.installed = False
 		
 		try:
-			module = __import__(modo)
+			module = __import__(ob.module)
 			ob.installed = True
 		except: # ImportError
-			#print "error"
+			print "error", p
 			pass
 	
 		lst.append(ob)
 	
 	
+	if as_string:
+		return spool_str("Python Packages", lst)
+		"""
+		s += "   %s: " % "Python Packages:".ljust(20, " ") 
+		s += "Installed\n"
+		s += "   %s" % "".ljust(20, "-") 
+		s += "--------------\n"
+		for l in lst:
+			s += "   %s: " % l.package.ljust(20, " ")
+			s += "%s  \n" % ( "Yes" if l.installed else "No ")
+			#s += "%s\n" % ( l.version if l.installed else "")
+		return s
+		"""
 	return lst
+	
+def spool_str(title, lst):
+	line = ("-" * 40) + "\n"
+	s = line
+	s += "   %s: Installed\n" % title.ljust(20, " ") 
+	s += line
+	for l in lst:
+		s += "   %s: " % l.package.ljust(20, " ")
+		s += "%s  \n" % ( "Yes" if l.installed else "No ")
+		#s += "%s\n" % ( l.version if l.installed else "")
+	return s
+	
