@@ -8,6 +8,7 @@
 \section index Docs Quick Index
  - \ref ProjectLayout
  - \ref Configuration
+ - \ref run_config 
  - \ref RelatedProjects
 
 
@@ -48,11 +49,8 @@ Check:
  - The general idea is to define the config in a set of files, and then use these
    to create the various client and server side files.
  - The configuration is contained in <b>.yaml</b> encoded files in the \b config/ directory.
+ @see \ref run_config
  
- 
-\section run_config run_config.py 
- - The \b run_config.py command is used to create the various configurations
-
 \section config_files Config Files
 
 \subsection resolutions_yaml resolutions.yaml
@@ -62,6 +60,19 @@ This contains a list of resoltions. This is spooled to confg.js and tilecache co
 \subsection layers_yaml layers.yaml
 This contains a list of layers
 \include config/layers.yaml
+
+
+ 
+*****************************************************
+\page run_config run_config.py
+ - The \b run_config.py command is used to create the various configurations
+ 
+\section run_config_options  Options
+ - <b>-j</b> - Writes out javascript to <b>/etc/config.js</b>
+ - <b>-t</b> - Writes out tilecache to <b>/etc/tilecache.cfg</b>
+ 
+
+
 
 *****************************************************
 \page RelatedProjects Releated Projects and Libraries

@@ -139,7 +139,7 @@ class FGxMainWindow( QtGui.QMainWindow ):
 	def on_make_docs(self):
 		
 		print "make docs"
-		os.chdir(G.ROOT + "/dev_docs")
+		os.chdir(G.ROOT + "/dev-docs")
 		#if self.V > 0:
 		print "  > curdir: %s" % os.path.abspath( os.curdir )
 		
