@@ -13,6 +13,7 @@ import os
 from optparse import OptionParser
 
 import fgx.app_global as G
+from fgx.config import config
 
 ## Handle Command Args
 usage = "usage: %prog [-h -j -n -s -v] "
@@ -46,10 +47,21 @@ parser.add_option(	"-l",
 #print opts, args
 #print "js=", opts.js
 
-parser.print_usage()
+#parser.print_usage()
 
 if opts.local:
-	print "Create localconfig"
+	print "Create local"
+	
+	dic = {"use_db": "n", "db": {"database": "aptdat850", "user": "fgx-map", "pass": "secret"}}
+	
+	dic['use_db'] = raw_input("Use database y/n (default: %s( ? " % dic['use_db'] ) or dic['use_db']
+	
+	if dic['use_db'] == "y":
+		dic['db']['database'] = raw_input("Database Name (default: %s) ? " % dic['db']['database'] ) or dic['db']['database']
+		dic['db']['user'] = raw_input("Database User (default: %s) ? " % dic['db']['user'] ) or dic['db']['user']
+		dic['db']['pass'] = raw_input("Database password (default: %s) ? " % dic['db']['pass'] ) or dic['db']['pass']
+	
+	config.write_local_config({"config": dic})
 	
 	sys.exit(0)
 
@@ -58,11 +70,10 @@ if opts.local:
 if G.check_sane():
 	print "errors"
 	
-
+	sys.exit(0)
 
 if opts.js:
-	#print "Write js"
-	from fgx.config import config
+
 	config.write_js(ln=opts.ln)
 	
 

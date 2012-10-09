@@ -1,6 +1,7 @@
 
 import os
 import json
+import yaml
 from string import Template
 
 import fgx.app_global as G
@@ -73,12 +74,21 @@ def write_js(ln=False):
 		os.symlink(G.ROOT + out_path, ln_path)
 		
 	
-	
+## Writes out nginx config
+# @ todo by pete
 def write_nginx(ln=False):
 	
 	s = "server: "
 	
 	out_path = "/etc/nginx.conf"	
 	G.write_file(out_path, s)
+	
+	
+## Writes out \b local_config.yaml	
+def write_local_config(dic):
+	
+	s = yaml.dump(dic)
+	G.write_file("/local_config.yaml", s)
+	
 	
 	

@@ -26,7 +26,7 @@ this.graticule = new OpenLayers.Control.Graticule({
     autoActivate: false,
     layerName: "Graticule",
     labelFormat: "dmm",
-    lineSymbolizer: graticuleLine,
+    lineSymbolizer: this.graticuleLine,
     //visibility:false
 });
 
@@ -63,18 +63,18 @@ this.options = {
 
 this.init = function () {
 
-    alert("init()");
+    console.log("init()");
     this.mapnik = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
-    mapnik.setOpacity(1.0);
+    this.mapnik.setOpacity(1.0);
 
     this.mapnik_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
-    mapnik_light.setOpacity(0.4);
+    this.mapnik_light.setOpacity(0.4);
 
 
 	//alert("init")
-	console.log(options)
+	console.log(this.options)
 
-	this.map = new OpenLayers.Map("map", this.options);
+	this.map = new OpenLayers.Map("map_div", this.options);
 
 	this.map.fractionalZoom = true;
 
@@ -113,7 +113,7 @@ this.init = function () {
     
     this.map.addControl(this.graticule);
         
-
+	console.log("after grat")
     this.map.addControl(new OpenLayers.Control.Permalink('permalink'));
     this.map.addControl(new OpenLayers.Control.MousePosition());
     var ls = new OpenLayers.Control.LayerSwitcher( { roundedCorner: false } );
