@@ -4,18 +4,23 @@
  *
  */
 
-var map;
+function FGxMap()
+{
+	
+this.map = null;
         
+// wtf is this
 document.namespaces;
 
-var graticuleLine = new OpenLayers.Symbolizer.Line({
+// @brief Graticule Line
+this.graticuleLine = new OpenLayers.Symbolizer.Line({
     strokeColor: "#999999",
     strokeDashstyle: "longdash",
     strokeWidth: 0.4
 });
             
-
-var graticule = new OpenLayers.Control.Graticule({
+// @brief Graticule 
+this.graticule = new OpenLayers.Control.Graticule({
     numPoints: 2, 
     labelled: true,
     autoActivate: false,
@@ -26,7 +31,7 @@ var graticule = new OpenLayers.Control.Graticule({
 });
 
 
-var options = { 
+this.options = { 
     units: 'm',
     // this is the map projection here
     projection: new OpenLayers.Projection("EPSG:3857"),
@@ -56,136 +61,30 @@ var options = {
 };
 
 
-function init() {
+this.init = function () {
 
-    
-    var mapnik = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+    alert("init()");
+    this.mapnik = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
     mapnik.setOpacity(1.0);
 
-    var mapnik_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+    this.mapnik_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
     mapnik_light.setOpacity(0.4);
 
 
+	//alert("init")
+	console.log(options)
 
-    var fgx_ne_landmass = new OpenLayers.Layer.WMS( "NE Landmass", 
-        "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-            {
-            layers: 'fgx_ne_landmass', 
-            format: 'image/png', 
-            isBaselayer: true 
-            }
-        );
-    
-    
-    var fgx_850_apt = new OpenLayers.Layer.WMS( "Airfield", 
-        "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-            {layers: 'fgx_850_apt', 
-            format: 'image/png',
-            transparent:'TRUE'
-            },
-            {
-            visibility:false
-            }
-        );
-    
-    var fgx_850_vor = new OpenLayers.Layer.WMS( "VOR", 
-        "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-            {layers: 'fgx_850_vor', 
-            format: 'image/png',
-            transparent:'TRUE'
-            },
-            {
-            visibility:false
-            }
-        );
-    
-var fgx_850_dme = new OpenLayers.Layer.WMS( "DME", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?",
-        {layers: 'fgx_850_dme', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
-    
-var fgx_850_ndb = new OpenLayers.Layer.WMS( "NDB", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-        {layers: 'fgx_850_ndb', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
-    
-var fgx_850_ils = new OpenLayers.Layer.WMS( "ILS LOC", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-        {layers: 'fgx_850_ils', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
-    
-var fgx_850_ils_info = new OpenLayers.Layer.WMS( "ILS INFO", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-        {layers: 'fgx_850_ils_info', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
-    
-var fgx_850_ils_marker = new OpenLayers.Layer.WMS( "ILS OM/MM", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-        {layers: 'fgx_850_ils_marker', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
-    
-var fgx_850_fix = new OpenLayers.Layer.WMS( "FIX", 
-    "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-        {layers: 'fgx_850_fix', 
-        format: 'image/png',
-        transparent:'TRUE'
-        },
-        {
-        visibility:false
-        }
-    );
+	this.map = new OpenLayers.Map("map", this.options);
 
-console.log(options)
+	this.map.fractionalZoom = true;
 
-map = new OpenLayers.Map("map", options);
+	
 
-map.fractionalZoom = true;
-
-alert("init")
-
-map.addLayers([
-    //fgx_ne_landmass,
-    mapnik,
-    mapnik_light,
-    //fgx_850_apt,
-    fgx_850_vor,
-    fgx_850_dme,
-    fgx_850_ndb,
-    fgx_850_ils,
-    fgx_850_ils_info,
-    fgx_850_ils_marker,
-    fgx_850_fix
-    ]);
+	this.map.addLayers([
+		//fgx_ne_landmass,
+		this.mapnik,
+		this.mapnik_light
+	]);
     
 
     /*map.events.register('click', map, function (e) {
@@ -212,20 +111,24 @@ map.addLayers([
     OpenLayers.Util.getElement('clickInfo').innerHTML = 'Clicked @' + xy + '(long/lat: ' + map.getLonLatFromPixel(xy) + ')'
     }*/
     
-    map.addControl(graticule);
+    this.map.addControl(this.graticule);
         
 
-    map.addControl(new OpenLayers.Control.Permalink('permalink'));
-    map.addControl(new OpenLayers.Control.MousePosition());
+    this.map.addControl(new OpenLayers.Control.Permalink('permalink'));
+    this.map.addControl(new OpenLayers.Control.MousePosition());
     var ls = new OpenLayers.Control.LayerSwitcher( { roundedCorner: false } );
-    map.addControl(ls);
+    this.map.addControl(ls);
     ls.maximizeControl();
 
     // to get the center point you can disable displayProjection and get the values in
     // meters with the mouse position or permalink
 
     var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
-    map.setCenter(centerpoint,5);
+    this.map.setCenter(centerpoint, 5);
 
 
-}
+} //* init()
+
+
+}; 
+// <<  End FGxMap()

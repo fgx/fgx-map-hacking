@@ -8,7 +8,8 @@
 # import app_global as G
 # \endcode
 
-import os.path
+import sys
+import os
 import yaml
 
 ## @var ROOT
@@ -32,6 +33,13 @@ doxygen
 mapnick
 
 """
+
+def check_sane():
+	sane =  os.path.exists(ROOT + "/local_config.yaml")
+	if not sane:
+		print "ERROR: local_config.yaml is missing, Create with ./run_config.py -l"
+		sys.exit(1)
+
 
 ## Reads file from project relative to ROOT
 def read_file(path):
