@@ -72,15 +72,15 @@ class FGxMainWindow( QtGui.QMainWindow ):
 	
 		##======================================
 		## Left Dock
-		dockLayers = QtGui.QDockWidget( "Map Layers", self)
-		dockLayers.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea | QtCore.Qt.RightDockWidgetArea)
+		#dockLayers = QtGui.QDockWidget( "Map Layers", self)
+		#dockLayers.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea | QtCore.Qt.RightDockWidgetArea)
 			
-		layersWidget = LayersWidget()
-		dockLayers.setWidget(layersWidget)
+		#self.layersWidget = LayersWidget()
+		#dockLayers.setWidget(layersWidget)
 		
 	
-		self.addDockWidget( QtCore.Qt.LeftDockWidgetArea, dockLayers)
-		layersWidget.init()
+		#self.addDockWidget( QtCore.Qt.LeftDockWidgetArea, dockLayers)
+		#layersWidget.init()
 	
 	
 		##======================================
@@ -106,18 +106,22 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		self.tabsWidget = QtGui.QTabWidget(self)
 		self.setCentralWidget( self.tabsWidget )
 		
+		self.layersWidget = LayersWidget()
+		self.tabsWidget.addTab( self.layersWidget, "Map Layers" ) 
+		
 		links = []
 		links.append( ["Local static map", "file://%s/www_static/index.html" % G.PROJECT_ROOT] )
 		links.append( ["Dev Docs", "file://%s/dev-docs/html/index.html" % G.PROJECT_ROOT] )
 		links.append( ["map.fgx.ch", "http://map.fgx.ch/"] )
 		links.append( ["Project", "http://fgx.ch/projects/fgx-map"] )
-		
-		
+			
 		## @todo Move to config
 		for link in links:
 			browser = BrowserWidget(self, page=link[1])
-			print link
+			#print link
 			self.tabsWidget.addTab( browser, link[0] ) 
+		
+		self.layersWidget.init()
 		
 		
 	def on_quit( self ):
