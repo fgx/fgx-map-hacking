@@ -17,3 +17,9 @@ www_static/ -
 
 
 
+---------------------
+TODO:
+
+proj4 is confused and so is pete
+move 
+
