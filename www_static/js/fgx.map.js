@@ -12,7 +12,7 @@ this.map = null;
 // wtf is this
 document.namespaces;
 
-// @brief Graticule Line
+// @var Graticule Line
 this.graticuleLine = new OpenLayers.Symbolizer.Line({
     strokeColor: "#999999",
     strokeDashstyle: "longdash",
@@ -31,6 +31,7 @@ this.graticule = new OpenLayers.Control.Graticule({
 });
 
 
+// @brief Map Options
 this.options = { 
     units: 'm',
     // this is the map projection here
@@ -63,7 +64,6 @@ this.options = {
 
 this.init = function () {
 
-    console.log("init()");
     this.mapnik = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
     this.mapnik.setOpacity(1.0);
 
@@ -71,20 +71,14 @@ this.init = function () {
     this.mapnik_light.setOpacity(0.4);
 
 
-	//alert("init")
-	console.log(this.options)
-
 	this.map = new OpenLayers.Map("map_div", this.options);
 
 	this.map.fractionalZoom = true;
 
-	
-
-	this.map.addLayers([
-		//fgx_ne_landmass,
-		this.mapnik,
-		this.mapnik_light
-	]);
+	// Make the layers array to add
+	layers_array = [ this.mapnik, this.mapnik_light ]
+	layers_array.push.apply(layers_array, LAYERS )
+	this.map.addLayers( layers_array );
     
 
     /*map.events.register('click', map, function (e) {
@@ -113,7 +107,7 @@ this.init = function () {
     
     this.map.addControl(this.graticule);
         
-	console.log("after grat")
+
     this.map.addControl(new OpenLayers.Control.Permalink('permalink'));
     this.map.addControl(new OpenLayers.Control.MousePosition());
     var ls = new OpenLayers.Control.LayerSwitcher( { roundedCorner: false } );
@@ -122,7 +116,6 @@ this.init = function () {
 
     // to get the center point you can disable displayProjection and get the values in
     // meters with the mouse position or permalink
-
     var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
     this.map.setCenter(centerpoint, 5);
 

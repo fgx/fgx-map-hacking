@@ -29,12 +29,16 @@ parser.add_option(	"-n",
 parser.add_option(	"-s", 
 					action="store_true", dest="ln", default=False, 
 					help="Write symlinks"
+					)
+parser.add_option(	"-t", 
+					action="store_true", dest="tilecache", default=False, 
+					help="Write tilecache"
 					) 
 parser.add_option(	"-v", nargs=1,
 					action="store", type="int", dest="v", default=1,
 					help="Prints more output 0-4 (0=none, 4=loads)"
                   )
-parser.add_option(	"-l", 
+parser.add_option(	"--make-local", 
 					action="store_true", dest="local", default=False, 
 					help="create local config file to `/local_config.yaml`"
 					) 
@@ -49,8 +53,9 @@ parser.add_option(	"-l",
 
 #parser.print_usage()
 
+## Create Local
 if opts.local:
-	print "Create local"
+	
 	
 	dic = {"use_db": "n", "db": {"database": "aptdat850", "user": "fgx-map", "pass": "secret"}}
 	
@@ -67,8 +72,7 @@ if opts.local:
 
 
 
-if G.check_sane():
-	print "errors"
+if not G.check_sane():
 	
 	sys.exit(0)
 
@@ -76,6 +80,8 @@ if opts.js:
 
 	config.write_js(ln=opts.ln)
 	
-
+elif opts.tilecache:
+	
+	config.write_tilecache_cgf()
 
 

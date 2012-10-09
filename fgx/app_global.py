@@ -39,7 +39,7 @@ def check_sane():
 	if not sane:
 		print "ERROR: local_config.yaml is missing, Create with ./run_config.py -l"
 		sys.exit(1)
-
+	return True
 
 ## Reads file from project relative to ROOT
 def read_file(path):
