@@ -123,7 +123,8 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		
 		self.layersWidget.init()
 		
-		
+	## Quit App
+	## @todo: Quit sys.exit() style or Qt,Application.quit() (geogff?)
 	def on_quit( self ):
 		sys.exit(0)
 		
