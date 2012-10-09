@@ -24,13 +24,11 @@ def projects_dict():
 # @return list of data
 def projects_list():
 	projects_dic = projects_dict()
-	print projects_dic
 	lst = []
 	for d in projects_dic:
-		print d
-		#dic = projects_dic[d]
-		#dic[d]['project'] = d
-		#lst.append(dic)
+		dic = projects_dic[d]
+		dic['project'] = d
+		lst.append(dic)
 	return lst
 
 	

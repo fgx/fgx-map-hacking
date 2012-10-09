@@ -11,7 +11,7 @@ import fgx.app_global as G
 from fgx.projects import projects
 
 from BrowserWidget import BrowserWidget
-
+from projects import ProjectWidget
 
 
 class FGxMainWindow( QtGui.QMainWindow ):
@@ -62,12 +62,26 @@ class FGxMainWindow( QtGui.QMainWindow ):
 		
 		##====================================================================
 		##== Toolbar ==
-		
+		self.topToolBar = QtGui.QToolBar(self)
+		self.topToolBar.setAllowedAreas(QtCore.Qt.TopToolBarArea)
+		self.addToolBar(self.topToolBar)
 	
 		## Left Doc widget
 		proj_list = projects.projects_list()
 		print proj_list
+		
+		
+		
+		
 		for p in proj_list:
+			
+			dock = QtGui.QDockWidget( p['project'], self)
+			dock.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea | QtCore.Qt.RightDockWidgetArea)
+			
+			projWidget = ProjectWidget()
+			dock.setWidget(projWidget)
+			
+			self.addDockWidget( QtCore.Qt.RightDockWidgetArea, dock)
 			print p
 		
 		

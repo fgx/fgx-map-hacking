@@ -154,6 +154,7 @@ class BrowserWidget( QtGui.QWidget ):
     def on_browser_load_finished( self, foo ):
         #print "Finished"
         self.progress.setVisible( False )
+        return
         cookies = self.browser.page().networkAccessManager().cookieJar().allCookies()
         #print "-------- REC COOKIES----------------_"
         G.settings.settings.beginGroup( "cookies" )
