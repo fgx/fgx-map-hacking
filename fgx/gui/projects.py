@@ -25,6 +25,16 @@ class ProjectWidget(QtGui.QWidget):
 		
 		
 		
+	def set_project(self, dic):
+		
+		#self.tree
+		for d in dic:
+			item = QtGui.QTreeWidgetItem()
+			item.setText(0, d)
+			item.setText(1, dic[d])
+			self.tree.addTopLevelItem(item)
+			
+			
 		
 	
 	

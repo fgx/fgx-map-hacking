@@ -31,4 +31,4 @@ def projects_list():
 		lst.append(dic)
 	return lst
 
-	
+

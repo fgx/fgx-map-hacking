@@ -80,6 +80,7 @@ class FGxMainWindow( QtGui.QMainWindow ):
 			
 			projWidget = ProjectWidget()
 			dock.setWidget(projWidget)
+			projWidget.set_project(p)
 			
 			self.addDockWidget( QtCore.Qt.RightDockWidgetArea, dock)
 			print p
