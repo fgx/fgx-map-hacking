@@ -52,12 +52,13 @@ def check_apt(as_string=False, verbose=1):
 
 		
 	if as_string:
-		s = "Debian Packages Installed:\n"
+		return spool_str("Debian Packages", lst)
+		"""s = " Installed:\n"
 		for l in lst:
 			s += "   %s: " % l.package.rjust(20, " ")
 			s += "%s  " % ( "Yes" if l.installed else "No ")
 			s += "%s\n" % ( l.version if l.installed else "")
-		return s
+		return s"""
 		
 	return lst
 
@@ -121,7 +122,14 @@ def spool_str(title, lst):
 	s += line
 	for l in lst:
 		s += "   %s: " % l.package.ljust(20, " ")
-		s += "%s  \n" % ( "Yes" if l.installed else "No ")
+		s += "%s  %s\n" % ( "Yes" if l.installed else "No ", l.version if l.version else "")
 		#s += "%s\n" % ( l.version if l.installed else "")
+	return s
+	
+	
+def check_installed(as_string=True):
+	
+	s = check_apt(as_string=True)
+	s += check_py(as_string=True)
 	return s
 	

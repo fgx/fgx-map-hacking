@@ -13,7 +13,8 @@ from fgx.installer import check
 ## Handle Command Args
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
-usage += "      check - Checks for packages istalled"
+usage += "      check - Checks for packages istalled\n"
+usage += "      install [postgres|postgis] - Install apt package"
 parser = OptionParser(usage=usage)
 parser.add_option(	"-v", nargs=1,
 					action="store", type="int", dest="v", default=1,
@@ -37,13 +38,13 @@ else:
 	
 
 if command == "install":
-	print foo
-	
-#print opts, args
+	#if args[1] == 
+	pass
+
 
 ##===========================================
 if command == "check":
-	print check.check_py(as_string=True)
+	print check.check_installed(as_string=True)
 	#print check.check_apt(as_string=True)
 	
 	
