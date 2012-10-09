@@ -8,67 +8,95 @@ import fgx.app_global as G
 
 from fgx.installer import packages
 
-APT_CHECK = "dpkg-query -W -f='${Status} ${Version}' "
+class Package(object):
+	
+	def __init__(self):
+		
+		self.ptype = None
+		self.package = None
+		self.module = None
+		self.installed = None
+		self.version = None
+
+	#def __repr__(self):
+	#	print "<Package: %s>" % self.package
+	#	
+#APT_CHECK = "dpkg-query -W -f='${Status} ${Version}' "
 
 
-
-
-def check_apt(as_string=True):
+def check_apt(as_string=False, verbose=1):
+	
+	v = verbose
 	
 	apt_pkg.init()
 	
 	cache = apt_pkg.Cache()
 	
-	
-	#print "-------------------------------"
-	#print "Checking APT-Packages check_apt()"
-	"""
-	acquire = apt_pkg.Acquire()
-	slist = apt_pkg.SourceList()
-	print slist.read_main_list()
-	for item in acquire.items:
-		print item.desc_uri
-	return
-	"""
 	lst = []
-	for p in sorted(packages.APT):
-		print "\nChecking: %s" % p
-		#print  p
+	for p in packages.APT:
 		
-		#pkg = DebPackage(filename=p)
-		
+		ob = Package()
+		ob.ptype = "apt"
+		ob.package = p
+		ob.installed = None
 		if not p in cache:
-			print "OOPS=", p
+			ob.installed = "UNKNOWN"
 			
 		else:
-		
 			pkg = cache[p]
-			#print "  > pkg=", pkg
-			#print dir(pkg)
-			print "ver=", pkg.current_ver, "state=", pkg.current_state
-			if 1 == 1: # or pkg.is_installed:
-				print "installed=", #pkg.installed
-			else:
-				print "NOT ISNTALLED"
-				#print pkg.name
+			if pkg.current_ver:
+				ob.installed = True
+				ob.version = pkg.current_ver.ver_str
+
+		lst.append( ob )
+
 		
-		"""
-		code, status = commands.getstatusoutput(APT_CHECK + p)
-		print "res=",code, status
+	if as_string:
+		s = "Debian Packages Installed:\n"
+		for l in lst:
+			s += "   %s: " % l.package.rjust(20, " ")
+			s += "%s  " % ( "Yes" if l.installed else "No ")
+			s += "%s\n" % ( l.version if l.installed else "")
+		return s
 		
-		installed = False
-		if code == 256:
+	return lst
+
+
+def install_apt_list():
+	
+	lst = check_apt()
+	
+	for l in lst:
+		print lst
+	
+	
+	
+def install_apt():
+	
+	print install_list()
+	
+	
+##===========================================================
+
+def check_py(as_string=False):
+	
+	lst = []
+	for p in packages.PY:
+		
+		ob = Package()
+		ob.ptype = "py"
+		ob.module = p[0]
+		ob.package = p[1]
+		ob.installed = False
+		
+		try:
+			module = __import__(modo)
+			ob.installed = True
+		except: # ImportError
+			#print "error"
 			pass
-		
-		elif code == 0:
-			if status.startswith("install ok"):
-				parts = status.split()
-				installed = parts[-1]
-			
-		else:
-			print "UNHANDLED"
-		#print res[0], res[1]
-		#print type(res[0])
-		lst.append( [p, installed] )
-		"""
+	
+		lst.append(ob)
+	
+	
 	return lst

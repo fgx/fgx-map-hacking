@@ -3,21 +3,22 @@
 ## List of apt-get packages to check for
 # @todo pete to handle this
 APT = [
-	"postgres-9.1",
+	"postgresql-9.1",
 	"postgis",
 	"python-yaml",
 	"doxygen",
 	"python-mapnik",
-	#"foo-bar",
-	"osm2pgsql"
+	"python-setuptools",
+	"python-psycopg2"
+	#"osm2pgsql"
 ]
 
-## List of python packages to check for
+## List of python packages to check for ["import", "PackageName"]
 # @todo pete to handle this
 PY = [
-	"BeautifulSoup4"    
-	"psycopg2",
-	"python-simplejson",
+	["bs4", "BeautifulSoup4"],    
+	["simplejson", "SimpleJson"],
+	["fooBarXX", "TestUnknown"]
 ]
 
 DEV = [
