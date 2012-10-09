@@ -40,7 +40,7 @@ var options = {
     // by http://yoururltothemap.org/tilecache.py/1.0.0/layername/ etc.
     // (This would not be necessary for 4326/900913 because this values are widely spread in
     // openlayer/osm/google threads, you will find the resolutions there)
-    resolutions: [156543.03390624999883584678,78271.51695312499941792339,39135.75847656249970896170,19567.87923828124985448085,9783.93961914062492724042,4891.96980957031246362021,2445.98490478515623181011,1222.99245239257811590505,611.49622619628905795253,305.74811309814452897626,152.87405654907226448813,76.43702827453613224407,38.21851413726806612203,19.10925706863403306102,9.55462853431701653051,4.77731426715850826525,2.38865713357925413263,1.19432856678962706631,0.59716428339481353316,0.29858214169740676658],
+    resolutions: RESOLUTIONS,
     
     // I set a max and min resolution, means setting available zoomlevels by default
     maxResolution: 156543.03390624999883584678,
@@ -57,8 +57,6 @@ var options = {
 
 
 function init() {
-
-
 
     
     var mapnik = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
@@ -167,12 +165,13 @@ var fgx_850_fix = new OpenLayers.Layer.WMS( "FIX",
         }
     );
 
+console.log(options)
 
 map = new OpenLayers.Map("map", options);
 
 map.fractionalZoom = true;
 
-
+alert("init")
 
 map.addLayers([
     //fgx_ne_landmass,

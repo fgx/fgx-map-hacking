@@ -9,6 +9,7 @@
 
 \subsection d_config  config/
 	- This contains the configuration for data, apps and projects
+	- See the \ref Configuration page for more info
 	
 \subsection d_dev_docs dev-docs/
 	- The documentation for this project is created with \ref doxygen 
@@ -25,6 +26,17 @@ Check:
   - \ref RelatedProjects
 
 
+*****************************************************
+\page Configuration  Configuration
+The configuration is contained in \b .yaml encoded files in the \b config/ directory.
+
+\section resolutions_yaml resolutions.yaml
+This contains a list of resoltions. This is spooled to js and tilcache config
+\include config/resolutions.yaml
+
+\section layers_yaml layers.yaml
+This contains a list of layers
+\include config/layers.yaml
 
 *****************************************************
 \page RelatedProjects Releated Projects and Libraries

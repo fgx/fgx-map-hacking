@@ -4,6 +4,7 @@
 # -*- coding: utf-8 -*-
 
 import yaml
+import json
 
 from fgx import app_global as G 
 
@@ -32,3 +33,10 @@ def layers_list():
 	return lst
 
 
+def resolutions_raw():
+	s = G.read_file("/config/resolutions.yaml")
+	return s
+	
+def resolutions():
+	dic = yaml.load( resolutions_raw() )
+	return dic['resolutions']
