@@ -28,8 +28,14 @@ def write_js(ln=False):
 	## Get Resolutions
 	resos = layers.resolutions()
 	
-	js_str = "var RESOLUTIONS = " + json.dumps(resos)
+	js_str = "var RESOLUTIONS = %s\n\n" % json.dumps(resos, indent=4)
 	
+
+	
+	layers_l = layers.layers_list()
+	js_str += "var LAYERS = [];\n"
+	
+	"""
 	var fgx_850_fix = new OpenLayers.Layer.WMS( "FIX", 
     "http://map.fgx.ch:81/mapnik/fgxcache.py?", 
         {layers: 'fgx_850_fix', 
@@ -40,19 +46,21 @@ def write_js(ln=False):
         visibility:false
         }
     );
+    """
     
-	"""
-	layers_l = layers.layers_list()
-	js_str += "var LAYERS = []\n"
-	
 	for d in layers_l:
+		s = "LAYERS.push( new OpenLayers.Layer.WMS(\n"
+		s += '  "%s",\n  "%s",\n' % ( d['title'], d['url'] )
+		s += "  %s,\n" % json.dumps(d['vars']) 
+		s += "  %s\n" % json.dumps( {'visibility': d['visibility']} ) 
+		s += "));\n"
 		#d['format'] = "image/png"
 		#d['transparent'] = "TRUE"
 		#print d
-		s = Template(LAYER_JS_TPL).substitute(d)
+		#s = Template(LAYER_JS_TPL).substitute(d)
 		js_str += s
 		
-	"""	
+	
 		
 		
 	out_path = "/etc/config.js"	
