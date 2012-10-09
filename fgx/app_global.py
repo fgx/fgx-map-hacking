@@ -18,25 +18,6 @@ ROOT =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
 #print ROOT
 
 
-## List of apt-get packages to check for
-# @todo pete to handle this
-APT_PACKAGES = [
-	"postgres-9.1",
-	"postgis",
-	"python-yaml",
-	"python-qt4",
-	"doxygen",
-	"python-mapnik"
-]
-
-## List of python packages to check for
-# @todo pete to handle this
-PY_PACKAGES = [
-	"BeautifulSoup4"    
-	"psycopg2",
-	"python-simplejson",
-]
-
 
 def check_sane():
 	sane =  os.path.exists(ROOT + "/local_config.yaml")
