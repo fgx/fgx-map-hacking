@@ -1,5 +1,10 @@
-This file is for you to describe the fgxmap application. Typically
-you would include information such as the information below:
+
+This is a pylons app and is WIP:
+
+features:
+ * GeoAlchemy with postgis/postgres
+ * Seperate threaded mp bot
+ * Ajax Interface
 
 Installation and Setup
 ======================
