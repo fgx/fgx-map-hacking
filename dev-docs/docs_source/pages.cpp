@@ -45,6 +45,20 @@ Check:
 
 
 *****************************************************
+\page Postgres  Postgres Db
+
+required: 9.1 ?
+
+install with postgres, 
+and if on desktop u need the pgadmin
+and if online u need psycop the python connector ruby =
+\code
+sudo apt-get install postgres
+
+\endcode
+ 
+
+*****************************************************
 \page Configuration  Configuration
  - The general idea is to define the config in a set of files, and then use these
    to create the various client and server side files.
