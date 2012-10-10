@@ -4,18 +4,51 @@ you would include information such as the information below:
 Installation and Setup
 ======================
 
-easy_install GeoAlchemy
+----------------------------------------
+1) Requirements
+----------------------------------------
+This needs the following packages
 
-Install ``fgxmap`` using easy_install::
+easy_install 
 
-    easy_install fgxmap
+Pylons Jinja2 SQLAlchemy GeoAlchemy SimpleJson
 
-Make a config file as follows::
 
-    paster make-config fgxmap config.ini
 
-Tweak the config file as appropriate and then setup the application::
+----------------------------------------
+2) Local Config
+----------------------------------------
+> copy the 
+development.ini.skel
+> to
+development.ini
+(or gral.ini or geoff.ini)
 
-    paster setup-app config.ini
+U need to change the sqlalchemy url to you local flavour
 
-Then you are ready to go.
+
+----------------------------------------
+3) setup the database
+----------------------------------------
+use the following command to creat
+the db struct
+
+paster setup-app ./development.ini
+
+
+
+----------------------------------------
+4) Run the webserver with
+----------------------------------------
+
+paster serve --reload ./development.ini
+
+and then browse http://locahost:5000
+
+Note the --reload forces the server to resart
+after any local file changes (slows things down)
+
+
+
+
+
