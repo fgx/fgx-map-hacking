@@ -37,7 +37,7 @@ class Dme(models.Model):
 	elevation_m = models.IntegerField()
 	freq_mhz = models.CharField(max_length=10)
 	range_km = models.CharField(max_length=10)
-	bias_km = Column(Numeric(precision=2, scale=None, as_decimal=True), nullable=True)
+	bias_km = models.IntegerField()
 	geom = models.PointField(srid=SRID)
 
 	def __repr__(self):
@@ -84,7 +84,7 @@ class Threshold(models.Model):
 	__tablename__ = "threshold"
 
 	thresh_pk = models.IntegerField(primary_key=True)
-	rwy_id = models.CharField(msx_length=5, db_index=True)
+	rwy_id = models.CharField(max_length=5, db_index=True)
 	apt_icao = models.CharField(max_length=10, db_index=True)
 	rwy = models.CharField(max_length=10, db_index=True)
 	

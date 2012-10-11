@@ -16,3 +16,6 @@ then read
 
 
 
+apt-get reomove postgis libgeos-v.e.r
+
+
