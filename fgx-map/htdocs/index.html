@@ -117,7 +117,7 @@
 
 			
 			
-			var fgx_ne_landmass = new OpenLayers.Layer.WMS( "NE Landmass", 
+			var fgx_ne_landmass = new OpenLayers.Layer.WMS( "Natural Earth", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{
 					layers: 'fgx_ne_landmass', 
@@ -214,6 +214,17 @@
 					visibility:false
 					}
 				);
+				
+			var fgx_850_rwy = new OpenLayers.Layer.WMS( "Runways", 
+				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
+					{layers: 'fgx_850_rwy', 
+					format: 'image/png',
+					transparent:'TRUE'
+					},
+					{
+					visibility:false
+					}
+				);
             
 			
             map = new OpenLayers.Map("map", options);
@@ -223,10 +234,11 @@
 			
 			
 			map.addLayers([
-				//fgx_ne_landmass,
-				mapnik,
 				mapnik_light,
-				//fgx_850_apt,
+				mapnik,
+				fgx_ne_landmass,
+				fgx_850_rwy,
+				fgx_850_apt,
 				fgx_850_vor,
 				fgx_850_dme,
 				fgx_850_ndb,
@@ -234,6 +246,7 @@
 				fgx_850_ils_info,
 				fgx_850_ils_marker,
 				fgx_850_fix
+				
 				]);
 				
 
@@ -294,7 +307,7 @@
 
 	  <div id="fgxlogo">
 		<img src="images/fgx-cap-40x30.png" alt="FGx Logo">&nbsp;&nbsp;
-		<b>FGx Mapserver</b>, © 2012 Yves Sablonier (Zurich) --- EPSG:3857 --- Data: CC-By-SA by OpenStreetMap/GPLv2 by xplane (1000, 08.12) and Yves Sablonier
+		<b>FGx Mapserver</b>, © 2012 Yves Sablonier (Zurich) --- EPSG:3857 --- Data: CC-By-SA/ODBL by OpenStreetMap/GPLv2 by xplane (1000, 08.12)/NaturalEarth and Yves Sablonier
 		</p>
 	</div>
    <script type="text/javascript" defer="defer">
