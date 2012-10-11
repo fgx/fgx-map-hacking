@@ -2,7 +2,6 @@
 #
 # (c) 2012, Pete Morgan, wales
 # GPLv2 or later
-# Do not change or remove this copyright notice.
 #
 
 
@@ -12,6 +11,7 @@ import os
 from optparse import OptionParser
 
 
+#from fgx import shell_config
 from fgx.xplane import shell
 
 
@@ -19,7 +19,7 @@ from fgx.xplane import shell
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
 usage += "      avail - Lists latest files available on server\n"
-usage += "      download - Download a zip file\n"
+usage += "      download down d - Download a zip file\n"
 usage += "      local - View local data\n"
 
 parser = OptionParser(usage=usage)
@@ -42,7 +42,7 @@ if len(args) == 0:
 	sys.exit(0)
 
 ##  Valid command ?
-if not args[0] in ['avail', 'download']:
+if not args[0] in ['avail', 'download', "down", "d"]:
 	print "Error: Unkown command %s" % args[0]
 	parser.print_help()
 	sys.exit(0)
@@ -55,24 +55,14 @@ command = args[0]
 ## Execute Commands
 ##=======================================
 	
-##== List Files
+##== List Remote Files
 if command == "avail":
 	shell.print_remote_list()
 	
 
-
-	
 ##== Download a file
-elif command == "download":
+elif command in ["download", "down", "d"]:
 	
-	
-	serverObj = server.Server()
-	print serverObj.show_index()
-
-	x = raw_input("Enter Idx No to download (enter for none)? ") or None
-	#print "x=", x
-	if x != None:
-		# @todo: Chack its an int and it exists
-		serverObj.fetch_zip(idx=int(x))
+	shell.do_download()
 	
 

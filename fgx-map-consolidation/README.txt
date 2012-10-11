@@ -14,6 +14,15 @@ xplane
 
 --------------------------------------
 
+Platform:
+
+Curr:
+
+postgres 9.1
+
+Need a script or a PPAa preferably
+
+
 
 Run the app
   > ./run_gui.pyw

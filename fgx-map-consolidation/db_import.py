@@ -7,16 +7,13 @@
 # @version 0.1.exp
 # 
 
+
 import sys
 import os
 from optparse import OptionParser
 
-from django_app import shell_config
+from fgx import shell_config
 
-
-print "TODODO"
-
-This will setup the database, check etc
 
 ## Handle Command Args
 usage = "usage: %prog [options] data ./path"
@@ -28,35 +25,13 @@ parser.add_option("-v", nargs=1,
                   )
 
 (opts, args) = parser.parse_args()
+#print  opts, args
 
-if len(args) == 0:
-	
-	print "ERROR Not enught"
-	parser.print_help()
-	sys.exit(0)
-	
-	
-command = args[0]
-
-
-
-####################################
-
-
-if command == "create":
-	
-	print "Create"
-
-	sys.exit(0)
-
-
-zx_path = "/home/fgxl/xplane-tools/_temp/AptNav201208XP1000/"
-
+command = "fix"
 
 if command == "fix":
-	
-		from xplane import fix
-		fix.import_dat(zx_path)
+	from fgx.xplane import fix
+
 	
 	
 	

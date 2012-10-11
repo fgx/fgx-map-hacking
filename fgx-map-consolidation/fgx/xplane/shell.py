@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 #from BeautifulSoup import BeautifulSoup
 import operator
 
+from fgx.shell_config import TEMP_DIR
 
 XPLANE_URL = 'http://data.x-plane.com/update/data/'
 
@@ -140,12 +141,15 @@ class Server():
 		
 		#print "NFO=", fileObj
 		
+		download_dir = TEMP_DIR + "/downloads/"
+		if not os.path.exists(download_dir):
+			os.mkdir(download_dir)
 		
-		save_target = conf.TEMP_DIR + "" + fileObj.file_name
-		
+		save_target = download_dir + fileObj.file_name
+		print "save_target=%s" % save_target
 		## check target exists
 		if os.path.exists(save_target):
-			print ">> zip file already exists in 'temp/downloads/' " 
+			print ">> zip file already exists in '%s' " % save_target
 			print ">> checking if sane: ",
 			try:
 				zf = zipfile.ZipFile(save_target, "r")
@@ -196,3 +200,14 @@ def print_remote_list():
 	serverObj = Server()
 	print serverObj.show_index()
 
+	
+def do_download():
+	serverObj = Server()
+	print serverObj.show_index()
+
+	x = raw_input("Enter download Idx: (enter for cancel)? ") or None
+	#print "x=", x
+	if x != None:
+		# @todo: Chack its an int and it exists
+		serverObj.fetch_zip(idx=int(x))
+		

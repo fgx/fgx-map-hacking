@@ -1,6 +1,6 @@
 
 
-from fgxmap.models import Fix
+from fgx.fgxmap.models import Fix
 
 def import_dat(foo):
 	
