@@ -3,15 +3,25 @@
 from django.db import models
 from django.contrib.gis.db import models
 
+"""
+Pete's guidelines
+
+* make the table names singular, avoids problems with 's's
+* needs a *_pk field each table, - use pk not is as avoid poss name clash
+
+"""
+
+
 
 SRID = 3857 # ?? gral ?
 
 ##=======================================================
 class Airport(models.Model):
-	__tablename__ = "airport"
 	
-	#apt_pk = models.Integer, primary_key=True) 
-	# Maybe apt_icao is primary key
+	class Meta:
+		db_table = "airport"
+	
+	apt_pk = models.IntegerField(primary_key=True) 
 	apt_icao = models.CharField(max_length=6, unique=True, db_index=True)
 	apt_name = models.CharField(max_length=100, db_index=True)
 	elevation = models.CharField(max_length=30)
@@ -28,7 +38,9 @@ class Airport(models.Model):
 
 ##=======================================================
 class Dme(models.Model):
-	__tablename__ = "dme"
+	
+	class Meta:
+		db_table = "dme"
 	
 	dme_pk = models.IntegerField(primary_key=True)
 	ident = models.CharField(max_length=4, db_index=True)
@@ -47,14 +59,18 @@ class Dme(models.Model):
 
 ##=======================================================
 class Fix(models.Model):
-	__tablename__ = "fix"
+	
+	class Meta:
+		db_table = "fix"
+		verbose_name = "fix"
+		verbose_name_plural = "fix"
 	
 	fix_pk = models.IntegerField( primary_key=True)
-	fix_name = models.CharField(max_length=10, db_index=True)
+	fix = models.CharField(max_length=10, db_index=True)	
 	geom = models.PointField(srid=SRID)
 
 	def __repr__(self):
-		return "<Fix: %s>" % (self.icao)
+		return "<Fix: %s>" % (self.fix)
 	
 
 
@@ -62,7 +78,9 @@ class Fix(models.Model):
 
 ##=======================================================
 class Runway(models.Model):
-	__tablename__ = "runway"
+	
+	class Meta:
+		db_table = "runway"
 	
 	rwy_pk = models.IntegerField( primary_key=True)
 	apt_icao = models.CharField(max_length=10, db_index=True)
@@ -81,7 +99,9 @@ class Runway(models.Model):
 
 ##=======================================================
 class Threshold(models.Model):
-	__tablename__ = "threshold"
+	
+	class Meta:
+		db_table = "threshold"
 
 	thresh_pk = models.IntegerField(primary_key=True)
 	rwy_id = models.CharField(max_length=5, db_index=True)
