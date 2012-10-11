@@ -1,7 +1,7 @@
 # Django settings for fgxmap project.
 
 import os
-APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
+APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__)))
 
 
 DEBUG = True
@@ -112,10 +112,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'fgxmap.urls'
+ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'fgxmap.wsgi.application'
+WSGI_APPLICATION = 'fgxmap.wsgi.application' ## ????? said pete
 
 
 TEMPLATE_DIRS = (
