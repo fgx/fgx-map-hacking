@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MRLB">
+		<linecode>1</linecode>
+		<elevation>270</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>MRLB</identifier>
+		<name>Daniel Oduber Quiros Intl</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>10.58905000</latitude>
+			<longitude>-085.55629200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>10.59752800</latitude_end>
+			<longitude_end>-085.53252800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2764.51661172</length-meters>
+			<length-feet>8426.24663253</length-feet>
+			<heading id="07 ">70.1730982229</heading>
+			<heading_end id="25 ">250.168729539</heading_end>
+			<threshold_lat id="07 ">10.58905</threshold_lat>
+			<threshold_lon id="07 ">-85.556292</threshold_lon>
+			<threshold_lat_end id="25 ">10.597528</threshold_lat_end>
+			<threshold_lon_end id="25 ">-85.532528</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>10.59004102</latitude>
+			<longitude>-085.55471003</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>70.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>10.59822100</latitude>
+			<longitude>085.54241900</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>10.59819200</latitude>
+			<longitude>-085.54245500</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.59022300</latitude>
+			<longitude>-085.55542000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.59788500</latitude>
+			<longitude>-085.53391900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>LIBERIA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>LIBERIA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

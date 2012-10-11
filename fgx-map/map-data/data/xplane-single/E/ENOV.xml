@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENOV">
+		<linecode>1</linecode>
+		<elevation>243</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENOV</identifier>
+		<name>Orsta-Volda Hovden</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>62.17804848</latitude>
+			<longitude>006.06638417</longitude>
+			<threshold>29.87</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>62.18194352</latitude_end>
+			<longitude_end>006.08083983</longitude_end>
+			<threshold_end>35.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>869.147108715</length-meters>
+			<length-feet>2649.16038736</length-feet>
+			<heading id="07 ">60.0427103182</heading>
+			<heading_end id="25 ">240.029925471</heading_end>
+			<threshold_lat id="07 ">62.1781823142</threshold_lat>
+			<threshold_lon id="07 ">6.06688097021</threshold_lon>
+			<threshold_lat_end id="25 ">62.1817822898</threshold_lat_end>
+			<threshold_lon_end id="25 ">6.08024157993</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>62.17934747</latitude>
+			<longitude>006.06989518</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>59.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>62.18061748</latitude>
+			<longitude>006.07722595</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>240.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>62.18062600</latitude>
+			<longitude>006.08180200</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>62.18093900</latitude>
+			<longitude>006.08177300</longitude>
+			<heading>40.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>62.18081079</latitude>
+			<longitude>006.07260356</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.17826322</latitude>
+			<longitude>006.06545336</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.18172868</latitude>
+			<longitude>006.08177066</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

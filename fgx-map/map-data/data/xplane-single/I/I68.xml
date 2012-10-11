@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="I68 ">
+		<linecode>1</linecode>
+		<elevation>898</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>I68</identifier>
+		<name>LEBANON WARREN CO</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>19.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>39.45601100</latitude>
+			<longitude>-084.25242800</longitude>
+			<threshold>192.02</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>39.46833600</latitude_end>
+			<longitude_end>-084.25126700</longitude_end>
+			<threshold_end>124.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1372.01765067</length-meters>
+			<length-feet>4181.90979925</length-feet>
+			<heading id="01 ">4.17656839771</heading>
+			<heading_end id="19 ">184.175830502</heading_end>
+			<threshold_lat id="01 ">39.4577359395</threshold_lat>
+			<threshold_lon id="01 ">-84.2522655089</threshold_lon>
+			<threshold_lat_end id="19 ">39.4672133799</threshold_lat_end>
+			<threshold_lon_end id="19 ">-84.2513727478</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>39.45955046</latitude>
+			<longitude>-084.25246752</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>4.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>39.46539840</latitude>
+			<longitude>-084.25117085</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>184.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.46221708</latitude>
+			<longitude>-084.25265213</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.45585248</latitude>
+			<longitude>-084.25278844</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.46849452</latitude>
+			<longitude>-084.25090650</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11892">118.92</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12307">123.07</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="11940">119.4</frequency>
+			<description>DAYTON CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>DAYTON APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12650">126.5</frequency>
+			<description>DAYTON DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

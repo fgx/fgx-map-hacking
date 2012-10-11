@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KHLM">
+		<linecode>1</linecode>
+		<elevation>603</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KHLM</identifier>
+		<name>PARK TOWNSHIP</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>42.79366700</latitude>
+			<longitude>-086.16605600</longitude>
+			<threshold>220.98</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>42.79895800</latitude_end>
+			<longitude_end>-086.15750000</longitude_end>
+			<threshold_end>348.08</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.015764038</length-meters>
+			<length-feet>2785.92004879</length-feet>
+			<heading id="05 ">49.9822275019</heading>
+			<heading_end id="23 ">229.976414606</heading_end>
+			<threshold_lat id="05 ">42.7949461003</threshold_lat>
+			<threshold_lon id="05 ">-86.1639873882</threshold_lon>
+			<threshold_lat_end id="23 ">42.7969428877</threshold_lat_end>
+			<threshold_lon_end id="23 ">-86.1607582325</threshold_lon_end>
+		</runway>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>27.43</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>42.79649400</latitude>
+			<longitude>-086.16615300</longitude>
+			<threshold>310.59</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>42.79412200</latitude_end>
+			<longitude_end>-086.15843600</longitude_end>
+			<threshold_end>249.94</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>684.119305164</length-meters>
+			<length-feet>2085.19564214</length-feet>
+			<heading id="12 ">112.656941284</heading>
+			<heading_end id="30 ">292.651698499</heading_end>
+			<threshold_lat id="12 ">42.7954169411</threshold_lat>
+			<threshold_lon id="12 ">-86.1626495446</threshold_lon>
+			<threshold_lat_end id="30 ">42.7949884702</threshold_lat_end>
+			<threshold_lon_end id="30 ">-86.1612554116</threshold_lon_end>
+		</runway>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.79373591</latitude>
+			<longitude>-086.16637959</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.79693092</latitude>
+			<longitude>-086.16626836</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.79888906</latitude>
+			<longitude>-086.15717640</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.79368507</latitude>
+			<longitude>-086.15832070</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12395">123.95</frequency>
+			<description>MUSKEGON CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>MUSKEGON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

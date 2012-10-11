@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKBG">
+		<linecode>1</linecode>
+		<elevation>3896</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SKBG</identifier>
+		<name>PALONEGRO</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>49.99</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>07.13605600</latitude>
+			<longitude>-073.18838900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>07.11694400</latitude_end>
+			<longitude_end>-073.18113900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2260.26457332</length-meters>
+			<length-feet>6889.28641949</length-feet>
+			<heading id="17 ">159.248247725</heading>
+			<heading_end id="35 ">339.247348287</heading_end>
+			<threshold_lat id="17 ">7.136056</threshold_lat>
+			<threshold_lon id="17 ">-73.188389</threshold_lon>
+			<threshold_lat_end id="35 ">7.116944</threshold_lat_end>
+			<threshold_lon_end id="35 ">-73.181139</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>07.12657594</latitude>
+			<longitude>-073.18191163</longitude>
+			<orientation>190.11</orientation>
+			<width>32.00</width>
+			<length>32.31</length>
+			<surface code="5">Gravel (grey)</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>07.13372763</latitude>
+			<longitude>-073.18699425</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>159.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>07.11936525</latitude>
+			<longitude>-073.18255745</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>339.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>07.12791059</latitude>
+			<longitude>073.18249097</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12745300</latitude>
+			<longitude>073.18196341</longitude>
+			<heading>11.31</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12736628</latitude>
+			<longitude>073.18151110</longitude>
+			<heading>11.31</heading>
+			<name>Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12729962</latitude>
+			<longitude>073.18106717</longitude>
+			<heading>11.31</heading>
+			<name>Ramp 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12721549</latitude>
+			<longitude>073.18061416</longitude>
+			<heading>11.31</heading>
+			<name>Ramp 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12637112</latitude>
+			<longitude>073.18076355</longitude>
+			<heading>87.77</heading>
+			<name>Ramp 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.12647829</latitude>
+			<longitude>073.18134473</longitude>
+			<heading>90.00</heading>
+			<name>Ramp 6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>07.12791059</latitude>
+			<longitude>-073.18249097</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.13658169</latitude>
+			<longitude>-073.18800949</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock (north)</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.11664978</latitude>
+			<longitude>-073.18164810</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock (south)</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>Tower Frequency</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>Approach Frequency</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VLVT">
+		<linecode>1</linecode>
+		<elevation>1850</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>VLVT</identifier>
+		<name>Vientiane Wattay</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>17.99796734</latitude>
+			<longitude>102.55324967</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>17.97871811</latitude_end>
+			<longitude_end>102.57319366</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.15181682</length-meters>
+			<length-feet>9144.46273768</length-feet>
+			<heading id="13 ">135.248894882</heading>
+			<heading_end id="31 ">315.24273571</heading_end>
+			<threshold_lat id="13 ">17.99796734</threshold_lat>
+			<threshold_lon id="13 ">102.55324967</threshold_lon>
+			<threshold_lat_end id="31 ">17.97871811</threshold_lat_end>
+			<threshold_lon_end id="31 ">102.57319366</threshold_lon_end>
+		</runway>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>17.99569898</latitude>
+			<longitude>102.55628239</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>135.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>17.98094023</latitude>
+			<longitude>102.57021514</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>315.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>17.97842625</latitude>
+			<longitude>102.56572257</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>TowerView</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97442064</latitude>
+			<longitude>102.57045875</longitude>
+			<heading>25.42</heading>
+			<name>Parking P1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97478303</latitude>
+			<longitude>102.57008217</longitude>
+			<heading>25.42</heading>
+			<name>Parking P2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97525683</latitude>
+			<longitude>102.56953537</longitude>
+			<heading>25.42</heading>
+			<name>Parking P3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97575198</latitude>
+			<longitude>102.56907216</longitude>
+			<heading>25.42</heading>
+			<name>Parking P4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97614919</latitude>
+			<longitude>102.56865790</longitude>
+			<heading>25.42</heading>
+			<name>Parking P5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97656206</latitude>
+			<longitude>102.56823724</longitude>
+			<heading>25.42</heading>
+			<name>Parking P6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.97711346</latitude>
+			<longitude>102.56767296</longitude>
+			<heading>25.42</heading>
+			<name>Parking P7</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>17.98918066</latitude>
+			<longitude>102.56435877</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.98531520</latitude>
+			<longitude>102.56402783</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>17.98919736</latitude>
+			<longitude>102.56062884</longitude>
+			<orientation>344.86</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}13-31{@@}{@L}A{@Y}TERMINAL</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>17.97790676</latitude>
+			<longitude>102.57253010</longitude>
+			<orientation>2.77</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}13-31{@@}{@L}B{@Y}TERMINAL</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>17.98145363</latitude>
+			<longitude>102.56865795</longitude>
+			<orientation>345.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}T{@R}13-31{@@}{@L}T{@Y}TERMINAL</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENDI">
+		<linecode>1</linecode>
+		<elevation>2618</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENDI</identifier>
+		<name>DAGALI</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>60.41497500</latitude>
+			<longitude>008.49824200</longitude>
+			<threshold>150.27</threshold>
+			<overrrun>29.57</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>60.41871700</latitude_end>
+			<longitude_end>008.53006400</longitude_end>
+			<threshold_end>150.27</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1802.17371654</length-meters>
+			<length-feet>5493.02548801</length-feet>
+			<heading id="08 ">76.6373283096</heading>
+			<heading_end id="26 ">256.609654622</heading_end>
+			<threshold_lat id="08 ">60.4152866746</threshold_lat>
+			<threshold_lon id="08 ">8.50089542761</threshold_lon>
+			<threshold_lat_end id="26 ">60.418404639</threshold_lat_end>
+			<threshold_lon_end id="26 ">8.52741062321</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>60.41606988</latitude>
+			<longitude>008.50427678</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>76.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>60.41762355</latitude>
+			<longitude>008.52402752</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>256.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>60.41822951</latitude>
+			<longitude>008.51347928</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>60.41547318</latitude>
+			<longitude>008.49715608</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>60.41821857</latitude>
+			<longitude>008.53114955</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SNIO">
+		<linecode>1</linecode>
+		<elevation>499</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SNIO</identifier>
+		<name>Cipo</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>21.34</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-11.11288341</latitude>
+			<longitude>-038.52243693</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-11.12100519</latitude_end>
+			<longitude_end>-038.51145287</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1498.99403481</length-meters>
+			<length-feet>4568.9338181</length-feet>
+			<heading id="15 ">126.821021538</heading>
+			<heading_end id="33 ">306.823139399</heading_end>
+			<threshold_lat id="15 ">-11.11288341</threshold_lat>
+			<threshold_lon id="15 ">-38.52243693</threshold_lon>
+			<threshold_lat_end id="33 ">-11.12100519</threshold_lat_end>
+			<threshold_lon_end id="33 ">-38.51145287</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>-11.11375340</latitude>
+			<longitude>-038.52080831</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>127.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>-11.12013527</latitude>
+			<longitude>-038.51308157</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>307.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-11.11640759</latitude>
+			<longitude>-038.51653280</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-11.11253784</latitude>
+			<longitude>-038.52241655</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-11.12135076</latitude>
+			<longitude>-038.51147323</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

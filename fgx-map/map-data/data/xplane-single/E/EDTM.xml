@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDTM">
+		<linecode>1</linecode>
+		<elevation>1820</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EDTM</identifier>
+		<name>MENGEN HOHENTENGEN</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>48.05241100</latitude>
+			<longitude>009.36230600</longitude>
+			<threshold>300.23</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>48.05525300</latitude_end>
+			<longitude_end>009.38336100</longitude_end>
+			<threshold_end>35.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1601.09606268</length-meters>
+			<length-feet>4880.14079906</length-feet>
+			<heading id="08 ">78.6247141746</heading>
+			<heading_end id="26 ">258.60905403</heading_end>
+			<threshold_lat id="08 ">48.052943489</threshold_lat>
+			<threshold_lon id="08 ">9.36625417519</threshold_lon>
+			<threshold_lat_end id="26 ">48.0551907419</threshold_lat_end>
+			<threshold_lon_end id="26 ">9.38290008022</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.05475505</latitude>
+			<longitude>009.37255327</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.05275299</latitude>
+			<longitude>009.36179235</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.05491092</latitude>
+			<longitude>009.38387455</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12237">122.37</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12470">124.7</frequency>
+			<description>ZURICH INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

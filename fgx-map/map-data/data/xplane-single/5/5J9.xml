@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="5J9 ">
+		<linecode>1</linecode>
+		<elevation>99</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>5J9</identifier>
+		<name>TWIN CITY</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>34.08697800</latitude>
+			<longitude>-078.87077800</longitude>
+			<threshold>60.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>34.08983900</latitude_end>
+			<longitude_end>-078.85907200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1125.98232977</length-meters>
+			<length-feet>3431.99414113</length-feet>
+			<heading id="08 ">73.6328749994</heading>
+			<heading_end id="26 ">253.62631412</heading_end>
+			<threshold_lat id="08 ">34.087132861</threshold_lat>
+			<threshold_lon id="08 ">-78.8701442431</threshold_lon>
+			<threshold_lat_end id="26 ">34.089839</threshold_lat_end>
+			<threshold_lon_end id="26 ">-78.859072</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>34.08908674</latitude>
+			<longitude>-078.86106993</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>253.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.08896084</latitude>
+			<longitude>-078.86512373</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.08716818</latitude>
+			<longitude>-078.87105298</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.08964879</latitude>
+			<longitude>-078.85879704</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>MYRTLE BEACH APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

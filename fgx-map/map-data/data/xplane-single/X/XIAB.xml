@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="XIAB">
+		<linecode>1</linecode>
+		<elevation>2598</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>XIAB</identifier>
+		<name>Bada</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>43.89</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>51.40565051</latitude>
+			<longitude>109.88217228</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>51.40815849</latitude_end>
+			<longitude_end>109.91801666</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2509.67951659</length-meters>
+			<length-feet>7649.50316657</length-feet>
+			<heading id="09 ">83.6306250353</heading>
+			<heading_end id="27 ">263.602609224</heading_end>
+			<threshold_lat id="09 ">51.40565051</threshold_lat>
+			<threshold_lon id="09 ">109.88217228</threshold_lon>
+			<threshold_lat_end id="27 ">51.40815849</threshold_lat_end>
+			<threshold_lon_end id="27 ">109.91801666</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>51.40637577</latitude>
+			<longitude>109.88486626</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>83.6</orientation>
+			<glideslope>2.40</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>51.40752603</latitude>
+			<longitude>109.91567911</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>263.6</orientation>
+			<glideslope>2.40</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.40422464</latitude>
+			<longitude>109.91122375</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40473635</latitude>
+			<longitude>109.91012527</longitude>
+			<heading>78.67</heading>
+			<name>Ramp Start</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.40966480</latitude>
+			<longitude>109.89926755</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.40545240</latitude>
+			<longitude>109.91269349</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+	</airport>
+</PropertyList>

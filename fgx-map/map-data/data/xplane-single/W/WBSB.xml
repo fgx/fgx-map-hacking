@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WBSB">
+		<linecode>1</linecode>
+		<elevation>73</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WBSB</identifier>
+		<name>Brunei Intl</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>04.93001400</latitude>
+			<longitude>114.91982500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>21.34</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>04.95838900</latitude_end>
+			<longitude_end>114.93688100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>21.34</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3663.87610122</length-meters>
+			<length-feet>11167.4943565</length-feet>
+			<heading id="03 ">31.0849101397</heading>
+			<heading_end id="21 ">211.083440159</heading_end>
+			<threshold_lat id="03 ">4.930014</threshold_lat>
+			<threshold_lon id="03 ">114.919825</threshold_lon>
+			<threshold_lat_end id="21 ">4.958389</threshold_lat_end>
+			<threshold_lon_end id="21 ">114.936881</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>04.93251489</latitude>
+			<longitude>114.92085589</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>30.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>04.95540607</latitude>
+			<longitude>114.93556023</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>210.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>04.94818780</latitude>
+			<longitude>114.93415070</longitude>
+			<height>150</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.94780300</latitude>
+			<longitude>114.93276980</longitude>
+			<heading>90.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.94493949</latitude>
+			<longitude>114.92711136</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.92997809</latitude>
+			<longitude>114.91908137</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.95842490</latitude>
+			<longitude>114.93762466</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12680">126.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12710">127.1</frequency>
+			<description>RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

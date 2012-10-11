@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKEJ">
+		<linecode>1</linecode>
+		<elevation>412</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SKEJ</identifier>
+		<name>YARIGUIES</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>07.01734700</latitude>
+			<longitude>-073.81098600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>07.03131100</latitude_end>
+			<longitude_end>-073.80261100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1800.30738148</length-meters>
+			<length-feet>5487.33689875</length-feet>
+			<heading id="04 ">30.9308340391</heading>
+			<heading_end id="22 ">210.929809854</heading_end>
+			<threshold_lat id="04 ">7.017347</threshold_lat>
+			<threshold_lon id="04 ">-73.810986</threshold_lon>
+			<threshold_lat_end id="22 ">7.031311</threshold_lat_end>
+			<threshold_lon_end id="22 ">-73.802611</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>07.01909869</latitude>
+			<longitude>-073.81040560</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>30.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>07.02505524</latitude>
+			<longitude>-073.80802912</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.01730963</latitude>
+			<longitude>-073.81172242</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.03134836</latitude>
+			<longitude>-073.80187456</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11845">118.45</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>BUCARAMANGA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

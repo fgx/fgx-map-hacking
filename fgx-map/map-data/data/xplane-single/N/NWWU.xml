@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="NWWU">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>NWWU</identifier>
+		<name>Touho</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>-20.78580904</latitude>
+			<longitude>165.25632430</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>-20.79400996</latitude_end>
+			<longitude_end>165.26228580</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1099.83495191</length-meters>
+			<length-feet>3352.29693342</length-feet>
+			<heading id="13 ">145.642352187</heading>
+			<heading_end id="31 ">325.644468176</heading_end>
+			<threshold_lat id="13 ">-20.78580904</threshold_lat>
+			<threshold_lon id="13 ">165.2563243</threshold_lon>
+			<threshold_lat_end id="31 ">-20.79400996</threshold_lat_end>
+			<threshold_lon_end id="31 ">165.2622858</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-20.79253736</latitude>
+			<longitude>165.26074571</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>325.8</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-20.78730357</latitude>
+			<longitude>165.25789510</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>145.8</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-20.79150862</latitude>
+			<longitude>165.25710661</longitude>
+			<heading>33.38</heading>
+			<name>New Ramp Start 11</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-20.78937975</latitude>
+			<longitude>165.26013654</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-20.78586350</latitude>
+			<longitude>165.25719868</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 13</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-20.79394335</latitude>
+			<longitude>165.26141967</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 14</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>TOUHO FSS</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SAZR">
+		<linecode>1</linecode>
+		<elevation>630</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SAZR</identifier>
+		<name>SANTA ROSA</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>-36.59848300</latitude>
+			<longitude>-064.27818300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>30.48</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>-36.57815800</latitude_end>
+			<longitude_end>-064.27320600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2299.01908103</length-meters>
+			<length-feet>7007.41015897</length-feet>
+			<heading id="01 ">11.1690348963</heading>
+			<heading_end id="19 ">191.172001493</heading_end>
+			<threshold_lat id="01 ">-36.598483</threshold_lat>
+			<threshold_lon id="01 ">-64.278183</threshold_lon>
+			<threshold_lat_end id="19 ">-36.578158</threshold_lat_end>
+			<threshold_lon_end id="19 ">-64.273206</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-36.58814129</latitude>
+			<longitude>-064.27684413</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-36.59866896</latitude>
+			<longitude>-064.27874041</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-36.57797202</latitude>
+			<longitude>-064.27264875</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

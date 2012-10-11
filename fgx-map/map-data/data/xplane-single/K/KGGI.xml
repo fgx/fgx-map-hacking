@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KGGI">
+		<linecode>1</linecode>
+		<elevation>1008</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KGGI</identifier>
+		<name>GRINNELL RGNL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>41.71495600</latitude>
+			<longitude>-092.74253600</longitude>
+			<threshold>60.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>41.70493600</latitude_end>
+			<longitude_end>-092.72899400</longitude_end>
+			<threshold_end>60.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1583.91091132</length-meters>
+			<length-feet>4827.7604577</length-feet>
+			<heading id="13 ">134.642621047</heading>
+			<heading_end id="31 ">314.633610742</heading_end>
+			<threshold_lat id="13 ">41.7145703286</threshold_lat>
+			<threshold_lon id="13 ">-92.742014812</threshold_lon>
+			<threshold_lat_end id="31 ">41.7053216083</threshold_lat_end>
+			<threshold_lon_end id="31 ">-92.7295151942</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>41.71351661</latitude>
+			<longitude>-092.74001768</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>134.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>41.70637568</latitude>
+			<longitude>-092.73151167</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>314.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.71045798</latitude>
+			<longitude>-092.73508784</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.71531902</latitude>
+			<longitude>-092.74244206</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.70457299</latitude>
+			<longitude>-092.72908801</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12705">127.05</frequency>
+			<description>CHICAGO CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

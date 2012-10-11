@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYCO">
+		<linecode>1</linecode>
+		<elevation>74</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYCO</identifier>
+		<name>KUGLUKTUK</name>
+		<runway end="30T" id="12T">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12T</number>
+			<latitude>67.82055600</latitude>
+			<longitude>-115.16111100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30T</number_end>
+			<latitude_end>67.81277800</latitude_end>
+			<longitude_end>-115.12694400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1681.30408149</length-meters>
+			<length-feet>5124.61484037</length-feet>
+			<heading id="12T">121.078241248</heading>
+			<heading_end id="30T">301.046603273</heading_end>
+			<threshold_lat id="12T">67.820556</threshold_lat>
+			<threshold_lon id="12T">-115.161111</threshold_lon>
+			<threshold_lat_end id="30T">67.812778</threshold_lat_end>
+			<threshold_lon_end id="30T">-115.126944</threshold_lon_end>
+		</runway>
+		<lightingobject id="12T">
+			<linecode>21</linecode>
+			<latitude>67.81991415</latitude>
+			<longitude>-115.15656917</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>121.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30T">
+			<linecode>21</linecode>
+			<latitude>67.81342079</latitude>
+			<longitude>-115.13148342</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>301.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>67.81749234</latitude>
+			<longitude>-115.14271509</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>67.82104998</latitude>
+			<longitude>-115.16117085</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>67.81228401</latitude>
+			<longitude>-115.12688488</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>MANDATORY FREQ</description>
+		</atc>
+	</airport>
+</PropertyList>

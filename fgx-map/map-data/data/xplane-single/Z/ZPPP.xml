@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZPPP">
+		<linecode>1</linecode>
+		<elevation>6217</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZPPP</identifier>
+		<name>WUJIABA</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>24.97939200</latitude>
+			<longitude>102.73453600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>25.00533300</latitude_end>
+			<longitude_end>102.75253900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3400.10207704</length-meters>
+			<length-feet>10363.5111308</length-feet>
+			<heading id="03 ">32.3170473178</heading>
+			<heading_end id="21 ">212.309441096</heading_end>
+			<threshold_lat id="03 ">24.979392</threshold_lat>
+			<threshold_lon id="03 ">102.734536</threshold_lon>
+			<threshold_lat_end id="21 ">25.005333</threshold_lat_end>
+			<threshold_lon_end id="21 ">102.752539</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>24.98184057</latitude>
+			<longitude>102.73571231</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>32.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>25.00284031</latitude>
+			<longitude>102.75133133</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>212.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.99311881</latitude>
+			<longitude>102.74220811</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.97937254</latitude>
+			<longitude>102.73372891</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.00535236</latitude>
+			<longitude>102.75334627</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12845">128.45</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>KUNMING GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12165">121.65</frequency>
+			<description>KUNMING GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>KUNMING TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>KUNMING TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12425">124.25</frequency>
+			<description>KUNMING APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>KUNMING APP</description>
+		</atc>
+	</airport>
+</PropertyList>

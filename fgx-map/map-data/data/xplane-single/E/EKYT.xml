@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EKYT">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EKYT</identifier>
+		<name>Aalborg</name>
+		<runway end="26R" id="08L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="2">Concrete shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08L</number>
+			<latitude>57.09371474</latitude>
+			<longitude>009.83338123</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>273.10</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26R</number_end>
+			<latitude_end>57.09652392</latitude_end>
+			<longitude_end>009.87687477</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>221.89</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="4">Calvert ILS Cat II and Cat II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2654.9453791</length-meters>
+			<length-feet>8092.2735155</length-feet>
+			<heading id="08L">83.2513218379</heading>
+			<heading_end id="26R">263.21480581</heading_end>
+			<threshold_lat id="08L">57.09371474</threshold_lat>
+			<threshold_lon id="08L">9.83338123</threshold_lon>
+			<threshold_lat_end id="26R">57.09652392</threshold_lat_end>
+			<threshold_lon_end id="26R">9.87687477</threshold_lon_end>
+		</runway>
+		<runway end="26L" id="08R">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08R</number>
+			<latitude>57.09190815</latitude>
+			<longitude>009.83547587</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>149.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26L</number_end>
+			<latitude_end>57.09459624</latitude_end>
+			<longitude_end>009.87724413</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>149.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2549.630213</length-meters>
+			<length-feet>7771.27288924</length-feet>
+			<heading id="08R">83.2749344621</heading>
+			<heading_end id="26L">263.239867673</heading_end>
+			<threshold_lat id="08R">57.09190815</threshold_lat>
+			<threshold_lon id="08R">9.83547587</threshold_lon>
+			<threshold_lat_end id="26L">57.09459624</threshold_lat_end>
+			<threshold_lon_end id="26L">9.87724413</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>57.09020100</latitude>
+			<longitude>009.86495300</longitude>
+			<height>62</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>57.09592100</latitude>
+			<longitude>009.85495200</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.09452100</latitude>
+			<longitude>009.83320600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.09570300</latitude>
+			<longitude>009.87705100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.09249400</latitude>
+			<longitude>009.83561200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.09418500</latitude>
+			<longitude>009.87733200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12047">120.47</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12397">123.97</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12070">120.7</frequency>
+			<description>ARR</description>
+		</atc>
+	</airport>
+</PropertyList>

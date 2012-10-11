@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CDY3">
+		<linecode>1</linecode>
+		<elevation>80</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CDY3</identifier>
+		<name>FOGO</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>49.65684900</latitude>
+			<longitude>-054.24375200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>49.65815100</latitude_end>
+			<longitude_end>-054.23124800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.376203432</length-meters>
+			<length-feet>2787.01866806</length-feet>
+			<heading id="11 ">80.8923481684</heading>
+			<heading_end id="29 ">260.882817765</heading_end>
+			<threshold_lat id="11 ">49.656849</threshold_lat>
+			<threshold_lon id="11 ">-54.243752</threshold_lon>
+			<threshold_lat_end id="29 ">49.658151</threshold_lat_end>
+			<threshold_lon_end id="29 ">-54.231248</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.65820966</latitude>
+			<longitude>-054.23767850</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.65711962</latitude>
+			<longitude>-054.24414115</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.65788033</latitude>
+			<longitude>-054.23085890</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12320">123.2</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

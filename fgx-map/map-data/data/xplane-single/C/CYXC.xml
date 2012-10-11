@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYXC">
+		<linecode>1</linecode>
+		<elevation>3084</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>CYXC</identifier>
+		<name>CANADIAN ROCKIES INTL</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>49.62308100</latitude>
+			<longitude>-115.78230300</longitude>
+			<threshold>237.74</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="5">SSALR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>49.60116100</latitude_end>
+			<longitude_end>-115.78180600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2438.24161269</length-meters>
+			<length-feet>7431.76043549</length-feet>
+			<heading id="16 ">179.156113239</heading>
+			<heading_end id="34 ">359.155734687</heading_end>
+			<threshold_lat id="16 ">49.6209437007</threshold_lat>
+			<threshold_lon id="16 ">-115.782254542</threshold_lon>
+			<threshold_lat_end id="34 ">49.601161</threshold_lat_end>
+			<threshold_lon_end id="34 ">-115.781806</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>49.61831748</latitude>
+			<longitude>-115.78157175</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>179.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>49.60295473</latitude>
+			<longitude>-115.78246965</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>359.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.61214239</latitude>
+			<longitude>-115.77983217</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.62350147</latitude>
+			<longitude>-115.78135973</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.60074054</latitude>
+			<longitude>-115.78274884</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>MF</description>
+		</atc>
+	</airport>
+</PropertyList>

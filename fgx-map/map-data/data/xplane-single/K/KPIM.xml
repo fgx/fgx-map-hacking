@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KPIM">
+		<linecode>1</linecode>
+		<elevation>902</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KPIM</identifier>
+		<name>HARRIS CO</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>32.84050600</latitude>
+			<longitude>-084.89057500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>32.84089200</latitude_end>
+			<longitude_end>-084.87429700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.56038227</length-meters>
+			<length-feet>4646.86004515</length-feet>
+			<heading id="09 ">88.3953980399</heading>
+			<heading_end id="27 ">268.386570397</heading_end>
+			<threshold_lat id="09 ">32.840506</threshold_lat>
+			<threshold_lon id="09 ">-84.890575</threshold_lon>
+			<threshold_lat_end id="27 ">32.840892</threshold_lat_end>
+			<threshold_lon_end id="27 ">-84.874297</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>32.84086493</latitude>
+			<longitude>-084.88844402</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>88.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.84165911</latitude>
+			<longitude>-084.88247159</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.84090952</latitude>
+			<longitude>-084.89091519</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.84048844</latitude>
+			<longitude>-084.87395687</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12770">127.7</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12045">120.45</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>ATLANTA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12655">126.55</frequency>
+			<description>ATLANTA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

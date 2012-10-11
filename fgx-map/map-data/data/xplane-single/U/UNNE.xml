@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UNNE">
+		<linecode>1</linecode>
+		<elevation>665</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UNNE</identifier>
+		<name>Novosibirsk Yeltsovka</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>78.33</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>55.07937155</latitude>
+			<longitude>083.00173529</longitude>
+			<threshold>349.91</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>55.10813645</latitude_end>
+			<longitude_end>083.01694071</longitude_end>
+			<threshold_end>299.62</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3346.17634828</length-meters>
+			<length-feet>10199.1455096</length-feet>
+			<heading id="01 ">16.8712807025</heading>
+			<heading_end id="19 ">196.858810897</heading_end>
+			<threshold_lat id="01 ">55.0823793953</threshold_lat>
+			<threshold_lon id="01 ">83.0033254417</threshold_lon>
+			<threshold_lat_end id="19 ">55.1055607249</threshold_lat_end>
+			<threshold_lon_end id="19 ">83.0155792889</threshold_lon_end>
+		</runway>
+		<runway end="19L" id="01R">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.75</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01R</number>
+			<latitude>55.08050817</latitude>
+			<longitude>083.00369732</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19L</number_end>
+			<latitude_end>55.09774583</latitude_end>
+			<longitude_end>083.01298068</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2008.4504004</length-meters>
+			<length-feet>6121.75682041</length-feet>
+			<heading id="01R">17.1694073251</heading>
+			<heading_end id="19L">197.161794568</heading_end>
+			<threshold_lat id="01R">55.08050817</threshold_lat>
+			<threshold_lon id="01R">83.00369732</threshold_lon>
+			<threshold_lat_end id="19L">55.09774583</threshold_lat_end>
+			<threshold_lon_end id="19L">83.01298068</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>55.08426004</latitude>
+			<longitude>083.00336209</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>16.8</orientation>
+			<glideslope>3.69</glideslope>
+			<runway>01</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>55.10368137</latitude>
+			<longitude>083.01553996</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>196.8</orientation>
+			<glideslope>2.67</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>55.09833100</latitude>
+			<longitude>083.01666300</longitude>
+			<height>98</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07579000</latitude>
+			<longitude>083.00158700</longitude>
+			<heading>85.00</heading>
+			<name>Parking 1 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07732000</latitude>
+			<longitude>082.99690200</longitude>
+			<heading>05.00</heading>
+			<name>Parking 10 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07759500</latitude>
+			<longitude>082.99703200</longitude>
+			<heading>05.00</heading>
+			<name>Parking 11 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07790400</latitude>
+			<longitude>082.99718500</longitude>
+			<heading>05.00</heading>
+			<name>Parking 12 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07819400</latitude>
+			<longitude>082.99732200</longitude>
+			<heading>05.00</heading>
+			<name>Parking 13 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07907900</latitude>
+			<longitude>082.99804700</longitude>
+			<heading>85.00</heading>
+			<name>Parking 14 (38m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.08036000</latitude>
+			<longitude>082.99864200</longitude>
+			<heading>85.00</heading>
+			<name>Parking 15 (38m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07743100</latitude>
+			<longitude>083.00235000</longitude>
+			<heading>85.00</heading>
+			<name>Parking 16 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07775100</latitude>
+			<longitude>083.00249500</longitude>
+			<heading>85.00</heading>
+			<name>Parking 17 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07807500</latitude>
+			<longitude>083.00262500</longitude>
+			<heading>85.00</heading>
+			<name>Parking 18 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.08198500</latitude>
+			<longitude>082.99938200</longitude>
+			<heading>15.00</heading>
+			<name>Parking 19 (54m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07609600</latitude>
+			<longitude>083.00171700</longitude>
+			<heading>85.00</heading>
+			<name>Parking 2 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.08671600</latitude>
+			<longitude>083.00131200</longitude>
+			<heading>85.00</heading>
+			<name>Parking 20 (38m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.08759300</latitude>
+			<longitude>083.00167100</longitude>
+			<heading>85.00</heading>
+			<name>Parking 21 (38m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09242200</latitude>
+			<longitude>083.00361600</longitude>
+			<heading>85.00</heading>
+			<name>Parking 22 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09299500</latitude>
+			<longitude>083.00390600</longitude>
+			<heading>85.00</heading>
+			<name>Parking 23 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09359700</latitude>
+			<longitude>083.00416600</longitude>
+			<heading>85.00</heading>
+			<name>Parking 24 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09418500</latitude>
+			<longitude>083.00441000</longitude>
+			<heading>85.00</heading>
+			<name>Parking 25 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09479500</latitude>
+			<longitude>083.00466900</longitude>
+			<heading>85.00</heading>
+			<name>Parking 26 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.09538300</latitude>
+			<longitude>083.00491300</longitude>
+			<heading>85.00</heading>
+			<name>Parking 27 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07378800</latitude>
+			<longitude>082.99538400</longitude>
+			<heading>55.00</heading>
+			<name>Parking 28 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07351700</latitude>
+			<longitude>082.99572000</longitude>
+			<heading>55.00</heading>
+			<name>Parking 29 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07638900</latitude>
+			<longitude>083.00185400</longitude>
+			<heading>85.00</heading>
+			<name>Parking 3 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07325700</latitude>
+			<longitude>082.99605600</longitude>
+			<heading>55.00</heading>
+			<name>Parking 30 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07666800</latitude>
+			<longitude>083.00196800</longitude>
+			<heading>85.00</heading>
+			<name>Parking 4 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07467700</latitude>
+			<longitude>082.99568900</longitude>
+			<heading>35.00</heading>
+			<name>Parking 5 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07440200</latitude>
+			<longitude>082.99604000</longitude>
+			<heading>35.00</heading>
+			<name>Parking 6 (18m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07640800</latitude>
+			<longitude>082.99652900</longitude>
+			<heading>05.00</heading>
+			<name>Parking 7 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07671400</latitude>
+			<longitude>082.99665800</longitude>
+			<heading>05.00</heading>
+			<name>Parking 8 (14m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07703000</latitude>
+			<longitude>082.99678000</longitude>
+			<heading>05.00</heading>
+			<name>Parking 9 (14m)</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>55.08968366</latitude>
+			<longitude>083.00518219</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.07900243</latitude>
+			<longitude>082.99961304</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.08023004</latitude>
+			<longitude>083.00206843</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.10850531</latitude>
+			<longitude>083.01906469</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.09802383</latitude>
+			<longitude>083.01461037</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12265">122.65</frequency>
+			<description>Sernistyi Transit</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12475">124.75</frequency>
+			<description>Sernistyi Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>NOVOSIBIRSK APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12400">124.0</frequency>
+			<description>Novosibirsk DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

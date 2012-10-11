@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KSHN">
+		<linecode>1</linecode>
+		<elevation>273</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KSHN</identifier>
+		<name>SANDERSON FLD</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>47.23097800</latitude>
+			<longitude>-123.15687800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>47.23613900</latitude_end>
+			<longitude_end>-123.13821100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1525.55257512</length-meters>
+			<length-feet>4649.88424898</length-feet>
+			<heading id="05 ">67.913892053</heading>
+			<heading_end id="23 ">247.900188091</heading_end>
+			<threshold_lat id="05 ">47.230978</threshold_lat>
+			<threshold_lon id="05 ">-123.156878</threshold_lon>
+			<threshold_lat_end id="23 ">47.236139</threshold_lat_end>
+			<threshold_lon_end id="23 ">-123.138211</threshold_lon_end>
+		</runway>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>47.23515005</latitude>
+			<longitude>-123.14048015</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.23444771</latitude>
+			<longitude>-123.14808119</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.23125558</latitude>
+			<longitude>-123.15748067</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.23586132</latitude>
+			<longitude>-123.13760836</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11927">119.27</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>SEATTLE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

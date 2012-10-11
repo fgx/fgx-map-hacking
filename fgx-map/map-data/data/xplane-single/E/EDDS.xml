@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDDS">
+		<linecode>1</linecode>
+		<elevation>1276</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDDS</identifier>
+		<name>Stuttgart</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>48.68573300</latitude>
+			<longitude>009.20012800</longitude>
+			<threshold>299.92</threshold>
+			<overrrun>49.99</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>48.69401700</latitude_end>
+			<longitude_end>009.24380300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3344.92662743</length-meters>
+			<length-feet>10195.3363604</length-feet>
+			<heading id="07 ">74.0302150682</heading>
+			<heading_end id="25 ">253.997408701</heading_end>
+			<threshold_lat id="07 ">48.6864749694</threshold_lat>
+			<threshold_lon id="07 ">9.20404413904</threshold_lon>
+			<threshold_lat_end id="25 ">48.694017</threshold_lat_end>
+			<threshold_lon_end id="25 ">9.243803</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>48.68775654</latitude>
+			<longitude>009.20858714</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>73.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>48.69290927</latitude>
+			<longitude>009.24015785</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>253.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.69152100</latitude>
+			<longitude>009.19725100</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.68865000</latitude>
+			<longitude>009.20228900</longitude>
+			<heading>50.00</heading>
+			<name>Start Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.69065500</latitude>
+			<longitude>009.22162600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.68910500</latitude>
+			<longitude>009.21284400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.69222100</latitude>
+			<longitude>009.22827700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12612">126.12</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11905">119.05</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>LANGEN RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12505">125.05</frequency>
+			<description>LANGEN RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11985">119.85</frequency>
+			<description>DIR</description>
+		</atc>
+	</airport>
+</PropertyList>

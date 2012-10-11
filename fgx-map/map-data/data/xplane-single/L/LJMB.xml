@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LJMB">
+		<linecode>1</linecode>
+		<elevation>876</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LJMB</identifier>
+		<name>MARIBOR</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>46.48915000</latitude>
+			<longitude>015.67709404</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>46.47056900</latitude_end>
+			<longitude_end>015.69516104</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2488.17653862</length-meters>
+			<length-feet>7583.96208971</length-feet>
+			<heading id="15 ">146.117272967</heading>
+			<heading_end id="33 ">326.104172</heading_end>
+			<threshold_lat id="15 ">46.48915</threshold_lat>
+			<threshold_lon id="15 ">15.67709404</threshold_lon>
+			<threshold_lat_end id="33 ">46.470569</threshold_lat_end>
+			<threshold_lon_end id="33 ">15.69516104</threshold_lon_end>
+		</runway>
+		<runway end="33R" id="15L">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15L</number>
+			<latitude>46.48587380</latitude>
+			<longitude>015.68154275</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33R</number_end>
+			<latitude_end>46.47690659</latitude_end>
+			<longitude_end>015.69028165</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1201.63249465</length-meters>
+			<length-feet>3662.57584371</length-feet>
+			<heading id="15L">146.054622722</heading>
+			<heading_end id="33R">326.048285702</heading_end>
+			<threshold_lat id="15L">46.4858738</threshold_lat>
+			<threshold_lon id="15L">15.68154275</threshold_lon>
+			<threshold_lat_end id="33R">46.47690659</threshold_lat_end>
+			<threshold_lon_end id="33R">15.69028165</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>46.47859772</latitude>
+			<longitude>015.68605430</longitude>
+			<type code="6">Runway guard (wig-wag) lights</type>
+			<orientation>56.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>WIG-WAG</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>46.48067687</latitude>
+			<longitude>015.68402142</longitude>
+			<type code="6">Runway guard (wig-wag) lights</type>
+			<orientation>56.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>WIG-WAG</description>
+		</lightingobject>
+		<lightingobject id="RWY">
+			<linecode>21</linecode>
+			<latitude>46.48640698</latitude>
+			<longitude>015.67895995</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>146.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>RWY</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="RWY">
+			<linecode>21</linecode>
+			<latitude>46.47288460</latitude>
+			<longitude>015.69210959</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>326.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>RWY</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>46.47861468</latitude>
+			<longitude>015.68166053</longitude>
+			<height>65</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.48142216</latitude>
+			<longitude>015.68352082</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WDI</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.48060989</latitude>
+			<longitude>015.68407884</longitude>
+			<orientation>236.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.47850982</latitude>
+			<longitude>015.68614824</longitude>
+			<orientation>236.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.47815037</latitude>
+			<longitude>015.68636730</longitude>
+			<orientation>56.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}15-33</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.47853459</latitude>
+			<longitude>015.68599167</longitude>
+			<orientation>56.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}15-33</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.48030319</latitude>
+			<longitude>015.68426243</longitude>
+			<orientation>56.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}15-33</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.48061613</latitude>
+			<longitude>015.68395646</longitude>
+			<orientation>56.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}15-33</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.47793352</latitude>
+			<longitude>015.68741416</longitude>
+			<orientation>326.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.48021378</latitude>
+			<longitude>015.68322028</longitude>
+			<orientation>236.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.48140968</latitude>
+			<longitude>015.68401536</longitude>
+			<orientation>146.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>46.47964554</latitude>
+			<longitude>015.68574024</longitude>
+			<orientation>146.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}B{^r}{@@}{@Y}{^l}A</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>Maribor TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>Maribor APP</description>
+		</atc>
+	</airport>
+</PropertyList>

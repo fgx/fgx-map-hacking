@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYKC">
+		<linecode>1</linecode>
+		<elevation>1341</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>CYKC</identifier>
+		<name>Collins Bay</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>34.14</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>58.23007820</latitude>
+			<longitude>-103.68492454</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="0">No runway markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>58.24212780</latitude_end>
+			<longitude_end>-103.67062146</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1583.4133922</length-meters>
+			<length-feet>4826.24401942</length-feet>
+			<heading id="02 ">32.05415773</heading>
+			<heading_end id="20 ">212.0419969</heading_end>
+			<threshold_lat id="02 ">58.2300782</threshold_lat>
+			<threshold_lon id="02 ">-103.68492454</threshold_lon>
+			<threshold_lat_end id="20 ">58.2421278</threshold_lat_end>
+			<threshold_lon_end id="20 ">-103.67062146</threshold_lon_end>
+		</runway>
+		<lightingobject id="ASI">
+			<linecode>21</linecode>
+			<latitude>58.24105154</latitude>
+			<longitude>-103.67130398</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>212.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>ASI</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="ASI">
+			<linecode>21</linecode>
+			<latitude>58.23133028</latitude>
+			<longitude>-103.68411450</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>32.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>ASI</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>58.23136304</latitude>
+			<longitude>103.68214580</longitude>
+			<heading>99.96</heading>
+			<name>Ramp Start</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>58.23260294</latitude>
+			<longitude>-103.68108386</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>No Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.23227000</latitude>
+			<longitude>-103.68130000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.24224768</latitude>
+			<longitude>-103.66957650</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+	</airport>
+</PropertyList>

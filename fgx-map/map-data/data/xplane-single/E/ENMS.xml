@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENMS">
+		<linecode>1</linecode>
+		<elevation>237</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENMS</identifier>
+		<name>KJAERSTAD</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>65.78771400</latitude>
+			<longitude>013.21171700</longitude>
+			<threshold>60.05</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>65.78028100</latitude_end>
+			<longitude_end>013.21811100</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>879.001216195</length-meters>
+			<length-feet>2679.19570696</length-feet>
+			<heading id="16 ">160.547537022</heading>
+			<heading_end id="34 ">340.541705658</heading_end>
+			<threshold_lat id="16 ">65.7872061964</threshold_lat>
+			<threshold_lon id="16 ">13.212153805</threshold_lon>
+			<threshold_lat_end id="34 ">65.7807887846</threshold_lat_end>
+			<threshold_lon_end id="34 ">13.2176741778</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>65.78560879</latitude>
+			<longitude>013.21431805</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>160.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>65.78238632</latitude>
+			<longitude>013.21551105</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>340.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>65.78460005</latitude>
+			<longitude>013.21644886</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.78810168</latitude>
+			<longitude>013.21242603</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.77989335</latitude>
+			<longitude>013.21740211</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78456838</latitude>
+			<longitude>013.21482159</longitude>
+			<orientation>250.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}16-34</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78488485</latitude>
+			<longitude>013.21456993</longitude>
+			<orientation>250.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}16-34</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78398492</latitude>
+			<longitude>013.21532629</longitude>
+			<orientation>250.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}16-34</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78428553</latitude>
+			<longitude>013.21505757</longitude>
+			<orientation>250.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}16-34</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78495397</latitude>
+			<longitude>013.21452378</longitude>
+			<orientation>160.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}A|TERM</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78435695</latitude>
+			<longitude>013.21502384</longitude>
+			<orientation>160.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}B|TERM</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78452908</latitude>
+			<longitude>013.21487680</longitude>
+			<orientation>340.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}A|TERM{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>65.78394416</latitude>
+			<longitude>013.21536453</longitude>
+			<orientation>340.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}B|TERM{^r}</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12340">123.4</frequency>
+			<description>MOSJOEN INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

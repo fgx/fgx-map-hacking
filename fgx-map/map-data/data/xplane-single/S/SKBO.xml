@@ -1,0 +1,252 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKBO">
+		<linecode>1</linecode>
+		<elevation>8361</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SKBO</identifier>
+		<name>Bogota - El Dorado Intl</name>
+		<runway end="31R" id="13L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>13L</number>
+			<latitude>04.71338600</latitude>
+			<longitude>-074.15206100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31R</number_end>
+			<latitude_end>04.69270000</latitude_end>
+			<longitude_end>-074.12472800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3798.52616592</length-meters>
+			<length-feet>11577.9077537</length-feet>
+			<heading id="13L">127.02914865</heading>
+			<heading_end id="31R">307.026907578</heading_end>
+			<threshold_lat id="13L">4.713386</threshold_lat>
+			<threshold_lon id="13L">-74.152061</threshold_lon>
+			<threshold_lat_end id="31R">4.6927</threshold_lat_end>
+			<threshold_lon_end id="31R">-74.124728</threshold_lon_end>
+		</runway>
+		<runway end="31L" id="13R">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>13R</number>
+			<latitude>04.71050300</latitude>
+			<longitude>-074.16917500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31L</number_end>
+			<latitude_end>04.68978900</latitude_end>
+			<longitude_end>-074.14182200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>57.91</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3802.17230271</length-meters>
+			<length-feet>11589.0211787</length-feet>
+			<heading id="13R">127.046145855</heading>
+			<heading_end id="31L">307.043904521</heading_end>
+			<threshold_lat id="13R">4.710503</threshold_lat>
+			<threshold_lon id="13R">-74.169175</threshold_lon>
+			<threshold_lat_end id="31L">4.689789</threshold_lat_end>
+			<threshold_lon_end id="31L">-74.141822</threshold_lon_end>
+		</runway>
+		<lightingobject id="13L">
+			<linecode>21</linecode>
+			<latitude>04.71199670</latitude>
+			<longitude>-074.14955990</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>127.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="13R">
+			<linecode>21</linecode>
+			<latitude>04.70919168</latitude>
+			<longitude>-074.16677829</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>127.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31L">
+			<linecode>21</linecode>
+			<latitude>04.69055869</latitude>
+			<longitude>-074.14350329</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>307.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31R">
+			<linecode>21</linecode>
+			<latitude>04.69346920</latitude>
+			<longitude>-074.12640952</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>307.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>04.69892900</latitude>
+			<longitude>074.14286000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.69728800</latitude>
+			<longitude>074.13719900</longitude>
+			<heading>20.00</heading>
+			<name>Cargo</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.70136500</latitude>
+			<longitude>074.14344800</longitude>
+			<heading>30.00</heading>
+			<name>Custom Starting Location 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.70009900</latitude>
+			<longitude>074.14439400</longitude>
+			<heading>50.00</heading>
+			<name>Custom Starting Location 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.69841100</latitude>
+			<longitude>074.14538600</longitude>
+			<heading>30.00</heading>
+			<name>Custom Starting Location 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.69318400</latitude>
+			<longitude>074.14043400</longitude>
+			<heading>40.00</heading>
+			<name>international Cargo</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.70079200</latitude>
+			<longitude>-074.15500600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.71114900</latitude>
+			<longitude>-074.16867800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.68914300</latitude>
+			<longitude>-074.14231100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.71403300</latitude>
+			<longitude>-074.15156600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.69205300</latitude>
+			<longitude>-074.12522100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12690">126.9</frequency>
+			<description>BOGOTA FIS</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>BOGOTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11965">119.65</frequency>
+			<description>BOGOTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>BOGOTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11905">119.05</frequency>
+			<description>BOGOTA APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>BOGOTA DEP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11965">119.65</frequency>
+			<description>BOGOTA DEP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>BOGOTA DEP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11905">119.05</frequency>
+			<description>BOGOTA DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

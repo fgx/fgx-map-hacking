@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYUX">
+		<linecode>1</linecode>
+		<elevation>27</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYUX</identifier>
+		<name>HALL BEACH</name>
+		<runway end="30T" id="12T">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12T</number>
+			<latitude>68.78025000</latitude>
+			<longitude>-081.26055800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30T</number_end>
+			<latitude_end>68.77196900</latitude_end>
+			<longitude_end>-081.22667200</longitude_end>
+			<threshold_end>60.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1651.9555972</length-meters>
+			<length-feet>5035.16066026</length-feet>
+			<heading id="12T">124.013781685</heading>
+			<heading_end id="30T">303.982194072</heading_end>
+			<threshold_lat id="12T">68.78025</threshold_lat>
+			<threshold_lon id="12T">-81.260558</threshold_lon>
+			<threshold_lat_end id="30T">68.7722744537</threshold_lat_end>
+			<threshold_lon_end id="30T">-81.2279224687</threshold_lon_end>
+		</runway>
+		<lightingobject id="12T">
+			<linecode>21</linecode>
+			<latitude>68.77957806</latitude>
+			<longitude>-081.25581193</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>124.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30T">
+			<linecode>21</linecode>
+			<latitude>68.77294896</latitude>
+			<longitude>-081.23267094</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>304.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>68.77730638</latitude>
+			<longitude>-081.24138965</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.78099173</latitude>
+			<longitude>-081.26054671</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.77122727</latitude>
+			<longitude>-081.22668440</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12870">128.7</frequency>
+			<description>AWOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

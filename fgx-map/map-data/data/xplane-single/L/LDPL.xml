@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LDPL">
+		<linecode>1</linecode>
+		<elevation>274</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LDPL</identifier>
+		<name>Pula</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>44.89313100</latitude>
+			<longitude>013.90359400</longitude>
+			<threshold>76.20</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>44.89393100</latitude_end>
+			<longitude_end>013.94071700</longitude_end>
+			<threshold_end>76.20</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2933.79413639</length-meters>
+			<length-feet>8942.20452771</length-feet>
+			<heading id="09 ">88.2765813717</heading>
+			<heading_end id="27 ">268.25038027</heading_end>
+			<threshold_lat id="09 ">44.8931516178</threshold_lat>
+			<threshold_lon id="09 ">13.9045582031</threshold_lon>
+			<threshold_lat_end id="27 ">44.8939100607</threshold_lat_end>
+			<threshold_lon_end id="27 ">13.9397527976</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>44.89360793</latitude>
+			<longitude>013.90708364</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>44.89350495</latitude>
+			<longitude>013.93955256</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.89790700</latitude>
+			<longitude>013.92154200</longitude>
+			<height>90</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.89653700</latitude>
+			<longitude>013.92393400</longitude>
+			<heading>20.00</heading>
+			<name>Start Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.89434400</latitude>
+			<longitude>013.92212100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.89422400</latitude>
+			<longitude>013.90550100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.89475400</latitude>
+			<longitude>013.93420000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12000">120.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

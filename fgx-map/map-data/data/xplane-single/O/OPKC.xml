@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OPKC">
+		<linecode>1</linecode>
+		<elevation>100</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OPKC</identifier>
+		<name>Karachi Jinnah Intl</name>
+		<runway end="25L" id="07R">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07R</number>
+			<latitude>24.90038600</latitude>
+			<longitude>067.14263100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>301.75</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25L</number_end>
+			<latitude_end>24.90868600</latitude_end>
+			<longitude_end>067.17503600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>190.50</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3400.46158397</length-meters>
+			<length-feet>10364.6069079</length-feet>
+			<heading id="07R">74.3201816902</heading>
+			<heading_end id="25L">254.306535697</heading_end>
+			<threshold_lat id="07R">24.900386</threshold_lat>
+			<threshold_lon id="07R">67.142631</threshold_lon>
+			<threshold_lat_end id="25L">24.908686</threshold_lat_end>
+			<threshold_lon_end id="25L">67.175036</threshold_lon_end>
+		</runway>
+		<runway end="25R" id="07L">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07L</number>
+			<latitude>24.90470800</latitude>
+			<longitude>067.14755300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25R</number_end>
+			<latitude_end>24.91240600</latitude_end>
+			<longitude_end>067.17796900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3188.89078858</length-meters>
+			<length-feet>9719.73912358</length-feet>
+			<heading id="07L">74.4966125</heading>
+			<heading_end id="25R">254.483802154</heading_end>
+			<threshold_lat id="07L">24.904708</threshold_lat>
+			<threshold_lon id="07L">67.147553</threshold_lon>
+			<threshold_lat_end id="25R">24.912406</threshold_lat_end>
+			<threshold_lon_end id="25R">67.177969</threshold_lon_end>
+		</runway>
+		<lightingobject id="07L">
+			<linecode>21</linecode>
+			<latitude>24.90558212</latitude>
+			<longitude>067.14934421</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>74.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="07R">
+			<linecode>21</linecode>
+			<latitude>24.90126516</latitude>
+			<longitude>067.14441915</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>74.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25L">
+			<linecode>21</linecode>
+			<latitude>24.90780722</latitude>
+			<longitude>067.17324750</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>254.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25R">
+			<linecode>21</linecode>
+			<latitude>24.91132667</latitude>
+			<longitude>067.17536479</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>254.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>24.89909200</latitude>
+			<longitude>067.16767200</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.90351600</latitude>
+			<longitude>067.16630300</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.90453500</latitude>
+			<longitude>067.16223300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.90386700</latitude>
+			<longitude>067.14956500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.91071000</latitude>
+			<longitude>067.17612900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.89992000</latitude>
+			<longitude>067.14514300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.90720900</latitude>
+			<longitude>067.17321700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>KARACHI GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>KARACHI TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>KARACHI APP</description>
+		</atc>
+	</airport>
+</PropertyList>

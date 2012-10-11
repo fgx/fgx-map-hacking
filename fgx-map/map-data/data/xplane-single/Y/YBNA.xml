@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YBNA">
+		<linecode>1</linecode>
+		<elevation>6</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YBNA</identifier>
+		<name>Ballina/Byron Gateway</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-28.83573425</latitude>
+			<longitude>153.55184796</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-28.83087695</latitude_end>
+			<longitude_end>153.57056656</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1904.51016861</length-meters>
+			<length-feet>5804.94699394</length-feet>
+			<heading id="06 ">73.5758211485</heading>
+			<heading_end id="24 ">253.584848436</heading_end>
+			<threshold_lat id="06 ">-28.83573425</threshold_lat>
+			<threshold_lon id="06 ">153.55184796</threshold_lon>
+			<threshold_lat_end id="24 ">-28.83087695</threshold_lat_end>
+			<threshold_lon_end id="24 ">153.57056656</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-28.83546700</latitude>
+			<longitude>153.55410900</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>73.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>-28.83177200</latitude>
+			<longitude>153.56826100</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>253.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-28.83717118</latitude>
+			<longitude>153.55651493</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 3</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83641492</latitude>
+			<longitude>153.55485541</longitude>
+			<heading>54.05</heading>
+			<name>Grass Tie Down Area</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83707376</latitude>
+			<longitude>153.55399893</longitude>
+			<heading>57.07</heading>
+			<name>Hangers</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83718146</latitude>
+			<longitude>153.55576584</longitude>
+			<heading>03.47</heading>
+			<name>Terminal 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83705571</latitude>
+			<longitude>153.55617818</longitude>
+			<heading>14.93</heading>
+			<name>Terminal 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-28.83280000</latitude>
+			<longitude>153.56095900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.83626716</latitude>
+			<longitude>153.55625423</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.83117103</latitude>
+			<longitude>153.56771315</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 2</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>ACTIVATE LIGHTS ONLY MULTICOM</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12420">124.2</frequency>
+			<description>BALLINA MULTICOM</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>BRISBANE CENTRE CTR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>BRISBANE CTR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FADN">
+		<linecode>1</linecode>
+		<elevation>33</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FADN</identifier>
+		<name>Durban Intl</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-29.97893287</latitude>
+			<longitude>030.94301634</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-29.96124113</latitude_end>
+			<longitude_end>030.95802366</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2438.05774634</length-meters>
+			<length-feet>7431.20001084</length-feet>
+			<heading id="06 ">36.4442969496</heading>
+			<heading_end id="24 ">216.451793823</heading_end>
+			<threshold_lat id="06 ">-29.97893287</threshold_lat>
+			<threshold_lon id="06 ">30.94301634</threshold_lon>
+			<threshold_lat_end id="24 ">-29.96124113</threshold_lat_end>
+			<threshold_lon_end id="24 ">30.95802366</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-29.97644649</latitude>
+			<longitude>030.94445519</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>36.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>-29.96399794</latitude>
+			<longitude>030.95635625</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>216.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-29.96654900</latitude>
+			<longitude>030.94268000</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-29.97035800</latitude>
+			<longitude>030.95149800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-29.96419500</latitude>
+			<longitude>030.94923000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12700">127.0</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

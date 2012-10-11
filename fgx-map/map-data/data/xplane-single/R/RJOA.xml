@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJOA">
+		<linecode>1</linecode>
+		<elevation>1088</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJOA</identifier>
+		<name>HIROSHIMA</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>34.43602500</latitude>
+			<longitude>132.90312500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>34.43602500</latitude_end>
+			<longitude_end>132.93576400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2999.85311848</length-meters>
+			<length-feet>9143.55230513</length-feet>
+			<heading id="10 ">90.0092284438</heading>
+			<heading_end id="28 ">269.990771556</heading_end>
+			<threshold_lat id="10 ">34.436025</threshold_lat>
+			<threshold_lon id="10 ">132.903125</threshold_lon>
+			<threshold_lat_end id="28 ">34.436025</threshold_lat_end>
+			<threshold_lon_end id="28 ">132.935764</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>34.43649775</latitude>
+			<longitude>132.90666074</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>34.43555301</latitude>
+			<longitude>132.93358163</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>270.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.43794726</latitude>
+			<longitude>132.91944100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.43684780</latitude>
+			<longitude>132.90245968</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.43520202</latitude>
+			<longitude>132.93642900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12725">127.25</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12405">124.05</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12515">125.15</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12405">124.05</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

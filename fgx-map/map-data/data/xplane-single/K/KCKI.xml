@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCKI">
+		<linecode>1</linecode>
+		<elevation>67</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCKI</identifier>
+		<name>WILLIAMSBURG RGNL</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>33.72184200</latitude>
+			<longitude>-079.86306900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>33.71260800</latitude_end>
+			<longitude_end>-079.85088900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.32307005</length-meters>
+			<length-feet>4646.1367175</length-feet>
+			<heading id="14 ">132.218149842</heading>
+			<heading_end id="32 ">312.211388791</heading_end>
+			<threshold_lat id="14 ">33.721842</threshold_lat>
+			<threshold_lon id="14 ">-79.863069</threshold_lon>
+			<threshold_lat_end id="32 ">33.712608</threshold_lat_end>
+			<threshold_lon_end id="32 ">-79.850889</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>33.72085201</latitude>
+			<longitude>-079.86122596</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>132.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>33.71359816</latitude>
+			<longitude>-079.85273171</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>312.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.71775782</latitude>
+			<longitude>-079.85639815</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.72220764</latitude>
+			<longitude>-079.86300301</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.71224237</latitude>
+			<longitude>-079.85095503</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12740">127.4</frequency>
+			<description>MYRTLE BEACH APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

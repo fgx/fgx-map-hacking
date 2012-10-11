@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="F86 ">
+		<linecode>1</linecode>
+		<elevation>66</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>F86</identifier>
+		<name>COLUMBIA</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>32.11777800</latitude>
+			<longitude>-092.05361100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>32.12722500</latitude_end>
+			<longitude_end>-092.05166700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1063.50954058</length-meters>
+			<length-feet>3241.57707968</length-feet>
+			<heading id="01 ">9.93342879716</heading>
+			<heading_end id="19 ">189.932395112</heading_end>
+			<threshold_lat id="01 ">32.117778</threshold_lat>
+			<threshold_lon id="01 ">-92.053611</threshold_lon>
+			<threshold_lat_end id="19 ">32.127225</threshold_lat_end>
+			<threshold_lon_end id="19 ">-92.051667</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>32.11959814</latitude>
+			<longitude>-092.05356470</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>9.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>32.12540486</latitude>
+			<longitude>-092.05171335</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>189.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.12262222</latitude>
+			<longitude>-092.05347562</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.11762807</latitude>
+			<longitude>-092.05401004</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.12737492</latitude>
+			<longitude>-092.05126791</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

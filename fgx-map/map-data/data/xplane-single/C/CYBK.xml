@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYBK">
+		<linecode>1</linecode>
+		<elevation>59</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYBK</identifier>
+		<name>BAKER LAKE</name>
+		<runway end="34T" id="16T">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16T</number>
+			<latitude>64.30444200</latitude>
+			<longitude>-096.08194700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34T</number_end>
+			<latitude_end>64.29333600</latitude_end>
+			<longitude_end>-096.07360800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1302.26461687</length-meters>
+			<length-feet>3969.30255222</length-feet>
+			<heading id="16T">161.945658528</heading>
+			<heading_end id="34T">341.938144517</heading_end>
+			<threshold_lat id="16T">64.304442</threshold_lat>
+			<threshold_lon id="16T">-96.081947</threshold_lon>
+			<threshold_lat_end id="34T">64.293336</threshold_lat_end>
+			<threshold_lon_end id="34T">-96.073608</threshold_lon_end>
+		</runway>
+		<lightingobject id="16T">
+			<linecode>21</linecode>
+			<latitude>64.30282606</latitude>
+			<longitude>-096.07998579</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>161.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16T</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34T">
+			<linecode>21</linecode>
+			<latitude>64.29495205</latitude>
+			<longitude>-096.07556802</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>341.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34T</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>64.29918660</latitude>
+			<longitude>-096.07567105</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.30483023</latitude>
+			<longitude>-096.08124063</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.29294781</latitude>
+			<longitude>-096.07431419</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>ARPT RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

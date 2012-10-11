@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MUMZ">
+		<linecode>1</linecode>
+		<elevation>112</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MUMZ</identifier>
+		<name>SIERRA MAESTRA</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>20.28521700</latitude>
+			<longitude>-077.10035300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>20.29112800</latitude_end>
+			<longitude_end>-077.07824400</longitude_end>
+			<threshold_end>199.64</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2400.32792248</length-meters>
+			<length-feet>7316.19950771</length-feet>
+			<heading id="08 ">74.1831788223</heading>
+			<heading_end id="26 ">254.175512702</heading_end>
+			<threshold_lat id="08 ">20.285217</threshold_lat>
+			<threshold_lon id="08 ">-77.100353</threshold_lon>
+			<threshold_lat_end id="26 ">20.2906362449</threshold_lat_end>
+			<threshold_lon_end id="26 ">-77.0800828433</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>20.28609610</latitude>
+			<longitude>-077.09862488</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>74.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>20.28953912</latitude>
+			<longitude>-077.08971608</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>20.28569129</latitude>
+			<longitude>-077.10094722</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>20.29065363</latitude>
+			<longitude>-077.07764982</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>MANZANILLO TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

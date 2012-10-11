@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KLSK">
+		<linecode>1</linecode>
+		<elevation>4964</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KLSK</identifier>
+		<name>LUSK MUNI</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>42.75680339</latitude>
+			<longitude>-104.41303797</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>42.75082811</latitude_end>
+			<longitude_end>-104.39605344</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1540.76629939</length-meters>
+			<length-feet>4696.25568054</length-feet>
+			<heading id="10 ">115.52490635</heading>
+			<heading_end id="28 ">295.513376408</heading_end>
+			<threshold_lat id="10 ">42.75680339</threshold_lat>
+			<threshold_lon id="10 ">-104.41303797</threshold_lon>
+			<threshold_lat_end id="28 ">42.75082811</threshold_lat_end>
+			<threshold_lon_end id="28 ">-104.39605344</threshold_lon_end>
+		</runway>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>42.75149201</latitude>
+			<longitude>-104.39887119</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>295.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>42.75338577</latitude>
+			<longitude>104.40689402</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 32</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.75348444</latitude>
+			<longitude>104.40691765</longitude>
+			<heading>52.22</heading>
+			<name>New Ramp Start 30</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.75363286</latitude>
+			<longitude>-104.40753517</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.75558040</latitude>
+			<longitude>-104.40703210</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 31</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ESOE">
+		<linecode>1</linecode>
+		<elevation>188</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ESOE</identifier>
+		<name>Orebro</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>59.21098300</latitude>
+			<longitude>015.03281400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>59.23385300</latitude_end>
+			<longitude_end>015.04203600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2601.55153886</length-meters>
+			<length-feet>7929.52909044</length-feet>
+			<heading id="01 ">11.6826707321</heading>
+			<heading_end id="19 ">191.674747557</heading_end>
+			<threshold_lat id="01 ">59.210983</threshold_lat>
+			<threshold_lon id="01 ">15.032814</threshold_lon>
+			<threshold_lat_end id="19 ">59.233853</threshold_lat_end>
+			<threshold_lon_end id="19 ">15.042036</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>59.21366972</latitude>
+			<longitude>015.03309677</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>11.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>59.23058025</latitude>
+			<longitude>015.04151570</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>191.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>59.22713500</latitude>
+			<longitude>015.04629300</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>59.22804300</latitude>
+			<longitude>015.04441600</longitude>
+			<heading>40.00</heading>
+			<name>esoe ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>59.22258400</latitude>
+			<longitude>015.03587100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.21114700</latitude>
+			<longitude>015.03126200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.23368800</latitude>
+			<longitude>015.04359100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13360">133.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12027">120.27</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

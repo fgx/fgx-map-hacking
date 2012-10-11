@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDSB">
+		<linecode>1</linecode>
+		<elevation>408</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDSB</identifier>
+		<name>Karlsruhe Baden Baden</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>48.76783300</latitude>
+			<longitude>008.06993600</longitude>
+			<threshold>252.98</threshold>
+			<overrrun>35.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>48.79068100</latitude_end>
+			<longitude_end>008.09134700</longitude_end>
+			<threshold_end>252.98</threshold_end>
+			<overrrun_end>35.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2988.64063456</length-meters>
+			<length-feet>9109.37665414</length-feet>
+			<heading id="03 ">31.77899201</heading>
+			<heading_end id="21 ">211.762887161</heading_end>
+			<threshold_lat id="03 ">48.7697668396</threshold_lat>
+			<threshold_lon id="03 ">8.07174845038</threshold_lon>
+			<threshold_lat_end id="21 ">48.7887468022</threshold_lat_end>
+			<threshold_lon_end id="21 ">8.08953468888</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>48.77246825</latitude>
+			<longitude>008.07356249</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>31.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>48.78625365</latitude>
+			<longitude>008.08791125</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>211.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.77879300</latitude>
+			<longitude>008.09265900</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.77967800</latitude>
+			<longitude>008.07959300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.76826100</latitude>
+			<longitude>008.06889000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.79025700</latitude>
+			<longitude>008.09239800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12127">121.27</frequency>
+			<description>BADEN ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12182">121.82</frequency>
+			<description>BADEN GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12587">125.87</frequency>
+			<description>BADEN TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12895">128.95</frequency>
+			<description>LANGEN INFO</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11945">119.45</frequency>
+			<description>STRASSBOURG RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

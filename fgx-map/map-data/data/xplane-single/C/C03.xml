@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="C03 ">
+		<linecode>1</linecode>
+		<elevation>860</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>C03</identifier>
+		<name>NAPPANEE MUNI</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>41.44610300</latitude>
+			<longitude>-085.94274700</longitude>
+			<threshold>76.20</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>41.44621100</latitude_end>
+			<longitude_end>-085.92934400</longitude_end>
+			<threshold_end>56.39</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1120.08980257</length-meters>
+			<length-feet>3414.03371824</length-feet>
+			<heading id="09 ">89.3908582946</heading>
+			<heading_end id="27 ">269.381986635</heading_end>
+			<threshold_lat id="09 ">41.4461102905</threshold_lat>
+			<threshold_lon id="09 ">-85.9418351903</threshold_lon>
+			<threshold_lat_end id="27 ">41.4462055215</threshold_lat_end>
+			<threshold_lon_end id="27 ">-85.930018763</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.44663737</latitude>
+			<longitude>-085.93605403</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.44630723</latitude>
+			<longitude>-085.94293293</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.44600675</latitude>
+			<longitude>-085.92915811</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13205">132.05</frequency>
+			<description>SOUTH BEND APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

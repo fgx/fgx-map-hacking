@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KORC">
+		<linecode>1</linecode>
+		<elevation>1414</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KORC</identifier>
+		<name>ORANGE CITY MUNI</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>42.99588900</latitude>
+			<longitude>-096.06488300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>42.98463900</latitude_end>
+			<longitude_end>-096.06071100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1295.2771736</length-meters>
+			<length-feet>3948.00482513</length-feet>
+			<heading id="16 ">164.772314805</heading>
+			<heading_end id="34 ">344.769470026</heading_end>
+			<threshold_lat id="16 ">42.995889</threshold_lat>
+			<threshold_lon id="16 ">-96.064883</threshold_lon>
+			<threshold_lat_end id="34 ">42.984639</threshold_lat_end>
+			<threshold_lon_end id="34 ">-96.060711</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>42.99421824</latitude>
+			<longitude>-096.06390450</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>164.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>42.98630979</latitude>
+			<longitude>-096.06168923</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>344.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.99041697</latitude>
+			<longitude>-096.06203738</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.99611248</latitude>
+			<longitude>-096.06461617</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.98441554</latitude>
+			<longitude>-096.06097781</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12782">127.82</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12410">124.1</frequency>
+			<description>MINNEAPOLIS CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

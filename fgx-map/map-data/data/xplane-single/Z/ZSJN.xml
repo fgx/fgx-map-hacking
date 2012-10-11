@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZSJN">
+		<linecode>1</linecode>
+		<elevation>76</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZSJN</identifier>
+		<name>YAOQIANG</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>36.84098900</latitude>
+			<longitude>117.21600300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>36.87343600</latitude_end>
+			<longitude_end>117.21598100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3600.80532538</length-meters>
+			<length-feet>10975.2546317</length-feet>
+			<heading id="01 ">-0.0312244225788</heading>
+			<heading_end id="19 ">539.968788774</heading_end>
+			<threshold_lat id="01 ">36.840989</threshold_lat>
+			<threshold_lon id="01 ">117.216003</threshold_lon>
+			<threshold_lat_end id="19 ">36.873436</threshold_lat_end>
+			<threshold_lon_end id="19 ">117.215981</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>36.84300510</latitude>
+			<longitude>117.21550060</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>359.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>36.87188067</latitude>
+			<longitude>117.21648328</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>179.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.85721021</latitude>
+			<longitude>117.21421623</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.84058271</latitude>
+			<longitude>117.21524239</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.87384229</latitude>
+			<longitude>117.21674194</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12705">127.05</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>JINNAN GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11855">118.55</frequency>
+			<description>JINAN TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13000">130.0</frequency>
+			<description>JINAN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

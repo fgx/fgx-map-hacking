@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KVNW">
+		<linecode>1</linecode>
+		<elevation>785</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KVNW</identifier>
+		<name>VAN WERT CO</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>40.86467200</latitude>
+			<longitude>-084.61668300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>40.86475800</latitude_end>
+			<longitude_end>-084.60222200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.20063025</length-meters>
+			<length-feet>3716.12352101</length-feet>
+			<heading id="09 ">89.5559089126</heading>
+			<heading_end id="27 ">269.546447439</heading_end>
+			<threshold_lat id="09 ">40.864672</threshold_lat>
+			<threshold_lon id="09 ">-84.616683</threshold_lon>
+			<threshold_lat_end id="27 ">40.864758</threshold_lat_end>
+			<threshold_lon_end id="27 ">-84.602222</threshold_lon_end>
+		</runway>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>32.00</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>40.86633100</latitude>
+			<longitude>-084.60162200</longitude>
+			<threshold>96.01</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>40.85916700</latitude_end>
+			<longitude_end>-084.60176100</longitude_end>
+			<threshold_end>155.45</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>795.657504627</length-meters>
+			<length-feet>2425.1640741</length-feet>
+			<heading id="18 ">-179.156121459</heading>
+			<heading_end id="36 ">360.843969482</heading_end>
+			<threshold_lat id="18 ">40.8654665385</threshold_lat>
+			<threshold_lon id="18 ">-84.6016387726</threshold_lon>
+			<threshold_lat_end id="36 ">40.8605666529</threshold_lat_end>
+			<threshold_lon_end id="36 ">-84.6017338426</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>40.86498714</latitude>
+			<longitude>-084.61430629</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>40.86444316</latitude>
+			<longitude>-084.60459878</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.86497757</latitude>
+			<longitude>-084.61695825</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.86661266</latitude>
+			<longitude>-084.60104701</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.86445240</latitude>
+			<longitude>-084.60194682</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.85888534</latitude>
+			<longitude>-084.60233593</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12517">125.17</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>FORT WAYNE APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13215">132.15</frequency>
+			<description>FORT WAYNE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

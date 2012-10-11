@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YTEF">
+		<linecode>1</linecode>
+		<elevation>970</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YTEF</identifier>
+		<name>Telfer</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-21.71048570</latitude>
+			<longitude>122.22196159</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-21.71990420</latitude_end>
+			<longitude_end>122.23844059</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1998.68276008</length-meters>
+			<length-feet>6091.98505273</length-feet>
+			<heading id="12 ">121.448824602</heading>
+			<heading_end id="30 ">301.454921719</heading_end>
+			<threshold_lat id="12 ">-21.7104857</threshold_lat>
+			<threshold_lon id="12 ">122.22196159</threshold_lon>
+			<threshold_lat_end id="30 ">-21.7199042</threshold_lat_end>
+			<threshold_lon_end id="30 ">122.23844059</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-21.71897600</latitude>
+			<longitude>122.23601500</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>301.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-21.71160800</latitude>
+			<longitude>122.22473400</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>121.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-21.71081590</latitude>
+			<longitude>122.22657148</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 7</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-21.71115942</latitude>
+			<longitude>122.22633034</longitude>
+			<heading>27.73</heading>
+			<name>New Ramp Start 6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-21.71439334</latitude>
+			<longitude>122.23073000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-21.72028056</latitude>
+			<longitude>122.23710667</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-21.71154990</latitude>
+			<longitude>122.22582871</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 5</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

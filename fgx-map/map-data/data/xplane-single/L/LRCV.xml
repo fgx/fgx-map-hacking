@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LRCV">
+		<linecode>1</linecode>
+		<elevation>626</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LRCV</identifier>
+		<name>CRAIOVA</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>44.31794400</latitude>
+			<longitude>023.87294400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>44.31836100</latitude_end>
+			<longitude_end>023.90413900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2489.05478716</length-meters>
+			<length-feet>7586.63899128</length-feet>
+			<heading id="09 ">88.9442137561</heading>
+			<heading_end id="27 ">268.922419619</heading_end>
+			<threshold_lat id="09 ">44.317944</threshold_lat>
+			<threshold_lon id="09 ">23.872944</threshold_lon>
+			<threshold_lat_end id="27 ">44.318361</threshold_lat_end>
+			<threshold_lon_end id="27 ">23.904139</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.31957523</latitude>
+			<longitude>023.88850345</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.31854517</latitude>
+			<longitude>023.87236064</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.31775967</latitude>
+			<longitude>023.90472205</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

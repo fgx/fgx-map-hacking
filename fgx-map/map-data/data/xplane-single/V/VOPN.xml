@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VOPN">
+		<linecode>1</linecode>
+		<elevation>1558</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VOPN</identifier>
+		<name>SRI SATHYA SAI</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>44.20</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>14.14975800</latitude>
+			<longitude>077.78082800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>14.14877500</latitude_end>
+			<longitude_end>077.80145300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2229.40981929</length-meters>
+			<length-feet>6795.2411292</length-feet>
+			<heading id="09 ">92.7987541371</heading>
+			<heading_end id="27 ">272.793712379</heading_end>
+			<threshold_lat id="09 ">14.149758</threshold_lat>
+			<threshold_lon id="09 ">77.780828</threshold_lon>
+			<threshold_lat_end id="27 ">14.148775</threshold_lat_end>
+			<threshold_lon_end id="27 ">77.801453</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>14.15006609</latitude>
+			<longitude>077.78270200</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>92.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>14.14846707</latitude>
+			<longitude>077.79957897</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>272.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.15037202</latitude>
+			<longitude>077.78044843</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.14816095</latitude>
+			<longitude>077.80183252</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

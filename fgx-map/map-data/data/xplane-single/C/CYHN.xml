@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYHN">
+		<linecode>1</linecode>
+		<elevation>1099</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYHN</identifier>
+		<name>HORNEPAYNE MUNI</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>49.19055600</latitude>
+			<longitude>-084.76527800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>49.19555600</latitude_end>
+			<longitude_end>-084.75250000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1084.74021706</length-meters>
+			<length-feet>3306.28818159</length-feet>
+			<heading id="07 ">59.1658482467</heading>
+			<heading_end id="25 ">239.156176376</heading_end>
+			<threshold_lat id="07 ">49.190556</threshold_lat>
+			<threshold_lon id="07 ">-84.765278</threshold_lon>
+			<threshold_lat_end id="25 ">49.195556</threshold_lat_end>
+			<threshold_lon_end id="25 ">-84.7525</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>49.19173884</latitude>
+			<longitude>-084.76315182</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>59.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>49.19437339</latitude>
+			<longitude>-084.75462671</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>239.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.19367266</latitude>
+			<longitude>-084.75945528</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.19071386</latitude>
+			<longitude>-084.76578958</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.19539808</latitude>
+			<longitude>-084.75198842</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

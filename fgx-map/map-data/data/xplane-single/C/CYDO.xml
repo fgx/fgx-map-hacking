@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYDO">
+		<linecode>1</linecode>
+		<elevation>372</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>CYDO</identifier>
+		<name>DOLBEAU ST FELICIEN</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>48.77899200</latitude>
+			<longitude>-072.38519700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>48.77808100</latitude_end>
+			<longitude_end>-072.36462800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1515.12293032</length-meters>
+			<length-feet>4618.09469161</length-feet>
+			<heading id="11 ">93.8416581756</heading>
+			<heading_end id="29 ">273.82618683</heading_end>
+			<threshold_lat id="11 ">48.778992</threshold_lat>
+			<threshold_lon id="11 ">-72.385197</threshold_lon>
+			<threshold_lat_end id="29 ">48.778081</threshold_lat_end>
+			<threshold_lon_end id="29 ">-72.364628</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.77949536</latitude>
+			<longitude>-072.37481612</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.77942088</latitude>
+			<longitude>-072.38557053</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.77765205</latitude>
+			<longitude>-072.36425464</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>ROBERVAL RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVKA">
+		<linecode>1</linecode>
+		<elevation>3901</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVKA</identifier>
+		<name>Kavanayen</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>15.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>05.63720622</latitude>
+			<longitude>-061.78576254</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>05.62890618</latitude_end>
+			<longitude_end>-061.78034626</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1096.59507728</length-meters>
+			<length-feet>3342.42179554</length-feet>
+			<heading id="16 ">146.825855371</heading>
+			<heading_end id="34 ">326.825323725</heading_end>
+			<threshold_lat id="16 ">5.63720622</threshold_lat>
+			<threshold_lon id="16 ">-61.78576254</threshold_lon>
+			<threshold_lat_end id="34 ">5.62890618</threshold_lat_end>
+			<threshold_lon_end id="34 ">-61.78034626</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>05.63582871</latitude>
+			<longitude>-061.78457330</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>147.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>05.63028370</latitude>
+			<longitude>-061.78153547</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>327.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>05.63332810</latitude>
+			<longitude>-061.78263368</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>05.63744237</latitude>
+			<longitude>-061.78566029</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>05.62867003</latitude>
+			<longitude>-061.78044851</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

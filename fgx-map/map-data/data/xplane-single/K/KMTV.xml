@@ -1,0 +1,296 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMTV">
+		<linecode>1</linecode>
+		<elevation>941</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KMTV</identifier>
+		<name>Martinsville - Blue Ridge</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>36.63399984</latitude>
+			<longitude>-080.02585076</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>36.62750816</latitude_end>
+			<longitude_end>-080.01082724</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.63293955</length-meters>
+			<length-feet>4647.08119975</length-feet>
+			<heading id="12 ">118.201072209</heading>
+			<heading_end id="30 ">298.19210834</heading_end>
+			<threshold_lat id="12 ">36.63399984</threshold_lat>
+			<threshold_lon id="12 ">-80.02585076</threshold_lon>
+			<threshold_lat_end id="30 ">36.62750816</threshold_lat_end>
+			<threshold_lon_end id="30 ">-80.01082724</threshold_lon_end>
+		</runway>
+		<lightingobject id="I-L">
+			<linecode>21</linecode>
+			<latitude>36.63357847</latitude>
+			<longitude>-080.02397800</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>118.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>I-L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="I-L">
+			<linecode>21</linecode>
+			<latitude>36.62791644</latitude>
+			<longitude>-080.01271346</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>298.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>I-L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>36.63202700</latitude>
+			<longitude>080.01567800</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.63103576</latitude>
+			<longitude>080.01570317</longitude>
+			<heading>18.06</heading>
+			<name>Blue Ridge FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.63087280</latitude>
+			<longitude>080.01511078</longitude>
+			<heading>08.30</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.63445680</latitude>
+			<longitude>080.02511087</longitude>
+			<heading>44.56</heading>
+			<name>Hold Short Rwy12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.62840914</latitude>
+			<longitude>080.01038968</longitude>
+			<heading>60.23</heading>
+			<name>Hold Short Rwy30</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.63419854</latitude>
+			<longitude>080.02102343</longitude>
+			<heading>08.30</heading>
+			<name>Remote Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.63302875</latitude>
+			<longitude>080.01873464</longitude>
+			<heading>08.00</heading>
+			<name>T Hanger</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.63308934</latitude>
+			<longitude>-080.01695576</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.62887969</latitude>
+			<longitude>-080.01657977</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.62704857</latitude>
+			<longitude>-080.01249115</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.62809900</latitude>
+			<longitude>-080.01038950</longitude>
+			<orientation>193.54</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@L}A{@R}30-12{@@,@Y,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63448699</latitude>
+			<longitude>-080.02525753</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@L}A{@R}30-12{@@,@Y,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63283111</latitude>
+			<longitude>-080.02141978</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@L}B{@R}30-12{@@,@Y,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63167279</latitude>
+			<longitude>-080.01871925</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@L}C{@R}30-12{@@,@Y,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63063699</latitude>
+			<longitude>-080.01630323</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@L}D{@R}30-12{@@,@Y,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.62980865</latitude>
+			<longitude>-080.01437405</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}30|12{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63086614</latitude>
+			<longitude>-080.01608319</longitude>
+			<orientation>208.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}30|12{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.62779499</latitude>
+			<longitude>-080.01100171</longitude>
+			<orientation>118.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63259478</latitude>
+			<longitude>-080.02206884</longitude>
+			<orientation>118.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63140282</latitude>
+			<longitude>-080.01933621</longitude>
+			<orientation>118.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63038699</latitude>
+			<longitude>-080.01696703</longitude>
+			<orientation>118.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y,^l}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63404774</latitude>
+			<longitude>-080.02544738</longitude>
+			<orientation>298.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63239248</latitude>
+			<longitude>-080.02161615</longitude>
+			<orientation>298.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63122519</latitude>
+			<longitude>-080.01893471</longitude>
+			<orientation>298.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y}C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.63018917</latitude>
+			<longitude>-080.01650764</longitude>
+			<orientation>298.30</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@Y}D{^r}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11845">118.45</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12485">124.85</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12435">124.35</frequency>
+			<description>GREENSBORO APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

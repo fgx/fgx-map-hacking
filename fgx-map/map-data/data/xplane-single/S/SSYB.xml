@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SSYB">
+		<linecode>1</linecode>
+		<elevation>33</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SSYB</identifier>
+		<name>Imbituba</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>17.68</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>-28.28130892</latitude>
+			<longitude>-048.70008996</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>-28.27202428</latitude_end>
+			<longitude_end>-048.69324344</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1228.80093437</length-meters>
+			<length-feet>3745.38524797</length-feet>
+			<heading id="05 ">33.1350132739</heading>
+			<heading_end id="23 ">213.138256673</heading_end>
+			<threshold_lat id="05 ">-28.28130892</threshold_lat>
+			<threshold_lon id="05 ">-48.70008996</threshold_lon>
+			<threshold_lat_end id="23 ">-28.27202428</threshold_lat_end>
+			<threshold_lon_end id="23 ">-48.69324344</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>-28.27966301</latitude>
+			<longitude>-048.69921536</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>33.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>-28.27367023</latitude>
+			<longitude>-048.69411786</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>213.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-28.27636333</latitude>
+			<longitude>-048.69719683</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.28131236</latitude>
+			<longitude>-048.70041562</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.27202082</latitude>
+			<longitude>-048.69291781</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

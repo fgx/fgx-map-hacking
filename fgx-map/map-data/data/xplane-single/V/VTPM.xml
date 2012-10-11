@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VTPM">
+		<linecode>1</linecode>
+		<elevation>690</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>VTPM</identifier>
+		<name>Tak Mae Sot</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>16.69975000</latitude>
+			<longitude>098.53796900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>16.69995800</latitude_end>
+			<longitude_end>098.55214200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1511.78064108</length-meters>
+			<length-feet>4607.90739402</length-feet>
+			<heading id="09 ">89.1296110082</heading>
+			<heading_end id="27 ">269.125538282</heading_end>
+			<threshold_lat id="09 ">16.69975</threshold_lat>
+			<threshold_lon id="09 ">98.537969</threshold_lon>
+			<threshold_lat_end id="27 ">16.699958</threshold_lat_end>
+			<threshold_lon_end id="27 ">98.552142</threshold_lon_end>
+		</runway>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>16.69959814</latitude>
+			<longitude>098.55026841</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>16.70195000</latitude>
+			<longitude>098.54234300</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>16.70117200</latitude>
+			<longitude>098.54315900</longitude>
+			<heading>70.00</heading>
+			<name>Platform</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>16.70039200</latitude>
+			<longitude>098.54505900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.70028900</latitude>
+			<longitude>098.53794900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.69942100</latitude>
+			<longitude>098.55215500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11835">118.35</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12065">120.65</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

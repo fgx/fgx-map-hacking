@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HKRE">
+		<linecode>1</linecode>
+		<elevation>5380</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>HKRE</identifier>
+		<name>EASTLEIGH</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-01.28319700</latitude>
+			<longitude>036.85308300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-01.27133300</latitude_end>
+			<longitude_end>036.87159200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2442.16711665</length-meters>
+			<length-feet>7443.72537153</length-feet>
+			<heading id="06 ">57.5085750727</heading>
+			<heading_end id="24 ">237.50898765</heading_end>
+			<threshold_lat id="06 ">-1.283197</threshold_lat>
+			<threshold_lon id="06 ">36.853083</threshold_lon>
+			<threshold_lat_end id="24 ">-1.271333</threshold_lat_end>
+			<threshold_lon_end id="24 ">36.871592</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-01.27604697</latitude>
+			<longitude>036.86155384</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-01.28289868</latitude>
+			<longitude>036.85239956</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-01.27163130</latitude>
+			<longitude>036.87227543</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>EASTLEIGH TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

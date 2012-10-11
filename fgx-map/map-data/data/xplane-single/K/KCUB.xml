@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCUB">
+		<linecode>1</linecode>
+		<elevation>193</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCUB</identifier>
+		<name>Columbia Owens Downtown</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>33.97461400</latitude>
+			<longitude>-081.00181100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>121.92</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>33.96634200</latitude_end>
+			<longitude_end>-080.98863600</longitude_end>
+			<threshold_end>119.18</threshold_end>
+			<overrrun_end>0.30</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.60368642</length-meters>
+			<length-feet>4646.99203621</length-feet>
+			<heading id="13 ">127.004441272</heading>
+			<heading_end id="31 ">306.997079534</heading_end>
+			<threshold_lat id="13 ">33.974614</threshold_lat>
+			<threshold_lon id="13 ">-81.001811</threshold_lon>
+			<threshold_lat_end id="31 ">33.9669885726</threshold_lat_end>
+			<threshold_lon_end id="31 ">-80.9896659125</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>33.97376757</latitude>
+			<longitude>-080.99986156</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>127.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>33.96783605</latitude>
+			<longitude>-080.99161611</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>307.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>33.97148100</latitude>
+			<longitude>080.99522400</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.97219100</latitude>
+			<longitude>080.99289700</longitude>
+			<heading>20.00</heading>
+			<name>ramp at Owens</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.97080600</latitude>
+			<longitude>-080.99492600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.97494500</latitude>
+			<longitude>-081.00151100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.96601500</latitude>
+			<longitude>-080.98893700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11967">119.67</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12440">124.4</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13340">133.4</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

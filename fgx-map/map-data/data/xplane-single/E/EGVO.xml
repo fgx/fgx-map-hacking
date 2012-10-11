@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGVO">
+		<linecode>1</linecode>
+		<elevation>405</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGVO</identifier>
+		<name>RAF Odiham</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>51.23455772</latitude>
+			<longitude>-000.95588273</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>51.23380828</latitude_end>
+			<longitude_end>-000.92962527</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1835.81296445</length-meters>
+			<length-feet>5595.55791563</length-feet>
+			<heading id="09 ">92.6133390677</heading>
+			<heading_end id="27 ">272.59286582</heading_end>
+			<threshold_lat id="09 ">51.23455772</threshold_lat>
+			<threshold_lon id="09 ">-0.95588273</threshold_lon>
+			<threshold_lat_end id="27 ">51.23380828</threshold_lat_end>
+			<threshold_lon_end id="27 ">-0.92962527</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>51.23402099</latitude>
+			<longitude>-000.95237564</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>92.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>51.23490737</latitude>
+			<longitude>-000.95198858</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>92.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>51.23435951</latitude>
+			<longitude>-000.93286085</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>268.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>51.23344452</latitude>
+			<longitude>-000.93317671</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>272.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.23016515</latitude>
+			<longitude>000.93702056</longitude>
+			<height>35</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.23793798</latitude>
+			<longitude>000.93826618</longitude>
+			<heading>92.41</heading>
+			<name>Apron East</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.23117641</latitude>
+			<longitude>000.94147920</longitude>
+			<heading>23.10</heading>
+			<name>Apron South</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.23814895</latitude>
+			<longitude>000.94859799</longitude>
+			<heading>34.30</heading>
+			<name>Apron West</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.23293974</latitude>
+			<longitude>-000.95600709</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.23362156</latitude>
+			<longitude>-000.95304015</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.23520627</latitude>
+			<longitude>-000.93331604</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>Odiham Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13130">131.3</frequency>
+			<description>Odiham Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

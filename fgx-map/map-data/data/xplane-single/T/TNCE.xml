@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="TNCE">
+		<linecode>1</linecode>
+		<elevation>129</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>TNCE</identifier>
+		<name>St Eustatius/F D Roosevelt</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>17.49270000</latitude>
+			<longitude>-062.98417200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>17.50028300</latitude_end>
+			<longitude_end>-062.97470600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1309.5681791</length-meters>
+			<length-feet>3991.5638099</length-feet>
+			<heading id="06 ">50.1456454511</heading>
+			<heading_end id="24 ">230.142799523</heading_end>
+			<threshold_lat id="06 ">17.4927</threshold_lat>
+			<threshold_lon id="06 ">-62.984172</threshold_lon>
+			<threshold_lat_end id="24 ">17.500283</threshold_lat_end>
+			<threshold_lon_end id="24 ">-62.974706</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>17.49406828</latitude>
+			<longitude>-062.98302532</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>49.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>17.49322300</latitude>
+			<longitude>062.98117000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.49395476</latitude>
+			<longitude>062.98115845</longitude>
+			<heading>00.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.49353754</latitude>
+			<longitude>062.98120299</longitude>
+			<heading>30.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>17.49330941</latitude>
+			<longitude>-062.98076108</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.49410552</latitude>
+			<longitude>-062.98175086</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

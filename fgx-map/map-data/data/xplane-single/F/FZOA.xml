@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FZOA">
+		<linecode>1</linecode>
+		<elevation>1630</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FZOA</identifier>
+		<name>KINDU</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-02.90923600</latitude>
+			<longitude>025.91465800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-02.92911700</latitude_end>
+			<longitude_end>025.91606400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2203.93466478</length-meters>
+			<length-feet>6717.59285824</length-feet>
+			<heading id="18 ">175.932862048</heading>
+			<heading_end id="36 ">355.932933652</heading_end>
+			<threshold_lat id="18 ">-2.909236</threshold_lat>
+			<threshold_lon id="18 ">25.914658</threshold_lon>
+			<threshold_lat_end id="36 ">-2.929117</threshold_lat_end>
+			<threshold_lon_end id="36 ">25.916064</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-02.91100503</latitude>
+			<longitude>025.91515849</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>175.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.91907639</latitude>
+			<longitude>025.91678016</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.90878815</latitude>
+			<longitude>025.91523757</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.92956485</latitude>
+			<longitude>025.91548442</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

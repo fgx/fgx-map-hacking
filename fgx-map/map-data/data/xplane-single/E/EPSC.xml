@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPSC">
+		<linecode>1</linecode>
+		<elevation>154</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPSC</identifier>
+		<name>GOLENIOW</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>53.59208290</latitude>
+			<longitude>014.88792304</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>53.57737910</latitude_end>
+			<longitude_end>014.91646696</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2500.32039515</length-meters>
+			<length-feet>7620.97656441</length-feet>
+			<heading id="13 ">130.894225114</heading>
+			<heading_end id="31 ">310.871254804</heading_end>
+			<threshold_lat id="13 ">53.5920829</threshold_lat>
+			<threshold_lon id="13 ">14.88792304</threshold_lon>
+			<threshold_lat_end id="31 ">53.5773791</threshold_lat_end>
+			<threshold_lon_end id="31 ">14.91646696</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>53.59125721</latitude>
+			<longitude>014.89073063</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>130.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.58739000</latitude>
+			<longitude>014.90696000</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.59186300</latitude>
+			<longitude>014.89207300</longitude>
+			<heading>30.95</heading>
+			<name>Aircraft stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.59220900</latitude>
+			<longitude>014.89260100</longitude>
+			<heading>30.95</heading>
+			<name>Aircraft stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.59256500</latitude>
+			<longitude>014.89312900</longitude>
+			<heading>30.95</heading>
+			<name>Aircraft stand 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.58321800</latitude>
+			<longitude>014.91899300</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.58741300</latitude>
+			<longitude>014.90569900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.59270000</latitude>
+			<longitude>014.89139500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.57969600</latitude>
+			<longitude>014.91611600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>SZCZECIN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

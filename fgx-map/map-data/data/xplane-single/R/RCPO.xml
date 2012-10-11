@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RCPO">
+		<linecode>1</linecode>
+		<elevation>26</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RCPO</identifier>
+		<name>HSINCHU</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>24.80636700</latitude>
+			<longitude>120.92669200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>246.89</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>24.82970000</latitude_end>
+			<longitude_end>120.95210000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>285.90</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3643.95445318</length-meters>
+			<length-feet>11106.7731733</length-feet>
+			<heading id="05 ">44.8285968338</heading>
+			<heading_end id="23 ">224.817932136</heading_end>
+			<threshold_lat id="05 ">24.806367</threshold_lat>
+			<threshold_lon id="05 ">120.926692</threshold_lon>
+			<threshold_lat_end id="23 ">24.8297</threshold_lat_end>
+			<threshold_lon_end id="23 ">120.9521</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>24.80874275</latitude>
+			<longitude>120.92865729</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>44.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>24.82813811</latitude>
+			<longitude>120.95101997</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>224.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.81903316</latitude>
+			<longitude>120.93827997</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.80650626</latitude>
+			<longitude>120.92590048</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.82956061</latitude>
+			<longitude>120.95289164</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>TAIPEI APP</description>
+		</atc>
+	</airport>
+</PropertyList>

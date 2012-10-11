@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SELT">
+		<linecode>1</linecode>
+		<elevation>9205</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SELT</identifier>
+		<name>COTOPAXI INTL</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-00.89018100</latitude>
+			<longitude>-078.61450800</longitude>
+			<threshold>431.90</threshold>
+			<overrrun>193.55</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-00.92348600</latitude_end>
+			<longitude_end>-078.61700600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>94.49</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3693.16662349</length-meters>
+			<length-feet>11256.7718684</length-feet>
+			<heading id="18 ">-175.682359817</heading>
+			<heading_end id="36 ">364.317600648</heading_end>
+			<threshold_lat id="18 ">-0.894075877138</threshold_lat>
+			<threshold_lon id="18 ">-78.6148001307</threshold_lon>
+			<threshold_lat_end id="36 ">-0.923486</threshold_lat_end>
+			<threshold_lon_end id="36 ">-78.617006</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-00.89786430</latitude>
+			<longitude>-078.61468214</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>184.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-00.90693703</latitude>
+			<longitude>-078.61433972</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.88982172</latitude>
+			<longitude>-078.61387033</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.92384528</latitude>
+			<longitude>-078.61764368</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>LATACUNGA GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>LATACUNGA APP/TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

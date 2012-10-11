@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LSMD">
+		<linecode>1</linecode>
+		<elevation>1470</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LSMD</identifier>
+		<name>Duebendorf</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>47.40197633</latitude>
+			<longitude>008.63208994</longitude>
+			<threshold>130.15</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>47.39454708</latitude_end>
+			<longitude_end>008.66623984</longitude_end>
+			<threshold_end>276.15</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2707.03091878</length-meters>
+			<length-feet>8251.03024046</length-feet>
+			<heading id="11 ">107.778048838</heading>
+			<heading_end id="29 ">287.752911897</heading_end>
+			<threshold_lat id="11 ">47.4016188867</threshold_lat>
+			<threshold_lon id="11 ">8.63373180499</threshold_lon>
+			<threshold_lat_end id="29 ">47.3953043822</threshold_lat_end>
+			<threshold_lon_end id="29 ">8.66275608603</threshold_lon_end>
+		</runway>
+		<runway end="29L" id="11R">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11R</number>
+			<latitude>47.39957033</latitude>
+			<longitude>008.63520146</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29L</number_end>
+			<latitude_end>47.39711698</latitude_end>
+			<longitude_end>008.64642530</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>3.05</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>890.09730911</length-meters>
+			<length-feet>2713.01659817</length-feet>
+			<heading id="11R">107.848856064</heading>
+			<heading_end id="29L">287.840594447</heading_end>
+			<threshold_lat id="11R">47.39957033</threshold_lat>
+			<threshold_lon id="11R">8.63520146</threshold_lon>
+			<threshold_lat_end id="29L">47.39711698</threshold_lat_end>
+			<threshold_lon_end id="29L">8.6464253</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>47.39610594</latitude>
+			<longitude>008.63764980</longitude>
+			<orientation>5.30</orientation>
+			<width>29.87</width>
+			<length>24.99</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>47.40142447</latitude>
+			<longitude>008.63641869</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>107.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>47.39556789</latitude>
+			<longitude>008.65968877</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>287.8</orientation>
+			<glideslope>4.50</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>47.40218095</latitude>
+			<longitude>008.62802996</longitude>
+			<height>49</height>
+			<deprecated>0</deprecated>
+			<name>LSMD Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40539827</latitude>
+			<longitude>008.63093313</longitude>
+			<heading>49.52</heading>
+			<name>Halle 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.39893749</latitude>
+			<longitude>008.63214576</longitude>
+			<heading>51.68</heading>
+			<name>JU-AIR</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.39607353</latitude>
+			<longitude>008.63793870</longitude>
+			<heading>77.35</heading>
+			<name>REGA EC-145</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40527243</latitude>
+			<longitude>008.64408416</longitude>
+			<heading>14.80</heading>
+			<name>SAF AS-332 Cougar</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40656555</latitude>
+			<longitude>008.63327105</longitude>
+			<heading>39.48</heading>
+			<name>SAF B1900</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40643177</latitude>
+			<longitude>008.63298411</longitude>
+			<heading>38.71</heading>
+			<name>SAF B350</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40563535</latitude>
+			<longitude>008.64335121</longitude>
+			<heading>20.28</heading>
+			<name>SAF EC-635</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40604552</latitude>
+			<longitude>008.63221257</longitude>
+			<heading>46.69</heading>
+			<name>SAF PC-6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40615989</latitude>
+			<longitude>008.63244530</longitude>
+			<heading>43.30</heading>
+			<name>SAF PC-7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.40628720</latitude>
+			<longitude>008.63270036</longitude>
+			<heading>47.02</heading>
+			<name>SAF PC-9</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.40561779</latitude>
+			<longitude>008.63859091</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.39638059</latitude>
+			<longitude>008.63740015</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.40136811</latitude>
+			<longitude>008.63331660</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.39571183</latitude>
+			<longitude>008.66283450</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12847">128.47</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13492">134.92</frequency>
+			<description>ARR</description>
+		</atc>
+	</airport>
+</PropertyList>

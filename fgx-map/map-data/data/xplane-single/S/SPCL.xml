@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SPCL">
+		<linecode>1</linecode>
+		<elevation>513</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SPCL</identifier>
+		<name>CAP FAP DAVID ABENZUR RENGIFO INTL</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>-08.38983600</latitude>
+			<longitude>-074.57865300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>-08.36604400</latitude_end>
+			<longitude_end>-074.56994400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2800.72197549</length-meters>
+			<length-feet>8536.60058131</length-feet>
+			<heading id="02 ">20.0276797607</heading>
+			<heading_end id="20 ">200.028948681</heading_end>
+			<threshold_lat id="02 ">-8.389836</threshold_lat>
+			<threshold_lon id="02 ">-74.578653</threshold_lon>
+			<threshold_lat_end id="20 ">-8.366044</threshold_lat_end>
+			<threshold_lon_end id="20 ">-74.569944</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>-08.38800718</latitude>
+			<longitude>-074.57841458</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>19.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>-08.36787283</latitude>
+			<longitude>-074.57018236</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>199.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-08.37745755</latitude>
+			<longitude>-074.57564908</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.39001035</latitude>
+			<longitude>-074.57937148</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.36586964</latitude>
+			<longitude>-074.56922558</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12690">126.9</frequency>
+			<description>PUCALLPA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>PUCALLPA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

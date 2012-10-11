@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YLIS">
+		<linecode>1</linecode>
+		<elevation>35</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YLIS</identifier>
+		<name>Lismore</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-28.82399968</latitude>
+			<longitude>153.25519203</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-28.83770482</latitude_end>
+			<longitude_end>153.26173618</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1647.79547085</length-meters>
+			<length-feet>5022.48059516</length-feet>
+			<heading id="15 ">157.193000133</heading>
+			<heading_end id="33 ">337.196155889</heading_end>
+			<threshold_lat id="15 ">-28.82399968</threshold_lat>
+			<threshold_lon id="15 ">153.25519203</threshold_lon>
+			<threshold_lat_end id="33 ">-28.83770482</threshold_lat_end>
+			<threshold_lon_end id="33 ">153.26173618</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-28.83557279</latitude>
+			<longitude>153.26024002</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>337.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-28.82606380</latitude>
+			<longitude>153.25664901</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>157.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-28.83665900</latitude>
+			<longitude>153.26288622</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 36</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.82506828</latitude>
+			<longitude>153.25833764</longitude>
+			<heading>99.87</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83649544</latitude>
+			<longitude>153.26257871</longitude>
+			<heading>00.89</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.83680764</latitude>
+			<longitude>153.26268951</longitude>
+			<heading>99.29</heading>
+			<name>Gate 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-28.83048678</latitude>
+			<longitude>153.25945326</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.83756922</latitude>
+			<longitude>153.26302543</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 31</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.82474953</latitude>
+			<longitude>153.25659338</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 34</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11960">119.6</frequency>
+			<description>ACTIVATE LIGHTS ONLY MULT</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12420">124.2</frequency>
+			<description>LISMORE MULT</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>BRISBANE CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

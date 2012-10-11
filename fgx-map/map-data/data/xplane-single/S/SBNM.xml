@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBNM">
+		<linecode>1</linecode>
+		<elevation>1056</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SBNM</identifier>
+		<name>Santo Angelo</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-28.28104400</latitude>
+			<longitude>-054.17780000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-28.28383300</latitude_end>
+			<longitude_end>-054.16146400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1632.16410457</length-meters>
+			<length-feet>4974.83619073</length-feet>
+			<heading id="11 ">100.91233881</heading>
+			<heading_end id="29 ">280.920079106</heading_end>
+			<threshold_lat id="11 ">-28.281044</threshold_lat>
+			<threshold_lon id="11 ">-54.1778</threshold_lon>
+			<threshold_lat_end id="29 ">-28.283833</threshold_lat_end>
+			<threshold_lon_end id="29 ">-54.161464</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>-28.28108687</latitude>
+			<longitude>-054.17572754</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>100.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-28.27981800</latitude>
+			<longitude>054.16960100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.28038000</latitude>
+			<longitude>054.17003300</longitude>
+			<heading>12.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-28.28191200</latitude>
+			<longitude>-054.16952100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.28051600</latitude>
+			<longitude>-054.17768500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.28436100</latitude>
+			<longitude>-054.16157900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13165">131.65</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

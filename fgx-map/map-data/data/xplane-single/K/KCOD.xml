@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCOD">
+		<linecode>1</linecode>
+		<elevation>5102</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KCOD</identifier>
+		<name>Yellowstone Rgnl</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>44.51324658</latitude>
+			<longitude>-109.03635418</longitude>
+			<threshold>210.01</threshold>
+			<overrrun>71.93</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>44.52712642</latitude_end>
+			<longitude_end>-109.01125782</longitude_end>
+			<threshold_end>121.01</threshold_end>
+			<overrrun_end>61.87</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2521.85559235</length-meters>
+			<length-feet>7686.61584547</length-feet>
+			<heading id="04 ">52.3036799617</heading>
+			<heading_end id="22 ">232.286083385</heading_end>
+			<threshold_lat id="04 ">44.5144021898</threshold_lat>
+			<threshold_lon id="04 ">-109.034264215</threshold_lon>
+			<threshold_lat_end id="22 ">44.5264602649</threshold_lat_end>
+			<threshold_lon_end id="22 ">-109.012462043</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>44.51656370</latitude>
+			<longitude>-109.03111663</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>52.2</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>44.52450475</latitude>
+			<longitude>-109.01515104</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>232.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.51357176</latitude>
+			<longitude>109.03050728</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 64</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.51225083</latitude>
+			<longitude>109.02670908</longitude>
+			<heading>20.31</heading>
+			<name>GA Hangers</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.51361269</latitude>
+			<longitude>109.02831509</longitude>
+			<heading>84.18</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.51374871</latitude>
+			<longitude>109.02988670</longitude>
+			<heading>35.49</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.52038060</latitude>
+			<longitude>-109.01272803</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 66</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.51972053</latitude>
+			<longitude>-109.02683510</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13507">135.07</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

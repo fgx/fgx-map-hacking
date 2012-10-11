@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJCC">
+		<linecode>1</linecode>
+		<elevation>82</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>RJCC</identifier>
+		<name>NEW CHITOSE</name>
+		<runway end="19R" id="01L">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01L</number>
+			<latitude>42.76163900</latitude>
+			<longitude>141.69282500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>56.39</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19R</number_end>
+			<latitude_end>42.78843300</latitude_end>
+			<longitude_end>141.68810600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>56.39</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3001.45051213</length-meters>
+			<length-feet>9148.42116097</length-feet>
+			<heading id="01L">-7.39426923302</heading>
+			<heading_end id="19R">532.608935542</heading_end>
+			<threshold_lat id="01L">42.761639</threshold_lat>
+			<threshold_lon id="01L">141.692825</threshold_lon>
+			<threshold_lat_end id="19R">42.788433</threshold_lat_end>
+			<threshold_lon_end id="19R">141.688106</threshold_lon_end>
+		</runway>
+		<runway end="19L" id="01R">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01R</number>
+			<latitude>42.76198600</latitude>
+			<longitude>141.69645800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>56.39</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19L</number_end>
+			<latitude_end>42.78876700</latitude_end>
+			<longitude_end>141.69174400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>56.39</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2999.96563035</length-meters>
+			<length-feet>9143.89524131</length-feet>
+			<heading id="01R">-7.39002589328</heading>
+			<heading_end id="19L">532.613175506</heading_end>
+			<threshold_lat id="01R">42.761986</threshold_lat>
+			<threshold_lon id="01R">141.696458</threshold_lon>
+			<threshold_lat_end id="19L">42.788767</threshold_lat_end>
+			<threshold_lon_end id="19L">141.691744</threshold_lon_end>
+		</runway>
+		<lightingobject id="01L">
+			<linecode>21</linecode>
+			<latitude>42.76427954</latitude>
+			<longitude>141.69171149</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>352.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="01R">
+			<linecode>21</linecode>
+			<latitude>42.76462373</latitude>
+			<longitude>141.69534526</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>352.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19L">
+			<linecode>21</linecode>
+			<latitude>42.78704252</latitude>
+			<longitude>141.69269656</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>172.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19R">
+			<linecode>21</linecode>
+			<latitude>42.78556441</latitude>
+			<longitude>141.68926032</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>172.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.77512972</latitude>
+			<longitude>141.69150788</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.76098945</latitude>
+			<longitude>141.69180921</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.76133650</latitude>
+			<longitude>141.69544214</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.78941654</latitude>
+			<longitude>141.69276027</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.78908260</latitude>
+			<longitude>141.68912220</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12860">128.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>CHITOSE CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>CHITOSE GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>CHITOSE TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>CHITOSE TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12770">127.7</frequency>
+			<description>TCA</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>CHITOSE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12470">124.7</frequency>
+			<description>CHITOSE APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12470">124.7</frequency>
+			<description>CHITOSE DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYND">
+		<linecode>1</linecode>
+		<elevation>211</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYND</identifier>
+		<name>GATINEAU</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>45.51962200</latitude>
+			<longitude>-075.57490800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>45.52376400</latitude_end>
+			<longitude_end>-075.55226700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1827.81808381</length-meters>
+			<length-feet>5571.18951944</length-feet>
+			<heading id="09 ">75.4206092827</heading>
+			<heading_end id="27 ">255.404454572</heading_end>
+			<threshold_lat id="09 ">45.519622</threshold_lat>
+			<threshold_lon id="09 ">-75.574908</threshold_lon>
+			<threshold_lat_end id="27 ">45.523764</threshold_lat_end>
+			<threshold_lon_end id="27 ">-75.552267</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>45.52044144</latitude>
+			<longitude>-075.57255854</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>75.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>45.52294503</latitude>
+			<longitude>-075.55461695</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>255.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.52308704</latitude>
+			<longitude>-075.56410992</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.52011513</latitude>
+			<longitude>-075.57569880</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.52327072</latitude>
+			<longitude>-075.55147633</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>MF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12770">127.7</frequency>
+			<description>OTTAWA TRML</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12817">128.17</frequency>
+			<description>OTTAWA TRML</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12770">127.7</frequency>
+			<description>VFR ADVSY</description>
+		</atc>
+	</airport>
+</PropertyList>

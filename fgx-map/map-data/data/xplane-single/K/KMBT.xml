@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMBT">
+		<linecode>1</linecode>
+		<elevation>615</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMBT</identifier>
+		<name>MURFREESBORO MUNI</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>35.88283300</latitude>
+			<longitude>-086.37725000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>35.87213600</latitude_end>
+			<longitude_end>-086.37781400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1187.99638938</length-meters>
+			<length-feet>3621.01299484</length-feet>
+			<heading id="18 ">-177.543072035</heading>
+			<heading_end id="36 ">362.457258499</heading_end>
+			<threshold_lat id="18 ">35.882833</threshold_lat>
+			<threshold_lon id="18 ">-86.37725</threshold_lon>
+			<threshold_lat_end id="36 ">35.872136</threshold_lat_end>
+			<threshold_lon_end id="36 ">-86.377814</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>35.88102164</latitude>
+			<longitude>-086.37696486</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>182.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>35.87394736</latitude>
+			<longitude>-086.37809912</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>2.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.87744500</latitude>
+			<longitude>-086.37634800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.87683500</latitude>
+			<longitude>-086.37889000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.88308900</latitude>
+			<longitude>-086.37672800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.87188000</latitude>
+			<longitude>-086.37833600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13397">133.97</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12845">128.45</frequency>
+			<description>NASHVILLE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

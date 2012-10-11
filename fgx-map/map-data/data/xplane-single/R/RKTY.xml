@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RKTY">
+		<linecode>1</linecode>
+		<elevation>354</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RKTY</identifier>
+		<name>YECHEON</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>36.63166700</latitude>
+			<longitude>128.33951700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>36.63220000</latitude_end>
+			<longitude_end>128.37014700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2740.15104659</length-meters>
+			<length-feet>8351.98039</length-feet>
+			<heading id="10 ">88.7722864027</heading>
+			<heading_end id="28 ">268.754010332</heading_end>
+			<threshold_lat id="10 ">36.631667</threshold_lat>
+			<threshold_lon id="10 ">128.339517</threshold_lon>
+			<threshold_lat_end id="28 ">36.6322</threshold_lat_end>
+			<threshold_lon_end id="28 ">128.370147</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>36.63210992</latitude>
+			<longitude>128.34174832</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>36.63174546</latitude>
+			<longitude>128.36720957</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.63337514</latitude>
+			<longitude>128.35479065</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.63227503</latitude>
+			<longitude>128.33898761</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.63159182</latitude>
+			<longitude>128.37067615</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13680">136.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12435">124.35</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12435">124.35</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13450">134.5</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12445">124.45</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="13450">134.5</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

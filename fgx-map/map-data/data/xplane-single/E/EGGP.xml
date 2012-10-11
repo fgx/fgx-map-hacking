@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGGP">
+		<linecode>1</linecode>
+		<elevation>80</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGGP</identifier>
+		<name>Liverpool</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>53.33284747</latitude>
+			<longitude>-002.86684980</longitude>
+			<threshold>54.86</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>53.33441700</latitude_end>
+			<longitude_end>-002.83268900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2282.43682881</length-meters>
+			<length-feet>6956.86745422</length-feet>
+			<heading id="09 ">85.6245105963</heading>
+			<heading_end id="27 ">265.59710932</heading_end>
+			<threshold_lat id="09 ">53.3328850744</threshold_lat>
+			<threshold_lon id="09 ">-2.86602872007</threshold_lon>
+			<threshold_lat_end id="27 ">53.334417</threshold_lat_end>
+			<threshold_lon_end id="27 ">-2.832689</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>53.33365158</latitude>
+			<longitude>-002.86111519</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>85.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>53.33364802</latitude>
+			<longitude>-002.83810432</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.32995699</latitude>
+			<longitude>002.84762614</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.33719821</latitude>
+			<longitude>002.83828690</longitude>
+			<heading>52.40</heading>
+			<name>GA Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.33640889</latitude>
+			<longitude>002.85827105</longitude>
+			<heading>55.00</heading>
+			<name>Main Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.33668615</latitude>
+			<longitude>002.85162878</longitude>
+			<heading>64.88</heading>
+			<name>Second Apron</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.33244362</latitude>
+			<longitude>-002.84917658</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.33418024</latitude>
+			<longitude>-002.86073665</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.33522290</latitude>
+			<longitude>-002.83820167</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12432">124.32</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12195">121.95</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12635">126.35</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11985">119.85</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

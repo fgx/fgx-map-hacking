@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LOAN">
+		<linecode>1</linecode>
+		<elevation>896</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LOAN</identifier>
+		<name>WIENER NEUSTADT Ost</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>47.84388900</latitude>
+			<longitude>016.25305600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>160.02</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>47.84277800</latitude_end>
+			<longitude_end>016.26722200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>160.02</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1067.51073061</length-meters>
+			<length-feet>3253.77270689</length-feet>
+			<heading id="10 ">96.6502287135</heading>
+			<heading_end id="28 ">276.639727282</heading_end>
+			<threshold_lat id="10 ">47.843889</threshold_lat>
+			<threshold_lon id="10 ">16.253056</threshold_lon>
+			<threshold_lat_end id="28 ">47.842778</threshold_lat_end>
+			<threshold_lon_end id="28 ">16.267222</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>47.84397909</latitude>
+			<longitude>016.25577162</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>96.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>47.84268825</latitude>
+			<longitude>016.26450641</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>276.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>47.84518810</latitude>
+			<longitude>016.25003620</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.84283070</latitude>
+			<longitude>016.25480650</longitude>
+			<heading>96.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.84404803</latitude>
+			<longitude>016.26025976</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.84421800</latitude>
+			<longitude>016.25280464</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.84244897</latitude>
+			<longitude>016.26747327</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12265">122.65</frequency>
+			<description>AFIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12440">124.4</frequency>
+			<description>WIEN CNTR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12820">128.2</frequency>
+			<description>WIEN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

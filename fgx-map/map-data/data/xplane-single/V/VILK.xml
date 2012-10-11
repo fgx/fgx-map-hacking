@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VILK">
+		<linecode>1</linecode>
+		<elevation>410</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VILK</identifier>
+		<name>LUCKNOW</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>26.76041100</latitude>
+			<longitude>080.87553900</longitude>
+			<threshold>156.97</threshold>
+			<overrrun>179.83</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>26.76077500</latitude_end>
+			<longitude_end>080.90314200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>57.91</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2745.80694551</length-meters>
+			<length-feet>8369.21956992</length-feet>
+			<heading id="09 ">89.1646090041</heading>
+			<heading_end id="27 ">269.15218038</heading_end>
+			<threshold_lat id="09 ">26.7604316464</threshold_lat>
+			<threshold_lon id="09 ">80.8771169855</threshold_lon>
+			<threshold_lat_end id="27 ">26.760775</threshold_lat_end>
+			<threshold_lon_end id="27 ">80.903142</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>26.76085970</latitude>
+			<longitude>080.87912975</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>26.76025577</latitude>
+			<longitude>080.89411037</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>26.76201504</latitude>
+			<longitude>080.88931630</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.76101383</latitude>
+			<longitude>080.87507425</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.76017207</latitude>
+			<longitude>080.90360661</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12680">126.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11960">119.6</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

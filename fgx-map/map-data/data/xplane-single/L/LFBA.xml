@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFBA">
+		<linecode>1</linecode>
+		<elevation>204</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFBA</identifier>
+		<name>Agen la Garenne</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>44.17770300</latitude>
+			<longitude>000.58042800</longitude>
+			<threshold>164.90</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>44.17034700</latitude_end>
+			<longitude_end>000.60549400</longitude_end>
+			<threshold_end>399.90</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="5">SSALR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2164.80024156</length-meters>
+			<length-feet>6598.31113628</length-feet>
+			<heading id="11 ">112.192063281</heading>
+			<heading_end id="29 ">292.174596289</heading_end>
+			<threshold_lat id="11 ">44.1771424441</threshold_lat>
+			<threshold_lon id="11 ">0.582337342077</threshold_lon>
+			<threshold_lat_end id="29 ">44.1717052607</threshold_lat_end>
+			<threshold_lon_end id="29 ">0.600863492696</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>44.17676756</latitude>
+			<longitude>000.58484143</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>112.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>44.17241514</latitude>
+			<longitude>000.59722681</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>292.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.17489802</latitude>
+			<longitude>000.59345630</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.17817797</latitude>
+			<longitude>000.58029391</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.16987200</latitude>
+			<longitude>000.60562788</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12960">129.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>AGEN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>BLAGNAC APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12117">121.17</frequency>
+			<description>TOULOUSE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12930">129.3</frequency>
+			<description>TOULOUSE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12385">123.85</frequency>
+			<description>TOULOUSE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12497">124.97</frequency>
+			<description>TOULOUSE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

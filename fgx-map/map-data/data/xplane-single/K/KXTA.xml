@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KXTA">
+		<linecode>1</linecode>
+		<elevation>4596</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KXTA</identifier>
+		<name>Homey Airport</name>
+		<runway end="31L" id="13R">
+			<linecode>100</linecode>
+			<width>91.44</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13R</number>
+			<latitude>37.26277308</latitude>
+			<longitude>-115.84828892</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31L</number_end>
+			<latitude_end>37.20611432</latitude_end>
+			<longitude_end>-115.78838408</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>8233.96233614</length-meters>
+			<length-feet>25097.1172006</length-feet>
+			<heading id="13R">139.807736796</heading>
+			<heading_end id="31L">319.771489698</heading_end>
+			<threshold_lat id="13R">37.26277308</threshold_lat>
+			<threshold_lon id="13R">-115.84828892</threshold_lon>
+			<threshold_lat_end id="31L">37.20611432</threshold_lat_end>
+			<threshold_lon_end id="31L">-115.78838408</threshold_lon_end>
+		</runway>
+		<runway end="31R" id="13L">
+			<linecode>100</linecode>
+			<width>121.92</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13L</number>
+			<latitude>37.23985608</latitude>
+			<longitude>-115.81846422</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31R</number_end>
+			<latitude_end>37.20575392</latitude_end>
+			<longitude_end>-115.78257958</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4946.42334554</length-meters>
+			<length-feet>15076.6983572</length-feet>
+			<heading id="13L">139.93054279</heading>
+			<heading_end id="31R">319.908835592</heading_end>
+			<threshold_lat id="13L">37.23985608</threshold_lat>
+			<threshold_lon id="13L">-115.81846422</threshold_lon>
+			<threshold_lat_end id="31R">37.20575392</threshold_lat_end>
+			<threshold_lon_end id="31R">-115.78257958</threshold_lon_end>
+		</runway>
+		<lightingobject id="13R">
+			<linecode>21</linecode>
+			<latitude>37.26178911</latitude>
+			<longitude>-115.84624634</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>139.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31L">
+			<linecode>21</linecode>
+			<latitude>37.20709931</latitude>
+			<longitude>-115.79042437</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>319.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.23629847</latitude>
+			<longitude>-115.81555773</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.24175419</latitude>
+			<longitude>-115.81776524</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.26419765</latitude>
+			<longitude>-115.84776882</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.20469001</latitude>
+			<longitude>-115.78890490</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.20385603</latitude>
+			<longitude>-115.78327911</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

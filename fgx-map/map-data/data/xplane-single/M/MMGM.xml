@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMGM">
+		<linecode>1</linecode>
+		<elevation>59</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMGM</identifier>
+		<name>GENERAL JOSE MARIA YANEZ INTL</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>27.95977500</latitude>
+			<longitude>-110.93101700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.62</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>27.97819400</latitude_end>
+			<longitude_end>-110.91932200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.62</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2343.16807481</length-meters>
+			<length-feet>7141.97629203</length-feet>
+			<heading id="02 ">29.4140048189</heading>
+			<heading_end id="20 ">209.408519939</heading_end>
+			<threshold_lat id="02 ">27.959775</threshold_lat>
+			<threshold_lon id="02 ">-110.931017</threshold_lon>
+			<threshold_lat_end id="20 ">27.978194</threshold_lat_end>
+			<threshold_lon_end id="20 ">-110.919322</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>27.96154100</latitude>
+			<longitude>-110.93041636</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>29.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>27.97642804</latitude>
+			<longitude>-110.91992295</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>209.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>27.96819700</latitude>
+			<longitude>110.92218800</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>27.96851500</latitude>
+			<longitude>110.92265300</longitude>
+			<heading>10.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.96017200</latitude>
+			<longitude>-110.93181900</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.97779700</latitude>
+			<longitude>-110.91852000</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>GUAYMAS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>HERMOSILLO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PABV">
+		<linecode>1</linecode>
+		<elevation>96</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PABV</identifier>
+		<name>BIRCHWOOD</name>
+		<runway end="19R" id="01L">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01L</number>
+			<latitude>61.41175600</latitude>
+			<longitude>-149.51617500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19R</number_end>
+			<latitude_end>61.42023300</latitude_end>
+			<longitude_end>-149.50165000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1222.26226467</length-meters>
+			<length-feet>3725.45538272</length-feet>
+			<heading id="01L">39.3945660086</heading>
+			<heading_end id="19R">219.381811365</heading_end>
+			<threshold_lat id="01L">61.411756</threshold_lat>
+			<threshold_lon id="01L">-149.516175</threshold_lon>
+			<threshold_lat_end id="19R">61.420233</threshold_lat_end>
+			<threshold_lon_end id="19R">-149.50165</threshold_lon_end>
+		</runway>
+		<runway end="19L" id="01R">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="4">Dirt (brown)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01R</number>
+			<latitude>61.41085300</latitude>
+			<longitude>-149.51180600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19L</number_end>
+			<latitude_end>61.41635000</latitude_end>
+			<longitude_end>-149.50669700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>670.576004976</length-meters>
+			<length-feet>2043.91566317</length-feet>
+			<heading id="01R">24.010259738</heading>
+			<heading_end id="19L">204.005773542</heading_end>
+			<threshold_lat id="01R">61.410853</threshold_lat>
+			<threshold_lon id="01R">-149.511806</threshold_lon>
+			<threshold_lat_end id="19L">61.41635</threshold_lat_end>
+			<threshold_lon_end id="19L">-149.506697</threshold_lon_end>
+		</runway>
+		<lightingobject id="19R">
+			<linecode>21</linecode>
+			<latitude>61.41864584</latitude>
+			<longitude>-149.50353756</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>219.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19R</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.41180467</latitude>
+			<longitude>-149.51720338</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.41081127</latitude>
+			<longitude>-149.51231527</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.41639171</latitude>
+			<longitude>-149.50618763</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.42018422</latitude>
+			<longitude>-149.50062135</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13555">135.55</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

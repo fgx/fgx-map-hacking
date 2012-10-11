@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KLWB">
+		<linecode>1</linecode>
+		<elevation>2302</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KLWB</identifier>
+		<name>GREENBRIER VALLEY</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>37.85046100</latitude>
+			<longitude>-080.40648900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>37.86615300</latitude_end>
+			<longitude_end>-080.39247500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2134.12093233</length-meters>
+			<length-feet>6504.80060174</length-feet>
+			<heading id="04 ">35.3053066584</heading>
+			<heading_end id="22 ">215.296706115</heading_end>
+			<threshold_lat id="04 ">37.850461</threshold_lat>
+			<threshold_lon id="04 ">-80.406489</threshold_lon>
+			<threshold_lat_end id="22 ">37.866153</threshold_lat_end>
+			<threshold_lon_end id="22 ">-80.392475</threshold_lon_end>
+		</runway>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>37.86446501</latitude>
+			<longitude>-080.39339899</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>215.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>37.85654280</latitude>
+			<longitude>080.40452380</longitude>
+			<height>65</height>
+			<deprecated>0</deprecated>
+			<name>Control Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.85566678</latitude>
+			<longitude>080.40731961</longitude>
+			<heading>15.20</heading>
+			<name>Parking W 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.85575038</latitude>
+			<longitude>080.40680679</longitude>
+			<heading>25.00</heading>
+			<name>Parking W 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.85652100</latitude>
+			<longitude>080.40394823</longitude>
+			<heading>35.20</heading>
+			<name>Terminal 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.85632769</latitude>
+			<longitude>080.40359422</longitude>
+			<heading>35.20</heading>
+			<name>Terminal 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.85681097</latitude>
+			<longitude>080.40346850</longitude>
+			<heading>15.20</heading>
+			<name>Terminal 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.85786372</latitude>
+			<longitude>-080.40360415</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.85652960</latitude>
+			<longitude>-080.40220227</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12140">121.4</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12085">120.85</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>LEWISBURG TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFNA">
+		<linecode>1</linecode>
+		<elevation>1985</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LFNA</identifier>
+		<name>Tallard</name>
+		<runway end="03" id="21">
+			<linecode>100</linecode>
+			<width>32.00</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>21</number>
+			<latitude>44.45001600</latitude>
+			<longitude>006.03410300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>03</number_end>
+			<latitude_end>44.45710600</latitude_end>
+			<longitude_end>006.03902500</longitude_end>
+			<threshold_end>230.12</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>879.87355235</length-meters>
+			<length-feet>2681.85458756</length-feet>
+			<heading id="21 ">26.44043224</heading>
+			<heading_end id="03 ">206.436985211</heading_end>
+			<threshold_lat id="21 ">44.450016</threshold_lat>
+			<threshold_lon id="21 ">6.034103</threshold_lon>
+			<threshold_lat_end id="03 ">44.4552516644</threshold_lat_end>
+			<threshold_lon_end id="03 ">6.03773775276</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.45439500</latitude>
+			<longitude>006.03459200</longitude>
+			<height>54</height>
+			<deprecated>0</deprecated>
+			<name>Tallard Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.45319000</latitude>
+			<longitude>006.03066000</longitude>
+			<heading>78.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.45321600</latitude>
+			<longitude>006.03455400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>GAP FSS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12932">129.32</frequency>
+			<description>LFNA ATIS</description>
+		</atc>
+	</airport>
+</PropertyList>

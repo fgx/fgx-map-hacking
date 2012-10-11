@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WAOP">
+		<linecode>1</linecode>
+		<elevation>82</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WAOP</identifier>
+		<name>Palangkaraya Tjilik Riwut</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>-02.21626100</latitude>
+			<longitude>113.93926400</longitude>
+			<threshold>99.97</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>-02.23399200</latitude_end>
+			<longitude_end>113.94605600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2101.15283368</length-meters>
+			<length-feet>6404.31383704</length-feet>
+			<heading id="16 ">158.925955516</heading>
+			<heading_end id="34 ">338.926219222</heading_end>
+			<threshold_lat id="16 ">-2.21710461623</threshold_lat>
+			<threshold_lon id="16 ">113.939587154</threshold_lon>
+			<threshold_lat_end id="34 ">-2.233992</threshold_lat_end>
+			<threshold_lon_end id="34 ">113.946056</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>-02.21867300</latitude>
+			<longitude>113.94051517</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>159.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>-02.23142410</latitude>
+			<longitude>113.94474509</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>339.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-02.22617750</latitude>
+			<longitude>113.94472500</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.22484020</latitude>
+			<longitude>113.94420620</longitude>
+			<heading>0.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.22478826</latitude>
+			<longitude>113.94353857</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.21586581</latitude>
+			<longitude>113.93954469</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.23438719</latitude>
+			<longitude>113.94577531</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12240">122.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

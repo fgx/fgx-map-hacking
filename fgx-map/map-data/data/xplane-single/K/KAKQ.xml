@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAKQ">
+		<linecode>1</linecode>
+		<elevation>113</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KAKQ</identifier>
+		<name>WAKEFIELD MUNI</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>36.98151700</latitude>
+			<longitude>-077.00326400</longitude>
+			<threshold>90.83</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>36.99291700</latitude_end>
+			<longitude_end>-076.99896900</longitude_end>
+			<threshold_end>143.26</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1321.66236622</length-meters>
+			<length-feet>4028.42689224</length-feet>
+			<heading id="02 ">16.8178970988</heading>
+			<heading_end id="20 ">196.815313069</heading_end>
+			<threshold_lat id="02 ">36.9823004492</threshold_lat>
+			<threshold_lon id="02 ">-77.0029688271</threshold_lon>
+			<threshold_lat_end id="20 ">36.9916813025</threshold_lat_end>
+			<threshold_lon_end id="20 ">-76.9994345438</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>36.98410216</latitude>
+			<longitude>-077.00264818</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>16.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>36.98988009</latitude>
+			<longitude>-076.99975530</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>196.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.98742388</latitude>
+			<longitude>-077.00197846</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.98140852</latitude>
+			<longitude>-077.00370648</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.99302546</latitude>
+			<longitude>-076.99852645</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12832">128.32</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>NORFOLK APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

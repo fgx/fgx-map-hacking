@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="F43 ">
+		<linecode>1</linecode>
+		<elevation>256</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>F43</identifier>
+		<name>DOWNTOWN</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>33.19537200</latitude>
+			<longitude>-092.66326700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>33.18712800</latitude_end>
+			<longitude_end>-092.66318300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.357990941</length-meters>
+			<length-feet>2786.96315639</length-feet>
+			<heading id="18 ">179.509177506</heading>
+			<heading_end id="36 ">359.509131521</heading_end>
+			<threshold_lat id="18 ">33.195372</threshold_lat>
+			<threshold_lon id="18 ">-92.663267</threshold_lon>
+			<threshold_lat_end id="36 ">33.187128</threshold_lat_end>
+			<threshold_lon_end id="36 ">-92.663183</threshold_lon_end>
+		</runway>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>33.18892563</latitude>
+			<longitude>-092.66350398</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>359.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.19125710</latitude>
+			<longitude>-092.66253672</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.19553868</latitude>
+			<longitude>-092.66297368</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.18696133</latitude>
+			<longitude>-092.66347629</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

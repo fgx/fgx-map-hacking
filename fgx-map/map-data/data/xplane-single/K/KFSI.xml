@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFSI">
+		<linecode>1</linecode>
+		<elevation>1189</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KFSI</identifier>
+		<name>HENRY POST AAF</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>34.65669200</latitude>
+			<longitude>-098.40215600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>34.64295000</latitude_end>
+			<longitude_end>-098.40219400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.46144211</length-meters>
+			<length-feet>4646.55847556</length-feet>
+			<heading id="17 ">-179.869079699</heading>
+			<heading_end id="35 ">360.130941907</heading_end>
+			<threshold_lat id="17 ">34.656692</threshold_lat>
+			<threshold_lon id="17 ">-98.402156</threshold_lon>
+			<threshold_lat_end id="35 ">34.64295</threshold_lat_end>
+			<threshold_lon_end id="35 ">-98.402194</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>34.65489114</latitude>
+			<longitude>-098.40161966</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>180.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.64981922</latitude>
+			<longitude>-098.39984096</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.65723872</latitude>
+			<longitude>-098.40115409</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.64240328</latitude>
+			<longitude>-098.40319573</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13542">135.42</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>POST GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12495">124.95</frequency>
+			<description>POST TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>FORT SILL APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12055">120.55</frequency>
+			<description>FORT SILL APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12730">127.3</frequency>
+			<description>FORT SILL APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

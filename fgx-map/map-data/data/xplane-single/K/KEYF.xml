@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KEYF">
+		<linecode>1</linecode>
+		<elevation>133</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KEYF</identifier>
+		<name>CURTIS L BROWN JR FIELD</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>34.60737500</latitude>
+			<longitude>-078.58413300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>34.59623300</latitude_end>
+			<longitude_end>-078.57440800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.30566048</length-meters>
+			<length-feet>4646.08365313</length-feet>
+			<heading id="15 ">144.184110101</heading>
+			<heading_end id="33 ">324.178587568</heading_end>
+			<threshold_lat id="15 ">34.607375</threshold_lat>
+			<threshold_lon id="15 ">-78.584133</threshold_lon>
+			<threshold_lat_end id="33 ">34.596233</threshold_lat_end>
+			<threshold_lon_end id="33 ">-78.574408</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>34.60608888</latitude>
+			<longitude>-078.58256016</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>144.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>34.59751926</latitude>
+			<longitude>-078.57598049</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>324.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.60222535</latitude>
+			<longitude>-078.57856239</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.60772133</latitude>
+			<longitude>-078.58397572</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.59588668</latitude>
+			<longitude>-078.57456529</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11947">119.47</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

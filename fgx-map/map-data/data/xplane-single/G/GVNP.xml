@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="GVNP">
+		<linecode>1</linecode>
+		<elevation>230</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>GVNP</identifier>
+		<name>PRAIA INTERNATIONAL</name>
+		<runway end="21L" id="03R">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03R</number>
+			<latitude>14.93188600</latitude>
+			<longitude>-023.48850000</longitude>
+			<threshold>198.12</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21L</number_end>
+			<latitude_end>14.94946100</latitude_end>
+			<longitude_end>-023.48123300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2095.90423465</length-meters>
+			<length-feet>6388.31610721</length-feet>
+			<heading id="03R">21.9020505837</heading>
+			<heading_end id="21L">201.900177015</heading_end>
+			<threshold_lat id="03R">14.9335473051</threshold_lat>
+			<threshold_lon id="03R">-23.4878130654</threshold_lon>
+			<threshold_lat_end id="21L">14.949461</threshold_lat_end>
+			<threshold_lon_end id="21L">-23.481233</threshold_lon_end>
+		</runway>
+		<runway end="21R" id="03L">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03L</number>
+			<latitude>14.91916100</latitude>
+			<longitude>-023.49573300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21R</number_end>
+			<latitude_end>14.92981400</latitude_end>
+			<longitude_end>-023.49131100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1271.12294302</length-meters>
+			<length-feet>3874.38273031</length-feet>
+			<heading id="03L">21.9803332642</heading>
+			<heading_end id="21R">201.979194397</heading_end>
+			<threshold_lat id="03L">14.919161</threshold_lat>
+			<threshold_lon id="03L">-23.495733</threshold_lon>
+			<threshold_lat_end id="21R">14.929814</threshold_lat_end>
+			<threshold_lon_end id="21R">-23.491311</threshold_lon_end>
+		</runway>
+		<lightingobject id="03L">
+			<linecode>21</linecode>
+			<latitude>14.92094518</latitude>
+			<longitude>-023.49533295</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>21.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="03R">
+			<linecode>21</linecode>
+			<latitude>14.93536188</latitude>
+			<longitude>-023.48750977</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>21.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21L">
+			<linecode>21</linecode>
+			<latitude>14.94764085</latitude>
+			<longitude>-023.48153877</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>201.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>14.94119855</latitude>
+			<longitude>-023.48623331</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.91906161</latitude>
+			<longitude>-023.49622385</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.93173492</latitude>
+			<longitude>-023.48924112</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.94961207</latitude>
+			<longitude>-023.48049182</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.92991338</latitude>
+			<longitude>-023.49082012</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11820">118.2</frequency>
+			<description>PRAIA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11820">118.2</frequency>
+			<description>PRAIA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

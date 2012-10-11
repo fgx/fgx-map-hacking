@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFPV">
+		<linecode>1</linecode>
+		<elevation>584</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LFPV</identifier>
+		<name>Velizy</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>48.77412500</latitude>
+			<longitude>002.18927800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>132.89</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>48.77460600</latitude_end>
+			<longitude_end>002.21393300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1812.97479458</length-meters>
+			<length-feet>5525.94717387</length-feet>
+			<heading id="09 ">88.3185789807</heading>
+			<heading_end id="27 ">268.300035459</heading_end>
+			<threshold_lat id="09 ">48.774125</threshold_lat>
+			<threshold_lon id="09 ">2.189278</threshold_lon>
+			<threshold_lat_end id="27 ">48.774606</threshold_lat_end>
+			<threshold_lon_end id="27 ">2.213933</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>48.77461165</latitude>
+			<longitude>002.19363692</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>48.77461165</latitude>
+			<longitude>002.19363692</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>48.77412811</latitude>
+			<longitude>002.20997710</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>48.77412811</latitude>
+			<longitude>002.20997710</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.77213700</latitude>
+			<longitude>002.20086000</longitude>
+			<height>40</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.77133600</latitude>
+			<longitude>002.20470300</longitude>
+			<heading>62.00</heading>
+			<name>Military apron</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.77517700</latitude>
+			<longitude>002.20156900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.77390400</latitude>
+			<longitude>002.21367000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.77455200</latitude>
+			<longitude>002.18776500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12187">121.87</frequency>
+			<description>VILLA GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>VILLA TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12895">128.95</frequency>
+			<description>VILLA TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12187">121.87</frequency>
+			<description>VILLA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11942">119.42</frequency>
+			<description>VILLA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12080">120.8</frequency>
+			<description>VILLA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>VILLA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

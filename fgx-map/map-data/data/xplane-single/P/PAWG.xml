@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PAWG">
+		<linecode>1</linecode>
+		<elevation>44</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PAWG</identifier>
+		<name>WRANGELL</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>56.48860000</latitude>
+			<longitude>-132.38250000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>56.48004700</latitude_end>
+			<longitude_end>-132.35716400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1828.55649669</length-meters>
+			<length-feet>5573.4402019</length-feet>
+			<heading id="10 ">121.399040238</heading>
+			<heading_end id="28 ">301.377916733</heading_end>
+			<threshold_lat id="10 ">56.4886</threshold_lat>
+			<threshold_lon id="10 ">-132.3825</threshold_lon>
+			<threshold_lat_end id="28 ">56.480047</threshold_lat_end>
+			<threshold_lon_end id="28 ">-132.357164</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>56.48798289</latitude>
+			<longitude>-132.37936254</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>121.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>56.48066476</latitude>
+			<longitude>-132.36030036</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>301.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>56.48555487</latitude>
+			<longitude>-132.36847305</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>56.48934117</latitude>
+			<longitude>-132.38255297</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>56.47930582</latitude>
+			<longitude>-132.35711152</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12260">122.6</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

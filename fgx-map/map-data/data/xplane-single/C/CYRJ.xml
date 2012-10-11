@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYRJ">
+		<linecode>1</linecode>
+		<elevation>586</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYRJ</identifier>
+		<name>ROBERVAL</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>48.52555600</latitude>
+			<longitude>-072.27194400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>48.51444700</latitude_end>
+			<longitude_end>-072.25916700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1554.64264126</length-meters>
+			<length-feet>4738.55077057</length-feet>
+			<heading id="16 ">142.622672253</heading>
+			<heading_end id="34 ">322.613099891</heading_end>
+			<threshold_lat id="16 ">48.525556</threshold_lat>
+			<threshold_lon id="16 ">-72.271944</threshold_lon>
+			<threshold_lat_end id="34 ">48.514447</threshold_lat_end>
+			<threshold_lon_end id="34 ">-72.259167</threshold_lon_end>
+		</runway>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>48.51563420</latitude>
+			<longitude>-072.26129816</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>322.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.52087605</latitude>
+			<longitude>-072.26382639</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.52625731</latitude>
+			<longitude>-072.27157928</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.51374573</latitude>
+			<longitude>-072.25953181</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>MF</description>
+		</atc>
+	</airport>
+</PropertyList>

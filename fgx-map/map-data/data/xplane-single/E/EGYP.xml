@@ -1,0 +1,335 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGYP">
+		<linecode>1</linecode>
+		<elevation>244</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGYP</identifier>
+		<name>RAF Mount Pleasant</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-51.81769700</latitude>
+			<longitude>-058.47630800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>180.14</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-51.82389200</latitude_end>
+			<longitude_end>-058.44000000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>180.14</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2596.66129688</length-meters>
+			<length-feet>7914.6236329</length-feet>
+			<heading id="10 ">105.379340044</heading>
+			<heading_end id="28 ">285.407881083</heading_end>
+			<threshold_lat id="10 ">-51.817697</threshold_lat>
+			<threshold_lon id="10 ">-58.476308</threshold_lon>
+			<threshold_lat_end id="28 ">-51.823892</threshold_lat_end>
+			<threshold_lon_end id="28 ">-58.44</threshold_lon_end>
+		</runway>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>-51.82436100</latitude>
+			<longitude>-058.45113900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>180.14</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="9">MALSF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>-51.81655600</latitude_end>
+			<longitude_end>-058.43300000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>32.92</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="9">MALSF</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1522.65078905</length-meters>
+			<length-feet>4641.03960504</length-feet>
+			<heading id="05 ">55.2195559149</heading>
+			<heading_end id="23 ">235.233814578</heading_end>
+			<threshold_lat id="05 ">-51.824361</threshold_lat>
+			<threshold_lon id="05 ">-58.451139</threshold_lon>
+			<threshold_lat_end id="23 ">-51.816556</threshold_lat_end>
+			<threshold_lon_end id="23 ">-58.433</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>-51.82340128</latitude>
+			<longitude>-058.44793006</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>55.1</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>-51.82290465</latitude>
+			<longitude>-058.44870801</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>55.1</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-51.81902503</latitude>
+			<longitude>-058.47151020</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>105.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-51.81806017</latitude>
+			<longitude>-058.47105841</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>105.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>-51.81740175</latitude>
+			<longitude>-058.43577434</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>235.1</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>-51.81784714</latitude>
+			<longitude>-058.43511126</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>235.1</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-51.82276862</latitude>
+			<longitude>-058.44402434</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>285.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-51.82359846</latitude>
+			<longitude>-058.44448729</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>285.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-51.81994385</latitude>
+			<longitude>058.44902223</longitude>
+			<height>22</height>
+			<deprecated>0</deprecated>
+			<name>Tower View</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81672406</latitude>
+			<longitude>058.44212188</longitude>
+			<heading>41.34</heading>
+			<name>HAS 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81609307</latitude>
+			<longitude>058.44518459</longitude>
+			<heading>90.00</heading>
+			<name>HAS 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81415263</latitude>
+			<longitude>058.44291782</longitude>
+			<heading>27.42</heading>
+			<name>HAS 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81491618</latitude>
+			<longitude>058.43330196</longitude>
+			<heading>93.96</heading>
+			<name>HAS 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81805858</latitude>
+			<longitude>058.43263362</longitude>
+			<heading>45.01</heading>
+			<name>HAS 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82056626</latitude>
+			<longitude>058.43725228</longitude>
+			<heading>32.88</heading>
+			<name>HAS 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82218467</latitude>
+			<longitude>058.43362845</longitude>
+			<heading>46.76</heading>
+			<name>HAS 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82240634</latitude>
+			<longitude>058.43710376</longitude>
+			<heading>90.03</heading>
+			<name>HAS 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82187559</latitude>
+			<longitude>058.46851526</longitude>
+			<heading>81.59</heading>
+			<name>Main Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82135024</latitude>
+			<longitude>058.46830913</longitude>
+			<heading>81.65</heading>
+			<name>Main Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81553764</latitude>
+			<longitude>058.47337269</longitude>
+			<heading>95.00</heading>
+			<name>North Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81758839</latitude>
+			<longitude>058.46543989</longitude>
+			<heading>95.00</heading>
+			<name>North Stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.81966990</latitude>
+			<longitude>058.45227894</longitude>
+			<heading>95.00</heading>
+			<name>North Stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-51.82040523</latitude>
+			<longitude>058.44809790</longitude>
+			<heading>95.00</heading>
+			<name>North Stand 4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-51.81940061</latitude>
+			<longitude>-058.45753654</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-51.82240746</latitude>
+			<longitude>-058.45194424</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-51.81874569</latitude>
+			<longitude>-058.47955464</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-51.81780819</latitude>
+			<longitude>-058.43368350</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-51.82455251</latitude>
+			<longitude>-058.44022629</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12855">128.55</frequency>
+			<description>Mount Pleasant Information</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="13030">130.3</frequency>
+			<description>Mount Pleasant Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13335">133.35</frequency>
+			<description>Mount Pleasant Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13150">131.5</frequency>
+			<description>Island Radar</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>Mount Pleasant Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

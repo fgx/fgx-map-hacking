@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KVOK">
+		<linecode>1</linecode>
+		<elevation>912</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KVOK</identifier>
+		<name>VOLK FLD</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>43.93902500</latitude>
+			<longitude>-090.27024200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>43.93945000</latitude_end>
+			<longitude_end>-090.23608300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2742.96438407</length-meters>
+			<length-feet>8360.55544264</length-feet>
+			<heading id="09 ">89.0254126703</heading>
+			<heading_end id="27 ">269.001709907</heading_end>
+			<threshold_lat id="09 ">43.939025</threshold_lat>
+			<threshold_lon id="09 ">-90.270242</threshold_lon>
+			<threshold_lat_end id="27 ">43.93945</threshold_lat_end>
+			<threshold_lon_end id="27 ">-90.236083</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>43.93946012</latitude>
+			<longitude>-090.26775266</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>43.93899371</latitude>
+			<longitude>-090.24035553</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.94067987</latitude>
+			<longitude>-090.25319876</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.93963489</latitude>
+			<longitude>-090.27082828</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.93883994</latitude>
+			<longitude>-090.23549706</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12047">120.47</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13525">135.25</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

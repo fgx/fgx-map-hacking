@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PAHU">
+		<linecode>1</linecode>
+		<elevation>289</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PAHU</identifier>
+		<name>Hughes</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>66.04564621</latitude>
+			<longitude>-154.26041227</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>66.03659711</latitude_end>
+			<longitude_end>-154.26596829</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1040.00567338</length-meters>
+			<length-feet>3169.93729247</length-feet>
+			<heading id="17 ">-165.98759583</heading>
+			<heading_end id="35 ">374.017481468</heading_end>
+			<threshold_lat id="17 ">66.04564621</threshold_lat>
+			<threshold_lon id="17 ">-154.26041227</threshold_lon>
+			<threshold_lat_end id="35 ">66.03659711</threshold_lat_end>
+			<threshold_lon_end id="35 ">-154.26596829</threshold_lon_end>
+		</runway>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>66.03842458</latitude>
+			<longitude>-154.26569710</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>14.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>66.04088940</latitude>
+			<longitude>-154.26089684</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.04581280</latitude>
+			<longitude>-154.25926551</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.03643048</latitude>
+			<longitude>-154.26711458</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

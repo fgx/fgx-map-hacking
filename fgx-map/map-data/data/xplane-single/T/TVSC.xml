@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="TVSC">
+		<linecode>1</linecode>
+		<elevation>16</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>TVSC</identifier>
+		<name>Canouan Jetport</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>43.89</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>12.70330240</latitude>
+			<longitude>-061.34944114</longitude>
+			<threshold>81.99</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>12.69478160</latitude_end>
+			<longitude_end>-061.33542010</longitude_end>
+			<threshold_end>81.99</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1791.01491491</length-meters>
+			<length-feet>5459.01346064</length-feet>
+			<heading id="13 ">121.758376545</heading>
+			<heading_end id="31 ">301.755294302</heading_end>
+			<threshold_lat id="13 ">12.7029123128</threshold_lat>
+			<threshold_lon id="13 ">-61.3487992786</threshold_lon>
+			<threshold_lat_end id="31 ">12.6951716519</threshold_lat_end>
+			<threshold_lon_end id="31 ">-61.3360619633</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>12.69954728</latitude>
+			<longitude>061.34779409</longitude>
+			<height>25</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>12.69904052</latitude>
+			<longitude>061.34618439</longitude>
+			<heading>97.58</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>12.69963748</latitude>
+			<longitude>061.34716469</longitude>
+			<heading>22.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>12.70021633</latitude>
+			<longitude>-061.34168231</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.70087265</latitude>
+			<longitude>-061.34682120</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11805">118.05</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

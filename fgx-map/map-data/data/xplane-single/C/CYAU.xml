@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYAU">
+		<linecode>1</linecode>
+		<elevation>321</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>CYAU</identifier>
+		<name>LIVERPOOL</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>44.22704253</latitude>
+			<longitude>-064.86215225</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>44.23346699</latitude_end>
+			<longitude_end>-064.85003548</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1202.81750271</length-meters>
+			<length-feet>3666.18774825</length-feet>
+			<heading id="07 ">53.5988749473</heading>
+			<heading_end id="25 ">233.590422972</heading_end>
+			<threshold_lat id="07 ">44.22704253</threshold_lat>
+			<threshold_lon id="07 ">-64.86215225</threshold_lon>
+			<threshold_lat_end id="25 ">44.23346699</threshold_lat_end>
+			<threshold_lon_end id="25 ">-64.85003548</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.23038282</latitude>
+			<longitude>064.85348395</longitude>
+			<heading>55.30</heading>
+			<name>GA 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.23104649</latitude>
+			<longitude>064.85294424</longitude>
+			<heading>47.12</heading>
+			<name>GA 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.23128516</latitude>
+			<longitude>064.85134946</longitude>
+			<heading>15.00</heading>
+			<name>GA 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.23135771</latitude>
+			<longitude>-064.85077745</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 2</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.23257312</latitude>
+			<longitude>-064.85326089</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>44.23156084</latitude>
+			<longitude>-064.85285138</longitude>
+			<orientation>328.84</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}07-25</text>
+		</sign>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

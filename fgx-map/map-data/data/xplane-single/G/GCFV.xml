@@ -1,0 +1,582 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="GCFV">
+		<linecode>1</linecode>
+		<elevation>85</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>GCFV</identifier>
+		<name>Fuerteventura</name>
+		<runway end="19L" id="01R">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01R</number>
+			<latitude>28.44188900</latitude>
+			<longitude>-013.86411900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>1000.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19L</number_end>
+			<latitude_end>28.46354200</latitude_end>
+			<longitude_end>-013.86340600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2400.74845684</length-meters>
+			<length-feet>7317.48129643</length-feet>
+			<heading id="01R">1.66711426241</heading>
+			<heading_end id="19L">181.666774565</heading_end>
+			<threshold_lat id="01R">28.441889</threshold_lat>
+			<threshold_lon id="01R">-13.864119</threshold_lon>
+			<threshold_lat_end id="19L">28.463542</threshold_lat_end>
+			<threshold_lon_end id="19L">-13.863406</threshold_lon_end>
+		</runway>
+		<runway end="19R" id="01L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01L</number>
+			<latitude>28.43560800</latitude>
+			<longitude>-013.86626900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>299.92</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="9">MALSF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19R</number_end>
+			<latitude_end>28.45048900</latitude_end>
+			<longitude_end>-013.86577500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>249.94</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="9">MALSF</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1649.92089336</length-meters>
+			<length-feet>5028.95888297</length-feet>
+			<heading id="01L">1.68078814572</heading>
+			<heading_end id="19R">181.680552861</heading_end>
+			<threshold_lat id="01L">28.435608</threshold_lat>
+			<threshold_lon id="01L">-13.866269</threshold_lon>
+			<threshold_lat_end id="19R">28.450489</threshold_lat_end>
+			<threshold_lon_end id="19R">-13.865775</threshold_lon_end>
+		</runway>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>28.44699453</latitude>
+			<longitude>-013.86522597</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>181.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>28.44505501</latitude>
+			<longitude>-013.86329017</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>1.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>28.45982452</latitude>
+			<longitude>-013.86281098</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>181.7</orientation>
+			<glideslope>3.20</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>28.44508698</latitude>
+			<longitude>-013.86464129</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>1.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>28.43864636</latitude>
+			<longitude>-013.86683820</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>1.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>28.45451200</latitude>
+			<longitude>013.86755800</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45737968</latitude>
+			<longitude>013.86838580</longitude>
+			<heading>70.00</heading>
+			<name>11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45697956</latitude>
+			<longitude>013.86840039</longitude>
+			<heading>70.00</heading>
+			<name>12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45656574</latitude>
+			<longitude>013.86841260</longitude>
+			<heading>70.00</heading>
+			<name>13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45607986</latitude>
+			<longitude>013.86843548</longitude>
+			<heading>70.00</heading>
+			<name>14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45548139</latitude>
+			<longitude>013.86845363</longitude>
+			<heading>70.00</heading>
+			<name>15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45382661</latitude>
+			<longitude>013.86827760</longitude>
+			<heading>70.00</heading>
+			<name>18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45387747</latitude>
+			<longitude>013.86835463</longitude>
+			<heading>52.62</heading>
+			<name>18B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45326010</latitude>
+			<longitude>013.86832282</longitude>
+			<heading>70.00</heading>
+			<name>19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45332588</latitude>
+			<longitude>013.86838289</longitude>
+			<heading>52.62</heading>
+			<name>19B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45265876</latitude>
+			<longitude>013.86842801</longitude>
+			<heading>70.00</heading>
+			<name>20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45268863</latitude>
+			<longitude>013.86806283</longitude>
+			<heading>70.00</heading>
+			<name>20B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45219715</latitude>
+			<longitude>013.86845118</longitude>
+			<heading>70.00</heading>
+			<name>21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45238247</latitude>
+			<longitude>013.86806283</longitude>
+			<heading>70.00</heading>
+			<name>21B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45209126</latitude>
+			<longitude>013.86807557</longitude>
+			<heading>70.00</heading>
+			<name>21C</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45170840</latitude>
+			<longitude>013.86829290</longitude>
+			<heading>70.00</heading>
+			<name>22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45122881</latitude>
+			<longitude>013.86847897</longitude>
+			<heading>52.62</heading>
+			<name>23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45116907</latitude>
+			<longitude>013.86844925</longitude>
+			<heading>70.00</heading>
+			<name>23B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45083610</latitude>
+			<longitude>013.86831606</longitude>
+			<heading>70.00</heading>
+			<name>24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45043559</latitude>
+			<longitude>013.86845117</longitude>
+			<heading>70.00</heading>
+			<name>25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44989932</latitude>
+			<longitude>013.86859014</longitude>
+			<heading>70.00</heading>
+			<name>26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44924086</latitude>
+			<longitude>013.86862489</longitude>
+			<heading>70.00</heading>
+			<name>27</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44862312</latitude>
+			<longitude>013.86851680</longitude>
+			<heading>70.00</heading>
+			<name>28</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45659414</latitude>
+			<longitude>013.86658516</longitude>
+			<heading>70.00</heading>
+			<name>31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45618005</latitude>
+			<longitude>013.86660447</longitude>
+			<heading>70.00</heading>
+			<name>32</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45302134</latitude>
+			<longitude>013.86669550</longitude>
+			<heading>70.00</heading>
+			<name>41</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45255213</latitude>
+			<longitude>013.86670884</longitude>
+			<heading>70.00</heading>
+			<name>42</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45206619</latitude>
+			<longitude>013.86672455</longitude>
+			<heading>70.00</heading>
+			<name>43</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45158862</latitude>
+			<longitude>013.86673699</longitude>
+			<heading>70.00</heading>
+			<name>44</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45023021</latitude>
+			<longitude>013.86678264</longitude>
+			<heading>70.00</heading>
+			<name>45</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44968853</latitude>
+			<longitude>013.86679526</longitude>
+			<heading>70.00</heading>
+			<name>46</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44913564</latitude>
+			<longitude>013.86681443</longitude>
+			<heading>70.00</heading>
+			<name>47</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44425586</latitude>
+			<longitude>013.86869539</longitude>
+			<heading>70.00</heading>
+			<name>51</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44388945</latitude>
+			<longitude>013.86871768</longitude>
+			<heading>1.00</heading>
+			<name>52</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44387331</latitude>
+			<longitude>013.86827986</longitude>
+			<heading>1.00</heading>
+			<name>53</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44331991</latitude>
+			<longitude>013.86871596</longitude>
+			<heading>1.00</heading>
+			<name>54</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44332061</latitude>
+			<longitude>013.86844232</longitude>
+			<heading>1.00</heading>
+			<name>55</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44331476</latitude>
+			<longitude>013.86817467</longitude>
+			<heading>1.00</heading>
+			<name>56</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44278364</latitude>
+			<longitude>013.86873561</longitude>
+			<heading>80.00</heading>
+			<name>57</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44277440</latitude>
+			<longitude>013.86847524</longitude>
+			<heading>80.00</heading>
+			<name>58</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44276246</latitude>
+			<longitude>013.86821895</longitude>
+			<heading>80.00</heading>
+			<name>59</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.44274855</latitude>
+			<longitude>013.86802990</longitude>
+			<heading>80.00</heading>
+			<name>60</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45578694</latitude>
+			<longitude>013.86621065</longitude>
+			<heading>70.00</heading>
+			<name>G1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45415951</latitude>
+			<longitude>013.86622128</longitude>
+			<heading>70.00</heading>
+			<name>G10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45553425</latitude>
+			<longitude>013.86621749</longitude>
+			<heading>70.00</heading>
+			<name>G2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45531740</latitude>
+			<longitude>013.86617583</longitude>
+			<heading>70.00</heading>
+			<name>G3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45515007</latitude>
+			<longitude>013.86618285</longitude>
+			<heading>70.00</heading>
+			<name>G4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45498147</latitude>
+			<longitude>013.86618843</longitude>
+			<heading>70.00</heading>
+			<name>G5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45482360</latitude>
+			<longitude>013.86619541</longitude>
+			<heading>70.00</heading>
+			<name>G6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45465322</latitude>
+			<longitude>013.86620192</longitude>
+			<heading>70.00</heading>
+			<name>G7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45449438</latitude>
+			<longitude>013.86620873</longitude>
+			<heading>70.00</heading>
+			<name>G8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45432428</latitude>
+			<longitude>013.86621454</longitude>
+			<heading>70.00</heading>
+			<name>G9</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45668917</latitude>
+			<longitude>013.86618367</longitude>
+			<heading>70.00</heading>
+			<name>H1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45641110</latitude>
+			<longitude>013.86618956</longitude>
+			<heading>70.00</heading>
+			<name>H2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45611605</latitude>
+			<longitude>013.86619680</longitude>
+			<heading>70.00</heading>
+			<name>H3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.45627301</latitude>
+			<longitude>013.86624659</longitude>
+			<heading>70.00</heading>
+			<name>H4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.46046500</latitude>
+			<longitude>-013.86243600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.44521200</latitude>
+			<longitude>-013.86492800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.45274000</latitude>
+			<longitude>-013.86468600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.44512506</latitude>
+			<longitude>-013.86498085</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Anemometro 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.45480479</latitude>
+			<longitude>-013.86495213</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Anemometro 2</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>GCFV TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>GCFV TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12930">129.3</frequency>
+			<description>GCFV APP</description>
+		</atc>
+	</airport>
+</PropertyList>

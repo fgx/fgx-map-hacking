@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFBP">
+		<linecode>1</linecode>
+		<elevation>616</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFBP</identifier>
+		<name>Pau Pyrenees</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>43.38765800</latitude>
+			<longitude>-000.43326100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>43.37449700</latitude_end>
+			<longitude_end>-000.40824200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2499.68635839</length-meters>
+			<length-feet>7619.04402037</length-feet>
+			<heading id="13 ">125.807984945</heading>
+			<heading_end id="31 ">305.790800707</heading_end>
+			<threshold_lat id="13 ">43.387658</threshold_lat>
+			<threshold_lon id="13 ">-0.433261</threshold_lon>
+			<threshold_lat_end id="31 ">43.374497</threshold_lat_end>
+			<threshold_lon_end id="31 ">-0.408242</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>43.38692779</latitude>
+			<longitude>-000.43093106</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>125.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>43.38184360</latitude>
+			<longitude>000.41368200</longitude>
+			<height>75</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>43.37398910</latitude>
+			<longitude>000.42056870</longitude>
+			<heading>20.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.38223113</latitude>
+			<longitude>-000.41960495</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.38838932</latitude>
+			<longitude>-000.43322239</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.37376569</latitude>
+			<longitude>-000.40828090</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12847">128.47</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12415">124.15</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12117">121.17</frequency>
+			<description>PYRENEES APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>PYRENEES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

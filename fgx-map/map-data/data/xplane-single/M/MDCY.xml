@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MDCY">
+		<linecode>1</linecode>
+		<elevation>12</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>MDCY</identifier>
+		<name>Samana El Catey International</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>19.25783300</latitude>
+			<longitude>-069.74300000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="5">SSALR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>19.27200000</latitude_end>
+			<longitude_end>-069.72116700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="5">SSALR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2779.7760698</length-meters>
+			<length-feet>8472.75746074</length-feet>
+			<heading id="07 ">55.6600906571</heading>
+			<heading_end id="25 ">235.652887155</heading_end>
+			<threshold_lat id="07 ">19.257833</threshold_lat>
+			<threshold_lon id="07 ">-69.743</threshold_lon>
+			<threshold_lat_end id="25 ">19.272</threshold_lat_end>
+			<threshold_lon_end id="25 ">-69.721167</threshold_lon_end>
+		</runway>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>19.25940947</latitude>
+			<longitude>-069.74144498</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>53.2</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>19.26995297</latitude>
+			<longitude>-069.72344096</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>237.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>19.25940411</latitude>
+			<longitude>069.72967881</longitude>
+			<height>120</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint 6</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>19.26163639</latitude>
+			<longitude>069.72717709</longitude>
+			<heading>52.04</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>19.26519293</latitude>
+			<longitude>-069.73738397</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.25810482</latitude>
+			<longitude>-069.74371978</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.27172809</latitude>
+			<longitude>-069.72044720</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>Catey Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11835">118.35</frequency>
+			<description>Catey Tower</description>
+		</atc>
+	</airport>
+</PropertyList>

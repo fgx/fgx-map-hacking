@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBCX">
+		<linecode>1</linecode>
+		<elevation>2472</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SBCX</identifier>
+		<name>Campo Dos Bugres</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-29.19069714</latitude>
+			<longitude>-051.19459710</longitude>
+			<threshold>274.93</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-29.20343086</latitude_end>
+			<longitude_end>-051.18046667</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1969.91106148</length-meters>
+			<length-feet>6004.28891539</length-feet>
+			<heading id="15 ">135.760808752</heading>
+			<heading_end id="33 ">315.767701787</heading_end>
+			<threshold_lat id="15 ">-29.1924742003</threshold_lat>
+			<threshold_lon id="15 ">-51.1926249571</threshold_lon>
+			<threshold_lat_end id="33 ">-29.20343086</threshold_lat_end>
+			<threshold_lon_end id="33 ">-51.18046667</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>-29.19296883</latitude>
+			<longitude>-051.19164993</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>135.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>-29.20299804</latitude>
+			<longitude>-051.18136049</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>315.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-29.19479980</latitude>
+			<longitude>051.18682369</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19257413</latitude>
+			<longitude>051.19122306</longitude>
+			<heading>60.00</heading>
+			<name>Aeroclube Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19709269</latitude>
+			<longitude>051.18447605</longitude>
+			<heading>75.00</heading>
+			<name>Colombo Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19676600</latitude>
+			<longitude>051.18457593</longitude>
+			<heading>75.00</heading>
+			<name>Migra Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19538782</latitude>
+			<longitude>051.18713066</longitude>
+			<heading>42.00</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19518163</latitude>
+			<longitude>051.18738692</longitude>
+			<heading>42.00</heading>
+			<name>Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-29.19725990</latitude>
+			<longitude>051.18441895</longitude>
+			<heading>75.00</heading>
+			<name>Randon Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-29.19429433</latitude>
+			<longitude>-051.18923140</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-29.19447263</latitude>
+			<longitude>-051.18904037</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13160">131.6</frequency>
+			<description>CAXIAS RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

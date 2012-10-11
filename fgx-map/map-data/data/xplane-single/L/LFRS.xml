@@ -1,0 +1,884 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFRS">
+		<linecode>1</linecode>
+		<elevation>89</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LFRS</identifier>
+		<name>Nantes_Atlantique</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>47.14160400</latitude>
+			<longitude>-001.61953700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>47.16478800</latitude_end>
+			<longitude_end>-001.60189500</longitude_end>
+			<threshold_end>210.01</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2904.02348277</length-meters>
+			<length-feet>8851.46357548</length-feet>
+			<heading id="03 ">27.4400043065</heading>
+			<heading_end id="21 ">207.42706964</heading_end>
+			<threshold_lat id="03 ">47.141604</threshold_lat>
+			<threshold_lon id="03 ">-1.619537</threshold_lon>
+			<threshold_lat_end id="21 ">47.1631113026</threshold_lat_end>
+			<threshold_lon_end id="21 ">-1.60317077478</threshold_lon_end>
+		</runway>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>47.16047700</latitude>
+			<longitude>-001.61493400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="0">No runway markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>47.15729100</latitude_end>
+			<longitude_end>-001.60837800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>610.417055732</length-meters>
+			<length-feet>1860.55118587</length-feet>
+			<heading id="13 ">125.471185981</heading>
+			<heading_end id="31 ">305.466378845</heading_end>
+			<threshold_lat id="13 ">47.160477</threshold_lat>
+			<threshold_lon id="13 ">-1.614934</threshold_lon>
+			<threshold_lat_end id="31 ">47.157291</threshold_lat_end>
+			<threshold_lon_end id="31 ">-1.608378</threshold_lon_end>
+		</runway>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>47.16125400</latitude>
+			<longitude>-001.60388400</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>207.4</orientation>
+			<glideslope>3.10</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>47.15157900</latitude>
+			<longitude>001.60457400</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Nantes_Atlantique Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15479100</latitude>
+			<longitude>001.60270200</longitude>
+			<heading>27.68</heading>
+			<name>GA_Ramp_11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15462600</latitude>
+			<longitude>001.60222500</longitude>
+			<heading>27.75</heading>
+			<name>GA_Ramp_12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15445700</latitude>
+			<longitude>001.60175700</longitude>
+			<heading>27.25</heading>
+			<name>GA_Ramp_14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15371400</latitude>
+			<longitude>001.60227500</longitude>
+			<heading>07.98</heading>
+			<name>GA_Ramp_15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15405700</latitude>
+			<longitude>001.60323200</longitude>
+			<heading>07.85</heading>
+			<name>GA_Ramp_17</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16115900</latitude>
+			<longitude>001.60116600</longitude>
+			<heading>60.06</heading>
+			<name>GA_Ramp_23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16143300</latitude>
+			<longitude>001.60095300</longitude>
+			<heading>60.06</heading>
+			<name>GA_Ramp_25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16185800</latitude>
+			<longitude>001.60061800</longitude>
+			<heading>60.06</heading>
+			<name>GA_Ramp_27</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16013400</latitude>
+			<longitude>001.60144300</longitude>
+			<heading>27.72</heading>
+			<name>GA_Ramp_29</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15994400</latitude>
+			<longitude>001.60089400</longitude>
+			<heading>27.72</heading>
+			<name>GA_Ramp_31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16000500</latitude>
+			<longitude>001.60107400</longitude>
+			<heading>27.72</heading>
+			<name>GA_Ramp_32</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16006500</latitude>
+			<longitude>001.60124200</longitude>
+			<heading>27.72</heading>
+			<name>GA_Ramp_33</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16066800</latitude>
+			<longitude>001.60087500</longitude>
+			<heading>07.32</heading>
+			<name>GA_Ramp_34</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16089200</latitude>
+			<longitude>001.60070700</longitude>
+			<heading>07.67</heading>
+			<name>GA_Ramp_35</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16125700</latitude>
+			<longitude>001.60040100</longitude>
+			<heading>07.12</heading>
+			<name>GA_Ramp_36</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16182400</latitude>
+			<longitude>001.59982300</longitude>
+			<heading>08.97</heading>
+			<name>GA_Ramp_37</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16174000</latitude>
+			<longitude>001.59959600</longitude>
+			<heading>08.00</heading>
+			<name>GA_Ramp_38</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16164500</latitude>
+			<longitude>001.60078300</longitude>
+			<heading>60.06</heading>
+			<name>GA_Ramp_45</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.16214000</latitude>
+			<longitude>001.59945300</longitude>
+			<heading>15.44</heading>
+			<name>GA_Ramp_46</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15597700</latitude>
+			<longitude>001.60058900</longitude>
+			<heading>47.75</heading>
+			<name>GA_Ramp_7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15746100</latitude>
+			<longitude>001.60323000</longitude>
+			<heading>31.00</heading>
+			<name>Gate_1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15717700</latitude>
+			<longitude>001.60281600</longitude>
+			<heading>53.66</heading>
+			<name>Gate_3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15690000</latitude>
+			<longitude>001.60210500</longitude>
+			<heading>41.85</heading>
+			<name>Gate_4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15670900</latitude>
+			<longitude>001.60169500</longitude>
+			<heading>88.17</heading>
+			<name>Gate_5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15641000</latitude>
+			<longitude>001.60116700</longitude>
+			<heading>13.90</heading>
+			<name>Gate_6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15824900</latitude>
+			<longitude>001.60316300</longitude>
+			<heading>61.11</heading>
+			<name>Gate_L_1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15859200</latitude>
+			<longitude>001.60289800</longitude>
+			<heading>61.11</heading>
+			<name>Gate_L_2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15898100</latitude>
+			<longitude>001.60259400</longitude>
+			<heading>61.11</heading>
+			<name>Gate_L_3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15935500</latitude>
+			<longitude>001.60230700</longitude>
+			<heading>61.11</heading>
+			<name>Gate_L_4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15976100</latitude>
+			<longitude>001.60200300</longitude>
+			<heading>61.11</heading>
+			<name>Gate_L_5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15382800</latitude>
+			<longitude>001.60633600</longitude>
+			<heading>32.23</heading>
+			<name>Gate_M_1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15365600</latitude>
+			<longitude>001.60588000</longitude>
+			<heading>29.68</heading>
+			<name>Gate_M_2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15348900</latitude>
+			<longitude>001.60541700</longitude>
+			<heading>34.38</heading>
+			<name>Gate_M_3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15520100</latitude>
+			<longitude>001.60195200</longitude>
+			<heading>93.42</heading>
+			<name>Ramp_10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15388100</latitude>
+			<longitude>001.60275000</longitude>
+			<heading>07.27</heading>
+			<name>Ramp_16</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15422600</latitude>
+			<longitude>001.60370000</longitude>
+			<heading>07.53</heading>
+			<name>Ramp_18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15456400</latitude>
+			<longitude>001.60455000</longitude>
+			<heading>06.82</heading>
+			<name>Ramp_20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.15494600</latitude>
+			<longitude>001.60121100</longitude>
+			<heading>07.21</heading>
+			<name>Ramp_8</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.14474900</latitude>
+			<longitude>-001.61892300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.16024100</latitude>
+			<longitude>-001.60796400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14120300</latitude>
+			<longitude>-001.61836200</longitude>
+			<orientation>270.78</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}A{@R}03</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14797100</latitude>
+			<longitude>-001.61328500</longitude>
+			<orientation>252.23</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}B{@R}03-21</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15635200</latitude>
+			<longitude>-001.60704100</longitude>
+			<orientation>301.68</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}C{@R}03-21_{@Y}_N{^u}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15804700</latitude>
+			<longitude>-001.60571400</longitude>
+			<orientation>305.32</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}D{@R}03-21</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15968600</latitude>
+			<longitude>-001.60444500</longitude>
+			<orientation>296.67</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}E{@R}03-21</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16350400</latitude>
+			<longitude>-001.60039100</longitude>
+			<orientation>164.05</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}F</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16292600</latitude>
+			<longitude>-001.60114200</longitude>
+			<orientation>26.98</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}F{@R}21</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16412100</latitude>
+			<longitude>-001.60121900</longitude>
+			<orientation>331.82</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}F{@R}21</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16256500</latitude>
+			<longitude>-001.60115900</longitude>
+			<orientation>207.37</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}F{@Y}_R5{^u}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15684500</latitude>
+			<longitude>-001.60909500</longitude>
+			<orientation>71.95</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}N{@R}03-21{@Y}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15383400</latitude>
+			<longitude>-001.60725700</longitude>
+			<orientation>28.71</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}R2{@Y}_MIKE{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14933600</latitude>
+			<longitude>-001.61143900</longitude>
+			<orientation>207.13</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}R2{@Y}_R1{^u}_|_B{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15695700</latitude>
+			<longitude>-001.60465500</longitude>
+			<orientation>71.96</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}RD</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14845500</latitude>
+			<longitude>-001.61306300</longitude>
+			<orientation>295.46</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}03-21_{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15673100</latitude>
+			<longitude>-001.60668200</longitude>
+			<orientation>304.98</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}03-21_{@L}C{@Y}_N{^u}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15841200</latitude>
+			<longitude>-001.60534200</longitude>
+			<orientation>304.06</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}03-21{@L}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16007000</latitude>
+			<longitude>-001.60416600</longitude>
+			<orientation>297.10</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}03-21{@L}E</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14170700</latitude>
+			<longitude>-001.61833100</longitude>
+			<orientation>257.55</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}03{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16432200</latitude>
+			<longitude>-001.60076100</longitude>
+			<orientation>333.62</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}21{@L}F</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16267000</latitude>
+			<longitude>-001.60038300</longitude>
+			<orientation>26.97</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}21{@L}F</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14263800</latitude>
+			<longitude>-001.61832200</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15729200</latitude>
+			<longitude>-001.60704300</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15536200</latitude>
+			<longitude>-001.60581000</longitude>
+			<orientation>31.93</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}C_{@L}R2{@Y}_R3{^u}_|RC{^r}_</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15893900</latitude>
+			<longitude>-001.60583800</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15704500</latitude>
+			<longitude>-001.60546100</longitude>
+			<orientation>27.15</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}D_{@L}R3{@Y}_R4{^u}_|_RD{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16057800</latitude>
+			<longitude>-001.60467400</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}E</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15915500</latitude>
+			<longitude>-001.60390200</longitude>
+			<orientation>26.71</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}E_{@L}R4{@Y}_R5{^u}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15487100</latitude>
+			<longitude>-001.60634700</longitude>
+			<orientation>210.63</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}MIKE_{@L}R2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15546200</latitude>
+			<longitude>-001.60534100</longitude>
+			<orientation>300.03</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R2_{@L}RC{@Y}_C{^u}_|_R3{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15674100</latitude>
+			<longitude>-001.60670500</longitude>
+			<orientation>123.37</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R3_{@L}C{@Y}_RC{^u}_|_R2{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15792300</latitude>
+			<longitude>-001.60543500</longitude>
+			<orientation>130.41</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R4_{@L}D{@Y}_RD{^u}_|_R3{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15995100</latitude>
+			<longitude>-001.60362600</longitude>
+			<orientation>116.37</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R5_{@L}E{@Y}_R4{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16212800</latitude>
+			<longitude>-001.60037800</longitude>
+			<orientation>297.93</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R5_|_F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16083700</latitude>
+			<longitude>-001.60263000</longitude>
+			<orientation>298.18</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}R5{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15639600</latitude>
+			<longitude>-001.60513400</longitude>
+			<orientation>205.99</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}RC_{@L}R3{@Y}_R2{^u}_|_C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14906300</latitude>
+			<longitude>-001.61331200</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^ld}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14800800</latitude>
+			<longitude>-001.61235900</longitude>
+			<orientation>27.15</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^ld}B_{@L}R1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15693300</latitude>
+			<longitude>-001.60831900</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^ld}N</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16217800</latitude>
+			<longitude>-001.60037100</longitude>
+			<orientation>117.62</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^lu}GOLF_|_HOTEL{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14870400</latitude>
+			<longitude>-001.61213400</longitude>
+			<orientation>73.08</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^lu}R2_{@L}B{@Y}_R1{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15679100</latitude>
+			<longitude>-001.60410400</longitude>
+			<orientation>314.21</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^lu}R3_{@L}RD{@Y}_D{^u}_|R4{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15826500</latitude>
+			<longitude>-001.60463600</longitude>
+			<orientation>207.11</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^lu}RD_{@L}R4{@Y}_R3{^u}_|_D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16102700</latitude>
+			<longitude>-001.60173900</longitude>
+			<orientation>56.89</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^u}_INDIA</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16254300</latitude>
+			<longitude>-001.60117600</longitude>
+			<orientation>27.37</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^u}F_{@L}R5</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16059800</latitude>
+			<longitude>-001.60183400</longitude>
+			<orientation>118.03</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^u}JULIET</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15994700</latitude>
+			<longitude>-001.60338100</longitude>
+			<orientation>204.56</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^u}R4_{@L}R5{@Y}_E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.14715800</latitude>
+			<longitude>-001.61475300</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}B{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15643700</latitude>
+			<longitude>-001.60755100</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15699000</latitude>
+			<longitude>-001.60863600</longitude>
+			<orientation>77.01</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}C{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15793500</latitude>
+			<longitude>-001.60647700</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15976600</latitude>
+			<longitude>-001.60514700</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.16411900</latitude>
+			<longitude>-001.60195000</longitude>
+			<orientation>27.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.15752000</latitude>
+			<longitude>-001.60787200</longitude>
+			<orientation>207.34</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}N{^ru}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12692">126.92</frequency>
+			<description>LFRS ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12187">121.87</frequency>
+			<description>NANTES GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11865">118.65</frequency>
+			<description>NANTES TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12987">129.87</frequency>
+			<description>NANTES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

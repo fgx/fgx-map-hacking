@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WAOO">
+		<linecode>1</linecode>
+		<elevation>66</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WAOO</identifier>
+		<name>Banjarmasin Syamsudin Noor</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-03.44031400</latitude>
+			<longitude>114.75147200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-03.44439400</latitude_end>
+			<longitude_end>114.77363300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2503.51715383</length-meters>
+			<length-feet>7630.72028487</length-feet>
+			<heading id="10 ">100.381339344</heading>
+			<heading_end id="28 ">280.382669986</heading_end>
+			<threshold_lat id="10 ">-3.440314</threshold_lat>
+			<threshold_lon id="10 ">114.751472</threshold_lon>
+			<threshold_lat_end id="28 ">-3.444394</threshold_lat_end>
+			<threshold_lon_end id="28 ">114.773633</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-03.44043114</latitude>
+			<longitude>114.75432267</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>100.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-03.44446187</latitude>
+			<longitude>114.77178694</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>280.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-03.43850680</latitude>
+			<longitude>114.75409700</longitude>
+			<height>40</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-03.43936820</latitude>
+			<longitude>114.75518800</longitude>
+			<heading>70.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-03.44095669</latitude>
+			<longitude>114.76280982</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.43964152</latitude>
+			<longitude>114.75118271</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.44506647</latitude>
+			<longitude>114.77392231</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12805">128.05</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>ULIN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12650">126.5</frequency>
+			<description>BANJARMASIN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

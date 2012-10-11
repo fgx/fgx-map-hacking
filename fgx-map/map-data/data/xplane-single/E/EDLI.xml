@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDLI">
+		<linecode>1</linecode>
+		<elevation>454</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDLI</identifier>
+		<name>Bielefeld Windelsbleiche</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>20.12</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>51.96682100</latitude>
+			<longitude>008.53628300</longitude>
+			<threshold>390.14</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>51.96284300</latitude_end>
+			<longitude_end>008.55338600</longitude_end>
+			<threshold_end>216.10</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1256.08897032</length-meters>
+			<length-feet>3828.55918153</length-feet>
+			<heading id="11 ">110.639605344</heading>
+			<heading_end id="29 ">290.626134461</heading_end>
+			<threshold_lat id="11 ">51.9655849319</threshold_lat>
+			<threshold_lon id="11 ">8.54159502883</threshold_lon>
+			<threshold_lat_end id="29 ">51.9635271326</threshold_lat_end>
+			<threshold_lon_end id="29 ">8.5504435217</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>51.96521588</latitude>
+			<longitude>008.54451303</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>110.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>51.96389600</latitude>
+			<longitude>008.54753517</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>290.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.96542563</latitude>
+			<longitude>008.54519751</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.96713899</latitude>
+			<longitude>008.53616370</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.96252500</latitude>
+			<longitude>008.55350517</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11835">118.35</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12987">129.87</frequency>
+			<description>LANGEN INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

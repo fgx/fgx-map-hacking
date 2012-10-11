@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCOT">
+		<linecode>1</linecode>
+		<elevation>474</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCOT</identifier>
+		<name>COTULLA LASALLE CO</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>28.46151900</latitude>
+			<longitude>-099.22388900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>28.45186900</latitude_end>
+			<longitude_end>-099.21278100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1525.59765419</length-meters>
+			<length-feet>4650.02164996</length-feet>
+			<heading id="13 ">134.511788891</heading>
+			<heading_end id="31 ">314.506495992</heading_end>
+			<threshold_lat id="13 ">28.461519</threshold_lat>
+			<threshold_lon id="13 ">-99.223889</threshold_lon>
+			<threshold_lat_end id="31 ">28.451869</threshold_lat_end>
+			<threshold_lon_end id="31 ">-99.212781</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>28.46046800</latitude>
+			<longitude>-099.22219215</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>134.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>28.45293935</latitude>
+			<longitude>-099.21445601</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>314.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.45720667</latitude>
+			<longitude>-099.21776138</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.46188213</latitude>
+			<longitude>-099.22380985</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.45150588</latitude>
+			<longitude>-099.21286018</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13407">134.07</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

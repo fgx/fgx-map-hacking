@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VGSY">
+		<linecode>1</linecode>
+		<elevation>50</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VGSY</identifier>
+		<name>OSMANY INTL</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>24.96833600</latitude>
+			<longitude>091.85361700</longitude>
+			<threshold>310.90</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>24.95814700</latitude_end>
+			<longitude_end>091.87995300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2889.00400893</length-meters>
+			<length-feet>8805.68421921</length-feet>
+			<heading id="11 ">113.002014219</heading>
+			<heading_end id="29 ">292.99089946</heading_end>
+			<threshold_lat id="11 ">24.9672392345</threshold_lat>
+			<threshold_lon id="11 ">91.856451122</threshold_lon>
+			<threshold_lat_end id="29 ">24.958147</threshold_lat_end>
+			<threshold_lon_end id="29 ">91.879953</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>24.96669789</latitude>
+			<longitude>091.85898724</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>113.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>24.95848232</latitude>
+			<longitude>091.87795233</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>293.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.96456815</latitude>
+			<longitude>091.86740700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.96906513</latitude>
+			<longitude>091.85346670</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.95741785</latitude>
+			<longitude>091.88010314</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>SYLHET TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LKNA">
+		<linecode>1</linecode>
+		<elevation>1548</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LKNA</identifier>
+		<name>NAMEST</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>49.17305036</latitude>
+			<longitude>016.11163419</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>149.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>49.15936032</latitude_end>
+			<longitude_end>016.13711833</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>149.96</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2402.51679498</length-meters>
+			<length-feet>7322.87119108</length-feet>
+			<heading id="13 ">129.334349246</heading>
+			<heading_end id="31 ">309.315067703</heading_end>
+			<threshold_lat id="13 ">49.17305036</threshold_lat>
+			<threshold_lon id="13 ">16.11163419</threshold_lon>
+			<threshold_lat_end id="31 ">49.15936032</threshold_lat_end>
+			<threshold_lon_end id="31 ">16.13711833</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.17184292</latitude>
+			<longitude>016.12149547</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.17133752</latitude>
+			<longitude>016.12255983</longitude>
+			<heading>14.06</heading>
+			<name>Stand</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.16730488</latitude>
+			<longitude>016.12575870</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.16863613</latitude>
+			<longitude>016.12186975</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 11</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12625">126.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12022">120.22</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>PRECISION</description>
+		</atc>
+	</airport>
+</PropertyList>

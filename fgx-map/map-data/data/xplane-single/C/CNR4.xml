@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CNR4">
+		<linecode>1</linecode>
+		<elevation>700</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CNR4</identifier>
+		<name>TOBERMORY</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>45.23472200</latitude>
+			<longitude>-081.63916700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>45.23222500</latitude_end>
+			<longitude_end>-081.62750000</longitude_end>
+			<threshold_end>137.16</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>957.269017823</length-meters>
+			<length-feet>2917.75596632</length-feet>
+			<heading id="12 ">106.855807743</heading>
+			<heading_end id="30 ">286.847524379</heading_end>
+			<threshold_lat id="12 ">45.234722</threshold_lat>
+			<threshold_lon id="12 ">-81.639167</threshold_lon>
+			<threshold_lat_end id="30 ">45.2325826791</threshold_lat_end>
+			<threshold_lon_end id="30 ">-81.6291716887</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.23402519</latitude>
+			<longitude>-081.63309658</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.23500606</latitude>
+			<longitude>-081.63928871</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.23194093</latitude>
+			<longitude>-081.62737836</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

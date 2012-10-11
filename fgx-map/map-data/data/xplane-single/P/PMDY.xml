@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PMDY">
+		<linecode>1</linecode>
+		<elevation>13</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>PMDY</identifier>
+		<name>Midway Atoll</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>28.19747409</latitude>
+			<longitude>-177.39289238</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.10</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>28.20539791</latitude_end>
+			<longitude_end>-177.37004362</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>41.15</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2409.007037</length-meters>
+			<length-feet>7342.65344878</length-feet>
+			<heading id="06 ">68.6271508528</heading>
+			<heading_end id="24 ">248.616353149</heading_end>
+			<threshold_lat id="06 ">28.19747409</threshold_lat>
+			<threshold_lon id="06 ">-177.39289238</threshold_lon>
+			<threshold_lat_end id="24 ">28.20539791</threshold_lat_end>
+			<threshold_lon_end id="24 ">-177.37004362</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>28.19854846</latitude>
+			<longitude>-177.39117667</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>68.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>28.20535187</latitude>
+			<longitude>177.38079441</longitude>
+			<height>200</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.20818324</latitude>
+			<longitude>177.37859260</longitude>
+			<heading>38.77</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.21105120</latitude>
+			<longitude>-177.37909756</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.20716066</latitude>
+			<longitude>-177.38188953</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11832">118.32</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

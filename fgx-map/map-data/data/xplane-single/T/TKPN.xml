@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="TKPN">
+		<linecode>1</linecode>
+		<elevation>14</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>TKPN</identifier>
+		<name>Nevis/Amory Intl</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>17.20562200</latitude>
+			<longitude>-062.59560300</longitude>
+			<threshold>174.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>17.20573100</latitude_end>
+			<longitude_end>-062.58413600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.79293447</length-meters>
+			<length-feet>3717.92886426</length-feet>
+			<heading id="10 ">89.4350577257</heading>
+			<heading_end id="28 ">269.431665756</heading_end>
+			<threshold_lat id="10 ">17.2056375808</threshold_lat>
+			<threshold_lon id="10 ">-62.5939582401</threshold_lon>
+			<threshold_lat_end id="28 ">17.205731</threshold_lat_end>
+			<threshold_lon_end id="28 ">-62.584136</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>17.20598807</latitude>
+			<longitude>-062.59207137</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>17.20461069</latitude>
+			<longitude>062.59133194</longitude>
+			<height>35</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.20479308</latitude>
+			<longitude>062.59205048</longitude>
+			<heading>89.00</heading>
+			<name>Terminal Spot 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.20478943</latitude>
+			<longitude>062.59227500</longitude>
+			<heading>89.00</heading>
+			<name>Terminal Spot 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>17.20423427</latitude>
+			<longitude>-062.59080240</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.20538836</latitude>
+			<longitude>-062.59221590</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12050">120.5</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KOCH">
+		<linecode>1</linecode>
+		<elevation>355</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KOCH</identifier>
+		<name>A L Mangham JR RGNL</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>31.58462200</latitude>
+			<longitude>-094.70950000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>31.57091900</latitude_end>
+			<longitude_end>-094.71075800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.0664408</length-meters>
+			<length-feet>4645.35451155</length-feet>
+			<heading id="18 ">-175.506475693</heading>
+			<heading_end id="36 ">364.494183066</heading_end>
+			<threshold_lat id="18 ">31.584622</threshold_lat>
+			<threshold_lon id="18 ">-94.7095</threshold_lon>
+			<threshold_lat_end id="36 ">31.570919</threshold_lat_end>
+			<threshold_lon_end id="36 ">-94.710758</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>31.58347188</latitude>
+			<longitude>-094.70927349</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>184.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.57944419</latitude>
+			<longitude>094.70492144</longitude>
+			<heading>65.47</heading>
+			<name>FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.57946217</latitude>
+			<longitude>094.70634288</longitude>
+			<heading>56.47</heading>
+			<name>Gen Avia Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.58450197</latitude>
+			<longitude>094.70880888</longitude>
+			<heading>07.45</heading>
+			<name>Hold Short Rwy 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.57096644</latitude>
+			<longitude>094.71005995</longitude>
+			<heading>44.07</heading>
+			<name>Hold Short Rwy 36</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.57946562</latitude>
+			<longitude>094.70451068</longitude>
+			<heading>66.72</heading>
+			<name>Self Serve Fuel</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.57841462</latitude>
+			<longitude>-094.70416878</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.58397805</latitude>
+			<longitude>-094.71000554</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.58043286</latitude>
+			<longitude>-094.70817246</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.57142408</latitude>
+			<longitude>-094.71032183</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>31.58443644</latitude>
+			<longitude>-094.70895578</longitude>
+			<orientation>274.50</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>31.58007407</latitude>
+			<longitude>-094.70937543</longitude>
+			<orientation>274.50</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>31.57631485</latitude>
+			<longitude>-094.70969981</longitude>
+			<orientation>274.50</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>31.57358525</latitude>
+			<longitude>-094.70995614</longitude>
+			<orientation>274.50</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>31.57084822</latitude>
+			<longitude>-094.71019200</longitude>
+			<orientation>274.50</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}36-18{@@,safety}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13562">135.62</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

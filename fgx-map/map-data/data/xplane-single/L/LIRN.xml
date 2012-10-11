@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIRN">
+		<linecode>1</linecode>
+		<elevation>294</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LIRN</identifier>
+		<name>Naples Capodichino</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>40.87978600</latitude>
+			<longitude>014.27754200</longitude>
+			<threshold>398.98</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>40.89227800</latitude_end>
+			<longitude_end>014.30402500</longitude_end>
+			<threshold_end>190.20</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="4">Calvert ILS Cat II and Cat II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2627.97344437</length-meters>
+			<length-feet>8010.06305844</length-feet>
+			<heading id="06 ">58.1462572035</heading>
+			<heading_end id="24 ">238.128922583</heading_end>
+			<threshold_lat id="06 ">40.8816820105</threshold_lat>
+			<threshold_lon id="06 ">14.2815627746</threshold_lon>
+			<threshold_lat_end id="24 ">40.8913736545</threshold_lat_end>
+			<threshold_lon_end id="24 ">14.3021083147</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>40.88343698</latitude>
+			<longitude>014.28427721</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>58.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>40.88990191</latitude>
+			<longitude>014.29998782</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>238.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>40.87964000</latitude>
+			<longitude>014.28347700</longitude>
+			<height>110</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.88032400</latitude>
+			<longitude>014.28139000</longitude>
+			<heading>80.00</heading>
+			<name>Start Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.88592700</latitude>
+			<longitude>014.29290600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.88227000</latitude>
+			<longitude>014.28093700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.89110900</latitude>
+			<longitude>014.30303100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13597">135.97</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>NAPOLI GND CLNC DEL</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>NAPOLI TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12435">124.35</frequency>
+			<description>NAPOLI RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

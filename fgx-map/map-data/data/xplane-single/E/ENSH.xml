@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENSH">
+		<linecode>1</linecode>
+		<elevation>27</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENSH</identifier>
+		<name>Svolvaer Helle</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>68.24674600</latitude>
+			<longitude>014.67097100</longitude>
+			<threshold>70.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>68.23845100</latitude_end>
+			<longitude_end>014.66614400</longitude_end>
+			<threshold_end>70.10</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>946.53459926</length-meters>
+			<length-feet>2885.03745855</length-feet>
+			<heading id="01 ">-167.818909149</heading>
+			<heading_end id="19 ">372.185573984</heading_end>
+			<threshold_lat id="01 ">68.2461316701</threshold_lat>
+			<threshold_lon id="01 ">14.6706135238</threshold_lon>
+			<threshold_lat_end id="19 ">68.2390653193</threshold_lat_end>
+			<threshold_lon_end id="19 ">14.6665014954</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>68.23935117</latitude>
+			<longitude>014.66539300</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>12.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>68.24583596</latitude>
+			<longitude>014.67228647</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>192.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>68.24084353</latitude>
+			<longitude>014.66380062</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>AFIS</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>68.24444729</latitude>
+			<longitude>014.66637627</longitude>
+			<heading>50.00</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>68.24486726</latitude>
+			<longitude>014.66656327</longitude>
+			<heading>50.00</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.23952042</latitude>
+			<longitude>014.66843766</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.24641372</latitude>
+			<longitude>014.67165785</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

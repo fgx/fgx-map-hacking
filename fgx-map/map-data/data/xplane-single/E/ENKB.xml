@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENKB">
+		<linecode>1</linecode>
+		<elevation>204</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENKB</identifier>
+		<name>KVERNBERGET</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>63.10916700</latitude>
+			<longitude>007.80675000</longitude>
+			<threshold>60.05</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>63.11457800</latitude_end>
+			<longitude_end>007.84231400</longitude_end>
+			<threshold_end>80.16</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1893.83458529</length-meters>
+			<length-feet>5772.40781596</length-feet>
+			<heading id="07 ">71.4454657981</heading>
+			<heading_end id="25 ">251.413746577</heading_end>
+			<threshold_lat id="07 ">63.109338427</threshold_lat>
+			<threshold_lon id="07 ">7.8078776754</threshold_lon>
+			<threshold_lat_end id="25 ">63.114348773</threshold_lat_end>
+			<threshold_lon_end id="25 ">7.84080870083</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>63.11082425</latitude>
+			<longitude>007.81485339</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>71.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>63.11339465</latitude>
+			<longitude>007.83731163</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>251.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>63.11065300</latitude>
+			<longitude>007.82430600</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>63.11414000</latitude>
+			<longitude>007.82970000</longitude>
+			<heading>60.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>63.11322105</latitude>
+			<longitude>007.82352445</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>63.10961455</latitude>
+			<longitude>007.80546972</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>63.11413013</latitude>
+			<longitude>007.84359398</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

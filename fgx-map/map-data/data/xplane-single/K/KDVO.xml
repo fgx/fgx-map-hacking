@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KDVO">
+		<linecode>1</linecode>
+		<elevation>2</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KDVO</identifier>
+		<name>GNOSS FLD</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>38.14746400</latitude>
+			<longitude>-122.55912500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>29.87</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>38.13973900</latitude_end>
+			<longitude_end>-122.55312200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>38.10</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1006.06615408</length-meters>
+			<length-feet>3066.48963763</length-feet>
+			<heading id="13 ">148.464420055</heading>
+			<heading_end id="31 ">328.460712395</heading_end>
+			<threshold_lat id="13 ">38.147464</threshold_lat>
+			<threshold_lon id="13 ">-122.559125</threshold_lon>
+			<threshold_lat_end id="31 ">38.139739</threshold_lat_end>
+			<threshold_lon_end id="31 ">-122.553122</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>38.13998497</latitude>
+			<longitude>-122.55113771</longitude>
+			<orientation>57.79</orientation>
+			<width>17.98</width>
+			<length>17.98</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>38.14626866</latitude>
+			<longitude>-122.55858123</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>148.5</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>13</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>38.14145962</latitude>
+			<longitude>-122.55485608</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>328.5</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>31</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.14001332</latitude>
+			<longitude>122.55560024</longitude>
+			<heading>38.86</heading>
+			<name>Corporate Jet Start</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.14105609</latitude>
+			<longitude>122.55014273</longitude>
+			<heading>34.73</heading>
+			<name>East Hangars Start</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.14100314</latitude>
+			<longitude>122.55552322</longitude>
+			<heading>38.77</heading>
+			<name>Ramp Start</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.14180848</latitude>
+			<longitude>-122.55364353</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.14177772</latitude>
+			<longitude>-122.55390563</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>38.14698723</latitude>
+			<longitude>-122.55924555</longitude>
+			<orientation>59.98</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}13</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>38.14480602</latitude>
+			<longitude>-122.55751523</longitude>
+			<orientation>60.15</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}13-31</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>38.14236826</latitude>
+			<longitude>-122.55561441</longitude>
+			<orientation>58.12</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}13-31</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>38.13990187</latitude>
+			<longitude>-122.55274176</longitude>
+			<orientation>239.04</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}31</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>38.13971565</latitude>
+			<longitude>-122.55358553</longitude>
+			<orientation>60.07</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}31</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12067">120.67</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12307">123.07</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

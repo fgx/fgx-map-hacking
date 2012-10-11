@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WIOD">
+		<linecode>1</linecode>
+		<elevation>164</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WIOD</identifier>
+		<name>Tanjun Pandan/Bulu Tumbang</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-02.73738900</latitude>
+			<longitude>107.75436100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>56.39</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-02.75405600</latitude_end>
+			<longitude_end>107.75546900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>56.39</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1847.09726599</length-meters>
+			<length-feet>5629.95246672</length-feet>
+			<heading id="18 ">176.175507041</heading>
+			<heading_end id="36 ">356.175560118</heading_end>
+			<threshold_lat id="18 ">-2.737389</threshold_lat>
+			<threshold_lon id="18 ">107.754361</threshold_lon>
+			<threshold_lat_end id="36 ">-2.754056</threshold_lat_end>
+			<threshold_lon_end id="36 ">107.755469</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-02.73916288</latitude>
+			<longitude>107.75481243</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>176.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>-02.75228212</latitude>
+			<longitude>107.75501757</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>356.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.74565795</latitude>
+			<longitude>107.75585470</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.73709406</latitude>
+			<longitude>107.75474596</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.75435094</latitude>
+			<longitude>107.75508403</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

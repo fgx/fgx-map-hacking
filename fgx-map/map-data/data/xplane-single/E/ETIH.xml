@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ETIH">
+		<linecode>1</linecode>
+		<elevation>1455</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ETIH</identifier>
+		<name>HOHENFELS AAF</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>21.95</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>49.21805600</latitude>
+			<longitude>011.83166700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>49.21805600</latitude_end>
+			<longitude_end>011.84055600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>647.579963286</length-meters>
+			<length-feet>1973.8237281</length-feet>
+			<heading id="09 ">90.0033653796</heading>
+			<heading_end id="27 ">269.99663462</heading_end>
+			<threshold_lat id="09 ">49.218056</threshold_lat>
+			<threshold_lon id="09 ">11.831667</threshold_lon>
+			<threshold_lat_end id="27 ">49.218056</threshold_lat_end>
+			<threshold_lon_end id="27 ">11.840556</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.21874740</latitude>
+			<longitude>011.83610992</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.21835223</latitude>
+			<longitude>011.83136461</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.21775975</latitude>
+			<longitude>011.84085833</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12065">120.65</frequency>
+			<description>MUNCHEN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

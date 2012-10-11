@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OIKM">
+		<linecode>1</linecode>
+		<elevation>3231</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OIKM</identifier>
+		<name>BAM</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>29.09239700</latitude>
+			<longitude>058.43539400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>30.48</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>29.07594200</latitude_end>
+			<longitude_end>058.46468900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>121.92</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3385.43053811</length-meters>
+			<length-feet>10318.7922802</length-feet>
+			<heading id="12 ">122.604192433</heading>
+			<heading_end id="30 ">302.589952311</heading_end>
+			<threshold_lat id="12 ">29.092397</threshold_lat>
+			<threshold_lon id="12 ">58.435394</threshold_lon>
+			<threshold_lat_end id="30 ">29.075942</threshold_lat_end>
+			<threshold_lon_end id="30 ">58.464689</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>29.09176135</latitude>
+			<longitude>058.43737486</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>122.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>29.07657808</latitude>
+			<longitude>058.46270863</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>302.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>29.08536716</latitude>
+			<longitude>058.45092151</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.09312876</latitude>
+			<longitude>058.43537987</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.07521025</latitude>
+			<longitude>058.46470292</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12415">124.15</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

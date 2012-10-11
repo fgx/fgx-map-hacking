@@ -1,0 +1,858 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UNNT">
+		<linecode>1</linecode>
+		<elevation>365</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UNNT</identifier>
+		<name>Novosibirsk Tolmachevo</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>57.91</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>55.01009562</latitude>
+			<longitude>082.62276367</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>76.20</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>55.01515038</latitude_end>
+			<longitude_end>082.67854833</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>68.58</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3612.8611964</length-meters>
+			<length-feet>11012.0009266</length-feet>
+			<heading id="07 ">81.0623671829</heading>
+			<heading_end id="25 ">261.016664015</heading_end>
+			<threshold_lat id="07 ">55.01009562</threshold_lat>
+			<threshold_lon id="07 ">82.62276367</threshold_lon>
+			<threshold_lat_end id="25 ">55.01515038</threshold_lat_end>
+			<threshold_lon_end id="25 ">82.67854833</threshold_lon_end>
+		</runway>
+		<runway end="25R" id="07L">
+			<linecode>100</linecode>
+			<width>92.66</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.75</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07L</number>
+			<latitude>55.01130184</latitude>
+			<longitude>082.62815920</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25R</number_end>
+			<latitude_end>55.01552216</latitude_end>
+			<longitude_end>082.67478880</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3019.79662591</length-meters>
+			<length-feet>9204.34011576</length-feet>
+			<heading id="07L">81.068627777</heading>
+			<heading_end id="25R">261.030424784</heading_end>
+			<threshold_lat id="07L">55.01130184</threshold_lat>
+			<threshold_lon id="07L">82.6281592</threshold_lon>
+			<threshold_lat_end id="25R">55.01552216</threshold_lat_end>
+			<threshold_lon_end id="25R">82.6747888</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>55.01101785</latitude>
+			<longitude>082.62780417</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>81.0</orientation>
+			<glideslope>2.83</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>55.01419935</latitude>
+			<longitude>082.67316162</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>261.0</orientation>
+			<glideslope>2.67</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>55.00732400</latitude>
+			<longitude>082.66284200</longitude>
+			<height>98</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00761400</latitude>
+			<longitude>082.68492900</longitude>
+			<heading>26.15</heading>
+			<name>E Ramp Mil Cargo 16 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00692700</latitude>
+			<longitude>082.68281600</longitude>
+			<heading>40.30</heading>
+			<name>E Ramp Mil Cargo 5 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00693100</latitude>
+			<longitude>082.68129700</longitude>
+			<heading>40.30</heading>
+			<name>E Ramp Mil Cargo 6 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00708800</latitude>
+			<longitude>082.68509700</longitude>
+			<heading>36.10</heading>
+			<name>E Ramp Mil Combat 15 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00689700</latitude>
+			<longitude>082.65103900</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 34 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00698100</latitude>
+			<longitude>082.65197000</longitude>
+			<heading>51.00</heading>
+			<name>Ramp Cargo 35 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00788900</latitude>
+			<longitude>082.65076400</longitude>
+			<heading>71.01</heading>
+			<name>Ramp Cargo 41 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00713000</latitude>
+			<longitude>082.65345000</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 42 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00717500</latitude>
+			<longitude>082.65393800</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 43 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00722100</latitude>
+			<longitude>082.65443400</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 44 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00726300</latitude>
+			<longitude>082.65493000</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 45 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00730900</latitude>
+			<longitude>082.65542600</longitude>
+			<heading>51.01</heading>
+			<name>Ramp Cargo 46 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00849500</latitude>
+			<longitude>082.66504700</longitude>
+			<heading>71.03</heading>
+			<name>Ramp Cargo 51 (23m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00673700</latitude>
+			<longitude>082.65155800</longitude>
+			<heading>51.00</heading>
+			<name>Ramp Cargo 56 (43m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00883900</latitude>
+			<longitude>082.66914400</longitude>
+			<heading>71.05</heading>
+			<name>Ramp GA Large 0 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00862500</latitude>
+			<longitude>082.66587800</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 1 (28m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00985700</latitude>
+			<longitude>082.66897600</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 10 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00991100</latitude>
+			<longitude>082.66809800</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 11 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00985700</latitude>
+			<longitude>082.66729700</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 12 (36m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00968200</latitude>
+			<longitude>082.66540500</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 13 (42m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00956300</latitude>
+			<longitude>082.66454300</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 14 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00935700</latitude>
+			<longitude>082.66377300</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 15 (30m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00928900</latitude>
+			<longitude>082.66303300</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 16 (23m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00927400</latitude>
+			<longitude>082.66227000</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 17 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00869000</latitude>
+			<longitude>082.66184200</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 18 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00869000</latitude>
+			<longitude>082.66124000</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 19 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00869800</latitude>
+			<longitude>082.66665600</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 2 (28m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00862900</latitude>
+			<longitude>082.66058300</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 20 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00856800</latitude>
+			<longitude>082.65990400</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 21 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00850700</latitude>
+			<longitude>082.65923300</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 22 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00845000</latitude>
+			<longitude>082.65856200</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 23 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00837700</latitude>
+			<longitude>082.65779900</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 24 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00830100</latitude>
+			<longitude>082.65696000</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 25 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00822400</latitude>
+			<longitude>082.65611300</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 26 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00815200</latitude>
+			<longitude>082.65535000</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 27 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00808700</latitude>
+			<longitude>082.65467100</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Large 28 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00875100</latitude>
+			<longitude>082.66730500</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 3 (28m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00877800</latitude>
+			<longitude>082.67009700</longitude>
+			<heading>71.00</heading>
+			<name>Ramp GA Large 36 (24m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00883900</latitude>
+			<longitude>082.67086000</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 37 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00891500</latitude>
+			<longitude>082.67164600</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 38 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00881600</latitude>
+			<longitude>082.66798400</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 4 (28m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00830800</latitude>
+			<longitude>082.66384100</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 49 (23m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.01011300</latitude>
+			<longitude>082.67313400</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 5 (23m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00843000</latitude>
+			<longitude>082.66439800</longitude>
+			<heading>71.03</heading>
+			<name>Ramp GA Large 50 (23m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.01007100</latitude>
+			<longitude>082.67227200</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 6 (27m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.01004400</latitude>
+			<longitude>082.67141000</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 7 (26m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00999800</latitude>
+			<longitude>082.67062400</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 8 (26m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00993300</latitude>
+			<longitude>082.66980000</longitude>
+			<heading>70.98</heading>
+			<name>Ramp GA Large 9 (35m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00792700</latitude>
+			<longitude>082.65402200</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Medium 29 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00787400</latitude>
+			<longitude>082.65343500</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Medium 31 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00787400</latitude>
+			<longitude>082.65289300</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Medium 32 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00787400</latitude>
+			<longitude>082.65235100</longitude>
+			<heading>71.01</heading>
+			<name>Ramp GA Medium 33 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00281500</latitude>
+			<longitude>082.68599700</longitude>
+			<heading>14.95</heading>
+			<name>Ramp Mil Cargo 32 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00307800</latitude>
+			<longitude>082.68643200</longitude>
+			<heading>14.18</heading>
+			<name>Ramp Mil Cargo 33 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00539000</latitude>
+			<longitude>082.69038400</longitude>
+			<heading>13.92</heading>
+			<name>Ramp Mil Cargo 42 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00544700</latitude>
+			<longitude>082.69139900</longitude>
+			<heading>25.41</heading>
+			<name>Ramp Mil Cargo 43 (16m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00815200</latitude>
+			<longitude>082.64872700</longitude>
+			<heading>93.00</heading>
+			<name>Ramp Mil Cargo 58 (32m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00826300</latitude>
+			<longitude>082.64788800</longitude>
+			<heading>93.00</heading>
+			<name>Ramp Mil Cargo 59 (32m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00836900</latitude>
+			<longitude>082.64704100</longitude>
+			<heading>93.00</heading>
+			<name>Ramp Mil Cargo 60 (32m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00847200</latitude>
+			<longitude>082.64621700</longitude>
+			<heading>93.00</heading>
+			<name>Ramp Mil Cargo 61 (32m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00480700</latitude>
+			<longitude>082.68524900</longitude>
+			<heading>68.95</heading>
+			<name>Ramp Mil Cargo 9 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00518000</latitude>
+			<longitude>082.68483000</longitude>
+			<heading>26.24</heading>
+			<name>SE Ramp Cargo 10 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00550800</latitude>
+			<longitude>082.68484500</longitude>
+			<heading>26.20</heading>
+			<name>SE Ramp Mil Cargo 11 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00584000</latitude>
+			<longitude>082.68486000</longitude>
+			<heading>26.20</heading>
+			<name>SE Ramp Mil Cargo 12 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00616100</latitude>
+			<longitude>082.68487500</longitude>
+			<heading>26.20</heading>
+			<name>SE Ramp Mil Cargo 13 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00788900</latitude>
+			<longitude>082.68493700</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 17 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00815200</latitude>
+			<longitude>082.68494400</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 18 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00849500</latitude>
+			<longitude>082.68495200</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 19 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00888800</latitude>
+			<longitude>082.68492900</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 20 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00928500</latitude>
+			<longitude>082.68493700</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 21 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00968900</latitude>
+			<longitude>082.68494400</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 22 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.01015500</latitude>
+			<longitude>082.68495900</longitude>
+			<heading>26.10</heading>
+			<name>SE Ramp Mil Cargo 23 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00639700</latitude>
+			<longitude>082.69031500</longitude>
+			<heading>79.78</heading>
+			<name>SE Ramp Mil Cargo 24 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00609600</latitude>
+			<longitude>082.68978900</longitude>
+			<heading>79.77</heading>
+			<name>SE Ramp Mil Cargo 25 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00579100</latitude>
+			<longitude>082.68927800</longitude>
+			<heading>79.77</heading>
+			<name>SE Ramp Mil Cargo 26 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00552000</latitude>
+			<longitude>082.68880500</longitude>
+			<heading>79.80</heading>
+			<name>SE Ramp Mil Cargo 27 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00524100</latitude>
+			<longitude>082.68831600</longitude>
+			<heading>79.80</heading>
+			<name>SE Ramp Mil Cargo 28 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00494800</latitude>
+			<longitude>082.68782000</longitude>
+			<heading>79.80</heading>
+			<name>SE Ramp Mil Cargo 29 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00466500</latitude>
+			<longitude>082.68734700</longitude>
+			<heading>79.80</heading>
+			<name>SE Ramp Mil Cargo 30 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00256700</latitude>
+			<longitude>082.68554700</longitude>
+			<heading>15.66</heading>
+			<name>SE Ramp Mil Cargo 31 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00333800</latitude>
+			<longitude>082.68688200</longitude>
+			<heading>14.18</heading>
+			<name>SE Ramp Mil Cargo 34 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00359700</latitude>
+			<longitude>082.68730900</longitude>
+			<heading>14.18</heading>
+			<name>SE Ramp Mil Cargo 35 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00385300</latitude>
+			<longitude>082.68776700</longitude>
+			<heading>12.34</heading>
+			<name>SE Ramp Mil Cargo 36 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00410500</latitude>
+			<longitude>082.68821000</longitude>
+			<heading>12.34</heading>
+			<name>SE Ramp Mil Cargo 37 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00436400</latitude>
+			<longitude>082.68862200</longitude>
+			<heading>13.66</heading>
+			<name>SE Ramp Mil Cargo 38 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00462300</latitude>
+			<longitude>082.68905600</longitude>
+			<heading>13.66</heading>
+			<name>SE Ramp Mil Cargo 39 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00696200</latitude>
+			<longitude>082.67969500</longitude>
+			<heading>19.03</heading>
+			<name>SE Ramp Mil Cargo 4 (33m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00487900</latitude>
+			<longitude>082.68949900</longitude>
+			<heading>13.66</heading>
+			<name>SE Ramp Mil Cargo 40 (21m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00514200</latitude>
+			<longitude>082.68991900</longitude>
+			<heading>13.92</heading>
+			<name>SE Ramp Mil Cargo 41 (17m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00150300</latitude>
+			<longitude>082.68281600</longitude>
+			<heading>72.96</heading>
+			<name>SE Ramp Mil Cargo 44 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00189600</latitude>
+			<longitude>082.68345600</longitude>
+			<heading>25.98</heading>
+			<name>SE Ramp Mil Cargo 45 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00033600</latitude>
+			<longitude>082.68270100</longitude>
+			<heading>91.90</heading>
+			<name>SE Ramp Mil Cargo 46 (33m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00693100</latitude>
+			<longitude>082.68051900</longitude>
+			<heading>40.30</heading>
+			<name>SE Ramp Mil Cargo 5 (31m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00692700</latitude>
+			<longitude>082.68204500</longitude>
+			<heading>40.30</heading>
+			<name>SE Ramp Mil Cargo 7 (30m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00851100</latitude>
+			<longitude>082.67452200</longitude>
+			<heading>07.00</heading>
+			<name>SE Ramp Mil Combat 1 (27m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00669900</latitude>
+			<longitude>082.68504300</longitude>
+			<heading>36.09</heading>
+			<name>SE Ramp Mil Combat 14 (20m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00794200</latitude>
+			<longitude>082.67468300</longitude>
+			<heading>07.00</heading>
+			<name>SE Ramp Mil Combat 2 (27m)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.00738900</latitude>
+			<longitude>082.67480500</longitude>
+			<heading>07.00</heading>
+			<name>SE Ramp Mil Combat 3 (27m)</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>55.01629484</latitude>
+			<longitude>082.65067915</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.01078619</latitude>
+			<longitude>082.62165268</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.01240699</latitude>
+			<longitude>082.62638203</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.01445930</latitude>
+			<longitude>082.67965849</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.01441633</latitude>
+			<longitude>082.67656487</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12740">127.4</frequency>
+			<description>NOVOSIBIRSK ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>NOVOSIBIRSK APP</description>
+		</atc>
+	</airport>
+</PropertyList>

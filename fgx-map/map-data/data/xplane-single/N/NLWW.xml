@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="NLWW">
+		<linecode>1</linecode>
+		<elevation>79</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>NLWW</identifier>
+		<name>WALLIS</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>-13.23833674</latitude>
+			<longitude>-176.20897249</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>-13.23830376</latitude_end>
+			<longitude_end>-176.18956201</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2103.71696958</length-meters>
+			<length-feet>6412.12932329</length-feet>
+			<heading id="08 ">89.8984043371</heading>
+			<heading_end id="26 ">269.902849375</heading_end>
+			<threshold_lat id="08 ">-13.23833674</threshold_lat>
+			<threshold_lon id="08 ">-176.20897249</threshold_lon>
+			<threshold_lat_end id="26 ">-13.23830376</threshold_lat_end>
+			<threshold_lon_end id="26 ">-176.18956201</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-13.23877600</latitude>
+			<longitude>-176.19267100</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-13.23787200</latitude>
+			<longitude>-176.20692000</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.9</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-13.24100358</latitude>
+			<longitude>176.19596358</longitude>
+			<height>25</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 6</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-13.24056200</latitude>
+			<longitude>176.19689730</longitude>
+			<heading>87.83</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-13.24058177</latitude>
+			<longitude>176.19626470</longitude>
+			<heading>36.07</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-13.23689976</latitude>
+			<longitude>-176.19927027</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-13.23963779</latitude>
+			<longitude>-176.19654097</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

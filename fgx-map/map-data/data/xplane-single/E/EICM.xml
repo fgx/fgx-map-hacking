@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EICM">
+		<linecode>1</linecode>
+		<elevation>81</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EICM</identifier>
+		<name>Galway</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>53.29878100</latitude>
+			<longitude>-008.95052500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>53.30152158</latitude_end>
+			<longitude_end>-008.93296635</longitude_end>
+			<threshold_end>71.93</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1209.72862551</length-meters>
+			<length-feet>3687.25285055</length-feet>
+			<heading id="08 ">75.4036683867</heading>
+			<heading_end id="26 ">255.389590261</heading_end>
+			<threshold_lat id="08 ">53.298781</threshold_lat>
+			<threshold_lon id="08 ">-8.950525</threshold_lon>
+			<threshold_lat_end id="26 ">53.3013585448</threshold_lat_end>
+			<threshold_lon_end id="26 ">-8.93401037661</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>53.29942103</latitude>
+			<longitude>-008.94883443</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>75.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>53.30041353</latitude>
+			<longitude>-008.93740884</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>255.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.30164919</latitude>
+			<longitude>008.94148145</longitude>
+			<height>26</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.30130427</latitude>
+			<longitude>008.94152236</longitude>
+			<heading>61.00</heading>
+			<name>Stand 11</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.30164919</latitude>
+			<longitude>-008.94148145</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.30087936</latitude>
+			<longitude>-008.94287425</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12182">121.82</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12182">121.82</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12250">122.5</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LTCJ">
+		<linecode>1</linecode>
+		<elevation>1822</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LTCJ</identifier>
+		<name>BATMAN</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>37.91658600</latitude>
+			<longitude>041.10907500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>150.88</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>37.94135300</latitude_end>
+			<longitude_end>041.12409400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>150.88</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3049.6916398</length-meters>
+			<length-feet>9295.4601181</length-feet>
+			<heading id="02 ">25.6608518883</heading>
+			<heading_end id="20 ">205.651619948</heading_end>
+			<threshold_lat id="02 ">37.916586</threshold_lat>
+			<threshold_lon id="02 ">41.109075</threshold_lon>
+			<threshold_lat_end id="20 ">37.941353</threshold_lat_end>
+			<threshold_lon_end id="20 ">41.124094</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>37.91837225</latitude>
+			<longitude>041.10962849</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>25.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>37.93956681</latitude>
+			<longitude>041.12353995</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>205.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.92959005</latitude>
+			<longitude>041.11493419</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.91648107</latitude>
+			<longitude>041.10814423</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.94145781</latitude>
+			<longitude>041.12502511</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12195">121.95</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>DIYARBAKIR APP</description>
+		</atc>
+	</airport>
+</PropertyList>

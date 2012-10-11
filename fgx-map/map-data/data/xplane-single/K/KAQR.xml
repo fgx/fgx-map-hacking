@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAQR">
+		<linecode>1</linecode>
+		<elevation>590</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KAQR</identifier>
+		<name>ATOKA MUNI</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>12.19</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>34.40248100</latitude>
+			<longitude>-096.14795600</longitude>
+			<threshold>60.05</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>34.39419700</latitude_end>
+			<longitude_end>-096.14816700</longitude_end>
+			<threshold_end>71.02</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>919.14561004</length-meters>
+			<length-feet>2801.5558194</length-feet>
+			<heading id="18 ">-178.790545322</heading>
+			<heading_end id="36 ">361.209573881</heading_end>
+			<threshold_lat id="18 ">34.4019397866</threshold_lat>
+			<threshold_lon id="18 ">-96.1479697851</threshold_lon>
+			<threshold_lat_end id="36 ">34.3948370836</threshold_lat_end>
+			<threshold_lon_end id="36 ">-96.1481506965</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.39833194</latitude>
+			<longitude>-096.14759618</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.40258723</latitude>
+			<longitude>-096.14775379</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.39409077</latitude>
+			<longitude>-096.14836919</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12112">121.12</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

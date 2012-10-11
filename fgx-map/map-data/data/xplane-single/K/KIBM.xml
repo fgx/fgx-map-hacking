@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KIBM">
+		<linecode>1</linecode>
+		<elevation>4926</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KIBM</identifier>
+		<name>KIMBALL MUNI ROBERT E ARRAJ FLD</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>41.19022706</latitude>
+			<longitude>-103.68821385</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>41.18589144</latitude_end>
+			<longitude_end>-103.66640851</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1891.67835432</length-meters>
+			<length-feet>5765.83562395</length-feet>
+			<heading id="10 ">104.753368425</heading>
+			<heading_end id="28 ">284.739008896</heading_end>
+			<threshold_lat id="10 ">41.19022706</threshold_lat>
+			<threshold_lon id="10 ">-103.68821385</threshold_lon>
+			<threshold_lat_end id="28 ">41.18589144</threshold_lat_end>
+			<threshold_lon_end id="28 ">-103.66640851</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>41.18609700</latitude>
+			<longitude>-103.66912000</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>284.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>41.18988500</latitude>
+			<longitude>-103.68509400</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>104.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>41.19131753</latitude>
+			<longitude>103.67187942</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 13</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.19126382</latitude>
+			<longitude>103.67217786</longitude>
+			<heading>29.00</heading>
+			<name>New Ramp Start 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.19189450</latitude>
+			<longitude>103.67177751</longitude>
+			<heading>52.68</heading>
+			<name>New Ramp Start 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.18875572</latitude>
+			<longitude>-103.67706963</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.18944709</latitude>
+			<longitude>-103.67113371</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 10</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11807">118.07</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

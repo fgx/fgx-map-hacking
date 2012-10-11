@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDMO">
+		<linecode>1</linecode>
+		<elevation>1947</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDMO</identifier>
+		<name>Oberpfaffenhofen</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>48.07403600</latitude>
+			<longitude>011.27306400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>70.41</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>48.08920300</latitude_end>
+			<longitude_end>011.29377200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2285.75032387</length-meters>
+			<length-feet>6966.96698716</length-feet>
+			<heading id="04 ">42.4625763045</heading>
+			<heading_end id="22 ">222.447167538</heading_end>
+			<threshold_lat id="04 ">48.074036</threshold_lat>
+			<threshold_lon id="04 ">11.273064</threshold_lon>
+			<threshold_lat_end id="22 ">48.089203</threshold_lat_end>
+			<threshold_lon_end id="22 ">11.293772</threshold_lon_end>
+		</runway>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>48.08668223</latitude>
+			<longitude>011.29113865</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>222.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.08952700</latitude>
+			<longitude>011.27136200</longitude>
+			<height>110</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.08216900</latitude>
+			<longitude>011.28252000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.07458500</latitude>
+			<longitude>011.27216800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.08865700</latitude>
+			<longitude>011.29467100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12695">126.95</frequency>
+			<description>MUNCHEN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11955">119.55</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12795">127.95</frequency>
+			<description>MUNCHEN RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12077">120.77</frequency>
+			<description>MUNCHEN ARR</description>
+		</atc>
+	</airport>
+</PropertyList>

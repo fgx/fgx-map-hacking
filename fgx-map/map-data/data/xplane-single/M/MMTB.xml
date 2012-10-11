@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMTB">
+		<linecode>1</linecode>
+		<elevation>1909</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMTB</identifier>
+		<name>GENERAL DIV P A ANGEL H CORZO MOLINA</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>41.15</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>16.74965300</latitude>
+			<longitude>-093.17345000</longitude>
+			<threshold>56.39</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>16.73018300</latitude_end>
+			<longitude_end>-093.17314200</longitude_end>
+			<threshold_end>60.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2154.92613666</length-meters>
+			<length-feet>6568.21486453</length-feet>
+			<heading id="17 ">179.126783972</heading>
+			<heading_end id="35 ">359.12669526</heading_end>
+			<threshold_lat id="17 ">16.7491435105</threshold_lat>
+			<threshold_lon id="17 ">-93.1734419403</threshold_lon>
+			<threshold_lat_end id="35 ">16.730733781</threshold_lat_end>
+			<threshold_lon_end id="35 ">-93.1731507129</threshold_lon_end>
+		</runway>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>16.73252538</latitude>
+			<longitude>-093.17357918</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>359.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.75003165</latitude>
+			<longitude>-093.17287729</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.72980435</latitude>
+			<longitude>-093.17371464</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11845">118.45</frequency>
+			<description>TUXTLA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TUXTLA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENNM">
+		<linecode>1</linecode>
+		<elevation>7</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENNM</identifier>
+		<name>Namsos</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="2">Concrete shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>64.47122746</latitude>
+			<longitude>011.57015630</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>64.47333654</latitude_end>
+			<longitude_end>011.58700170</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>843.757781143</length-meters>
+			<length-feet>2571.77371692</length-feet>
+			<heading id="07 ">73.8267601826</heading>
+			<heading_end id="25 ">253.811559283</heading_end>
+			<threshold_lat id="07 ">64.47122746</threshold_lat>
+			<threshold_lon id="07 ">11.5701563</threshold_lon>
+			<threshold_lat_end id="25 ">64.47333654</threshold_lat_end>
+			<threshold_lon_end id="25 ">11.5870017</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>64.47202308</latitude>
+			<longitude>011.57396887</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>73.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>64.47254135</latitude>
+			<longitude>011.58318835</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>253.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>64.47236600</latitude>
+			<longitude>011.57083900</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>64.47210700</latitude>
+			<longitude>011.57118200</longitude>
+			<heading>50.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>64.47301500</latitude>
+			<longitude>011.57995700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.47203800</latitude>
+			<longitude>011.57148500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.47295400</latitude>
+			<longitude>011.58907500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

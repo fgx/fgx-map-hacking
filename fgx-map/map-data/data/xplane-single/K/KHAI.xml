@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KHAI">
+		<linecode>1</linecode>
+		<elevation>824</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KHAI</identifier>
+		<name>THREE RIVERS MUNI DR HAINES</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>41.96043600</latitude>
+			<longitude>-085.60122800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>41.96048900</latitude_end>
+			<longitude_end>-085.58651900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.4201487</length-meters>
+			<length-feet>3716.79261325</length-feet>
+			<heading id="09 ">89.7283165505</heading>
+			<heading_end id="27 ">269.718481854</heading_end>
+			<threshold_lat id="09 ">41.960436</threshold_lat>
+			<threshold_lon id="09 ">-85.601228</threshold_lon>
+			<threshold_lat_end id="27 ">41.960489</threshold_lat_end>
+			<threshold_lon_end id="27 ">-85.586519</threshold_lon_end>
+		</runway>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>41.95602800</latitude>
+			<longitude>-085.59538900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>76.20</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>41.96133300</latitude_end>
+			<longitude_end>-085.58835300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>121.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>829.131777984</length-meters>
+			<length-feet>2527.19365929</length-feet>
+			<heading id="05 ">44.7128551582</heading>
+			<heading_end id="23 ">224.708150927</heading_end>
+			<threshold_lat id="05 ">41.956028</threshold_lat>
+			<threshold_lon id="05 ">-85.595389</threshold_lon>
+			<threshold_lat_end id="23 ">41.961333</threshold_lat_end>
+			<threshold_lon_end id="23 ">-85.588353</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>41.96074572</latitude>
+			<longitude>-085.59880959</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>41.96017959</latitude>
+			<longitude>-085.58893748</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.96118161</latitude>
+			<longitude>-085.59388118</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.95608416</latitude>
+			<longitude>-085.59578076</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.96074220</latitude>
+			<longitude>-085.60150669</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.96127681</latitude>
+			<longitude>-085.58796122</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.96018277</latitude>
+			<longitude>-085.58624038</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11997">119.97</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>KALAMAZOO APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

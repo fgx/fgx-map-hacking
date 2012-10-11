@@ -1,0 +1,220 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ESIB">
+		<linecode>1</linecode>
+		<elevation>181</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ESIB</identifier>
+		<name>Satenas</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>58.41816400</latitude>
+			<longitude>012.70966700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>58.43842500</latitude_end>
+			<longitude_end>012.71276100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2264.00311228</length-meters>
+			<length-feet>6900.68148622</length-feet>
+			<heading id="01 ">4.58092511575</heading>
+			<heading_end id="19 ">184.578289072</heading_end>
+			<threshold_lat id="01 ">58.418164</threshold_lat>
+			<threshold_lon id="01 ">12.709667</threshold_lon>
+			<threshold_lat_end id="19 ">58.438425</threshold_lat_end>
+			<threshold_lon_end id="19 ">12.712761</threshold_lon_end>
+		</runway>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>58.43311100</latitude>
+			<longitude>012.69472200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>58.42663900</latitude_end>
+			<longitude_end>012.72542200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1933.02190697</length-meters>
+			<length-feet>5891.85077245</length-feet>
+			<heading id="11 ">111.909609969</heading>
+			<heading_end id="29 ">291.883453568</heading_end>
+			<threshold_lat id="11 ">58.433111</threshold_lat>
+			<threshold_lon id="11 ">12.694722</threshold_lon>
+			<threshold_lat_end id="29 ">58.426639</threshold_lat_end>
+			<threshold_lon_end id="29 ">12.725422</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>58.41998822</latitude>
+			<longitude>012.70922198</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>4.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>58.43278944</latitude>
+			<longitude>012.69818090</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>111.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>58.43580579</latitude>
+			<longitude>012.71308456</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>184.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>58.42696139</latitude>
+			<longitude>012.72196401</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>291.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>58.44054400</latitude>
+			<longitude>012.70262100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>58.43920900</latitude>
+			<longitude>012.70662300</longitude>
+			<heading>93.00</heading>
+			<name>ESIB fighter ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>58.43563100</latitude>
+			<longitude>012.69650100</longitude>
+			<heading>14.00</heading>
+			<name>ESIB fighter ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>58.43145400</latitude>
+			<longitude>012.71779600</longitude>
+			<heading>0.00</heading>
+			<name>ESIB SAR helicopter ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>58.43482600</latitude>
+			<longitude>012.71875300</longitude>
+			<heading>00.00</heading>
+			<name>ESIB transport ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>58.42835200</latitude>
+			<longitude>012.70984600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.41822100</latitude>
+			<longitude>012.70829900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.43837000</latitude>
+			<longitude>012.71413000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.43377700</latitude>
+			<longitude>012.69523300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.42597200</latitude>
+			<longitude>012.72490800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="13430">134.3</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12820">128.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13455">134.55</frequency>
+			<description>CON</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CON</description>
+		</atc>
+	</airport>
+</PropertyList>

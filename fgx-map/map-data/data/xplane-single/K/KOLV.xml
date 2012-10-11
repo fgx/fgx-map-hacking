@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KOLV">
+		<linecode>1</linecode>
+		<elevation>402</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KOLV</identifier>
+		<name>OLIVE BRANCH</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>34.98699400</latitude>
+			<longitude>-089.78693100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>34.97051100</latitude_end>
+			<longitude_end>-089.78676900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1828.68690787</length-meters>
+			<length-feet>5573.83769519</length-feet>
+			<heading id="18 ">179.53656777</heading>
+			<heading_end id="36 ">359.5364749</heading_end>
+			<threshold_lat id="18 ">34.986994</threshold_lat>
+			<threshold_lon id="18 ">-89.786931</threshold_lon>
+			<threshold_lat_end id="36 ">34.970511</threshold_lat_end>
+			<threshold_lon_end id="36 ">-89.786769</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>34.98425359</latitude>
+			<longitude>-089.78652796</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>179.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>34.98431347</latitude>
+			<longitude>-089.78652855</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>179.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>34.97230831</latitude>
+			<longitude>-089.78716271</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>359.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.97876208</latitude>
+			<longitude>-089.78567835</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.98727160</latitude>
+			<longitude>-089.78643151</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.97023340</latitude>
+			<longitude>-089.78726839</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11992">119.92</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11992">119.92</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12527">125.27</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12527">125.27</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12580">125.8</frequency>
+			<description>MEMPHIS APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12415">124.15</frequency>
+			<description>MEMPHIS DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

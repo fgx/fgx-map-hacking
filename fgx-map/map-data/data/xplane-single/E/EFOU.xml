@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EFOU">
+		<linecode>1</linecode>
+		<elevation>47</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EFOU</identifier>
+		<name>Oulu</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>64.93583600</latitude>
+			<longitude>025.33189400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>64.92428100</latitude_end>
+			<longitude_end>025.37722500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2501.37145783</length-meters>
+			<length-feet>7624.18020347</length-feet>
+			<heading id="12 ">121.02008413</heading>
+			<heading_end id="30 ">300.979023707</heading_end>
+			<threshold_lat id="12 ">64.935836</threshold_lat>
+			<threshold_lon id="12 ">25.331894</threshold_lon>
+			<threshold_lat_end id="30 ">64.924281</threshold_lat_end>
+			<threshold_lon_end id="30 ">25.377225</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>64.93485811</latitude>
+			<longitude>025.33787938</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>121.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>64.92480828</latitude>
+			<longitude>025.37301694</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>301.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>64.92979400</latitude>
+			<longitude>025.37160500</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>64.93010700</latitude>
+			<longitude>025.36780700</longitude>
+			<heading>41.00</heading>
+			<name>Business</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>64.92781800</latitude>
+			<longitude>025.37425000</longitude>
+			<heading>01.00</heading>
+			<name>Commercial</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>64.93199900</latitude>
+			<longitude>025.36829000</longitude>
+			<heading>41.00</heading>
+			<name>GA</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>64.93098400</latitude>
+			<longitude>025.35587100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.93676000</latitude>
+			<longitude>025.33320400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.92335500</latitude>
+			<longitude>025.37590400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13544">135.44</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13545">135.45</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12440">124.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

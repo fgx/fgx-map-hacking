@@ -1,0 +1,216 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KRIL">
+		<linecode>1</linecode>
+		<elevation>5544</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KRIL</identifier>
+		<name>Garfield Co Rgnl</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>39.52679200</latitude>
+			<longitude>-107.73933100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>39.52583600</latitude_end>
+			<longitude_end>-107.71455000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>121.92</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2133.33661816</length-meters>
+			<length-feet>6502.41001215</length-feet>
+			<heading id="08 ">92.8597140231</heading>
+			<heading_end id="26 ">272.843942588</heading_end>
+			<threshold_lat id="08 ">39.526792</threshold_lat>
+			<threshold_lon id="08 ">-107.739331</threshold_lon>
+			<threshold_lat_end id="26 ">39.525836</threshold_lat_end>
+			<threshold_lon_end id="26 ">-107.71455</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>39.52709338</latitude>
+			<longitude>-107.73733147</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>92.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>39.52555085</latitude>
+			<longitude>-107.71665613</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>272.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>39.52731300</latitude>
+			<longitude>107.72694400</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.52366672</latitude>
+			<longitude>107.72092539</longitude>
+			<heading>83.00</heading>
+			<name>GA Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.52508021</latitude>
+			<longitude>107.71469881</longitude>
+			<heading>3.65</heading>
+			<name>Hold Short Rwy 26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.52604703</latitude>
+			<longitude>107.73926018</longitude>
+			<heading>37.60</heading>
+			<name>Hold Short Rwy 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.52377734</latitude>
+			<longitude>107.72339958</longitude>
+			<heading>83.00</heading>
+			<name>Rifle Jet Center</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.52188791</latitude>
+			<longitude>-107.72703424</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.52515107</latitude>
+			<longitude>-107.71431613</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.52455938</latitude>
+			<longitude>-107.72695490</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.52603625</latitude>
+			<longitude>-107.73264768</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52615455</latitude>
+			<longitude>-107.73941302</longitude>
+			<orientation>2.90</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A1{@R}8-26{@@,@Y,safety}{@L}A1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52610207</latitude>
+			<longitude>-107.73807242</longitude>
+			<orientation>4.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A2{@R}8-26{@@,@Y,safety}{@L}A2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52591938</latitude>
+			<longitude>-107.73339610</longitude>
+			<orientation>4.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A3{@R}8-26{@@,@Y,safety}{@L}A3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52558842</latitude>
+			<longitude>-107.72502550</longitude>
+			<orientation>4.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A4{@R}8-26{@@,@Y,safety}{@L}A4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52548464</latitude>
+			<longitude>-107.72231540</longitude>
+			<orientation>4.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A5{@R}8-26{@@,@Y,safety}{@L}A5</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52520914</latitude>
+			<longitude>-107.71489903</longitude>
+			<orientation>4.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A6{@R}8-26{@@,@Y,safety}{@L}A6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52484774</latitude>
+			<longitude>-107.72244831</longitude>
+			<orientation>2.90</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}8_|_26{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>39.52498965</latitude>
+			<longitude>-107.72513639</longitude>
+			<orientation>2.90</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}8_|_26{^r}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13527">135.27</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

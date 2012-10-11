@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMDT">
+		<linecode>1</linecode>
+		<elevation>310</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMDT</identifier>
+		<name>HARRISBURG INTL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>40.19937500</latitude>
+			<longitude>-076.77860000</longitude>
+			<threshold>302.67</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>40.18700600</latitude_end>
+			<longitude_end>-076.74663900</longitude_end>
+			<threshold_end>302.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3048.48167586</length-meters>
+			<length-feet>9291.77214802</length-feet>
+			<heading id="13 ">116.788023984</heading>
+			<heading_end id="31 ">296.767397412</heading_end>
+			<threshold_lat id="13 ">40.1981464575</threshold_lat>
+			<threshold_lon id="13 ">-76.7754267937</threshold_lon>
+			<threshold_lat_end id="31 ">40.1882347986</threshold_lat_end>
+			<threshold_lon_end id="31 ">-76.7498154661</threshold_lon_end>
+		</runway>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>40.18905944</latitude>
+			<longitude>-076.75330966</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.19490672</latitude>
+			<longitude>-076.76148371</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.20035697</latitude>
+			<longitude>-076.77875404</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.18602399</latitude>
+			<longitude>-076.74648546</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12480">124.8</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11825">118.25</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12245">122.45</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12410">124.1</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12645">126.45</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

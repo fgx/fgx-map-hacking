@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WIPP">
+		<linecode>1</linecode>
+		<elevation>37</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WIPP</identifier>
+		<name>Palembang Sultan Mahmud Badaruddin II</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-02.89387500</latitude>
+			<longitude>104.68953100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-02.90262500</latitude_end>
+			<longitude_end>104.71027200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2500.70595879</length-meters>
+			<length-feet>7622.1517624</length-feet>
+			<heading id="11 ">112.761882064</heading>
+			<heading_end id="29 ">292.762930779</heading_end>
+			<threshold_lat id="11 ">-2.893875</threshold_lat>
+			<threshold_lon id="11 ">104.689531</threshold_lon>
+			<threshold_lat_end id="29 ">-2.902625</threshold_lat_end>
+			<threshold_lon_end id="29 ">104.710272</threshold_lon_end>
+		</runway>
+		<runway end="29R" id="11L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11L</number>
+			<latitude>-02.89341912</latitude>
+			<longitude>104.69270229</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29R</number_end>
+			<latitude_end>-02.90072288</latitude_end>
+			<longitude_end>104.71035771</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2122.55265142</length-meters>
+			<length-feet>6469.54048152</length-feet>
+			<heading id="11L">112.364135149</heading>
+			<heading_end id="29R">292.365027487</heading_end>
+			<threshold_lat id="11L">-2.89341912</threshold_lat>
+			<threshold_lon id="11L">104.69270229</threshold_lon>
+			<threshold_lat_end id="29R">-2.90072288</threshold_lat_end>
+			<threshold_lon_end id="29R">104.71035771</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>-02.89420601</latitude>
+			<longitude>104.69134734</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>112.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="11L">
+			<linecode>21</linecode>
+			<latitude>-02.89376241</latitude>
+			<longitude>104.69451055</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>112.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>-02.90184220</latitude>
+			<longitude>104.70738462</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>292.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29R">
+			<linecode>21</linecode>
+			<latitude>-02.90037962</latitude>
+			<longitude>104.70854943</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>292.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29R</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-02.89342500</latitude>
+			<longitude>104.70274400</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.89450200</latitude>
+			<longitude>104.70351400</longitude>
+			<heading>00.00</heading>
+			<name>Platform</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.89575829</latitude>
+			<longitude>104.70207441</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.89266900</latitude>
+			<longitude>104.69301600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.90147200</latitude>
+			<longitude>104.71004500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>MAHMUD TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>PALEMBANG APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12040">120.4</frequency>
+			<description>PALEMBANG APP</description>
+		</atc>
+	</airport>
+</PropertyList>

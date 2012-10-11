@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KDMW">
+		<linecode>1</linecode>
+		<elevation>789</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KDMW</identifier>
+		<name>CARROLL CO RGNL JACK B POAGE FLD</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>39.61421700</latitude>
+			<longitude>-077.01245000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>39.60233900</latitude_end>
+			<longitude_end>-077.00286400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1554.64183473</length-meters>
+			<length-feet>4738.54831226</length-feet>
+			<heading id="16 ">148.028728973</heading>
+			<heading_end id="34 ">328.022617559</heading_end>
+			<threshold_lat id="16 ">39.614217</threshold_lat>
+			<threshold_lon id="16 ">-77.01245</threshold_lon>
+			<threshold_lat_end id="34 ">39.602339</threshold_lat_end>
+			<threshold_lon_end id="34 ">-77.002864</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>39.61286553</latitude>
+			<longitude>-077.01084681</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>148.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>39.60369060</latitude>
+			<longitude>-077.00446674</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>328.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.60878644</latitude>
+			<longitude>-077.00659899</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.61466721</latitude>
+			<longitude>-077.01218447</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.60188882</latitude>
+			<longitude>-077.00312955</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12125">121.25</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12675">126.75</frequency>
+			<description>POTOMAC APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

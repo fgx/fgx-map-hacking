@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EYKA">
+		<linecode>1</linecode>
+		<elevation>256</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EYKA</identifier>
+		<name>Kaunas Intl</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>54.96266700</latitude>
+			<longitude>024.05948900</longitude>
+			<threshold>340.16</threshold>
+			<overrrun>73.15</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>54.96509400</latitude_end>
+			<longitude_end>024.10851400</longitude_end>
+			<threshold_end>240.49</threshold_end>
+			<overrrun_end>73.15</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3151.73169937</length-meters>
+			<length-feet>9606.47821967</length-feet>
+			<heading id="08 ">85.1023838341</heading>
+			<heading_end id="26 ">265.062242639</heading_end>
+			<threshold_lat id="08 ">54.9629277597</threshold_lat>
+			<threshold_lon id="08 ">24.0647802025</threshold_lon>
+			<threshold_lat_end id="26 ">54.9649079986</threshold_lat_end>
+			<threshold_lon_end id="26 ">24.1047732099</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>54.96690300</latitude>
+			<longitude>024.07696100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.96524800</latitude>
+			<longitude>024.07385600</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.96438800</latitude>
+			<longitude>024.07718300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.96193700</latitude>
+			<longitude>024.06454200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.96575700</latitude>
+			<longitude>024.10346200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12420">124.2</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

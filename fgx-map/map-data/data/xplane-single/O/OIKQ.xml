@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OIKQ">
+		<linecode>1</linecode>
+		<elevation>45</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OIKQ</identifier>
+		<name>DAYRESTAN</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>26.74225600</latitude>
+			<longitude>055.88620000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>137.16</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>26.76702200</latitude_end>
+			<longitude_end>055.91850800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>137.16</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4225.81166432</length-meters>
+			<length-feet>12880.2739529</length-feet>
+			<heading id="05 ">49.5140568473</heading>
+			<heading_end id="23 ">229.49951273</heading_end>
+			<threshold_lat id="05 ">26.742256</threshold_lat>
+			<threshold_lon id="05 ">55.8862</threshold_lon>
+			<threshold_lat_end id="23 ">26.767022</threshold_lat_end>
+			<threshold_lon_end id="23 ">55.918508</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>26.74373274</latitude>
+			<longitude>055.88743656</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>49.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>26.76554553</latitude>
+			<longitude>055.91727075</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>229.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>26.75571759</latitude>
+			<longitude>055.90131227</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.74245352</latitude>
+			<longitude>055.88541090</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.76682430</latitude>
+			<longitude>055.91929721</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12165">121.65</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11805">118.05</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

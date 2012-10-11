@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LEBG">
+		<linecode>1</linecode>
+		<elevation>2962</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LEBG</identifier>
+		<name>Burgos</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>42.35049131</latitude>
+			<longitude>-003.62239128</longitude>
+			<threshold>359.97</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>42.36329847</latitude_end>
+			<longitude_end>-003.60605039</longitude_end>
+			<threshold_end>406.91</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1958.64232364</length-meters>
+			<length-feet>5969.94180247</length-feet>
+			<heading id="04 ">43.4258426065</heading>
+			<heading_end id="22 ">223.414832987</heading_end>
+			<threshold_lat id="04 ">42.3528448287</threshold_lat>
+			<threshold_lon id="04 ">-3.6193879498</threshold_lon>
+			<threshold_lat_end id="22 ">42.3606374793</threshold_lat_end>
+			<threshold_lon_end id="22 ">-3.60944508382</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H2</designator>
+			<latitude>42.35474012</latitude>
+			<longitude>-003.62112445</longitude>
+			<orientation>312.54</orientation>
+			<width>35.05</width>
+			<length>35.05</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H4</designator>
+			<latitude>42.35501162</latitude>
+			<longitude>-003.63280479</longitude>
+			<orientation>306.76</orientation>
+			<width>17.98</width>
+			<length>17.98</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>42.35386439</latitude>
+			<longitude>-003.61676182</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>39.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>42.35844139</latitude>
+			<longitude>-003.61134269</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>229.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>42.35775913</latitude>
+			<longitude>003.61815785</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 1</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.35597300</latitude>
+			<longitude>003.63245700</longitude>
+			<heading>60.00</heading>
+			<name>general aviation 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.35619700</latitude>
+			<longitude>003.63175900</longitude>
+			<heading>30.00</heading>
+			<name>parking 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.35631700</latitude>
+			<longitude>003.63143300</longitude>
+			<heading>30.00</heading>
+			<name>parking 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.35840632</latitude>
+			<longitude>-003.62148233</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.35208680</latitude>
+			<longitude>-003.61937442</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 3</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.36210681</latitude>
+			<longitude>-003.60975148</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.35513500</latitude>
+			<longitude>-003.62978000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12178">121.78</frequency>
+			<description>GMC</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11893">118.93</frequency>
+			<description>twr</description>
+		</atc>
+	</airport>
+</PropertyList>

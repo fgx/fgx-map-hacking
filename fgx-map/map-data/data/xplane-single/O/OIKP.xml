@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OIKP">
+		<linecode>1</linecode>
+		<elevation>19</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OIKP</identifier>
+		<name>HAVADARYA</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>27.15600800</latitude>
+			<longitude>056.15925300</longitude>
+			<threshold>151.79</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>27.16055000</latitude_end>
+			<longitude_end>056.18497200</longitude_end>
+			<threshold_end>156.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2598.35940914</length-meters>
+			<length-feet>7919.79947905</length-feet>
+			<heading id="08 ">78.8375573683</heading>
+			<heading_end id="26 ">258.825817926</heading_end>
+			<threshold_lat id="08 ">27.1562731872</threshold_lat>
+			<threshold_lon id="08 ">56.1607554466</threshold_lon>
+			<threshold_lat_end id="26 ">27.1602754615</threshold_lat_end>
+			<threshold_lon_end id="26 ">56.1834182883</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>27.15697356</latitude>
+			<longitude>056.16266505</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>78.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>27.15957598</latitude>
+			<longitude>056.18150818</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>258.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>27.15936139</latitude>
+			<longitude>056.17186862</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.15640932</latitude>
+			<longitude>056.15880199</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.16014861</latitude>
+			<longitude>056.18542294</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12215">122.15</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12315">123.15</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

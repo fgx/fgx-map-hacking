@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PAVA">
+		<linecode>1</linecode>
+		<elevation>75</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PAVA</identifier>
+		<name>CHEVAK</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>61.53723600</latitude>
+			<longitude>-165.58678900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>48.77</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>61.53045300</latitude_end>
+			<longitude_end>-165.58095600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>45.72</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>817.095536973</length-meters>
+			<length-feet>2490.50719669</length-feet>
+			<heading id="14 ">157.683879409</heading>
+			<heading_end id="32 ">337.678751625</heading_end>
+			<threshold_lat id="14 ">61.537236</threshold_lat>
+			<threshold_lon id="14 ">-165.586789</threshold_lon>
+			<threshold_lat_end id="32 ">61.530453</threshold_lat_end>
+			<threshold_lon_end id="32 ">-165.580956</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>61.53402729</latitude>
+			<longitude>-165.58294059</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.53744093</latitude>
+			<longitude>-165.58649875</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.53024809</latitude>
+			<longitude>-165.58124622</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCQA">
+		<linecode>1</linecode>
+		<elevation>894</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KCQA</identifier>
+		<name>LAKEFIELD</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>40.48341700</latitude>
+			<longitude>-084.56686900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>40.48475000</latitude_end>
+			<longitude_end>-084.55334200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1156.43684442</length-meters>
+			<length-feet>3524.8195018</length-feet>
+			<heading id="08 ">82.6504724179</heading>
+			<heading_end id="26 ">262.641690192</heading_end>
+			<threshold_lat id="08 ">40.483417</threshold_lat>
+			<threshold_lon id="08 ">-84.566869</threshold_lon>
+			<threshold_lat_end id="26 ">40.48475</threshold_lat_end>
+			<threshold_lon_end id="26 ">-84.553342</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>40.48394675</latitude>
+			<longitude>-084.56457311</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>82.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>40.48496798</latitude>
+			<longitude>084.56454763</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.48468157</latitude>
+			<longitude>084.56450930</longitude>
+			<heading>80.00</heading>
+			<name>Hanger 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.48484696</latitude>
+			<longitude>084.56261511</longitude>
+			<heading>73.00</heading>
+			<name>Hanger 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.48544765</latitude>
+			<longitude>084.56236010</longitude>
+			<heading>90.00</heading>
+			<name>Hanger 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.48496172</latitude>
+			<longitude>084.56378751</longitude>
+			<heading>90.00</heading>
+			<name>Parking 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.48483743</latitude>
+			<longitude>084.56378735</longitude>
+			<heading>90.00</heading>
+			<name>Parking 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.48421677</latitude>
+			<longitude>-084.56439142</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.48428576</latitude>
+			<longitude>-084.56330804</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13445">134.45</frequency>
+			<description>DAYTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

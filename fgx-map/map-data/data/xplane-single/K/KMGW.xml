@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMGW">
+		<linecode>1</linecode>
+		<elevation>1248</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMGW</identifier>
+		<name>MORGANTOWN MUNI WALTER L BILL HART FLD</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>39.65066900</latitude>
+			<longitude>-079.91876900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>39.63652500</latitude_end>
+			<longitude_end>-079.91632500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1584.32740527</length-meters>
+			<length-feet>4829.02993127</length-feet>
+			<heading id="18 ">172.391799178</heading>
+			<heading_end id="36 ">352.390239881</heading_end>
+			<threshold_lat id="18 ">39.650669</threshold_lat>
+			<threshold_lon id="18 ">-79.918769</threshold_lon>
+			<threshold_lat_end id="36 ">39.636525</threshold_lat_end>
+			<threshold_lon_end id="36 ">-79.916325</threshold_lon_end>
+		</runway>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>39.63892200</latitude>
+			<longitude>-079.91746700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>39.64430800</latitude_end>
+			<longitude_end>-079.91053300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>843.722383576</length-meters>
+			<length-feet>2571.66582514</length-feet>
+			<heading id="05 ">44.8682122376</heading>
+			<heading_end id="23 ">224.86378846</heading_end>
+			<threshold_lat id="05 ">39.638922</threshold_lat>
+			<threshold_lon id="05 ">-79.917467</threshold_lon>
+			<threshold_lat_end id="23 ">39.644308</threshold_lat_end>
+			<threshold_lon_end id="23 ">-79.910533</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>39.64773237</latitude>
+			<longitude>-079.91773253</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>172.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>39.63825945</latitude>
+			<longitude>-079.91711813</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>352.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.64378953</latitude>
+			<longitude>-079.91569339</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.63899218</latitude>
+			<longitude>-079.91793839</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.65115826</latitude>
+			<longitude>-079.91804492</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.64423779</latitude>
+			<longitude>-079.91006158</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.63603576</latitude>
+			<longitude>-079.91704894</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12067">120.67</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12510">125.1</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12510">125.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12115">121.15</frequency>
+			<description>CLARKSBURG APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

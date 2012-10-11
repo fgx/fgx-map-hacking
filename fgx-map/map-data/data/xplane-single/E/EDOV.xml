@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDOV">
+		<linecode>1</linecode>
+		<elevation>184</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EDOV</identifier>
+		<name>STENDAL BORSTEL</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>52.12</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>52.62781400</latitude>
+			<longitude>011.80535000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>52.62984700</latitude_end>
+			<longitude_end>011.83465300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1997.00738148</length-meters>
+			<length-feet>6086.87849875</length-feet>
+			<heading id="08 ">83.5069342692</heading>
+			<heading_end id="26 ">263.483646585</heading_end>
+			<threshold_lat id="08 ">52.627814</threshold_lat>
+			<threshold_lon id="08 ">11.80535</threshold_lon>
+			<threshold_lat_end id="26 ">52.629847</threshold_lat_end>
+			<threshold_lon_end id="26 ">11.834653</threshold_lon_end>
+		</runway>
+		<runway end="26R" id="08L">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08L</number>
+			<latitude>52.62874400</latitude>
+			<longitude>011.80961100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26R</number_end>
+			<latitude_end>52.62945800</latitude_end>
+			<longitude_end>011.81988300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>700.052275253</length-meters>
+			<length-feet>2133.75933497</length-feet>
+			<heading id="08L">83.4871753755</heading>
+			<heading_end id="26R">263.479011981</heading_end>
+			<threshold_lat id="08L">52.628744</threshold_lat>
+			<threshold_lon id="08L">11.809611</threshold_lon>
+			<threshold_lat_end id="26R">52.629458</threshold_lat_end>
+			<threshold_lon_end id="26R">11.819883</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>52.62921325</latitude>
+			<longitude>011.83178755</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>263.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.62845828</latitude>
+			<longitude>011.80445066</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.62923722</latitude>
+			<longitude>011.80892201</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.62920249</latitude>
+			<longitude>011.83555195</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.62896472</latitude>
+			<longitude>011.82057188</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13265">132.65</frequency>
+			<description>BERLIN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12240">122.4</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

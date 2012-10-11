@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LPSJ">
+		<linecode>1</linecode>
+		<elevation>311</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LPSJ</identifier>
+		<name>SAO JORGE</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>38.66825800</latitude>
+			<longitude>-028.18288300</longitude>
+			<threshold>58.52</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>38.66270300</latitude_end>
+			<longitude_end>-028.16877500</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1374.00941951</length-meters>
+			<length-feet>4187.98071068</length-feet>
+			<heading id="13 ">116.671133552</heading>
+			<heading_end id="31 ">296.662319264</heading_end>
+			<threshold_lat id="13 ">38.6680213711</threshold_lat>
+			<threshold_lon id="13 ">-28.1822821326</threshold_lon>
+			<threshold_lat_end id="31 ">38.6629457382</threshold_lat_end>
+			<threshold_lon_end id="31 ">-28.1693915811</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>38.66750740</latitude>
+			<longitude>-028.18003067</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>116.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>38.66346011</latitude>
+			<longitude>-028.17164267</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.66873906</latitude>
+			<longitude>-028.18295792</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.66222192</latitude>
+			<longitude>-028.16870017</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

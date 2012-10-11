@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="M58 ">
+		<linecode>1</linecode>
+		<elevation>1315</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>M58</identifier>
+		<name>MONETT MUNI</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>36.91308300</latitude>
+			<longitude>-094.01287800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>36.89935000</latitude_end>
+			<longitude_end>-094.01263600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.18443068</length-meters>
+			<length-feet>4645.7141447</length-feet>
+			<heading id="18 ">179.189308762</heading>
+			<heading_end id="36 ">359.189163439</heading_end>
+			<threshold_lat id="18 ">36.913083</threshold_lat>
+			<threshold_lon id="18 ">-94.012878</threshold_lon>
+			<threshold_lat_end id="36 ">36.89935</threshold_lat_end>
+			<threshold_lon_end id="36 ">-94.012636</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>36.91128757</latitude>
+			<longitude>-094.01247006</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>179.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>36.90114543</latitude>
+			<longitude>-094.01304388</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>359.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.90622813</latitude>
+			<longitude>-094.01185834</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.91329303</latitude>
+			<longitude>-094.01249743</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.89913997</latitude>
+			<longitude>-094.01301651</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11827">118.27</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12307">123.07</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12495">124.95</frequency>
+			<description>SPRINGFIELD APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

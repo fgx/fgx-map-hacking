@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WA1A">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WA1A</identifier>
+		<name>Sorong Mainland</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>-00.89346492</latitude>
+			<longitude>131.27774467</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>50.90</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>-00.89454021</latitude_end>
+			<longitude_end>131.29438106</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1855.54388728</length-meters>
+			<length-feet>5655.69776844</length-feet>
+			<heading id="09 ">93.6737912838</heading>
+			<heading_end id="27 ">273.674050856</heading_end>
+			<threshold_lat id="09 ">-0.89346492</threshold_lat>
+			<threshold_lon id="09 ">131.27774467</threshold_lon>
+			<threshold_lat_end id="27 ">-0.89454021</threshold_lat_end>
+			<threshold_lon_end id="27 ">131.29438106</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>-00.89314653</latitude>
+			<longitude>131.27943310</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>93.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-00.89042328</latitude>
+			<longitude>131.29030063</longitude>
+			<height>32</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-00.89173996</latitude>
+			<longitude>131.29049769</longitude>
+			<heading>93.70</heading>
+			<name>Sorong Mainland Ramp</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.89369881</latitude>
+			<longitude>131.29031421</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12240">122.4</frequency>
+			<description>EDWARD TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OEUD">
+		<linecode>1</linecode>
+		<elevation>759</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OEUD</identifier>
+		<name>UDHAILIYAH</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>25.16091700</latitude>
+			<longitude>049.32861100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>163.07</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>25.14116700</latitude_end>
+			<longitude_end>049.32888900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>149.35</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2187.9885647</length-meters>
+			<length-feet>6668.9891452</length-feet>
+			<heading id="18 ">179.266038532</heading>
+			<heading_end id="36 ">359.26592038</heading_end>
+			<threshold_lat id="18 ">25.160917</threshold_lat>
+			<threshold_lon id="18 ">49.328611</threshold_lon>
+			<threshold_lat_end id="36 ">25.141167</threshold_lat_end>
+			<threshold_lon_end id="36 ">49.328889</threshold_lon_end>
+		</runway>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>25.14296248</latitude>
+			<longitude>049.32849652</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>359.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>25.15105506</latitude>
+			<longitude>049.32978931</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.16119093</latitude>
+			<longitude>049.32905267</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.14089307</latitude>
+			<longitude>049.32844740</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

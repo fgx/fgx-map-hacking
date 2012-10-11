@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LDRI">
+		<linecode>1</linecode>
+		<elevation>278</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LDRI</identifier>
+		<name>RIJEKA</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>45.22565600</latitude>
+			<longitude>014.56143300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>45.20761400</latitude_end>
+			<longitude_end>014.58019400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2488.4061807</length-meters>
+			<length-feet>7584.66203877</length-feet>
+			<heading id="14 ">143.692618889</heading>
+			<heading_end id="32 ">323.679302795</heading_end>
+			<threshold_lat id="14 ">45.225656</threshold_lat>
+			<threshold_lon id="14 ">14.561433</threshold_lon>
+			<threshold_lat_end id="32 ">45.207614</threshold_lat_end>
+			<threshold_lon_end id="32 ">14.580194</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>45.22392117</latitude>
+			<longitude>014.56389591</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>143.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>45.20884516</latitude>
+			<longitude>014.57825638</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>323.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>45.21889880</latitude>
+			<longitude>014.57238100</longitude>
+			<height>84</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.21828840</latitude>
+			<longitude>014.57194900</longitude>
+			<heading>50.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.21747703</latitude>
+			<longitude>014.57244198</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.22634337</latitude>
+			<longitude>014.56178977</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.20692669</latitude>
+			<longitude>014.57983712</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDRZ">
+		<linecode>1</linecode>
+		<elevation>1133</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EDRZ</identifier>
+		<name>ZWEIBRUCKEN</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>49.19803900</latitude>
+			<longitude>007.39052800</longitude>
+			<threshold>274.93</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>49.22100600</latitude_end>
+			<longitude_end>007.41077500</longitude_end>
+			<threshold_end>274.93</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2949.68553144</length-meters>
+			<length-feet>8990.64149981</length-feet>
+			<heading id="03 ">30.0175849472</heading>
+			<heading_end id="21 ">210.002255869</heading_end>
+			<threshold_lat id="03 ">49.2001794978</threshold_lat>
+			<threshold_lon id="03 ">7.39241523441</threshold_lon>
+			<threshold_lat_end id="21 ">49.2188651484</threshold_lat_end>
+			<threshold_lon_end id="21 ">7.40888792855</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>49.20250425</latitude>
+			<longitude>007.39375428</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>29.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>49.21620186</latitude>
+			<longitude>007.40724606</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>209.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.21023191</latitude>
+			<longitude>007.39876159</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.19799102</latitude>
+			<longitude>007.38941042</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.22105378</latitude>
+			<longitude>007.41189313</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12352">123.52</frequency>
+			<description>LANGEN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12382">123.82</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12967">129.67</frequency>
+			<description>LANGEN RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

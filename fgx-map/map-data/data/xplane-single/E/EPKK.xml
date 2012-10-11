@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPKK">
+		<linecode>1</linecode>
+		<elevation>791</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPKK</identifier>
+		<name>BALICE</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>50.07539747</latitude>
+			<longitude>019.76809501</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>50.08024453</latitude_end>
+			<longitude_end>019.80291099</longitude_end>
+			<threshold_end>238.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2549.77780083</length-meters>
+			<length-feet>7771.72273693</length-feet>
+			<heading id="07 ">77.8062253158</heading>
+			<heading_end id="25 ">257.779524356</heading_end>
+			<threshold_lat id="07 ">50.07539747</threshold_lat>
+			<threshold_lon id="07 ">19.76809501</threshold_lon>
+			<threshold_lat_end id="25 ">50.0797897385</threshold_lat_end>
+			<threshold_lon_end id="25 ">19.799648138</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>50.07330100</latitude>
+			<longitude>019.78722700</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.07290000</latitude>
+			<longitude>019.80028300</longitude>
+			<heading>66.00</heading>
+			<name>Aircraft stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.07298300</latitude>
+			<longitude>019.80101700</longitude>
+			<heading>66.00</heading>
+			<name>Aircraft stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.07310000</latitude>
+			<longitude>019.80180000</longitude>
+			<heading>66.00</heading>
+			<name>Aircraft stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.07323300</latitude>
+			<longitude>019.80273300</longitude>
+			<heading>66.00</heading>
+			<name>Aircraft stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.07333300</latitude>
+			<longitude>019.80351700</longitude>
+			<heading>66.00</heading>
+			<name>Aircraft stand 5</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.07477000</latitude>
+			<longitude>019.79597800</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.07375100</latitude>
+			<longitude>019.77098000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.07711800</latitude>
+			<longitude>019.79481200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12612">126.12</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>KRAKOW DELIVERY</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12325">123.25</frequency>
+			<description>KRAKOW TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12405">124.05</frequency>
+			<description>KRAKOW DIRECTOR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12107">121.07</frequency>
+			<description>KRAKOW APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SASJ">
+		<linecode>1</linecode>
+		<elevation>3019</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SASJ</identifier>
+		<name>JUJUY</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-24.38116700</latitude>
+			<longitude>-065.10508300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>30.48</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-24.40430600</latitude_end>
+			<longitude_end>-065.09058300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2955.04833355</length-meters>
+			<length-feet>9006.98732065</length-feet>
+			<heading id="15 ">150.14545406</heading>
+			<heading_end id="33 ">330.1514424</heading_end>
+			<threshold_lat id="15 ">-24.381167</threshold_lat>
+			<threshold_lon id="15 ">-65.105083</threshold_lon>
+			<threshold_lat_end id="33 ">-24.404306</threshold_lat_end>
+			<threshold_lon_end id="33 ">-65.090583</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-24.39211320</latitude>
+			<longitude>-065.09663687</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-24.38058845</latitude>
+			<longitude>-065.10476586</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-24.40488458</latitude>
+			<longitude>-065.09090013</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR/APP</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR/APP</description>
+		</atc>
+	</airport>
+</PropertyList>

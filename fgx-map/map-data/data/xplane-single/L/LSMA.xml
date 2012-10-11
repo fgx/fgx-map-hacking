@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LSMA">
+		<linecode>1</linecode>
+		<elevation>1460</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LSMA</identifier>
+		<name>Alpnach</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>39.62</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>46.93666700</latitude>
+			<longitude>008.28333300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>99.97</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>46.95000000</latitude_end>
+			<longitude_end>008.28666700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>499.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1503.80459301</length-meters>
+			<length-feet>4583.59639951</length-feet>
+			<heading id="01 ">9.71913678501</heading>
+			<heading_end id="19 ">189.716700702</heading_end>
+			<threshold_lat id="01 ">46.936667</threshold_lat>
+			<threshold_lon id="01 ">8.283333</threshold_lon>
+			<threshold_lat_end id="19 ">46.95</threshold_lat_end>
+			<threshold_lon_end id="19 ">8.286667</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>46.93850450</latitude>
+			<longitude>008.28323330</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>9.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.94354204</latitude>
+			<longitude>008.28319721</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.93640550</latitude>
+			<longitude>008.28247295</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.95026148</latitude>
+			<longitude>008.28752730</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11962">119.62</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

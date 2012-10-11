@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SSMF">
+		<linecode>1</linecode>
+		<elevation>2687</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SSMF</identifier>
+		<name>Mafra</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>13.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>-26.16290601</latitude>
+			<longitude>-049.83305912</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>-26.15487359</latitude_end>
+			<longitude_end>-049.83082788</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>917.450954719</length-meters>
+			<length-feet>2796.39050998</length-feet>
+			<heading id="03 ">14.0724952001</heading>
+			<heading_end id="21 ">194.073478869</heading_end>
+			<threshold_lat id="03 ">-26.16290601</threshold_lat>
+			<threshold_lon id="03 ">-49.83305912</threshold_lon>
+			<threshold_lat_end id="21 ">-26.15487359</threshold_lat_end>
+			<threshold_lon_end id="21 ">-49.83082788</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>-26.16110399</latitude>
+			<longitude>-049.83282258</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>14.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>-26.15667561</latitude>
+			<longitude>-049.83106437</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>194.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-26.15879026</latitude>
+			<longitude>-049.83238824</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-26.16297798</latitude>
+			<longitude>-049.83328069</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-26.15480162</latitude>
+			<longitude>-049.83060632</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

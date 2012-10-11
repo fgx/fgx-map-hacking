@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCNB">
+		<linecode>1</linecode>
+		<elevation>1193</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCNB</identifier>
+		<name>MYERS FIELD</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>44.73280000</latitude>
+			<longitude>-096.27364700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>44.72617500</latitude_end>
+			<longitude_end>-096.25835800</longitude_end>
+			<threshold_end>76.20</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1417.35293483</length-meters>
+			<length-feet>4320.09174537</length-feet>
+			<heading id="12 ">121.299280003</heading>
+			<heading_end id="30 ">301.28852021</heading_end>
+			<threshold_lat id="12 ">44.7328</threshold_lat>
+			<threshold_lon id="12 ">-96.273647</threshold_lon>
+			<threshold_lat_end id="30 ">44.7265311167</threshold_lat_end>
+			<threshold_lon_end id="30 ">-96.2591799752</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>44.73211979</latitude>
+			<longitude>-096.27126340</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>121.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>44.72721266</latitude>
+			<longitude>-096.26156513</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>301.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.73010183</latitude>
+			<longitude>-096.26547551</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.73316940</latitude>
+			<longitude>-096.27366910</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.72580560</latitude>
+			<longitude>-096.25833600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11857">118.57</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>MINNEAPOLIS CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

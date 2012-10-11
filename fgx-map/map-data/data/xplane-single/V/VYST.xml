@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VYST">
+		<linecode>1</linecode>
+		<elevation>630</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VYST</identifier>
+		<name>SHANTE</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>20.93006700</latitude>
+			<longitude>095.91308900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>230.12</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>20.95324700</latitude_end>
+			<longitude_end>095.91594200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>227.99</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2583.50175063</length-meters>
+			<length-feet>7874.51333592</length-feet>
+			<heading id="01 ">6.59609707009</heading>
+			<heading_end id="19 ">186.595077359</heading_end>
+			<threshold_lat id="01 ">20.930067</threshold_lat>
+			<threshold_lon id="01 ">95.913089</threshold_lon>
+			<threshold_lat_end id="19 ">20.953247</threshold_lat_end>
+			<threshold_lon_end id="19 ">95.915942</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>20.94182103</latitude>
+			<longitude>095.91298340</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>20.92972871</latitude>
+			<longitude>095.91238225</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>20.95358526</latitude>
+			<longitude>095.91664887</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>MEIKTILA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>MEIKTILA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

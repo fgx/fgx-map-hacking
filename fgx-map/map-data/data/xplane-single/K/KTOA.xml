@@ -1,0 +1,1051 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KTOA">
+		<linecode>1</linecode>
+		<elevation>103</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KTOA</identifier>
+		<name>Torrance/Zamperini Field</name>
+		<runway end="29R" id="11L">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11L</number>
+			<latitude>33.80811176</latitude>
+			<longitude>-118.34576553</longitude>
+			<threshold>164.90</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29R</number_end>
+			<latitude_end>33.79952285</latitude_end>
+			<longitude_end>-118.33281313</longitude_end>
+			<threshold_end>164.90</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1531.67256309</length-meters>
+			<length-feet>4668.53797231</length-feet>
+			<heading id="11L">128.464581749</heading>
+			<heading_end id="29R">308.457375669</heading_end>
+			<threshold_lat id="11L">33.8071869967</threshold_lat>
+			<threshold_lon id="11L">-118.344371089</threshold_lon>
+			<threshold_lat_end id="29R">33.8004474523</threshold_lat_end>
+			<threshold_lon_end id="29R">-118.334207601</threshold_lon_end>
+		</runway>
+		<runway end="29L" id="11R">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11R</number>
+			<latitude>33.80531644</latitude>
+			<longitude>-118.34420638</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>7.92</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29L</number_end>
+			<latitude_end>33.80016506</latitude_end>
+			<longitude_end>-118.33644160</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>7.92</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>918.392025788</length-meters>
+			<length-feet>2799.2588946</length-feet>
+			<heading id="11R">128.476061631</heading>
+			<heading_end id="29L">308.471741809</heading_end>
+			<threshold_lat id="11R">33.80531644</threshold_lat>
+			<threshold_lon id="11R">-118.34420638</threshold_lon>
+			<threshold_lat_end id="29L">33.80016506</threshold_lat_end>
+			<threshold_lon_end id="29L">-118.3364416</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>33.80100939</latitude>
+			<longitude>-118.34005477</longitude>
+			<orientation>39.88</orientation>
+			<width>7.92</width>
+			<length>6.10</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H2</designator>
+			<latitude>33.80934768</latitude>
+			<longitude>-118.34576320</longitude>
+			<orientation>38.00</orientation>
+			<width>34.14</width>
+			<length>34.14</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="11L">
+			<linecode>21</linecode>
+			<latitude>33.80713244</latitude>
+			<longitude>-118.34363281</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>129.4</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>11L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29L">
+			<linecode>21</linecode>
+			<latitude>33.80069653</latitude>
+			<longitude>-118.33771480</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>308.4</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>29L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29R">
+			<linecode>21</linecode>
+			<latitude>33.80047935</latitude>
+			<longitude>-118.33491452</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>308.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>29R</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>33.80112251</latitude>
+			<longitude>118.34134126</longitude>
+			<height>78</height>
+			<deprecated>0</deprecated>
+			<name>TWR</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80156601</latitude>
+			<longitude>118.34147403</longitude>
+			<heading>37.15</heading>
+			<name>Admin building ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80086266</latitude>
+			<longitude>118.34092582</longitude>
+			<heading>43.09</heading>
+			<name>Civil Air Patrol ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80340037</latitude>
+			<longitude>118.34420491</longitude>
+			<heading>39.56</heading>
+			<name>GA parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80815993</latitude>
+			<longitude>118.34788637</longitude>
+			<heading>89.43</heading>
+			<name>NW ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80624994</latitude>
+			<longitude>118.34789107</longitude>
+			<heading>92.49</heading>
+			<name>NW ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.79647499</latitude>
+			<longitude>118.33241603</longitude>
+			<heading>0.51</heading>
+			<name>SE ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.80935121</latitude>
+			<longitude>118.34576247</longitude>
+			<heading>17.65</heading>
+			<name>Torrance Medical Center Helipad</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.80109295</latitude>
+			<longitude>-118.34129144</longitude>
+			<type code="1">White-green flashing</type>
+			<description>APT BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.80295205</latitude>
+			<longitude>-118.33957317</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 2</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.80487821</latitude>
+			<longitude>-118.34423164</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 6</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.79993277</latitude>
+			<longitude>-118.33646026</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 7</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.79930945</latitude>
+			<longitude>-118.33340075</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 8</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.80762024</latitude>
+			<longitude>-118.34596150</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 9</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80615680</latitude>
+			<longitude>-118.34341047</longitude>
+			<orientation>308.60</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80352711</latitude>
+			<longitude>-118.33943113</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}12</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80261782</latitude>
+			<longitude>-118.34043774</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}12{@@}12</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80441179</latitude>
+			<longitude>-118.34076112</longitude>
+			<orientation>308.60</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80266618</latitude>
+			<longitude>-118.33812287</longitude>
+			<orientation>308.60</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80091696</latitude>
+			<longitude>-118.33549596</longitude>
+			<orientation>308.60</orientation>
+			<reserved>0</reserved>
+			<size code="5">Small distance-remaining sign on runway edge</size>
+			<text>{@B}4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80590021</latitude>
+			<longitude>-118.34621600</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80573265</latitude>
+			<longitude>-118.34638456</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80514824</latitude>
+			<longitude>-118.34509597</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80499409</latitude>
+			<longitude>-118.34525641</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80376918</latitude>
+			<longitude>-118.34300700</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80360392</latitude>
+			<longitude>-118.34316991</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80227421</latitude>
+			<longitude>-118.34076385</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80211508</latitude>
+			<longitude>-118.34091762</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80075642</latitude>
+			<longitude>-118.33845719</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80059574</latitude>
+			<longitude>-118.33863171</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79907538</latitude>
+			<longitude>-118.33634400</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79936230</latitude>
+			<longitude>-118.33636553</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79820547</latitude>
+			<longitude>-118.33502088</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79837074</latitude>
+			<longitude>-118.33486344</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79843404</latitude>
+			<longitude>-118.33544607</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y,^ld}H</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80606351</latitude>
+			<longitude>-118.34698719</longitude>
+			<orientation>295.56</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80494186</latitude>
+			<longitude>-118.34466371</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80440216</latitude>
+			<longitude>-118.34482800</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79944430</latitude>
+			<longitude>-118.33701412</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79985785</latitude>
+			<longitude>-118.33709300</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79813546</latitude>
+			<longitude>-118.33449225</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}{^l}J{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80562457</latitude>
+			<longitude>-118.34570931</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80325834</latitude>
+			<longitude>-118.34220963</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80169717</latitude>
+			<longitude>-118.33986120</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79912954</latitude>
+			<longitude>-118.33594866</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}H{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79791127</latitude>
+			<longitude>-118.33413947</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}J{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80781560</latitude>
+			<longitude>-118.34618300</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}11L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80600465</latitude>
+			<longitude>-118.34735417</longitude>
+			<orientation>29.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80765910</latitude>
+			<longitude>-118.34598800</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80539265</latitude>
+			<longitude>-118.34542854</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80519545</latitude>
+			<longitude>-118.34606529</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80577131</latitude>
+			<longitude>-118.34376391</longitude>
+			<orientation>286.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80505417</latitude>
+			<longitude>-118.34455664</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{@R}11R</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80473699</latitude>
+			<longitude>-118.34442857</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80448942</latitude>
+			<longitude>-118.34509291</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80493105</latitude>
+			<longitude>-118.34436955</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80287686</latitude>
+			<longitude>-118.34266124</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}E{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80287214</latitude>
+			<longitude>-118.34162873</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}E{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80295723</latitude>
+			<longitude>-118.34161521</longitude>
+			<orientation>275.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}E{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80105578</latitude>
+			<longitude>-118.33985270</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}F{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80179758</latitude>
+			<longitude>-118.33958945</longitude>
+			<orientation>160.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}F{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79995151</latitude>
+			<longitude>-118.33685745</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}G{@R}29L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79940731</latitude>
+			<longitude>-118.33741932</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}G{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79964738</latitude>
+			<longitude>-118.33673880</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}G{@Y}{^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79982653</latitude>
+			<longitude>-118.33668030</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}G{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79885409</latitude>
+			<longitude>-118.33551627</longitude>
+			<orientation>180.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}H{@Y}{^ld}A{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79829057</latitude>
+			<longitude>-118.33580036</longitude>
+			<orientation>360.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}H{@Y}{^lu}A{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80084737</latitude>
+			<longitude>-118.33595210</longitude>
+			<orientation>150.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}H{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79927776</latitude>
+			<longitude>-118.33330787</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}J{@R}29R</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79777793</latitude>
+			<longitude>-118.33472000</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}J{@Y}{^l}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79796160</latitude>
+			<longitude>-118.33414287</longitude>
+			<orientation>180.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}J{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79913561</latitude>
+			<longitude>-118.33307858</longitude>
+			<orientation>219.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}J{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80073599</latitude>
+			<longitude>-118.33618397</longitude>
+			<orientation>330.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11L-29R</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80597843</latitude>
+			<longitude>-118.34367896</longitude>
+			<orientation>106.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11L-29R</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80312569</latitude>
+			<longitude>-118.34159180</longitude>
+			<orientation>95.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11R-29L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80170928</latitude>
+			<longitude>-118.33979502</longitude>
+			<orientation>325.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11R-29L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80597843</latitude>
+			<longitude>-118.34449954</longitude>
+			<orientation>286.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11R-APCH</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80033757</latitude>
+			<longitude>-118.33558538</longitude>
+			<orientation>150.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}29L-APCH</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80776049</latitude>
+			<longitude>-118.34573846</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80505651</latitude>
+			<longitude>-118.34408310</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80209981</latitude>
+			<longitude>-118.33961836</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^ld}F</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80157907</latitude>
+			<longitude>-118.33641299</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^ld}H</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80275792</latitude>
+			<longitude>-118.34061765</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^lu}E</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80631941</latitude>
+			<longitude>-118.34677126</longitude>
+			<orientation>208.47</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}A{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80521212</latitude>
+			<longitude>-118.34566586</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}C{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80290852</latitude>
+			<longitude>-118.34223536</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}E{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80107314</latitude>
+			<longitude>-118.33944498</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}F{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80145801</latitude>
+			<longitude>-118.33939062</longitude>
+			<orientation>160.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^lu}A{@L}F{@Y}F{^ru}|A{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80515901</latitude>
+			<longitude>-118.34182314</longitude>
+			<orientation>309.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^lu}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80576631</latitude>
+			<longitude>-118.34270235</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}C{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80314724</latitude>
+			<longitude>-118.34120613</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}E{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80250871</latitude>
+			<longitude>-118.34024285</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}F{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80020407</latitude>
+			<longitude>-118.33675936</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80214088</latitude>
+			<longitude>-118.33723974</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}H{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79947143</latitude>
+			<longitude>-118.33323358</longitude>
+			<orientation>129.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}J{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.79918451</latitude>
+			<longitude>-118.33581765</longitude>
+			<orientation>360.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80172133</latitude>
+			<longitude>-118.33977747</longitude>
+			<orientation>325.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80311037</latitude>
+			<longitude>-118.34159315</longitude>
+			<orientation>95.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>33.80563406</latitude>
+			<longitude>-118.34564835</longitude>
+			<orientation>39.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{no-entry}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12560">125.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12400">124.0</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12090">120.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13560">135.6</frequency>
+			<description>TWR (N)</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12400">124.0</frequency>
+			<description>TWR (S)</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>SOCAL APP/DEP (RWY11)</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>SOCAL APP/DEP (RWY29)</description>
+		</atc>
+	</airport>
+</PropertyList>

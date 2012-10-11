@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VTUI">
+		<linecode>1</linecode>
+		<elevation>529</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>VTUI</identifier>
+		<name>Sakon Nakhon Aero</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>17.18682200</latitude>
+			<longitude>104.10996900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>149.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>17.20345800</latitude_end>
+			<longitude_end>104.12728300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>149.96</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2604.20796509</length-meters>
+			<length-feet>7937.62587758</length-feet>
+			<heading id="05 ">45.0126381979</heading>
+			<heading_end id="23 ">225.007519712</heading_end>
+			<threshold_lat id="05 ">17.186822</threshold_lat>
+			<threshold_lon id="05 ">104.109969</threshold_lon>
+			<threshold_lat_end id="23 ">17.203458</threshold_lat_end>
+			<threshold_lon_end id="23 ">104.127283</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>17.18838111</latitude>
+			<longitude>104.11099961</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>44.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>17.20133040</latitude>
+			<longitude>104.12566031</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>224.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>17.19586200</latitude>
+			<longitude>104.11640200</longitude>
+			<height>35</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.19613600</latitude>
+			<longitude>104.11724100</longitude>
+			<heading>80.00</heading>
+			<name>Platform</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>17.19571100</latitude>
+			<longitude>104.11802700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.18739500</latitude>
+			<longitude>104.10936700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.20288500</latitude>
+			<longitude>104.12789200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11965">119.65</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12335">123.35</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

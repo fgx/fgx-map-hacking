@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HEOC">
+		<linecode>1</linecode>
+		<elevation>807</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>HEOC</identifier>
+		<name>OCTOBER</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>29.80320800</latitude>
+			<longitude>030.82157200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>68.58</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>29.82100800</latitude_end>
+			<longitude_end>030.82513600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>54.86</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2002.96971837</length-meters>
+			<length-feet>6105.05170159</length-feet>
+			<heading id="01 ">9.90536559938</heading>
+			<heading_end id="19 ">189.903593731</heading_end>
+			<threshold_lat id="01 ">29.803208</threshold_lat>
+			<threshold_lon id="01 ">30.821572</threshold_lon>
+			<threshold_lat_end id="19 ">29.821008</threshold_lat_end>
+			<threshold_lon_end id="19 ">30.825136</threshold_lon_end>
+		</runway>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.80297796</latitude>
+			<longitude>030.82097410</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.82123803</latitude>
+			<longitude>030.82573402</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

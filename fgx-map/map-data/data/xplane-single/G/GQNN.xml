@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="GQNN">
+		<linecode>1</linecode>
+		<elevation>7</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>GQNN</identifier>
+		<name>NOUAKCHOTT</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>18.08706400</latitude>
+			<longitude>-015.95679700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>99.97</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>18.10848100</latitude_end>
+			<longitude_end>-015.93926400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>99.97</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3010.50234333</length-meters>
+			<length-feet>9176.01114247</length-feet>
+			<heading id="05 ">38.0596415588</heading>
+			<heading_end id="23 ">218.054195117</heading_end>
+			<threshold_lat id="05 ">18.087064</threshold_lat>
+			<threshold_lon id="05 ">-15.956797</threshold_lon>
+			<threshold_lat_end id="23 ">18.108481</threshold_lat_end>
+			<threshold_lon_end id="23 ">-15.939264</threshold_lon_end>
+		</runway>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>18.10681433</latitude>
+			<longitude>-015.94009408</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>217.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>18.09864397</latitude>
+			<longitude>-015.94921253</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>18.08711754</latitude>
+			<longitude>-015.95756483</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>18.10842739</latitude>
+			<longitude>-015.93849607</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12420">124.2</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

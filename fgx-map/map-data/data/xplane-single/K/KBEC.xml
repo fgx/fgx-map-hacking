@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KBEC">
+		<linecode>1</linecode>
+		<elevation>1408</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KBEC</identifier>
+		<name>Beech Factory</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>37.70527500</latitude>
+			<longitude>-097.21246400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>37.68367500</latitude_end>
+			<longitude_end>-097.21751100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2438.3719026</length-meters>
+			<length-feet>7432.15755912</length-feet>
+			<heading id="18 ">-169.483255207</heading>
+			<heading_end id="36 ">370.519830785</heading_end>
+			<threshold_lat id="18 ">37.705275</threshold_lat>
+			<threshold_lon id="18 ">-97.212464</threshold_lon>
+			<threshold_lat_end id="36 ">37.683675</threshold_lat_end>
+			<threshold_lon_end id="36 ">-97.217511</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>37.70344421</latitude>
+			<longitude>-097.21246114</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>190.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>37.68550579</latitude>
+			<longitude>-097.21751400</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>10.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>37.69523232</latitude>
+			<longitude>097.21679186</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.69239808</latitude>
+			<longitude>097.21269982</longitude>
+			<heading>80.00</heading>
+			<name>FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.69617500</latitude>
+			<longitude>097.21581300</longitude>
+			<heading>70.00</heading>
+			<name>Raytheon Aircraft Services</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.69248992</latitude>
+			<longitude>097.21884267</longitude>
+			<heading>15.33</heading>
+			<name>Raytheon/Beechcraft Factory</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.68985229</latitude>
+			<longitude>-097.21870000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.70306888</latitude>
+			<longitude>-097.21450506</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.68554473</latitude>
+			<longitude>-097.21525122</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.70250830</latitude>
+			<longitude>-097.21275668</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}1{@@,@B}7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69981087</latitude>
+			<longitude>-097.21338830</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}2{@@,@B}6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69711590</latitude>
+			<longitude>-097.21401639</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}3{@@,@B}5</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69172203</latitude>
+			<longitude>-097.21527777</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}5{@@,@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.68901958</latitude>
+			<longitude>-097.21590866</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}6{@@,@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.68632284</latitude>
+			<longitude>-097.21654001</longitude>
+			<orientation>10.50</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@B}7{@@,@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69153613</latitude>
+			<longitude>-097.21654450</longitude>
+			<orientation>100.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}18-36{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69102863</latitude>
+			<longitude>-097.21494243</longitude>
+			<orientation>280.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69277997</latitude>
+			<longitude>-097.21450331</longitude>
+			<orientation>342.18</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}36-18{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69500047</latitude>
+			<longitude>-097.21575602</longitude>
+			<orientation>100.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}18-36{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69142481</latitude>
+			<longitude>-097.21544766</longitude>
+			<orientation>190.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>37.69106338</latitude>
+			<longitude>-097.21553555</longitude>
+			<orientation>10.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}A{^r}</text>
+		</sign>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12500">125.0</frequency>
+			<description>WICHITA CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12680">126.8</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13480">134.8</frequency>
+			<description>WICHITA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MYEG">
+		<linecode>1</linecode>
+		<elevation>5</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MYEG</identifier>
+		<name>GEORGE TOWN</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>27.43</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>23.46880600</latitude>
+			<longitude>-075.78875000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>85.34</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>23.46452800</latitude_end>
+			<longitude_end>-075.77458300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>79.25</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1522.9682996</length-meters>
+			<length-feet>4642.00737717</length-feet>
+			<heading id="11 ">108.128178746</heading>
+			<heading_end id="29 ">288.122537227</heading_end>
+			<threshold_lat id="11 ">23.468806</threshold_lat>
+			<threshold_lon id="11 ">-75.78875</threshold_lon>
+			<threshold_lat_end id="29 ">23.464528</threshold_lat_end>
+			<threshold_lon_end id="29 ">-75.774583</threshold_lon_end>
+		</runway>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.46923492</latitude>
+			<longitude>-075.78887943</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.46409907</latitude>
+			<longitude>-075.77445363</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13477">134.77</frequency>
+			<description>AWOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

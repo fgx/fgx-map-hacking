@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FZIC">
+		<linecode>1</linecode>
+		<elevation>1417</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FZIC</identifier>
+		<name>BANGOKA INTL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>00.49066700</latitude>
+			<longitude>025.32508300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>100.89</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>00.47262500</latitude_end>
+			<longitude_end>025.35083300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>98.15</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3492.28694654</length-meters>
+			<length-feet>10644.4906131</length-feet>
+			<heading id="13 ">124.837817171</heading>
+			<heading_end id="31 ">304.837600712</heading_end>
+			<threshold_lat id="13 ">0.490667</threshold_lat>
+			<threshold_lon id="13 ">25.325083</threshold_lon>
+			<threshold_lat_end id="31 ">0.472625</threshold_lat_end>
+			<threshold_lon_end id="31 ">25.350833</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>00.48994045</latitude>
+			<longitude>025.32677168</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>125.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>00.47335156</latitude>
+			<longitude>025.34914433</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>305.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>00.48280991</latitude>
+			<longitude>025.33877306</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>00.49139866</latitude>
+			<longitude>025.32509997</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>00.47189334</latitude>
+			<longitude>025.35081603</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12590">125.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13090">130.9</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

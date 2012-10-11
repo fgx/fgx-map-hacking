@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIML">
+		<linecode>1</linecode>
+		<elevation>353</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LIML</identifier>
+		<name>Milano Linate</name>
+		<runway end="36R" id="18L">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>18L</number>
+			<latitude>45.45621700</latitude>
+			<longitude>009.27586700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>57.91</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="6">SSALF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36R</number_end>
+			<latitude_end>45.43431100</latitude_end>
+			<longitude_end>009.27822800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>298.70</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2441.64000467</length-meters>
+			<length-feet>7442.11873422</length-feet>
+			<heading id="18L">175.662274364</heading>
+			<heading_end id="36R">355.660591961</heading_end>
+			<threshold_lat id="18L">45.456217</threshold_lat>
+			<threshold_lon id="18L">9.275867</threshold_lon>
+			<threshold_lat_end id="36R">45.434311</threshold_lat_end>
+			<threshold_lon_end id="36R">9.278228</threshold_lon_end>
+		</runway>
+		<runway end="36L" id="18R">
+			<linecode>100</linecode>
+			<width>21.95</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18R</number>
+			<latitude>45.45803900</latitude>
+			<longitude>009.26826100</longitude>
+			<threshold>60.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36L</number_end>
+			<latitude_end>45.45264200</latitude_end>
+			<longitude_end>009.26884700</longitude_end>
+			<threshold_end>60.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>601.575031209</length-meters>
+			<length-feet>1833.60069513</length-feet>
+			<heading id="18R">175.630339709</heading>
+			<heading_end id="36L">355.629922065</heading_end>
+			<threshold_lat id="18R">45.4574921005</threshold_lat>
+			<threshold_lon id="18R">9.26832038115</threshold_lon>
+			<threshold_lat_end id="36L">45.4531888996</threshold_lat_end>
+			<threshold_lon_end id="36L">9.26878761771</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>45.45893700</latitude>
+			<longitude>009.27172800</longitude>
+			<orientation>354.98</orientation>
+			<width>137.16</width>
+			<length>137.16</length>
+			<surface code="2">Concrete</surface>
+			<markings code="2">None</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="18L">
+			<linecode>21</linecode>
+			<latitude>45.45445758</latitude>
+			<longitude>009.27672601</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>175.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36R">
+			<linecode>21</linecode>
+			<latitude>45.43703003</latitude>
+			<longitude>009.27726596</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>355.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>45.45649800</latitude>
+			<longitude>009.28290000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.45554400</latitude>
+			<longitude>009.27895300</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.45427000</latitude>
+			<longitude>009.26230400</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.45239200</latitude>
+			<longitude>009.27779800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.45870500</latitude>
+			<longitude>009.26917500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.43561200</latitude>
+			<longitude>009.27983300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13555">135.55</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11925">119.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13270">132.7</frequency>
+			<description>MILANO APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12675">126.75</frequency>
+			<description>MILANO DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

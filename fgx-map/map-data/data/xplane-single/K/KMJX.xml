@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMJX">
+		<linecode>1</linecode>
+		<elevation>82</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KMJX</identifier>
+		<name>ROBERT J MILLER AIR PARK</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>39.92223300</latitude>
+			<longitude>-074.30048300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>45.11</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>39.93276100</latitude_end>
+			<longitude_end>-074.28427200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1812.96900594</length-meters>
+			<length-feet>5525.9295301</length-feet>
+			<heading id="06 ">49.8563594273</heading>
+			<heading_end id="24 ">229.84595492</heading_end>
+			<threshold_lat id="06 ">39.922233</threshold_lat>
+			<threshold_lon id="06 ">-74.300483</threshold_lon>
+			<threshold_lat_end id="24 ">39.932761</threshold_lat_end>
+			<threshold_lon_end id="24 ">-74.284272</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>39.92625128</latitude>
+			<longitude>-074.29722936</longitude>
+			<orientation>49.50</orientation>
+			<width>49.99</width>
+			<length>49.99</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>39.92425690</latitude>
+			<longitude>-074.29804352</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>49.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>39.93134218</latitude>
+			<longitude>-074.28578092</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>229.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>39.92726861</latitude>
+			<longitude>074.29730812</longitude>
+			<height>131</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 3</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.92599630</latitude>
+			<longitude>074.29823006</longitude>
+			<heading>18.01</heading>
+			<name>GA Parking 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.92754752</latitude>
+			<longitude>074.29586224</longitude>
+			<heading>15.00</heading>
+			<name>GA Parking 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.92863262</latitude>
+			<longitude>074.29490805</longitude>
+			<heading>42.43</heading>
+			<name>GA Parking 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.92624680</latitude>
+			<longitude>074.29723318</longitude>
+			<heading>47.29</heading>
+			<name>Helipad</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.92588276</latitude>
+			<longitude>074.30040943</longitude>
+			<heading>10.96</heading>
+			<name>SW Hangars</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.92811712</latitude>
+			<longitude>-074.29289680</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.92236967</latitude>
+			<longitude>-074.30110267</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.93262425</latitude>
+			<longitude>-074.28365226</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11987">119.87</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12415">124.15</frequency>
+			<description>MC GUIRE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

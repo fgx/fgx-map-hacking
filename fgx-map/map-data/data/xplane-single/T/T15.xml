@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="T15 ">
+		<linecode>1</linecode>
+		<elevation>411</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>T15</identifier>
+		<name>MARLIN</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>31.34483100</latitude>
+			<longitude>-096.85194700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>31.33652800</latitude_end>
+			<longitude_end>-096.85213300</longitude_end>
+			<threshold_end>27.13</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>920.768078662</length-meters>
+			<length-feet>2806.50110376</length-feet>
+			<heading id="17 ">-178.898558727</heading>
+			<heading_end id="35 ">361.101538016</heading_end>
+			<threshold_lat id="17 ">31.344831</threshold_lat>
+			<threshold_lon id="17 ">-96.851947</threshold_lon>
+			<threshold_lat_end id="35 ">31.3367726442</threshold_lat_end>
+			<threshold_lon_end id="35 ">-96.8521275196</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.34067245</latitude>
+			<longitude>-096.85147804</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.34496418</latitude>
+			<longitude>-096.85170309</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.33639482</latitude>
+			<longitude>-096.85237688</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13520">135.2</frequency>
+			<description>WACO APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

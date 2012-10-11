@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VTUK">
+		<linecode>1</linecode>
+		<elevation>670</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VTUK</identifier>
+		<name>Khon Kaen</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>16.45504700</latitude>
+			<longitude>102.77591100</longitude>
+			<threshold>149.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>16.47820800</latitude_end>
+			<longitude_end>102.79141400</longitude_end>
+			<threshold_end>149.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3051.20959255</length-meters>
+			<length-feet>9300.0868381</length-feet>
+			<heading id="03 ">32.8599183951</heading>
+			<heading_end id="21 ">212.855523964</heading_end>
+			<threshold_lat id="03 ">16.456185282</threshold_lat>
+			<threshold_lon id="03 ">102.776672942</threshold_lon>
+			<threshold_lat_end id="21 ">16.4770696612</threshold_lat_end>
+			<threshold_lon_end id="21 ">102.790652067</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>16.45791400</latitude>
+			<longitude>102.77733298</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>32.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>16.47534110</latitude>
+			<longitude>102.78999163</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>212.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>16.46518100</latitude>
+			<longitude>102.78413400</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>16.46627400</latitude>
+			<longitude>102.78586600</longitude>
+			<heading>03.00</heading>
+			<name>Platform</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>16.46706600</latitude>
+			<longitude>102.78295100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.45548400</latitude>
+			<longitude>102.77520000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.47777000</latitude>
+			<longitude>102.79213000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12225">122.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12340">123.4</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

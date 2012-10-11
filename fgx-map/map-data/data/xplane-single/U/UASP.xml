@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UASP">
+		<linecode>1</linecode>
+		<elevation>410</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UASP</identifier>
+		<name>PAVLODAR</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>52.18666700</latitude>
+			<longitude>077.06166700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>52.20305600</latitude_end>
+			<longitude_end>077.08638900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2486.62491882</length-meters>
+			<length-feet>7579.23275256</length-feet>
+			<heading id="03 ">42.8399305265</heading>
+			<heading_end id="21 ">222.820397673</heading_end>
+			<threshold_lat id="03 ">52.186667</threshold_lat>
+			<threshold_lon id="03 ">77.061667</threshold_lon>
+			<threshold_lat_end id="21 ">52.203056</threshold_lat_end>
+			<threshold_lon_end id="21 ">77.086389</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.19582559</latitude>
+			<longitude>077.07231876</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.18678222</latitude>
+			<longitude>077.06048817</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.20294053</latitude>
+			<longitude>077.08756821</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

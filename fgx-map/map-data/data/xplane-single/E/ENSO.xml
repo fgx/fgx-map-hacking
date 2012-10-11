@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENSO">
+		<linecode>1</linecode>
+		<elevation>161</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENSO</identifier>
+		<name>Stord Sorstokken</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>59.79727800</latitude>
+			<longitude>005.33335300</longitude>
+			<threshold>70.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>59.78657200</latitude_end>
+			<longitude_end>005.34834700</longitude_end>
+			<threshold_end>70.10</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1459.9492432</length-meters>
+			<length-feet>4449.92529328</length-feet>
+			<heading id="14 ">144.789592967</heading>
+			<heading_end id="32 ">324.776635093</heading_end>
+			<threshold_lat id="14 ">59.7967639049</threshold_lat>
+			<threshold_lon id="14 ">5.33407293135</threshold_lon>
+			<threshold_lat_end id="32 ">59.7870860099</threshold_lat_end>
+			<threshold_lon_end id="32 ">5.3476270465</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>59.79512208</latitude>
+			<longitude>005.33704742</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>144.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>59.78874456</latitude>
+			<longitude>005.34459931</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>324.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>59.79257578</latitude>
+			<longitude>005.34250971</longitude>
+			<height>22</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>59.79430072</latitude>
+			<longitude>005.33985081</longitude>
+			<heading>67.95</heading>
+			<name>GA Hangar</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>59.79262900</latitude>
+			<longitude>005.34172804</longitude>
+			<heading>24.80</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>59.79278110</latitude>
+			<longitude>005.33762151</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.79561327</latitude>
+			<longitude>005.33468661</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.78794660</latitude>
+			<longitude>005.34734026</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79471532</latitude>
+			<longitude>005.33826720</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}H{@R}32-14</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79290169</latitude>
+			<longitude>005.34076234</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}N{@R}32-14</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79233491</latitude>
+			<longitude>005.34160211</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}S{@R}32-14</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79445372</latitude>
+			<longitude>005.33863816</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}32-14{@L}H{@@,@Y,^l}HANGAR{@L}H{@Y}GA{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79264744</latitude>
+			<longitude>005.34116212</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}32-14{@L}N{@@,@L}N{@Y,^u}APRON</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>59.79208489</latitude>
+			<longitude>005.34194892</longitude>
+			<orientation>234.80</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}32-14{@L}S{@@,@L}S{@Y,^u}APRON</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12020">120.2</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

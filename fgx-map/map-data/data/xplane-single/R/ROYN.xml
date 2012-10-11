@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ROYN">
+		<linecode>1</linecode>
+		<elevation>70</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ROYN</identifier>
+		<name>YONAGUNI</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>24.46522200</latitude>
+			<longitude>122.97071900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>24.46866400</latitude_end>
+			<longitude_end>122.98503100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1500.22138019</length-meters>
+			<length-feet>4572.67476681</length-feet>
+			<heading id="08 ">75.2808486922</heading>
+			<heading_end id="26 ">255.274921117</heading_end>
+			<threshold_lat id="08 ">24.465222</threshold_lat>
+			<threshold_lon id="08 ">122.970719</threshold_lon>
+			<threshold_lat_end id="26 ">24.468664</threshold_lat_end>
+			<threshold_lon_end id="26 ">122.985031</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>24.46607219</latitude>
+			<longitude>122.97251743</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>75.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>24.46781398</latitude>
+			<longitude>122.98323241</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>255.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.46833556</latitude>
+			<longitude>122.97747038</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.46571355</latitude>
+			<longitude>122.97010872</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.46817239</latitude>
+			<longitude>122.98564123</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>REMOTE</description>
+		</atc>
+	</airport>
+</PropertyList>

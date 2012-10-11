@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKIB">
+		<linecode>1</linecode>
+		<elevation>2999</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SKIB</identifier>
+		<name>PERALES</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>04.42694700</latitude>
+			<longitude>-075.13938600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>04.41627200</latitude_end>
+			<longitude_end>-075.12721400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1794.04501594</length-meters>
+			<length-feet>5468.24920858</length-feet>
+			<heading id="14 ">131.146683093</heading>
+			<heading_end id="32 ">311.145744692</heading_end>
+			<threshold_lat id="14 ">4.426947</threshold_lat>
+			<threshold_lon id="14 ">-75.139386</threshold_lon>
+			<threshold_lat_end id="32 ">4.416272</threshold_lat_end>
+			<threshold_lon_end id="32 ">-75.127214</threshold_lon_end>
+		</runway>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>04.41721119</latitude>
+			<longitude>-075.12878963</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>311.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.42231634</latitude>
+			<longitude>-075.13267706</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.42742730</latitude>
+			<longitude>-075.13932133</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.41579171</latitude>
+			<longitude>-075.12727867</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>BOGOTA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

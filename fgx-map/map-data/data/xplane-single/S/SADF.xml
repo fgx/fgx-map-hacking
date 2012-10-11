@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SADF">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SADF</identifier>
+		<name>San Fernando</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>-34.45986123</latitude>
+			<longitude>-058.59704434</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>-34.44822732</latitude_end>
+			<longitude_end>-058.58340785</longitude_end>
+			<threshold_end>274.02</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1798.80534871</length-meters>
+			<length-feet>5482.75870287</length-feet>
+			<heading id="05 ">44.1516186413</heading>
+			<heading_end id="23 ">224.159333418</heading_end>
+			<threshold_lat id="05 ">-34.45986123</threshold_lat>
+			<threshold_lon id="05 ">-58.59704434</threshold_lon>
+			<threshold_lat_end id="23 ">-34.4499994331</threshold_lat_end>
+			<threshold_lon_end id="23 ">-58.5854852009</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-34.45590854</latitude>
+			<longitude>058.58385486</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 3</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-34.45317210</latitude>
+			<longitude>-058.59132126</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-34.45974593</latitude>
+			<longitude>-058.59781605</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-34.44834253</latitude>
+			<longitude>-058.58263623</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12165">121.65</frequency>
+			<description>San Fernando GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12070">120.7</frequency>
+			<description>San Fernando TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>San Fernando TWR AUX</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KJZP">
+		<linecode>1</linecode>
+		<elevation>1535</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KJZP</identifier>
+		<name>PICKENS CO</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>34.45980300</latitude>
+			<longitude>-084.46028900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>34.44694400</latitude_end>
+			<longitude_end>-084.45444400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.22389306</length-meters>
+			<length-feet>4645.83442605</length-feet>
+			<heading id="16 ">159.368803363</heading>
+			<heading_end id="34 ">339.36549664</heading_end>
+			<threshold_lat id="16 ">34.459803</threshold_lat>
+			<threshold_lon id="16 ">-84.460289</threshold_lon>
+			<threshold_lat_end id="34 ">34.446944</threshold_lat_end>
+			<threshold_lon_end id="34 ">-84.454444</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>34.45823529</latitude>
+			<longitude>-084.45914222</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>159.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>34.44851177</latitude>
+			<longitude>-084.45559050</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>339.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.45371111</latitude>
+			<longitude>-084.45627611</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.46020427</latitude>
+			<longitude>-084.45993851</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.44654276</latitude>
+			<longitude>-084.45479447</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

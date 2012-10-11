@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="9M4 ">
+		<linecode>1</linecode>
+		<elevation>552</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>9M4</identifier>
+		<name>ACKERMAN CHOCTAW CO</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>33.29940000</latitude>
+			<longitude>-089.22925300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>33.30751700</latitude_end>
+			<longitude_end>-089.22754700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.168288799</length-meters>
+			<length-feet>2786.38494426</length-feet>
+			<heading id="01 ">10.0093475745</heading>
+			<heading_end id="19 ">190.008410856</heading_end>
+			<threshold_lat id="01 ">33.2994</threshold_lat>
+			<threshold_lon id="01 ">-89.229253</threshold_lon>
+			<threshold_lat_end id="19 ">33.307517</threshold_lat_end>
+			<threshold_lon_end id="19 ">-89.227547</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>33.30122476</latitude>
+			<longitude>-089.22923497</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>9.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>33.30569224</latitude>
+			<longitude>-089.22756508</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>189.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.30358216</latitude>
+			<longitude>-089.22924713</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.29925053</latitude>
+			<longitude>-089.22965760</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.30766647</latitude>
+			<longitude>-089.22714236</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFQD">
+		<linecode>1</linecode>
+		<elevation>1078</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KFQD</identifier>
+		<name>RUTHERFORD CO  MARCHMAN FIELD</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>35.42142200</latitude>
+			<longitude>-081.93717200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>35.43468900</latitude_end>
+			<longitude_end>-081.93283100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1523.82563257</length-meters>
+			<length-feet>4644.62052808</length-feet>
+			<heading id="01 ">14.9939430868</heading>
+			<heading_end id="19 ">194.991426695</heading_end>
+			<threshold_lat id="01 ">35.421422</threshold_lat>
+			<threshold_lon id="01 ">-81.937172</threshold_lon>
+			<threshold_lat_end id="19 ">35.434689</threshold_lat_end>
+			<threshold_lon_end id="19 ">-81.932831</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>35.42324744</latitude>
+			<longitude>-081.93700044</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>14.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>35.43286357</latitude>
+			<longitude>-081.93300271</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>194.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.42830064</latitude>
+			<longitude>-081.93614101</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.42126295</latitude>
+			<longitude>-081.93774657</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.43484803</latitude>
+			<longitude>-081.93225632</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11827">118.27</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11940">119.4</frequency>
+			<description>RALEIGH APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

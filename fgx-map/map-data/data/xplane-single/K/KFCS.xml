@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFCS">
+		<linecode>1</linecode>
+		<elevation>5838</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KFCS</identifier>
+		<name>BUTTS AAF</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>38.68300000</latitude>
+			<longitude>-104.76202200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.40</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>38.67378900</latitude_end>
+			<longitude_end>-104.75113600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1393.85779784</length-meters>
+			<length-feet>4248.47856783</length-feet>
+			<heading id="13 ">137.190821868</heading>
+			<heading_end id="31 ">317.184018681</heading_end>
+			<threshold_lat id="13 ">38.683</threshold_lat>
+			<threshold_lon id="13 ">-104.762022</threshold_lon>
+			<threshold_lat_end id="31 ">38.673789</threshold_lat_end>
+			<threshold_lon_end id="31 ">-104.751136</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.67888306</latitude>
+			<longitude>-104.75590286</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.68335953</latitude>
+			<longitude>-104.76191149</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.67342948</latitude>
+			<longitude>-104.75124656</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12400">124.0</frequency>
+			<description>SPRINGS APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

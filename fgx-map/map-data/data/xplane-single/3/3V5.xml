@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="3V5 ">
+		<linecode>1</linecode>
+		<elevation>4939</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>3V5</identifier>
+		<name>FORT COLLINS DOWNTOWN</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>13.41</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>40.59288300</latitude>
+			<longitude>-105.04918100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>40.58378900</latitude_end>
+			<longitude_end>-105.03416700</longitude_end>
+			<threshold_end>124.36</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1623.36813492</length-meters>
+			<length-feet>4948.02607525</length-feet>
+			<heading id="11 ">128.472489331</heading>
+			<heading_end id="29 ">308.462720928</heading_end>
+			<threshold_lat id="11 ">40.592883</threshold_lat>
+			<threshold_lon id="11 ">-105.049181</threshold_lon>
+			<threshold_lat_end id="29 ">40.5844855765</threshold_lat_end>
+			<threshold_lon_end id="29 ">-105.035317177</threshold_lon_end>
+		</runway>
+		<runway end="29R" id="11L">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11L</number>
+			<latitude>40.59222200</latitude>
+			<longitude>-105.04583300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29R</number_end>
+			<latitude_end>40.58611100</latitude_end>
+			<longitude_end>-105.03611100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1066.70644706</length-meters>
+			<length-feet>3251.32125065</length-feet>
+			<heading id="11L">129.509651755</heading>
+			<heading_end id="29R">309.503326324</heading_end>
+			<threshold_lat id="11L">40.592222</threshold_lat>
+			<threshold_lon id="11L">-105.045833</threshold_lon>
+			<threshold_lat_end id="29R">40.586111</threshold_lat_end>
+			<threshold_lon_end id="29R">-105.036111</threshold_lon_end>
+		</runway>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>40.58540739</latitude>
+			<longitude>-105.03738375</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>308.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.59309979</latitude>
+			<longitude>-105.04915662</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.59246793</latitude>
+			<longitude>-105.04579941</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.58357221</latitude>
+			<longitude>-105.03419143</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.58586507</latitude>
+			<longitude>-105.03614463</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13485">134.85</frequency>
+			<description>DENVER APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

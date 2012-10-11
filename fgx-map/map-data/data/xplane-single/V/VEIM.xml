@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VEIM">
+		<linecode>1</linecode>
+		<elevation>2540</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VEIM</identifier>
+		<name>IMPHAL</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>24.74976400</latitude>
+			<longitude>093.88899200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>59.44</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>24.77013900</latitude_end>
+			<longitude_end>093.90440600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2743.05681019</length-meters>
+			<length-feet>8360.83715747</length-feet>
+			<heading id="04 ">34.6394378989</heading>
+			<heading_end id="22 ">214.632982246</heading_end>
+			<threshold_lat id="04 ">24.749764</threshold_lat>
+			<threshold_lon id="04 ">93.888992</threshold_lon>
+			<threshold_lat_end id="22 ">24.770139</threshold_lat_end>
+			<threshold_lon_end id="22 ">93.904406</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>24.75215988</latitude>
+			<longitude>093.89026850</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>34.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>24.76842848</latitude>
+			<longitude>093.90364747</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>214.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.76075418</latitude>
+			<longitude>093.89540633</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.74977415</latitude>
+			<longitude>093.88818620</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.77012877</latitude>
+			<longitude>093.90521194</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KLQK">
+		<linecode>1</linecode>
+		<elevation>1013</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KLQK</identifier>
+		<name>Pickens Co</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>34.80502206</latitude>
+			<longitude>-082.70865635</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>34.81492194</latitude_end>
+			<longitude_end>-082.69710565</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.19380471</length-meters>
+			<length-feet>4645.74271675</length-feet>
+			<heading id="05 ">43.9030570042</heading>
+			<heading_end id="23 ">223.896463212</heading_end>
+			<threshold_lat id="05 ">34.80502206</threshold_lat>
+			<threshold_lon id="05 ">-82.70865635</threshold_lon>
+			<threshold_lat_end id="23 ">34.81492194</threshold_lat_end>
+			<threshold_lon_end id="23 ">-82.69710565</threshold_lon_end>
+		</runway>
+		<lightingobject id="I-L">
+			<linecode>21</linecode>
+			<latitude>34.80644452</latitude>
+			<longitude>-082.70764718</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>41.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>I-L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="I-L">
+			<linecode>21</linecode>
+			<latitude>34.81348511</latitude>
+			<longitude>-082.69814999</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>221.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>I-L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>34.80889300</latitude>
+			<longitude>082.70134900</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>34.80934071</latitude>
+			<longitude>082.70170583</longitude>
+			<heading>13.67</heading>
+			<name>FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>34.80978683</latitude>
+			<longitude>082.70118204</longitude>
+			<heading>13.77</heading>
+			<name>Gen Avia Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>34.81432357</latitude>
+			<longitude>082.69665506</longitude>
+			<heading>41.91</heading>
+			<name>Hold Short Rwy23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>34.80466562</latitude>
+			<longitude>082.70800649</longitude>
+			<heading>75.93</heading>
+			<name>Hold Short Rwy5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>34.80748155</latitude>
+			<longitude>082.70358147</longitude>
+			<heading>18.99</heading>
+			<name>T-Hanger</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.80932454</latitude>
+			<longitude>-082.70103185</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.81126990</latitude>
+			<longitude>-082.70262799</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12000">120.0</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>GREER APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UKLU">
+		<linecode>1</linecode>
+		<elevation>383</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UKLU</identifier>
+		<name>UZHHOROD INTL</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>48.63639700</latitude>
+			<longitude>022.24987800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>48.63215800</latitude_end>
+			<longitude_end>022.27683300</longitude_end>
+			<threshold_end>537.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2041.9024802</length-meters>
+			<length-feet>6223.71875964</length-feet>
+			<heading id="10 ">103.357662291</heading>
+			<heading_end id="28 ">283.337432387</heading_end>
+			<threshold_lat id="10 ">48.636397</threshold_lat>
+			<threshold_lon id="10 ">22.249878</threshold_lon>
+			<threshold_lat_end id="28 ">48.6332737788</threshold_lat_end>
+			<threshold_lon_end id="28 ">22.2697311423</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.63550178</latitude>
+			<longitude>022.26379319</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.63700316</latitude>
+			<longitude>022.24953720</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.63155175</latitude>
+			<longitude>022.27717345</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13450">134.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

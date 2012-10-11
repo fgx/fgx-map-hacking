@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HSDZ">
+		<linecode>1</linecode>
+		<elevation>1582</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>HSDZ</identifier>
+		<name>DAMAZIN</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>11.79702200</latitude>
+			<longitude>034.33473600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>11.77475600</latitude_end>
+			<longitude_end>034.33857500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2498.36316196</length-meters>
+			<length-feet>7615.01091764</length-feet>
+			<heading id="17 ">170.359559766</heading>
+			<heading_end id="35 ">350.358775631</heading_end>
+			<threshold_lat id="17 ">11.797022</threshold_lat>
+			<threshold_lon id="17 ">34.334736</threshold_lon>
+			<threshold_lat_end id="35 ">11.774756</threshold_lat_end>
+			<threshold_lon_end id="35 ">34.338575</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>11.79531398</latitude>
+			<longitude>034.33544592</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>170.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>11.77646402</latitude>
+			<longitude>034.33786516</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>350.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>11.79752365</latitude>
+			<longitude>034.33528039</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>11.77425436</latitude>
+			<longitude>034.33803065</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

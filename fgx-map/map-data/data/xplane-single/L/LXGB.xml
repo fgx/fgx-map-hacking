@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LXGB">
+		<linecode>1</linecode>
+		<elevation>15</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LXGB</identifier>
+		<name>LXGB Gibraltar</name>
+		<runway end="27" id="9">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>9</number>
+			<latitude>36.15085840</latitude>
+			<longitude>-005.35982223</longitude>
+			<threshold>91.14</threshold>
+			<overrrun>15.85</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>36.15156048</latitude_end>
+			<longitude_end>-005.33950583</longitude_end>
+			<threshold_end>111.86</threshold_end>
+			<overrrun_end>27.13</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1829.95724351</length-meters>
+			<length-feet>5577.70967822</length-feet>
+			<heading id="9  ">87.5660866387</heading>
+			<heading_end id="27 ">267.554101623</heading_end>
+			<threshold_lat id="9  ">36.1508932766</threshold_lat>
+			<threshold_lon id="9  ">-5.35881038259</threshold_lon>
+			<threshold_lat_end id="27 ">36.1515174521</threshold_lat_end>
+			<threshold_lon_end id="27 ">-5.34074771216</threshold_lon_end>
+		</runway>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>36.15169147</latitude>
+			<longitude>-005.35670901</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>87.5</orientation>
+			<glideslope>4.90</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>36.15022775</latitude>
+			<longitude>-005.35661298</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>87.5</orientation>
+			<glideslope>4.90</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>36.15215475</latitude>
+			<longitude>-005.34281435</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>267.5</orientation>
+			<glideslope>4.90</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>36.15074850</latitude>
+			<longitude>-005.34274110</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>267.5</orientation>
+			<glideslope>4.90</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>36.15264013</latitude>
+			<longitude>005.34812130</longitude>
+			<height>81</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.15407257</latitude>
+			<longitude>005.34735948</longitude>
+			<heading>70.00</heading>
+			<name>Civil Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.15386397</latitude>
+			<longitude>005.34632869</longitude>
+			<heading>85.00</heading>
+			<name>GA Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.15383516</latitude>
+			<longitude>005.34559415</longitude>
+			<heading>10.00</heading>
+			<name>North Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.14948341</latitude>
+			<longitude>005.34748246</longitude>
+			<heading>25.00</heading>
+			<name>South Apron</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.15265725</latitude>
+			<longitude>-005.34974117</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.15227303</latitude>
+			<longitude>-005.35766828</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.15259687</latitude>
+			<longitude>-005.33955446</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock 2</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15200601</latitude>
+			<longitude>-005.34706808</longitude>
+			<orientation>360.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A1{@Y}{^u}A{^r}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15270383</latitude>
+			<longitude>-005.33995957</longitude>
+			<orientation>90.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B1{@Y}{^ru}27</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15234294</latitude>
+			<longitude>-005.34708612</longitude>
+			<orientation>270.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}09{@L}A{@Y}{^r}CIVIL_APRON</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15178067</latitude>
+			<longitude>-005.34648041</longitude>
+			<orientation>360.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}09{@L}A1{@Y}{^r}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15245624</latitude>
+			<longitude>-005.34618734</longitude>
+			<orientation>270.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}09{@L}B2{@Y}{^r}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15275930</latitude>
+			<longitude>-005.34666041</longitude>
+			<orientation>180.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}27{@L}A2{@Y}{^u}09</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15061674</latitude>
+			<longitude>-005.34734302</longitude>
+			<orientation>180.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}B{@L}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>36.15065806</latitude>
+			<longitude>-005.34615623</longitude>
+			<orientation>180.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}B{@L}D</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13120">131.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13040">130.4</frequency>
+			<description>RDR</description>
+		</atc>
+	</airport>
+</PropertyList>

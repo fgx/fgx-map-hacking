@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YNUM">
+		<linecode>1</linecode>
+		<elevation>31</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YNUM</identifier>
+		<name>Numbulwar</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-14.26439237</latitude>
+			<longitude>135.71161760</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-14.27468963</latitude_end>
+			<longitude_end>135.71782640</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1321.69716634</length-meters>
+			<length-feet>4028.53296301</length-feet>
+			<heading id="15 ">149.541474799</heading>
+			<heading_end id="33 ">329.543005168</heading_end>
+			<threshold_lat id="15 ">-14.26439237</threshold_lat>
+			<threshold_lon id="15 ">135.7116176</threshold_lon>
+			<threshold_lat_end id="33 ">-14.27468963</threshold_lat_end>
+			<threshold_lon_end id="33 ">135.7178264</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-14.27391800</latitude>
+			<longitude>135.71844500</longitude>
+			<height>5</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-14.27447400</latitude>
+			<longitude>135.71871900</longitude>
+			<heading>20.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-14.26925360</latitude>
+			<longitude>135.71522383</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-14.27360800</latitude>
+			<longitude>135.71815500</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,335 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDDP">
+		<linecode>1</linecode>
+		<elevation>464</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDDP</identifier>
+		<name>Leipzig-Halle</name>
+		<runway end="26R" id="08L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="2">Concrete shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08L</number>
+			<latitude>51.43124100</latitude>
+			<longitude>012.21582600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>26R</number_end>
+			<latitude_end>51.43364800</latitude_end>
+			<longitude_end>012.26744500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3599.72163983</length-meters>
+			<length-feet>10971.9515582</length-feet>
+			<heading id="08L">85.7538272566</heading>
+			<heading_end id="26R">265.713467721</heading_end>
+			<threshold_lat id="08L">51.431241</threshold_lat>
+			<threshold_lon id="08L">12.215826</threshold_lon>
+			<threshold_lat_end id="26R">51.433648</threshold_lat_end>
+			<threshold_lon_end id="26R">12.267445</threshold_lon_end>
+		</runway>
+		<runway end="26L" id="08R">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="2">Concrete shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08R</number>
+			<latitude>51.41160800</latitude>
+			<longitude>012.20464800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26L</number_end>
+			<latitude_end>51.41402600</latitude_end>
+			<longitude_end>012.25624700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3599.95894655</length-meters>
+			<length-feet>10972.6748691</length-feet>
+			<heading id="08R">85.7345778239</heading>
+			<heading_end id="26L">265.694244948</heading_end>
+			<threshold_lat id="08R">51.411608</threshold_lat>
+			<threshold_lon id="08R">12.204648</threshold_lon>
+			<threshold_lat_end id="26L">51.414026</threshold_lat_end>
+			<threshold_lon_end id="26L">12.256247</threshold_lon_end>
+		</runway>
+		<lightingobject id="08L">
+			<linecode>21</linecode>
+			<latitude>51.43206646</latitude>
+			<longitude>012.22071994</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>85.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="08R">
+			<linecode>21</linecode>
+			<latitude>51.41250519</latitude>
+			<longitude>012.20971461</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>85.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26L">
+			<linecode>21</linecode>
+			<latitude>51.41307368</latitude>
+			<longitude>012.25020598</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26R">
+			<linecode>21</linecode>
+			<latitude>51.43301126</latitude>
+			<longitude>012.26227749</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.42159200</latitude>
+			<longitude>012.23447300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Leipzig-Halle Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40761100</latitude>
+			<longitude>012.19806700</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 201</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40767100</latitude>
+			<longitude>012.19951900</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 203</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40773500</latitude>
+			<longitude>012.20096700</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 205</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40785700</latitude>
+			<longitude>012.20385200</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 209</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40778500</latitude>
+			<longitude>012.20240400</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 209</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.40791300</latitude>
+			<longitude>012.20529000</longitude>
+			<heading>80.00</heading>
+			<name>Cargo Ramp 211</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.42050900</latitude>
+			<longitude>012.21240400</longitude>
+			<heading>15.00</heading>
+			<name>Gate 101</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.42011900</latitude>
+			<longitude>012.21361600</longitude>
+			<heading>15.00</heading>
+			<name>Gate 103</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41996200</latitude>
+			<longitude>012.21442900</longitude>
+			<heading>16.37</heading>
+			<name>Gate 105</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41980600</latitude>
+			<longitude>012.21525000</longitude>
+			<heading>15.00</heading>
+			<name>Gate 107</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41955700</latitude>
+			<longitude>012.21679400</longitude>
+			<heading>17.25</heading>
+			<name>Gate 126</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41943000</latitude>
+			<longitude>012.21749800</longitude>
+			<heading>15.00</heading>
+			<name>Gate 128</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41931700</latitude>
+			<longitude>012.21821000</longitude>
+			<heading>14.50</heading>
+			<name>Gate 130</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41919900</latitude>
+			<longitude>012.21891000</longitude>
+			<heading>15.00</heading>
+			<name>Gate 132</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41908000</latitude>
+			<longitude>012.21960400</longitude>
+			<heading>15.00</heading>
+			<name>Gate 134</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41895500</latitude>
+			<longitude>012.22032100</longitude>
+			<heading>15.00</heading>
+			<name>Gate 136</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41877900</latitude>
+			<longitude>012.22129600</longitude>
+			<heading>15.91</heading>
+			<name>Gate 137</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41868000</latitude>
+			<longitude>012.22188700</longitude>
+			<heading>14.70</heading>
+			<name>Gate 139</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.41855800</latitude>
+			<longitude>012.22250800</longitude>
+			<heading>15.00</heading>
+			<name>Gate 141</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.43323900</latitude>
+			<longitude>012.24148600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.41254159</latitude>
+			<longitude>012.25112064</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.41259459</latitude>
+			<longitude>012.21030760</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.43272171</latitude>
+			<longitude>012.26559822</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.43210717</latitude>
+			<longitude>012.22147671</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12052">120.52</frequency>
+			<description>EDDP ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>LEIPZIG GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>LEIPZIG TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>LEIPZIG TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>LEIPZIG APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12417">124.17</frequency>
+			<description>LEIPZIG APP</description>
+		</atc>
+	</airport>
+</PropertyList>

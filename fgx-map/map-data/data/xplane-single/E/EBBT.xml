@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EBBT">
+		<linecode>1</linecode>
+		<elevation>76</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EBBT</identifier>
+		<name>Brasschaat</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>51.34496317</latitude>
+			<longitude>004.50165250</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>51.33704283</latitude_end>
+			<longitude_end>004.50434750</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>900.964439679</length-meters>
+			<length-feet>2746.13961214</length-feet>
+			<heading id="17 ">167.970389458</heading>
+			<heading_end id="35 ">347.968284993</heading_end>
+			<threshold_lat id="17 ">51.34496317</threshold_lat>
+			<threshold_lon id="17 ">4.5016525</threshold_lon>
+			<threshold_lat_end id="35 ">51.33704283</threshold_lat_end>
+			<threshold_lon_end id="35 ">4.5043475</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.33320600</latitude>
+			<longitude>004.50216400</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.33433900</latitude>
+			<longitude>004.50514200</longitude>
+			<heading>60.00</heading>
+			<name>Custom Starting Position</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.34120260</latitude>
+			<longitude>004.50450337</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.33723800</latitude>
+			<longitude>004.50379100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.33383600</latitude>
+			<longitude>004.50235000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.34411600</latitude>
+			<longitude>004.50246800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>Brasschaat Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12250">122.5</frequency>
+			<description>Brasschaat Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

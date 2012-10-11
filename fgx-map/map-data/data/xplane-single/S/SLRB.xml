@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SLRB">
+		<linecode>1</linecode>
+		<elevation>906</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SLRB</identifier>
+		<name>Robore</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>-18.31381696</latitude>
+			<longitude>-059.76750115</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>-18.32396224</latitude_end>
+			<longitude_end>-059.76361145</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1195.83848193</length-meters>
+			<length-feet>3644.91569294</length-feet>
+			<heading id="17 ">159.887636353</heading>
+			<heading_end id="35 ">339.888858907</heading_end>
+			<threshold_lat id="17 ">-18.31381696</threshold_lat>
+			<threshold_lon id="17 ">-59.76750115</threshold_lon>
+			<threshold_lat_end id="35 ">-18.32396224</threshold_lat_end>
+			<threshold_lon_end id="35 ">-59.76361145</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>-18.31542352</latitude>
+			<longitude>-059.76660747</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>160.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>-18.32235569</latitude>
+			<longitude>-059.76450522</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>340.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-18.31870572</latitude>
+			<longitude>-059.76502419</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-18.31359382</latitude>
+			<longitude>-059.76732842</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-18.32418539</latitude>
+			<longitude>-059.76378419</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

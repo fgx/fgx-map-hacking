@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBRP">
+		<linecode>1</linecode>
+		<elevation>1802</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SBRP</identifier>
+		<name>LEITE LOPES</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-21.12508300</latitude>
+			<longitude>-047.77709200</longitude>
+			<threshold>200.25</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-21.14325000</latitude_end>
+			<longitude_end>-047.77128600</longitude_end>
+			<threshold_end>99.97</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2099.90131293</length-meters>
+			<length-feet>6400.49920181</length-feet>
+			<heading id="18 ">163.308002363</heading>
+			<heading_end id="36 ">343.310095735</heading_end>
+			<threshold_lat id="18 ">-21.1268154259</threshold_lat>
+			<threshold_lon id="18 ">-47.776538324</threshold_lon>
+			<threshold_lat_end id="36 ">-21.1423851196</threshold_lat_end>
+			<threshold_lon_end id="36 ">-47.7715624046</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-21.12843330</latitude>
+			<longitude>-047.77562349</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>163.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>-21.14075687</latitude>
+			<longitude>-047.77245064</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>343.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-21.13385013</latitude>
+			<longitude>-047.77305687</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-21.12464593</latitude>
+			<longitude>-047.77670389</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-21.14368709</latitude>
+			<longitude>-047.77167414</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12742">127.42</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>RIBEIRAO RDO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>RIBEIRAO TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11955">119.55</frequency>
+			<description>RIBEIRAO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

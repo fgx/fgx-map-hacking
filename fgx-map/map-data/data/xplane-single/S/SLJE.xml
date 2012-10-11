@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SLJE">
+		<linecode>1</linecode>
+		<elevation>974</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SLJE</identifier>
+		<name>San Jose De Chiquitos</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>-17.81153362</latitude>
+			<longitude>-060.80147296</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>-17.82180158</latitude_end>
+			<longitude_end>-060.79796864</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1195.62283218</length-meters>
+			<length-feet>3644.2583925</length-feet>
+			<heading id="17 ">161.896704523</heading>
+			<heading_end id="35 ">341.897776748</heading_end>
+			<threshold_lat id="17 ">-17.81153362</threshold_lat>
+			<threshold_lon id="17 ">-60.80147296</threshold_lon>
+			<threshold_lat_end id="35 ">-17.82180158</threshold_lat_end>
+			<threshold_lon_end id="35 ">-60.79796864</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>-17.81316882</latitude>
+			<longitude>-060.80064126</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>162.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>-17.82016639</latitude>
+			<longitude>-060.79880042</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>342.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-17.81650146</latitude>
+			<longitude>-060.79918378</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-17.81131633</latitude>
+			<longitude>-060.80129265</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-17.82201887</latitude>
+			<longitude>-060.79814896</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

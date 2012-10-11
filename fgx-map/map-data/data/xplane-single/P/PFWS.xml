@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PFWS">
+		<linecode>1</linecode>
+		<elevation>130</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PFWS</identifier>
+		<name>South Naknek Nr 2</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>58.70578098</latitude>
+			<longitude>-157.01190647</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>58.70109124</latitude_end>
+			<longitude_end>-157.00459577</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>672.674576133</length-meters>
+			<length-feet>2050.31210805</length-feet>
+			<heading id="12 ">140.952219538</heading>
+			<heading_end id="30 ">320.945972619</heading_end>
+			<threshold_lat id="12 ">58.70578098</threshold_lat>
+			<threshold_lon id="12 ">-157.01190647</threshold_lon>
+			<threshold_lat_end id="30 ">58.70109124</threshold_lat_end>
+			<threshold_lon_end id="30 ">-157.00459577</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>58.70453306</latitude>
+			<longitude>-157.00936732</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>141.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>58.70233930</latitude>
+			<longitude>-157.00713434</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>321.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>58.70373820</latitude>
+			<longitude>-157.00753275</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.70601703</latitude>
+			<longitude>-157.01176486</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>58.70085519</latitude>
+			<longitude>-157.00473740</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

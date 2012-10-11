@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UUDL">
+		<linecode>1</linecode>
+		<elevation>305</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UUDL</identifier>
+		<name>TUNOSHNA</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>43.89</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>57.55461900</latitude>
+			<longitude>040.13489700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>48.77</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>57.56671700</latitude_end>
+			<longitude_end>040.17983600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>45.72</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3008.42063111</length-meters>
+			<length-feet>9169.66608363</length-feet>
+			<heading id="05 ">63.4124671883</heading>
+			<heading_end id="23 ">243.374540474</heading_end>
+			<threshold_lat id="05 ">57.554619</threshold_lat>
+			<threshold_lon id="05 ">40.134897</threshold_lon>
+			<threshold_lat_end id="23 ">57.566717</threshold_lat_end>
+			<threshold_lon_end id="23 ">40.179836</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>57.55578026</latitude>
+			<longitude>040.13756402</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>63.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>57.56495596</latitude>
+			<longitude>040.17493298</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>243.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>57.56190690</latitude>
+			<longitude>040.15620047</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.55497116</latitude>
+			<longitude>040.13374340</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.56636444</latitude>
+			<longitude>040.18098956</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12735">127.35</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

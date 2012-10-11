@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KGSB">
+		<linecode>1</linecode>
+		<elevation>110</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KGSB</identifier>
+		<name>Seymour Johnson AFB</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>91.44</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>35.33468600</latitude>
+			<longitude>-077.97945300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>35.34407500</latitude_end>
+			<longitude_end>-077.94172500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3584.53531539</length-meters>
+			<length-feet>10925.6636413</length-feet>
+			<heading id="08 ">73.1168048506</heading>
+			<heading_end id="26 ">253.094982279</heading_end>
+			<threshold_lat id="08 ">35.334686</threshold_lat>
+			<threshold_lon id="08 ">-77.979453</threshold_lon>
+			<threshold_lat_end id="26 ">35.344075</threshold_lat_end>
+			<threshold_lon_end id="26 ">-77.941725</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>35.33604448</latitude>
+			<longitude>-077.97655679</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>73.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>35.34260144</latitude>
+			<longitude>-077.94508858</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>253.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>35.34404000</latitude>
+			<longitude>077.95980100</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.34709500</latitude>
+			<longitude>077.95029400</longitude>
+			<heading>0.00</heading>
+			<name>East Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.34397100</latitude>
+			<longitude>077.94912000</longitude>
+			<heading>50.00</heading>
+			<name>Hot Cargo</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.34042700</latitude>
+			<longitude>077.97871400</longitude>
+			<heading>38.00</heading>
+			<name>Shelter</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.34305200</latitude>
+			<longitude>077.96642300</longitude>
+			<heading>30.00</heading>
+			<name>West Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.34633600</latitude>
+			<longitude>-077.96527900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.33588800</latitude>
+			<longitude>-077.97841600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.34466200</latitude>
+			<longitude>-077.94346600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12802">128.02</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12625">126.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12370">123.7</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>DEP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12370">123.7</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

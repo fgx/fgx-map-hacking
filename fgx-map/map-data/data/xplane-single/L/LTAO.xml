@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LTAO">
+		<linecode>1</linecode>
+		<elevation>3016</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LTAO</identifier>
+		<name>TULGA</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>41.15</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>38.34674700</latitude>
+			<longitude>038.24430600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>38.36074700</latitude_end>
+			<longitude_end>038.26358300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2292.20740304</length-meters>
+			<length-feet>6986.64816445</length-feet>
+			<heading id="04 ">47.3208795932</heading>
+			<heading_end id="22 ">227.308917927</heading_end>
+			<threshold_lat id="04 ">38.346747</threshold_lat>
+			<threshold_lon id="04 ">38.244306</threshold_lon>
+			<threshold_lat_end id="22 ">38.360747</threshold_lat_end>
+			<threshold_lon_end id="22 ">38.263583</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.35469620</latitude>
+			<longitude>038.25281877</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.34690185</latitude>
+			<longitude>038.24347951</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.36059203</latitude>
+			<longitude>038.26440961</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12600">126.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12710">127.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

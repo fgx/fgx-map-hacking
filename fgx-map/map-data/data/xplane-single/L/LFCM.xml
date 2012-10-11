@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFCM">
+		<linecode>1</linecode>
+		<elevation>2606</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFCM</identifier>
+		<name>Millau Larzac</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>43.99539400</latitude>
+			<longitude>003.17653300</longitude>
+			<threshold>380.09</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>43.98328900</latitude_end>
+			<longitude_end>003.18946400</longitude_end>
+			<threshold_end>500.18</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1698.56191326</length-meters>
+			<length-feet>5177.21671162</length-feet>
+			<heading id="14 ">142.363496315</heading>
+			<heading_end id="32 ">322.354515418</heading_end>
+			<threshold_lat id="14 ">43.9926850461</threshold_lat>
+			<threshold_lon id="14 ">3.17942645957</threshold_lon>
+			<threshold_lat_end id="32 ">43.986853315</threshold_lat_end>
+			<threshold_lon_end id="32 ">3.18565594652</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>43.99145771</latitude>
+			<longitude>003.18132167</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>142.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>43.98808277</latitude>
+			<longitude>003.18376176</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>322.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>43.99080000</latitude>
+			<longitude>003.17789100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>43.98758200</latitude>
+			<longitude>003.18206800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.98967400</latitude>
+			<longitude>003.18359100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.99472100</latitude>
+			<longitude>003.17806700</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.98454400</latitude>
+			<longitude>003.18893200</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12080">120.8</frequency>
+			<description>MILLAU INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

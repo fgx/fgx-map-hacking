@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="3T5 ">
+		<linecode>1</linecode>
+		<elevation>324</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>3T5</identifier>
+		<name>FAYETTE RGNL AIR CNTR</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>29.91453900</latitude>
+			<longitude>-096.95238900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>29.90141700</latitude_end>
+			<longitude_end>-096.94763600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1525.29333549</length-meters>
+			<length-feet>4649.09408656</length-feet>
+			<heading id="16 ">162.487113247</heading>
+			<heading_end id="34 ">342.484743361</heading_end>
+			<threshold_lat id="16 ">29.914539</threshold_lat>
+			<threshold_lon id="16 ">-96.952389</threshold_lon>
+			<threshold_lat_end id="34 ">29.901417</threshold_lat_end>
+			<threshold_lon_end id="34 ">-96.947636</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>29.91291194</latitude>
+			<longitude>-096.95143578</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>162.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>29.90304409</latitude>
+			<longitude>-096.94858903</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>342.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>29.90819348</latitude>
+			<longitude>-096.94922125</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.91482731</latitude>
+			<longitude>-096.95212194</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.90112870</latitude>
+			<longitude>-096.94790303</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12417">124.17</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

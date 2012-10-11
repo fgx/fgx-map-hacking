@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCRW">
+		<linecode>1</linecode>
+		<elevation>981</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCRW</identifier>
+		<name>Yeager</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>38.36957800</latitude>
+			<longitude>-081.60170000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>38.38135000</latitude_end>
+			<longitude_end>-081.58558900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1920.81281433</length-meters>
+			<length-feet>5854.63745809</length-feet>
+			<heading id="05 ">47.1376933219</heading>
+			<heading_end id="23 ">227.127691418</heading_end>
+			<threshold_lat id="05 ">38.369578</threshold_lat>
+			<threshold_lon id="05 ">-81.6017</threshold_lon>
+			<threshold_lat_end id="23 ">38.38135</threshold_lat_end>
+			<threshold_lon_end id="23 ">-81.585589</threshold_lon_end>
+		</runway>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>38.37517200</latitude>
+			<longitude>-081.59775800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>38.36498100</latitude_end>
+			<longitude_end>-081.58741400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1448.04334406</length-meters>
+			<length-feet>4413.63611271</length-feet>
+			<heading id="15 ">141.375380208</heading>
+			<heading_end id="33 ">321.36895929</heading_end>
+			<threshold_lat id="15 ">38.375172</threshold_lat>
+			<threshold_lon id="15 ">-81.597758</threshold_lon>
+			<threshold_lat_end id="33 ">38.364981</threshold_lat_end>
+			<threshold_lon_end id="33 ">-81.587414</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>38.37205146</latitude>
+			<longitude>-081.59902039</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>47.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>38.37401513</latitude>
+			<longitude>-081.59592541</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>141.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>38.37945396</latitude>
+			<longitude>-081.58747967</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>227.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>38.36615485</latitude>
+			<longitude>-081.58921925</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>321.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.37054100</latitude>
+			<longitude>081.59618100</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.36463900</latitude>
+			<longitude>081.58950100</longitude>
+			<heading>21.30</heading>
+			<name>Executive Air FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.36328900</latitude>
+			<longitude>081.58776200</longitude>
+			<heading>51.30</heading>
+			<name>Gen Avia Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.37522200</latitude>
+			<longitude>081.59676700</longitude>
+			<heading>21.30</heading>
+			<name>Hold Short Rwy15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.38044600</latitude>
+			<longitude>081.58580000</longitude>
+			<heading>47.00</heading>
+			<name>Hold Short Rwy23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.36465300</latitude>
+			<longitude>081.58803800</longitude>
+			<heading>51.30</heading>
+			<name>Hold Short Rwy33</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.37048400</latitude>
+			<longitude>081.59917800</longitude>
+			<heading>05.50</heading>
+			<name>Hold Short Rwy5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.37097000</latitude>
+			<longitude>081.59752500</longitude>
+			<heading>0.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.37276500</latitude>
+			<longitude>081.59284200</longitude>
+			<heading>31.30</heading>
+			<name>West VA ANG</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.37023800</latitude>
+			<longitude>-081.59654300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.36994800</latitude>
+			<longitude>-081.60030000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.38097500</latitude>
+			<longitude>-081.58716100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.37413000</latitude>
+			<longitude>-081.59757100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.36558300</latitude>
+			<longitude>-081.58712900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12760">127.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="11855">118.55</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12570">125.7</frequency>
+			<description>CHARLESTON TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>CHARLESTON APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>CHARLESTON APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12410">124.1</frequency>
+			<description>CHARLESTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

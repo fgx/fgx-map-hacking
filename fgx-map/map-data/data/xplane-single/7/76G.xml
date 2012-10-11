@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="76G ">
+		<linecode>1</linecode>
+		<elevation>613</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>76G</identifier>
+		<name>MARINE CITY</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>42.71630000</latitude>
+			<longitude>-082.59970000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>121.92</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>42.72346700</latitude_end>
+			<longitude_end>-082.59348900</longitude_end>
+			<threshold_end>89.92</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>944.826311137</length-meters>
+			<length-feet>2879.83059635</length-feet>
+			<heading id="04 ">32.5805629865</heading>
+			<heading_end id="22 ">212.576349353</heading_end>
+			<threshold_lat id="04 ">42.7163</threshold_lat>
+			<threshold_lon id="04 ">-82.5997</threshold_lon>
+			<threshold_lat_end id="22 ">42.7227848928</threshold_lat_end>
+			<threshold_lon_end id="22 ">-82.5940801002</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>42.71796880</latitude>
+			<longitude>-082.59870622</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>32.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>42.72111570</latitude>
+			<longitude>-082.59507467</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>212.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.72019122</latitude>
+			<longitude>-082.59725774</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.71629375</latitude>
+			<longitude>-082.60010374</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.72347324</latitude>
+			<longitude>-082.59308522</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

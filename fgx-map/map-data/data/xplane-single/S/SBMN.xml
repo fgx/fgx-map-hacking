@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBMN">
+		<linecode>1</linecode>
+		<elevation>267</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SBMN</identifier>
+		<name>PONTA PELADA</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>-03.14856700</latitude>
+			<longitude>-059.99644200</longitude>
+			<threshold>89.92</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>-03.14351700</latitude_end>
+			<longitude_end>-059.97616100</longitude_end>
+			<threshold_end>99.06</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2322.42467504</length-meters>
+			<length-feet>7078.75040951</length-feet>
+			<heading id="09 ">76.0865973422</heading>
+			<heading_end id="27 ">256.087710388</heading_end>
+			<threshold_lat id="09 ">-3.14837146536</threshold_lat>
+			<threshold_lon id="09 ">-59.9956567572</threshold_lon>
+			<threshold_lat_end id="27 ">-3.14373239237</threshold_lat_end>
+			<threshold_lon_end id="27 ">-59.9770260598</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>-03.14757287</latitude>
+			<longitude>-059.99399729</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>76.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>-03.14453108</latitude>
+			<longitude>-059.97868565</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>256.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-03.14466369</latitude>
+			<longitude>-059.98664674</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.14807438</latitude>
+			<longitude>-059.99698405</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.14400962</latitude>
+			<longitude>-059.97561894</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12765">127.65</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>MANAUS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>MANAUS APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>MANAUS APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12040">120.4</frequency>
+			<description>MANAUS APP</description>
+		</atc>
+	</airport>
+</PropertyList>

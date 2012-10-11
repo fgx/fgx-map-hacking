@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="1V0 ">
+		<linecode>1</linecode>
+		<elevation>6475</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>1V0</identifier>
+		<name>NAVAJO LAKE</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>36.80611100</latitude>
+			<longitude>-107.65945000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>36.81055600</latitude_end>
+			<longitude_end>-107.64333100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1520.60512409</length-meters>
+			<length-feet>4634.80441822</length-feet>
+			<heading id="06 ">71.0757853649</heading>
+			<heading_end id="24 ">251.066127826</heading_end>
+			<threshold_lat id="06 ">36.806111</threshold_lat>
+			<threshold_lon id="06 ">-107.65945</threshold_lon>
+			<threshold_lat_end id="24 ">36.810556</threshold_lat_end>
+			<threshold_lon_end id="24 ">-107.643331</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>36.80693673</latitude>
+			<longitude>-107.65742770</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>70.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>36.80973054</latitude>
+			<longitude>-107.64535360</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>251.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.80629079</latitude>
+			<longitude>-107.65974477</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.81037616</latitude>
+			<longitude>-107.64303625</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

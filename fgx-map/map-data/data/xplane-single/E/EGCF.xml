@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGCF">
+		<linecode>1</linecode>
+		<elevation>11</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGCF</identifier>
+		<name>Sandtoft</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>53.55686100</latitude>
+			<longitude>-000.86311900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>53.56252865</latitude_end>
+			<longitude_end>-000.85377846</longitude_end>
+			<threshold_end>191.11</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>883.746021096</length-meters>
+			<length-feet>2693.6578723</length-feet>
+			<heading id="05 ">44.4612900257</heading>
+			<heading_end id="23 ">224.453775784</heading_end>
+			<threshold_lat id="05 ">53.556861</threshold_lat>
+			<threshold_lon id="05 ">-0.863119</threshold_lon>
+			<threshold_lat_end id="23 ">53.5613029257</threshold_lat_end>
+			<threshold_lon_end id="23 ">-0.855798292569</threshold_lon_end>
+		</runway>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>53.56080300</latitude>
+			<longitude>-000.85612214</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>224.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.56168135</latitude>
+			<longitude>000.85381563</longitude>
+			<height>25</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.56160200</latitude>
+			<longitude>-000.85276400</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>Civilian Ident Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.55976719</latitude>
+			<longitude>-000.85941654</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="13042">130.42</frequency>
+			<description>RADIO</description>
+		</atc>
+	</airport>
+</PropertyList>

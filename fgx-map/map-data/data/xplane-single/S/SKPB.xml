@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKPB">
+		<linecode>1</linecode>
+		<elevation>90</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SKPB</identifier>
+		<name>PUERTO BOLIVAR</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>12.22051900</latitude>
+			<longitude>-071.99253900</longitude>
+			<threshold>105.16</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>12.22244400</latitude_end>
+			<longitude_end>-071.97709400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1694.05361859</length-meters>
+			<length-feet>5163.47542946</length-feet>
+			<heading id="09 ">82.7801544704</heading>
+			<heading_end id="27 ">262.776884899</heading_end>
+			<threshold_lat id="09 ">12.2206384676</threshold_lat>
+			<threshold_lon id="09 ">-71.9915802364</threshold_lon>
+			<threshold_lat_end id="27 ">12.222444</threshold_lat_end>
+			<threshold_lon_end id="27 ">-71.977094</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>12.22126421</latitude>
+			<longitude>-071.98980364</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>82.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>12.22289086</latitude>
+			<longitude>-071.98500286</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.22107168</latitude>
+			<longitude>-071.99302987</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.22189129</latitude>
+			<longitude>-071.97660316</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

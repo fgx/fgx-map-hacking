@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SLLP">
+		<linecode>1</linecode>
+		<elevation>13313</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SLLP</identifier>
+		<name>La Paz</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-16.51274400</latitude>
+			<longitude>-068.21097500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-16.51393100</latitude_end>
+			<longitude_end>-068.17353600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3999.02714039</length-meters>
+			<length-feet>12189.0347239</length-feet>
+			<heading id="10 ">91.8770433473</heading>
+			<heading_end id="28 ">271.887684954</heading_end>
+			<threshold_lat id="10 ">-16.512744</threshold_lat>
+			<threshold_lon id="10 ">-68.210975</threshold_lon>
+			<threshold_lat_end id="28 ">-16.513931</threshold_lat_end>
+			<threshold_lon_end id="28 ">-68.173536</threshold_lon_end>
+		</runway>
+		<runway end="28R" id="10L">
+			<linecode>100</linecode>
+			<width>91.44</width>
+			<surface code="4">Dirt (brown)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10L</number>
+			<latitude>-16.50413900</latitude>
+			<longitude>-068.19836100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="0">No runway markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28R</number_end>
+			<latitude_end>-16.50661100</latitude_end>
+			<longitude_end>-068.17933300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2049.78875231</length-meters>
+			<length-feet>6247.75611703</length-feet>
+			<heading id="10L">97.6667767532</heading>
+			<heading_end id="28R">277.672182709</heading_end>
+			<threshold_lat id="10L">-16.504139</threshold_lat>
+			<threshold_lon id="10L">-68.198361</threshold_lon>
+			<threshold_lat_end id="28R">-16.506611</threshold_lat_end>
+			<threshold_lon_end id="28R">-68.179333</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-16.51243581</latitude>
+			<longitude>-068.20792051</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>91.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-16.51427654</latitude>
+			<longitude>-068.17542619</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>271.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-16.50833100</latitude>
+			<longitude>068.17757300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-16.50976000</latitude>
+			<longitude>068.17761800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-16.50899000</latitude>
+			<longitude>-068.18936300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.51253300</latitude>
+			<longitude>-068.17826700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>LA PAZ TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>LA PAZ APP</description>
+		</atc>
+	</airport>
+</PropertyList>

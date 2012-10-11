@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SE4 ">
+		<linecode>1</linecode>
+		<elevation>221</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SE4</identifier>
+		<name>Lachute</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>45.63972200</latitude>
+			<longitude>-074.37750000</longitude>
+			<threshold>272.80</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>45.63805600</latitude_end>
+			<longitude_end>-074.36194400</longitude_end>
+			<threshold_end>64.01</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1226.8874758</length-meters>
+			<length-feet>3739.55302624</length-feet>
+			<heading id="10 ">98.6860182825</heading>
+			<heading_end id="28 ">278.674896561</heading_end>
+			<threshold_lat id="10 ">45.639351275</threshold_lat>
+			<threshold_lon id="10 ">-74.3740411263</threshold_lon>
+			<threshold_lat_end id="28 ">45.6381428615</threshold_lat_end>
+			<threshold_lon_end id="28 ">-74.3627555994</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.63983881</latitude>
+			<longitude>-074.36951677</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.64017022</latitude>
+			<longitude>-074.37779875</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.63760774</latitude>
+			<longitude>-074.36164538</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="13285">132.85</frequency>
+			<description>MONTREAL DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

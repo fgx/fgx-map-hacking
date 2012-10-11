@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UMOO">
+		<linecode>1</linecode>
+		<elevation>636</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>UMOO</identifier>
+		<name>Mogilev</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>42.06</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>53.96378000</latitude>
+			<longitude>030.08097000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>53.94681100</latitude_end>
+			<longitude_end>030.10808400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2595.26516308</length-meters>
+			<length-feet>7910.36821707</length-feet>
+			<heading id="13 ">136.709581478</heading>
+			<heading_end id="31 ">316.687658232</heading_end>
+			<threshold_lat id="13 ">53.96378</threshold_lat>
+			<threshold_lon id="13 ">30.08097</threshold_lon>
+			<threshold_lat_end id="31 ">53.946811</threshold_lat_end>
+			<threshold_lon_end id="31 ">30.108084</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.95905180</latitude>
+			<longitude>030.09753090</longitude>
+			<height>49</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.95952874</latitude>
+			<longitude>030.09451285</longitude>
+			<heading>29.21</heading>
+			<name>Ramp Start 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.95899887</latitude>
+			<longitude>030.09523884</longitude>
+			<heading>27.99</heading>
+			<name>Ramp Start 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.95833600</latitude>
+			<longitude>030.09619514</longitude>
+			<heading>27.19</heading>
+			<name>Ramp Start 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.96006792</latitude>
+			<longitude>030.09060319</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.95507042</latitude>
+			<longitude>030.09250173</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>53.95593441</latitude>
+			<longitude>030.09554622</longitude>
+			<orientation>227.78</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}A{@R}31-13</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>53.95676605</latitude>
+			<longitude>030.09429484</longitude>
+			<orientation>230.77</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}A{@R}31-13</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>53.95675999</latitude>
+			<longitude>030.09428173</longitude>
+			<orientation>50.24</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}31-13{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>53.95592902</latitude>
+			<longitude>030.09553522</longitude>
+			<orientation>47.84</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}31-13{@L}A</text>
+		</sign>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12710">127.1</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

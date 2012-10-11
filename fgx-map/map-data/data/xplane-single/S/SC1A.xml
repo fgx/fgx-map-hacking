@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SC1A">
+		<linecode>1</linecode>
+		<elevation>3251</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SC1A</identifier>
+		<name>CANCHONES WEST</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>-20.42896700</latitude>
+			<longitude>-069.65616900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>-20.42520600</latitude_end>
+			<longitude_end>-069.62675000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3098.33013137</length-meters>
+			<length-feet>9443.71024042</length-feet>
+			<heading id="08 ">82.2716215594</heading>
+			<heading_end id="26 ">262.281889235</heading_end>
+			<threshold_lat id="08 ">-20.428967</threshold_lat>
+			<threshold_lon id="08 ">-69.656169</threshold_lon>
+			<threshold_lat_end id="26 ">-20.425206</threshold_lat_end>
+			<threshold_lon_end id="26 ">-69.62675</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>-20.42575203</latitude>
+			<longitude>-069.62860887</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>262.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-20.42615586</latitude>
+			<longitude>-069.64159745</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-20.42860379</latitude>
+			<longitude>-069.65651134</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-20.42556915</latitude>
+			<longitude>-069.62640759</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

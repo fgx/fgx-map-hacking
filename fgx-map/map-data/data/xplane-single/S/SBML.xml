@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBML">
+		<linecode>1</linecode>
+		<elevation>2122</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SBML</identifier>
+		<name>MARILIA</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>-22.20429400</latitude>
+			<longitude>-049.92829200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>-22.18948600</latitude_end>
+			<longitude_end>-049.92450600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1685.56943722</length-meters>
+			<length-feet>5137.61564466</length-feet>
+			<heading id="02 ">13.3916446553</heading>
+			<heading_end id="20 ">193.39307497</heading_end>
+			<threshold_lat id="02 ">-22.204294</threshold_lat>
+			<threshold_lon id="02 ">-49.928292</threshold_lon>
+			<threshold_lat_end id="20 ">-22.189486</threshold_lat_end>
+			<threshold_lon_end id="20 ">-49.924506</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-22.19663828</latitude>
+			<longitude>-049.92755828</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.20449227</latitude>
+			<longitude>-049.92886637</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.18928772</latitude>
+			<longitude>-049.92393170</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13045">130.45</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

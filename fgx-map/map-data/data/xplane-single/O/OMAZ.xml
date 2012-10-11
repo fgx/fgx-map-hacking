@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OMAZ">
+		<linecode>1</linecode>
+		<elevation>14</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OMAZ</identifier>
+		<name>ZIRKU</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>24.86519400</latitude>
+			<longitude>053.07347200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>24.85788900</latitude_end>
+			<longitude_end>053.08219400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1196.56365459</length-meters>
+			<length-feet>3647.12601921</length-feet>
+			<heading id="13 ">132.553436245</heading>
+			<heading_end id="31 ">312.549769281</heading_end>
+			<threshold_lat id="13 ">24.865194</threshold_lat>
+			<threshold_lon id="13 ">53.073472</threshold_lon>
+			<threshold_lat_end id="31 ">24.857889</threshold_lat_end>
+			<threshold_lon_end id="31 ">53.082194</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>24.86419764</latitude>
+			<longitude>053.07515800</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>132.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>24.85888545</latitude>
+			<longitude>053.08050817</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>312.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.86223328</latitude>
+			<longitude>053.07853620</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.86567261</latitude>
+			<longitude>053.07355572</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.85741038</latitude>
+			<longitude>053.08211026</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

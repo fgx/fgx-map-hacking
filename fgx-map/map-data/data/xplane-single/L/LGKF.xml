@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LGKF">
+		<linecode>1</linecode>
+		<elevation>59</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LGKF</identifier>
+		<name>Kefallinia</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>38.12917500</latitude>
+			<longitude>020.49278900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>54.86</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>38.11096400</latitude_end>
+			<longitude_end>020.50817200</longitude_end>
+			<threshold_end>277.98</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2430.15188767</length-meters>
+			<length-feet>7407.10295363</length-feet>
+			<heading id="14 ">146.288745998</heading>
+			<heading_end id="32 ">326.279249896</heading_end>
+			<threshold_lat id="14 ">38.129175</threshold_lat>
+			<threshold_lon id="14 ">20.492789</threshold_lon>
+			<threshold_lat_end id="32 ">38.1130469927</threshold_lat_end>
+			<threshold_lon_end id="32 ">20.5064123208</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.12015300</latitude>
+			<longitude>020.50317000</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.11968800</latitude>
+			<longitude>020.50222500</longitude>
+			<heading>26.00</heading>
+			<name>Start Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.12085818</latitude>
+			<longitude>020.50198514</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.11937100</latitude>
+			<longitude>020.50171900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12225">122.25</frequency>
+			<description>AFIS INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

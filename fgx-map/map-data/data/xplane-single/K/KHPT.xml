@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KHPT">
+		<linecode>1</linecode>
+		<elevation>1176</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KHPT</identifier>
+		<name>HAMPTON MUNI</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>42.72921100</latitude>
+			<longitude>-093.22628100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>42.71823900</latitude_end>
+			<longitude_end>-093.22638600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1218.88080574</length-meters>
+			<length-feet>3715.1486959</length-feet>
+			<heading id="17 ">-179.595770248</heading>
+			<heading_end id="35 ">360.404300991</heading_end>
+			<threshold_lat id="17 ">42.729211</threshold_lat>
+			<threshold_lon id="17 ">-93.226281</threshold_lon>
+			<threshold_lat_end id="35 ">42.718239</threshold_lat_end>
+			<threshold_lon_end id="35 ">-93.226386</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>42.72740907</latitude>
+			<longitude>-093.22588870</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>180.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>42.72004092</latitude>
+			<longitude>-093.22677826</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>0.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.72372012</latitude>
+			<longitude>-093.22535528</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.72941456</latitude>
+			<longitude>-093.22586082</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.71803544</latitude>
+			<longitude>-093.22680611</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

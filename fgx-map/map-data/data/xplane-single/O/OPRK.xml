@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OPRK">
+		<linecode>1</linecode>
+		<elevation>271</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OPRK</identifier>
+		<name>SHEIKH ZAYED</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>28.37079200</latitude>
+			<longitude>070.27571100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>149.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>28.39700800</latitude_end>
+			<longitude_end>070.28343300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>149.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3002.36432824</length-meters>
+			<length-feet>9151.20647247</length-feet>
+			<heading id="01 ">14.6025736977</heading>
+			<heading_end id="19 ">194.598902836</heading_end>
+			<threshold_lat id="01 ">28.370792</threshold_lat>
+			<threshold_lon id="01 ">70.275711</threshold_lon>
+			<threshold_lat_end id="19 ">28.397008</threshold_lat_end>
+			<threshold_lon_end id="19 ">70.283433</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>28.37263489</latitude>
+			<longitude>070.27578293</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>14.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>28.39516511</latitude>
+			<longitude>070.28336089</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>194.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.38425492</latitude>
+			<longitude>070.27800719</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.37055176</latitude>
+			<longitude>070.27492534</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.39724820</latitude>
+			<longitude>070.28421888</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>RAHIM YAR KHAN GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>RAHIM YAR KHAN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

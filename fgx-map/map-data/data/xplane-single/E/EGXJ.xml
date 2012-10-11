@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGXJ">
+		<linecode>1</linecode>
+		<elevation>461</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGXJ</identifier>
+		<name>RAF Cottesmore</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>52.72651700</latitude>
+			<longitude>-000.66213300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>35.05</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>52.74504200</latitude_end>
+			<longitude_end>-000.63530600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>28.96</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2744.68721728</length-meters>
+			<length-feet>8365.80663828</length-feet>
+			<heading id="04 ">41.3264632711</heading>
+			<heading_end id="22 ">221.305112956</heading_end>
+			<threshold_lat id="04 ">52.726517</threshold_lat>
+			<threshold_lon id="04 ">-0.662133</threshold_lon>
+			<threshold_lat_end id="22 ">52.745042</threshold_lat_end>
+			<threshold_lon_end id="22 ">-0.635306</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>52.72856164</latitude>
+			<longitude>-000.65803053</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>41.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>52.72921107</latitude>
+			<longitude>-000.65933788</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>41.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>52.74324051</latitude>
+			<longitude>-000.63901852</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>221.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>52.74249322</latitude>
+			<longitude>-000.63780625</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>221.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>52.73310160</latitude>
+			<longitude>000.64785415</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.72870447</latitude>
+			<longitude>000.65425633</longitude>
+			<heading>10.00</heading>
+			<name>Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.72857530</latitude>
+			<longitude>000.65445185</longitude>
+			<heading>10.00</heading>
+			<name>Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.72841921</latitude>
+			<longitude>000.65467403</longitude>
+			<heading>10.00</heading>
+			<name>Apron 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.73552015</latitude>
+			<longitude>000.64372380</longitude>
+			<heading>09.28</heading>
+			<name>East Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.73590269</latitude>
+			<longitude>000.64315081</longitude>
+			<heading>09.28</heading>
+			<name>East Apron 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.72299147</latitude>
+			<longitude>-000.66308215</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.72828588</latitude>
+			<longitude>-000.66130573</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.74292139</latitude>
+			<longitude>-000.64113962</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>Cottesmore Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>Cottesmore Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13020">130.2</frequency>
+			<description>Cottesmore Approach</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>Cottesmore Director</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="13020">130.2</frequency>
+			<description>Cottesmore Departure</description>
+		</atc>
+	</airport>
+</PropertyList>

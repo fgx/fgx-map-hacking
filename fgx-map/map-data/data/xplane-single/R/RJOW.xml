@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJOW">
+		<linecode>1</linecode>
+		<elevation>184</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJOW</identifier>
+		<name>IWAMI</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>34.67869400</latitude>
+			<longitude>131.77975800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>34.67409400</latitude_end>
+			<longitude_end>131.80086100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2000.19789889</length-meters>
+			<length-feet>6096.60319583</length-feet>
+			<heading id="11 ">104.786964103</heading>
+			<heading_end id="29 ">284.774957747</heading_end>
+			<threshold_lat id="11 ">34.678694</threshold_lat>
+			<threshold_lon id="11 ">131.779758</threshold_lon>
+			<threshold_lat_end id="29 ">34.674094</threshold_lat_end>
+			<threshold_lon_end id="29 ">131.800861</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>34.67862063</latitude>
+			<longitude>131.78199853</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>104.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>34.67416775</latitude>
+			<longitude>131.79862061</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>284.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.67776888</latitude>
+			<longitude>131.79075030</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.67938660</latitude>
+			<longitude>131.77947046</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.67340135</latitude>
+			<longitude>131.80114836</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

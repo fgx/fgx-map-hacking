@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SWJU">
+		<linecode>1</linecode>
+		<elevation>525</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SWJU</identifier>
+		<name>Juruena</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>23.47</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>-10.30111574</latitude>
+			<longitude>-058.49543415</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>-10.30999686</latitude_end>
+			<longitude_end>-058.48345525</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1639.09479142</length-meters>
+			<length-feet>4995.96092424</length-feet>
+			<heading id="14 ">126.820000501</heading>
+			<heading_end id="32 ">306.822143498</heading_end>
+			<threshold_lat id="14 ">-10.30111574</threshold_lat>
+			<threshold_lon id="14 ">-58.49543415</threshold_lon>
+			<threshold_lat_end id="32 ">-10.30999686</threshold_lat_end>
+			<threshold_lon_end id="32 ">-58.48345525</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>-10.30195649</latitude>
+			<longitude>-058.49378750</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>127.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>-10.30915617</latitude>
+			<longitude>-058.48510199</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>307.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-10.30496702</latitude>
+			<longitude>-058.48899344</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-10.30073671</latitude>
+			<longitude>-058.49541264</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-10.31037590</latitude>
+			<longitude>-058.48347675</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

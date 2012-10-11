@@ -1,0 +1,701 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LEZG">
+		<linecode>1</linecode>
+		<elevation>863</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LEZG</identifier>
+		<name>Zaragoza AB</name>
+		<runway end="30L" id="12R">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>12R</number>
+			<latitude>41.68020600</latitude>
+			<longitude>-001.08237200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>299.92</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30L</number_end>
+			<latitude_end>41.66346100</latitude_end>
+			<longitude_end>-001.04371400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>299.92</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3717.85848275</length-meters>
+			<length-feet>11332.0326554</length-feet>
+			<heading id="12R">120.028621875</heading>
+			<heading_end id="30L">300.002919592</heading_end>
+			<threshold_lat id="12R">41.680206</threshold_lat>
+			<threshold_lon id="12R">-1.082372</threshold_lon>
+			<threshold_lat_end id="30L">41.663461</threshold_lat_end>
+			<threshold_lon_end id="30L">-1.043714</threshold_lon_end>
+		</runway>
+		<runway end="30R" id="12L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>12L</number>
+			<latitude>41.66905800</latitude>
+			<longitude>-001.03983300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>299.92</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="5">SSALR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30R</number_end>
+			<latitude_end>41.65539400</latitude_end>
+			<longitude_end>-001.00831700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>185.01</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3032.0278464</length-meters>
+			<length-feet>9241.62087583</length-feet>
+			<heading id="12L">120.045433092</heading>
+			<heading_end id="30R">300.02448321</heading_end>
+			<threshold_lat id="12L">41.669058</threshold_lat>
+			<threshold_lon id="12L">-1.039833</threshold_lon>
+			<threshold_lat_end id="30R">41.655394</threshold_lat_end>
+			<threshold_lon_end id="30R">-1.008317</threshold_lon_end>
+		</runway>
+		<lightingobject id="12L">
+			<linecode>21</linecode>
+			<latitude>41.66850170</latitude>
+			<longitude>-001.03747950</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>120.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="12R">
+			<linecode>21</linecode>
+			<latitude>41.67965037</latitude>
+			<longitude>-001.08001781</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>120.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30L">
+			<linecode>21</linecode>
+			<latitude>41.66401742</latitude>
+			<longitude>-001.04606725</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>300.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30R">
+			<linecode>21</linecode>
+			<latitude>41.65665261</latitude>
+			<longitude>-001.01228730</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>300.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>41.66362000</latitude>
+			<longitude>001.06152800</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66735300</latitude>
+			<longitude>001.02546200</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 65</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66778300</latitude>
+			<longitude>001.02655700</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 66</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66826400</latitude>
+			<longitude>001.02767000</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 67</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66874500</latitude>
+			<longitude>001.02878300</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 68</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66780300</latitude>
+			<longitude>001.02956700</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 69</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66727100</latitude>
+			<longitude>001.02843600</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 70</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66673500</latitude>
+			<longitude>001.02719500</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 71</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66629000</latitude>
+			<longitude>001.02611200</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 72</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67027900</latitude>
+			<longitude>001.03342100</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 74</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67080200</latitude>
+			<longitude>001.03473000</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 75</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67143900</latitude>
+			<longitude>001.03600800</longitude>
+			<heading>30.00</heading>
+			<name>East Mil cargo Ramp 76</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66076800</latitude>
+			<longitude>001.00600900</longitude>
+			<heading>30.00</heading>
+			<name>Gate A 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66088000</latitude>
+			<longitude>001.00624300</longitude>
+			<heading>30.00</heading>
+			<name>Gate A 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66105000</latitude>
+			<longitude>001.00666200</longitude>
+			<heading>30.00</heading>
+			<name>Gate B 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66115700</latitude>
+			<longitude>001.00688400</longitude>
+			<heading>30.00</heading>
+			<name>Gate B 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66132700</latitude>
+			<longitude>001.00730400</longitude>
+			<heading>30.00</heading>
+			<name>Gate D 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66149800</latitude>
+			<longitude>001.00768200</longitude>
+			<heading>30.00</heading>
+			<name>Gate D 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66165400</latitude>
+			<longitude>001.00800900</longitude>
+			<heading>30.00</heading>
+			<name>Gate E 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66175600</latitude>
+			<longitude>001.00822000</longitude>
+			<heading>30.00</heading>
+			<name>Gate E 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66187200</latitude>
+			<longitude>001.00846400</longitude>
+			<heading>30.00</heading>
+			<name>Gate F 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66198500</latitude>
+			<longitude>001.00872600</longitude>
+			<heading>30.00</heading>
+			<name>Gate F 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66210200</latitude>
+			<longitude>001.00899000</longitude>
+			<heading>30.35</heading>
+			<name>Gate G 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66223100</latitude>
+			<longitude>001.00926200</longitude>
+			<heading>30.00</heading>
+			<name>Gate G 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66234500</latitude>
+			<longitude>001.00955300</longitude>
+			<heading>38.26</heading>
+			<name>Gate H 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66249400</latitude>
+			<longitude>001.00978200</longitude>
+			<heading>31.39</heading>
+			<name>Gate H 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66261000</latitude>
+			<longitude>001.01003000</longitude>
+			<heading>29.09</heading>
+			<name>Gate I 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66269900</latitude>
+			<longitude>001.01033200</longitude>
+			<heading>30.00</heading>
+			<name>Gate I 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66216900</latitude>
+			<longitude>001.05003300</longitude>
+			<heading>30.00</heading>
+			<name>South Mil cargo Ramp 30</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66176300</latitude>
+			<longitude>001.04889300</longitude>
+			<heading>30.00</heading>
+			<name>South Mil cargo Ramp 31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66130200</latitude>
+			<longitude>001.04782700</longitude>
+			<heading>30.00</heading>
+			<name>South Mil cargo Ramp 32</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66084200</latitude>
+			<longitude>001.04676100</longitude>
+			<heading>30.50</heading>
+			<name>South Mil cargo Ramp 33</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66107000</latitude>
+			<longitude>001.05088100</longitude>
+			<heading>08.84</heading>
+			<name>South Mil cargo Ramp 34</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66059000</latitude>
+			<longitude>001.04979800</longitude>
+			<heading>10.15</heading>
+			<name>South Mil cargo Ramp 35</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.65964500</latitude>
+			<longitude>001.04768400</longitude>
+			<heading>10.25</heading>
+			<name>South Mil cargo Ramp 37</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66535800</latitude>
+			<longitude>001.06123500</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66203100</latitude>
+			<longitude>001.05363300</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66170600</latitude>
+			<longitude>001.05288200</longitude>
+			<heading>11.56</heading>
+			<name>South Military Ramp 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66138200</latitude>
+			<longitude>001.05213100</longitude>
+			<heading>11.15</heading>
+			<name>South Military Ramp 12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66393800</latitude>
+			<longitude>001.05530900</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66355900</latitude>
+			<longitude>001.05445600</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66324100</latitude>
+			<longitude>001.05367100</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66291800</latitude>
+			<longitude>001.05294800</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 16</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66260200</latitude>
+			<longitude>001.05219100</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 17</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66224000</latitude>
+			<longitude>001.05145500</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66452900</latitude>
+			<longitude>001.05449100</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66493600</latitude>
+			<longitude>001.06035700</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66412500</latitude>
+			<longitude>001.05365600</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66385200</latitude>
+			<longitude>001.05302500</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66360300</latitude>
+			<longitude>001.05244800</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66332200</latitude>
+			<longitude>001.05182400</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66301500</latitude>
+			<longitude>001.05108800</longitude>
+			<heading>30.00</heading>
+			<name>South Military Ramp 24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66454200</latitude>
+			<longitude>001.05937000</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66013800</latitude>
+			<longitude>001.04872500</longitude>
+			<heading>09.11</heading>
+			<name>South Military Ramp 36</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66417300</latitude>
+			<longitude>001.05856600</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66381600</latitude>
+			<longitude>001.05773900</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66346800</latitude>
+			<longitude>001.05693400</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66304700</latitude>
+			<longitude>001.05601100</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66267600</latitude>
+			<longitude>001.05515200</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.66235000</latitude>
+			<longitude>001.05437300</longitude>
+			<heading>10.00</heading>
+			<name>South Military Ramp 9</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67792600</latitude>
+			<longitude>001.06950400</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 50</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67770900</latitude>
+			<longitude>001.06871900</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 51</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67749300</latitude>
+			<longitude>001.06799800</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 52</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67731400</latitude>
+			<longitude>001.06722800</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 53</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67711600</latitude>
+			<longitude>001.06657900</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 54</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67690000</latitude>
+			<longitude>001.06588100</longitude>
+			<heading>30.00</heading>
+			<name>West Mil cargo Ramp 55</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67720600</latitude>
+			<longitude>001.06941700</longitude>
+			<heading>10.00</heading>
+			<name>West Mil cargo Ramp 56</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67704400</latitude>
+			<longitude>001.06857500</longitude>
+			<heading>10.00</heading>
+			<name>West Mil cargo Ramp 57</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67681100</latitude>
+			<longitude>001.06785300</longitude>
+			<heading>10.00</heading>
+			<name>West Mil cargo Ramp 58</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67664900</latitude>
+			<longitude>001.06718000</longitude>
+			<heading>10.00</heading>
+			<name>West Mil cargo Ramp 59</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.67648700</latitude>
+			<longitude>001.06645800</longitude>
+			<heading>10.00</heading>
+			<name>West Mil cargo Ramp 60</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.67908700</latitude>
+			<longitude>-001.07643100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.65894900</latitude>
+			<longitude>-001.01375200</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.68070800</latitude>
+			<longitude>-001.08124600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.66432400</latitude>
+			<longitude>-001.04727400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.66667600</latitude>
+			<longitude>-001.03645300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.65881000</latitude>
+			<longitude>-001.01335600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.67819800</latitude>
+			<longitude>-001.08111400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12705">127.05</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJBK">
+		<linecode>1</linecode>
+		<elevation>3</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJBK</identifier>
+		<name>KOHNAN</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>34.59041700</latitude>
+			<longitude>133.92605600</longitude>
+			<threshold>60.05</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>34.59125600</latitude_end>
+			<longitude_end>133.94039400</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1318.66043586</length-meters>
+			<length-feet>4019.2770085</length-feet>
+			<heading id="09 ">85.9566895331</heading>
+			<heading_end id="27 ">265.948549677</heading_end>
+			<threshold_lat id="09 ">34.5904551668</threshold_lat>
+			<threshold_lon id="09 ">133.926708933</threshold_lon>
+			<threshold_lat_end id="27 ">34.591217753</threshold_lat_end>
+			<threshold_lon_end id="27 ">133.939741067</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>34.59091738</latitude>
+			<longitude>133.92886266</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>85.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>34.59075595</latitude>
+			<longitude>133.93758722</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.59179434</latitude>
+			<longitude>133.93313884</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.59080794</latitude>
+			<longitude>133.92568817</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.59086502</latitude>
+			<longitude>133.94076176</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13075">130.75</frequency>
+			<description>AIR SERVICE</description>
+		</atc>
+	</airport>
+</PropertyList>

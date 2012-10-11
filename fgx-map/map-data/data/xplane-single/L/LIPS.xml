@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIPS">
+		<linecode>1</linecode>
+		<elevation>137</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LIPS</identifier>
+		<name>Istrana</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>32.00</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>45.68257100</latitude>
+			<longitude>012.06821400</longitude>
+			<threshold>291.39</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>45.68631100</latitude_end>
+			<longitude_end>012.10624700</longitude_end>
+			<threshold_end>290.47</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2991.88226794</length-meters>
+			<length-feet>9119.25715269</length-feet>
+			<heading id="08 ">82.0272723482</heading>
+			<heading_end id="26 ">262.00005962</heading_end>
+			<threshold_lat id="08 ">45.6829345753</threshold_lat>
+			<threshold_lon id="08 ">12.0719181923</threshold_lon>
+			<threshold_lat_end id="26 ">45.6859472241</threshold_lat_end>
+			<threshold_lon_end id="26 ">12.1025545507</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>45.68837400</latitude>
+			<longitude>012.08406300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.68849200</latitude>
+			<longitude>012.08607100</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.68880900</latitude>
+			<longitude>012.08915500</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.68501100</latitude>
+			<longitude>012.08711600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.68341300</latitude>
+			<longitude>012.07223800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.68623400</latitude>
+			<longitude>012.10191600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12040">120.4</frequency>
+			<description>TREVISO APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TREVISO APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12115">121.15</frequency>
+			<description>TREVISO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

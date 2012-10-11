@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVFM">
+		<linecode>1</linecode>
+		<elevation>2739</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVFM</identifier>
+		<name>Caracas Generalisimo Francisco De Mira</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>42.67</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>10.48691700</latitude>
+			<longitude>-066.85228300</longitude>
+			<threshold>190.50</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>10.48315000</latitude_end>
+			<longitude_end>-066.83475000</longitude_end>
+			<threshold_end>201.17</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1964.09389321</length-meters>
+			<length-feet>5986.5581865</length-feet>
+			<heading id="11 ">102.249654258</heading>
+			<heading_end id="29 ">282.246463626</heading_end>
+			<threshold_lat id="11 ">10.4865515824</threshold_lat>
+			<threshold_lon id="11 ">-66.8505824537</threshold_lon>
+			<threshold_lat_end id="29 ">10.483535776</threshold_lat_end>
+			<threshold_lon_end id="29 ">-66.8365457991</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>10.48654794</latitude>
+			<longitude>-066.84870679</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>102.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>10.48476500</latitude>
+			<longitude>066.84756900</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>10.48433300</latitude>
+			<longitude>066.83611300</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>10.48528600</latitude>
+			<longitude>066.84884800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.48713600</latitude>
+			<longitude>-066.85076700</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.48375200</latitude>
+			<longitude>-066.83603700</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12740">127.4</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>MIRANDA TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

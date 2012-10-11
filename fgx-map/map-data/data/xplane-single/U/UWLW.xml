@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UWLW">
+		<linecode>1</linecode>
+		<elevation>252</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UWLW</identifier>
+		<name>VOSTOCHNY</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>104.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>54.38176400</latitude>
+			<longitude>048.78245000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>80.47</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>54.42026400</latitude_end>
+			<longitude_end>048.82287800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>75.59</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>5025.86191403</length-meters>
+			<length-feet>15318.827114</length-feet>
+			<heading id="02 ">31.5103768019</heading>
+			<heading_end id="20 ">211.477504346</heading_end>
+			<threshold_lat id="02 ">54.381764</threshold_lat>
+			<threshold_lon id="02 ">48.78245</threshold_lon>
+			<threshold_lat_end id="20 ">54.420264</threshold_lat_end>
+			<threshold_lon_end id="20 ">48.822878</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.40273862</latitude>
+			<longitude>048.79780309</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.38169660</latitude>
+			<longitude>048.77953144</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.42033042</latitude>
+			<longitude>048.82579944</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12420">124.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12730">127.3</frequency>
+			<description>ULYANOVSK APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12610">126.1</frequency>
+			<description>KRUG</description>
+		</atc>
+	</airport>
+</PropertyList>

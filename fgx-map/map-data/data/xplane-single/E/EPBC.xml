@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPBC">
+		<linecode>1</linecode>
+		<elevation>352</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPBC</identifier>
+		<name>BABICE</name>
+		<runway end="28L" id="10R">
+			<linecode>100</linecode>
+			<width>89.92</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10R</number>
+			<latitude>52.27045300</latitude>
+			<longitude>020.89791400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28L</number_end>
+			<latitude_end>52.26791100</latitude_end>
+			<longitude_end>020.91651900</longitude_end>
+			<threshold_end>528.83</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1301.19198137</length-meters>
+			<length-feet>3966.03315921</length-feet>
+			<heading id="10R">102.562618396</heading>
+			<heading_end id="28L">282.547903804</heading_end>
+			<threshold_lat id="10R">52.270453</threshold_lat>
+			<threshold_lon id="10R">20.897914</threshold_lon>
+			<threshold_lat_end id="28L">52.2689432811</threshold_lat_end>
+			<threshold_lon_end id="28L">20.9089573867</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.27194582</latitude>
+			<longitude>020.90822239</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.27181252</latitude>
+			<longitude>020.89705489</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.26655135</latitude>
+			<longitude>020.91737750</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11917">119.17</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMIT">
+		<linecode>1</linecode>
+		<elevation>421</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMIT</identifier>
+		<name>SHAFTER MINTER FLD</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>35.51067500</latitude>
+			<longitude>-119.20102200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>35.50218600</latitude_end>
+			<longitude_end>-119.19002800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1371.82128763</length-meters>
+			<length-feet>4181.31128469</length-feet>
+			<heading id="12 ">133.362521323</heading>
+			<heading_end id="30 ">313.35613607</heading_end>
+			<threshold_lat id="12 ">35.510675</threshold_lat>
+			<threshold_lon id="12 ">-119.201022</threshold_lon>
+			<threshold_lat_end id="30 ">35.502186</threshold_lat_end>
+			<threshold_lon_end id="30 ">-119.190028</threshold_lon_end>
+		</runway>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>35.50931100</latitude>
+			<longitude>-119.18596700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>35.50114700</latitude_end>
+			<longitude_end>-119.18597200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>905.794734923</length-meters>
+			<length-feet>2760.86235205</length-feet>
+			<heading id="17 ">-179.971308006</heading>
+			<heading_end id="35 ">360.028694898</heading_end>
+			<threshold_lat id="17 ">35.509311</threshold_lat>
+			<threshold_lon id="17 ">-119.185967</threshold_lon>
+			<threshold_lat_end id="35 ">35.501147</threshold_lat_end>
+			<threshold_lon_end id="35 ">-119.185972</threshold_lon_end>
+		</runway>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>35.50318157</latitude>
+			<longitude>-119.19191529</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>313.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.51116229</latitude>
+			<longitude>-119.20091867</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.50958509</latitude>
+			<longitude>-119.18546138</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.50169872</latitude>
+			<longitude>-119.19013138</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.50087291</latitude>
+			<longitude>-119.18647757</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12645">126.45</frequency>
+			<description>BAKERSFIELD APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

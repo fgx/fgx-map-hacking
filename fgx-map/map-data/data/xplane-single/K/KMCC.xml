@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMCC">
+		<linecode>1</linecode>
+		<elevation>75</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMCC</identifier>
+		<name>MC CLELLAN AFLD</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>38.68218900</latitude>
+			<longitude>-121.40057800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>388.01</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>38.65308600</latitude_end>
+			<longitude_end>-121.40062200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>342.90</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3230.70148267</length-meters>
+			<length-feet>9847.17811917</length-feet>
+			<heading id="16 ">-179.932101419</heading>
+			<heading_end id="34 ">360.067926072</heading_end>
+			<threshold_lat id="16 ">38.682189</threshold_lat>
+			<threshold_lon id="16 ">-121.400578</threshold_lon>
+			<threshold_lat_end id="34 ">38.653086</threshold_lat_end>
+			<threshold_lon_end id="34 ">-121.400622</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>38.67941684</latitude>
+			<longitude>-121.39997721</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>180.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>38.65488641</latitude>
+			<longitude>-121.40122405</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>0.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.66763797</latitude>
+			<longitude>-121.39814082</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.68273663</latitude>
+			<longitude>-121.39952301</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.65253837</latitude>
+			<longitude>-121.40167654</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12297">122.97</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12740">127.4</frequency>
+			<description>NORCAL APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

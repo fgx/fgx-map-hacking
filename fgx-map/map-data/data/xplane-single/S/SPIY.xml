@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SPIY">
+		<linecode>1</linecode>
+		<elevation>12972</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SPIY</identifier>
+		<name>Yauri</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>35.66</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-14.79514679</latitude>
+			<longitude>-071.43206957</longitude>
+			<threshold>192.02</threshold>
+			<overrrun>22.56</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-14.81763101</latitude_end>
+			<longitude_end>-071.43125743</longitude_end>
+			<threshold_end>813.31</threshold_end>
+			<overrrun_end>1719.08</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2489.34326178</length-meters>
+			<length-feet>7587.51826189</length-feet>
+			<heading id="18 ">177.987291068</heading>
+			<heading_end id="36 ">357.987498613</heading_end>
+			<threshold_lat id="18 ">-14.7968811525</threshold_lat>
+			<threshold_lon id="18 ">-71.4320069236</threshold_lon>
+			<threshold_lat_end id="36 ">-14.8102850442</threshold_lat_end>
+			<threshold_lon_end id="36 ">-71.4315227608</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-14.79866007</latitude>
+			<longitude>-071.43157171</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>178.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>-14.79054247</latitude>
+			<longitude>-071.43260693</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>358.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-14.80634975</latitude>
+			<longitude>-071.43050382</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-14.79480931</latitude>
+			<longitude>-071.43158497</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-14.81796849</latitude>
+			<longitude>-071.43174207</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

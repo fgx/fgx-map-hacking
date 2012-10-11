@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CNC3">
+		<linecode>1</linecode>
+		<elevation>935</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CNC3</identifier>
+		<name>Brampton</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>43.76416700</latitude>
+			<longitude>-079.87777800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>43.75666700</latitude_end>
+			<longitude_end>-079.86944400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1069.95574427</length-meters>
+			<length-feet>3261.22510853</length-feet>
+			<heading id="15 ">141.155869199</heading>
+			<heading_end id="33 ">321.150105034</heading_end>
+			<threshold_lat id="15 ">43.764167</threshold_lat>
+			<threshold_lon id="15 ">-79.877778</threshold_lon>
+			<threshold_lat_end id="33 ">43.756667</threshold_lat_end>
+			<threshold_lon_end id="33 ">-79.869444</threshold_lon_end>
+		</runway>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>43.75805600</latitude>
+			<longitude>-079.87944400</longitude>
+			<threshold>57.91</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>43.76027800</latitude_end>
+			<longitude_end>-079.87055600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>757.131482592</length-meters>
+			<length-feet>2307.73675894</length-feet>
+			<heading id="08 ">70.9724128259</heading>
+			<heading_end id="26 ">250.966265631</heading_end>
+			<threshold_lat id="08 ">43.7582259236</threshold_lat>
+			<threshold_lon id="08 ">-79.87876419</threshold_lon>
+			<threshold_lat_end id="26 ">43.760278</threshold_lat_end>
+			<threshold_lon_end id="26 ">-79.870556</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>43.76295167</latitude>
+			<longitude>-079.87589315</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>141.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>43.75788247</latitude>
+			<longitude>-079.87132846</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>321.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.76086904</latitude>
+			<longitude>-079.87283675</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.75827901</latitude>
+			<longitude>-079.87985231</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.76451974</latitude>
+			<longitude>-079.87762456</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.76005496</latitude>
+			<longitude>-079.87014771</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.75631427</latitude>
+			<longitude>-079.86959747</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>TORONTO TRML</description>
+		</atc>
+	</airport>
+</PropertyList>

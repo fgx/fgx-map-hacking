@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAHC">
+		<linecode>1</linecode>
+		<elevation>3934</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KAHC</identifier>
+		<name>AMEDEE AAF</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>40.26768900</latitude>
+			<longitude>-120.16531900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>40.26461400</latitude_end>
+			<longitude_end>-120.13995000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>62.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2184.7690705</length-meters>
+			<length-feet>6659.17612688</length-feet>
+			<heading id="08 ">98.9995439324</heading>
+			<heading_end id="26 ">278.983146955</heading_end>
+			<threshold_lat id="08 ">40.267689</threshold_lat>
+			<threshold_lon id="08 ">-120.165319</threshold_lon>
+			<threshold_lat_end id="26 ">40.264614</threshold_lat_end>
+			<threshold_lon_end id="26 ">-120.13995</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>40.26452458</latitude>
+			<longitude>-120.14235697</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>279.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.26757551</latitude>
+			<longitude>-120.15234114</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.26836303</latitude>
+			<longitude>-120.16572478</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.26393988</latitude>
+			<longitude>-120.13954449</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12610">126.1</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

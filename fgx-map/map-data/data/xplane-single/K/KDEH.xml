@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KDEH">
+		<linecode>1</linecode>
+		<elevation>1157</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KDEH</identifier>
+		<name>DECORAH MUNI</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>43.27780000</latitude>
+			<longitude>-091.74620000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>43.27321900</latitude_end>
+			<longitude_end>-091.73254700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.56187502</length-meters>
+			<length-feet>3717.22459505</length-feet>
+			<heading id="11 ">114.669813562</heading>
+			<heading_end id="29 ">294.660454332</heading_end>
+			<threshold_lat id="11 ">43.2778</threshold_lat>
+			<threshold_lon id="11 ">-91.7462</threshold_lon>
+			<threshold_lat_end id="29 ">43.273219</threshold_lat_end>
+			<threshold_lon_end id="29 ">-91.732547</threshold_lon_end>
+		</runway>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>43.27372375</latitude>
+			<longitude>-091.73494943</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>294.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.27616274</latitude>
+			<longitude>-091.73896029</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.27816511</latitude>
+			<longitude>-091.74628006</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.27285388</latitude>
+			<longitude>-091.73246703</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12092">120.92</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LICA">
+		<linecode>1</linecode>
+		<elevation>39</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LICA</identifier>
+		<name>Lamezia Terme</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>38.90699400</latitude>
+			<longitude>016.22858900</longitude>
+			<threshold>106.07</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>38.90379400</latitude_end>
+			<longitude_end>016.25595300</longitude_end>
+			<threshold_end>106.99</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="4">Calvert ILS Cat II and Cat II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2400.0348401</length-meters>
+			<length-feet>7315.30619261</length-feet>
+			<heading id="10 ">98.5205659329</heading>
+			<heading_end id="28 ">278.503380347</heading_end>
+			<threshold_lat id="10 ">38.9068524274</threshold_lat>
+			<threshold_lon id="10 ">16.2297983548</threshold_lon>
+			<threshold_lat_end id="28 ">38.903936502</threshold_lat_end>
+			<threshold_lon_end id="28 ">16.254733151</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>38.90698161</latitude>
+			<longitude>016.23216588</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>98.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>38.90402558</latitude>
+			<longitude>016.25051104</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>278.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.91022400</latitude>
+			<longitude>016.24171300</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.90828500</latitude>
+			<longitude>016.24409300</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.90680079</latitude>
+			<longitude>016.24254210</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.90741700</latitude>
+			<longitude>016.23152500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.90469800</latitude>
+			<longitude>016.25376000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.90686800</latitude>
+			<longitude>016.24483700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

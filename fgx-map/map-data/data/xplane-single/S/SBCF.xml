@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBCF">
+		<linecode>1</linecode>
+		<elevation>2715</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SBCF</identifier>
+		<name>Tancredo Neves</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>-19.62355600</latitude>
+			<longitude>-043.97828300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>61.87</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>-19.64396100</latitude_end>
+			<longitude_end>-043.95942500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>61.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3002.4367377</length-meters>
+			<length-feet>9151.42717652</length-feet>
+			<heading id="16 ">138.789596913</heading>
+			<heading_end id="34 ">318.795933325</heading_end>
+			<threshold_lat id="16 ">-19.623556</threshold_lat>
+			<threshold_lon id="16 ">-43.978283</threshold_lon>
+			<threshold_lat_end id="34 ">-19.643961</threshold_lat_end>
+			<threshold_lon_end id="34 ">-43.959425</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>-19.62604619</latitude>
+			<longitude>-043.97541766</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>138.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>-19.64286675</latitude>
+			<longitude>-043.96100093</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>318.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-19.62443900</latitude>
+			<longitude>043.97363700</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-19.63124500</latitude>
+			<longitude>043.96410000</longitude>
+			<heading>50.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-19.63322400</latitude>
+			<longitude>-043.96820400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-19.62302400</latitude>
+			<longitude>-043.97763100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-19.64449100</latitude>
+			<longitude>-043.96007500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12745">127.45</frequency>
+			<description>BELO HORIZONTE ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12100">121.0</frequency>
+			<description>CONFINS CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11820">118.2</frequency>
+			<description>CONFINS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12020">120.2</frequency>
+			<description>BELO HORIZONTE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12910">129.1</frequency>
+			<description>BELO HORIZONTE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12940">129.4</frequency>
+			<description>BELO HORIZONTE APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11965">119.65</frequency>
+			<description>BELO HORIZONTE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

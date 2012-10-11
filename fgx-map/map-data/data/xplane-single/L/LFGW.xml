@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFGW">
+		<linecode>1</linecode>
+		<elevation>1230</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFGW</identifier>
+		<name>Verdun Le Rozelier</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>20.12</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>49.12322200</latitude>
+			<longitude>005.46148100</longitude>
+			<threshold>45.72</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>49.12154700</latitude_end>
+			<longitude_end>005.47657500</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1117.38340296</length-meters>
+			<length-feet>3405.78461222</length-feet>
+			<heading id="10 ">99.6023598812</heading>
+			<heading_end id="28 ">279.590947169</heading_end>
+			<threshold_lat id="10 ">49.123153422</threshold_lat>
+			<threshold_lon id="10 ">5.46209860066</threshold_lon>
+			<threshold_lat_end id="28 ">49.1216369614</threshold_lat_end>
+			<threshold_lon_end id="28 ">5.47576382245</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>49.12313699</latitude>
+			<longitude>005.46488611</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>99.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>49.12165402</latitude>
+			<longitude>005.47297582</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>279.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.12354900</latitude>
+			<longitude>005.46831500</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.12326500</latitude>
+			<longitude>005.46659500</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.12274600</latitude>
+			<longitude>005.46912000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.12331600</latitude>
+			<longitude>005.46352700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.12198700</latitude>
+			<longitude>005.47535100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+	</airport>
+</PropertyList>

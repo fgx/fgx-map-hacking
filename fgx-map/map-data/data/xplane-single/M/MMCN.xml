@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMCN">
+		<linecode>1</linecode>
+		<elevation>205</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMCN</identifier>
+		<name>CIUDAD OBREGON INTL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>27.40025000</latitude>
+			<longitude>-109.84105600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>54.86</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>27.38500000</latitude_end>
+			<longitude_end>-109.82513900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>54.86</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2309.55823976</length-meters>
+			<length-feet>7039.53351478</length-feet>
+			<heading id="13 ">137.030745449</heading>
+			<heading_end id="31 ">317.023422268</heading_end>
+			<threshold_lat id="13 ">27.40025</threshold_lat>
+			<threshold_lon id="13 ">-109.841056</threshold_lon>
+			<threshold_lat_end id="31 ">27.385</threshold_lat_end>
+			<threshold_lon_end id="31 ">-109.825139</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>27.39920249</latitude>
+			<longitude>-109.83934668</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>137.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>27.38604770</latitude>
+			<longitude>-109.82684794</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>317.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>27.39803100</latitude>
+			<longitude>109.83235200</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>27.39964500</latitude>
+			<longitude>109.83351900</longitude>
+			<heading>90.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>27.39317700</latitude>
+			<longitude>-109.83242700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.40080200</latitude>
+			<longitude>-109.84038600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>27.38444800</latitude>
+			<longitude>-109.82581000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12760">127.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>OBREGON APP/TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

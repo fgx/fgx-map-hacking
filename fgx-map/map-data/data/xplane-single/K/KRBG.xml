@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KRBG">
+		<linecode>1</linecode>
+		<elevation>529</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KRBG</identifier>
+		<name>Roseburg Rgnl</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>43.24509400</latitude>
+			<longitude>-123.35586700</longitude>
+			<threshold>213.36</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>43.23247200</latitude_end>
+			<longitude_end>-123.35585300</longitude_end>
+			<threshold_end>113.08</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1402.27171657</length-meters>
+			<length-feet>4274.12419209</length-feet>
+			<heading id="16 ">179.953541972</heading>
+			<heading_end id="34 ">359.953532381</heading_end>
+			<threshold_lat id="16 ">43.2431735253</threshold_lat>
+			<threshold_lon id="16 ">-123.35586487</threshold_lon>
+			<threshold_lat_end id="34 ">43.2334898464</threshold_lat_end>
+			<threshold_lon_end id="34 ">-123.355854129</threshold_lon_end>
+		</runway>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>43.23528925</latitude>
+			<longitude>-123.35627907</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>359.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>43.23344000</latitude>
+			<longitude>123.35791000</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>43.23290600</latitude>
+			<longitude>123.35778000</longitude>
+			<heading>0.00</heading>
+			<name>LOC</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.23878593</latitude>
+			<longitude>-123.35454217</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.24509400</latitude>
+			<longitude>-123.35511000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.23247100</latitude>
+			<longitude>-123.35660600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13547">135.47</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

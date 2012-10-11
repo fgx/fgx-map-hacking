@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VABB">
+		<linecode>1</linecode>
+		<elevation>37</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>VABB</identifier>
+		<name>Bombay Mumbai Chhatrapati Shivaji Intl</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>19.08842200</latitude>
+			<longitude>072.84799200</longitude>
+			<threshold>141.73</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>19.08887800</latitude_end>
+			<longitude_end>072.88115000</longitude_end>
+			<threshold_end>481.89</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3489.78447071</length-meters>
+			<length-feet>10636.8630667</length-feet>
+			<heading id="09 ">89.176669677</heading>
+			<heading_end id="27 ">269.165825993</heading_end>
+			<threshold_lat id="09 ">19.0884403934</threshold_lat>
+			<threshold_lon id="09 ">72.8493386401</threshold_lon>
+			<threshold_lat_end id="27 ">19.088814564</threshold_lat_end>
+			<threshold_lon_end id="27 ">72.8765713498</threshold_lon_end>
+		</runway>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>19.09850600</latitude>
+			<longitude>072.85729400</longitude>
+			<threshold>407.82</threshold>
+			<overrrun>67.97</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>19.08010800</latitude_end>
+			<longitude_end>072.87721900</longitude_end>
+			<threshold_end>259.99</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2923.03344967</length-meters>
+			<length-feet>8909.4059546</length-feet>
+			<heading id="14 ">134.167600451</heading>
+			<heading_end id="32 ">314.161084148</heading_end>
+			<threshold_lat id="14 ">19.0959389523</threshold_lat>
+			<threshold_lon id="14 ">72.8600738821</threshold_lon>
+			<threshold_lat_end id="32 ">19.0817443122</threshold_lat_end>
+			<threshold_lon_end id="32 ">72.8754467481</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>19.08887830</latitude>
+			<longitude>072.85198683</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>19.09437233</latitude>
+			<longitude>072.86238282</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>134.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>19.08837313</latitude>
+			<longitude>072.87354772</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.1</orientation>
+			<glideslope>3.30</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>19.08271247</latitude>
+			<longitude>072.87378762</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>314.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>19.09600200</latitude>
+			<longitude>072.87467200</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint Location</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>19.09453900</latitude>
+			<longitude>072.87632400</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>19.09463800</latitude>
+			<longitude>072.87304100</longitude>
+			<heading>32.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.08903300</latitude>
+			<longitude>072.85128600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.08938100</latitude>
+			<longitude>072.87716100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.09754300</latitude>
+			<longitude>072.85953100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.08414400</latitude>
+			<longitude>072.87375200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12640">126.4</frequency>
+			<description>MUMBAI ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>MUMBAI CLR DELIVERY</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>MUMBAI CLR DELIVERY</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>MUMBAI GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>MUMBAI GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>MUMBAI TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>RDR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12590">125.9</frequency>
+			<description>RDR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13260">132.6</frequency>
+			<description>RDR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>RDR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>MUMBAI APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SCAN">
+		<linecode>1</linecode>
+		<elevation>2457</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SCAN</identifier>
+		<name>San Rafael</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>-32.81703193</latitude>
+			<longitude>-070.65279646</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>-32.81185695</latitude_end>
+			<longitude_end>-070.64331466</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1057.27857097</length-meters>
+			<length-feet>3222.58508431</length-feet>
+			<heading id="05 ">57.1216582944</heading>
+			<heading_end id="23 ">237.126796672</heading_end>
+			<threshold_lat id="05 ">-32.81703193</threshold_lat>
+			<threshold_lon id="05 ">-70.65279646</threshold_lon>
+			<threshold_lat_end id="23 ">-32.81185695</threshold_lat_end>
+			<threshold_lon_end id="23 ">-70.64331466</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>-32.81585081</latitude>
+			<longitude>-070.65115551</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>57.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>-32.81303820</latitude>
+			<longitude>-070.64495539</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>237.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-32.81404186</latitude>
+			<longitude>-070.64836651</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-32.81693408</latitude>
+			<longitude>-070.65306664</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-32.81195478</latitude>
+			<longitude>-070.64304449</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

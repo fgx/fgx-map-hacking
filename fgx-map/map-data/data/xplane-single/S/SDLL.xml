@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SDLL">
+		<linecode>1</linecode>
+		<elevation>2021</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SDLL</identifier>
+		<name>Leme</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>15.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>-22.22906640</latitude>
+			<longitude>-047.38661801</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>-22.22426840</latitude_end>
+			<longitude_end>-047.37726739</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1100.73558449</length-meters>
+			<length-feet>3355.04206154</length-feet>
+			<heading id="08 ">61.1379131996</heading>
+			<heading_end id="26 ">241.141450274</heading_end>
+			<threshold_lat id="08 ">-22.2290664</threshold_lat>
+			<threshold_lon id="08 ">-47.38661801</threshold_lon>
+			<threshold_lat_end id="26 ">-22.2242684</threshold_lat_end>
+			<threshold_lon_end id="26 ">-47.37726739</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>-22.22798193</latitude>
+			<longitude>-047.38504430</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>61.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>-22.22535295</latitude>
+			<longitude>-047.37884097</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>241.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-22.22623077</latitude>
+			<longitude>-047.38220408</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.22894842</latitude>
+			<longitude>-047.38686483</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.22438637</latitude>
+			<longitude>-047.37702057</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

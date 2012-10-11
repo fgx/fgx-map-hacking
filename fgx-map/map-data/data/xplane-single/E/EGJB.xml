@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGJB">
+		<linecode>1</linecode>
+		<elevation>336</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGJB</identifier>
+		<name>Guernsey</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>49.43467800</latitude>
+			<longitude>-002.61197500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>49.43523100</latitude_end>
+			<longitude_end>-002.59196400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>82.91</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="4">Calvert ILS Cat II and Cat II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1452.75074054</length-meters>
+			<length-feet>4427.98425717</length-feet>
+			<heading id="09 ">87.5812021699</heading>
+			<heading_end id="27 ">267.56600045</heading_end>
+			<threshold_lat id="09 ">49.434678</threshold_lat>
+			<threshold_lon id="09 ">-2.611975</threshold_lon>
+			<threshold_lat_end id="27 ">49.435231</threshold_lat_end>
+			<threshold_lon_end id="27 ">-2.591964</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>49.43540436</latitude>
+			<longitude>-002.60751342</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>87.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>49.43449765</latitude>
+			<longitude>-002.59600771</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>267.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.43271567</latitude>
+			<longitude>002.59793396</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.43245282</latitude>
+			<longitude>002.59608976</longitude>
+			<heading>81.55</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.43209221</latitude>
+			<longitude>002.60003089</longitude>
+			<heading>74.93</heading>
+			<name>West Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.43249303</latitude>
+			<longitude>002.59854122</longitude>
+			<heading>64.06</heading>
+			<name>West Grass Parking</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.43625924</latitude>
+			<longitude>-002.60205761</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.43578662</latitude>
+			<longitude>-002.60747121</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.43434123</latitude>
+			<longitude>-002.59553391</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>Guernsey Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11995">119.95</frequency>
+			<description>Guernsey Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12865">128.65</frequency>
+			<description>Guernsey Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

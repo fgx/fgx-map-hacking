@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WA14">
+		<linecode>1</linecode>
+		<elevation>925</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WA14</identifier>
+		<name>CONNELL CITY</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>46.66250000</latitude>
+			<longitude>-118.83944400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>46.66250000</latitude_end>
+			<longitude_end>-118.82722200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>935.393575593</length-meters>
+			<length-feet>2851.07961841</length-feet>
+			<heading id="07 ">90.0044446754</heading>
+			<heading_end id="25 ">269.995555325</heading_end>
+			<threshold_lat id="07 ">46.6625</threshold_lat>
+			<threshold_lon id="07 ">-118.839444</threshold_lon>
+			<threshold_lat_end id="25 ">46.6625</threshold_lat_end>
+			<threshold_lon_end id="25 ">-118.827222</threshold_lon_end>
+		</runway>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>46.66226058</latitude>
+			<longitude>-118.82984460</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>270.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.66298035</latitude>
+			<longitude>-118.83333694</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.66270571</latitude>
+			<longitude>-118.83964386</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.66229427</latitude>
+			<longitude>-118.82702218</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

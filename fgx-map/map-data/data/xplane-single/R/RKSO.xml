@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RKSO">
+		<linecode>1</linecode>
+		<elevation>40</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RKSO</identifier>
+		<name>OSAN AB</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>37.08933900</latitude>
+			<longitude>127.01424200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>306.93</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>37.09189400</latitude_end>
+			<longitude_end>127.04494400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.19</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2744.27819252</length-meters>
+			<length-feet>8364.55993079</length-feet>
+			<heading id="09 ">84.0785936649</heading>
+			<heading_end id="27 ">264.060077984</heading_end>
+			<threshold_lat id="09 ">37.089339</threshold_lat>
+			<threshold_lon id="09 ">127.014242</threshold_lon>
+			<threshold_lat_end id="27 ">37.091894</threshold_lat_end>
+			<threshold_lon_end id="27 ">127.044944</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>37.09001731</latitude>
+			<longitude>127.01751016</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>84.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>37.09120334</latitude>
+			<longitude>127.04151661</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>264.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.09205063</latitude>
+			<longitude>127.02940339</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.08991007</latitude>
+			<longitude>127.01364860</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.09132278</latitude>
+			<longitude>127.04553720</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13212">132.12</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12730">127.3</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="13245">132.45</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

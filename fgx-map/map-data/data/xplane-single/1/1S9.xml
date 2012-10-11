@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="1S9 ">
+		<linecode>1</linecode>
+		<elevation>2084</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>1S9</identifier>
+		<name>SAND CANYON</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>14.63</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>48.31873600</latitude>
+			<longitude>-117.74219700</longitude>
+			<threshold>70.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>48.30942500</latitude_end>
+			<longitude_end>-117.74458300</longitude_end>
+			<threshold_end>30.78</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1050.36604647</length-meters>
+			<length-feet>3201.51570963</length-feet>
+			<heading id="17 ">-170.301050377</heading>
+			<heading_end id="35 ">369.700731491</heading_end>
+			<threshold_lat id="17 ">48.3181145952</threshold_lat>
+			<threshold_lon id="17 ">-117.742356236</threshold_lon>
+			<threshold_lat_end id="35 ">48.3096978497</threshold_lat_end>
+			<threshold_lon_end id="35 ">-117.74451308</threshold_lon_end>
+		</runway>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>48.31151216</latitude>
+			<longitude>-117.74440945</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>9.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.31400502</latitude>
+			<longitude>-117.74270666</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.31883261</latitude>
+			<longitude>-117.74187096</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.30932839</latitude>
+			<longitude>-117.74490897</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

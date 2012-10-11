@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LJPZ">
+		<linecode>1</linecode>
+		<elevation>7</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LJPZ</identifier>
+		<name>PORTOROZ</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>45.47717800</latitude>
+			<longitude>013.61198301</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>45.46771100</latitude_end>
+			<longitude_end>013.61937801</longitude_end>
+			<threshold_end>228.91</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1200.60454971</length-meters>
+			<length-feet>3659.44266752</length-feet>
+			<heading id="15 ">151.209982644</heading>
+			<heading_end id="33 ">331.20471065</heading_end>
+			<threshold_lat id="15 ">45.477178</threshold_lat>
+			<threshold_lon id="15 ">13.61198301</threshold_lon>
+			<threshold_lat_end id="33 ">45.4695159467</threshold_lat_end>
+			<threshold_lon_end id="33 ">13.6179680174</threshold_lon_end>
+		</runway>
+		<lightingobject id="RWY">
+			<linecode>21</linecode>
+			<latitude>45.47569906</latitude>
+			<longitude>013.61265876</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>151.2</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>RWY</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="RWY">
+			<linecode>21</linecode>
+			<latitude>45.47598465</latitude>
+			<longitude>013.61339064</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>151.2</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>RWY</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>45.47473192</latitude>
+			<longitude>013.61641673</longitude>
+			<height>49</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.47289814</latitude>
+			<longitude>013.61685663</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.47481100</latitude>
+			<longitude>013.61477076</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WDI</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47701292</latitude>
+			<longitude>013.61263533</longitude>
+			<orientation>285.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}15</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47375646</latitude>
+			<longitude>013.61524615</longitude>
+			<orientation>241.30</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}33-15</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47719214</latitude>
+			<longitude>013.61270483</longitude>
+			<orientation>285.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}15{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47396565</latitude>
+			<longitude>013.61508672</longitude>
+			<orientation>241.30</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}33-15{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47373333</latitude>
+			<longitude>013.61522324</longitude>
+			<orientation>61.30</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}PORTOROZ</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>45.47396559</latitude>
+			<longitude>013.61504622</longitude>
+			<orientation>61.30</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}WELCOME</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12932">129.32</frequency>
+			<description>Portoroz TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12932">129.32</frequency>
+			<description>Portoroz APP</description>
+		</atc>
+	</airport>
+</PropertyList>

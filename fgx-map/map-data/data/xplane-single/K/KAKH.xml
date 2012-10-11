@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAKH">
+		<linecode>1</linecode>
+		<elevation>797</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KAKH</identifier>
+		<name>Gastonia Muni</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>35.19806700</latitude>
+			<longitude>-081.15286900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>35.20718100</latitude_end>
+			<longitude_end>-081.14688100</longitude_end>
+			<threshold_end>27.43</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1148.8036789</length-meters>
+			<length-feet>3501.55361329</length-feet>
+			<heading id="03 ">28.3384578127</heading>
+			<heading_end id="21 ">208.335005912</heading_end>
+			<threshold_lat id="03 ">35.198067</threshold_lat>
+			<threshold_lon id="03 ">-81.152869</threshold_lon>
+			<threshold_lat_end id="21 ">35.2069633814</threshold_lat_end>
+			<threshold_lon_end id="21 ">-81.1470239752</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>35.19981132</latitude>
+			<longitude>-081.15218859</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>28.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>35.20521922</latitude>
+			<longitude>-081.14770455</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>208.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>35.20362500</latitude>
+			<longitude>081.14987200</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.20004300</latitude>
+			<longitude>081.15317500</longitude>
+			<heading>30.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.20307500</latitude>
+			<longitude>-081.15078700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.19876500</latitude>
+			<longitude>-081.15277900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.20687900</latitude>
+			<longitude>-081.14746900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13572">135.72</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13475">134.75</frequency>
+			<description>CHARLOTTE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

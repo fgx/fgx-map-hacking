@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SWPG">
+		<linecode>1</linecode>
+		<elevation>1309</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SWPG</identifier>
+		<name>Porto Dos Gauchos</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>21.34</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>-11.52340143</latitude>
+			<longitude>-057.33340844</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>-11.50993337</latitude_end>
+			<longitude_end>-057.33436956</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1493.50235787</length-meters>
+			<length-feet>4552.19518678</length-feet>
+			<heading id="01 ">-4.02566408586</heading>
+			<heading_end id="19 ">535.974144024</heading_end>
+			<threshold_lat id="01 ">-11.52340143</threshold_lat>
+			<threshold_lon id="01 ">-57.33340844</threshold_lon>
+			<threshold_lat_end id="19 ">-11.50993337</threshold_lat_end>
+			<threshold_lon_end id="19 ">-57.33436956</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>-11.52162458</latitude>
+			<longitude>-057.33380840</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>356.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>-11.51171022</latitude>
+			<longitude>-057.33396963</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>176.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-11.51671428</latitude>
+			<longitude>-057.33457319</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-11.52361306</latitude>
+			<longitude>-057.33368799</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-11.50972174</latitude>
+			<longitude>-057.33409002</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RCBS">
+		<linecode>1</linecode>
+		<elevation>93</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RCBS</identifier>
+		<name>SHANG YI</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>24.42186100</latitude>
+			<longitude>118.34566700</longitude>
+			<threshold>480.06</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="5">SSALR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>24.43393100</latitude_end>
+			<longitude_end>118.37216400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3001.33737645</length-meters>
+			<length-feet>9148.07632342</length-feet>
+			<heading id="06 ">63.5537501005</heading>
+			<heading_end id="24 ">243.542792325</heading_end>
+			<threshold_lat id="06 ">24.4237911516</threshold_lat>
+			<threshold_lon id="06 ">118.349905225</threshold_lon>
+			<threshold_lat_end id="24 ">24.433931</threshold_lat_end>
+			<threshold_lon_end id="24 ">118.372164</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>24.42552633</latitude>
+			<longitude>118.35272713</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>63.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.42916746</latitude>
+			<longitude>118.35821512</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.42222388</latitude>
+			<longitude>118.34496900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.43356800</latitude>
+			<longitude>118.37286200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>KINMEN ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>KINMEN TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>KINMEN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12460">124.6</frequency>
+			<description>TAICHUNG APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13310">133.1</frequency>
+			<description>TAICHUNG APP</description>
+		</atc>
+	</airport>
+</PropertyList>

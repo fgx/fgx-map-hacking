@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KGEU">
+		<linecode>1</linecode>
+		<elevation>1071</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KGEU</identifier>
+		<name>Glendale Muni</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>33.51806029</latitude>
+			<longitude>-112.30027843</longitude>
+			<threshold>213.97</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>33.53558371</latitude_end>
+			<longitude_end>-112.29003957</longitude_end>
+			<threshold_end>305.11</threshold_end>
+			<overrrun_end>38.10</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2163.83607731</length-meters>
+			<length-feet>6595.37236363</length-feet>
+			<heading id="01 ">26.0783909321</heading>
+			<heading_end id="19 ">206.07273573</heading_end>
+			<threshold_lat id="01 ">33.5197930421</threshold_lat>
+			<threshold_lon id="01 ">-112.299265945</threshold_lon>
+			<threshold_lat_end id="19 ">33.5331127689</threshold_lat_end>
+			<threshold_lon_end id="19 ">-112.291483251</threshold_lon_end>
+		</runway>
+		<lightingobject id="1">
+			<linecode>21</linecode>
+			<latitude>33.52131006</latitude>
+			<longitude>-112.29880313</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>26.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>1</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>33.53147317</latitude>
+			<longitude>-112.29209208</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>206.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>33.52759400</latitude>
+			<longitude>112.29831200</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.52901400</latitude>
+			<longitude>112.29692600</longitude>
+			<heading>06.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.52759100</latitude>
+			<longitude>-112.29831600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.51857600</latitude>
+			<longitude>-112.30033100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.53506900</latitude>
+			<longitude>-112.29078700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11942">119.42</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12100">121.0</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12100">121.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12050">120.5</frequency>
+			<description>LUKE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

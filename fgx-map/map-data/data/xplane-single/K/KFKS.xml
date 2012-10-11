@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFKS">
+		<linecode>1</linecode>
+		<elevation>633</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KFKS</identifier>
+		<name>FRANKFORT DOW MEM FLD</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>44.62941700</latitude>
+			<longitude>-086.20592200</longitude>
+			<threshold>333.45</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>44.62098900</latitude_end>
+			<longitude_end>-086.19578900</longitude_end>
+			<threshold_end>33.83</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1234.41905683</length-meters>
+			<length-feet>3762.50928523</length-feet>
+			<heading id="15 ">139.353510181</heading>
+			<heading_end id="33 ">319.346392091</heading_end>
+			<threshold_lat id="15 ">44.6271402161</threshold_lat>
+			<threshold_lon id="15 ">-86.2031849094</threshold_lon>
+			<threshold_lat_end id="33 ">44.6212199619</threshold_lat_end>
+			<threshold_lon_end id="33 ">-86.1960667021</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>44.62596526</latitude>
+			<longitude>-086.20121482</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>139.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.62567251</latitude>
+			<longitude>-086.20009001</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.62977305</latitude>
+			<longitude>-086.20578198</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.62063296</latitude>
+			<longitude>-086.19592906</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11832">118.32</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12305">123.05</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

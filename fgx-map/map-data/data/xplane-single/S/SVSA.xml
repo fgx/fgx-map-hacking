@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVSA">
+		<linecode>1</linecode>
+		<elevation>1312</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVSA</identifier>
+		<name>SAN ANTONIO DEL TACHIRA</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>07.84901400</latitude>
+			<longitude>-072.44186700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>07.83265000</latitude_end>
+			<longitude_end>-072.43761900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1869.43143881</length-meters>
+			<length-feet>5698.0270255</length-feet>
+			<heading id="17 ">165.486832929</heading>
+			<heading_end id="35 ">345.48625341</heading_end>
+			<threshold_lat id="17 ">7.849014</threshold_lat>
+			<threshold_lon id="17 ">-72.441867</threshold_lon>
+			<threshold_lat_end id="35 ">7.83265</threshold_lat_end>
+			<threshold_lon_end id="35 ">-72.437619</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>07.84736493</latitude>
+			<longitude>-072.44104526</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>165.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.84949592</latitude>
+			<longitude>-072.44143173</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.83216809</latitude>
+			<longitude>-072.43805425</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

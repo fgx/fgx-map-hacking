@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LICB">
+		<linecode>1</linecode>
+		<elevation>757</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LICB</identifier>
+		<name>Magliocco</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>36.98669099</latitude>
+			<longitude>014.59532182</longitude>
+			<threshold>59.74</threshold>
+			<overrrun>137.77</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>37.00137101</latitude_end>
+			<longitude_end>014.61722618</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2540.91167777</length-meters>
+			<length-feet>7744.69879384</length-feet>
+			<heading id="05 ">50.1275888903</heading>
+			<heading_end id="23 ">230.11440834</heading_end>
+			<threshold_lat id="05 ">36.9870360873</threshold_lat>
+			<threshold_lon id="05 ">14.5958368211</threshold_lon>
+			<threshold_lat_end id="23 ">37.00137101</threshold_lat_end>
+			<threshold_lon_end id="23 ">14.61722618</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>36.99435000</latitude>
+			<longitude>014.60165300</longitude>
+			<orientation>323.52</orientation>
+			<width>34.14</width>
+			<length>33.83</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>36.98849978</latitude>
+			<longitude>014.59724169</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>49.9</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>36.99990811</latitude>
+			<longitude>014.61582115</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>230.0</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>36.99619400</latitude>
+			<longitude>014.60488300</longitude>
+			<height>17</height>
+			<deprecated>0</deprecated>
+			<name>Magliocco Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.99549700</latitude>
+			<longitude>014.60497000</longitude>
+			<heading>24.26</heading>
+			<name>GA Ramp 4</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.98862000</latitude>
+			<longitude>014.59663000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.00046000</latitude>
+			<longitude>014.61460300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+	</airport>
+</PropertyList>

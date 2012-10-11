@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UAAH">
+		<linecode>1</linecode>
+		<elevation>1446</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UAAH</identifier>
+		<name>BALKHASH</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>46.88731900</latitude>
+			<longitude>074.99169700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>46.90105600</latitude_end>
+			<longitude_end>075.01781100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2508.4631366</length-meters>
+			<length-feet>7645.79564035</length-feet>
+			<heading id="05 ">52.5075215976</heading>
+			<heading_end id="23 ">232.48845595</heading_end>
+			<threshold_lat id="05 ">46.887319</threshold_lat>
+			<threshold_lon id="05 ">74.991697</threshold_lon>
+			<threshold_lat_end id="23 ">46.901056</threshold_lat_end>
+			<threshold_lon_end id="23 ">75.017811</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.89518433</latitude>
+			<longitude>075.00362895</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.88752572</latitude>
+			<longitude>074.99080048</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.90084907</latitude>
+			<longitude>075.01870765</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12800">128.0</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

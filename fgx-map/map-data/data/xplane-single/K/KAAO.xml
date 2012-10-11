@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAAO">
+		<linecode>1</linecode>
+		<elevation>1421</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KAAO</identifier>
+		<name>Colonel James Jabara</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>37.75589106</latitude>
+			<longitude>-097.21985994</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>37.73925878</latitude_end>
+			<longitude_end>-097.22237129</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1859.26610203</length-meters>
+			<length-feet>5667.04307898</length-feet>
+			<heading id="18 ">-173.163913707</heading>
+			<heading_end id="36 ">366.837623701</heading_end>
+			<threshold_lat id="18 ">37.75589106</threshold_lat>
+			<threshold_lon id="18 ">-97.21985994</threshold_lon>
+			<threshold_lat_end id="36 ">37.73925878</threshold_lat_end>
+			<threshold_lon_end id="36 ">-97.22237129</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>37.74341445</latitude>
+			<longitude>-097.22416727</longitude>
+			<orientation>0.00</orientation>
+			<width>14.94</width>
+			<length>14.94</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>37.75376681</latitude>
+			<longitude>-097.21955498</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>185.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>37.74176158</latitude>
+			<longitude>-097.22250519</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>5.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75592777</latitude>
+			<longitude>097.22081875</longitude>
+			<heading>98.00</heading>
+			<name>Hold Short Rwy 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.73940302</latitude>
+			<longitude>097.22335228</longitude>
+			<heading>98.00</heading>
+			<name>Hold Short Rwy 36</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.74797489</latitude>
+			<longitude>-097.22511090</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.74880332</latitude>
+			<longitude>-097.21975915</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12388">123.88</frequency>
+			<description>AWOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12500">125.0</frequency>
+			<description>Clearance Delivery</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13480">134.8</frequency>
+			<description>Wichita Approach</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="13480">134.8</frequency>
+			<description>Wichita Departure</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMCX">
+		<linecode>1</linecode>
+		<elevation>676</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KMCX</identifier>
+		<name>WHITE CO</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>40.71432800</latitude>
+			<longitude>-086.76690000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>40.70334700</latitude_end>
+			<longitude_end>-086.76658600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.70986612</length-meters>
+			<length-feet>3717.67567192</length-feet>
+			<heading id="18 ">178.753554397</heading>
+			<heading_end id="36 ">358.753349601</heading_end>
+			<threshold_lat id="18 ">40.714328</threshold_lat>
+			<threshold_lon id="18 ">-86.7669</threshold_lon>
+			<threshold_lat_end id="36 ">40.703347</threshold_lat_end>
+			<threshold_lon_end id="36 ">-86.766586</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>40.71253406</latitude>
+			<longitude>-086.76651448</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>178.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>40.70514094</latitude>
+			<longitude>-086.76697147</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>358.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.70885032</latitude>
+			<longitude>-086.76598326</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.71449789</latitude>
+			<longitude>-086.76657909</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.70317711</latitude>
+			<longitude>-086.76690687</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

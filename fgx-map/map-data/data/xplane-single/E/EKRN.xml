@@ -1,0 +1,204 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EKRN">
+		<linecode>1</linecode>
+		<elevation>52</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EKRN</identifier>
+		<name>Bornholm Ronne</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>49.99</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>55.06688333</latitude>
+			<longitude>014.74521389</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>55.05964722</latitude_end>
+			<longitude_end>014.77390278</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2002.22991152</length-meters>
+			<length-feet>6102.79677032</length-feet>
+			<heading id="11 ">113.735695764</heading>
+			<heading_end id="29 ">293.712177046</heading_end>
+			<threshold_lat id="11 ">55.06688333</threshold_lat>
+			<threshold_lon id="11 ">14.74521389</threshold_lon>
+			<threshold_lat_end id="29 ">55.05964722</threshold_lat_end>
+			<threshold_lon_end id="29 ">14.77390278</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>55.06609002</latitude>
+			<longitude>014.75009805</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>113.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>55.06040160</latitude>
+			<longitude>014.76917698</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>293.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>55.06938498</latitude>
+			<longitude>014.74870998</longitude>
+			<height>32</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.06866331</latitude>
+			<longitude>014.74959302</longitude>
+			<heading>22.20</heading>
+			<name>Apron E</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.06843055</latitude>
+			<longitude>014.74581412</longitude>
+			<heading>38.45</heading>
+			<name>Apron W</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.07048733</latitude>
+			<longitude>014.74726827</longitude>
+			<heading>13.87</heading>
+			<name>GAT Parking Grass</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>55.06960044</latitude>
+			<longitude>014.74902157</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.06700423</latitude>
+			<longitude>014.74672238</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.06594646</latitude>
+			<longitude>014.75099653</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock 2</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.06485238</latitude>
+			<longitude>014.75524168</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock 3</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06779164</latitude>
+			<longitude>014.74771325</longitude>
+			<orientation>128.93</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C{@Y,^r}B{@@}{@L}C</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06992476</latitude>
+			<longitude>014.74784323</longitude>
+			<orientation>22.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{@Y,^l}D_GAT</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06691559</latitude>
+			<longitude>014.74880489</longitude>
+			<orientation>180.96</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11-29{@@}{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06693215</latitude>
+			<longitude>014.74795721</longitude>
+			<orientation>182.13</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11-29{@@}{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06787126</latitude>
+			<longitude>014.74489056</longitude>
+			<orientation>217.72</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11{@@}{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06757689</latitude>
+			<longitude>014.74557693</longitude>
+			<orientation>217.06</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}11{@@}{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06737230</latitude>
+			<longitude>014.74798660</longitude>
+			<orientation>1.56</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}C{@L}A{@@}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>55.06794318</latitude>
+			<longitude>014.74893504</longitude>
+			<orientation>179.07</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^u}B</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11832">118.32</frequency>
+			<description>RONNE TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

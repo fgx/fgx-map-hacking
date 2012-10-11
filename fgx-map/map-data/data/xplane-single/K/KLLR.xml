@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KLLR">
+		<linecode>1</linecode>
+		<elevation>572</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KLLR</identifier>
+		<name>Little River</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>39.26638950</latitude>
+			<longitude>-123.76083173</longitude>
+			<threshold>58.83</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>39.25750050</latitude_end>
+			<longitude_end>-123.74638827</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1589.90661477</length-meters>
+			<length-feet>4846.03536182</length-feet>
+			<heading id="11 ">128.372118425</heading>
+			<heading_end id="29 ">308.362977639</heading_end>
+			<threshold_lat id="11 ">39.2660605536</threshold_lat>
+			<threshold_lon id="11 ">-123.760297293</threshold_lon>
+			<threshold_lat_end id="29 ">39.2575005</threshold_lat_end>
+			<threshold_lon_end id="29 ">-123.74638827</threshold_lon_end>
+		</runway>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>39.25832568</latitude>
+			<longitude>-123.74851056</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>308.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.26307700</latitude>
+			<longitude>123.75254100</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.26384200</latitude>
+			<longitude>-123.75258400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.26655200</latitude>
+			<longitude>-123.76008100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.25815700</latitude>
+			<longitude>-123.74644100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

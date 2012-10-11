@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KSSI">
+		<linecode>1</linecode>
+		<elevation>19</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KSSI</identifier>
+		<name>MALCOLM MCKINNON</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>31.14522800</latitude>
+			<longitude>-081.39935600</longitude>
+			<threshold>304.80</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>31.15811100</latitude_end>
+			<longitude_end>-081.38843300</longitude_end>
+			<threshold_end>277.37</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1767.7750026</length-meters>
+			<length-feet>5388.17820792</length-feet>
+			<heading id="04 ">36.1016912717</heading>
+			<heading_end id="22 ">216.096040746</heading_end>
+			<threshold_lat id="04 ">31.1474491968</threshold_lat>
+			<threshold_lon id="04 ">-81.397472611</threshold_lon>
+			<threshold_lat_end id="22 ">31.1560895305</threshold_lat_end>
+			<threshold_lon_end id="22 ">-81.39014682</threshold_lon_end>
+		</runway>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>31.15616100</latitude>
+			<longitude>-081.38894200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>31.14796700</latitude_end>
+			<longitude_end>-081.38431900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>71.02</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1009.7839013</length-meters>
+			<length-feet>3077.82133118</length-feet>
+			<heading id="16 ">154.11768131</heading>
+			<heading_end id="34 ">334.11528978</heading_end>
+			<threshold_lat id="16 ">31.156161</threshold_lat>
+			<threshold_lon id="16 ">-81.388942</threshold_lon>
+			<threshold_lat_end id="34 ">31.147967</threshold_lat_end>
+			<threshold_lon_end id="34 ">-81.384319</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>31.14910182</latitude>
+			<longitude>-081.39655588</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>35.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>31.15467101</latitude>
+			<longitude>-081.38771090</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>154.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>31.15443723</latitude>
+			<longitude>-081.39106450</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>215.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>31.14945703</latitude>
+			<longitude>-081.38554993</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>334.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.15237807</latitude>
+			<longitude>-081.38587496</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.14524760</latitude>
+			<longitude>-081.39993333</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.15647984</latitude>
+			<longitude>-081.38872325</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.15809135</latitude>
+			<longitude>-081.38785560</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.14764817</latitude>
+			<longitude>-081.38453775</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11852">118.52</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12305">123.05</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

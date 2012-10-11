@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KUBE">
+		<linecode>1</linecode>
+		<elevation>1241</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KUBE</identifier>
+		<name>CUMBERLAND MUNI</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>45.50601100</latitude>
+			<longitude>-091.98898300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>45.50593100</latitude_end>
+			<longitude_end>-091.97318900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1234.32999626</length-meters>
+			<length-feet>3762.2378286</length-feet>
+			<heading id="09 ">90.4183592681</heading>
+			<heading_end id="27 ">270.407093037</heading_end>
+			<threshold_lat id="09 ">45.506011</threshold_lat>
+			<threshold_lon id="09 ">-91.988983</threshold_lon>
+			<threshold_lat_end id="27 ">45.505931</threshold_lat_end>
+			<threshold_lon_end id="27 ">-91.973189</threshold_lon_end>
+		</runway>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>36.58</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>45.50912200</latitude>
+			<longitude>-091.97934400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>45.50356700</latitude_end>
+			<longitude_end>-091.98017800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>620.822718946</length-meters>
+			<length-feet>1892.26764735</length-feet>
+			<heading id="18 ">-173.974047935</heading>
+			<heading_end id="36 ">366.02654698</heading_end>
+			<threshold_lat id="18 ">45.509122</threshold_lat>
+			<threshold_lon id="18 ">-91.979344</threshold_lon>
+			<threshold_lat_end id="36 ">45.503567</threshold_lat_end>
+			<threshold_lon_end id="36 ">-91.980178</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>45.50627201</latitude>
+			<longitude>-091.98641212</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>90.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>45.50567034</latitude>
+			<longitude>-091.97575994</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>270.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.50631968</latitude>
+			<longitude>-091.98927341</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.50939768</latitude>
+			<longitude>-091.97859418</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.50562228</latitude>
+			<longitude>-091.97289868</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.50329131</latitude>
+			<longitude>-091.98092774</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

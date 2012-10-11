@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UTSS">
+		<linecode>1</linecode>
+		<elevation>2224</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UTSS</identifier>
+		<name>SAMARKAND</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>49.07</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>39.70193500</latitude>
+			<longitude>066.96577300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>39.69915800</latitude_end>
+			<longitude_end>067.00188500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3112.48043761</length-meters>
+			<length-feet>9486.84037384</length-feet>
+			<heading id="09 ">95.6966677762</heading>
+			<heading_end id="27 ">275.673600327</heading_end>
+			<threshold_lat id="09 ">39.701935</threshold_lat>
+			<threshold_lon id="09 ">66.965773</threshold_lon>
+			<threshold_lat_end id="27 ">39.699158</threshold_lat_end>
+			<threshold_lon_end id="27 ">67.001885</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>39.70202391</latitude>
+			<longitude>066.97009878</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>95.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>39.69892065</latitude>
+			<longitude>066.99950314</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>275.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.70208620</latitude>
+			<longitude>066.98402590</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.70263662</latitude>
+			<longitude>066.96528712</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.69845622</latitude>
+			<longitude>067.00237050</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12080">120.8</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

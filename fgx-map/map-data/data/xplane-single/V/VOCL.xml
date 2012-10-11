@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VOCL">
+		<linecode>1</linecode>
+		<elevation>342</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VOCL</identifier>
+		<name>CALICUT</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>11.13930600</latitude>
+			<longitude>075.94243900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>57.91</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>11.13437500</latitude_end>
+			<longitude_end>075.96816100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>57.91</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2862.24232096</length-meters>
+			<length-feet>8724.1145943</length-feet>
+			<heading id="10 ">100.988301346</heading>
+			<heading_end id="28 ">280.983333067</heading_end>
+			<threshold_lat id="10 ">11.139306</threshold_lat>
+			<threshold_lon id="10 ">75.942439</threshold_lon>
+			<threshold_lat_end id="28 ">11.134375</threshold_lat_end>
+			<threshold_lon_end id="28 ">75.968161</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>11.13935716</latitude>
+			<longitude>075.94431827</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>101.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>11.13418569</latitude>
+			<longitude>075.96700309</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>281.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>11.13825460</latitude>
+			<longitude>075.95558053</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>11.13999060</latitude>
+			<longitude>075.94214802</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>11.13369037</latitude>
+			<longitude>075.96845191</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12700">127.0</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12335">123.35</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

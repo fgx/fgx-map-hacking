@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPSN">
+		<linecode>1</linecode>
+		<elevation>385</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPSN</identifier>
+		<name>SWIDWIN</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>57.91</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>53.79468100</latitude>
+			<longitude>015.80855800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>53.78659400</latitude_end>
+			<longitude_end>015.84393900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2499.45631741</length-meters>
+			<length-feet>7618.34285546</length-feet>
+			<heading id="11 ">111.121538058</heading>
+			<heading_end id="29 ">291.09299041</heading_end>
+			<threshold_lat id="11 ">53.794681</threshold_lat>
+			<threshold_lon id="11 ">15.808558</threshold_lon>
+			<threshold_lat_end id="29 ">53.786594</threshold_lat_end>
+			<threshold_lon_end id="29 ">15.843939</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>53.79443447</latitude>
+			<longitude>015.81166353</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>111.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>53.78684145</latitude>
+			<longitude>015.84083427</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>291.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.79559809</latitude>
+			<longitude>015.80821232</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.78567681</latitude>
+			<longitude>015.84428384</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

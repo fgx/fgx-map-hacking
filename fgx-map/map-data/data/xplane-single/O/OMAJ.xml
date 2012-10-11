@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OMAJ">
+		<linecode>1</linecode>
+		<elevation>43</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OMAJ</identifier>
+		<name>JEBEL DHANA</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>24.19426100</latitude>
+			<longitude>052.60618300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>24.18059200</latitude_end>
+			<longitude_end>052.62181400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2194.18626883</length-meters>
+			<length-feet>6687.8797474</length-feet>
+			<heading id="13 ">133.633407326</heading>
+			<heading_end id="31 ">313.627002948</heading_end>
+			<threshold_lat id="13 ">24.194261</threshold_lat>
+			<threshold_lon id="13 ">52.606183</threshold_lon>
+			<threshold_lat_end id="31 ">24.180592</threshold_lat_end>
+			<threshold_lon_end id="31 ">52.621814</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>24.19330797</latitude>
+			<longitude>052.60791477</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>133.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>24.18154521</latitude>
+			<longitude>052.62008253</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>313.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.18847343</latitude>
+			<longitude>052.61509685</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.19499514</latitude>
+			<longitude>052.60632548</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.17985788</latitude>
+			<longitude>052.62167145</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>OPS</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RCWA">
+		<linecode>1</linecode>
+		<elevation>115</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RCWA</identifier>
+		<name>WANG AN</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>23.16</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>23.36529200</latitude>
+			<longitude>119.50198900</longitude>
+			<threshold>55.17</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>23.37313100</latitude_end>
+			<longitude_end>119.50522800</longitude_end>
+			<threshold_end>55.17</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>929.179331981</length-meters>
+			<length-feet>2832.13860388</length-feet>
+			<heading id="02 ">20.8799770054</heading>
+			<heading_end id="20 ">200.878692241</heading_end>
+			<threshold_lat id="02 ">23.3657574385</threshold_lat>
+			<threshold_lon id="02 ">119.502181316</threshold_lon>
+			<threshold_lat_end id="20 ">23.3726655577</threshold_lat_end>
+			<threshold_lon_end id="20 ">119.505035685</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>23.36754626</latitude>
+			<longitude>119.50256829</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>20.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>23.37087675</latitude>
+			<longitude>119.50464863</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>200.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.36520797</latitude>
+			<longitude>119.50158998</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.37321502</latitude>
+			<longitude>119.50562705</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

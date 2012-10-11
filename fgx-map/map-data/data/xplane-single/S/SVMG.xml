@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVMG">
+		<linecode>1</linecode>
+		<elevation>74</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVMG</identifier>
+		<name>DEL CARIBE INTL GEN SANTIAGO MARINO</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>10.90934800</latitude>
+			<longitude>-063.98093700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>27.43</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>10.91516700</latitude_end>
+			<longitude_end>-063.95226200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3200.14401184</length-meters>
+			<length-feet>9754.0389481</length-feet>
+			<heading id="09 ">78.3993327506</heading>
+			<heading_end id="27 ">258.393904415</heading_end>
+			<threshold_lat id="09 ">10.909348</threshold_lat>
+			<threshold_lon id="09 ">-63.980937</threshold_lon>
+			<threshold_lat_end id="27 ">10.915167</threshold_lat_end>
+			<threshold_lon_end id="27 ">-63.952262</threshold_lon_end>
+		</runway>
+		<runway end="27R" id="09L">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09L</number>
+			<latitude>10.91086400</latitude>
+			<longitude>-063.98202800</longitude>
+			<threshold>586.74</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27R</number_end>
+			<latitude_end>10.91637800</latitude_end>
+			<longitude_end>-063.95483100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3035.07246546</length-meters>
+			<length-feet>9250.90087472</length-feet>
+			<heading id="09L">78.4095120626</heading>
+			<heading_end id="27R">258.404362885</heading_end>
+			<threshold_lat id="09L">10.9119296876</threshold_lat>
+			<threshold_lon id="09L">-63.9767702591</threshold_lon>
+			<threshold_lat_end id="27R">10.916378</threshold_lat_end>
+			<threshold_lon_end id="27R">-63.954831</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>10.91039641</latitude>
+			<longitude>-063.97780286</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>78.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.90986910</latitude>
+			<longitude>-063.98147458</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.91121146</latitude>
+			<longitude>-063.98238632</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.91464585</latitude>
+			<longitude>-063.95172446</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.91603050</latitude>
+			<longitude>-063.95447271</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>MARGARITA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

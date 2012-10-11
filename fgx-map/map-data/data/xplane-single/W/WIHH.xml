@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WIHH">
+		<linecode>1</linecode>
+		<elevation>84</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WIHH</identifier>
+		<name>Jakarta Halim Perdanakusuma Intl</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-06.27223300</latitude>
+			<longitude>106.87876700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-06.26098300</latitude_end>
+			<longitude_end>106.90346700</longitude_end>
+			<threshold_end>198.12</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3003.0947614</length-meters>
+			<length-feet>9153.43283274</length-feet>
+			<heading id="06 ">65.5249346429</heading>
+			<heading_end id="24 ">245.527630772</heading_end>
+			<threshold_lat id="06 ">-6.272233</threshold_lat>
+			<threshold_lon id="06 ">106.878767</threshold_lon>
+			<threshold_lat_end id="24 ">-6.26172514362</threshold_lat_end>
+			<threshold_lon_end id="24 ">106.901837491</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-06.27114332</latitude>
+			<longitude>106.88025642</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>65.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>-06.26339050</latitude>
+			<longitude>106.89908466</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>245.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-06.26369570</latitude>
+			<longitude>106.88729100</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-06.26512860</latitude>
+			<longitude>106.88628390</longitude>
+			<heading>0.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-06.26531764</latitude>
+			<longitude>106.89051949</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-06.27184850</latitude>
+			<longitude>106.87814054</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-06.26136748</latitude>
+			<longitude>106.90409346</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11975">119.75</frequency>
+			<description>JAKARTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12795">127.95</frequency>
+			<description>JAKARTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>JAKARTA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12545">125.45</frequency>
+			<description>JAKARTA ARR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13590">135.9</frequency>
+			<description>JAKARTA ARR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>JAKARTA DIRECTOR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12000">120.0</frequency>
+			<description>JAKARTA DIRECTOR</description>
+		</atc>
+	</airport>
+</PropertyList>

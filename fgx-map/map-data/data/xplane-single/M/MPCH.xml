@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MPCH">
+		<linecode>1</linecode>
+		<elevation>19</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MPCH</identifier>
+		<name>CAP MANUEL NINO INTL</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>24.99</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>09.45439400</latitude>
+			<longitude>-082.51943300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>09.46287800</latitude_end>
+			<longitude_end>-082.51418100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1101.44291555</length-meters>
+			<length-feet>3357.19800658</length-feet>
+			<heading id="03 ">31.5767944579</heading>
+			<heading_end id="21 ">211.575931368</heading_end>
+			<threshold_lat id="03 ">9.454394</threshold_lat>
+			<threshold_lon id="03 ">-82.519433</threshold_lon>
+			<threshold_lat_end id="21 ">9.462878</threshold_lat_end>
+			<threshold_lon_end id="21 ">-82.514181</threshold_lon_end>
+		</runway>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>09.46118011</latitude>
+			<longitude>-082.51486334</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>211.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>09.45904624</latitude>
+			<longitude>-082.51748823</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.45437786</latitude>
+			<longitude>-082.51984374</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.46289413</latitude>
+			<longitude>-082.51377024</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>CHANGUINOLA TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

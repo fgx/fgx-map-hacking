@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YPLM">
+		<linecode>1</linecode>
+		<elevation>19</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YPLM</identifier>
+		<name>Learmonth</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-22.21919964</latitude>
+			<longitude>114.09110505</longitude>
+			<threshold>54.86</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-22.24804108</latitude_end>
+			<longitude_end>114.08902381</longitude_end>
+			<threshold_end>73.15</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3200.91097032</length-meters>
+			<length-feet>9756.37663754</length-feet>
+			<heading id="18 ">-176.156144108</heading>
+			<heading_end id="36 ">363.843068384</heading_end>
+			<threshold_lat id="18 ">-22.2196939503</threshold_lat>
+			<threshold_lon id="18 ">114.09106938</threshold_lon>
+			<threshold_lat_end id="36 ">-22.2473819712</threshold_lat_end>
+			<threshold_lon_end id="36 ">114.089071372</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>-22.24490497</latitude>
+			<longitude>114.08564403</longitude>
+			<orientation>1.79</orientation>
+			<width>49.99</width>
+			<length>49.99</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-22.24387922</latitude>
+			<longitude>114.08891684</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>3.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-22.22385418</latitude>
+			<longitude>114.09121936</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>183.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-22.24025318</latitude>
+			<longitude>114.09361870</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 7</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-22.23962909</latitude>
+			<longitude>114.09309837</longitude>
+			<heading>35.00</heading>
+			<name>Domestic Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-22.24491382</latitude>
+			<longitude>114.08563338</longitude>
+			<heading>80.00</heading>
+			<name>Helipad</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-22.24660227</latitude>
+			<longitude>114.08427045</longitude>
+			<heading>4.76</heading>
+			<name>RAAF Apron</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-22.24485579</latitude>
+			<longitude>114.08394379</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.21875211</latitude>
+			<longitude>114.09288903</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 2</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.23709352</latitude>
+			<longitude>114.08808009</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 3</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.24775546</latitude>
+			<longitude>114.08725763</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12050">120.5</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

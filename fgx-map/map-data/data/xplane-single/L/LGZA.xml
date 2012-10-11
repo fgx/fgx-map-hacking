@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LGZA">
+		<linecode>1</linecode>
+		<elevation>14</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LGZA</identifier>
+		<name>Zakinthos Dionysios Solomos</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>37.76047800</latitude>
+			<longitude>020.88054400</longitude>
+			<threshold>199.95</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>37.74118100</latitude_end>
+			<longitude_end>020.88775000</longitude_end>
+			<threshold_end>199.95</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2233.97368434</length-meters>
+			<length-feet>6809.15178987</length-feet>
+			<heading id="16 ">163.486867227</heading>
+			<heading_end id="34 ">343.482455507</heading_end>
+			<threshold_lat id="16 ">37.7587508188</threshold_lat>
+			<threshold_lon id="16 ">20.8811889522</threshold_lon>
+			<threshold_lat_end id="34 ">37.7429081434</threshold_lat_end>
+			<threshold_lon_end id="34 ">20.8871050178</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>37.75712026</latitude>
+			<longitude>020.88223657</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>163.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>37.74453885</latitude>
+			<longitude>020.88605813</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>343.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>37.75131100</latitude>
+			<longitude>020.88478800</longitude>
+			<height>41</height>
+			<deprecated>0</deprecated>
+			<name>Dionysios Solomos Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75127000</latitude>
+			<longitude>020.88391600</longitude>
+			<heading>42.00</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75108000</latitude>
+			<longitude>020.88319600</longitude>
+			<heading>42.00</heading>
+			<name>Gate 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75216300</latitude>
+			<longitude>020.88356500</longitude>
+			<heading>42.00</heading>
+			<name>Gate 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75192000</latitude>
+			<longitude>020.88267400</longitude>
+			<heading>42.00</heading>
+			<name>Gate 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75304900</latitude>
+			<longitude>020.88323800</longitude>
+			<heading>62.00</heading>
+			<name>Gate 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75282200</latitude>
+			<longitude>020.88255000</longitude>
+			<heading>62.00</heading>
+			<name>Gate 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.75403500</latitude>
+			<longitude>020.88242900</longitude>
+			<heading>62.00</heading>
+			<name>Gate 7</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.75109777</latitude>
+			<longitude>020.88528850</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.75648500</latitude>
+			<longitude>020.87953100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.74562100</latitude>
+			<longitude>020.88352300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12542">125.42</frequency>
+			<description>ZAKINTHOS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12065">120.65</frequency>
+			<description>ANDRAVIDA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

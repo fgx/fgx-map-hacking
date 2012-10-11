@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LSMP">
+		<linecode>1</linecode>
+		<elevation>1465</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LSMP</identifier>
+		<name>Payerne</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>46.83466839</latitude>
+			<longitude>006.90104995</longitude>
+			<threshold>416.05</threshold>
+			<overrrun>185.93</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>46.85174042</latitude_end>
+			<longitude_end>006.92906354</longitude_end>
+			<threshold_end>413.92</threshold_end>
+			<overrrun_end>195.07</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2857.95362277</length-meters>
+			<length-feet>8711.04264222</length-feet>
+			<heading id="05 ">48.3997788597</heading>
+			<heading_end id="23 ">228.379343377</heading_end>
+			<threshold_lat id="05 ">46.8371531025</threshold_lat>
+			<threshold_lon id="05 ">6.90512824966</threshold_lon>
+			<threshold_lat_end id="23 ">46.8492672974</threshold_lat_end>
+			<threshold_lon_end id="23 ">6.92500649276</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>46.84791700</latitude>
+			<longitude>006.91995800</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>46.85456844</latitude>
+			<longitude>006.93067874</longitude>
+			<heading>12.56</heading>
+			<name>FA-18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>46.84187144</latitude>
+			<longitude>006.92579489</longitude>
+			<heading>91.71</heading>
+			<name>Hangar</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>46.84600200</latitude>
+			<longitude>006.92404100</longitude>
+			<heading>0.00</heading>
+			<name>Park position</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.84362914</latitude>
+			<longitude>006.91485646</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.83517000</latitude>
+			<longitude>006.90113862</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.85125846</latitude>
+			<longitude>006.92894744</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12867">128.67</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13635">136.35</frequency>
+			<description>ARR</description>
+		</atc>
+	</airport>
+</PropertyList>

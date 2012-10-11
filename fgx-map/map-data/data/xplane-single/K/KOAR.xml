@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KOAR">
+		<linecode>1</linecode>
+		<elevation>137</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KOAR</identifier>
+		<name>Marina Municipal Airport</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>36.68410300</latitude>
+			<longitude>-121.76665000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.10</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>36.67965300</latitude_end>
+			<longitude_end>-121.75804400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>152.10</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.085447337</length-meters>
+			<length-feet>2786.13244348</length-feet>
+			<heading id="11 ">122.702436724</heading>
+			<heading_end id="29 ">302.697295745</heading_end>
+			<threshold_lat id="11 ">36.684103</threshold_lat>
+			<threshold_lon id="11 ">-121.76665</threshold_lon>
+			<threshold_lat_end id="29 ">36.679653</threshold_lat_end>
+			<threshold_lon_end id="29 ">-121.758044</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.67868246</latitude>
+			<longitude>121.76293676</longitude>
+			<heading>02.80</heading>
+			<name>Medium GA (Mid-Field)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.67925280</latitude>
+			<longitude>121.76351009</longitude>
+			<heading>04.42</heading>
+			<name>Mid-Field Hanger</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.68098958</latitude>
+			<longitude>121.76881330</longitude>
+			<heading>23.69</heading>
+			<name>North Hanger</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.68159032</latitude>
+			<longitude>121.76808177</longitude>
+			<heading>12.38</heading>
+			<name>North Hanger 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.68248351</latitude>
+			<longitude>-121.76186377</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.68277576</latitude>
+			<longitude>-121.76162768</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 1</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.67773921</latitude>
+			<longitude>-121.75754877</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 3</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12715">127.15</frequency>
+			<description>NORCAL APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13300">133.0</frequency>
+			<description>NORCAL APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

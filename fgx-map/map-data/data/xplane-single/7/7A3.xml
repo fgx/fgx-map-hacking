@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="7A3 ">
+		<linecode>1</linecode>
+		<elevation>624</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>7A3</identifier>
+		<name>LANETT MUNI</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>24.38</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>32.81122800</latitude>
+			<longitude>-085.23462800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>32.81286900</latitude_end>
+			<longitude_end>-085.22455300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>960.923108473</length-meters>
+			<length-feet>2928.89363463</length-feet>
+			<heading id="08 ">79.0855722564</heading>
+			<heading_end id="26 ">259.080112765</heading_end>
+			<threshold_lat id="08 ">32.811228</threshold_lat>
+			<threshold_lon id="08 ">-85.234628</threshold_lon>
+			<threshold_lat_end id="26 ">32.812869</threshold_lat_end>
+			<threshold_lon_end id="26 ">-85.224553</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.81280259</latitude>
+			<longitude>-085.22976519</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.81150938</latitude>
+			<longitude>-085.23495885</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.81258759</latitude>
+			<longitude>-085.22422217</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>ATLANTA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12655">126.55</frequency>
+			<description>ATLANTA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

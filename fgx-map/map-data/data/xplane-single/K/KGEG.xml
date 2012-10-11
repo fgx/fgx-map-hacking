@@ -1,0 +1,408 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KGEG">
+		<linecode>1</linecode>
+		<elevation>2376</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KGEG</identifier>
+		<name>Spokane Intl</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>47.61392500</latitude>
+			<longitude>-117.54429700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>305.11</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>47.63121700</latitude_end>
+			<longitude_end>-117.51826700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>305.11</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2743.11425013</length-meters>
+			<length-feet>8361.0122344</length-feet>
+			<heading id="03 ">45.5124903135</heading>
+			<heading_end id="21 ">225.493261408</heading_end>
+			<threshold_lat id="03 ">47.613925</threshold_lat>
+			<threshold_lon id="03 ">-117.544297</threshold_lon>
+			<threshold_lat_end id="21 ">47.631217</threshold_lat_end>
+			<threshold_lon_end id="21 ">-117.518267</threshold_lon_end>
+		</runway>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>47.61696400</latitude>
+			<longitude>-117.55326700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>47.61676700</latitude_end>
+			<longitude_end>-117.52002800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>29.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2498.878164</length-meters>
+			<length-feet>7616.58064388</length-feet>
+			<heading id="07 ">90.5144881703</heading>
+			<heading_end id="25 ">270.489936057</heading_end>
+			<threshold_lat id="07 ">47.616964</threshold_lat>
+			<threshold_lon id="07 ">-117.553267</threshold_lon>
+			<threshold_lat_end id="25 ">47.616767</threshold_lat_end>
+			<threshold_lon_end id="25 ">-117.520028</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>47.61555846</latitude>
+			<longitude>-117.54267849</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>45.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>47.61731324</latitude>
+			<longitude>-117.55002792</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>90.4</orientation>
+			<glideslope>3.20</glideslope>
+			<runway>07</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>47.62908068</latitude>
+			<longitude>-117.52048289</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>225.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>47.61631536</latitude>
+			<longitude>-117.52358246</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>270.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>47.61358382</latitude>
+			<longitude>117.52700329</longitude>
+			<height>238</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62707710</latitude>
+			<longitude>117.53033770</longitude>
+			<heading>15.63</heading>
+			<name>Cargo 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62741554</latitude>
+			<longitude>117.52981293</longitude>
+			<heading>15.41</heading>
+			<name>Cargo 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62794987</latitude>
+			<longitude>117.52914767</longitude>
+			<heading>45.41</heading>
+			<name>Cargo 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62775616</latitude>
+			<longitude>117.52888932</longitude>
+			<heading>46.15</heading>
+			<name>Cargo 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62840113</latitude>
+			<longitude>117.52836847</longitude>
+			<heading>2.59</heading>
+			<name>Cargo 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62878168</latitude>
+			<longitude>117.52780186</longitude>
+			<heading>2.60</heading>
+			<name>Cargo 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62075631</latitude>
+			<longitude>117.52483755</longitude>
+			<heading>90.00</heading>
+			<name>GA 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.61826142</latitude>
+			<longitude>117.52424630</longitude>
+			<heading>81.91</heading>
+			<name>GA 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62591407</latitude>
+			<longitude>117.53505521</longitude>
+			<heading>17.48</heading>
+			<name>Gate A11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62506023</latitude>
+			<longitude>117.53467201</longitude>
+			<heading>5.93</heading>
+			<name>Gate A12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62581092</latitude>
+			<longitude>117.53437403</longitude>
+			<heading>43.04</heading>
+			<name>Gate A13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62515430</latitude>
+			<longitude>117.53415473</longitude>
+			<heading>24.77</heading>
+			<name>Gate A14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62550266</latitude>
+			<longitude>117.53397784</longitude>
+			<heading>90.46</heading>
+			<name>Gate A15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62488588</latitude>
+			<longitude>117.53536599</longitude>
+			<heading>00.96</heading>
+			<name>Gate B1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62445593</latitude>
+			<longitude>117.53537119</longitude>
+			<heading>00.80</heading>
+			<name>Gate B3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62446017</latitude>
+			<longitude>117.53669441</longitude>
+			<heading>81.50</heading>
+			<name>Gate B4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62414322</latitude>
+			<longitude>117.53557935</longitude>
+			<heading>35.94</heading>
+			<name>Gate B5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62414130</latitude>
+			<longitude>117.53670308</longitude>
+			<heading>77.47</heading>
+			<name>Gate B6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62391094</latitude>
+			<longitude>117.53590324</longitude>
+			<heading>3.39</heading>
+			<name>Gate B7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62389222</latitude>
+			<longitude>117.53639665</longitude>
+			<heading>36.38</heading>
+			<name>Gate B8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62410026</latitude>
+			<longitude>117.53770310</longitude>
+			<heading>86.16</heading>
+			<name>Gate C22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62370227</latitude>
+			<longitude>117.53793790</longitude>
+			<heading>50.24</heading>
+			<name>Gate C23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62330365</latitude>
+			<longitude>117.53856489</longitude>
+			<heading>15.47</heading>
+			<name>Gate C24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62338520</latitude>
+			<longitude>117.53777368</longitude>
+			<heading>98.39</heading>
+			<name>Gate C25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62319851</latitude>
+			<longitude>117.53814615</longitude>
+			<heading>38.20</heading>
+			<name>Gate C26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62335095</latitude>
+			<longitude>117.53910342</longitude>
+			<heading>50.43</heading>
+			<name>Gate C30</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62331692</latitude>
+			<longitude>117.53965140</longitude>
+			<heading>55.85</heading>
+			<name>Gate C31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.62329570</latitude>
+			<longitude>117.54069379</longitude>
+			<heading>43.50</heading>
+			<name>Gate C32</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.61358382</latitude>
+			<longitude>-117.52700329</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.61609977</latitude>
+			<longitude>-117.52327607</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.62985512</latitude>
+			<longitude>-117.51858096</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.61765159</latitude>
+			<longitude>-117.54995841</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.61489112</latitude>
+			<longitude>-117.54511207</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12432">124.32</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12755">127.55</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12375">123.75</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12645">126.45</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13335">133.35</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

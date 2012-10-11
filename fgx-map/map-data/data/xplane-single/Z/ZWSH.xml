@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZWSH">
+		<linecode>1</linecode>
+		<elevation>4529</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZWSH</identifier>
+		<name>KASHI</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>41.15</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>39.54189400</latitude>
+			<longitude>076.00144400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>68.58</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>39.54395000</latitude_end>
+			<longitude_end>076.03846900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>51.82</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3190.86262631</length-meters>
+			<length-feet>9725.749285</length-feet>
+			<heading id="08 ">85.9094342774</heading>
+			<heading_end id="26 ">265.885862085</heading_end>
+			<threshold_lat id="08 ">39.541894</threshold_lat>
+			<threshold_lon id="08 ">76.001444</threshold_lon>
+			<threshold_lat_end id="26 ">39.54395</threshold_lat_end>
+			<threshold_lon_end id="26 ">76.038469</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>39.54246046</latitude>
+			<longitude>076.00471788</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>85.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>39.54338891</latitude>
+			<longitude>076.03527294</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.54421606</latitude>
+			<longitude>076.01983152</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.54241997</latitude>
+			<longitude>076.00091331</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.54342386</latitude>
+			<longitude>076.03899943</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13000">130.0</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="7G8 ">
+		<linecode>1</linecode>
+		<elevation>1174</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>7G8</identifier>
+		<name>GEAUGA CO</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>19.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>41.45042500</latitude>
+			<longitude>-081.06922200</longitude>
+			<threshold>54.86</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>41.44876400</latitude_end>
+			<longitude_end>-081.05664700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1066.84841372</length-meters>
+			<length-feet>3251.75396503</length-feet>
+			<heading id="11 ">99.9615577933</heading>
+			<heading_end id="29 ">279.953233635</heading_end>
+			<threshold_lat id="11 ">41.4503395501</threshold_lat>
+			<threshold_lon id="11 ">-81.0685753631</threshold_lon>
+			<threshold_lat_end id="29 ">41.448764</threshold_lat_end>
+			<threshold_lon_end id="29 ">-81.056647</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>41.45028330</latitude>
+			<longitude>-081.06614815</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>99.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>41.44882031</latitude>
+			<longitude>-081.05907204</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>280.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.45020834</latitude>
+			<longitude>-081.06279231</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.45071796</latitude>
+			<longitude>-081.06939469</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.44847101</latitude>
+			<longitude>-081.05647437</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12535">125.35</frequency>
+			<description>CLEVELAND APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYVK">
+		<linecode>1</linecode>
+		<elevation>1140</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYVK</identifier>
+		<name>VERNON</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>50.24652800</latitude>
+			<longitude>-119.33732800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>50.24958300</latitude_end>
+			<longitude_end>-119.32378300</longitude_end>
+			<threshold_end>140.21</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1024.13470321</length-meters>
+			<length-feet>3121.56257538</length-feet>
+			<heading id="05 ">70.6264608662</heading>
+			<heading_end id="23 ">250.616047197</heading_end>
+			<threshold_lat id="05 ">50.246528</threshold_lat>
+			<threshold_lon id="05 ">-119.337328</threshold_lon>
+			<threshold_lat_end id="23 ">50.24916463</threshold_lat_end>
+			<threshold_lon_end id="23 ">-119.325637373</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>50.24741054</latitude>
+			<longitude>-119.33483034</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>70.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>50.24828117</latitude>
+			<longitude>-119.32814198</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>250.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.24873344</latitude>
+			<longitude>-119.33093061</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.24674926</latitude>
+			<longitude>-119.33779121</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.24936168</latitude>
+			<longitude>-119.32331983</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

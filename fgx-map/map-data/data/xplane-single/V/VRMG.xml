@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VRMG">
+		<linecode>1</linecode>
+		<elevation>6</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VRMG</identifier>
+		<name>GAN ISLAND</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-00.69153300</latitude>
+			<longitude>073.14383600</longitude>
+			<threshold>90.83</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-00.69514700</latitude_end>
+			<longitude_end>073.16745600</longitude_end>
+			<threshold_end>90.83</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2659.37115014</length-meters>
+			<length-feet>8105.76326563</length-feet>
+			<heading id="10 ">98.6422633226</heading>
+			<heading_end id="28 ">278.642549143</heading_end>
+			<threshold_lat id="10 ">-0.691656432958</threshold_lat>
+			<threshold_lon id="10 ">73.1446427338</threshold_lon>
+			<threshold_lat_end id="28 ">-0.695023562854</threshold_lat_end>
+			<threshold_lon_end id="28 ">73.1666492662</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-00.69155922</latitude>
+			<longitude>073.14647990</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>98.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-00.69512078</latitude>
+			<longitude>073.16481209</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>278.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-00.69193537</latitude>
+			<longitude>073.15586003</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.69086965</latitude>
+			<longitude>073.14352679</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.69581034</latitude>
+			<longitude>073.16776521</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>GAN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

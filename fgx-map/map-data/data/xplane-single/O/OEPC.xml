@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OEPC">
+		<linecode>1</linecode>
+		<elevation>1740</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OEPC</identifier>
+		<name>PUMP STATION 3</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>25.18321400</latitude>
+			<longitude>047.48101400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>151.49</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>25.16587800</latitude_end>
+			<longitude_end>047.49584700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>61.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2433.88261121</length-meters>
+			<length-feet>7418.47419896</length-feet>
+			<heading id="14 ">142.098015307</heading>
+			<heading_end id="32 ">322.091705686</heading_end>
+			<threshold_lat id="14 ">25.183214</threshold_lat>
+			<threshold_lon id="14 ">47.481014</threshold_lon>
+			<threshold_lat_end id="32 ">25.165878</threshold_lat_end>
+			<threshold_lon_end id="32 ">47.495847</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>25.18199225</latitude>
+			<longitude>047.48251897</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>142.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>25.16709990</latitude>
+			<longitude>047.49434239</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>322.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>25.17522310</latitude>
+			<longitude>047.48939352</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.18375228</latitude>
+			<longitude>047.48121276</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.16533975</latitude>
+			<longitude>047.49564820</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KGHG">
+		<linecode>1</linecode>
+		<elevation>11</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KGHG</identifier>
+		<name>MARSHFIELD MUNI GEORGE HARLOW FLD</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>42.09538100</latitude>
+			<longitude>-070.67611700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>42.10109200</latitude_end>
+			<longitude_end>-070.66814700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.921958373</length-meters>
+			<length-feet>2788.68212912</length-feet>
+			<heading id="06 ">46.1077244375</heading>
+			<heading_end id="24 ">226.102381319</heading_end>
+			<threshold_lat id="06 ">42.095381</threshold_lat>
+			<threshold_lon id="06 ">-70.676117</threshold_lon>
+			<threshold_lat_end id="24 ">42.101092</threshold_lat_end>
+			<threshold_lon_end id="24 ">-70.668147</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>42.09684776</latitude>
+			<longitude>-070.67465395</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>46.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>42.09923600</latitude>
+			<longitude>070.67212700</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.09752300</latitude>
+			<longitude>070.67499500</longitude>
+			<heading>0.00</heading>
+			<name>LOC</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.09853700</latitude>
+			<longitude>-070.67252300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.09567600</latitude>
+			<longitude>-070.67650600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.10079600</latitude>
+			<longitude>-070.66776300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12000">120.0</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12410">124.1</frequency>
+			<description>BOSTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

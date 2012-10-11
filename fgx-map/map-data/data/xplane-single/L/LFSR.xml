@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFSR">
+		<linecode>1</linecode>
+		<elevation>312</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFSR</identifier>
+		<name>Reims Champagne</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>47.85</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>49.30570300</latitude>
+			<longitude>004.03434400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>328.88</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>49.31425800</latitude_end>
+			<longitude_end>004.06592200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>249.94</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2485.55893289</length-meters>
+			<length-feet>7575.98362745</length-feet>
+			<heading id="07 ">67.5052751562</heading>
+			<heading_end id="25 ">247.481331203</heading_end>
+			<threshold_lat id="07 ">49.305703</threshold_lat>
+			<threshold_lon id="07 ">4.034344</threshold_lon>
+			<threshold_lat_end id="25 ">49.314258</threshold_lat_end>
+			<threshold_lon_end id="25 ">4.065922</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>49.30677563</latitude>
+			<longitude>004.03664951</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>67.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>49.31259086</latitude>
+			<longitude>004.06141717</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.30651090</latitude>
+			<longitude>004.05104540</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.31082920</latitude>
+			<longitude>004.03197150</longitude>
+			<heading>85.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.31137217</latitude>
+			<longitude>004.04923991</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.30613287</latitude>
+			<longitude>004.03335459</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.31382786</latitude>
+			<longitude>004.06691131</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11827">118.27</frequency>
+			<description>REIMS TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>REIMS TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11827">118.27</frequency>
+			<description>AFIS</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>REIMS APP</description>
+		</atc>
+	</airport>
+</PropertyList>

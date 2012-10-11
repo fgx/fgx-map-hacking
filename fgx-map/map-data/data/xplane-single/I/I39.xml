@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="I39 ">
+		<linecode>1</linecode>
+		<elevation>1000</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>I39</identifier>
+		<name>MADISON</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>37.63700300</latitude>
+			<longitude>-084.33308300</longitude>
+			<threshold>27.43</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>37.62469400</latitude_end>
+			<longitude_end>-084.33161900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1372.26817083</length-meters>
+			<length-feet>4182.67338468</length-feet>
+			<heading id="18 ">174.596807734</heading>
+			<heading_end id="36 ">354.595913857</heading_end>
+			<threshold_lat id="18 ">37.6367569579</threshold_lat>
+			<threshold_lon id="18 ">-84.3330537365</threshold_lon>
+			<threshold_lat_end id="36 ">37.624694</threshold_lat_end>
+			<threshold_lon_end id="36 ">-84.331619</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>37.63499673</latitude>
+			<longitude>-084.33241927</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>174.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>37.62645449</latitude>
+			<longitude>-084.33225337</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>354.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.63094034</latitude>
+			<longitude>-084.33114420</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.63731468</latitude>
+			<longitude>-084.33259821</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.62438233</latitude>
+			<longitude>-084.33210372</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12015">120.15</frequency>
+			<description>LEXINGTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

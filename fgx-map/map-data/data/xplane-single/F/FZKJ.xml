@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FZKJ">
+		<linecode>1</linecode>
+		<elevation>1378</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FZKJ</identifier>
+		<name>BUTA ZEGA</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>02.81556700</latitude>
+			<longitude>024.78473900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>55.47</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>02.82113100</latitude_end>
+			<longitude_end>024.80267200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>55.47</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2086.65901069</length-meters>
+			<length-feet>6360.13666458</length-feet>
+			<heading id="07 ">72.8519326361</heading>
+			<heading_end id="25 ">252.851050877</heading_end>
+			<threshold_lat id="07 ">2.815567</threshold_lat>
+			<threshold_lon id="07 ">24.784739</threshold_lon>
+			<threshold_lat_end id="25 ">2.821131</threshold_lat_end>
+			<threshold_lon_end id="25 ">24.802672</threshold_lon_end>
+		</runway>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>02.82030542</latitude>
+			<longitude>024.80104178</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>252.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>02.81924688</latitude>
+			<longitude>024.79342381</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>02.81587232</latitude>
+			<longitude>024.78436221</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>02.82082567</latitude>
+			<longitude>024.80304878</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LTAU">
+		<linecode>1</linecode>
+		<elevation>3463</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LTAU</identifier>
+		<name>ERKILET</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>44.20</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>38.76719700</latitude>
+			<longitude>035.47865800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.40</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>38.77357200</latitude_end>
+			<longitude_end>035.51219700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>152.40</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2999.4138882</length-meters>
+			<length-feet>9142.21353123</length-feet>
+			<heading id="07 ">76.3631859054</heading>
+			<heading_end id="25 ">256.342183753</heading_end>
+			<threshold_lat id="07 ">38.767197</threshold_lat>
+			<threshold_lon id="07 ">35.478658</threshold_lon>
+			<threshold_lat_end id="25 ">38.773572</threshold_lat_end>
+			<threshold_lon_end id="25 ">35.512197</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>38.76800917</latitude>
+			<longitude>035.48077996</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>76.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>38.77255201</latitude>
+			<longitude>035.50897696</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>256.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.77173786</latitude>
+			<longitude>035.49500268</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.76768098</latitude>
+			<longitude>035.47798148</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.77308781</latitude>
+			<longitude>035.51287336</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12195">121.95</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

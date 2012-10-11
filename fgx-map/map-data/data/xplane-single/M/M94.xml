@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="M94 ">
+		<linecode>1</linecode>
+		<elevation>586</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>M94</identifier>
+		<name>DESERT AIRE</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>10.97</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>46.68943600</latitude>
+			<longitude>-119.92630000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>46.68506400</latitude_end>
+			<longitude_end>-119.91315300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1117.00334607</length-meters>
+			<length-feet>3404.62619881</length-feet>
+			<heading id="10 ">115.796672686</heading>
+			<heading_end id="28 ">295.787106664</heading_end>
+			<threshold_lat id="10 ">46.689436</threshold_lat>
+			<threshold_lon id="10 ">-119.9263</threshold_lon>
+			<threshold_lat_end id="28 ">46.685064</threshold_lat_end>
+			<threshold_lon_end id="28 ">-119.913153</threshold_lon_end>
+		</runway>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>46.68562670</latitude>
+			<longitude>-119.91567110</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>295.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.68756249</latitude>
+			<longitude>-119.91950955</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.68961236</latitude>
+			<longitude>-119.92633536</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.68488764</latitude>
+			<longitude>-119.91311768</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

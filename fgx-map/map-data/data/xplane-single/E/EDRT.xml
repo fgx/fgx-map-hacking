@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDRT">
+		<linecode>1</linecode>
+		<elevation>665</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDRT</identifier>
+		<name>TRIER FOHREN</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>49.86014373</latitude>
+			<longitude>006.78207543</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>49.86804204</latitude_end>
+			<longitude_end>006.79350339</longitude_end>
+			<threshold_end>70.10</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1202.85580591</length-meters>
+			<length-feet>3666.30449642</length-feet>
+			<heading id="04 ">43.0889600501</heading>
+			<heading_end id="22 ">223.080223174</heading_end>
+			<threshold_lat id="04 ">49.86014373</threshold_lat>
+			<threshold_lon id="04 ">6.78207543</threshold_lon>
+			<threshold_lat_end id="22 ">49.8675817081</threshold_lat_end>
+			<threshold_lon_end id="22 ">6.79283739797</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H5</designator>
+			<latitude>49.86181501</latitude>
+			<longitude>006.78260412</longitude>
+			<orientation>7.62</orientation>
+			<width>20.12</width>
+			<length>20.12</length>
+			<surface code="3">Turf or Grass</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>49.86699277</latitude>
+			<longitude>006.79280277</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>223.0</orientation>
+			<glideslope>4.50</glideslope>
+			<runway>xxx</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>49.86082842</latitude>
+			<longitude>006.78238013</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>43.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>xxx</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.86300952</latitude>
+			<longitude>006.78055319</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.86195773</latitude>
+			<longitude>006.78088292</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12205">122.05</frequency>
+			<description>TRIER INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

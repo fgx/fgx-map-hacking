@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFGU">
+		<linecode>1</linecode>
+		<elevation>859</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KFGU</identifier>
+		<name>COLLEGEDALE MUNI</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>35.03918292</latitude>
+			<longitude>-085.02022305</longitude>
+			<threshold>117.04</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>35.05038893</latitude_end>
+			<longitude_end>-085.01242005</longitude_end>
+			<threshold_end>121.92</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1432.62730709</length-meters>
+			<length-feet>4366.648032</length-feet>
+			<heading id="03 ">29.8001565341</heading>
+			<heading_end id="21 ">209.795675922</heading_end>
+			<threshold_lat id="03 ">35.0400983854</threshold_lat>
+			<threshold_lon id="03 ">-85.0195855686</threshold_lon>
+			<threshold_lat_end id="21 ">35.0494352495</threshold_lat_end>
+			<threshold_lon_end id="21 ">-85.0130840962</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>35.04115085</latitude>
+			<longitude>-085.01915689</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>29.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>35.04804263</latitude>
+			<longitude>-085.01377515</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>209.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>35.04065938</latitude>
+			<longitude>085.02048030</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower View</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.04060123</latitude>
+			<longitude>085.01997649</longitude>
+			<heading>25.00</heading>
+			<name>Starting</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.04202929</latitude>
+			<longitude>-085.02102007</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.04246492</latitude>
+			<longitude>-085.01750927</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock Midfield</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.04031558</latitude>
+			<longitude>-085.02029402</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

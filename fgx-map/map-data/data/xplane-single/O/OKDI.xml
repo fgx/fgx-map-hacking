@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OKDI">
+		<linecode>1</linecode>
+		<elevation>430</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OKDI</identifier>
+		<name>UDAIRI AAF</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>24.38</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>29.70479200</latitude>
+			<longitude>047.43617500</longitude>
+			<threshold>144.48</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>29.69045600</latitude_end>
+			<longitude_end>047.43578600</longitude_end>
+			<threshold_end>140.82</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1589.55365094</length-meters>
+			<length-feet>4844.95952807</length-feet>
+			<heading id="18 ">-178.642996505</heading>
+			<heading_end id="36 ">361.357196215</heading_end>
+			<threshold_lat id="18 ">29.7034889529</threshold_lat>
+			<threshold_lon id="18 ">47.4361396429</threshold_lon>
+			<threshold_lat_end id="36 ">29.6917260404</threshold_lat_end>
+			<threshold_lon_end id="36 ">47.4358204623</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>29.69760848</latitude>
+			<longitude>047.43686446</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.70500362</latitude>
+			<longitude>047.43655980</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.69024438</latitude>
+			<longitude>047.43540125</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13000">130.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12830">128.3</frequency>
+			<description>MOHALAB APP</description>
+		</atc>
+	</airport>
+</PropertyList>

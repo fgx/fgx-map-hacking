@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMES">
+		<linecode>1</linecode>
+		<elevation>66</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>MMES</identifier>
+		<name>Ensenada</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>31.79897200</latitude>
+			<longitude>-116.60933600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>31.79158900</latitude_end>
+			<longitude_end>-116.59620800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1488.58006917</length-meters>
+			<length-feet>4537.19205082</length-feet>
+			<heading id="11 ">123.367331535</heading>
+			<heading_end id="29 ">303.360414579</heading_end>
+			<threshold_lat id="11 ">31.798972</threshold_lat>
+			<threshold_lon id="11 ">-116.609336</threshold_lon>
+			<threshold_lat_end id="29 ">31.791589</threshold_lat_end>
+			<threshold_lon_end id="29 ">-116.596208</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>31.79825304</latitude>
+			<longitude>-116.60735643</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>123.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>31.79230816</latitude>
+			<longitude>-116.59818732</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>303.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>31.79840500</latitude>
+			<longitude>116.59900700</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.79784600</latitude>
+			<longitude>116.60571300</longitude>
+			<heading>10.00</heading>
+			<name>Back Taxi Rwy11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.80035800</latitude>
+			<longitude>116.59711500</longitude>
+			<heading>50.00</heading>
+			<name>Gen Avia Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.79235300</latitude>
+			<longitude>116.59621400</longitude>
+			<heading>73.00</heading>
+			<name>Hold Short Rwy29</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.79906500</latitude>
+			<longitude>116.59787000</longitude>
+			<heading>46.00</heading>
+			<name>Military Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>31.79803300</latitude>
+			<longitude>116.59636700</longitude>
+			<heading>40.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.79758500</latitude>
+			<longitude>-116.60549900</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.79332200</latitude>
+			<longitude>-116.60053300</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11975">119.75</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

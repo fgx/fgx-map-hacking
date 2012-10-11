@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YHBA">
+		<linecode>1</linecode>
+		<elevation>60</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YHBA</identifier>
+		<name>Hervey Bay</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-25.31561519</latitude>
+			<longitude>152.87130244</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-25.32424881</latitude_end>
+			<longitude_end>152.88874800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2000.04203744</length-meters>
+			<length-feet>6096.12813011</length-feet>
+			<heading id="11 ">118.563922629</heading>
+			<heading_end id="29 ">298.571383612</heading_end>
+			<threshold_lat id="11 ">-25.31561519</threshold_lat>
+			<threshold_lon id="11 ">152.87130244</threshold_lon>
+			<threshold_lat_end id="29 ">-25.32424881</threshold_lat_end>
+			<threshold_lon_end id="29 ">152.888748</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H8</designator>
+			<latitude>-25.32188400</latitude>
+			<longitude>152.88566100</longitude>
+			<orientation>28.98</orientation>
+			<width>10.06</width>
+			<length>10.06</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-25.32306361</latitude>
+			<longitude>152.88556326</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>298.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-25.31657085</latitude>
+			<longitude>152.87415347</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>118.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-25.32110912</latitude>
+			<longitude>152.88515399</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 7</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-25.32204667</latitude>
+			<longitude>152.88642456</longitude>
+			<heading>12.93</heading>
+			<name>GA Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-25.32035263</latitude>
+			<longitude>152.88469129</longitude>
+			<heading>70.28</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-25.32054200</latitude>
+			<longitude>152.88509892</longitude>
+			<heading>49.96</heading>
+			<name>Gate 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-25.32188538</latitude>
+			<longitude>152.88565833</longitude>
+			<heading>32.18</heading>
+			<name>Helipad</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-25.32056800</latitude>
+			<longitude>152.88281200</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-25.32081448</latitude>
+			<longitude>152.88389745</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 7</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-25.32491951</latitude>
+			<longitude>152.88725317</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 8</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-25.31509534</latitude>
+			<longitude>152.87274892</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 9</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>ACTIVATE LIGHTS ONLY MULT</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12655">126.55</frequency>
+			<description>HERVEY BAY MULT</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12460">124.6</frequency>
+			<description>BRISBANE CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HETR">
+		<linecode>1</linecode>
+		<elevation>115</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>HETR</identifier>
+		<name>EL TOR</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>28.21230300</latitude>
+			<longitude>033.63069200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>28.20566100</latitude_end>
+			<longitude_end>033.66031900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.22375095</length-meters>
+			<length-feet>9144.68199291</length-feet>
+			<heading id="10 ">104.209132959</heading>
+			<heading_end id="28 ">284.195128605</heading_end>
+			<threshold_lat id="10 ">28.212303</threshold_lat>
+			<threshold_lon id="10 ">33.630692</threshold_lon>
+			<threshold_lat_end id="28 ">28.205661</threshold_lat_end>
+			<threshold_lon_end id="28 ">33.660319</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>28.21224806</latitude>
+			<longitude>033.63278364</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>104.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>28.20571640</latitude>
+			<longitude>033.65822751</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>284.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>28.21036110</latitude>
+			<longitude>033.64590170</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.21299320</latitude>
+			<longitude>033.63041581</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.20497073</latitude>
+			<longitude>033.66059498</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

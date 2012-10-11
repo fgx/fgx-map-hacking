@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="TJAB">
+		<linecode>1</linecode>
+		<elevation>23</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>TJAB</identifier>
+		<name>Arecibo/Antonio Nery Juarbe Pol</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>18.44794400</latitude>
+			<longitude>-066.68058100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>18.45202800</latitude_end>
+			<longitude_end>-066.67002800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1202.91287204</length-meters>
+			<length-feet>3666.47843397</length-feet>
+			<heading id="08 ">67.9286620931</heading>
+			<heading_end id="26 ">247.925322314</heading_end>
+			<threshold_lat id="08 ">18.447944</threshold_lat>
+			<threshold_lon id="08 ">-66.680581</threshold_lon>
+			<threshold_lat_end id="26 ">18.452028</threshold_lat_end>
+			<threshold_lon_end id="26 ">-66.670028</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>18.44993363</latitude>
+			<longitude>066.67398807</longitude>
+			<heading>34.21</heading>
+			<name>Back taxi to Rwy 26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>18.44840266</latitude>
+			<longitude>066.67456424</longitude>
+			<heading>41.56</heading>
+			<name>Gen Avia. Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>18.44780012</latitude>
+			<longitude>066.68041214</longitude>
+			<heading>47.17</heading>
+			<name>Run-up Pad Rwy 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>18.44855093</latitude>
+			<longitude>066.67416457</longitude>
+			<heading>72.48</heading>
+			<name>Terminal/FBO</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>18.44803527</latitude>
+			<longitude>-066.67410929</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>18.45085272</latitude>
+			<longitude>-066.67553133</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>18.45006551</latitude>
+			<longitude>-066.67417052</longitude>
+			<orientation>332.65</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}8-26</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>18.44913800</latitude>
+			<longitude>-066.67660280</longitude>
+			<orientation>338.01</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}8-26</text>
+		</sign>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJCM">
+		<linecode>1</linecode>
+		<elevation>135</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJCM</identifier>
+		<name>MEMANBETSU</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>43.89180800</latitude>
+			<longitude>144.16260600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>43.86940300</latitude_end>
+			<longitude_end>144.16550000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="5">SSALR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2500.25879105</length-meters>
+			<length-feet>7620.78879513</length-feet>
+			<heading id="18 ">174.663458221</heading>
+			<heading_end id="36 ">354.661452222</heading_end>
+			<threshold_lat id="18 ">43.891808</threshold_lat>
+			<threshold_lon id="18 ">144.162606</threshold_lon>
+			<threshold_lat_end id="36 ">43.869403</threshold_lat_end>
+			<threshold_lon_end id="36 ">144.1655</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>43.88889560</latitude>
+			<longitude>144.16354493</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>174.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>43.87115769</latitude>
+			<longitude>144.16471102</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>354.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.88074101</latitude>
+			<longitude>144.16604259</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.89227489</latitude>
+			<longitude>144.16340578</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.86893612</latitude>
+			<longitude>144.16470050</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

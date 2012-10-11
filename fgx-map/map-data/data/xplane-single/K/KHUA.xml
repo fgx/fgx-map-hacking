@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KHUA">
+		<linecode>1</linecode>
+		<elevation>685</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KHUA</identifier>
+		<name>REDSTONE AAF</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>34.68851700</latitude>
+			<longitude>-086.68699700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>34.66879400</latitude_end>
+			<longitude_end>-086.68256700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2225.31171043</length-meters>
+			<length-feet>6782.7500934</length-feet>
+			<heading id="17 ">169.489466772</heading>
+			<heading_end id="35 ">349.486946221</heading_end>
+			<threshold_lat id="17 ">34.688517</threshold_lat>
+			<threshold_lon id="17 ">-86.686997</threshold_lon>
+			<threshold_lat_end id="35 ">34.668794</threshold_lat_end>
+			<threshold_lon_end id="35 ">-86.682567</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>34.68682043</latitude>
+			<longitude>-086.68611657</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>169.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>34.67049060</latitude>
+			<longitude>-086.68344715</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>349.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.67891982</latitude>
+			<longitude>-086.68306006</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.68903371</latitude>
+			<longitude>-086.68634980</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.66827731</latitude>
+			<longitude>-086.68321406</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12695">126.95</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12695">126.95</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12480">124.8</frequency>
+			<description>GCA</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11805">118.05</frequency>
+			<description>HUNTSVILLE APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12560">125.6</frequency>
+			<description>HUNTSVILLE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="DNSO">
+		<linecode>1</linecode>
+		<elevation>1010</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>DNSO</identifier>
+		<name>SADIQ ABUBAKAR III INTL</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>12.91277500</latitude>
+			<longitude>005.19344200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>118.87</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>12.91901700</latitude_end>
+			<longitude_end>005.22034700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>118.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.31187798</length-meters>
+			<length-feet>9144.95060408</length-feet>
+			<heading id="08 ">76.6965298479</heading>
+			<heading_end id="26 ">256.690516028</heading_end>
+			<threshold_lat id="08 ">12.912775</threshold_lat>
+			<threshold_lon id="08 ">5.193442</threshold_lon>
+			<threshold_lat_end id="26 ">12.919017</threshold_lat_end>
+			<threshold_lon_end id="26 ">5.220347</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>12.91386125</latitude>
+			<longitude>005.19616871</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>76.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>12.91817115</latitude>
+			<longitude>005.21865535</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>256.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>12.91773471</latitude>
+			<longitude>005.20644289</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.91343703</latitude>
+			<longitude>005.19271042</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.91835490</latitude>
+			<longitude>005.22107853</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>SOKOTO TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12450">124.5</frequency>
+			<description>SOKOTO TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

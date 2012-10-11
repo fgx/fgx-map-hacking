@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MUCL">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MUCL</identifier>
+		<name>VILO ACUNA INTL</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>21.62241400</latitude>
+			<longitude>-081.55905300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>21.61048900</latitude_end>
+			<longitude_end>-081.53294700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3008.22036569</length-meters>
+			<length-feet>9169.05567461</length-feet>
+			<heading id="12 ">116.040418925</heading>
+			<heading_end id="30 ">296.030801696</heading_end>
+			<threshold_lat id="12 ">21.622414</threshold_lat>
+			<threshold_lon id="12 ">-81.559053</threshold_lon>
+			<threshold_lat_end id="30 ">21.610489</threshold_lat_end>
+			<threshold_lon_end id="30 ">-81.532947</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>21.62198031</latitude>
+			<longitude>-081.55712509</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>116.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>21.61092299</latitude>
+			<longitude>-081.53487467</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>21.62269400</latitude>
+			<longitude>081.55541990</longitude>
+			<height>20</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>21.62229350</latitude>
+			<longitude>081.55440520</longitude>
+			<heading>50.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>21.61772805</latitude>
+			<longitude>-081.54532559</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>21.62313954</latitude>
+			<longitude>-081.55915613</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>21.60976343</latitude>
+			<longitude>-081.53284400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>CAYO LARGO TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>CAYO LARGO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

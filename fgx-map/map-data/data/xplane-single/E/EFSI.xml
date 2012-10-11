@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EFSI">
+		<linecode>1</linecode>
+		<elevation>301</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EFSI</identifier>
+		<name>Seinajoki</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>62.69711400</latitude>
+			<longitude>022.82189400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>62.68712500</latitude_end>
+			<longitude_end>022.84275600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1542.950456</length-meters>
+			<length-feet>4702.91298988</length-feet>
+			<heading id="14 ">136.193238208</heading>
+			<heading_end id="32 ">316.174701191</heading_end>
+			<threshold_lat id="14 ">62.697114</threshold_lat>
+			<threshold_lon id="14 ">22.821894</threshold_lon>
+			<threshold_lat_end id="32 ">62.687125</threshold_lat_end>
+			<threshold_lon_end id="32 ">22.842756</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>62.69604461</latitude>
+			<longitude>022.82513225</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>136.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>62.68866079</latitude>
+			<longitude>022.83854696</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>316.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>62.69251200</latitude>
+			<longitude>022.82463500</longitude>
+			<height>15</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>62.69277273</latitude>
+			<longitude>022.83380607</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.69440700</latitude>
+			<longitude>022.83239600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12360">123.6</frequency>
+			<description>AFIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>AFIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>KAUHAVA TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>KAUHAVA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13010">130.1</frequency>
+			<description>KAUHAVA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12660">126.6</frequency>
+			<description>KAUHAVA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12815">128.15</frequency>
+			<description>KAUHAVA RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>KAUHAVA RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

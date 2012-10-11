@@ -1,0 +1,543 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGAA">
+		<linecode>1</linecode>
+		<elevation>268</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGAA</identifier>
+		<name>Belfast Aldergrove</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>54.65225600</latitude>
+			<longitude>-006.23523900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>54.66277800</latitude_end>
+			<longitude_end>-006.19617800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2779.73725376</length-meters>
+			<length-feet>8472.63914945</length-feet>
+			<heading id="07 ">65.095234834</heading>
+			<heading_end id="25 ">245.063372428</heading_end>
+			<threshold_lat id="07 ">54.652256</threshold_lat>
+			<threshold_lon id="07 ">-6.235239</threshold_lon>
+			<threshold_lat_end id="25 ">54.662778</threshold_lat_end>
+			<threshold_lon_end id="25 ">-6.196178</threshold_lon_end>
+		</runway>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>54.65792200</latitude>
+			<longitude>-006.22862200</longitude>
+			<threshold>160.02</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>54.64255600</latitude_end>
+			<longitude_end>-006.21998600</longitude_end>
+			<threshold_end>153.01</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1799.04274858</length-meters>
+			<length-feet>5483.48229766</length-feet>
+			<heading id="17 ">161.952765061</heading>
+			<heading_end id="35 ">341.945721234</heading_end>
+			<threshold_lat id="17 ">54.6565552075</threshold_lat>
+			<threshold_lon id="17 ">-6.22785387687</threshold_lon>
+			<threshold_lat_end id="35 ">54.6438628635</threshold_lat_end>
+			<threshold_lon_end id="35 ">-6.22072052215</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>54.65337969</latitude>
+			<longitude>-006.23271187</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>65.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>54.65568086</latitude>
+			<longitude>-006.22663309</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>161.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>54.66106894</latitude>
+			<longitude>-006.20088485</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>245.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>54.64545321</latitude>
+			<longitude>-006.22234232</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>341.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>54.65351500</latitude>
+			<longitude>006.22281000</longitude>
+			<height>21</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66214000</latitude>
+			<longitude>006.20891100</longitude>
+			<heading>55.00</heading>
+			<name>Light Aircraft Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65206500</latitude>
+			<longitude>006.21793100</longitude>
+			<heading>50.00</heading>
+			<name>Military Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65194700</latitude>
+			<longitude>006.22076600</longitude>
+			<heading>40.00</heading>
+			<name>Military Helipad</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65936700</latitude>
+			<longitude>006.22342800</longitude>
+			<heading>45.00</heading>
+			<name>Satnd 5F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66066000</latitude>
+			<longitude>006.21346000</longitude>
+			<heading>35.00</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66130800</latitude>
+			<longitude>006.21210300</longitude>
+			<heading>65.00</heading>
+			<name>Stand 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66134300</latitude>
+			<longitude>006.21263300</longitude>
+			<heading>98.00</heading>
+			<name>Stand 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66182300</latitude>
+			<longitude>006.21411800</longitude>
+			<heading>45.00</heading>
+			<name>Stand 12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66153700</latitude>
+			<longitude>006.21437200</longitude>
+			<heading>45.00</heading>
+			<name>Stand 13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66119400</latitude>
+			<longitude>006.21411800</longitude>
+			<heading>90.00</heading>
+			<name>Stand 14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66085400</latitude>
+			<longitude>006.21477600</longitude>
+			<heading>35.00</heading>
+			<name>Stand 15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65877900</latitude>
+			<longitude>006.22219800</longitude>
+			<heading>55.00</heading>
+			<name>Stand 15F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66075500</latitude>
+			<longitude>006.21479700</longitude>
+			<heading>35.00</heading>
+			<name>Stand 16</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66082800</latitude>
+			<longitude>006.21496700</longitude>
+			<heading>0.00</heading>
+			<name>Stand 16A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65897000</latitude>
+			<longitude>006.22202800</longitude>
+			<heading>55.00</heading>
+			<name>Stand 16F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66065600</latitude>
+			<longitude>006.21543300</longitude>
+			<heading>35.00</heading>
+			<name>Stand 17</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66078900</latitude>
+			<longitude>006.21558100</longitude>
+			<heading>0.00</heading>
+			<name>Stand 17A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65890500</latitude>
+			<longitude>006.22145600</longitude>
+			<heading>55.00</heading>
+			<name>Stand 17F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66069400</latitude>
+			<longitude>006.21615400</longitude>
+			<heading>35.00</heading>
+			<name>Stand 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65910000</latitude>
+			<longitude>006.22149800</longitude>
+			<heading>55.00</heading>
+			<name>Stand 18F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66075900</latitude>
+			<longitude>006.21691700</longitude>
+			<heading>35.00</heading>
+			<name>Stand 19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66070600</latitude>
+			<longitude>006.21377800</longitude>
+			<heading>0.00</heading>
+			<name>Stand 1A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66021000</latitude>
+			<longitude>006.22143500</longitude>
+			<heading>35.00</heading>
+			<name>Stand 1F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66066000</latitude>
+			<longitude>006.21428800</longitude>
+			<heading>45.00</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66071700</latitude>
+			<longitude>006.21746900</longitude>
+			<heading>35.00</heading>
+			<name>Stand 20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66057200</latitude>
+			<longitude>006.21776600</longitude>
+			<heading>80.00</heading>
+			<name>Stand 21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65996200</latitude>
+			<longitude>006.21757500</longitude>
+			<heading>45.00</heading>
+			<name>Stand 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65960300</latitude>
+			<longitude>006.21734100</longitude>
+			<heading>35.00</heading>
+			<name>Stand 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65957600</latitude>
+			<longitude>006.21727800</longitude>
+			<heading>70.00</heading>
+			<name>Stand 23A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65944300</latitude>
+			<longitude>006.21780800</longitude>
+			<heading>35.00</heading>
+			<name>Stand 24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65941600</latitude>
+			<longitude>006.21865700</longitude>
+			<heading>35.00</heading>
+			<name>Stand 24A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65929400</latitude>
+			<longitude>006.21908000</longitude>
+			<heading>20.00</heading>
+			<name>Stand 24B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65908400</latitude>
+			<longitude>006.21918600</longitude>
+			<heading>35.00</heading>
+			<name>Stand 24C</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65922500</latitude>
+			<longitude>006.21836000</longitude>
+			<heading>65.00</heading>
+			<name>Stand 25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65932100</latitude>
+			<longitude>006.21842300</longitude>
+			<heading>65.00</heading>
+			<name>Stand 25A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65955400</latitude>
+			<longitude>006.21865600</longitude>
+			<heading>65.00</heading>
+			<name>Stand 26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65987000</latitude>
+			<longitude>006.21893200</longitude>
+			<heading>65.00</heading>
+			<name>Stand 27</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66005700</latitude>
+			<longitude>006.22196500</longitude>
+			<heading>35.00</heading>
+			<name>Stand 2F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66044600</latitude>
+			<longitude>006.21418200</longitude>
+			<heading>90.00</heading>
+			<name>Stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65993500</latitude>
+			<longitude>006.22249500</longitude>
+			<heading>35.00</heading>
+			<name>Stand 3F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66030100</latitude>
+			<longitude>006.21450000</longitude>
+			<heading>35.00</heading>
+			<name>Stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65978200</latitude>
+			<longitude>006.22304600</longitude>
+			<heading>35.00</heading>
+			<name>Stand 4F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66026300</latitude>
+			<longitude>006.21483900</longitude>
+			<heading>20.00</heading>
+			<name>Stand 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66042700</latitude>
+			<longitude>006.21509400</longitude>
+			<heading>65.00</heading>
+			<name>Stand 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.65906500</latitude>
+			<longitude>006.22311000</longitude>
+			<heading>45.00</heading>
+			<name>Stand 6F</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66085100</latitude>
+			<longitude>006.21539000</longitude>
+			<heading>20.00</heading>
+			<name>Stand 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.66095400</latitude>
+			<longitude>006.21187000</longitude>
+			<heading>65.00</heading>
+			<name>Stand 9</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.65358000</latitude>
+			<longitude>-006.22258700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.64493600</latitude>
+			<longitude>-006.22407100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.65952700</latitude>
+			<longitude>-006.20210200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.65490700</latitude>
+			<longitude>-006.23012800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.65422100</latitude>
+			<longitude>-006.22199600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.64230300</latitude>
+			<longitude>-006.22132100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12819">128.19</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12820">128.2</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>unnamed entity</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12090">120.9</frequency>
+			<description>DIRECTOR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

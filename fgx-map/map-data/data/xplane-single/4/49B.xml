@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="49B ">
+		<linecode>1</linecode>
+		<elevation>3243</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>49B</identifier>
+		<name>STURGIS MUNI</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>44.42074100</latitude>
+			<longitude>-103.38443400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>44.41527500</latitude_end>
+			<longitude_end>-103.36646700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1554.48231434</length-meters>
+			<length-feet>4738.0620941</length-feet>
+			<heading id="11 ">113.006267534</heading>
+			<heading_end id="29 ">292.993692649</heading_end>
+			<threshold_lat id="11 ">44.420741</threshold_lat>
+			<threshold_lon id="11 ">-103.384434</threshold_lon>
+			<threshold_lat_end id="29 ">44.415275</threshold_lat_end>
+			<threshold_lon_end id="29 ">-103.366467</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>44.42029375</latitude>
+			<longitude>-103.38196167</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>113.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>44.41572264</latitude>
+			<longitude>-103.36893895</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>293.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.42087621</latitude>
+			<longitude>103.37953952</longitude>
+			<heading>25.52</heading>
+			<name>CB Aviation</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.42122382</latitude>
+			<longitude>103.38391365</longitude>
+			<heading>64.24</heading>
+			<name>Hold Short Rwy 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.41589384</latitude>
+			<longitude>103.36639515</longitude>
+			<heading>59.33</heading>
+			<name>Hold Short Rwy 29</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.42165574</latitude>
+			<longitude>-103.38057422</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.41905012</latitude>
+			<longitude>-103.38040789</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>AWOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>ELLSWORTH APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

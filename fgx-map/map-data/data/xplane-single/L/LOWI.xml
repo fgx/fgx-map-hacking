@@ -1,0 +1,313 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LOWI">
+		<linecode>1</linecode>
+		<elevation>1905</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LOWI</identifier>
+		<name>Innsbruck Kranebitten</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>47.25882800</latitude>
+			<longitude>011.33091400</longitude>
+			<threshold>103.02</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>47.26162400</latitude_end>
+			<longitude_end>011.35702000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2000.15937609</length-meters>
+			<length-feet>6096.48577834</length-feet>
+			<heading id="08 ">81.0689215413</heading>
+			<heading_end id="26 ">261.049748155</heading_end>
+			<threshold_lat id="08 ">47.2589718495</threshold_lat>
+			<threshold_lon id="08 ">11.3322586165</threshold_lon>
+			<threshold_lat_end id="26 ">47.261624</threshold_lat_end>
+			<threshold_lon_end id="26 ">11.35702</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>47.25505509</latitude>
+			<longitude>011.34549455</longitude>
+			<orientation>356.25</orientation>
+			<width>20.12</width>
+			<length>27.43</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="1">Asphalt shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>47.25978595</latitude>
+			<longitude>011.33571257</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>81.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>47.25891950</latitude>
+			<longitude>011.33591405</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>81.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>47.26082800</latitude>
+			<longitude>011.35373351</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>261.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>47.26169445</latitude>
+			<longitude>011.35353204</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>261.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>47.25779800</latitude>
+			<longitude>011.35268300</longitude>
+			<height>98</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.25855900</latitude>
+			<longitude>011.35308400</longitude>
+			<heading>71.30</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.25825300</latitude>
+			<longitude>011.35058500</longitude>
+			<heading>71.30</heading>
+			<name>Ramp 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.25818600</latitude>
+			<longitude>011.34997900</longitude>
+			<heading>71.03</heading>
+			<name>Ramp 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>47.25801200</latitude>
+			<longitude>011.34808500</longitude>
+			<heading>71.30</heading>
+			<name>Ramp 9</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.26102800</latitude>
+			<longitude>011.34378000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.25980684</latitude>
+			<longitude>011.34612467</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25806363</latitude>
+			<longitude>011.33827508</longitude>
+			<orientation>294.32</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@R}08-26</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25863674</latitude>
+			<longitude>011.34689155</longitude>
+			<orientation>66.83</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}A{@Y}APRON</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25981755</latitude>
+			<longitude>011.35240089</longitude>
+			<orientation>332.21</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}08-26</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25952996</latitude>
+			<longitude>011.35329708</longitude>
+			<orientation>134.23</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@Y}APRON</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25789771</latitude>
+			<longitude>011.34568046</longitude>
+			<orientation>156.03</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}L{@Y}HANGAR</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25921766</latitude>
+			<longitude>011.35240871</longitude>
+			<orientation>315.88</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}08|26{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25904618</latitude>
+			<longitude>011.35083496</longitude>
+			<orientation>356.78</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}08|26{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25884316</latitude>
+			<longitude>011.34888470</longitude>
+			<orientation>355.73</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}08|26{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25919747</latitude>
+			<longitude>011.33792517</longitude>
+			<orientation>256.13</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.26088005</latitude>
+			<longitude>011.35328656</longitude>
+			<orientation>252.61</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25846944</latitude>
+			<longitude>011.34535663</longitude>
+			<orientation>271.25</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}{^l}L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25863897</latitude>
+			<longitude>011.34692313</longitude>
+			<orientation>281.52</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}08{^u}{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25803645</latitude>
+			<longitude>011.34694873</longitude>
+			<orientation>264.42</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25905314</latitude>
+			<longitude>011.33626285</longitude>
+			<orientation>78.66</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.26071171</latitude>
+			<longitude>011.35173717</longitude>
+			<orientation>86.96</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>47.25842327</latitude>
+			<longitude>011.34493721</longitude>
+			<orientation>68.72</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}L{^r}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12602">126.02</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11927">119.27</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

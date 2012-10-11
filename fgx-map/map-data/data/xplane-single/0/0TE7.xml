@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="0TE7">
+		<linecode>1</linecode>
+		<elevation>1515</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>0TE7</identifier>
+		<name>JOHNSON CITY</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>30.26043900</latitude>
+			<longitude>-098.62337500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>30.24320000</latitude_end>
+			<longitude_end>-098.62170300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1917.82142412</length-meters>
+			<length-feet>5845.51970071</length-feet>
+			<heading id="17 ">175.18731833</heading>
+			<heading_end id="35 ">355.186475974</heading_end>
+			<threshold_lat id="17 ">30.260439</threshold_lat>
+			<threshold_lon id="17 ">-98.623375</threshold_lon>
+			<threshold_lat_end id="35 ">30.2432</threshold_lat_end>
+			<threshold_lon_end id="35 ">-98.621703</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>30.25866658</latitude>
+			<longitude>-098.62290881</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>175.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>30.24497243</latitude>
+			<longitude>-098.62216909</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>355.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.25186868</latitude>
+			<longitude>-098.62187445</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.26062361</latitude>
+			<longitude>-098.62310610</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.24301539</latitude>
+			<longitude>-098.62197186</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PAEI">
+		<linecode>1</linecode>
+		<elevation>548</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PAEI</identifier>
+		<name>EIELSON AFB</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>64.68402200</latitude>
+			<longitude>-147.11902500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>64.64730800</latitude_end>
+			<longitude_end>-147.08399700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4421.89292971</length-meters>
+			<length-feet>13477.9296497</length-feet>
+			<heading id="13 ">157.783386829</heading>
+			<heading_end id="31 ">337.7517276</heading_end>
+			<threshold_lat id="13 ">64.684022</threshold_lat>
+			<threshold_lon id="13 ">-147.119025</threshold_lon>
+			<threshold_lat_end id="31 ">64.647308</threshold_lat_end>
+			<threshold_lon_end id="31 ">-147.083997</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>64.68149324</latitude>
+			<longitude>-147.11558905</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>157.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>64.64946950</latitude>
+			<longitude>-147.08707454</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>337.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>64.66621318</latitude>
+			<longitude>-147.09837324</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.68463631</latitude>
+			<longitude>-147.11805281</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>64.64669392</latitude>
+			<longitude>-147.08496862</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11927">119.27</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11852">118.52</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12530">125.3</frequency>
+			<description>RANGE CON</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12535">125.35</frequency>
+			<description>FAIRBANKS APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12650">126.5</frequency>
+			<description>FAIRBANKS APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12650">126.5</frequency>
+			<description>FAIRBANKS DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

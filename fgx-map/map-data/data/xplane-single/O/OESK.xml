@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OESK">
+		<linecode>1</linecode>
+		<elevation>2261</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OESK</identifier>
+		<name>AL JOUF</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>29.78793100</latitude>
+			<longitude>040.08134200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>297.18</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>29.78233300</latitude_end>
+			<longitude_end>040.11866700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>297.18</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3662.04068464</length-meters>
+			<length-feet>11161.9000068</length-feet>
+			<heading id="10 ">99.7650959901</heading>
+			<heading_end id="28 ">279.746554842</heading_end>
+			<threshold_lat id="10 ">29.787931</threshold_lat>
+			<threshold_lon id="10 ">40.081342</threshold_lon>
+			<threshold_lat_end id="28 ">29.782333</threshold_lat_end>
+			<threshold_lon_end id="28 ">40.118667</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>29.78801857</latitude>
+			<longitude>040.08346397</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>99.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>29.78237873</latitude>
+			<longitude>040.11566120</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>279.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>29.78652417</latitude>
+			<longitude>040.10028054</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.78859426</latitude>
+			<longitude>040.08100246</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.78166964</latitude>
+			<longitude>040.11900627</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

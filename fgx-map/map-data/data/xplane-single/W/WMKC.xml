@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WMKC">
+		<linecode>1</linecode>
+		<elevation>16</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WMKC</identifier>
+		<name>Kota Bahru Sultan Ismail Petra</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>06.16846700</latitude>
+			<longitude>102.28353600</longitude>
+			<threshold>152.40</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>06.16523600</latitude_end>
+			<longitude_end>102.30249200</longitude_end>
+			<threshold_end>60.96</threshold_end>
+			<overrrun_end>79.25</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2128.25041933</length-meters>
+			<length-feet>6486.90727812</length-feet>
+			<heading id="10 ">99.6660413052</heading>
+			<heading_end id="28 ">279.664004973</heading_end>
+			<threshold_lat id="10 ">6.16823560833</threshold_lat>
+			<threshold_lon id="10 ">102.284893403</threshold_lon>
+			<threshold_lat_end id="28 ">6.1653285364</threshold_lat_end>
+			<threshold_lon_end id="28 ">102.301949039</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>06.16818724</latitude>
+			<longitude>102.28758082</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>99.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>06.16523497</latitude>
+			<longitude>102.30009524</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>279.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>06.16790910</latitude>
+			<longitude>102.29287720</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>06.16906450</latitude>
+			<longitude>102.29129030</longitude>
+			<heading>00.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>06.16827125</latitude>
+			<longitude>102.29325745</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>06.16914482</latitude>
+			<longitude>102.28323299</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>06.16455818</latitude>
+			<longitude>102.30279499</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>KOTA BHARU GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12250">122.5</frequency>
+			<description>KOTA BHARU TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

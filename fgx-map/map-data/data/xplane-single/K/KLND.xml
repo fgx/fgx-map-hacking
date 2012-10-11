@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KLND">
+		<linecode>1</linecode>
+		<elevation>5586</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KLND</identifier>
+		<name>HUNT FLD</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>1.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>42.81118864</latitude>
+			<longitude>-108.73545709</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>29.87</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>42.81994847</latitude_end>
+			<longitude_end>-108.72107317</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1526.7081689</length-meters>
+			<length-feet>4653.40649882</length-feet>
+			<heading id="03 ">50.406758437</heading>
+			<heading_end id="21 ">230.39698254</heading_end>
+			<threshold_lat id="03 ">42.81118864</threshold_lat>
+			<threshold_lon id="03 ">-108.73545709</threshold_lon>
+			<threshold_lat_end id="21 ">42.81994847</threshold_lat_end>
+			<threshold_lon_end id="21 ">-108.72107317</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>42.81710799</latitude>
+			<longitude>-108.72777102</longitude>
+			<orientation>1.75</orientation>
+			<width>10.97</width>
+			<length>11.89</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>42.81230943</latitude>
+			<longitude>-108.73417764</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>42.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>42.81883588</latitude>
+			<longitude>-108.72228788</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>222.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>42.81669961</latitude>
+			<longitude>108.72949544</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 65</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.81666110</latitude>
+			<longitude>108.72864762</longitude>
+			<heading>23.70</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.81804520</latitude>
+			<longitude>108.72679939</longitude>
+			<heading>14.72</heading>
+			<name>Hangers</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.81710717</latitude>
+			<longitude>108.72777077</longitude>
+			<heading>0.00</heading>
+			<name>Helipad</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.81770910</latitude>
+			<longitude>-108.72778238</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.81514848</latitude>
+			<longitude>-108.72702676</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 60</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11815">118.15</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

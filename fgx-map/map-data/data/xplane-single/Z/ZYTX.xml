@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZYTX">
+		<linecode>1</linecode>
+		<elevation>198</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZYTX</identifier>
+		<name>TAOXIAN</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>41.63036700</latitude>
+			<longitude>123.46903100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>41.64931400</latitude_end>
+			<longitude_end>123.49781900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3190.80471251</length-meters>
+			<length-feet>9725.57276374</length-feet>
+			<heading id="06 ">48.7469211566</heading>
+			<heading_end id="24 ">228.727793084</heading_end>
+			<threshold_lat id="06 ">41.630367</threshold_lat>
+			<threshold_lon id="06 ">123.469031</threshold_lon>
+			<threshold_lat_end id="24 ">41.649314</threshold_lat_end>
+			<threshold_lon_end id="24 ">123.497819</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>41.63217046</latitude>
+			<longitude>123.47095831</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>48.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>41.64712091</latitude>
+			<longitude>123.49529727</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>228.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.64090717</latitude>
+			<longitude>123.48216204</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.63055556</latitude>
+			<longitude>123.46808492</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.64912519</latitude>
+			<longitude>123.49876528</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12745">127.45</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>SHENYANG TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>SHENYANG TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

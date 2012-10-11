@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPGD">
+		<linecode>1</linecode>
+		<elevation>489</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPGD</identifier>
+		<name>LECH WALESA</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>54.38106577</latitude>
+			<longitude>018.45205094</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>54.37126823</latitude_end>
+			<longitude_end>018.49171706</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2798.8474554</length-meters>
+			<length-feet>8530.88704406</length-feet>
+			<heading id="11 ">112.949128711</heading>
+			<heading_end id="29 ">292.916885766</heading_end>
+			<threshold_lat id="11 ">54.38106577</threshold_lat>
+			<threshold_lon id="11 ">18.45205094</threshold_lon>
+			<threshold_lat_end id="29 ">54.37126823</threshold_lat_end>
+			<threshold_lon_end id="29 ">18.49171706</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>54.38073275</latitude>
+			<longitude>018.45516509</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>112.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>54.37235092</latitude>
+			<longitude>018.48557576</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>293.0</orientation>
+			<glideslope>2.90</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>54.38013800</latitude>
+			<longitude>018.47843400</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.37935000</latitude>
+			<longitude>018.47405000</longitude>
+			<heading>0.00</heading>
+			<name>Aircraft stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.37950000</latitude>
+			<longitude>018.47323300</longitude>
+			<heading>0.00</heading>
+			<name>Aircraft stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.37970000</latitude>
+			<longitude>018.47246700</longitude>
+			<heading>0.00</heading>
+			<name>Aircraft stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.37991700</latitude>
+			<longitude>018.47176700</longitude>
+			<heading>0.00</heading>
+			<name>Aircraft stand 4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.37789900</latitude>
+			<longitude>018.48330300</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.38174000</latitude>
+			<longitude>018.45566300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.37078700</latitude>
+			<longitude>018.48782800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12962">129.62</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>GDANSK TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13087">130.87</frequency>
+			<description>GDANSK APP</description>
+		</atc>
+	</airport>
+</PropertyList>

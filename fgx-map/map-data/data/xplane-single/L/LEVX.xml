@@ -1,0 +1,314 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LEVX">
+		<linecode>1</linecode>
+		<elevation>855</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LEVX</identifier>
+		<name>Vigo</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>42.22127653</latitude>
+			<longitude>-008.62966023</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>49.99</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>42.24251226</latitude_end>
+			<longitude_end>-008.62388777</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>49.99</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="4">Calvert ILS Cat II and Cat II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2406.46754561</length-meters>
+			<length-feet>7334.91307901</length-feet>
+			<heading id="02 ">11.4227412726</heading>
+			<heading_end id="20 ">191.418861412</heading_end>
+			<threshold_lat id="02 ">42.22127653</threshold_lat>
+			<threshold_lon id="02 ">-8.62966023</threshold_lon>
+			<threshold_lat_end id="20 ">42.24251226</threshold_lat_end>
+			<threshold_lon_end id="20 ">-8.62388777</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>42.22312825</latitude>
+			<longitude>-008.63198179</longitude>
+			<orientation>11.40</orientation>
+			<width>14.94</width>
+			<length>14.94</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>42.22461292</latitude>
+			<longitude>-008.62812166</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>11.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>42.22481899</latitude>
+			<longitude>-008.62934354</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>11.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>42.23997005</latitude>
+			<longitude>-008.62520282</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>191.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>42.23978786</latitude>
+			<longitude>-008.62403835</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>191.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>42.22607196</latitude>
+			<longitude>008.63249957</longitude>
+			<height>80</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22632770</latitude>
+			<longitude>008.63210342</longitude>
+			<heading>00.00</heading>
+			<name>GA Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22648684</latitude>
+			<longitude>008.63205883</longitude>
+			<heading>00.00</heading>
+			<name>GA Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22664882</latitude>
+			<longitude>008.63201506</longitude>
+			<heading>00.00</heading>
+			<name>GA Ramp 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22342223</latitude>
+			<longitude>008.63193424</longitude>
+			<heading>82.24</heading>
+			<name>Ramp 01</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22354518</latitude>
+			<longitude>008.63253889</longitude>
+			<heading>89.00</heading>
+			<name>Ramp 02</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22446139</latitude>
+			<longitude>008.63221836</longitude>
+			<heading>6.92</heading>
+			<name>Ramp 03</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22424364</latitude>
+			<longitude>008.63179581</longitude>
+			<heading>36.62</heading>
+			<name>Ramp 04</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22463553</latitude>
+			<longitude>008.63172863</longitude>
+			<heading>82.50</heading>
+			<name>Ramp 05</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22508397</latitude>
+			<longitude>008.63166572</longitude>
+			<heading>77.73</heading>
+			<name>Ramp 06</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22543768</latitude>
+			<longitude>008.63154872</longitude>
+			<heading>82.50</heading>
+			<name>Ramp 07</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22561187</latitude>
+			<longitude>008.63150238</longitude>
+			<heading>82.65</heading>
+			<name>Ramp 07a</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22579358</latitude>
+			<longitude>008.63144635</longitude>
+			<heading>82.50</heading>
+			<name>Ramp 08</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22647909</latitude>
+			<longitude>008.63117463</longitude>
+			<heading>81.48</heading>
+			<name>Ramp 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>42.22614721</latitude>
+			<longitude>008.63135221</longitude>
+			<heading>82.50</heading>
+			<name>Ramp 9</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>42.22106836</latitude>
+			<longitude>-008.62868776</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.22396500</latitude>
+			<longitude>-008.62998122</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>02 Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>42.23953855</latitude>
+			<longitude>-008.62394942</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>20 Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22731000</latitude>
+			<longitude>-008.62992203</longitude>
+			<orientation>20.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C1{@R}20-02</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22174273</latitude>
+			<longitude>-008.63133986</longitude>
+			<orientation>170.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}C3{@R}20-02</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22698317</latitude>
+			<longitude>-008.62940023</longitude>
+			<orientation>57.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}20-02{@L}C1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22184643</latitude>
+			<longitude>-008.63203369</longitude>
+			<orientation>203.20</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}20-02{@L}C3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22174845</latitude>
+			<longitude>-008.63129472</longitude>
+			<orientation>170.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}CAT{r2}/{r3}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22694949</latitude>
+			<longitude>-008.62937207</longitude>
+			<orientation>57.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}CAT{r2}/{r3}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>42.22732467</latitude>
+			<longitude>-008.62997280</longitude>
+			<orientation>20.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}CAT{r2}/{r3}</text>
+		</sign>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11845">118.45</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12020">120.2</frequency>
+			<description>SANTIAGO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

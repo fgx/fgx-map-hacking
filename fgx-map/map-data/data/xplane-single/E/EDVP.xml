@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDVP">
+		<linecode>1</linecode>
+		<elevation>265</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDVP</identifier>
+		<name>Peine Eddesse</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>27.13</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>52.39861800</latitude>
+			<longitude>010.24376886</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>52.40138578</latitude_end>
+			<longitude_end>010.25623114</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>902.417555177</length-meters>
+			<length-feet>2750.56870818</length-feet>
+			<heading id="07 ">70.0495531806</heading>
+			<heading_end id="25 ">250.039679445</heading_end>
+			<threshold_lat id="07 ">52.398618</threshold_lat>
+			<threshold_lon id="07 ">10.24376886</threshold_lon>
+			<threshold_lat_end id="25 ">52.40138578</threshold_lat_end>
+			<threshold_lon_end id="25 ">10.25623114</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>52.39826399</latitude>
+			<longitude>010.24463345</longitude>
+			<orientation>69.48</orientation>
+			<width>9.14</width>
+			<length>9.14</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>52.39940344</latitude>
+			<longitude>010.25114215</longitude>
+			<height>49</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.39966702</latitude>
+			<longitude>010.25149192</longitude>
+			<heading>39.08</heading>
+			<name>Ramp Start</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.40064632</latitude>
+			<longitude>010.24981222</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.39850139</latitude>
+			<longitude>010.24447895</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.40095200</latitude>
+			<longitude>010.25582575</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>52.39986745</latitude>
+			<longitude>010.25008358</longitude>
+			<orientation>70.64</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}_1_/_2_{@@}_1_/_2_</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>52.40014518</latitude>
+			<longitude>010.24991680</longitude>
+			<orientation>249.85</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}_1_/_2_{@@}_1_/_2_</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12260">122.6</frequency>
+			<description>Eddesse INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

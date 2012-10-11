@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="NTTM">
+		<linecode>1</linecode>
+		<elevation>9</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>NTTM</identifier>
+		<name>Moorea</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>20.12</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-17.48621900</latitude>
+			<longitude>-149.76576700</longitude>
+			<threshold>24.38</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-17.49372200</latitude_end>
+			<longitude_end>-149.75798300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1171.74499636</length-meters>
+			<length-feet>3571.47874891</length-feet>
+			<heading id="12 ">135.126419627</heading>
+			<heading_end id="30 ">315.128759022</heading_end>
+			<threshold_lat id="12 ">-17.4863751085</threshold_lat>
+			<threshold_lon id="12 ">-149.765605041</threshold_lon>
+			<threshold_lat_end id="30 ">-17.493722</threshold_lat_end>
+			<threshold_lon_end id="30 ">-149.757983</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>-17.48745149</latitude>
+			<longitude>-149.76406290</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>135.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-17.49264556</latitude>
+			<longitude>-149.75952538</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>315.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-17.49055000</latitude>
+			<longitude>149.76332500</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-17.48991000</latitude>
+			<longitude>149.76378800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-17.48952483</latitude>
+			<longitude>-149.76140301</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-17.48998300</latitude>
+			<longitude>-149.76300300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>TAHITI</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TAHITI TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>TAHITI APP</description>
+		</atc>
+	</airport>
+</PropertyList>

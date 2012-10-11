@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KFBG">
+		<linecode>1</linecode>
+		<elevation>242</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KFBG</identifier>
+		<name>Simmons AAF</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>35.13142800</latitude>
+			<longitude>-078.94428300</longitude>
+			<threshold>320.04</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>35.13233600</latitude_end>
+			<longitude_end>-078.92875800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1418.55247873</length-meters>
+			<length-feet>4323.74795517</length-feet>
+			<heading id="09 ">85.9322713473</heading>
+			<heading_end id="27 ">265.923337324</heading_end>
+			<threshold_lat id="09 ">35.1316325792</threshold_lat>
+			<threshold_lon id="09 ">-78.9407803919</threshold_lon>
+			<threshold_lat_end id="27 ">35.132336</threshold_lat_end>
+			<threshold_lon_end id="27 ">-78.928758</threshold_lon_end>
+		</runway>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>35.13187347</latitude>
+			<longitude>-078.93092399</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>265.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>35.13374300</latitude>
+			<longitude>078.93923200</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.13488000</latitude>
+			<longitude>078.93806500</longitude>
+			<heading>0.00</heading>
+			<name>Center Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.13426600</latitude>
+			<longitude>078.93336500</longitude>
+			<heading>0.00</heading>
+			<name>East Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.12980700</latitude>
+			<longitude>078.93480700</longitude>
+			<heading>0.00</heading>
+			<name>Southeast Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.12823900</latitude>
+			<longitude>078.93843800</longitude>
+			<heading>40.00</heading>
+			<name>Southwest Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.13417800</latitude>
+			<longitude>078.94448900</longitude>
+			<heading>0.00</heading>
+			<name>West Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.13242700</latitude>
+			<longitude>-078.93656900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.13197700</latitude>
+			<longitude>-078.94432800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.13178300</latitude>
+			<longitude>-078.92871100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND/CLNC DEL</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12590">125.9</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13300">133.0</frequency>
+			<description>FAYETTEVILLE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

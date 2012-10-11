@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="33S ">
+		<linecode>1</linecode>
+		<elevation>1801</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>33S</identifier>
+		<name>PRU FLD</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>12.19</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>47.11880300</latitude>
+			<longitude>-118.39292500</longitude>
+			<threshold>117.96</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>47.12761700</latitude_end>
+			<longitude_end>-118.38610800</longitude_end>
+			<threshold_end>248.72</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1108.0370004</length-meters>
+			<length-feet>3377.29677723</length-feet>
+			<heading id="01 ">27.8321387547</heading>
+			<heading_end id="19 ">207.82714313</heading_end>
+			<threshold_lat id="01 ">47.1197413023</threshold_lat>
+			<threshold_lon id="01 ">-118.392199259</threshold_lon>
+			<threshold_lat_end id="19 ">47.1256384753</threshold_lat_end>
+			<threshold_lon_end id="19 ">-118.387638149</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.12338760</latitude>
+			<longitude>-118.39001754</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.11878254</latitude>
+			<longitude>-118.39321411</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.12763744</latitude>
+			<longitude>-118.38581883</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

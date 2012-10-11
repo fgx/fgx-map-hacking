@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CZBA">
+		<linecode>1</linecode>
+		<elevation>602</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CZBA</identifier>
+		<name>BURLINGTON AIRPARK</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>43.44500000</latitude>
+			<longitude>-079.85472200</longitude>
+			<threshold>30.48</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>43.43834900</latitude_end>
+			<longitude_end>-079.84419800</longitude_end>
+			<threshold_end>198.12</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1127.77188993</length-meters>
+			<length-feet>3437.44872049</length-feet>
+			<heading id="14 ">130.939706645</heading>
+			<heading_end id="32 ">310.932470177</heading_end>
+			<threshold_lat id="14 ">43.4448202318</threshold_lat>
+			<threshold_lon id="14 ">-79.8544375714</threshold_lon>
+			<threshold_lat_end id="32 ">43.4395173071</threshold_lat_end>
+			<threshold_lon_end id="32 ">-79.8460468269</threshold_lon_end>
+		</runway>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>43.44083300</latitude>
+			<longitude>-079.85444700</longitude>
+			<threshold>152.40</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>43.44194400</latitude_end>
+			<longitude_end>-079.84610800</longitude_end>
+			<threshold_end>45.72</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>686.274324639</length-meters>
+			<length-feet>2091.7641415</length-feet>
+			<heading id="09 ">79.6412371425</heading>
+			<heading_end id="27 ">259.635503145</heading_end>
+			<threshold_lat id="09 ">43.4410796358</threshold_lat>
+			<threshold_lon id="09 ">-79.8525951622</threshold_lon>
+			<threshold_lat_end id="27 ">43.4418699629</threshold_lat_end>
+			<threshold_lon_end id="27 ">-79.8466635484</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>43.44386527</latitude>
+			<longitude>-079.85229500</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>131.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>43.44047451</latitude>
+			<longitude>-079.84819169</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>311.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.44221792</latitude>
+			<longitude>-079.84881133</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.44118817</latitude>
+			<longitude>-079.85492087</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.44536680</latitude>
+			<longitude>-079.85465795</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.44158880</latitude>
+			<longitude>-079.84563417</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.43798220</latitude>
+			<longitude>-079.84426211</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>TORONTO CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

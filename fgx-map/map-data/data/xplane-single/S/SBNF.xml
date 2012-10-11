@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBNF">
+		<linecode>1</linecode>
+		<elevation>18</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SBNF</identifier>
+		<name>Ministro Victor Konder</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>-26.88440000</latitude>
+			<longitude>-048.65839700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>57.91</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>-26.87559700</latitude_end>
+			<longitude_end>-048.64437800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.44</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1700.47891169</length-meters>
+			<length-feet>5183.05972282</length-feet>
+			<heading id="07 ">54.9955081743</heading>
+			<heading_end id="25 ">235.001846492</heading_end>
+			<threshold_lat id="07 ">-26.8844</threshold_lat>
+			<threshold_lon id="07 ">-48.658397</threshold_lon>
+			<threshold_lat_end id="25 ">-26.875597</threshold_lat_end>
+			<threshold_lon_end id="25 ">-48.644378</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>-26.88303611</latitude>
+			<longitude>-048.65700563</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>54.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>-26.87696102</latitude>
+			<longitude>-048.64576908</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>234.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-26.88174400</latitude>
+			<longitude>048.64970800</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-26.88138600</latitude>
+			<longitude>048.65039100</longitude>
+			<heading>44.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-26.87933500</latitude>
+			<longitude>-048.65191300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-26.87626100</latitude>
+			<longitude>-048.64385600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-26.88373600</latitude>
+			<longitude>-048.65892000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12762">127.62</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11820">118.2</frequency>
+			<description>NAVEGANTES TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>NAVEGANTES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

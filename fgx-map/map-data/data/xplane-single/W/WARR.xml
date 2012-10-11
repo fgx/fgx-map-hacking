@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WARR">
+		<linecode>1</linecode>
+		<elevation>9</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WARR</identifier>
+		<name>Surabaya Juanda</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-07.37765000</latitude>
+			<longitude>112.77344700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>99.97</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-07.38201400</latitude_end>
+			<longitude_end>112.80026900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>99.97</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.31343351</length-meters>
+			<length-feet>9144.95534535</length-feet>
+			<heading id="10 ">99.2550107702</heading>
+			<heading_end id="28 ">279.258455963</heading_end>
+			<threshold_lat id="10 ">-7.37765</threshold_lat>
+			<threshold_lon id="10 ">112.773447</threshold_lon>
+			<threshold_lat_end id="28 ">-7.382014</threshold_lat_end>
+			<threshold_lon_end id="28 ">112.800269</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-07.37771792</latitude>
+			<longitude>112.77636123</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>99.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-07.38211834</latitude>
+			<longitude>112.79841259</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>279.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-07.38301280</latitude>
+			<longitude>112.78189850</longitude>
+			<height>90</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-07.38214540</latitude>
+			<longitude>112.78027340</longitude>
+			<heading>60.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-07.37843006</latitude>
+			<longitude>112.78708843</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-07.37698335</latitude>
+			<longitude>112.77314248</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-07.38268062</latitude>
+			<longitude>112.80057357</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12820">128.2</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>SURABAYA DIR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>SURABAYA EAST CON</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12510">125.1</frequency>
+			<description>SURABAYA WEST CON</description>
+		</atc>
+	</airport>
+</PropertyList>

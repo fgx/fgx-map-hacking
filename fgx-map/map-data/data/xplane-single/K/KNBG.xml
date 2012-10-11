@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KNBG">
+		<linecode>1</linecode>
+		<elevation>3</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KNBG</identifier>
+		<name>NEW ORLEANS NAS JRB</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>29.82350800</latitude>
+			<longitude>-090.03729700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>29.84319400</latitude_end>
+			<longitude_end>-090.01530600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3046.16418518</length-meters>
+			<length-feet>9284.70843644</length-feet>
+			<heading id="04 ">44.2497381784</heading>
+			<heading_end id="22 ">224.238798118</heading_end>
+			<threshold_lat id="04 ">29.823508</threshold_lat>
+			<threshold_lon id="04 ">-90.037297</threshold_lon>
+			<threshold_lat_end id="22 ">29.843194</threshold_lat_end>
+			<threshold_lon_end id="22 ">-90.015306</threshold_lon_end>
+		</runway>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>29.82314200</latitude>
+			<longitude>-090.03311100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>29.81040600</latitude_end>
+			<longitude_end>-090.02108900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1828.53833735</length-meters>
+			<length-feet>5573.38485224</length-feet>
+			<heading id="14 ">140.544007766</heading>
+			<heading_end id="32 ">320.538030091</heading_end>
+			<threshold_lat id="14 ">29.823142</threshold_lat>
+			<threshold_lon id="14 ">-90.033111</threshold_lon>
+			<threshold_lat_end id="32 ">29.810406</threshold_lat_end>
+			<threshold_lon_end id="32 ">-90.021089</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>29.82965707</latitude>
+			<longitude>-090.03118794</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>44.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>29.84157289</latitude>
+			<longitude>-090.01635919</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>224.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>29.81151640</latitude>
+			<longitude>-090.02280029</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>320.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>29.81799257</latitude>
+			<longitude>-090.02538872</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.82368660</latitude>
+			<longitude>-090.03841823</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.82408784</latitude>
+			<longitude>-090.03277789</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.84301522</latitude>
+			<longitude>-090.01418459</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>29.80946020</latitude>
+			<longitude>-090.02142217</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>NAVY NEW ORLEANS GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12380">123.8</frequency>
+			<description>NAVY NEW ORLEANS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12385">123.85</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

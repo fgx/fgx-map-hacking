@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKBQ">
+		<linecode>1</linecode>
+		<elevation>98</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SKBQ</identifier>
+		<name>Ernesto Cortissoz</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>10.87925000</latitude>
+			<longitude>-074.78968300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>32.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>10.89992800</latitude_end>
+			<longitude_end>-074.77195600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2997.94819988</length-meters>
+			<length-feet>9137.74611323</length-feet>
+			<heading id="05 ">40.2770136722</heading>
+			<heading_end id="23 ">220.27366474</heading_end>
+			<threshold_lat id="05 ">10.87925</threshold_lat>
+			<threshold_lon id="05 ">-74.789683</threshold_lon>
+			<threshold_lat_end id="23 ">10.899928</threshold_lat_end>
+			<threshold_lon_end id="23 ">-74.771956</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>10.88197374</latitude>
+			<longitude>-074.78788190</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>40.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>10.89829289</latitude>
+			<longitude>-074.77282411</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>220.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>10.89059000</latitude>
+			<longitude>074.78081500</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>10.89110200</latitude>
+			<longitude>-074.77201600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.87981300</latitude>
+			<longitude>-074.78836400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.89881500</latitude>
+			<longitude>-074.77214700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>BARRANQUILLA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

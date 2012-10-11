@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KIWI">
+		<linecode>1</linecode>
+		<elevation>74</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KIWI</identifier>
+		<name>Wiscasset</name>
+		<runway end="25" id="7">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>7</number>
+			<latitude>43.95852055</latitude>
+			<longitude>-069.71766731</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>43.96429505</latitude_end>
+			<longitude_end>-069.70753981</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1035.53614525</length-meters>
+			<length-feet>3156.31417072</length-feet>
+			<heading id="7  ">51.7169307773</heading>
+			<heading_end id="25 ">231.709900533</heading_end>
+			<threshold_lat id="7  ">43.95852055</threshold_lat>
+			<threshold_lon id="7  ">-69.71766731</threshold_lon>
+			<threshold_lat_end id="25 ">43.96429505</threshold_lat_end>
+			<threshold_lon_end id="25 ">-69.70753981</threshold_lon_end>
+		</runway>
+		<runway end="25R" id="7L">
+			<linecode>100</linecode>
+			<width>14.94</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>7L</number>
+			<latitude>43.95934530</latitude>
+			<longitude>-069.71556028</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="0">No runway markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25R</number_end>
+			<latitude_end>43.96295518</latitude_end>
+			<longitude_end>-069.70929815</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>643.021333174</length-meters>
+			<length-feet>1959.92902351</length-feet>
+			<heading id="7L ">51.4100135887</heading>
+			<heading_end id="25R">231.405666603</heading_end>
+			<threshold_lat id="7L ">43.9593453</threshold_lat>
+			<threshold_lon id="7L ">-69.71556028</threshold_lon>
+			<threshold_lat_end id="25R">43.96295518</threshold_lat_end>
+			<threshold_lon_end id="25R">-69.70929815</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>43.95933585</latitude>
+			<longitude>-069.71557985</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>51.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>43.96297061</latitude>
+			<longitude>-069.70927358</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>234.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>43.96386200</latitude>
+			<longitude>069.71084020</longitude>
+			<heading>96.31</heading>
+			<name>New Ramp Start 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.96366695</latitude>
+			<longitude>-069.71176642</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 4</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.96285213</latitude>
+			<longitude>-069.71126953</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 3</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.96430473</latitude>
+			<longitude>-069.70622976</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 5</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>43.96424725</latitude>
+			<longitude>-069.70803030</longitude>
+			<orientation>139.55</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@R}25-7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>43.96450089</latitude>
+			<longitude>-069.70887487</longitude>
+			<orientation>52.34</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}B{@Y}B{^r}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13572">135.72</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11815">118.15</frequency>
+			<description>BRUNSWICK APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

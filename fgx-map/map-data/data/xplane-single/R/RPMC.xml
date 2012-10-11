@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RPMC">
+		<linecode>1</linecode>
+		<elevation>189</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RPMC</identifier>
+		<name>COTABATO</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>07.16725600</latitude>
+			<longitude>124.20120300</longitude>
+			<threshold>60.35</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>07.16322500</latitude_end>
+			<longitude_end>124.21803300</longitude_end>
+			<threshold_end>60.35</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1911.67795493</length-meters>
+			<length-feet>5826.79440663</length-feet>
+			<heading id="10 ">103.486322469</heading>
+			<heading_end id="28 ">283.48422324</heading_end>
+			<threshold_lat id="10 ">7.16712873484</threshold_lat>
+			<threshold_lon id="10 ">124.201734308</threshold_lon>
+			<threshold_lat_end id="28 ">7.16335224512</threshold_lat_end>
+			<threshold_lon_end id="28 ">124.217501691</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>07.16702935</latitude>
+			<longitude>124.20357710</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>103.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>07.16345172</latitude>
+			<longitude>124.21565893</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>283.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.16771103</latitude>
+			<longitude>124.20103499</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.16276996</latitude>
+			<longitude>124.21820099</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

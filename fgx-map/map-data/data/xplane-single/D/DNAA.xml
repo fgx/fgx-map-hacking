@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="DNAA">
+		<linecode>1</linecode>
+		<elevation>1123</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>DNAA</identifier>
+		<name>NNAMDI AZIKIWE INTL</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>08.99343900</latitude>
+			<longitude>007.25373600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>09.02014200</latitude_end>
+			<longitude_end>007.27260600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.01</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3609.37673772</length-meters>
+			<length-feet>11001.3802966</length-feet>
+			<heading id="04 ">35.0909543969</heading>
+			<heading_end id="22 ">215.08800027</heading_end>
+			<threshold_lat id="04 ">8.993439</threshold_lat>
+			<threshold_lon id="04 ">7.253736</threshold_lon>
+			<threshold_lat_end id="22 ">9.020142</threshold_lat_end>
+			<threshold_lon_end id="22 ">7.272606</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>08.99609649</latitude>
+			<longitude>007.25506909</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>34.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>09.01728988</latitude>
+			<longitude>007.27113508</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>214.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>09.00787047</latitude>
+			<longitude>007.26159982</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>08.99345898</latitude>
+			<longitude>007.25275108</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.02012196</latitude>
+			<longitude>007.27359099</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12705">127.05</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12390">123.9</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12790">127.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

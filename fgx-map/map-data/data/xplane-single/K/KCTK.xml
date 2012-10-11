@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCTK">
+		<linecode>1</linecode>
+		<elevation>684</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KCTK</identifier>
+		<name>INGERSOLL</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>40.57307800</latitude>
+			<longitude>-090.07387500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>40.56237800</latitude_end>
+			<longitude_end>-090.07415800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1188.42917115</length-meters>
+			<length-feet>3622.33211367</length-feet>
+			<heading id="18 ">-178.844622097</heading>
+			<heading_end id="36 ">361.155561951</heading_end>
+			<threshold_lat id="18 ">40.573078</threshold_lat>
+			<threshold_lon id="18 ">-90.073875</threshold_lon>
+			<threshold_lat_end id="36 ">40.562378</threshold_lat_end>
+			<threshold_lon_end id="36 ">-90.074158</threshold_lon_end>
+		</runway>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>40.57065300</latitude>
+			<longitude>-090.08174200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>40.57071700</latitude_end>
+			<longitude_end>-090.06988600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1003.97615779</length-meters>
+			<length-feet>3060.11932894</length-feet>
+			<heading id="09 ">89.5982682664</heading>
+			<heading_end id="27 ">269.590557294</heading_end>
+			<threshold_lat id="09 ">40.570653</threshold_lat>
+			<threshold_lon id="09 ">-90.081742</threshold_lon>
+			<threshold_lat_end id="27 ">40.570717</threshold_lat_end>
+			<threshold_lon_end id="27 ">-90.069886</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.56771583</latitude>
+			<longitude>-090.07307059</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.57089868</latitude>
+			<longitude>-090.08196099</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.57327751</latitude>
+			<longitude>-090.07346519</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.57047130</latitude>
+			<longitude>-090.06966705</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.56217849</latitude>
+			<longitude>-090.07456775</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12467">124.67</frequency>
+			<description>PEORIA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

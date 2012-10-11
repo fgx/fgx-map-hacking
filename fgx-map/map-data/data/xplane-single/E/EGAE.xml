@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGAE">
+		<linecode>1</linecode>
+		<elevation>22</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGAE</identifier>
+		<name>Londonderry Eglinton</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>55.04039700</latitude>
+			<longitude>-007.17504800</longitude>
+			<threshold>124.05</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>55.04522800</latitude_end>
+			<longitude_end>-007.14732800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="5">SSALR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1851.84236814</length-meters>
+			<length-feet>5644.41553808</length-feet>
+			<heading id="08 ">73.1283956902</heading>
+			<heading_end id="26 ">253.105676921</heading_end>
+			<threshold_lat id="08 ">55.0407203904</threshold_lat>
+			<threshold_lon id="08 ">-7.17319109594</threshold_lon>
+			<threshold_lat_end id="26 ">55.045228</threshold_lat_end>
+			<threshold_lon_end id="26 ">-7.147328</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>55.04180801</latitude>
+			<longitude>-007.16949589</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>73.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>55.04382399</latitude>
+			<longitude>-007.15274934</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>253.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>55.03975213</latitude>
+			<longitude>007.15586934</longitude>
+			<height>40</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.04138900</latitude>
+			<longitude>007.15390200</longitude>
+			<heading>47.00</heading>
+			<name>East Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.04080434</latitude>
+			<longitude>007.15710289</longitude>
+			<heading>67.20</heading>
+			<name>Passenger Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.03925123</latitude>
+			<longitude>007.16670010</longitude>
+			<heading>00.95</heading>
+			<name>West Apron</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>55.03975213</latitude>
+			<longitude>-007.15586934</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.04352200</latitude>
+			<longitude>-007.15131000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.04037199</latitude>
+			<longitude>-007.16999134</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13415">134.15</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12362">123.62</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

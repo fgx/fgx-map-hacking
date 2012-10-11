@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="TFFS">
+		<linecode>1</linecode>
+		<elevation>9</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>TFFS</identifier>
+		<name>Terre-de-Haut/Les Saintes</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>14.94</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>15.86493465</latitude>
+			<longitude>-061.58329387</longitude>
+			<threshold>27.13</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>15.86593535</latitude_end>
+			<longitude_end>-061.57831410</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>544.735803385</length-meters>
+			<length-feet>1660.35472872</length-feet>
+			<heading id="09 ">78.2717561881</heading>
+			<heading_end id="27 ">258.270394824</heading_end>
+			<threshold_lat id="09 ">15.8649844858</threshold_lat>
+			<threshold_lon id="09 ">-61.5830458577</threshold_lon>
+			<threshold_lat_end id="27 ">15.86593535</threshold_lat_end>
+			<threshold_lon_end id="27 ">-61.5783141</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>15.86597912</latitude>
+			<longitude>061.58015850</longitude>
+			<heading>00.87</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>15.84580400</latitude>
+			<longitude>-061.58514800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>15.86525502</latitude>
+			<longitude>-061.58262127</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

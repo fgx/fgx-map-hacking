@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZYJM">
+		<linecode>1</linecode>
+		<elevation>262</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZYJM</identifier>
+		<name>JIAMUSI</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>46.83587800</latitude>
+			<longitude>130.45322200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>46.84926400</latitude_end>
+			<longitude_end>130.47476100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2216.70615513</length-meters>
+			<length-feet>6756.52036083</length-feet>
+			<heading id="06 ">47.8397876046</heading>
+			<heading_end id="24 ">227.824075398</heading_end>
+			<threshold_lat id="06 ">46.835878</threshold_lat>
+			<threshold_lon id="06 ">130.453222</threshold_lon>
+			<threshold_lat_end id="24 ">46.849264</threshold_lat_end>
+			<threshold_lon_end id="24 ">130.474761</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>46.83735128</latitude>
+			<longitude>130.45472017</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>47.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>46.84775704</latitude>
+			<longitude>130.47320717</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>227.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.84362259</latitude>
+			<longitude>130.46259024</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.83605560</latitude>
+			<longitude>130.45218416</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.84908620</latitude>
+			<longitude>130.47579904</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13000">130.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

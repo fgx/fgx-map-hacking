@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LWOH">
+		<linecode>1</linecode>
+		<elevation>2313</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LWOH</identifier>
+		<name>OHRID</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>42.67</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>41.16904700</latitude>
+			<longitude>020.73772500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>41.19080600</latitude_end>
+			<longitude_end>020.74690300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2536.23700707</length-meters>
+			<length-feet>7730.45039755</length-feet>
+			<heading id="02 ">17.6790516091</heading>
+			<heading_end id="20 ">197.673008577</heading_end>
+			<threshold_lat id="02 ">41.169047</threshold_lat>
+			<threshold_lon id="02 ">20.737725</threshold_lon>
+			<threshold_lat_end id="20 ">41.190806</threshold_lat_end>
+			<threshold_lon_end id="20 ">20.746903</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>41.17143601</latitude>
+			<longitude>020.73818877</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>17.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.18033231</latitude>
+			<longitude>020.74060995</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.16885525</latitude>
+			<longitude>020.73684133</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.19099768</latitude>
+			<longitude>020.74778701</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

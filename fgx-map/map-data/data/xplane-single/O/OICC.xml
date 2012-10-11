@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OICC">
+		<linecode>1</linecode>
+		<elevation>4301</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OICC</identifier>
+		<name>SHAHID ASHRAFI ESFAHANI</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>34.35260600</latitude>
+			<longitude>047.14143300</longitude>
+			<threshold>438.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>34.33909700</latitude_end>
+			<longitude_end>047.17483100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3418.82441724</length-meters>
+			<length-feet>10420.5768237</length-feet>
+			<heading id="11 ">116.006085255</heading>
+			<heading_end id="29 ">295.987242538</heading_end>
+			<threshold_lat id="11 ">34.3508746485</threshold_lat>
+			<threshold_lon id="11 ">47.1457116705</threshold_lon>
+			<threshold_lat_end id="29 ">34.339097</threshold_lat_end>
+			<threshold_lon_end id="29 ">47.174831</threshold_lon_end>
+		</runway>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>34.33986748</latitude>
+			<longitude>047.17182368</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>34.34713012</latitude>
+			<longitude>047.15889084</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.35333143</latitude>
+			<longitude>047.14131577</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>34.33837154</latitude>
+			<longitude>047.17494793</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12680">126.8</frequency>
+			<description>KERMANSHAH INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12245">122.45</frequency>
+			<description>KERMANSHAH TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>KERMANSHAH TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="C65 ">
+		<linecode>1</linecode>
+		<elevation>800</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>C65</identifier>
+		<name>PLYMOUTH MUNI</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>41.36573900</latitude>
+			<longitude>-086.30823100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>41.36453100</latitude_end>
+			<longitude_end>-086.29228300</longitude_end>
+			<threshold_end>91.44</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1341.0834171</length-meters>
+			<length-feet>4087.62225533</length-feet>
+			<heading id="10 ">95.746729278</heading>
+			<heading_end id="28 ">275.736189958</heading_end>
+			<threshold_lat id="10 ">41.365739</threshold_lat>
+			<threshold_lon id="10 ">-86.308231</threshold_lon>
+			<threshold_lat_end id="28 ">41.3646132854</threshold_lat_end>
+			<threshold_lon_end id="28 ">-86.2933703947</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>41.36581043</latitude>
+			<longitude>-086.30581106</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>95.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>41.36454262</latitude>
+			<longitude>-086.29579380</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>275.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.36570891</latitude>
+			<longitude>-086.30018301</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.36600113</latitude>
+			<longitude>-086.30841618</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.36426884</latitude>
+			<longitude>-086.29209788</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13205">132.05</frequency>
+			<description>SOUTH BEND APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

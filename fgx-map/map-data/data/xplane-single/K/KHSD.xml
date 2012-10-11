@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KHSD">
+		<linecode>1</linecode>
+		<elevation>1193</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KHSD</identifier>
+		<name>SUNDANCE AIRPARK</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>35.60869700</latitude>
+			<longitude>-097.70645000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>35.59496700</latitude_end>
+			<longitude_end>-097.70585600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.31658138</length-meters>
+			<length-feet>4646.11694006</length-feet>
+			<heading id="17 ">177.97658051</heading>
+			<heading_end id="35 ">357.976234713</heading_end>
+			<threshold_lat id="17 ">35.608697</threshold_lat>
+			<threshold_lon id="17 ">-97.70645</threshold_lon>
+			<threshold_lat_end id="35 ">35.594967</threshold_lat_end>
+			<threshold_lon_end id="35 ">-97.705856</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>35.60690909</latitude>
+			<longitude>-097.70599341</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>177.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>35.59671289</latitude>
+			<longitude>-097.70627674</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>357.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>35.60151903</latitude>
+			<longitude>097.70742473</longitude>
+			<height>12</height>
+			<deprecated>0</deprecated>
+			<name>Sundance tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.60141500</latitude>
+			<longitude>097.70721817</longitude>
+			<heading>92.11</heading>
+			<name>Sundance ramp start 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.60516116</latitude>
+			<longitude>097.70790335</longitude>
+			<heading>90.00</heading>
+			<name>Sundance ramp start 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.59535335</latitude>
+			<longitude>097.70846087</longitude>
+			<heading>17.68</heading>
+			<name>Sundance ramp start 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.60186590</latitude>
+			<longitude>-097.70499656</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.60790874</latitude>
+			<longitude>-097.70732705</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.59527101</latitude>
+			<longitude>-097.70463905</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12370">123.7</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12460">124.6</frequency>
+			<description>OKE CITY APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

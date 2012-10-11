@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGFE">
+		<linecode>1</linecode>
+		<elevation>159</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGFE</identifier>
+		<name>Haverfordwest</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>51.82738585</latitude>
+			<longitude>-004.96630092</longitude>
+			<threshold>220.98</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>51.83922720</latitude_end>
+			<longitude_end>-004.95539859</longitude_end>
+			<threshold_end>252.98</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1516.78897815</length-meters>
+			<length-feet>4623.17280539</length-feet>
+			<heading id="03 ">29.7052440388</heading>
+			<heading_end id="21 ">209.69667245</heading_end>
+			<threshold_lat id="03 ">51.8291109257</threshold_lat>
+			<threshold_lon id="03 ">-4.96471250595</threshold_lon>
+			<threshold_lat_end id="21 ">51.8372521255</threshold_lat_end>
+			<threshold_lon_end id="21 ">-4.95721687245</threshold_lon_end>
+		</runway>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>51.83409451</latitude>
+			<longitude>-004.97064962</longitude>
+			<threshold>227.99</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>51.83451493</latitude_end>
+			<longitude_end>-004.95490673</longitude_end>
+			<threshold_end>259.99</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1086.18543962</length-meters>
+			<length-feet>3310.69321995</length-feet>
+			<heading id="09 ">87.5379235516</heading>
+			<heading_end id="27 ">267.525546066</heading_end>
+			<threshold_lat id="09 ">51.8341824885</threshold_lat>
+			<threshold_lon id="09 ">-4.96734518567</threshold_lon>
+			<threshold_lat_end id="27 ">51.8344139855</threshold_lat_end>
+			<threshold_lon_end id="27 ">-4.95867494916</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>51.83007913</latitude>
+			<longitude>-004.96453827</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>29.6</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>51.83640639</latitude>
+			<longitude>-004.95718808</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>209.6</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.83167431</latitude>
+			<longitude>004.96867967</longitude>
+			<height>9</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.83168701</latitude>
+			<longitude>004.96757881</longitude>
+			<heading>71.24</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.83127966</latitude>
+			<longitude>004.96733163</longitude>
+			<heading>69.80</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.83258073</latitude>
+			<longitude>-004.96426550</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 20</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.83162405</latitude>
+			<longitude>-004.96844948</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.83252134</latitude>
+			<longitude>-004.96426259</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>Haverfordwest Radio</description>
+		</atc>
+	</airport>
+</PropertyList>

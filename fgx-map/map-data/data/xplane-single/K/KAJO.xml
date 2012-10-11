@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAJO">
+		<linecode>1</linecode>
+		<elevation>533</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KAJO</identifier>
+		<name>Corona Muni</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>33.89758989</latitude>
+			<longitude>-117.60768904</longitude>
+			<threshold>59.13</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>33.89772708</latitude_end>
+			<longitude_end>-117.59716682</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>973.37622753</length-meters>
+			<length-feet>2966.85074151</length-feet>
+			<heading id="07 ">89.1071693344</heading>
+			<heading_end id="25 ">269.101300975</heading_end>
+			<threshold_lat id="07 ">33.897598195</threshold_lat>
+			<threshold_lon id="07 ">-117.607049843</threshold_lon>
+			<threshold_lat_end id="25 ">33.897718587</threshold_lat_end>
+			<threshold_lon_end id="25 ">-117.597815962</threshold_lon_end>
+		</runway>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>33.89742944</latitude>
+			<longitude>-117.60000327</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>269.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>33.89558864</latitude>
+			<longitude>117.59829793</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.89673658</latitude>
+			<longitude>117.59752772</longitude>
+			<heading>90.84</heading>
+			<name>East parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.89698835</latitude>
+			<longitude>117.60176227</longitude>
+			<heading>0.00</heading>
+			<name>Midfield parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.89677216</latitude>
+			<longitude>117.60620213</longitude>
+			<heading>67.56</heading>
+			<name>West parking</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.89534034</latitude>
+			<longitude>-117.59764531</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Airport Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.89817390</latitude>
+			<longitude>-117.59877774</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock 25</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.89809954</latitude>
+			<longitude>-117.60604761</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock 7</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.89819173</latitude>
+			<longitude>-117.60174213</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock midfield</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13217">132.17</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13540">135.4</frequency>
+			<description>SOCAL APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

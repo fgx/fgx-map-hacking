@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KBIX">
+		<linecode>1</linecode>
+		<elevation>33</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KBIX</identifier>
+		<name>KEESLER AFB</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>30.40188100</latitude>
+			<longitude>-088.93145000</longitude>
+			<threshold>487.38</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>30.41896900</latitude_end>
+			<longitude_end>-088.91741400</longitude_end>
+			<threshold_end>304.80</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2325.41202286</length-meters>
+			<length-feet>7087.85584567</length-feet>
+			<heading id="03 ">35.4521293629</heading>
+			<heading_end id="21 ">215.44502447</heading_end>
+			<threshold_lat id="03 ">30.4054622636</threshold_lat>
+			<threshold_lon id="03 ">-88.9285081061</threshold_lon>
+			<threshold_lat_end id="21 ">30.416729106</threshold_lat_end>
+			<threshold_lon_end id="21 ">-88.9192537063</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>30.40716226</latitude>
+			<longitude>-088.92768651</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>35.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>30.41416069</latitude>
+			<longitude>-088.92079063</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>215.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.41125724</latitude>
+			<longitude>-088.92579624</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.40190196</latitude>
+			<longitude>-088.93230965</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.41894794</latitude>
+			<longitude>-088.91655419</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12075">120.75</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12460">124.6</frequency>
+			<description>GULFPORT APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12750">127.5</frequency>
+			<description>GULFPORT APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

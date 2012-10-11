@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYSR">
+		<linecode>1</linecode>
+		<elevation>2106</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYSR</identifier>
+		<name>NANISIVIK</name>
+		<runway end="29T" id="11T">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11T</number>
+			<latitude>72.98357500</latitude>
+			<longitude>-084.64266900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29T</number_end>
+			<latitude_end>72.97885800</latitude_end>
+			<longitude_end>-084.58521700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1950.02594889</length-meters>
+			<length-feet>5943.67909223</length-feet>
+			<heading id="11T">105.688606996</heading>
+			<heading_end id="29T">285.633670885</heading_end>
+			<threshold_lat id="11T">72.983575</threshold_lat>
+			<threshold_lon id="11T">-84.642669</threshold_lon>
+			<threshold_lat_end id="29T">72.978858</threshold_lat_end>
+			<threshold_lon_end id="29T">-84.585217</threshold_lon_end>
+		</runway>
+		<lightingobject id="11T">
+			<linecode>21</linecode>
+			<latitude>72.98345247</latitude>
+			<longitude>-084.63639944</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>105.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11T</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29T">
+			<linecode>21</linecode>
+			<latitude>72.97898230</latitude>
+			<longitude>-084.59148450</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>285.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29T</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>72.98260761</latitude>
+			<longitude>-084.61261294</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>72.98428025</latitude>
+			<longitude>-084.64345424</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>72.97815253</latitude>
+			<longitude>-084.58443426</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>MF</description>
+		</atc>
+	</airport>
+</PropertyList>

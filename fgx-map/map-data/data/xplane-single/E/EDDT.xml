@@ -1,0 +1,571 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDDT">
+		<linecode>1</linecode>
+		<elevation>122</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDDT</identifier>
+		<name>Berlin Tegel</name>
+		<runway end="26R" id="08L">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08L</number>
+			<latitude>52.55764000</latitude>
+			<longitude>013.26576000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>68.88</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>26R</number_end>
+			<latitude_end>52.56195000</latitude_end>
+			<longitude_end>013.30975000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>67.97</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3021.62233709</length-meters>
+			<length-feet>9209.90488344</length-feet>
+			<heading id="08L">80.8845463898</heading>
+			<heading_end id="26R">260.849618847</heading_end>
+			<threshold_lat id="08L">52.55764</threshold_lat>
+			<threshold_lon id="08L">13.26576</threshold_lon>
+			<threshold_lat_end id="26R">52.56195</threshold_lat_end>
+			<threshold_lon_end id="26R">13.30975</threshold_lon_end>
+		</runway>
+		<runway end="26L" id="08R">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08R</number>
+			<latitude>52.55668000</latitude>
+			<longitude>013.27499000</longitude>
+			<threshold>103.94</threshold>
+			<overrrun>63.09</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>26L</number_end>
+			<latitude_end>52.56013000</latitude_end>
+			<longitude_end>013.31025000</longitude_end>
+			<threshold_end>220.07</threshold_end>
+			<overrrun_end>47.85</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2421.96103677</length-meters>
+			<length-feet>7382.13724007</length-feet>
+			<heading id="08R">80.8934842459</heading>
+			<heading_end id="26L">260.865488741</heading_end>
+			<threshold_lat id="08R">52.556827824</threshold_lat>
+			<threshold_lon id="08R">13.2765032104</threshold_lon>
+			<threshold_lat_end id="26L">52.5598159976</threshold_lat_end>
+			<threshold_lon_end id="26L">13.3070461448</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>52.56144400</latitude>
+			<longitude>013.27527300</longitude>
+			<orientation>80.96</orientation>
+			<width>29.87</width>
+			<length>29.87</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H2</designator>
+			<latitude>52.55670700</latitude>
+			<longitude>013.29304300</longitude>
+			<orientation>81.00</orientation>
+			<width>29.87</width>
+			<length>29.87</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>52.55463000</latitude>
+			<longitude>013.29331000</longitude>
+			<height>340</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55084100</latitude>
+			<longitude>013.28930900</longitude>
+			<heading>31.31</heading>
+			<name>Cargo: Stand 17</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55124400</latitude>
+			<longitude>013.28878700</longitude>
+			<heading>30.15</heading>
+			<name>Cargo: Stand 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55163200</latitude>
+			<longitude>013.28827100</longitude>
+			<heading>30.26</heading>
+			<name>Cargo: Stand 19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55201400</latitude>
+			<longitude>013.28776400</longitude>
+			<heading>32.33</heading>
+			<name>Cargo: Stand 20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55240000</latitude>
+			<longitude>013.28724900</longitude>
+			<heading>32.52</heading>
+			<name>Cargo: Stand 21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55277800</latitude>
+			<longitude>013.28674400</longitude>
+			<heading>31.31</heading>
+			<name>Cargo: Stand 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55321200</latitude>
+			<longitude>013.28616900</longitude>
+			<heading>32.43</heading>
+			<name>Cargo: Stand 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55359600</latitude>
+			<longitude>013.28569500</longitude>
+			<heading>31.77</heading>
+			<name>Cargo: Stand 24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55438800</latitude>
+			<longitude>013.28466500</longitude>
+			<heading>31.39</heading>
+			<name>Cargo: Stand 25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55479100</latitude>
+			<longitude>013.28412100</longitude>
+			<heading>30.21</heading>
+			<name>Cargo: Stand 26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55401000</latitude>
+			<longitude>013.27709000</longitude>
+			<heading>0.00</heading>
+			<name>General Aviation: Parking Area</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55483200</latitude>
+			<longitude>013.27866600</longitude>
+			<heading>71.85</heading>
+			<name>General Aviation: Stand 33</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55477700</latitude>
+			<longitude>013.27815100</longitude>
+			<heading>71.44</heading>
+			<name>General Aviation: Stand 34</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55472000</latitude>
+			<longitude>013.27764100</longitude>
+			<heading>71.52</heading>
+			<name>General Aviation: Stand 35</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55508000</latitude>
+			<longitude>013.28336800</longitude>
+			<heading>71.10</heading>
+			<name>Hangars: Stand 27</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55498600</latitude>
+			<longitude>013.28257800</longitude>
+			<heading>70.06</heading>
+			<name>Hangars: Stand 28</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55491600</latitude>
+			<longitude>013.28177100</longitude>
+			<heading>71.33</heading>
+			<name>Hangars: Stand 29</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56422900</latitude>
+			<longitude>013.29803900</longitude>
+			<heading>51.02</heading>
+			<name>Military Apron: Stand A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56416300</latitude>
+			<longitude>013.29738000</longitude>
+			<heading>51.31</heading>
+			<name>Military Apron: Stand B</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56410100</latitude>
+			<longitude>013.29672100</longitude>
+			<heading>51.16</heading>
+			<name>Military Apron: Stand C</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56403700</latitude>
+			<longitude>013.29606400</longitude>
+			<heading>51.02</heading>
+			<name>Military Apron: Stand D</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56397900</latitude>
+			<longitude>013.29540700</longitude>
+			<heading>51.28</heading>
+			<name>Military Apron: Stand E</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56365300</latitude>
+			<longitude>013.30025700</longitude>
+			<heading>95.51</heading>
+			<name>Military Apron: Stand I</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56348200</latitude>
+			<longitude>013.29842700</longitude>
+			<heading>94.86</heading>
+			<name>Military Apron: Stand J</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56329400</latitude>
+			<longitude>013.29653500</longitude>
+			<heading>95.05</heading>
+			<name>Military Apron: Stand K</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56312600</latitude>
+			<longitude>013.29478800</longitude>
+			<heading>94.81</heading>
+			<name>Military Apron: Stand L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56391800</latitude>
+			<longitude>013.29475000</longitude>
+			<heading>70.95</heading>
+			<name>Military Apron: Stand M</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56385500</latitude>
+			<longitude>013.29409600</longitude>
+			<heading>70.97</heading>
+			<name>Military Apron: Stand N</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56378900</latitude>
+			<longitude>013.29343700</longitude>
+			<heading>71.00</heading>
+			<name>Military Apron: Stand O</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56372200</latitude>
+			<longitude>013.29277600</longitude>
+			<heading>70.81</heading>
+			<name>Military Apron: Stand R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56366300</latitude>
+			<longitude>013.29211900</longitude>
+			<heading>70.67</heading>
+			<name>Military Apron: Stand S</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.56359800</latitude>
+			<longitude>013.29146700</longitude>
+			<heading>70.68</heading>
+			<name>Military Apron: Stand T</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55510900</latitude>
+			<longitude>013.29198100</longitude>
+			<heading>36.48</heading>
+			<name>Terminal A: Gate 01 (heavy)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55539400</latitude>
+			<longitude>013.29158800</longitude>
+			<heading>38.09</heading>
+			<name>Terminal A: Gate 02 (heavy)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55582200</latitude>
+			<longitude>013.29094700</longitude>
+			<heading>07.62</heading>
+			<name>Terminal A: Gate 03</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55565200</latitude>
+			<longitude>013.29017100</longitude>
+			<heading>97.25</heading>
+			<name>Terminal A: Gate 04</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55556700</latitude>
+			<longitude>013.28950400</longitude>
+			<heading>86.47</heading>
+			<name>Terminal A: Gate 05</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55523500</latitude>
+			<longitude>013.28863600</longitude>
+			<heading>43.90</heading>
+			<name>Terminal A: Gate 06</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55488400</latitude>
+			<longitude>013.28831400</longitude>
+			<heading>29.23</heading>
+			<name>Terminal A: Gate 07</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55442300</latitude>
+			<longitude>013.28812300</longitude>
+			<heading>21.47</heading>
+			<name>Terminal A: Gate 08</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55388800</latitude>
+			<longitude>013.28816500</longitude>
+			<heading>95.01</heading>
+			<name>Terminal A: Gate 09</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55355900</latitude>
+			<longitude>013.28857400</longitude>
+			<heading>86.45</heading>
+			<name>Terminal A: Gate 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55315700</latitude>
+			<longitude>013.28912500</longitude>
+			<heading>60.74</heading>
+			<name>Terminal A: Gate 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55294800</latitude>
+			<longitude>013.28989500</longitude>
+			<heading>35.41</heading>
+			<name>Terminal A: Gate 12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55296300</latitude>
+			<longitude>013.29052000</longitude>
+			<heading>26.14</heading>
+			<name>Terminal A: Gate 13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55303900</latitude>
+			<longitude>013.29117700</longitude>
+			<heading>22.35</heading>
+			<name>Terminal A: Gate 14 (heavy)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55184400</latitude>
+			<longitude>013.29081100</longitude>
+			<heading>50.42</heading>
+			<name>Terminal B: Stand 15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55155400</latitude>
+			<longitude>013.29135400</longitude>
+			<heading>53.10</heading>
+			<name>Terminal B: Stand 16</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55506100</latitude>
+			<longitude>013.29318700</longitude>
+			<heading>72.68</heading>
+			<name>Terminal C: Stand 51</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55564200</latitude>
+			<longitude>013.29362900</longitude>
+			<heading>70.17</heading>
+			<name>Terminal C: Stand 52</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55615800</latitude>
+			<longitude>013.29401700</longitude>
+			<heading>70.76</heading>
+			<name>Terminal C: Stand 53</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55623500</latitude>
+			<longitude>013.29481800</longitude>
+			<heading>71.38</heading>
+			<name>Terminal C: Stand 54</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55630800</latitude>
+			<longitude>013.29562100</longitude>
+			<heading>71.47</heading>
+			<name>Terminal C: Stand 55</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.55639900</latitude>
+			<longitude>013.29641600</longitude>
+			<heading>71.60</heading>
+			<name>Terminal C: Stand 56</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.56144300</latitude>
+			<longitude>013.28761300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.56053500</latitude>
+			<longitude>013.27332200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.55687000</latitude>
+			<longitude>013.28970000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.56191200</latitude>
+			<longitude>013.29862400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12590">125.9</frequency>
+			<description>Berlin Tegel ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12192">121.92</frequency>
+			<description>Tegel Delivery</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>Tegel Ground (when Delivery is in use)</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12452">124.52</frequency>
+			<description>Tegel Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12112">121.12</frequency>
+			<description>Berlin Director</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12642">126.42</frequency>
+			<description>Bremen Radar (Berlin Arrival South)</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>Bremen Radar (Berlin Arrival)</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12062">120.62</frequency>
+			<description>Bremen Radar (Berlin Departure)</description>
+		</atc>
+	</airport>
+</PropertyList>

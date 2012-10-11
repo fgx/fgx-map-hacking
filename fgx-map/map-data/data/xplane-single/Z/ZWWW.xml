@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZWWW">
+		<linecode>1</linecode>
+		<elevation>2125</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZWWW</identifier>
+		<name>DIWOPU</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>43.90253300</latitude>
+			<longitude>087.45272500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>43.91167800</latitude_end>
+			<longitude_end>087.49576100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.44</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3603.36638977</length-meters>
+			<length-feet>10983.060756</length-feet>
+			<heading id="07 ">73.6360529786</heading>
+			<heading_end id="25 ">253.606207891</heading_end>
+			<threshold_lat id="07 ">43.902533</threshold_lat>
+			<threshold_lon id="07 ">87.452725</threshold_lon>
+			<threshold_lat_end id="25 ">43.911678</threshold_lat_end>
+			<threshold_lon_end id="25 ">87.495761</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>43.90374432</latitude>
+			<longitude>087.45645409</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>73.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>43.91030463</latitude>
+			<longitude>087.49126041</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>253.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>43.90847181</latitude>
+			<longitude>087.47367919</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.90300207</latitude>
+			<longitude>087.45194533</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>43.91120863</latitude>
+			<longitude>087.49654045</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12165">121.65</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12500">125.0</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YOOM">
+		<linecode>1</linecode>
+		<elevation>143</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YOOM</identifier>
+		<name>Moomba</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-28.09426900</latitude>
+			<longitude>140.19069200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>96.01</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-28.10353300</latitude_end>
+			<longitude_end>140.20468860</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>92.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1716.37045026</length-meters>
+			<length-feet>5231.49713241</length-feet>
+			<heading id="12 ">126.73418593</heading>
+			<heading_end id="30 ">306.740778258</heading_end>
+			<threshold_lat id="12 ">-28.094269</threshold_lat>
+			<threshold_lon id="12 ">140.190692</threshold_lon>
+			<threshold_lat_end id="30 ">-28.103533</threshold_lat_end>
+			<threshold_lon_end id="30 ">140.2046886</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-28.10222318</latitude>
+			<longitude>140.20192908</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>306.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-28.09563857</latitude>
+			<longitude>140.19347834</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>126.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-28.10149106</latitude>
+			<longitude>140.19851020</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 7</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-28.10104530</latitude>
+			<longitude>140.19814527</longitude>
+			<heading>25.75</heading>
+			<name>New Ramp Start 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-28.09814765</latitude>
+			<longitude>140.19832807</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.10037702</latitude>
+			<longitude>140.19721007</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 2</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.09385448</latitude>
+			<longitude>140.19245317</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-28.10382097</latitude>
+			<longitude>140.20290371</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 6</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12670">126.7</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

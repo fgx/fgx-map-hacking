@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KPBG">
+		<linecode>1</linecode>
+		<elevation>234</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KPBG</identifier>
+		<name>PLATTSBURGH INTL</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>44.66583300</latitude>
+			<longitude>-073.47678100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>44.63604200</latitude_end>
+			<longitude_end>-073.45947200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3583.95767454</length-meters>
+			<length-feet>10923.902992</length-feet>
+			<heading id="17 ">157.480129155</heading>
+			<heading_end id="35 ">337.467964636</heading_end>
+			<threshold_lat id="17 ">44.665833</threshold_lat>
+			<threshold_lon id="17 ">-73.476781</threshold_lon>
+			<threshold_lat_end id="35 ">44.636042</threshold_lat_end>
+			<threshold_lon_end id="35 ">-73.459472</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>44.66433985</latitude>
+			<longitude>-073.47523550</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>157.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>44.63840696</latitude>
+			<longitude>-073.46152242</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>337.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.65167181</latitude>
+			<longitude>-073.46562783</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.66665439</latitude>
+			<longitude>-073.47600648</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.63522072</latitude>
+			<longitude>-073.46024635</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>BURLINGTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

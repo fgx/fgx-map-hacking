@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBMD">
+		<linecode>1</linecode>
+		<elevation>677</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SBMD</identifier>
+		<name>MONTE DOURADO</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>-00.89370000</latitude>
+			<longitude>-052.60937200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>-00.88597500</latitude_end>
+			<longitude_end>-052.59512800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.92</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1800.90899583</length-meters>
+			<length-feet>5489.1706193</length-feet>
+			<heading id="08 ">61.685484634</heading>
+			<heading_end id="26 ">241.685705843</heading_end>
+			<threshold_lat id="08 ">-0.8937</threshold_lat>
+			<threshold_lon id="08 ">-52.609372</threshold_lon>
+			<threshold_lat_end id="26 ">-0.885975</threshold_lat_end>
+			<threshold_lon_end id="26 ">-52.595128</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>-00.89254969</latitude>
+			<longitude>-052.60794820</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>61.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-00.88901106</latitude>
+			<longitude>-052.60269966</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.89347372</latitude>
+			<longitude>-052.60980059</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-00.88620128</latitude>
+			<longitude>-052.59469941</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12570">125.7</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

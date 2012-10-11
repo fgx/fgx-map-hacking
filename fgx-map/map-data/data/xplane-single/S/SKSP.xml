@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKSP">
+		<linecode>1</linecode>
+		<elevation>19</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SKSP</identifier>
+		<name>GUSTAVO ROJAS PINILLA</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>12.57816700</latitude>
+			<longitude>-081.72065000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>12.58902200</latitude_end>
+			<longitude_end>-081.70173300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>54.86</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2380.63820041</length-meters>
+			<length-feet>7256.18523485</length-feet>
+			<heading id="06 ">59.7087972136</heading>
+			<heading_end id="24 ">239.704675884</heading_end>
+			<threshold_lat id="06 ">12.578167</threshold_lat>
+			<threshold_lon id="06 ">-81.72065</threshold_lon>
+			<threshold_lat_end id="24 ">12.589022</threshold_lat_end>
+			<threshold_lon_end id="24 ">-81.701733</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>12.57942492</latitude>
+			<longitude>-081.71926856</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>59.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>12.58776417</latitude>
+			<longitude>-081.70311458</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>239.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>12.58481964</latitude>
+			<longitude>-081.71192984</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.57848615</latitude>
+			<longitude>-081.72132479</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>12.58870279</latitude>
+			<longitude>-081.70105820</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>SAN ANDRES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

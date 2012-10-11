@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SWKX">
+		<linecode>1</linecode>
+		<elevation>394</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SWKX</identifier>
+		<name>Corixa</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>15.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>-16.37913677</latitude>
+			<longitude>-058.31967730</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>-16.38752963</latitude_end>
+			<longitude_end>-058.31421090</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1097.10512246</length-meters>
+			<length-feet>3343.97641324</length-feet>
+			<heading id="16 ">147.839772833</heading>
+			<heading_end id="34 ">327.841314699</heading_end>
+			<threshold_lat id="16 ">-16.37913677</threshold_lat>
+			<threshold_lon id="16 ">-58.3196773</threshold_lon>
+			<threshold_lat_end id="34 ">-16.38752963</threshold_lat_end>
+			<threshold_lon_end id="34 ">-58.3142109</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>-16.38053474</latitude>
+			<longitude>-058.31846902</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>148.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>-16.38613168</latitude>
+			<longitude>-058.31541927</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>328.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-16.38306865</latitude>
+			<longitude>-058.31650288</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.37890243</latitude>
+			<longitude>-058.31956696</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.38776397</latitude>
+			<longitude>-058.31432123</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

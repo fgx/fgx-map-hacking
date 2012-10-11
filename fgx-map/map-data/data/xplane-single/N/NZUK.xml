@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="NZUK">
+		<linecode>1</linecode>
+		<elevation>1575</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>NZUK</identifier>
+		<name>PUKAKI</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>15.54</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-44.23363900</latitude>
+			<longitude>170.11841900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-44.24308300</latitude_end>
+			<longitude_end>170.12038900</longitude_end>
+			<threshold_end>39.93</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1061.12258604</length-meters>
+			<length-feet>3234.30164224</length-feet>
+			<heading id="15 ">171.470466563</heading>
+			<heading_end id="33 ">351.471840924</heading_end>
+			<threshold_lat id="15 ">-44.233639</threshold_lat>
+			<threshold_lon id="15 ">170.118419</threshold_lon>
+			<threshold_lat_end id="33 ">-44.2427276223</threshold_lat_end>
+			<threshold_lon_end id="33 ">170.120314869</threshold_lon_end>
+		</runway>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-44.23346983</latitude>
+			<longitude>170.11867789</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-44.24325218</latitude>
+			<longitude>170.12013007</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>CHRISTCHURCH FIS</description>
+		</atc>
+	</airport>
+</PropertyList>

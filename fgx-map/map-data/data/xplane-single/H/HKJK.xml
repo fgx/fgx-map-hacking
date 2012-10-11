@@ -1,0 +1,231 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HKJK">
+		<linecode>1</linecode>
+		<elevation>5330</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>HKJK</identifier>
+		<name>Nairobi Jomo Kanyatta Intl</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-01.32774140</latitude>
+			<longitude>036.91612339</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>59.13</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-01.30640484</latitude_end>
+			<longitude_end>036.94539085</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="9">MALSF</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4021.87541547</length-meters>
+			<length-feet>12258.6762663</length-feet>
+			<heading id="06 ">54.0825925899</heading>
+			<heading_end id="24 ">234.083265309</heading_end>
+			<threshold_lat id="06 ">-1.3277414</threshold_lat>
+			<threshold_lon id="06 ">36.91612339</threshold_lon>
+			<threshold_lat_end id="24 ">-1.30640484</threshold_lat_end>
+			<threshold_lon_end id="24 ">36.94539085</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>-01.31816512</latitude>
+			<longitude>036.92806316</longitude>
+			<orientation>53.90</orientation>
+			<width>11.89</width>
+			<length>11.89</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-01.32527582</latitude>
+			<longitude>036.91864128</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>53.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>-01.30865581</latitude>
+			<longitude>036.94318376</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>233.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-01.33125518</latitude>
+			<longitude>036.92984135</longitude>
+			<height>200</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33002265</latitude>
+			<longitude>036.92620000</longitude>
+			<heading>37.83</heading>
+			<name>Apron 1 (12)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.32982656</latitude>
+			<longitude>036.92679466</longitude>
+			<heading>36.80</heading>
+			<name>Apron 1 (14)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33060822</latitude>
+			<longitude>036.92657103</longitude>
+			<heading>0.00</heading>
+			<name>Apron 1 (16)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33115412</latitude>
+			<longitude>036.92618989</longitude>
+			<heading>21.25</heading>
+			<name>Apron 1 (18)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33263721</latitude>
+			<longitude>036.91673703</longitude>
+			<heading>42.70</heading>
+			<name>Apron 2 (F1)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33338139</latitude>
+			<longitude>036.91579736</longitude>
+			<heading>40.79</heading>
+			<name>Apron 2 (F3)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.31711431</latitude>
+			<longitude>036.92560058</longitude>
+			<heading>91.74</heading>
+			<name>Apron 3 (12)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.31670417</latitude>
+			<longitude>036.92652053</longitude>
+			<heading>57.26</heading>
+			<name>Apron 3 (4)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.31536727</latitude>
+			<longitude>036.92689748</longitude>
+			<heading>64.44</heading>
+			<name>Apron 3 (7)</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33153167</latitude>
+			<longitude>036.92289573</longitude>
+			<heading>65.22</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.32930987</latitude>
+			<longitude>036.92606613</longitude>
+			<heading>22.88</heading>
+			<name>Gate 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.33012647</latitude>
+			<longitude>036.92269572</longitude>
+			<heading>05.52</heading>
+			<name>Gate 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.32909491</latitude>
+			<longitude>036.92331730</longitude>
+			<heading>38.50</heading>
+			<name>Gate 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-01.32882977</latitude>
+			<longitude>036.92377313</longitude>
+			<heading>53.43</heading>
+			<name>Gate 7</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-01.31578439</latitude>
+			<longitude>036.92483822</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-01.32479470</latitude>
+			<longitude>036.91800723</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-01.30284662</latitude>
+			<longitude>036.94937294</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

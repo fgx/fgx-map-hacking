@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGOY">
+		<linecode>1</linecode>
+		<elevation>57</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EGOY</identifier>
+		<name>West Freugh</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>54.84703510</latitude>
+			<longitude>-004.96026227</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>54.85531890</latitude_end>
+			<longitude_end>-004.93533973</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1847.40872607</length-meters>
+			<length-feet>5630.90179706</length-feet>
+			<heading id="06 ">60.0655121508</heading>
+			<heading_end id="24 ">240.045134</heading_end>
+			<threshold_lat id="06 ">54.8470351</threshold_lat>
+			<threshold_lon id="06 ">-4.96026227</threshold_lon>
+			<threshold_lat_end id="24 ">54.8553189</threshold_lat_end>
+			<threshold_lon_end id="24 ">-4.93533973</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>54.84828607</latitude>
+			<longitude>-004.95790721</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>59.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>54.85406841</latitude>
+			<longitude>-004.93769606</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>240.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.84736475</latitude>
+			<longitude>-004.96142372</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.85498901</latitude>
+			<longitude>-004.93417825</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

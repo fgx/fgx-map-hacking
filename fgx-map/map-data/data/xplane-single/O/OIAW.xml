@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OIAW">
+		<linecode>1</linecode>
+		<elevation>66</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OIAW</identifier>
+		<name>AHWAZ</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>31.34602500</latitude>
+			<longitude>048.74716700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>298.09</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>31.32883600</latitude_end>
+			<longitude_end>048.77673100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>298.09</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3398.23090042</length-meters>
+			<length-feet>10357.8077845</length-feet>
+			<heading id="12 ">124.121013693</heading>
+			<heading_end id="30 ">304.10563813</heading_end>
+			<threshold_lat id="12 ">31.346025</threshold_lat>
+			<threshold_lon id="12 ">48.747167</threshold_lon>
+			<threshold_lat_end id="30 ">31.328836</threshold_lat_end>
+			<threshold_lon_end id="30 ">48.776731</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>31.34534388</latitude>
+			<longitude>048.74917342</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>124.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>31.33024378</latitude>
+			<longitude>048.77347660</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>304.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.33860702</latitude>
+			<longitude>048.76288733</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.34675683</latitude>
+			<longitude>048.74717517</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.32810417</latitude>
+			<longitude>048.77672260</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12640">126.4</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

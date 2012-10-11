@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RKSS">
+		<linecode>1</linecode>
+		<elevation>58</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>RKSS</identifier>
+		<name>Seoul Gimpo</name>
+		<runway end="32R" id="14L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14L</number>
+			<latitude>37.57029700</latitude>
+			<longitude>126.77842200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>120.09</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32R</number_end>
+			<latitude_end>37.54735300</latitude_end>
+			<longitude_end>126.80722200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>120.09</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3599.99795407</length-meters>
+			<length-feet>10972.793764</length-feet>
+			<heading id="14L">135.029690909</heading>
+			<heading_end id="32R">315.01213513</heading_end>
+			<threshold_lat id="14L">37.570297</threshold_lat>
+			<threshold_lon id="14L">126.778422</threshold_lon>
+			<threshold_lat_end id="32R">37.547353</threshold_lat_end>
+			<threshold_lon_end id="32R">126.807222</threshold_lon_end>
+		</runway>
+		<runway end="32L" id="14R">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14R</number>
+			<latitude>37.56798300</latitude>
+			<longitude>126.77553300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>118.87</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32L</number_end>
+			<latitude_end>37.54760800</latitude_end>
+			<longitude_end>126.80115800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>117.35</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3200.03880249</length-meters>
+			<length-feet>9753.71826998</length-feet>
+			<heading id="14R">134.97272263</heading>
+			<heading_end id="32L">314.957102619</heading_end>
+			<threshold_lat id="14R">37.567983</threshold_lat>
+			<threshold_lon id="14R">126.775533</threshold_lon>
+			<threshold_lat_end id="32L">37.547608</threshold_lat_end>
+			<threshold_lon_end id="32L">126.801158</threshold_lon_end>
+		</runway>
+		<lightingobject id="14L">
+			<linecode>21</linecode>
+			<latitude>37.56864611</latitude>
+			<longitude>126.78120894</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>135.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="14R">
+			<linecode>21</linecode>
+			<latitude>37.56646271</latitude>
+			<longitude>126.77827996</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>135.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32R">
+			<linecode>21</linecode>
+			<latitude>37.54931723</latitude>
+			<longitude>126.80404423</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>315.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>37.56339260</latitude>
+			<longitude>126.79906460</longitude>
+			<height>200</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>37.55747990</latitude>
+			<longitude>126.80294800</longitude>
+			<heading>45.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.55913252</latitude>
+			<longitude>126.79003570</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.57101430</latitude>
+			<longitude>126.77860519</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.56893701</latitude>
+			<longitude>126.77577446</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.54665404</latitude>
+			<longitude>126.80091629</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.54663574</latitude>
+			<longitude>126.80703859</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12640">126.4</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12260">122.6</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12585">125.85</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12125">121.25</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12195">121.95</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12710">127.1</frequency>
+			<description>SEOUL RDO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11805">118.05</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12080">120.8</frequency>
+			<description>SEOUL APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11975">119.75</frequency>
+			<description>SEOUL APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>SEOUL APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>SEOUL APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12515">125.15</frequency>
+			<description>SEOUL DEP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12480">124.8</frequency>
+			<description>SEOUL DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

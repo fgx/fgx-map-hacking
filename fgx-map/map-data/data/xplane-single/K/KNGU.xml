@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KNGU">
+		<linecode>1</linecode>
+		<elevation>15</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KNGU</identifier>
+		<name>Norfolk Naval Air Station</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>36.93744479</latitude>
+			<longitude>-076.30258335</longitude>
+			<threshold>57.00</threshold>
+			<overrrun>302.97</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>36.93747061</latitude_end>
+			<longitude_end>-076.27834455</longitude_end>
+			<threshold_end>52.12</threshold_end>
+			<overrrun_end>141.12</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2159.3038134</length-meters>
+			<length-feet>6581.55802324</length-feet>
+			<heading id="10 ">89.9312511144</heading>
+			<heading_end id="28 ">269.91668498</heading_end>
+			<threshold_lat id="10 ">36.9374454046</threshold_lat>
+			<threshold_lon id="10 ">-76.3019435088</threshold_lon>
+			<threshold_lat_end id="28 ">36.9374699256</threshold_lat_end>
+			<threshold_lon_end id="28 ">-76.2789296118</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H4</designator>
+			<latitude>36.94008518</latitude>
+			<longitude>-076.29029634</longitude>
+			<orientation>360.00</orientation>
+			<width>32.00</width>
+			<length>31.09</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H5</designator>
+			<latitude>36.93984723</latitude>
+			<longitude>-076.28873809</longitude>
+			<orientation>46.28</orientation>
+			<width>31.09</width>
+			<length>32.00</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H6</designator>
+			<latitude>36.93588029</latitude>
+			<longitude>-076.29030441</longitude>
+			<orientation>0.00</orientation>
+			<width>49.99</width>
+			<length>49.99</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H7</designator>
+			<latitude>36.93426397</latitude>
+			<longitude>-076.29028903</longitude>
+			<orientation>0.00</orientation>
+			<width>49.99</width>
+			<length>49.99</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="2">Concrete shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>36.93793136</latitude>
+			<longitude>-076.30032233</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>36.93699121</latitude>
+			<longitude>-076.28063034</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>36.93996400</latitude>
+			<longitude>076.29187000</longitude>
+			<height>150</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>36.94091000</latitude>
+			<longitude>076.29442600</longitude>
+			<heading>90.00</heading>
+			<name>Norfolk NAS ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>36.93968698</latitude>
+			<longitude>-076.28720574</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.93850300</latitude>
+			<longitude>-076.30359600</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.93632100</latitude>
+			<longitude>-076.27497100</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11842">118.42</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12070">120.7</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>CHAMBERS GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>CHAMBERS TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12637">126.37</frequency>
+			<description>CHAMBERS TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12520">125.2</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

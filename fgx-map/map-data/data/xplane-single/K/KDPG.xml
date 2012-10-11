@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KDPG">
+		<linecode>1</linecode>
+		<elevation>4348</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KDPG</identifier>
+		<name>Michael AAF (Dougway Proving Grounds)</name>
+		<runway end="30R" id="12L">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12L</number>
+			<latitude>40.21214700</latitude>
+			<longitude>-112.95436900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>198.12</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30R</number_end>
+			<latitude_end>40.18667500</latitude_end>
+			<longitude_end>-112.92111900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>198.12</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4001.82950532</length-meters>
+			<length-feet>12197.5763322</length-feet>
+			<heading id="12L">134.983421917</heading>
+			<heading_end id="30R">314.961960709</heading_end>
+			<threshold_lat id="12L">40.212147</threshold_lat>
+			<threshold_lon id="12L">-112.954369</threshold_lon>
+			<threshold_lat_end id="30R">40.186675</threshold_lat_end>
+			<threshold_lon_end id="30R">-112.921119</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>40.20974511</latitude>
+			<longitude>-112.95238627</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>135.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>40.18736314</latitude>
+			<longitude>-112.92343158</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>315.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.18372231</latitude>
+			<longitude>-112.92653315</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>New Airport Beacon 2</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.19983522</latitude>
+			<longitude>-112.94079719</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.21311654</latitude>
+			<longitude>-112.95411336</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.18693349</latitude>
+			<longitude>-112.92268379</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

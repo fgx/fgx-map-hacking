@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ETNG">
+		<linecode>1</linecode>
+		<elevation>296</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ETNG</identifier>
+		<name>GEILENKIRCHEN</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>50.96101400</latitude>
+			<longitude>006.02004200</longitude>
+			<threshold>149.66</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>50.96065300</latitude_end>
+			<longitude_end>006.06345800</longitude_end>
+			<threshold_end>149.66</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3050.53186711</length-meters>
+			<length-feet>9298.02113094</length-feet>
+			<heading id="09 ">90.7711835984</heading>
+			<heading_end id="27 ">270.737461714</heading_end>
+			<threshold_lat id="09 ">50.960995874</threshold_lat>
+			<threshold_lon id="09 ">6.02217200091</threshold_lon>
+			<threshold_lat_end id="27 ">50.9606702955</threshold_lat_end>
+			<threshold_lon_end id="27 ">6.06132799747</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>50.96134595</latitude>
+			<longitude>006.02504510</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>90.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>50.96034050</latitude>
+			<longitude>006.05638336</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>270.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.96224730</latitude>
+			<longitude>006.04177866</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.96162261</latitude>
+			<longitude>006.01941424</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.96004416</latitude>
+			<longitude>006.06408519</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>FRISBEE TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12850">128.5</frequency>
+			<description>LANGEN CON</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>FRISBEE RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12372">123.72</frequency>
+			<description>FRISBEE RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

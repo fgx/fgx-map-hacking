@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="O41 ">
+		<linecode>1</linecode>
+		<elevation>125</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>O41</identifier>
+		<name>WATTS WOODLAND</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>38.67874400</latitude>
+			<longitude>-121.86992200</longitude>
+			<threshold>192.02</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>38.66900000</latitude_end>
+			<longitude_end>-121.87425600</longitude_end>
+			<threshold_end>117.35</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1145.5418247</length-meters>
+			<length-feet>3491.61148168</length-feet>
+			<heading id="18 ">-160.778805724</heading>
+			<heading_end id="36 ">379.223902535</heading_end>
+			<threshold_lat id="18 ">38.6771106597</threshold_lat>
+			<threshold_lon id="18 ">-121.870648465</threshold_lon>
+			<threshold_lat_end id="36 ">38.669998173</threshold_lat_end>
+			<threshold_lon_end id="36 ">-121.873812016</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>38.67532823</latitude>
+			<longitude>-121.87109806</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>199.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.67368362</latitude>
+			<longitude>-121.87139206</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.67881848</latitude>
+			<longitude>-121.86955411</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.66892551</latitude>
+			<longitude>-121.87462383</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12660">126.6</frequency>
+			<description>TRAVIS APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

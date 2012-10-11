@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LTBF">
+		<linecode>1</linecode>
+		<elevation>340</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LTBF</identifier>
+		<name>BALIKESIR</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>43.89</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>39.63271400</latitude>
+			<longitude>027.92661900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>160.63</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>39.60580300</latitude_end>
+			<longitude_end>027.92530000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>158.50</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2990.00213978</length-meters>
+			<length-feet>9113.52652206</length-feet>
+			<heading id="18 ">-177.829608219</heading>
+			<heading_end id="36 ">362.171232885</heading_end>
+			<threshold_lat id="18 ">39.632714</threshold_lat>
+			<threshold_lon id="18 ">27.926619</threshold_lon>
+			<threshold_lat_end id="36 ">39.605803</threshold_lat_end>
+			<threshold_lon_end id="36 ">27.9253</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>39.63090051</latitude>
+			<longitude>027.92704394</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>182.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>39.60761649</latitude>
+			<longitude>027.92487516</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>2.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.61920887</latitude>
+			<longitude>027.92775280</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.63308635</latitude>
+			<longitude>027.92740712</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.60543064</latitude>
+			<longitude>027.92451220</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12392">123.92</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

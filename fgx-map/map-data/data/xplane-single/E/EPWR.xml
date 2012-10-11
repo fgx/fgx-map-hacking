@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPWR">
+		<linecode>1</linecode>
+		<elevation>404</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPWR</identifier>
+		<name>STRACHOWICE</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>51.10880240</latitude>
+			<longitude>016.86582551</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>51.09896160</latitude_end>
+			<longitude_end>016.89795849</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2502.77017309</length-meters>
+			<length-feet>7628.44348758</length-feet>
+			<heading id="12 ">115.952646601</heading>
+			<heading_end id="30 ">295.927637962</heading_end>
+			<threshold_lat id="12 ">51.1088024</threshold_lat>
+			<threshold_lon id="12 ">16.86582551</threshold_lon>
+			<threshold_lat_end id="30 ">51.0989616</threshold_lat_end>
+			<threshold_lon_end id="30 ">16.89795849</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>51.10843458</latitude>
+			<longitude>016.86872911</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>115.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>51.09974448</latitude>
+			<longitude>016.89370397</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.10677000</latitude>
+			<longitude>016.88616000</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10420000</latitude>
+			<longitude>016.90060000</longitude>
+			<heading>09.00</heading>
+			<name>Aircraft stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10426700</latitude>
+			<longitude>016.90120000</longitude>
+			<heading>48.00</heading>
+			<name>Aircraft stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10441700</latitude>
+			<longitude>016.90235000</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10441700</latitude>
+			<longitude>016.90311700</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10441700</latitude>
+			<longitude>016.90388300</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>51.10436700</latitude>
+			<longitude>016.90471700</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.10108500</latitude>
+			<longitude>016.87920700</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.09926300</latitude>
+			<longitude>016.89251500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12722">127.22</frequency>
+			<description>WROCLAW TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

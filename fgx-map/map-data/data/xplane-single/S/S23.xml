@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="S23 ">
+		<linecode>1</linecode>
+		<elevation>2107</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>S23</identifier>
+		<name>Ione Muni</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>13.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>48.71347658</latitude>
+			<longitude>-117.41484250</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>48.70261329</latitude_end>
+			<longitude_end>-117.41114620</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1238.29429864</length-meters>
+			<length-feet>3774.32102227</length-feet>
+			<heading id="15 ">167.310501068</heading>
+			<heading_end id="33 ">347.307723828</heading_end>
+			<threshold_lat id="15 ">48.71347658</threshold_lat>
+			<threshold_lon id="15 ">-117.4148425</threshold_lon>
+			<threshold_lat_end id="33 ">48.70261329</threshold_lat_end>
+			<threshold_lon_end id="33 ">-117.4111462</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>48.71335058</latitude>
+			<longitude>-117.41512890</longitude>
+			<orientation>348.00</orientation>
+			<width>18.29</width>
+			<length>18.29</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>48.70462633</latitude>
+			<longitude>-117.41214727</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>348.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.71384490</latitude>
+			<longitude>117.41376908</longitude>
+			<heading>57.28</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.71303774</latitude>
+			<longitude>117.41425145</longitude>
+			<heading>50.00</heading>
+			<name>Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.71388859</latitude>
+			<longitude>117.41439332</longitude>
+			<heading>26.73</heading>
+			<name>Ramp 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.71360969</latitude>
+			<longitude>-117.41413577</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.71366628</latitude>
+			<longitude>-117.41515238</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

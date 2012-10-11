@@ -1,0 +1,181 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KBMQ">
+		<linecode>1</linecode>
+		<elevation>1284</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KBMQ</identifier>
+		<name>BURNET MUNI KATE CRADDOCK FLD</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>30.73232500</latitude>
+			<longitude>-098.24082200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>30.74553100</latitude_end>
+			<longitude_end>-098.23639700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.17387369</length-meters>
+			<length-feet>4645.68196702</length-feet>
+			<heading id="01 ">16.1432957291</heading>
+			<heading_end id="19 ">196.141033992</heading_end>
+			<threshold_lat id="01 ">30.732325</threshold_lat>
+			<threshold_lon id="01 ">-98.240822</threshold_lon>
+			<threshold_lat_end id="19 ">30.745531</threshold_lat_end>
+			<threshold_lon_end id="19 ">-98.236397</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>30.73389666</latitude>
+			<longitude>-098.24070205</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>16.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>30.74392406</latitude>
+			<longitude>-098.23658550</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>196.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.74125739</latitude>
+			<longitude>098.23684340</longitude>
+			<heading>06.00</heading>
+			<name>Faulkner's Air Shop FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.74187041</latitude>
+			<longitude>098.23629485</longitude>
+			<heading>86.00</heading>
+			<name>GA Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.73239529</latitude>
+			<longitude>098.24010859</longitude>
+			<heading>86.00</heading>
+			<name>Hold Short Rwy 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.74516761</latitude>
+			<longitude>098.23581871</longitude>
+			<heading>16.00</heading>
+			<name>Hold Short Rwy 19</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.74224597</latitude>
+			<longitude>-098.23549604</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.74083230</latitude>
+			<longitude>-098.23854932</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.73283624</latitude>
+			<longitude>-098.24028774</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.74497219</latitude>
+			<longitude>-098.23622799</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.73213561</latitude>
+			<longitude>-098.24033135</longitude>
+			<orientation>238.68</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}1-19</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.73628630</latitude>
+			<longitude>-098.23892847</longitude>
+			<orientation>286.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}1-19</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.74044752</latitude>
+			<longitude>-098.23752615</longitude>
+			<orientation>286.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}1-19</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.74302380</latitude>
+			<longitude>-098.23665803</longitude>
+			<orientation>286.00</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}1-19</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.74524346</latitude>
+			<longitude>-098.23592575</longitude>
+			<orientation>313.86</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}1-19</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11992">119.92</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

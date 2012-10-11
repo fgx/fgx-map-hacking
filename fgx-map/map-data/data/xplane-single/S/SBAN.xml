@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SBAN">
+		<linecode>1</linecode>
+		<elevation>3728</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SBAN</identifier>
+		<name>BASE AEREA</name>
+		<runway end="24R" id="06L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06L</number>
+			<latitude>-16.23848600</latitude>
+			<longitude>-048.97326700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>350.83</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24R</number_end>
+			<latitude_end>-16.21530300</latitude_end>
+			<longitude_end>-048.95382200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>348.08</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3302.03892789</length-meters>
+			<length-feet>10064.6146522</length-feet>
+			<heading id="06L">39.0168947114</heading>
+			<heading_end id="24R">219.022328458</heading_end>
+			<threshold_lat id="06L">-16.238486</threshold_lat>
+			<threshold_lon id="06L">-48.973267</threshold_lon>
+			<threshold_lat_end id="24R">-16.215303</threshold_lat_end>
+			<threshold_lon_end id="24R">-48.953822</threshold_lon_end>
+		</runway>
+		<runway end="24L" id="06R">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06R</number>
+			<latitude>-16.23938900</latitude>
+			<longitude>-048.97166700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24L</number_end>
+			<latitude_end>-16.22343600</latitude_end>
+			<longitude_end>-048.95831100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2270.5583913</length-meters>
+			<length-feet>6920.66197669</length-feet>
+			<heading id="06R">38.9652027049</heading>
+			<heading_end id="24L">218.968935941</heading_end>
+			<threshold_lat id="06R">-16.239389</threshold_lat>
+			<threshold_lon id="06R">-48.971667</threshold_lon>
+			<threshold_lat_end id="24L">-16.223436</threshold_lat_end>
+			<threshold_lon_end id="24L">-48.958311</threshold_lon_end>
+		</runway>
+		<lightingobject id="06L">
+			<linecode>21</linecode>
+			<latitude>-16.23684969</latitude>
+			<longitude>-048.97239445</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>38.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="24R">
+			<linecode>21</linecode>
+			<latitude>-16.21693939</latitude>
+			<longitude>-048.95469428</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>218.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24R</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-16.23096458</latitude>
+			<longitude>-048.96557362</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.23842019</latitude>
+			<longitude>-048.97402618</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.23935686</latitude>
+			<longitude>-048.97205064</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.22346812</latitude>
+			<longitude>-048.95792739</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-16.21536873</latitude>
+			<longitude>-048.95306291</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12125">121.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13300">133.0</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12945">129.45</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11915">119.15</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12055">120.55</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

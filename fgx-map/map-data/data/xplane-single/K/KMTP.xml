@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMTP">
+		<linecode>1</linecode>
+		<elevation>6</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KMTP</identifier>
+		<name>MONTAUK</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>41.07320300</latitude>
+			<longitude>-071.92538900</longitude>
+			<threshold>163.98</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>41.07971400</latitude_end>
+			<longitude_end>-071.91615000</longitude_end>
+			<threshold_end>138.99</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1060.98274264</length-meters>
+			<length-feet>3233.87539956</length-feet>
+			<heading id="06 ">47.0404510682</heading>
+			<heading_end id="24 ">227.034380439</heading_end>
+			<threshold_lat id="06 ">41.0742092408</threshold_lat>
+			<threshold_lon id="06 ">-71.9239610462</threshold_lon>
+			<threshold_lat_end id="24 ">41.0788609968</threshold_lat_end>
+			<threshold_lon_end id="24 ">-71.9173603043</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.07317252</latitude>
+			<longitude>071.92317824</longitude>
+			<heading>14.45</heading>
+			<name>Gen Avia Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.07905335</latitude>
+			<longitude>071.91640546</longitude>
+			<heading>48.02</heading>
+			<name>Hold Short Rwy 24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.07312553</latitude>
+			<longitude>071.92481159</longitude>
+			<heading>15.69</heading>
+			<name>Hold Short Rwy 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>41.07336877</latitude>
+			<longitude>071.92419655</longitude>
+			<heading>47.34</heading>
+			<name>Transient Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.07311741</latitude>
+			<longitude>-071.92346912</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.07402611</latitude>
+			<longitude>-071.92383345</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.07908661</latitude>
+			<longitude>-071.91664679</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11895">118.95</frequency>
+			<description>NEW YORK APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12575">125.75</frequency>
+			<description>PROVIDENCE DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

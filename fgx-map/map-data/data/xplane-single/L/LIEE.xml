@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIEE">
+		<linecode>1</linecode>
+		<elevation>13</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LIEE</identifier>
+		<name>Cagliari Elmas</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>39.26081100</latitude>
+			<longitude>009.04346700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>57.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>39.24213900</latitude_end>
+			<longitude_end>009.06511400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2790.81908407</length-meters>
+			<length-feet>8506.41656825</length-feet>
+			<heading id="14 ">137.975806405</heading>
+			<heading_end id="32 ">317.9621098</heading_end>
+			<threshold_lat id="14 ">39.260811</threshold_lat>
+			<threshold_lon id="14 ">9.043467</threshold_lon>
+			<threshold_lat_end id="32 ">39.242139</threshold_lat_end>
+			<threshold_lon_end id="32 ">9.065114</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>39.25973973</latitude>
+			<longitude>009.04540542</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>138.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>39.24411727</latitude>
+			<longitude>009.06212570</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>318.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>39.25426300</latitude>
+			<longitude>009.05935200</longitude>
+			<height>90</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.25210600</latitude>
+			<longitude>009.05772200</longitude>
+			<heading>80.00</heading>
+			<name>Start Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.25201700</latitude>
+			<longitude>009.05507100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.25663100</latitude>
+			<longitude>009.04973900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.24821300</latitude>
+			<longitude>009.05948800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12060">120.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>CAGLIARI APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11875">118.75</frequency>
+			<description>CAGLIARI APP</description>
+		</atc>
+	</airport>
+</PropertyList>

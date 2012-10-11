@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RPVP">
+		<linecode>1</linecode>
+		<elevation>71</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RPVP</identifier>
+		<name>PUERTO PRINCESA</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>09.74263300</latitude>
+			<longitude>118.74688900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>170.69</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>09.74160600</latitude_end>
+			<longitude_end>118.77057200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>174.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2601.09177433</length-meters>
+			<length-feet>7928.12772817</length-feet>
+			<heading id="09 ">92.5049672753</heading>
+			<heading_end id="27 ">272.500959781</heading_end>
+			<threshold_lat id="09 ">9.742633</threshold_lat>
+			<threshold_lon id="09 ">118.746889</threshold_lon>
+			<threshold_lat_end id="27 ">9.741606</threshold_lat_end>
+			<threshold_lon_end id="27 ">118.770572</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>09.74295453</latitude>
+			<longitude>118.74873130</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>92.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>09.74128460</latitude>
+			<longitude>118.76872968</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>272.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>09.74353950</latitude>
+			<longitude>118.75879141</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.74325918</latitude>
+			<longitude>118.74650464</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.74097979</latitude>
+			<longitude>118.77095632</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12200">122.0</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYPC">
+		<linecode>1</linecode>
+		<elevation>18</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYPC</identifier>
+		<name>PAULATUK</name>
+		<runway end="20T" id="02T">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02T</number>
+			<latitude>69.35597500</latitude>
+			<longitude>-124.06390600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>20T</number_end>
+			<latitude_end>69.36624700</latitude_end>
+			<longitude_end>-124.05331100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1219.37985759</length-meters>
+			<length-feet>3716.66980593</length-feet>
+			<heading id="02T">19.9996259578</heading>
+			<heading_end id="20T">199.989710939</heading_end>
+			<threshold_lat id="02T">69.355975</threshold_lat>
+			<threshold_lon id="02T">-124.063906</threshold_lon>
+			<threshold_lat_end id="20T">69.366247</threshold_lat_end>
+			<threshold_lon_end id="20T">-124.053311</threshold_lon_end>
+		</runway>
+		<lightingobject id="02T">
+			<linecode>21</linecode>
+			<latitude>69.35778106</latitude>
+			<longitude>-124.06305557</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>19.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20T">
+			<linecode>21</linecode>
+			<latitude>69.36444098</latitude>
+			<longitude>-124.05416286</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>199.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20T</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>69.36143828</latitude>
+			<longitude>-124.06117173</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.35585775</latitude>
+			<longitude>-124.06526858</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.36636416</latitude>
+			<longitude>-124.05194769</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>MANDATORY FREQ</description>
+		</atc>
+	</airport>
+</PropertyList>

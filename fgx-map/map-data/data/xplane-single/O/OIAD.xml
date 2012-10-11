@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OIAD">
+		<linecode>1</linecode>
+		<elevation>474</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OIAD</identifier>
+		<name>DEZFUL</name>
+		<runway end="32L" id="14R">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14R</number>
+			<latitude>32.44650800</latitude>
+			<longitude>048.38438300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32L</number_end>
+			<latitude_end>32.41965800</latitude_end>
+			<longitude_end>048.41036700</longitude_end>
+			<threshold_end>289.56</threshold_end>
+			<overrrun_end>335.28</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3851.91628498</length-meters>
+			<length-feet>11740.6408366</length-feet>
+			<heading id="14R">140.630642328</heading>
+			<heading_end id="32L">320.616706739</heading_end>
+			<threshold_lat id="14R">32.446508</threshold_lat>
+			<threshold_lon id="14R">48.384383</threshold_lon>
+			<threshold_lat_end id="32L">32.4216761817</threshold_lat_end>
+			<threshold_lon_end id="32L">48.4084136619</threshold_lon_end>
+		</runway>
+		<runway end="32R" id="14L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14L</number>
+			<latitude>32.44788300</latitude>
+			<longitude>048.38635800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>345.95</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32R</number_end>
+			<latitude_end>32.42297500</latitude_end>
+			<longitude_end>048.41046700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>411.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3573.53980693</length-meters>
+			<length-feet>10892.1493315</length-feet>
+			<heading id="14L">140.625791392</heading>
+			<heading_end id="32R">320.612860559</heading_end>
+			<threshold_lat id="14L">32.447883</threshold_lat>
+			<threshold_lon id="14L">48.386358</threshold_lon>
+			<threshold_lat_end id="32R">32.422975</threshold_lat_end>
+			<threshold_lon_end id="32R">48.410467</threshold_lon_end>
+		</runway>
+		<lightingobject id="32L">
+			<linecode>21</linecode>
+			<latitude>32.42286255</latitude>
+			<longitude>048.40676426</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>320.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.43378295</latitude>
+			<longitude>048.39838966</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.44858266</latitude>
+			<longitude>048.38661239</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.44705078</latitude>
+			<longitude>048.38457945</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.41911526</latitude>
+			<longitude>048.41017046</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.42227538</latitude>
+			<longitude>048.41021249</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12400">124.0</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12360">123.6</frequency>
+			<description>APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13140">131.4</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

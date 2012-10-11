@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGPJ">
+		<linecode>1</linecode>
+		<elevation>398</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGPJ</identifier>
+		<name>Fife</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>56.18178600</latitude>
+			<longitude>-003.22515000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>56.18478600</latitude_end>
+			<longitude_end>-003.21544400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>689.090102575</length-meters>
+			<length-feet>2100.34663265</length-feet>
+			<heading id="07 ">61.0080289702</heading>
+			<heading_end id="25 ">240.99996501</heading_end>
+			<threshold_lat id="07 ">56.181786</threshold_lat>
+			<threshold_lon id="07 ">-3.22515</threshold_lon>
+			<threshold_lat_end id="25 ">56.184786</threshold_lat_end>
+			<threshold_lon_end id="25 ">-3.215444</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>56.18428991</latitude>
+			<longitude>-003.21919400</longitude>
+			<orientation>331.08</orientation>
+			<width>17.98</width>
+			<length>17.98</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>56.18268900</latitude>
+			<longitude>-003.22317200</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>63.5</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>07</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>56.18358700</latitude>
+			<longitude>-003.21838900</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>243.5</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.18468639</latitude>
+			<longitude>003.21811856</longitude>
+			<heading>13.47</heading>
+			<name>Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.18460483</latitude>
+			<longitude>003.21834534</longitude>
+			<heading>15.06</heading>
+			<name>Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.18452002</latitude>
+			<longitude>003.21864194</longitude>
+			<heading>17.22</heading>
+			<name>Apron 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.18117331</latitude>
+			<longitude>003.22416479</longitude>
+			<heading>63.51</heading>
+			<name>Maintenenace Area</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>56.18545979</latitude>
+			<longitude>-003.21693977</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>56.18278292</latitude>
+			<longitude>-003.22038127</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>56.18485298</latitude>
+			<longitude>-003.21703549</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13045">130.45</frequency>
+			<description>Fife Radio</description>
+		</atc>
+	</airport>
+</PropertyList>

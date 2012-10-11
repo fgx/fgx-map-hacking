@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LYBE">
+		<linecode>1</linecode>
+		<elevation>335</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LYBE</identifier>
+		<name>Belgrade</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>44.82651900</latitude>
+			<longitude>020.29096900</longitude>
+			<threshold>304.80</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>44.81033900</latitude_end>
+			<longitude_end>020.32745300</longitude_end>
+			<threshold_end>399.90</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3400.05500517</length-meters>
+			<length-feet>10363.3676558</length-feet>
+			<heading id="12 ">121.939365953</heading>
+			<heading_end id="30 ">301.913649752</heading_end>
+			<threshold_lat id="12 ">44.8250679668</threshold_lat>
+			<threshold_lon id="12 ">20.2942395483</threshold_lon>
+			<threshold_lat_end id="30 ">44.812241259</threshold_lat_end>
+			<threshold_lon_end id="30 ">20.3231617662</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>44.82527014</latitude>
+			<longitude>020.29485361</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>122.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>44.81329725</latitude>
+			<longitude>020.31972088</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>302.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.81731900</latitude>
+			<longitude>020.29029700</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.82052800</latitude>
+			<longitude>020.29435400</longitude>
+			<heading>02.49</heading>
+			<name>Gate A 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.82001700</latitude>
+			<longitude>020.31101900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.82435300</latitude>
+			<longitude>020.29191200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.81130300</latitude>
+			<longitude>020.32166100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>BELGRADE TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>BELGRADE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

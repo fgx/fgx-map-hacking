@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EHBD">
+		<linecode>1</linecode>
+		<elevation>114</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EHBD</identifier>
+		<name>Budel</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>51.25152200</latitude>
+			<longitude>005.59765200</longitude>
+			<threshold>49.99</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>51.26085200</latitude_end>
+			<longitude_end>005.60624800</longitude_end>
+			<threshold_end>135.03</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1198.97286534</length-meters>
+			<length-feet>3654.46929357</length-feet>
+			<heading id="03 ">30.0366730561</heading>
+			<heading_end id="21 ">210.029968588</heading_end>
+			<threshold_lat id="03 ">51.2519109918</threshold_lat>
+			<threshold_lon id="03 ">5.59801040483</threshold_lon>
+			<threshold_lat_end id="21 ">51.2598012036</threshold_lat_end>
+			<threshold_lon_end id="21 ">5.60527992853</threshold_lon_end>
+		</runway>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>51.25808989</latitude>
+			<longitude>005.60425757</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>209.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>51.25718700</latitude>
+			<longitude>005.60195000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.25639300</latitude>
+			<longitude>005.60138000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.25172800</latitude>
+			<longitude>005.59708400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.26064700</latitude>
+			<longitude>005.60681700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12215">122.15</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12215">122.15</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

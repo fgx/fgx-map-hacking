@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SAVS">
+		<linecode>1</linecode>
+		<elevation>689</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SAVS</identifier>
+		<name>Sierra Grande</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>27.13</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>-41.59921629</latitude>
+			<longitude>-065.35453386</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>-41.58411811</latitude_end>
+			<longitude_end>-065.34379994</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1900.76960805</length-meters>
+			<length-feet>5793.54576535</length-feet>
+			<heading id="02 ">28.0858841337</heading>
+			<heading_end id="20 ">208.093009497</heading_end>
+			<threshold_lat id="02 ">-41.59921629</threshold_lat>
+			<threshold_lon id="02 ">-65.35453386</threshold_lon>
+			<threshold_lat_end id="20 ">-41.58411811</threshold_lat_end>
+			<threshold_lon_end id="20 ">-65.34379994</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>-41.59747690</latitude>
+			<longitude>-065.35378165</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>28.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>-41.58585758</latitude>
+			<longitude>-065.34455167</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>208.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-41.59126671</latitude>
+			<longitude>-065.35017338</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-41.59926054</latitude>
+			<longitude>-065.35511787</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-41.58407380</latitude>
+			<longitude>-065.34321607</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

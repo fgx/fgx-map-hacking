@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="DTTJ">
+		<linecode>1</linecode>
+		<elevation>18</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>DTTJ</identifier>
+		<name>Djerba Zarzis</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>33.87503100</latitude>
+			<longitude>010.76034200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="4">Calvert ILS Cat II and Cat II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>33.87586400</latitude_end>
+			<longitude_end>010.79396400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3112.05933552</length-meters>
+			<length-feet>9485.55685465</length-feet>
+			<heading id="09 ">88.3080190499</heading>
+			<heading_end id="27 ">268.289278504</heading_end>
+			<threshold_lat id="09 ">33.875031</threshold_lat>
+			<threshold_lon id="09 ">10.760342</threshold_lon>
+			<threshold_lat_end id="27 ">33.875864</threshold_lat_end>
+			<threshold_lon_end id="27 ">10.793964</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>33.87551212</latitude>
+			<longitude>010.76355260</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.2</orientation>
+			<glideslope>0.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>33.87540982</latitude>
+			<longitude>010.79181143</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.3</orientation>
+			<glideslope>0.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>33.87159500</latitude>
+			<longitude>010.77768000</longitude>
+			<height>116</height>
+			<deprecated>0</deprecated>
+			<name>Zarzis Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>33.87347200</latitude>
+			<longitude>010.77928700</longitude>
+			<heading>80.00</heading>
+			<name>Gate 10</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.87686995</latitude>
+			<longitude>010.77709934</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.87451200</latitude>
+			<longitude>010.77770900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11815">118.15</frequency>
+			<description>DJERBA AIRPORT TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>DJERBA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

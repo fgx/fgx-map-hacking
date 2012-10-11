@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WADB">
+		<linecode>1</linecode>
+		<elevation>3</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WADB</identifier>
+		<name>Bima Palibelo Muhammad Salahuddin</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>-08.53411100</latitude>
+			<longitude>118.68231700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>39.93</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>-08.54521400</latitude_end>
+			<longitude_end>118.69233300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>39.93</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1650.41468859</length-meters>
+			<length-feet>5030.46397082</length-feet>
+			<heading id="13 ">138.076147939</heading>
+			<heading_end id="31 ">318.077635255</heading_end>
+			<threshold_lat id="13 ">-8.534111</threshold_lat>
+			<threshold_lon id="13 ">118.682317</threshold_lon>
+			<threshold_lat_end id="31 ">-8.545214</threshold_lat_end>
+			<threshold_lon_end id="31 ">118.692333</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>-08.53523283</latitude>
+			<longitude>118.68377938</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>138.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>-08.54409221</latitude>
+			<longitude>118.69087055</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>318.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.53364198</latitude>
+			<longitude>118.68244031</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.54568302</latitude>
+			<longitude>118.69220970</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>SALAHUDDIN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

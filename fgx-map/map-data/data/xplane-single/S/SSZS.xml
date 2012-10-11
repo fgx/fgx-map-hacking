@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SSZS">
+		<linecode>1</linecode>
+		<elevation>1588</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SSZS</identifier>
+		<name>Centenario Do Sul</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>-22.83204484</latitude>
+			<longitude>-051.60896266</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>-22.82906896</latitude_end>
+			<longitude_end>-051.59770234</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1201.93466037</length-meters>
+			<length-feet>3663.49684479</length-feet>
+			<heading id="09 ">74.0842947411</heading>
+			<heading_end id="27 ">254.088663826</heading_end>
+			<threshold_lat id="09 ">-22.83204484</threshold_lat>
+			<threshold_lon id="09 ">-51.60896266</threshold_lon>
+			<threshold_lat_end id="27 ">-22.82906896</threshold_lat_end>
+			<threshold_lon_end id="27 ">-51.59770234</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>-22.83131061</latitude>
+			<longitude>-051.60715952</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>74.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>-22.82980332</latitude>
+			<longitude>-051.59950538</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>254.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-22.83004010</latitude>
+			<longitude>-051.60349323</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.83186568</latitude>
+			<longitude>-051.60919177</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-22.82924809</latitude>
+			<longitude>-051.59747322</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

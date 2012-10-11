@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OP1A">
+		<linecode>1</linecode>
+		<elevation>420</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OP1A</identifier>
+		<name>JAM NIDA NORTHWEST</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>26.20556700</latitude>
+			<longitude>067.50241100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>26.19069700</latitude_end>
+			<longitude_end>067.50501400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1667.87907385</length-meters>
+			<length-feet>5083.69541708</length-feet>
+			<heading id="17 ">171.026522613</heading>
+			<heading_end id="35 ">351.02537345</heading_end>
+			<threshold_lat id="17 ">26.205567</threshold_lat>
+			<threshold_lon id="17 ">67.502411</threshold_lon>
+			<threshold_lat_end id="35 ">26.190697</threshold_lat_end>
+			<threshold_lon_end id="35 ">67.505014</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>26.20384053</latitude>
+			<longitude>067.50308827</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>171.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>26.19242349</latitude>
+			<longitude>067.50433685</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>351.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.20589513</latitude>
+			<longitude>067.50280848</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.19036888</latitude>
+			<longitude>067.50461657</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ETHM">
+		<linecode>1</linecode>
+		<elevation>597</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ETHM</identifier>
+		<name>MENDIG</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>35.66</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>50.36416700</latitude>
+			<longitude>007.30433300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>50.36777800</latitude_end>
+			<longitude_end>007.32638900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1619.87573407</length-meters>
+			<length-feet>4937.38123746</length-feet>
+			<heading id="08 ">75.6513289189</heading>
+			<heading_end id="26 ">255.634342831</heading_end>
+			<threshold_lat id="08 ">50.364167</threshold_lat>
+			<threshold_lon id="08 ">7.304333</threshold_lon>
+			<threshold_lat_end id="26 ">50.367778</threshold_lat_end>
+			<threshold_lon_end id="26 ">7.326389</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>50.36496189</latitude>
+			<longitude>007.30692604</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>75.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>50.36698360</latitude>
+			<longitude>007.32379539</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>255.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.36705969</latitude>
+			<longitude>007.31491980</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.36455210</latitude>
+			<longitude>007.30365854</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.36739277</latitude>
+			<longitude>007.32706334</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

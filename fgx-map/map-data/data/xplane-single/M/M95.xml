@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="M95 ">
+		<linecode>1</linecode>
+		<elevation>357</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>M95</identifier>
+		<name>RICHARD ARTHUR FLD</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>24.38</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>33.71885800</latitude>
+			<longitude>-087.81471400</longitude>
+			<threshold>94.18</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>33.70540600</latitude_end>
+			<longitude_end>-087.81530300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1493.05672148</length-meters>
+			<length-feet>4550.83688707</length-feet>
+			<heading id="18 ">-177.904526902</heading>
+			<heading_end id="36 ">362.095800005</heading_end>
+			<threshold_lat id="18 ">33.7180094668</threshold_lat>
+			<threshold_lon id="18 ">-87.814751153</threshold_lon>
+			<threshold_lat_end id="36 ">33.705406</threshold_lat_end>
+			<threshold_lon_end id="36 ">-87.815303</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>33.71620210</latitude>
+			<longitude>-087.81449262</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>182.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>33.70721488</latitude>
+			<longitude>-087.81556147</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>2.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.71210597</latitude>
+			<longitude>-087.81408577</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.71906531</latitude>
+			<longitude>-087.81430893</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.70519869</latitude>
+			<longitude>-087.81570801</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12607">126.07</frequency>
+			<description>COLUMBUS APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

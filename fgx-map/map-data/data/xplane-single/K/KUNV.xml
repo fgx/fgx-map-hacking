@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KUNV">
+		<linecode>1</linecode>
+		<elevation>1239</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KUNV</identifier>
+		<name>University Park</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>40.84435785</latitude>
+			<longitude>-077.85713303</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>40.85552815</latitude_end>
+			<longitude_end>-077.83789497</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2042.18285873</length-meters>
+			<length-feet>6224.57335342</length-feet>
+			<heading id="06 ">52.602740878</heading>
+			<heading_end id="24 ">232.590157644</heading_end>
+			<threshold_lat id="06 ">40.84435785</threshold_lat>
+			<threshold_lon id="06 ">-77.85713303</threshold_lon>
+			<threshold_lat_end id="24 ">40.85552815</threshold_lat_end>
+			<threshold_lon_end id="24 ">-77.83789497</threshold_lon_end>
+		</runway>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>14.94</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>40.85000569</latitude>
+			<longitude>-077.85395062</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="0">No runway markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>40.84417231</latitude_end>
+			<longitude_end>-077.85033338</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="0">No runway markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>716.028635885</length-meters>
+			<length-feet>2182.45528218</length-feet>
+			<heading id="16 ">154.786214301</heading>
+			<heading_end id="34 ">334.783848472</heading_end>
+			<threshold_lat id="16 ">40.85000569</threshold_lat>
+			<threshold_lon id="16 ">-77.85395062</threshold_lon>
+			<threshold_lat_end id="34 ">40.84417231</threshold_lat_end>
+			<threshold_lon_end id="34 ">-77.85033338</threshold_lon_end>
+		</runway>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.84459731</latitude>
+			<longitude>-077.85806635</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.85021241</latitude>
+			<longitude>-077.85378642</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.85528852</latitude>
+			<longitude>-077.83696156</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.84396559</latitude>
+			<longitude>-077.85049757</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12765">127.65</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="11855">118.55</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+	</airport>
+</PropertyList>

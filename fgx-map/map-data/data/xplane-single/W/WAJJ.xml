@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WAJJ">
+		<linecode>1</linecode>
+		<elevation>289</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WAJJ</identifier>
+		<name>Jayapura Sentani</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-02.57110600</latitude>
+			<longitude>140.50858600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-02.58285800</latitude_end>
+			<longitude_end>140.52435600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="6">SSALF</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2182.72975119</length-meters>
+			<length-feet>6652.96028163</length-feet>
+			<heading id="12 ">126.537464362</heading>
+			<heading_end id="30 ">306.538173407</heading_end>
+			<threshold_lat id="12 ">-2.571106</threshold_lat>
+			<threshold_lon id="12 ">140.508586</threshold_lon>
+			<threshold_lat_end id="30 ">-2.582858</threshold_lat_end>
+			<threshold_lon_end id="30 ">140.524356</threshold_lon_end>
+		</runway>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-02.58196810</latitude>
+			<longitude>140.52250085</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>306.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-02.58133083</latitude>
+			<longitude>140.52298349</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>306.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-02.57210830</latitude>
+			<longitude>140.51474352</longitude>
+			<height>65</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.56861942</latitude>
+			<longitude>140.51211271</longitude>
+			<heading>13.05</heading>
+			<name>Sentani AMA</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.57096194</latitude>
+			<longitude>140.51216592</longitude>
+			<heading>36.51</heading>
+			<name>Sentani domestic</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.56879746</latitude>
+			<longitude>140.51232436</longitude>
+			<heading>96.90</heading>
+			<name>Sentani MAF</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.57170073</latitude>
+			<longitude>140.51300078</longitude>
+			<heading>34.22</heading>
+			<name>Sentani regional</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.57179647</latitude>
+			<longitude>140.51168939</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.57167137</latitude>
+			<longitude>140.51175591</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12625">126.25</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>JAYAPURA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

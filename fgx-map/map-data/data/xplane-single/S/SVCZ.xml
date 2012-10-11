@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVCZ">
+		<linecode>1</linecode>
+		<elevation>525</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVCZ</identifier>
+		<name>CAPITAN MANUEL RIOS GUARICO AIRBASE</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>59.44</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>09.36933600</latitude>
+			<longitude>-066.93634400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.40</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>09.37500000</latitude_end>
+			<longitude_end>-066.90963300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>143.26</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.15791016</length-meters>
+			<length-feet>9144.48131016</length-feet>
+			<heading id="08 ">77.9496183805</heading>
+			<heading_end id="26 ">257.945268582</heading_end>
+			<threshold_lat id="08 ">9.369336</threshold_lat>
+			<threshold_lon id="08 ">-66.936344</threshold_lon>
+			<threshold_lat_end id="26 ">9.375</threshold_lat_end>
+			<threshold_lon_end id="26 ">-66.909633</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>09.37016928</latitude>
+			<longitude>-066.93465968</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>77.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>09.37399705</latitude>
+			<longitude>-066.92338901</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.37000665</latitude>
+			<longitude>-066.93704461</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.37432929</latitude>
+			<longitude>-066.90893244</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11855">118.55</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UIKB">
+		<linecode>1</linecode>
+		<elevation>793</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>UIKB</identifier>
+		<name>Bodaibo</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>42.06</width>
+			<surface code="4">Dirt (brown)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.40</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>57.86019100</latitude>
+			<longitude>114.22781300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>57.86872300</latitude_end>
+			<longitude_end>114.24949900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1599.9558819</length-meters>
+			<length-feet>4876.66552804</length-feet>
+			<heading id="06 ">53.573151628</heading>
+			<heading_end id="24 ">233.554788094</heading_end>
+			<threshold_lat id="06 ">57.860191</threshold_lat>
+			<threshold_lon id="06 ">114.227813</threshold_lon>
+			<threshold_lat_end id="24 ">57.868723</threshold_lat_end>
+			<threshold_lon_end id="24 ">114.249499</threshold_lon_end>
+		</runway>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>57.86112115</latitude>
+			<longitude>114.22928647</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>53.5</orientation>
+			<glideslope>2.40</glideslope>
+			<runway>xxx</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>57.86795259</latitude>
+			<longitude>114.24660700</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>233.5</orientation>
+			<glideslope>2.40</glideslope>
+			<runway>xxx</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>57.86024453</latitude>
+			<longitude>114.23309311</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 3</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>57.86158871</latitude>
+			<longitude>114.23435305</longitude>
+			<heading>40.71</heading>
+			<name>appron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>57.86069251</latitude>
+			<longitude>114.23214963</longitude>
+			<heading>39.77</heading>
+			<name>GA stands</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>57.86552237</latitude>
+			<longitude>114.23717051</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.86049580</latitude>
+			<longitude>114.23057941</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 4</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.86255977</latitude>
+			<longitude>114.23675087</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 5</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>Bodaibo Tower</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SWGC">
+		<linecode>1</linecode>
+		<elevation>591</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SWGC</identifier>
+		<name>Araguacema</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-08.84906357</latitude>
+			<longitude>-049.68921071</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-08.85149223</latitude_end>
+			<longitude_end>-049.67856429</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1201.5455657</length-meters>
+			<length-feet>3662.31088424</length-feet>
+			<heading id="12 ">102.91708515</heading>
+			<heading_end id="30 ">282.918723134</heading_end>
+			<threshold_lat id="12 ">-8.84906357</threshold_lat>
+			<threshold_lon id="12 ">-49.68921071</threshold_lon>
+			<threshold_lat_end id="30 ">-8.85149223</threshold_lat_end>
+			<threshold_lon_end id="30 ">-49.67856429</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>-08.84922703</latitude>
+			<longitude>-049.68737945</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>103.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-08.85132882</latitude>
+			<longitude>-049.68039557</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>283.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-08.84975406</latitude>
+			<longitude>-049.68376512</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.84880451</latitude>
+			<longitude>-049.68930972</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-08.85175129</latitude>
+			<longitude>-049.67846527</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PABA">
+		<linecode>1</linecode>
+		<elevation>2</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PABA</identifier>
+		<name>BARTER ISLAND LRRS</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>70.13432800</latitude>
+			<longitude>-143.60119400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>70.13365000</latitude_end>
+			<longitude_end>-143.56253900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1468.56924908</length-meters>
+			<length-feet>4476.19907121</length-feet>
+			<heading id="06 ">92.9705626971</heading>
+			<heading_end id="24 ">272.934208061</heading_end>
+			<threshold_lat id="06 ">70.134328</threshold_lat>
+			<threshold_lon id="06 ">-143.601194</threshold_lon>
+			<threshold_lat_end id="24 ">70.13365</threshold_lat_end>
+			<threshold_lon_end id="24 ">-143.562539</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>70.13454353</latitude>
+			<longitude>-143.59585796</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>92.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>70.13343563</latitude>
+			<longitude>-143.56787528</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>272.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>70.13494995</latitude>
+			<longitude>-143.58172620</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>70.13475296</latitude>
+			<longitude>-143.60193811</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>70.13322488</latitude>
+			<longitude>-143.56179571</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

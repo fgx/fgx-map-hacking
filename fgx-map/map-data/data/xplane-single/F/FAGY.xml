@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FAGY">
+		<linecode>1</linecode>
+		<elevation>3531</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FAGY</identifier>
+		<name>Greytown</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>10.97</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-29.12741518</latitude>
+			<longitude>030.58107768</longitude>
+			<threshold>161.85</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-29.11655082</latitude_end>
+			<longitude_end>030.59215432</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1616.22815047</length-meters>
+			<length-feet>4926.26340264</length-feet>
+			<heading id="06 ">41.8333393102</heading>
+			<heading_end id="24 ">221.838729985</heading_end>
+			<threshold_lat id="06 ">-29.1263271672</threshold_lat>
+			<threshold_lon id="06 ">30.5821868893</threshold_lon>
+			<threshold_lat_end id="24 ">-29.11655082</threshold_lat_end>
+			<threshold_lon_end id="24 ">30.59215432</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-29.12800200</latitude>
+			<longitude>030.58213300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-29.12369200</latitude>
+			<longitude>030.58411600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-29.12223500</latitude>
+			<longitude>030.58521800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12350">123.5</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>DURBAN APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>DURBAN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

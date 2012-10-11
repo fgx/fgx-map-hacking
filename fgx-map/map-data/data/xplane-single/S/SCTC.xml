@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SCTC">
+		<linecode>1</linecode>
+		<elevation>304</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SCTC</identifier>
+		<name>Temuco Maquehue</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-38.76978900</latitude>
+			<longitude>-072.64610600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>149.35</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="6">SSALF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-38.76384700</latitude_end>
+			<longitude_end>-072.62808900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.44</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1699.12302541</length-meters>
+			<length-feet>5178.92698145</length-feet>
+			<heading id="06 ">67.1507900391</heading>
+			<heading_end id="24 ">247.162071426</heading_end>
+			<threshold_lat id="06 ">-38.769789</threshold_lat>
+			<threshold_lon id="06 ">-72.646106</threshold_lon>
+			<threshold_lat_end id="24 ">-38.763847</threshold_lat_end>
+			<threshold_lon_end id="24 ">-72.628089</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-38.76871996</latitude>
+			<longitude>-072.64417941</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>67.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>-38.76491633</latitude>
+			<longitude>-072.63001516</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-38.76915800</latitude>
+			<longitude>072.63537500</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.76882400</latitude>
+			<longitude>072.63801300</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.76631300</latitude>
+			<longitude>072.62099100</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-38.76738900</latitude>
+			<longitude>-072.63712400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-38.76961300</latitude>
+			<longitude>-072.64399400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-38.76492600</latitude>
+			<longitude>-072.62924200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11850">118.5</frequency>
+			<description>TEMUCO TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12450">124.5</frequency>
+			<description>TEMUCO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

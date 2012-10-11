@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FAGG">
+		<linecode>1</linecode>
+		<elevation>648</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FAGG</identifier>
+		<name>George</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-34.00587177</latitude>
+			<longitude>022.36766646</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-34.00519023</latitude_end>
+			<longitude_end>022.38936354</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.74</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2005.77532661</length-meters>
+			<length-feet>6113.6031955</length-feet>
+			<heading id="11 ">87.8339306603</heading>
+			<heading_end id="29 ">267.84606525</heading_end>
+			<threshold_lat id="11 ">-34.00587177</threshold_lat>
+			<threshold_lon id="11 ">22.36766646</threshold_lon>
+			<threshold_lat_end id="29 ">-34.00519023</threshold_lat_end>
+			<threshold_lon_end id="29 ">22.38936354</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>-34.00537168</latitude>
+			<longitude>022.37082199</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>87.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>-34.00570928</latitude>
+			<longitude>022.38562420</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>267.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-34.00453200</latitude>
+			<longitude>022.37851500</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-34.00642800</latitude>
+			<longitude>022.37980700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-34.00443300</latitude>
+			<longitude>022.38361200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11890">118.9</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

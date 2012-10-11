@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KPMH">
+		<linecode>1</linecode>
+		<elevation>663</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KPMH</identifier>
+		<name>GREATER PORTSMOUTH RGNL</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>38.84731900</latitude>
+			<longitude>-082.84764700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>38.83361100</latitude_end>
+			<longitude_end>-082.84696900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1522.8965749</length-meters>
+			<length-feet>4641.78876028</length-feet>
+			<heading id="18 ">177.785012876</heading>
+			<heading_end id="36 ">357.784587665</heading_end>
+			<threshold_lat id="18 ">38.847319</threshold_lat>
+			<threshold_lon id="18 ">-82.847647</threshold_lon>
+			<threshold_lat_end id="36 ">38.833611</threshold_lat_end>
+			<threshold_lon_end id="36 ">-82.846969</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>38.84553338</latitude>
+			<longitude>-082.84712805</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>177.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>38.83539662</latitude>
+			<longitude>-082.84748786</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>357.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.84012096</latitude>
+			<longitude>082.85018232</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewport</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.84121853</latitude>
+			<longitude>082.85017019</longitude>
+			<heading>0.00</heading>
+			<name>Hanger 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.84096502</latitude>
+			<longitude>082.85013952</longitude>
+			<heading>90.00</heading>
+			<name>Hanger 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.83988772</latitude>
+			<longitude>082.84937797</longitude>
+			<heading>0.00</heading>
+			<name>Parking 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.84018955</latitude>
+			<longitude>082.84973024</longitude>
+			<heading>90.00</heading>
+			<name>Parking 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.84158895</latitude>
+			<longitude>082.84965979</longitude>
+			<heading>90.00</heading>
+			<name>Parking 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.84137401</latitude>
+			<longitude>082.84935449</longitude>
+			<heading>70.00</heading>
+			<name>Parking 4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.83936638</latitude>
+			<longitude>-082.84924293</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.84089840</latitude>
+			<longitude>-082.84838572</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12517">125.17</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12840">128.4</frequency>
+			<description>HUNTINGTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

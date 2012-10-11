@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VIUT">
+		<linecode>1</linecode>
+		<elevation>500</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VIUT</identifier>
+		<name>UTTARLAI</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>25.80140000</latitude>
+			<longitude>071.47753900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>30.48</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>25.82458900</latitude_end>
+			<longitude_end>071.48703600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>30.48</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2739.82719881</length-meters>
+			<length-feet>8350.99330198</length-feet>
+			<heading id="02 ">20.3416400677</heading>
+			<heading_end id="20 ">200.337504739</heading_end>
+			<threshold_lat id="02 ">25.8014</threshold_lat>
+			<threshold_lon id="02 ">71.477539</threshold_lon>
+			<threshold_lat_end id="20 ">25.824589</threshold_lat_end>
+			<threshold_lon_end id="20 ">71.487036</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>25.80322840</latitude>
+			<longitude>071.47780974</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>20.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>25.82276063</latitude>
+			<longitude>071.48676505</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>200.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.80122742</latitude>
+			<longitude>071.47673773</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.82476153</latitude>
+			<longitude>071.48783745</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

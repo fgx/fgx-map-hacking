@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KAPT">
+		<linecode>1</linecode>
+		<elevation>641</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KAPT</identifier>
+		<name>Marion Co. Brown Fld</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>35.05689200</latitude>
+			<longitude>-085.58892200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>35.06446700</latitude_end>
+			<longitude_end>-085.58171700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1066.8718202</length-meters>
+			<length-feet>3251.82530798</length-feet>
+			<heading id="04 ">38.0302531601</heading>
+			<heading_end id="22 ">218.026114294</heading_end>
+			<threshold_lat id="04 ">35.056892</threshold_lat>
+			<threshold_lon id="04 ">-85.588922</threshold_lon>
+			<threshold_lat_end id="22 ">35.064467</threshold_lat_end>
+			<threshold_lon_end id="22 ">-85.581717</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>35.05821118</latitude>
+			<longitude>-085.58807243</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>37.9</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>35.06317148</latitude>
+			<longitude>-085.58252071</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>217.9</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.06145266</latitude>
+			<longitude>085.58378498</longitude>
+			<heading>6.40</heading>
+			<name>Back-taxi to Rwy 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.06000596</latitude>
+			<longitude>085.58482309</longitude>
+			<heading>28.00</heading>
+			<name>FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.05924243</latitude>
+			<longitude>085.58522600</longitude>
+			<heading>08.00</heading>
+			<name>GA Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.05664719</latitude>
+			<longitude>085.58845395</longitude>
+			<heading>79.95</heading>
+			<name>Hold Short Rwy 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.05954858</latitude>
+			<longitude>085.58508177</longitude>
+			<heading>39.00</heading>
+			<name>Self-Serve Fuel</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.05946319</latitude>
+			<longitude>-085.58395776</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.05997401</latitude>
+			<longitude>-085.58708112</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>CHATTANOOGA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

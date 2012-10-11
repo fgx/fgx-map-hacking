@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="AYMO">
+		<linecode>1</linecode>
+		<elevation>12</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>AYMO</identifier>
+		<name>MOMOTE</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>-02.05392500</latitude>
+			<longitude>147.42138100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>-02.06988100</latitude_end>
+			<longitude_end>147.42693100</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1869.2596781</length-meters>
+			<length-feet>5697.50349886</length-feet>
+			<heading id="16 ">160.712610845</heading>
+			<heading_end id="34 ">340.71281053</heading_end>
+			<threshold_lat id="16 ">-2.053925</threshold_lat>
+			<threshold_lon id="16 ">147.421381</threshold_lon>
+			<threshold_lat_end id="34 ">-2.06936841295</threshold_lat_end>
+			<threshold_lon_end id="34 ">147.426752706</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>-02.05549342</latitude>
+			<longitude>147.42235131</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>160.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>-02.06780217</latitude>
+			<longitude>147.42578314</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>340.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.06143591</latitude>
+			<longitude>147.42549873</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.05334160</latitude>
+			<longitude>147.42182317</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.07046439</latitude>
+			<longitude>147.42648882</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12935">129.35</frequency>
+			<description>AWIS</description>
+		</atc>
+	</airport>
+</PropertyList>

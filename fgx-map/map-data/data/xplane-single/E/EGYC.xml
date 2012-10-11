@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGYC">
+		<linecode>1</linecode>
+		<elevation>64</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGYC</identifier>
+		<name>RAF Coltishall</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>52.74648801</latitude>
+			<longitude>001.34760450</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>170.99</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>52.76324676</latitude_end>
+			<longitude_end>001.36750182</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>178.00</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2298.42154407</length-meters>
+			<length-feet>7005.58886631</length-feet>
+			<heading id="03 ">35.7748899935</heading>
+			<heading_end id="21 ">215.759050664</heading_end>
+			<threshold_lat id="03 ">52.74648801</threshold_lat>
+			<threshold_lon id="03 ">1.3476045</threshold_lon>
+			<threshold_lat_end id="21 ">52.76324676</threshold_lat_end>
+			<threshold_lon_end id="21 ">1.36750182</threshold_lon_end>
+		</runway>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>52.74763019</latitude>
+			<longitude>001.35049873</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>35.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>52.74837813</latitude>
+			<longitude>001.34877133</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>35.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>52.76243094</latitude>
+			<longitude>001.36493050</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>215.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="API">
+			<linecode>21</linecode>
+			<latitude>52.76142872</latitude>
+			<longitude>001.36699320</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>215.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>API</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>52.75703391</latitude>
+			<longitude>001.35106248</longitude>
+			<height>22</height>
+			<deprecated>0</deprecated>
+			<name>Tower View</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75801759</latitude>
+			<longitude>001.35371588</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75568586</latitude>
+			<longitude>001.35043018</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75589958</latitude>
+			<longitude>001.35046699</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75611330</latitude>
+			<longitude>001.35050380</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75793854</latitude>
+			<longitude>001.35346256</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75785950</latitude>
+			<longitude>001.35320924</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75778045</latitude>
+			<longitude>001.35295592</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75770140</latitude>
+			<longitude>001.35270259</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75762236</latitude>
+			<longitude>001.35244927</longitude>
+			<heading>50.00</heading>
+			<name>Mil Apron 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75504469</latitude>
+			<longitude>001.35031975</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75525841</latitude>
+			<longitude>001.35035656</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.75547214</latitude>
+			<longitude>001.35039337</longitude>
+			<heading>95.00</heading>
+			<name>Mil Apron 9</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.74651330</latitude>
+			<longitude>001.34637359</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.76322127</latitude>
+			<longitude>001.36873319</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SCTE">
+		<linecode>1</linecode>
+		<elevation>294</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SCTE</identifier>
+		<name>EL TEPUAL INTL</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>-41.42693611</latitude>
+			<longitude>-073.09353056</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>-41.45083889</latitude_end>
+			<longitude_end>-073.09438056</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2655.65043505</length-meters>
+			<length-feet>8094.42252604</length-feet>
+			<heading id="17 ">-178.466878632</heading>
+			<heading_end id="35 ">361.53255882</heading_end>
+			<threshold_lat id="17 ">-41.42693611</threshold_lat>
+			<threshold_lon id="17 ">-73.09353056</threshold_lon>
+			<threshold_lat_end id="35 ">-41.45083889</threshold_lat_end>
+			<threshold_lon_end id="35 ">-73.09438056</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>-41.42874600</latitude>
+			<longitude>-073.09305993</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>181.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>-41.44754308</latitude>
+			<longitude>-073.09479844</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>1.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-41.43800400</latitude>
+			<longitude>073.09646100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-41.43161800</latitude>
+			<longitude>073.09676600</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-41.43465600</latitude>
+			<longitude>073.09598100</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-41.44136900</latitude>
+			<longitude>073.09654800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-41.44123500</latitude>
+			<longitude>-073.09734600</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-41.45160900</latitude>
+			<longitude>-073.09443400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-41.42599900</latitude>
+			<longitude>-073.09349700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Light beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-41.42657100</latitude>
+			<longitude>-073.09270500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-41.45120100</latitude>
+			<longitude>-073.09520500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>PUERTO MONTT TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12370">123.7</frequency>
+			<description>PUERTO MONTT APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12830">128.3</frequency>
+			<description>PUERTO MONTT APP</description>
+		</atc>
+	</airport>
+</PropertyList>

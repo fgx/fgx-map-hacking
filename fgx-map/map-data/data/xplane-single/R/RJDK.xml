@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJDK">
+		<linecode>1</linecode>
+		<elevation>263</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJDK</identifier>
+		<name>Kamigoto</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>24.99</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>33.01372659</latitude>
+			<longitude>129.19352067</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>33.00681141</latitude_end>
+			<longitude_end>129.19590133</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>798.536676153</length-meters>
+			<length-feet>2433.93978891</length-feet>
+			<heading id="17 ">163.825309504</heading>
+			<heading_end id="35 ">343.824012546</heading_end>
+			<threshold_lat id="17 ">33.01372659</threshold_lat>
+			<threshold_lon id="17 ">129.19352067</threshold_lon>
+			<threshold_lat_end id="35 ">33.00681141</threshold_lat_end>
+			<threshold_lon_end id="35 ">129.19590133</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>33.01208347</latitude>
+			<longitude>129.19447172</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>163.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>33.00845455</latitude>
+			<longitude>129.19495038</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>343.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.01403627</latitude>
+			<longitude>129.19383283</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.00650173</latitude>
+			<longitude>129.19558919</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

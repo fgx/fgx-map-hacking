@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCEW">
+		<linecode>1</linecode>
+		<elevation>213</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KCEW</identifier>
+		<name>Bob Sikes</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>30.78970000</latitude>
+			<longitude>-086.52410800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>94.49</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>30.76796100</latitude_end>
+			<longitude_end>-086.52011900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>94.49</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2440.1697781</length-meters>
+			<length-feet>7437.63748364</length-feet>
+			<heading id="17 ">170.998256531</heading>
+			<heading_end id="35 ">350.996215258</heading_end>
+			<threshold_lat id="17 ">30.7897</threshold_lat>
+			<threshold_lon id="17 ">-86.524108</threshold_lon>
+			<threshold_lat_end id="35 ">30.767961</threshold_lat_end>
+			<threshold_lon_end id="35 ">-86.520119</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>30.78614990</latitude>
+			<longitude>-086.52298070</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>171.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>30.76967604</latitude>
+			<longitude>-086.52090928</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>351.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>30.77723900</latitude>
+			<longitude>086.52455100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.77826900</latitude>
+			<longitude>-086.52522200</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.76859700</latitude>
+			<longitude>-086.52095300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.78888200</latitude>
+			<longitude>-086.52468500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11927">119.27</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12405">124.05</frequency>
+			<description>EGLIN APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="14A ">
+		<linecode>1</linecode>
+		<elevation>839</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>14A</identifier>
+		<name>Lake Norman Airpark</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>11.89</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>35.61701470</latitude>
+			<longitude>-080.90352117</longitude>
+			<threshold>56.08</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>35.61073130</latitude_end>
+			<longitude_end>-080.89579483</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>987.950659765</length-meters>
+			<length-feet>3011.27361096</length-feet>
+			<heading id="14 ">134.884946193</heading>
+			<heading_end id="32 ">314.880446992</heading_end>
+			<threshold_lat id="14 ">35.6166580146</threshold_lat>
+			<threshold_lon id="14 ">-80.9030825942</threshold_lon>
+			<threshold_lat_end id="32 ">35.6107313</threshold_lat_end>
+			<threshold_lon_end id="32 ">-80.89579483</threshold_lon_end>
+		</runway>
+		<lightingobject id="y14">
+			<linecode>21</linecode>
+			<latitude>35.61590267</latitude>
+			<longitude>-080.90252138</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>137.8</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>y14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="y32">
+			<linecode>21</linecode>
+			<latitude>35.61108909</latitude>
+			<longitude>-080.89657795</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>315.0</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>y32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.60930392</latitude>
+			<longitude>080.89483435</longitude>
+			<heading>37.16</heading>
+			<name>14A Corp. Hanger</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.61017800</latitude>
+			<longitude>080.89668400</longitude>
+			<heading>43.66</heading>
+			<name>Gen Avia Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.61677931</latitude>
+			<longitude>080.90354326</longitude>
+			<heading>17.34</heading>
+			<name>Hold Short Rwy14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>35.61086385</latitude>
+			<longitude>080.89567498</longitude>
+			<heading>63.70</heading>
+			<name>Hold Short Rwy32</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.61107531</latitude>
+			<longitude>-080.89758893</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.61378300</latitude>
+			<longitude>-080.89881500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.61766447</latitude>
+			<longitude>-080.90375382</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

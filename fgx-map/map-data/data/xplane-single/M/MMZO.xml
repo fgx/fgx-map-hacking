@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMZO">
+		<linecode>1</linecode>
+		<elevation>30</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMZO</identifier>
+		<name>PLAYA DE ORO INTL</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>19.14753900</latitude>
+			<longitude>-104.56867800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>19.14201900</latitude_end>
+			<longitude_end>-104.54858300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2200.54084024</length-meters>
+			<length-feet>6707.24848106</length-feet>
+			<heading id="10 ">106.124639835</heading>
+			<heading_end id="28 ">286.118049552</heading_end>
+			<threshold_lat id="10 ">19.147539</threshold_lat>
+			<threshold_lon id="10 ">-104.568678</threshold_lon>
+			<threshold_lat_end id="28 ">19.142019</threshold_lat_end>
+			<threshold_lon_end id="28 ">-104.548583</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>19.14742158</latitude>
+			<longitude>-104.56673000</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>106.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>19.14213663</latitude>
+			<longitude>-104.55053092</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>286.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>19.14831400</latitude>
+			<longitude>104.56147000</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>19.14709500</latitude>
+			<longitude>104.55934900</longitude>
+			<heading>16.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>19.14555900</latitude>
+			<longitude>-104.55839100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.14831800</latitude>
+			<longitude>-104.56843800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.14124000</latitude>
+			<longitude>-104.54882400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>MANZANILLO APP/TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

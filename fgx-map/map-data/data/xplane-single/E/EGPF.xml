@@ -1,0 +1,497 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGPF">
+		<linecode>1</linecode>
+		<elevation>26</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGPF</identifier>
+		<name>Glasgow</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>55.86348064</latitude>
+			<longitude>-004.44906008</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.10</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>55.87997447</latitude_end>
+			<longitude_end>-004.41823594</longitude_end>
+			<threshold_end>306.02</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2663.76679717</length-meters>
+			<length-feet>8119.16119778</length-feet>
+			<heading id="05 ">46.4297153358</heading>
+			<heading_end id="23 ">226.404199618</heading_end>
+			<threshold_lat id="05 ">55.86348064</threshold_lat>
+			<threshold_lon id="05 ">-4.44906008</threshold_lon>
+			<threshold_lat_end id="23 ">55.8780791269</threshold_lat_end>
+			<threshold_lon_end id="23 ">-4.4217769195</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>55.87097754</latitude>
+			<longitude>-004.42522446</longitude>
+			<orientation>293.16</orientation>
+			<width>24.99</width>
+			<length>20.12</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H2</designator>
+			<latitude>55.87108640</latitude>
+			<longitude>-004.42567583</longitude>
+			<orientation>293.15</orientation>
+			<width>24.99</width>
+			<length>20.12</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>55.86643051</latitude>
+			<longitude>-004.44508004</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>46.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>55.87549650</latitude>
+			<longitude>-004.42507038</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>226.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>55.86977243</latitude>
+			<longitude>004.43040165</longitude>
+			<height>60</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86919000</latitude>
+			<longitude>004.42574800</longitude>
+			<heading>90.00</heading>
+			<name>GA Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.87006000</latitude>
+			<longitude>004.42613100</longitude>
+			<heading>00.00</heading>
+			<name>Helipad</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86536400</latitude>
+			<longitude>004.43035900</longitude>
+			<heading>85.00</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86656200</latitude>
+			<longitude>004.43139000</longitude>
+			<heading>74.00</heading>
+			<name>Stand 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86621900</latitude>
+			<longitude>004.43125200</longitude>
+			<heading>74.00</heading>
+			<name>Stand 11</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86584900</latitude>
+			<longitude>004.43117900</longitude>
+			<heading>74.00</heading>
+			<name>Stand 12</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86537900</latitude>
+			<longitude>004.43259300</longitude>
+			<heading>54.00</heading>
+			<name>Stand 14</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86566900</latitude>
+			<longitude>004.43277600</longitude>
+			<heading>54.00</heading>
+			<name>Stand 15</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86606200</latitude>
+			<longitude>004.43296900</longitude>
+			<heading>54.00</heading>
+			<name>Stand 16</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86644000</latitude>
+			<longitude>004.43314700</longitude>
+			<heading>54.00</heading>
+			<name>Stand 17</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86676400</latitude>
+			<longitude>004.43331200</longitude>
+			<heading>54.00</heading>
+			<name>Stand 18</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86731300</latitude>
+			<longitude>004.43370200</longitude>
+			<heading>05.00</heading>
+			<name>Stand 19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86723300</latitude>
+			<longitude>004.43338100</longitude>
+			<heading>05.00</heading>
+			<name>Stand 19L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86739300</latitude>
+			<longitude>004.43405500</longitude>
+			<heading>05.00</heading>
+			<name>Stand 19R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86586000</latitude>
+			<longitude>004.43009900</longitude>
+			<heading>73.00</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86717200</latitude>
+			<longitude>004.43445800</longitude>
+			<heading>64.00</heading>
+			<name>Stand 20</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86700800</latitude>
+			<longitude>004.43496100</longitude>
+			<heading>30.00</heading>
+			<name>Stand 21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86665000</latitude>
+			<longitude>004.43461700</longitude>
+			<heading>90.00</heading>
+			<name>Stand 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86621100</latitude>
+			<longitude>004.43435100</longitude>
+			<heading>73.00</heading>
+			<name>Stand 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86588700</latitude>
+			<longitude>004.43417300</longitude>
+			<heading>73.00</heading>
+			<name>Stand 24</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86542100</latitude>
+			<longitude>004.43389200</longitude>
+			<heading>73.00</heading>
+			<name>Stand 25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86513100</latitude>
+			<longitude>004.43372800</longitude>
+			<heading>73.00</heading>
+			<name>Stand 26</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86523800</latitude>
+			<longitude>004.43378100</longitude>
+			<heading>73.00</heading>
+			<name>Stand 26L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86501700</latitude>
+			<longitude>004.43366600</longitude>
+			<heading>73.00</heading>
+			<name>Stand 26R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86476500</latitude>
+			<longitude>004.43623300</longitude>
+			<heading>53.00</heading>
+			<name>Stand 27</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86523800</latitude>
+			<longitude>004.43661600</longitude>
+			<heading>53.00</heading>
+			<name>Stand 28</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86564600</latitude>
+			<longitude>004.43695000</longitude>
+			<heading>53.00</heading>
+			<name>Stand 29</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86617300</latitude>
+			<longitude>004.43010100</longitude>
+			<heading>73.00</heading>
+			<name>Stand 2A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86642500</latitude>
+			<longitude>004.43022200</longitude>
+			<heading>73.00</heading>
+			<name>Stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86640200</latitude>
+			<longitude>004.43738800</longitude>
+			<heading>53.00</heading>
+			<name>Stand 30</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86622200</latitude>
+			<longitude>004.43734000</longitude>
+			<heading>53.00</heading>
+			<name>Stand 30L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86655000</latitude>
+			<longitude>004.43763900</longitude>
+			<heading>53.00</heading>
+			<name>Stand 30R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86615400</latitude>
+			<longitude>004.43861800</longitude>
+			<heading>37.00</heading>
+			<name>Stand 31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86547900</latitude>
+			<longitude>004.43896800</longitude>
+			<heading>42.00</heading>
+			<name>Stand 32</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86508900</latitude>
+			<longitude>004.43851100</longitude>
+			<heading>42.00</heading>
+			<name>Stand 33</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86472700</latitude>
+			<longitude>004.43808000</longitude>
+			<heading>42.00</heading>
+			<name>Stand 34</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86460100</latitude>
+			<longitude>004.43784000</longitude>
+			<heading>42.00</heading>
+			<name>Stand 35</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86399500</latitude>
+			<longitude>004.43788500</longitude>
+			<heading>30.00</heading>
+			<name>Stand 36</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86662300</latitude>
+			<longitude>004.43034100</longitude>
+			<heading>74.00</heading>
+			<name>Stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86710400</latitude>
+			<longitude>004.43050300</longitude>
+			<heading>40.00</heading>
+			<name>Stand 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86765700</latitude>
+			<longitude>004.43097700</longitude>
+			<heading>10.00</heading>
+			<name>Stand 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86547900</latitude>
+			<longitude>004.42789300</longitude>
+			<heading>90.00</heading>
+			<name>Stand 61</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86560400</latitude>
+			<longitude>004.42804800</longitude>
+			<heading>00.00</heading>
+			<name>Stand 62</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86581400</latitude>
+			<longitude>004.42808800</longitude>
+			<heading>75.00</heading>
+			<name>Stand 63</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86750000</latitude>
+			<longitude>004.43049300</longitude>
+			<heading>10.00</heading>
+			<name>Stand 6L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86795000</latitude>
+			<longitude>004.43134400</longitude>
+			<heading>10.00</heading>
+			<name>Stand 6R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86751900</latitude>
+			<longitude>004.43173700</longitude>
+			<heading>34.00</heading>
+			<name>Stand 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86767600</latitude>
+			<longitude>004.43150600</longitude>
+			<heading>34.00</heading>
+			<name>Stand 7L</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86734000</latitude>
+			<longitude>004.43200600</longitude>
+			<heading>34.00</heading>
+			<name>Stand 7R</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>55.86692000</latitude>
+			<longitude>004.43149600</longitude>
+			<heading>00.00</heading>
+			<name>Stand 8</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>55.86964374</latitude>
+			<longitude>-004.43397852</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.86796733</latitude>
+			<longitude>-004.44569221</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>55.87452808</latitude>
+			<longitude>-004.42227508</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12957">129.57</frequency>
+			<description>Glasgow Information</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>Glasgow Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>Glasgow Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>Glasgow Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CZML">
+		<linecode>1</linecode>
+		<elevation>3127</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CZML</identifier>
+		<name>ONE ZERO EIGHT MILE AIRPORT</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>51.74301900</latitude>
+			<longitude>-121.33693900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>51.73031100</latitude_end>
+			<longitude_end>-121.33028100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1486.84785625</length-meters>
+			<length-feet>4531.91226584</length-feet>
+			<heading id="14 ">161.983360796</heading>
+			<heading_end id="32 ">341.978133115</heading_end>
+			<threshold_lat id="14 ">51.743019</threshold_lat>
+			<threshold_lon id="14 ">-121.336939</threshold_lon>
+			<threshold_lat_end id="32 ">51.730311</threshold_lat_end>
+			<threshold_lon_end id="32 ">-121.330281</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>51.74139156</latitude>
+			<longitude>-121.33562114</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>162.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>51.73193852</latitude>
+			<longitude>-121.33159828</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>342.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.73688779</latitude>
+			<longitude>-121.33250570</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.74330950</latitude>
+			<longitude>-121.33656962</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.73002052</latitude>
+			<longitude>-121.33065032</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12320">123.2</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13400">134.0</frequency>
+			<description>VANCOUVER CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

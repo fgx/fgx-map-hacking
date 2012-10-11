@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="W01 ">
+		<linecode>1</linecode>
+		<elevation>1311</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>W01</identifier>
+		<name>TONASKET MUNI</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>48.72885800</latitude>
+			<longitude>-119.46754400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>48.72088100</latitude_end>
+			<longitude_end>-119.46372500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>930.51369975</length-meters>
+			<length-feet>2836.20575684</length-feet>
+			<heading id="15 ">162.426001729</heading>
+			<heading_end id="33 ">342.423131557</heading_end>
+			<threshold_lat id="15 ">48.728858</threshold_lat>
+			<threshold_lon id="15 ">-119.467544</threshold_lon>
+			<threshold_lat_end id="33 ">48.720881</threshold_lat_end>
+			<threshold_lon_end id="33 ">-119.463725</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>48.72721387</latitude>
+			<longitude>-119.46637589</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>162.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>48.72252517</latitude>
+			<longitude>-119.46489283</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>342.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.72501637</latitude>
+			<longitude>-119.46494140</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.72905074</latitude>
+			<longitude>-119.46730922</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.72068827</latitude>
+			<longitude>-119.46395976</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>CTAF</description>
+		</atc>
+	</airport>
+</PropertyList>

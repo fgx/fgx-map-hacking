@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKGO">
+		<linecode>1</linecode>
+		<elevation>2979</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SKGO</identifier>
+		<name>SANTA ANA</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>04.74812200</latitude>
+			<longitude>-075.95661900</longitude>
+			<threshold>30.48</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>04.76811900</latitude_end>
+			<longitude_end>-075.95494200</longitude_end>
+			<threshold_end>30.48</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2219.11897765</length-meters>
+			<length-feet>6763.87464389</length-feet>
+			<heading id="01 ">4.80920619464</heading>
+			<heading_end id="19 ">184.809067088</heading_end>
+			<threshold_lat id="01 ">4.74839666246</threshold_lat>
+			<threshold_lon id="01 ">-75.9565959661</threshold_lon>
+			<threshold_lat_end id="19 ">4.76784433764</threshold_lat_end>
+			<threshold_lon_end id="19 ">-75.9549650339</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>04.75022040</latitude>
+			<longitude>-075.95682330</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>4.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>04.76602060</latitude>
+			<longitude>-075.95473770</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>184.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.75822286</latitude>
+			<longitude>-075.95703696</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.74780869</latitude>
+			<longitude>-075.95718663</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.76843230</latitude>
+			<longitude>-075.95437435</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>PEREIRA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

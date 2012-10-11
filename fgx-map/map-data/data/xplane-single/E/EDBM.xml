@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDBM">
+		<linecode>1</linecode>
+		<elevation>267</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDBM</identifier>
+		<name>Magdeburg</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>52.07351700</latitude>
+			<longitude>011.61920300</longitude>
+			<threshold>124.97</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>52.07379700</latitude_end>
+			<longitude_end>011.63375600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>998.316216897</length-meters>
+			<length-feet>3042.8678291</length-feet>
+			<heading id="09 ">88.2173742545</heading>
+			<heading_end id="27 ">268.205894825</heading_end>
+			<threshold_lat id="09 ">52.0735519241</threshold_lat>
+			<threshold_lon id="09 ">11.6210247573</threshold_lon>
+			<threshold_lat_end id="27 ">52.073797</threshold_lat_end>
+			<threshold_lon_end id="27 ">11.633756</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>52.07394102</latitude>
+			<longitude>011.62394164</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>88.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>52.07340864</latitude>
+			<longitude>011.63084602</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>268.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>52.07732200</latitude>
+			<longitude>011.62598300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.07777300</latitude>
+			<longitude>011.62512500</longitude>
+			<heading>0.00</heading>
+			<name>Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.07712000</latitude>
+			<longitude>011.62690500</longitude>
+			<heading>0.00</heading>
+			<name>Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>52.07694500</latitude>
+			<longitude>011.62060500</longitude>
+			<heading>0.00</heading>
+			<name>Apron 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>52.07732200</latitude>
+			<longitude>011.62598300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>52.07426800</latitude>
+			<longitude>011.62531100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13265">132.65</frequency>
+			<description>BERLIN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12417">124.17</frequency>
+			<description>BERLIN RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

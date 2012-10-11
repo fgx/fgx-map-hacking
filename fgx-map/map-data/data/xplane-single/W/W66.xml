@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="W66 ">
+		<linecode>1</linecode>
+		<elevation>337</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>W66</identifier>
+		<name>WARRENTON FAUQUIER</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>38.59314000</latitude>
+			<longitude>-077.71817700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>38.58280600</latitude_end>
+			<longitude_end>-077.70665800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1524.2028878</length-meters>
+			<length-feet>4645.77040202</length-feet>
+			<heading id="14 ">138.821851</heading>
+			<heading_end id="32 ">318.814666421</heading_end>
+			<threshold_lat id="14 ">38.59314</threshold_lat>
+			<threshold_lon id="14 ">-77.718177</threshold_lon>
+			<threshold_lat_end id="32 ">38.582806</threshold_lat_end>
+			<threshold_lon_end id="32 ">-77.706658</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>38.59200322</latitude>
+			<longitude>-077.71634089</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>138.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>38.58394296</latitude>
+			<longitude>-077.70849368</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>318.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.58860486</latitude>
+			<longitude>-077.71149165</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.59361711</latitude>
+			<longitude>-077.71801068</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.58232891</latitude>
+			<longitude>-077.70682437</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12465">124.65</frequency>
+			<description>POTOMAC APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

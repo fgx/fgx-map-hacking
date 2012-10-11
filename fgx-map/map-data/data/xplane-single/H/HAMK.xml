@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HAMK">
+		<linecode>1</linecode>
+		<elevation>7406</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>HAMK</identifier>
+		<name>MAKALE</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>43.28</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>13.47340600</latitude>
+			<longitude>039.51798300</longitude>
+			<threshold>300.23</threshold>
+			<overrrun>57.91</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>13.46132800</latitude_end>
+			<longitude_end>039.54894700</longitude_end>
+			<threshold_end>300.23</threshold_end>
+			<overrrun_end>57.91</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3609.19845642</length-meters>
+			<length-feet>11000.8368952</length-feet>
+			<heading id="11 ">111.733583126</heading>
+			<heading_end id="29 ">291.726371873</heading_end>
+			<threshold_lat id="11 ">13.4724011241</threshold_lat>
+			<threshold_lon id="11 ">39.5205587195</threshold_lon>
+			<threshold_lat_end id="29 ">13.4623325331</threshold_lat_end>
+			<threshold_lon_end id="29 ">39.546371259</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>13.47209495</latitude>
+			<longitude>039.52242980</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>111.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>13.46263959</latitude>
+			<longitude>039.54450058</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>291.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>13.46863335</latitude>
+			<longitude>039.53398729</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>13.47409326</latitude>
+			<longitude>039.51783487</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>13.46064073</latitude>
+			<longitude>039.54909503</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

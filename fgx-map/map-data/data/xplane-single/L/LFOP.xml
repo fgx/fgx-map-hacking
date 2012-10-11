@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFOP">
+		<linecode>1</linecode>
+		<elevation>512</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFOP</identifier>
+		<name>Rouen Vallee de la Seine</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>49.37946900</latitude>
+			<longitude>001.16844700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>49.39095300</latitude_end>
+			<longitude_end>001.18393600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1701.76186795</length-meters>
+			<length-feet>5186.97017352</length-feet>
+			<heading id="04 ">41.3698288715</heading>
+			<heading_end id="22 ">221.35807112</heading_end>
+			<threshold_lat id="04 ">49.379469</threshold_lat>
+			<threshold_lon id="04 ">1.168447</threshold_lon>
+			<threshold_lat_end id="22 ">49.390953</threshold_lat_end>
+			<threshold_lon_end id="22 ">1.183936</threshold_lon_end>
+		</runway>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>49.38834123</latitude>
+			<longitude>001.18123206</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>221.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.38605500</latitude>
+			<longitude>001.18610620</longitude>
+			<height>90</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.38873290</latitude>
+			<longitude>001.18811180</longitude>
+			<heading>10.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.38614742</latitude>
+			<longitude>001.17454740</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.37956563</latitude>
+			<longitude>001.16733272</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.39085623</latitude>
+			<longitude>001.18505052</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12072">120.72</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12020">120.2</frequency>
+			<description>ROUEN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11857">118.57</frequency>
+			<description>ROUEN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

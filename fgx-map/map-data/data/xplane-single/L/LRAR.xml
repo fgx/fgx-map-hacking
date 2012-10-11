@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LRAR">
+		<linecode>1</linecode>
+		<elevation>352</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LRAR</identifier>
+		<name>ARAD</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>46.17737500</latitude>
+			<longitude>021.24920600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>46.17572800</latitude_end>
+			<longitude_end>021.27483900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1987.7403718</length-meters>
+			<length-feet>6058.63265324</length-feet>
+			<heading id="09 ">95.2937061469</heading>
+			<heading_end id="27 ">275.275212529</heading_end>
+			<threshold_lat id="09 ">46.177375</threshold_lat>
+			<threshold_lon id="09 ">21.249206</threshold_lon>
+			<threshold_lat_end id="27 ">46.175728</threshold_lat_end>
+			<threshold_lon_end id="27 ">21.274839</threshold_lon_end>
+		</runway>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>46.17558082</latitude>
+			<longitude>021.27086945</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>275.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.17796782</latitude>
+			<longitude>021.26221097</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.17801879</latitude>
+			<longitude>021.24870332</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.17508410</latitude>
+			<longitude>021.27534136</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13020">130.2</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ETSE">
+		<linecode>1</linecode>
+		<elevation>1515</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ETSE</identifier>
+		<name>Erding AFB</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>34.14</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>48.32036817</latitude>
+			<longitude>011.93314905</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>295.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>48.32503383</latitude_end>
+			<longitude_end>011.96641695</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>235.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2521.0660478</length-meters>
+			<length-feet>7684.2093137</length-feet>
+			<heading id="08 ">78.1367840273</heading>
+			<heading_end id="26 ">258.111936176</heading_end>
+			<threshold_lat id="08 ">48.32036817</threshold_lat>
+			<threshold_lon id="08 ">11.93314905</threshold_lon>
+			<threshold_lat_end id="26 ">48.32503383</threshold_lat_end>
+			<threshold_lon_end id="26 ">11.96641695</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.31992700</latitude>
+			<longitude>011.94529000</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>48.31540300</latitude>
+			<longitude>011.93923000</longitude>
+			<heading>00.00</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.32285700</latitude>
+			<longitude>011.94850000</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.32052600</latitude>
+			<longitude>011.93186600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.32413500</latitude>
+			<longitude>011.96546800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12077">120.77</frequency>
+			<description>MUNCHEN RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFHY">
+		<linecode>1</linecode>
+		<elevation>915</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFHY</identifier>
+		<name>Moulins Montbeugny</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>46.53379200</latitude>
+			<longitude>003.41533100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>46.53536700</latitude_end>
+			<longitude_end>003.43211900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1299.7193158</length-meters>
+			<length-feet>3961.54447455</length-feet>
+			<heading id="08 ">82.2644824914</heading>
+			<heading_end id="26 ">262.252297934</heading_end>
+			<threshold_lat id="08 ">46.533792</threshold_lat>
+			<threshold_lon id="08 ">3.415331</threshold_lon>
+			<threshold_lat_end id="26 ">46.535367</threshold_lat_end>
+			<threshold_lon_end id="26 ">3.432119</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>46.53479463</latitude>
+			<longitude>003.42959178</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>262.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.53551208</latitude>
+			<longitude>003.42353731</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53415516</latitude>
+			<longitude>003.41486457</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53500377</latitude>
+			<longitude>003.43258533</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12520">125.2</frequency>
+			<description>MOULINS INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

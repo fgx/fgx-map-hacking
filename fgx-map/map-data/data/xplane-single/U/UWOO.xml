@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UWOO">
+		<linecode>1</linecode>
+		<elevation>387</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UWOO</identifier>
+		<name>ORENBURG</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>42.06</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>51.79576400</latitude>
+			<longitude>055.43859400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>51.79581100</latitude_end>
+			<longitude_end>055.47489700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2504.55237134</length-meters>
+			<length-feet>7633.87562784</length-feet>
+			<heading id="08 ">89.894632784</heading>
+			<heading_end id="26 ">269.866105471</heading_end>
+			<threshold_lat id="08 ">51.795764</threshold_lat>
+			<threshold_lon id="08 ">55.438594</threshold_lon>
+			<threshold_lat_end id="26 ">51.795811</threshold_lat_end>
+			<threshold_lon_end id="26 ">55.474897</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>51.79615812</latitude>
+			<longitude>055.44333483</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>89.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>51.79539155</latitude>
+			<longitude>055.44667135</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>269.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.79711515</latitude>
+			<longitude>055.45673749</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.79633091</latitude>
+			<longitude>055.43797980</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.79524390</latitude>
+			<longitude>055.47551074</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12640">126.4</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12800">128.0</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

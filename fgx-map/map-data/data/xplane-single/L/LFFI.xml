@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFFI">
+		<linecode>1</linecode>
+		<elevation>111</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFFI</identifier>
+		<name>Ancenis </name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>24.99</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>47.40663200</latitude>
+			<longitude>-001.18516800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>47.40977400</latitude_end>
+			<longitude_end>-001.16996400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1199.511004</length-meters>
+			<length-feet>3656.10954018</length-feet>
+			<heading id="08 ">73.0744772924</heading>
+			<heading_end id="26 ">253.063284199</heading_end>
+			<threshold_lat id="08 ">47.406632</threshold_lat>
+			<threshold_lon id="08 ">-1.185168</threshold_lon>
+			<threshold_lat_end id="26 ">47.409774</threshold_lat_end>
+			<threshold_lon_end id="26 ">-1.169964</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>47.40745470</latitude>
+			<longitude>-001.18275863</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>73.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>47.40895161</latitude>
+			<longitude>-001.17237375</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>253.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>47.40895629</latitude>
+			<longitude>-001.17790675</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.40688896</latitude>
+			<longitude>-001.18563147</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>47.40951698</latitude>
+			<longitude>-001.16950057</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11820">118.2</frequency>
+			<description>INFO</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13027">130.27</frequency>
+			<description>NANTES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VTST">
+		<linecode>1</linecode>
+		<elevation>67</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>VTST</identifier>
+		<name>Trang</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>07.50724200</latitude>
+			<longitude>099.60716700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>07.51024700</latitude_end>
+			<longitude_end>099.62599200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>220.07</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2104.14867883</length-meters>
+			<length-feet>6413.44517306</length-feet>
+			<heading id="08 ">80.9137885405</heading>
+			<heading_end id="26 ">260.911328536</heading_end>
+			<threshold_lat id="08 ">7.507242</threshold_lat>
+			<threshold_lon id="08 ">99.607167</threshold_lon>
+			<threshold_lat_end id="26 ">7.510247</threshold_lat_end>
+			<threshold_lon_end id="26 ">99.625992</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>07.50805521</latitude>
+			<longitude>099.60971684</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>80.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>07.50956506</latitude>
+			<longitude>099.62426393</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>260.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>07.51133300</latitude>
+			<longitude>099.61807300</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>07.51031200</latitude>
+			<longitude>099.61322800</longitude>
+			<heading>31.00</heading>
+			<name>Platform</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>07.50954600</latitude>
+			<longitude>099.61644700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.50804400</latitude>
+			<longitude>099.60704000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>07.50944500</latitude>
+			<longitude>099.62612200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12530">125.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

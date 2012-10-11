@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMLT">
+		<linecode>1</linecode>
+		<elevation>34</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMLT</identifier>
+		<name>LORETO INTL</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>25.99911100</latitude>
+			<longitude>-111.34969400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>56.39</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>25.97927800</latitude_end>
+			<longitude_end>-111.34700000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>56.39</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2213.75022368</length-meters>
+			<length-feet>6747.51068179</length-feet>
+			<heading id="16 ">173.001802573</heading>
+			<heading_end id="34 ">353.000622058</heading_end>
+			<threshold_lat id="16 ">25.999111</threshold_lat>
+			<threshold_lon id="16 ">-111.349694</threshold_lon>
+			<threshold_lat_end id="34 ">25.979278</threshold_lat_end>
+			<threshold_lon_end id="34 ">-111.347</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>25.99737302</latitude>
+			<longitude>-111.34900847</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>173.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>25.98101600</latitude>
+			<longitude>-111.34768539</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>353.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>25.99025200</latitude>
+			<longitude>111.35117300</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>25.99099200</latitude>
+			<longitude>111.35092900</longitude>
+			<heading>63.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>25.98930100</latitude>
+			<longitude>-111.34737800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.99921700</latitude>
+			<longitude>-111.34872500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.97917200</latitude>
+			<longitude>-111.34796900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11840">118.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VYCZ">
+		<linecode>1</linecode>
+		<elevation>252</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VYCZ</identifier>
+		<name>CHANMYATHAZI</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>21.93169400</latitude>
+			<longitude>096.08823900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>21.94938300</latitude_end>
+			<longitude_end>096.09093600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1978.41008092</length-meters>
+			<length-feet>6030.19392664</length-feet>
+			<heading id="01 ">8.09621992609</heading>
+			<heading_end id="19 ">188.095212208</heading_end>
+			<threshold_lat id="01 ">21.931694</threshold_lat>
+			<threshold_lon id="01 ">96.088239</threshold_lon>
+			<threshold_lat_end id="19 ">21.949383</threshold_lat_end>
+			<threshold_lon_end id="19 ">96.090936</threshold_lon_end>
+		</runway>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>21.94755773</latitude>
+			<longitude>096.09099319</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>188.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>21.94067159</latitude>
+			<longitude>096.08856232</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>21.93148001</latitude>
+			<longitude>096.08775842</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>21.94959698</latitude>
+			<longitude>096.09141664</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

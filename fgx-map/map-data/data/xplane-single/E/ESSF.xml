@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ESSF">
+		<linecode>1</linecode>
+		<elevation>366</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ESSF</identifier>
+		<name>HULTSFRED</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>57.52958100</latitude>
+			<longitude>015.80935600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>57.52191700</latitude_end>
+			<longitude_end>015.83853900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1945.6431584</length-meters>
+			<length-feet>5930.32034682</length-feet>
+			<heading id="12 ">116.032629482</heading>
+			<heading_end id="30 ">296.008009745</heading_end>
+			<threshold_lat id="12 ">57.529581</threshold_lat>
+			<threshold_lon id="12 ">15.809356</threshold_lon>
+			<threshold_lat_end id="30 ">57.521917</threshold_lat_end>
+			<threshold_lon_end id="30 ">15.838539</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>57.52912981</latitude>
+			<longitude>015.81267683</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>116.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>57.52268942</latitude>
+			<longitude>015.83399972</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>296.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>57.52687998</latitude>
+			<longitude>015.82497568</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.53022181</latitude>
+			<longitude>015.80919450</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>57.52127615</latitude>
+			<longitude>015.83869996</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12405">124.05</frequency>
+			<description>AFIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>AFIS</description>
+		</atc>
+	</airport>
+</PropertyList>

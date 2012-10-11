@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENTC">
+		<linecode>1</linecode>
+		<elevation>31</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENTC</identifier>
+		<name>Tromso Langnes</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>42.98</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>69.67250117</latitude>
+			<longitude>018.91290854</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>88.09</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>69.69323145</latitude_end>
+			<longitude_end>018.92581706</longitude_end>
+			<threshold_end>373.99</threshold_end>
+			<overrrun_end>146.91</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2366.14968404</length-meters>
+			<length-feet>7212.02423696</length-feet>
+			<heading id="01 ">12.2156702843</heading>
+			<heading_end id="19 ">192.203564866</heading_end>
+			<threshold_lat id="01 ">69.67250117</threshold_lat>
+			<threshold_lon id="01 ">18.91290854</threshold_lon>
+			<threshold_lat_end id="19 ">69.6899547702</threshold_lat_end>
+			<threshold_lon_end id="19 ">18.9237770741</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>69.67508656</latitude>
+			<longitude>018.91553737</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>12.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>69.67526553</latitude>
+			<longitude>018.91331451</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>12.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>69.68765078</latitude>
+			<longitude>018.92113988</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>192.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>69.68745100</latitude>
+			<longitude>018.92341963</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>192.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>69.68318437</latitude>
+			<longitude>018.91068242</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 1</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>69.67968169</latitude>
+			<longitude>018.91081218</longitude>
+			<heading>85.12</heading>
+			<name>Gate 21</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>69.68034587</latitude>
+			<longitude>018.91134894</longitude>
+			<heading>87.35</heading>
+			<name>Gate 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>69.68312506</latitude>
+			<longitude>018.91333341</longitude>
+			<heading>16.56</heading>
+			<name>General Aviation</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>69.67845285</latitude>
+			<longitude>018.91112782</longitude>
+			<heading>04.92</heading>
+			<name>Ramp 18</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>69.68362173</latitude>
+			<longitude>018.91492583</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.67268388</latitude>
+			<longitude>018.90843013</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.69408797</latitude>
+			<longitude>018.92754755</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12612">126.12</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12375">123.75</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

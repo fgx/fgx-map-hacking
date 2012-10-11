@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LGKR">
+		<linecode>1</linecode>
+		<elevation>6</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LGKR</identifier>
+		<name>IOANNIS KAPODISTRIAS INTL</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>39.61228300</latitude>
+			<longitude>019.90921100</longitude>
+			<threshold>410.87</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>39.59127500</latitude_end>
+			<longitude_end>019.91460600</longitude_end>
+			<threshold_end>64.92</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2378.03560454</length-meters>
+			<length-feet>7248.25252264</length-feet>
+			<heading id="17 ">168.765644665</heading>
+			<heading_end id="35 ">348.762205634</heading_end>
+			<threshold_lat id="17 ">39.6086532796</threshold_lat>
+			<threshold_lon id="17 ">19.9101430836</threshold_lon>
+			<threshold_lat_end id="35 ">39.5918485126</threshold_lat_end>
+			<threshold_lon_end id="35 ">19.9144587161</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>39.60696804</latitude>
+			<longitude>019.91110686</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>168.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>39.59353596</latitude>
+			<longitude>019.91349513</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>348.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>39.60936740</latitude>
+			<longitude>019.91362950</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>39.60822300</latitude>
+			<longitude>019.91295240</longitude>
+			<heading>49.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.60205667</latitude>
+			<longitude>019.91371788</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.61279946</latitude>
+			<longitude>019.90988411</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.59075858</latitude>
+			<longitude>019.91393306</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12635">126.35</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12085">120.85</frequency>
+			<description>KERKIRA TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>KERKIRA TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11807">118.07</frequency>
+			<description>KERKIRA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>KERKIRA APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12235">122.35</frequency>
+			<description>KERKIRA APP</description>
+		</atc>
+	</airport>
+</PropertyList>

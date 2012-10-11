@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="W18 ">
+		<linecode>1</linecode>
+		<elevation>145</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>W18</identifier>
+		<name>Suburban</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>12.19</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>39.07405793</latitude>
+			<longitude>-076.82887622</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>39.08004817</latitude_end>
+			<longitude_end>-076.82606768</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>708.034309908</length-meters>
+			<length-feet>2158.0885766</length-feet>
+			<heading id="03 ">20.0756191813</heading>
+			<heading_end id="21 ">200.073848776</heading_end>
+			<threshold_lat id="03 ">39.07405793</threshold_lat>
+			<threshold_lon id="03 ">-76.82887622</threshold_lon>
+			<threshold_lat_end id="21 ">39.08004817</threshold_lat_end>
+			<threshold_lon_end id="21 ">-76.82606768</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>39.07583572</latitude>
+			<longitude>-076.82838937</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>20.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>39.07827039</latitude>
+			<longitude>-076.82655465</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>200.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.07718439</latitude>
+			<longitude>-076.82793685</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.07401112</latitude>
+			<longitude>-076.82912377</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.08009498</latitude>
+			<longitude>-076.82582011</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

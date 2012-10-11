@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMRX">
+		<linecode>1</linecode>
+		<elevation>139</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMRX</identifier>
+		<name>GENERAL LUCIO BLANCO INTL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>26.01555800</latitude>
+			<longitude>-098.23449700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>26.00225600</latitude_end>
+			<longitude_end>-098.22253000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1899.2236501</length-meters>
+			<length-feet>5788.83368551</length-feet>
+			<heading id="13 ">140.893918614</heading>
+			<heading_end id="31 ">320.888670954</heading_end>
+			<threshold_lat id="13 ">26.015558</threshold_lat>
+			<threshold_lon id="13 ">-98.234497</threshold_lon>
+			<threshold_lat_end id="31 ">26.002256</threshold_lat_end>
+			<threshold_lon_end id="31 ">-98.22253</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>26.01441056</latitude>
+			<longitude>-098.23289078</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>141.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>26.00340358</latitude>
+			<longitude>-098.22413593</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>321.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>26.01181800</latitude>
+			<longitude>098.22704300</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>26.01230600</latitude>
+			<longitude>098.22786700</longitude>
+			<heading>52.00</heading>
+			<name>Plataforma 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>26.00941700</latitude>
+			<longitude>-098.22781100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.01606800</latitude>
+			<longitude>-098.23379500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>26.00174600</latitude>
+			<longitude>-098.22323400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>REYNOSA APP/TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

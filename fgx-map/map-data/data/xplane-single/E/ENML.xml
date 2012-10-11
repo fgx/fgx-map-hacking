@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENML">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ENML</identifier>
+		<name>Molde Aro</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>62.74249700</latitude>
+			<longitude>007.24800300</longitude>
+			<threshold>70.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="6">SSALF</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>62.74864700</latitude_end>
+			<longitude_end>007.28696100</longitude_end>
+			<threshold_end>60.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="6">SSALF</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2105.95086429</length-meters>
+			<length-feet>6418.93823437</length-feet>
+			<heading id="07 ">71.0221019459</heading>
+			<heading_end id="25 ">250.987468994</heading_end>
+			<threshold_lat id="07 ">62.7427015271</threshold_lat>
+			<threshold_lon id="07 ">7.24929978929</threshold_lon>
+			<threshold_lat_end id="25 ">62.748471478</threshold_lat_end>
+			<threshold_lon_end id="25 ">7.28585014129</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>62.74810187</latitude>
+			<longitude>007.28045745</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>251.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>62.74722273</latitude>
+			<longitude>007.28109173</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>251.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>62.74408846</latitude>
+			<longitude>007.25487351</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>71.0</orientation>
+			<glideslope>3.10</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>62.74318121</latitude>
+			<longitude>007.25560391</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>71.0</orientation>
+			<glideslope>3.10</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>62.74369292</latitude>
+			<longitude>007.26678651</longitude>
+			<height>49</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>62.74611211</latitude>
+			<longitude>007.26239773</longitude>
+			<heading>41.00</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>62.74596793</latitude>
+			<longitude>007.26157325</longitude>
+			<heading>41.00</heading>
+			<name>Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>62.74581962</latitude>
+			<longitude>007.26073416</longitude>
+			<heading>41.05</heading>
+			<name>Ramp 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>62.74567528</latitude>
+			<longitude>007.25972888</longitude>
+			<heading>41.00</heading>
+			<name>Ramp 4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>62.74691710</latitude>
+			<longitude>007.26646116</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.74798707</latitude>
+			<longitude>007.28556882</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 2</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.74352628</latitude>
+			<longitude>007.25738914</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 3</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>62.74506545</latitude>
+			<longitude>007.26084627</longitude>
+			<orientation>161.38</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}D{@R}25-07{@@,@Y,^u}APRON{@L}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>62.74538284</latitude>
+			<longitude>007.26311231</longitude>
+			<orientation>162.26</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}25-07{@L}E{@@,@L}E{@Y,^u}APRON</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>62.74474853</latitude>
+			<longitude>007.25976882</longitude>
+			<orientation>71.03</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}D</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>62.74510010</latitude>
+			<longitude>007.26205175</longitude>
+			<orientation>71.74</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,^l}E{@@}D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>62.74543944</latitude>
+			<longitude>007.26416113</longitude>
+			<orientation>250.38</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y}E{^r}</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11995">119.95</frequency>
+			<description>MOLDE INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12150">121.5</frequency>
+			<description>MOLDE INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

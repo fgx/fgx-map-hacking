@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KCHO">
+		<linecode>1</linecode>
+		<elevation>639</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KCHO</identifier>
+		<name>CHARLOTTESVILLE ALBEMARLE</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>38.13099681</latitude>
+			<longitude>-078.45677375</longitude>
+			<threshold>50.90</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>38.14626400</latitude_end>
+			<longitude_end>-078.44892296</longitude_end>
+			<threshold_end>56.08</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1829.07442717</length-meters>
+			<length-feet>5575.01885402</length-feet>
+			<heading id="03 ">22.1062084517</heading>
+			<heading_end id="21 ">202.101360068</heading_end>
+			<threshold_lat id="03 ">38.1314216627</threshold_lat>
+			<threshold_lon id="03 ">-78.4565552747</threshold_lon>
+			<threshold_lat_end id="21 ">38.1457958954</threshold_lat_end>
+			<threshold_lon_end id="21 ">-78.4491636662</threshold_lon_end>
+		</runway>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>38.14445439</latitude>
+			<longitude>-078.44934835</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>202.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.13946260</latitude>
+			<longitude>078.44919525</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>CHO tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.13917027</latitude>
+			<longitude>-078.45456262</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.13148655</latitude>
+			<longitude>-078.45579535</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.14577385</latitude>
+			<longitude>-078.44866535</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11842">118.42</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12450">124.5</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12450">124.5</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13285">132.85</frequency>
+			<description>POTOMAC APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

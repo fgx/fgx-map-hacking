@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGNC">
+		<linecode>1</linecode>
+		<elevation>190</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGNC</identifier>
+		<name>Carlisle</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>54.93330280</latitude>
+			<longitude>-002.82130962</longitude>
+			<threshold>455.07</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>54.94163001</latitude_end>
+			<longitude_end>-002.79680056</longitude_end>
+			<threshold_end>238.05</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1824.00220431</length-meters>
+			<length-feet>5559.55871874</length-feet>
+			<heading id="07 ">59.4643138807</heading>
+			<heading_end id="25 ">239.444252589</heading_end>
+			<threshold_lat id="07 ">54.9353795851</threshold_lat>
+			<threshold_lon id="07 ">-2.81519454381</threshold_lon>
+			<threshold_lat_end id="25 ">54.9405428644</threshold_lat_end>
+			<threshold_lon_end id="25 ">-2.79999914398</threshold_lon_end>
+		</runway>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>54.93500800</latitude>
+			<longitude>-002.81135300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>54.94335170</latitude_end>
+			<longitude_end>-002.81106653</longitude_end>
+			<threshold_end>128.02</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>929.022231228</length-meters>
+			<length-feet>2831.65976078</length-feet>
+			<heading id="01 ">1.13251831557</heading>
+			<heading_end id="19 ">181.132283828</heading_end>
+			<threshold_lat id="01 ">54.935008</threshold_lat>
+			<threshold_lon id="01 ">-2.811353</threshold_lon>
+			<threshold_lat_end id="19 ">54.9422019322</threshold_lat_end>
+			<threshold_lon_end id="19 ">-2.81110600467</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>54.93662026</latitude>
+			<longitude>-002.81283290</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>59.8</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>54.93942051</latitude>
+			<longitude>-002.80177741</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>239.8</orientation>
+			<glideslope>3.30</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.94196690</latitude>
+			<longitude>002.80764256</longitude>
+			<heading>78.63</heading>
+			<name>Apron</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.94166965</latitude>
+			<longitude>002.80592596</longitude>
+			<heading>37.80</heading>
+			<name>Hangar</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.93827628</latitude>
+			<longitude>-002.80989478</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.93593198</latitude>
+			<longitude>-002.81796954</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.94177047</latitude>
+			<longitude>-002.80119087</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.93968308</latitude>
+			<longitude>-002.80877089</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11842">118.42</frequency>
+			<description>Carlisle Info</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12360">123.6</frequency>
+			<description>Carlisle Tower</description>
+		</atc>
+	</airport>
+</PropertyList>

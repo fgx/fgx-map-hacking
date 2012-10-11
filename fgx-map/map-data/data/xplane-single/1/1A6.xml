@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="1A6 ">
+		<linecode>1</linecode>
+		<elevation>1154</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>1A6</identifier>
+		<name>MIDDLESBORO BELL CO</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>36.61133300</latitude>
+			<longitude>-083.74353100</longitude>
+			<threshold>70.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>36.60994200</latitude_end>
+			<longitude_end>-083.73130800</longitude_end>
+			<threshold_end>24.38</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1104.35300565</length-meters>
+			<length-feet>3366.06796121</length-feet>
+			<heading id="10 ">98.0384100294</heading>
+			<heading_end id="28 ">278.031120551</heading_end>
+			<threshold_lat id="10 ">36.6112446625</threshold_lat>
+			<threshold_lon id="10 ">-83.7427551328</threshold_lon>
+			<threshold_lat_end id="28 ">36.609972694</threshold_lat_end>
+			<threshold_lon_end id="28 ">-83.7315778384</threshold_lon_end>
+		</runway>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>36.60995445</latitude>
+			<longitude>-083.73384656</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>278.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.61166603</latitude>
+			<longitude>-083.74373105</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>36.60960894</latitude>
+			<longitude>-083.73110800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11942">119.42</frequency>
+			<description>AWOS 3</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFRC">
+		<linecode>1</linecode>
+		<elevation>459</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LFRC</identifier>
+		<name>Cherbourg Maupertus</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>49.65220000</latitude>
+			<longitude>-001.48686400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>49.64810300</latitude_end>
+			<longitude_end>-001.45366400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2440.44638415</length-meters>
+			<length-feet>7438.48057888</length-feet>
+			<heading id="10 ">100.774023649</heading>
+			<heading_end id="28 ">280.748721752</heading_end>
+			<threshold_lat id="10 ">49.6522</threshold_lat>
+			<threshold_lon id="10 ">-1.486864</threshold_lon>
+			<threshold_lat_end id="28 ">49.648103</threshold_lat_end>
+			<threshold_lon_end id="28 ">-1.453664</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>49.65225730</latitude>
+			<longitude>-001.48401721</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>100.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.64737400</latitude>
+			<longitude>001.47705700</longitude>
+			<height>80</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint Location</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.64741200</latitude>
+			<longitude>001.47524700</longitude>
+			<heading>40.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.65094900</latitude>
+			<longitude>-001.47002900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.64790400</latitude>
+			<longitude>-001.47329300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11962">119.62</frequency>
+			<description>CHERBOURG TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11935">119.35</frequency>
+			<description>DEAUVILLE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

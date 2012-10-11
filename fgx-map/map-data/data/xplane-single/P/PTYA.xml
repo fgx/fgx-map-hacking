@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PTYA">
+		<linecode>1</linecode>
+		<elevation>91</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>PTYA</identifier>
+		<name>Yap Intl</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>09.49631100</latitude>
+			<longitude>138.07459200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>09.50151100</latitude_end>
+			<longitude_end>138.09040000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1828.57386894</length-meters>
+			<length-feet>5573.49315252</length-feet>
+			<heading id="07 ">71.6687899932</heading>
+			<heading_end id="25 ">251.666181217</heading_end>
+			<threshold_lat id="07 ">9.496311</threshold_lat>
+			<threshold_lon id="07 ">138.074592</threshold_lon>
+			<threshold_lat_end id="25 ">9.501511</threshold_lat_end>
+			<threshold_lon_end id="25 ">138.0904</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>09.49759999</latitude>
+			<longitude>138.07698974</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>71.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>09.50022221</latitude>
+			<longitude>138.08807552</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>251.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>09.49851174</latitude>
+			<longitude>138.08633955</longitude>
+			<heading>60.08</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>09.49773973</latitude>
+			<longitude>138.08684591</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.49676801</latitude>
+			<longitude>138.07399476</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>09.50105397</latitude>
+			<longitude>138.09099723</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12360">123.6</frequency>
+			<description>Yap Radio</description>
+		</atc>
+	</airport>
+</PropertyList>

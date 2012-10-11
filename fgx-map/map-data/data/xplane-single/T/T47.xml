@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="T47 ">
+		<linecode>1</linecode>
+		<elevation>998</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>T47</identifier>
+		<name>KICKAPOO DOWNTOWN</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>33.86673100</latitude>
+			<longitude>-098.49036100</longitude>
+			<threshold>45.72</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>33.85450300</latitude_end>
+			<longitude_end>-098.49043600</longitude_end>
+			<threshold_end>76.20</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1356.34593766</length-meters>
+			<length-feet>4134.14241798</length-feet>
+			<heading id="17 ">-179.706848381</heading>
+			<heading_end id="35 ">360.293193407</heading_end>
+			<threshold_lat id="17 ">33.8663188163</threshold_lat>
+			<threshold_lon id="17 ">-98.4903635281</threshold_lon>
+			<threshold_lat_end id="35 ">33.8551899741</threshold_lat_end>
+			<threshold_lon_end id="35 ">-98.4904317864</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>33.86451820</latitude>
+			<longitude>-098.49001226</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>180.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>33.85699010</latitude>
+			<longitude>-098.49078302</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>0.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>33.86061606</latitude>
+			<longitude>-098.48953306</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.86693516</latitude>
+			<longitude>-098.48998976</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>33.85429884</latitude>
+			<longitude>-098.49080719</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12270">122.7</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12040">120.4</frequency>
+			<description>SHEPPARD APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

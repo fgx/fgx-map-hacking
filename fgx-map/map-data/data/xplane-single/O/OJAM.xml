@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OJAM">
+		<linecode>1</linecode>
+		<elevation>2555</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OJAM</identifier>
+		<name>MARKA INTL</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>31.96626400</latitude>
+			<longitude>035.97598100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>224.03</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>31.97914200</latitude_end>
+			<longitude_end>036.00716400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>120.09</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3275.15528978</length-meters>
+			<length-feet>9982.67332324</length-feet>
+			<heading id="06 ">64.1587995566</heading>
+			<heading_end id="24 ">244.142287685</heading_end>
+			<threshold_lat id="06 ">31.966264</threshold_lat>
+			<threshold_lon id="06 ">35.975981</threshold_lon>
+			<threshold_lat_end id="24 ">31.979142</threshold_lat_end>
+			<threshold_lon_end id="24 ">36.007164</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>31.96741255</latitude>
+			<longitude>035.97768145</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>64.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>31.97764391</latitude>
+			<longitude>036.00461516</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>244.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.97398124</latitude>
+			<longitude>035.99083428</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.96663372</latitude>
+			<longitude>035.97523650</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.97877209</latitude>
+			<longitude>036.00790848</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>AMMAN GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>AMMAN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12890">128.9</frequency>
+			<description>AMMAN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

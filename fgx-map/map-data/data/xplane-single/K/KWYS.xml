@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KWYS">
+		<linecode>1</linecode>
+		<elevation>6644</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KWYS</identifier>
+		<name>Yellowstone</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>44.67807200</latitude>
+			<longitude>-111.12478300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>44.69872500</latitude_end>
+			<longitude_end>-111.11049200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2559.45861803</length-meters>
+			<length-feet>7801.22986775</length-feet>
+			<heading id="01 ">26.2767724921</heading>
+			<heading_end id="19 ">206.266722335</heading_end>
+			<threshold_lat id="01 ">44.678072</threshold_lat>
+			<threshold_lon id="01 ">-111.124783</threshold_lon>
+			<threshold_lat_end id="19 ">44.698725</threshold_lat_end>
+			<threshold_lon_end id="19 ">-111.110492</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>44.68065211</latitude>
+			<longitude>-111.12363110</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>26.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>44.69694374</latitude>
+			<longitude>-111.11113441</longitude>
+			<type code="5">Tri-colour VASI</type>
+			<orientation>206.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI-3L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.68940000</latitude>
+			<longitude>111.11763800</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.68753400</latitude>
+			<longitude>111.11481500</longitude>
+			<heading>04.00</heading>
+			<name>Gen Avia Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.67743700</latitude>
+			<longitude>111.12387100</longitude>
+			<heading>0.00</heading>
+			<name>Hold Short Rwy1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.69852800</latitude>
+			<longitude>111.10948200</longitude>
+			<heading>40.00</heading>
+			<name>Hold Short Rwy19</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.68691300</latitude>
+			<longitude>111.11500500</longitude>
+			<heading>04.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.69531200</latitude>
+			<longitude>111.10760500</longitude>
+			<heading>40.00</heading>
+			<name>Yellowstone Aviation</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.68577600</latitude>
+			<longitude>-111.11508900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.69618200</latitude>
+			<longitude>-111.10956600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.68901400</latitude>
+			<longitude>-111.11934700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

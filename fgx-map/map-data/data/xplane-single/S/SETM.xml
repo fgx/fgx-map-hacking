@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SETM">
+		<linecode>1</linecode>
+		<elevation>4056</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SETM</identifier>
+		<name>CAMILO PONCE ENRIQUEZ</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>-04.00002800</latitude>
+			<longitude>-079.38018100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>-03.99175300</latitude_end>
+			<longitude_end>-079.36366900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2049.30528542</length-meters>
+			<length-feet>6246.28250997</length-feet>
+			<heading id="06 ">63.4790784902</heading>
+			<heading_end id="24 ">243.480229128</heading_end>
+			<threshold_lat id="06 ">-4.000028</threshold_lat>
+			<threshold_lon id="06 ">-79.380181</threshold_lon>
+			<threshold_lat_end id="24 ">-3.991753</threshold_lat_end>
+			<threshold_lon_end id="24 ">-79.363669</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>-03.99892303</latitude>
+			<longitude>-079.37871833</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>63.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.99978836</latitude>
+			<longitude>-079.38060324</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-03.99199263</latitude>
+			<longitude>-079.36324676</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>LA TOMA TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

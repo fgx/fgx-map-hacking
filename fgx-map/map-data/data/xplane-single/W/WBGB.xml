@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WBGB">
+		<linecode>1</linecode>
+		<elevation>74</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WBGB</identifier>
+		<name>BINTULU</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>03.13595000</latitude>
+			<longitude>113.01786700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>03.11172500</latitude_end>
+			<longitude_end>113.02307800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2740.65031601</length-meters>
+			<length-feet>8353.50216321</length-feet>
+			<heading id="17 ">167.798809455</heading>
+			<heading_end id="35 ">347.798525486</heading_end>
+			<threshold_lat id="17 ">3.13595</threshold_lat>
+			<threshold_lon id="17 ">113.017867</threshold_lon>
+			<threshold_lat_end id="35 ">3.111725</threshold_lat_end>
+			<threshold_lon_end id="35 ">113.023078</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>03.13395520</latitude>
+			<longitude>113.01870543</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>167.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>03.11340081</latitude>
+			<longitude>113.02230822</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>347.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>03.13647096</latitude>
+			<longitude>113.01837308</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>03.11120405</latitude>
+			<longitude>113.02257193</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12780">127.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11925">119.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

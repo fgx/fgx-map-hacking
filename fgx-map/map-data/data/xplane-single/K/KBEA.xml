@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KBEA">
+		<linecode>1</linecode>
+		<elevation>268</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KBEA</identifier>
+		<name>BEEVILLE MUNI</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>28.36597213</latitude>
+			<longitude>-097.79637092</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>28.35776787</latitude_end>
+			<longitude_end>-097.78568708</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1386.96097064</length-meters>
+			<length-feet>4227.4570385</length-feet>
+			<heading id="12 ">130.964856425</heading>
+			<heading_end id="30 ">310.959781188</heading_end>
+			<threshold_lat id="12 ">28.36597213</threshold_lat>
+			<threshold_lon id="12 ">-97.79637092</threshold_lon>
+			<threshold_lat_end id="30 ">28.35776787</threshold_lat_end>
+			<threshold_lon_end id="30 ">-97.78568708</threshold_lon_end>
+		</runway>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>18.29</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>28.37251352</latitude>
+			<longitude>-097.79316019</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>28.36564448</latitude_end>
+			<longitude_end>-097.79440781</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>771.025310024</length-meters>
+			<length-feet>2350.08514495</length-feet>
+			<heading id="18 ">-170.873676791</heading>
+			<heading_end id="36 ">369.126916015</heading_end>
+			<threshold_lat id="18 ">28.37251352</threshold_lat>
+			<threshold_lon id="18 ">-97.79316019</threshold_lon>
+			<threshold_lat_end id="36 ">28.36564448</threshold_lat_end>
+			<threshold_lon_end id="36 ">-97.79440781</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>28.36501545</latitude>
+			<longitude>-097.79460493</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>131.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>28.35872469</latitude>
+			<longitude>-097.78745284</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>311.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>28.36796200</latitude>
+			<longitude>097.79614400</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>28.36591200</latitude>
+			<longitude>097.79627600</longitude>
+			<heading>31.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.36751900</latitude>
+			<longitude>-097.79502600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>28.36447100</latitude>
+			<longitude>-097.79528500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

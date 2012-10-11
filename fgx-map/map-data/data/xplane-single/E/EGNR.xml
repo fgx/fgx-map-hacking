@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGNR">
+		<linecode>1</linecode>
+		<elevation>45</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGNR</identifier>
+		<name>Hawarden</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>53.17121600</latitude>
+			<longitude>-002.98766989</longitude>
+			<threshold>299.92</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>53.18504400</latitude_end>
+			<longitude_end>-002.96765789</longitude_end>
+			<threshold_end>299.92</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2039.24845395</length-meters>
+			<length-feet>6215.62928762</length-feet>
+			<heading id="05 ">41.0134694264</heading>
+			<heading_end id="23 ">220.997449767</heading_end>
+			<threshold_lat id="05 ">53.1732494548</threshold_lat>
+			<threshold_lon id="05 ">-2.98472651016</threshold_lon>
+			<threshold_lat_end id="23 ">53.1830099821</threshold_lat_end>
+			<threshold_lon_end id="23 ">-2.97060099144</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>53.17511689</latitude>
+			<longitude>-002.98098144</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>40.9</orientation>
+			<glideslope>3.50</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>53.18078681</latitude>
+			<longitude>-002.97264607</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>220.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.17617403</latitude>
+			<longitude>002.98644248</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.17770600</latitude>
+			<longitude>002.98466788</longitude>
+			<heading>90.00</heading>
+			<name>Apron A</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.18259700</latitude>
+			<longitude>002.96460588</longitude>
+			<heading>70.00</heading>
+			<name>Apron C</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.18603100</latitude>
+			<longitude>002.97521888</longitude>
+			<heading>60.00</heading>
+			<name>Apron N</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.17597200</latitude>
+			<longitude>002.97640788</longitude>
+			<heading>41.70</heading>
+			<name>Beluga Load</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.18154500</latitude>
+			<longitude>002.97856288</longitude>
+			<heading>20.00</heading>
+			<name>Heli Pad</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.17913024</latitude>
+			<longitude>-002.97952689</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.17511945</latitude>
+			<longitude>-002.98555940</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.18317008</latitude>
+			<longitude>-002.97474043</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12495">124.95</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12880">128.8</frequency>
+			<description>unnamed entity</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12335">123.35</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

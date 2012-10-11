@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KOFF">
+		<linecode>1</linecode>
+		<elevation>1052</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KOFF</identifier>
+		<name>OFFUTT AFB</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>91.14</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>41.12945800</latitude>
+			<longitude>-095.92469200</longitude>
+			<threshold>305.11</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>41.10918600</latitude_end>
+			<longitude_end>-095.89174700</longitude_end>
+			<threshold_end>334.98</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3567.04856903</length-meters>
+			<length-feet>10872.3640384</length-feet>
+			<heading id="12 ">129.145619593</heading>
+			<heading_end id="30 ">309.123953994</heading_end>
+			<threshold_lat id="12 ">41.1277235858</threshold_lat>
+			<threshold_lon id="12 ">-95.9218741005</threshold_lon>
+			<threshold_lat_end id="30 ">41.1110892539</threshold_lat_end>
+			<threshold_lon_end id="30 ">-95.8948409401</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>41.12705695</latitude>
+			<longitude>-095.91950860</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>129.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>41.11314099</latitude>
+			<longitude>-095.89944944</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>309.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.12155600</latitude>
+			<longitude>-095.90579762</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.13093456</latitude>
+			<longitude>-095.92450182</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.10770949</latitude>
+			<longitude>-095.89193784</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12602">126.02</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12370">123.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>OMAHA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>OMAHA APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12450">124.5</frequency>
+			<description>OMAHA APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

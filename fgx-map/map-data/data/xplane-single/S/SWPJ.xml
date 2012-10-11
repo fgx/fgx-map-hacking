@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SWPJ">
+		<linecode>1</linecode>
+		<elevation>787</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SWPJ</identifier>
+		<name>Palmas</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>28.65</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-10.23401003</latitude>
+			<longitude>-048.36247633</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-10.23432417</latitude_end>
+			<longitude_end>-048.34418867</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2003.89649393</length-meters>
+			<length-feet>6107.87651349</length-feet>
+			<heading id="11 ">90.9919125962</heading>
+			<heading_end id="29 ">270.995161794</heading_end>
+			<threshold_lat id="11 ">-10.23401003</threshold_lat>
+			<threshold_lon id="11 ">-48.36247633</threshold_lon>
+			<threshold_lat_end id="29 ">-10.23432417</threshold_lat_end>
+			<threshold_lon_end id="29 ">-48.34418867</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>-10.23371464</latitude>
+			<longitude>-048.36064185</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>91.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>-10.23461966</latitude>
+			<longitude>-048.34602313</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>271.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-10.23326480</latitude>
+			<longitude>-048.35331651</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-10.23361882</latitude>
+			<longitude>-048.36273143</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-10.23471536</latitude>
+			<longitude>-048.34393355</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

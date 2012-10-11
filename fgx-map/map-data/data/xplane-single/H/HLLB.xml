@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="HLLB">
+		<linecode>1</linecode>
+		<elevation>433</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>HLLB</identifier>
+		<name>BENINA</name>
+		<runway end="33R" id="15L">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15L</number>
+			<latitude>32.11158100</latitude>
+			<longitude>020.26149400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>296.88</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33R</number_end>
+			<latitude_end>32.08351700</latitude_end>
+			<longitude_end>020.28015800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>294.13</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3576.05290888</length-meters>
+			<length-feet>10899.8092663</length-feet>
+			<heading id="15L">150.489907812</heading>
+			<heading_end id="33R">330.479990465</heading_end>
+			<threshold_lat id="15L">32.111581</threshold_lat>
+			<threshold_lon id="15L">20.261494</threshold_lon>
+			<threshold_lat_end id="33R">32.083517</threshold_lat_end>
+			<threshold_lon_end id="33R">20.280158</threshold_lon_end>
+		</runway>
+		<runway end="33L" id="15R">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15R</number>
+			<latitude>32.11019400</latitude>
+			<longitude>020.25870300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>293.22</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33L</number_end>
+			<latitude_end>32.08214700</latitude_end>
+			<longitude_end>020.27739700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>294.13</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3575.82162576</length-meters>
+			<length-feet>10899.1043153</length-feet>
+			<heading id="15R">150.435174338</heading>
+			<heading_end id="33L">330.425241431</heading_end>
+			<threshold_lat id="15R">32.110194</threshold_lat>
+			<threshold_lon id="15R">20.258703</threshold_lon>
+			<threshold_lat_end id="33L">32.082147</threshold_lat_end>
+			<threshold_lon_end id="33L">20.277397</threshold_lon_end>
+		</runway>
+		<lightingobject id="15L">
+			<linecode>21</linecode>
+			<latitude>32.10937485</latitude>
+			<longitude>020.26346849</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>150.6</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>15L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="15R">
+			<linecode>21</linecode>
+			<latitude>32.10882399</latitude>
+			<longitude>020.26016012</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>150.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33L">
+			<linecode>21</linecode>
+			<latitude>32.08351722</latitude>
+			<longitude>020.27594059</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>330.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33R">
+			<linecode>21</linecode>
+			<latitude>32.08490165</latitude>
+			<longitude>020.27873088</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>330.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33R</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>32.09441760</latitude>
+			<longitude>020.26035880</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.08214950</latitude>
+			<longitude>020.26843260</longitude>
+			<heading>00.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.09687043</latitude>
+			<longitude>020.26951292</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.11223362</latitude>
+			<longitude>020.26188504</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.11084693</latitude>
+			<longitude>020.25909330</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.08149412</latitude>
+			<longitude>020.27700669</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.08286443</latitude>
+			<longitude>020.27976695</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12700">127.0</frequency>
+			<description>ARR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12650">126.5</frequency>
+			<description>BENGHAZI APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12920">129.2</frequency>
+			<description>BENGHAZI APP</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12700">127.0</frequency>
+			<description>DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

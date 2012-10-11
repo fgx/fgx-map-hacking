@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZBYN">
+		<linecode>1</linecode>
+		<elevation>2575</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZBYN</identifier>
+		<name>WUSU</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>37.75559400</latitude>
+			<longitude>112.61388100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>59.44</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>37.73820000</latitude_end>
+			<longitude_end>112.64297200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.44</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3209.47225742</length-meters>
+			<length-feet>9782.47144062</length-feet>
+			<heading id="13 ">126.988360761</heading>
+			<heading_end id="31 ">306.970551993</heading_end>
+			<threshold_lat id="13 ">37.755594</threshold_lat>
+			<threshold_lon id="13 ">112.613881</threshold_lon>
+			<threshold_lat_end id="31 ">37.7382</threshold_lat_end>
+			<threshold_lon_end id="31 ">112.642972</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>37.75426882</latitude>
+			<longitude>112.61693931</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>127.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>37.73967231</latitude>
+			<longitude>112.63967021</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>307.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.74803368</latitude>
+			<longitude>112.62951110</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.75632457</latitude>
+			<longitude>112.61393584</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.73746944</latitude>
+			<longitude>112.64291689</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11825">118.25</frequency>
+			<description>TAIYUAN TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12435">124.35</frequency>
+			<description>TAIYUAN TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

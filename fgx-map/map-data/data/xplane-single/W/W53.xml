@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="W53 ">
+		<linecode>1</linecode>
+		<elevation>32</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>W53</identifier>
+		<name>Canaan Air Base</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>12.19</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>35.08675164</latitude>
+			<longitude>-077.16551282</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>35.08745558</latitude_end>
+			<longitude_end>-077.15939164</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>563.63523231</length-meters>
+			<length-feet>1717.96018808</length-feet>
+			<heading id="09 ">82.0372994816</heading>
+			<heading_end id="27 ">262.033780898</heading_end>
+			<threshold_lat id="09 ">35.08675164</threshold_lat>
+			<threshold_lon id="09 ">-77.16551282</threshold_lon>
+			<threshold_lat_end id="27 ">35.08745558</threshold_lat_end>
+			<threshold_lon_end id="27 ">-77.15939164</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>35.08722583</latitude>
+			<longitude>-077.16337311</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>82.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>35.08698150</latitude>
+			<longitude>-077.16153141</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>262.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.08748389</latitude>
+			<longitude>-077.16251755</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.08689935</latitude>
+			<longitude>-077.16567360</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.08730787</latitude>
+			<longitude>-077.15923087</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

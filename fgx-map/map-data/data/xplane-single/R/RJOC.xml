@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJOC">
+		<linecode>1</linecode>
+		<elevation>15</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJOC</identifier>
+		<name>IZUMO</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>35.40911900</latitude>
+			<longitude>132.88050000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>65.53</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>35.41828300</latitude_end>
+			<longitude_end>132.89946400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>65.53</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="5">SSALR</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2000.1262126</length-meters>
+			<length-feet>6096.384696</length-feet>
+			<heading id="07 ">59.4526771485</heading>
+			<heading_end id="25 ">239.441687964</heading_end>
+			<threshold_lat id="07 ">35.409119</threshold_lat>
+			<threshold_lon id="07 ">132.8805</threshold_lon>
+			<threshold_lat_end id="25 ">35.418283</threshold_lat_end>
+			<threshold_lon_end id="25 ">132.899464</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>35.41038198</latitude>
+			<longitude>132.88214845</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>59.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>35.41702028</latitude>
+			<longitude>132.89781506</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>239.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>35.41492347</latitude>
+			<longitude>132.88909082</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.40943568</latitude>
+			<longitude>132.87969048</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.41796619</latitude>
+			<longitude>132.90027354</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>MIHO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

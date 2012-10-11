@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMQT">
+		<linecode>1</linecode>
+		<elevation>1419</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KMQT</identifier>
+		<name>Marquette County</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>46.53177888</latitude>
+			<longitude>-087.57563722</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>46.53582833</latitude_end>
+			<longitude_end>-087.55049138</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1980.88735781</length-meters>
+			<length-feet>6037.74466661</length-feet>
+			<heading id="08 ">76.8742818961</heading>
+			<heading_end id="26 ">256.856031539</heading_end>
+			<threshold_lat id="08 ">46.53177888</threshold_lat>
+			<threshold_lon id="08 ">-87.57563722</threshold_lon>
+			<threshold_lat_end id="26 ">46.53582833</threshold_lat_end>
+			<threshold_lon_end id="26 ">-87.55049138</threshold_lon_end>
+		</runway>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>46.53048166</latitude>
+			<longitude>-087.56003888</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>46.53849972</latitude_end>
+			<longitude_end>-087.55738305</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>914.291186158</length-meters>
+			<length-feet>2786.75953541</length-feet>
+			<heading id="01 ">12.876781508</heading>
+			<heading_end id="19 ">192.874853937</heading_end>
+			<threshold_lat id="01 ">46.53048166</threshold_lat>
+			<threshold_lon id="01 ">-87.56003888</threshold_lon>
+			<threshold_lat_end id="19 ">46.53849972</threshold_lat_end>
+			<threshold_lon_end id="19 ">-87.55738305</threshold_lon_end>
+		</runway>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>46.53505156</latitude>
+			<longitude>-087.55291431</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>256.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.53520680</latitude>
+			<longitude>-087.56354454</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53034933</latitude>
+			<longitude>-087.56054070</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53228593</latitude>
+			<longitude>-087.57642415</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53863204</latitude>
+			<longitude>-087.55688114</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.53532110</latitude>
+			<longitude>-087.54970462</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

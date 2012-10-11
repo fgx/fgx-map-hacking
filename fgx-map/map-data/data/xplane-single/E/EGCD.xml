@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGCD">
+		<linecode>1</linecode>
+		<elevation>295</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGCD</identifier>
+		<name>Manchester Woodford</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>53.33388132</latitude>
+			<longitude>-002.16493750</longitude>
+			<threshold>109.12</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="4">UK-style non-precision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>53.34203174</latitude_end>
+			<longitude_end>-002.13342363</longitude_end>
+			<threshold_end>527.91</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="5">UK-style precision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2286.79265875</length-meters>
+			<length-feet>6970.14402388</length-feet>
+			<heading id="07 ">66.6430297077</heading>
+			<heading_end id="25 ">246.617750183</heading_end>
+			<threshold_lat id="07 ">53.3342700298</threshold_lat>
+			<threshold_lon id="07 ">-2.16343372368</threshold_lon>
+			<threshold_lat_end id="25 ">53.3401490204</threshold_lat_end>
+			<threshold_lon_end id="25 ">-2.14069834022</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>53.33533668</latitude>
+			<longitude>-002.16124409</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>67.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>53.33878026</latitude>
+			<longitude>-002.14405570</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.3</orientation>
+			<glideslope>3.60</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>53.34012708</latitude>
+			<longitude>-002.13908931</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.33903790</latitude>
+			<longitude>-002.15390355</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.33968015</latitude>
+			<longitude>-002.14675241</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12070">120.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13075">130.75</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

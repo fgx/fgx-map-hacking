@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMMA">
+		<linecode>1</linecode>
+		<elevation>25</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>MMMA</identifier>
+		<name>GENERAL SERVANDO CANALES INTL</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>25.77941100</latitude>
+			<longitude>-097.52994700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>56.39</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>25.76037800</latitude_end>
+			<longitude_end>-097.52067200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>56.39</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2304.70415342</length-meters>
+			<length-feet>7024.73825963</length-feet>
+			<heading id="15 ">156.192754201</heading>
+			<heading_end id="33 ">336.188721821</heading_end>
+			<threshold_lat id="15 ">25.779411</threshold_lat>
+			<threshold_lon id="15 ">-97.529947</threshold_lon>
+			<threshold_lat_end id="33 ">25.760378</threshold_lat_end>
+			<threshold_lon_end id="33 ">-97.520672</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>25.77792569</latitude>
+			<longitude>-097.52873180</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>156.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>25.76186339</latitude>
+			<longitude>-097.52188690</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>336.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>25.77206000</latitude>
+			<longitude>097.53035700</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>25.77012800</latitude>
+			<longitude>097.53035000</longitude>
+			<heading>90.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>25.77022700</latitude>
+			<longitude>-097.52446700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.77974400</latitude>
+			<longitude>-097.52910500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.76004500</latitude>
+			<longitude>-097.52151400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>MATAMOROS APP/TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

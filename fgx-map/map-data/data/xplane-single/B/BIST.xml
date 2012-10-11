@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="BIST">
+		<linecode>1</linecode>
+		<elevation>42</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>BIST</identifier>
+		<name>Stykkisholmur</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>32.92</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>65.05479048</latitude>
+			<longitude>-022.80447015</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>65.06183252</latitude_end>
+			<longitude_end>-022.78456865</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1222.32272952</length-meters>
+			<length-feet>3725.63967959</length-feet>
+			<heading id="07 ">50.042810762</heading>
+			<heading_end id="25 ">230.024765327</heading_end>
+			<threshold_lat id="07 ">65.05479048</threshold_lat>
+			<threshold_lon id="07 ">-22.80447015</threshold_lon>
+			<threshold_lat_end id="25 ">65.06183252</threshold_lat_end>
+			<threshold_lon_end id="25 ">-22.78456865</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>65.05621272</latitude>
+			<longitude>-022.80172906</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>49.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>65.06041064</latitude>
+			<longitude>-022.78731158</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>230.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>65.05910577</latitude>
+			<longitude>-022.79610118</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.05494038</latitude>
+			<longitude>-022.80568553</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.06168245</latitude>
+			<longitude>-022.78335305</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="19N ">
+		<linecode>1</linecode>
+		<elevation>150</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>19N</identifier>
+		<name>CAMDEN CO</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>13.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>39.77506900</latitude>
+			<longitude>-074.95120300</longitude>
+			<threshold>226.77</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>39.78178900</latitude_end>
+			<longitude_end>-074.94441900</longitude_end>
+			<threshold_end>73.15</threshold_end>
+			<overrrun_end>213.36</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>945.764983083</length-meters>
+			<length-feet>2882.69166844</length-feet>
+			<heading id="05 ">37.9183371661</heading>
+			<heading_end id="23 ">217.913996624</heading_end>
+			<threshold_lat id="05 ">39.7766802241</threshold_lat>
+			<threshold_lon id="05 ">-74.9495763342</threshold_lon>
+			<threshold_lat_end id="23 ">39.7812692267</threshold_lat_end>
+			<threshold_lon_end id="23 ">-74.9449437032</threshold_lon_end>
+		</runway>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>39.77970423</latitude>
+			<longitude>-074.94614062</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>217.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>39.77869224</latitude>
+			<longitude>-074.94825492</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.77508412</latitude>
+			<longitude>-074.95149037</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>39.78177386</latitude>
+			<longitude>-074.94413160</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12415">124.15</frequency>
+			<description>MC GUIRE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

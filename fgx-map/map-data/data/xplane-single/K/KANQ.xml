@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KANQ">
+		<linecode>1</linecode>
+		<elevation>995</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KANQ</identifier>
+		<name>TRI STATE STEUBEN CO</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>41.63545800</latitude>
+			<longitude>-085.08955000</longitude>
+			<threshold>164.59</threshold>
+			<overrrun>243.84</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>41.64394700</latitude_end>
+			<longitude_end>-085.07740600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1382.99687861</length-meters>
+			<length-feet>4215.37448599</length-feet>
+			<heading id="05 ">47.0244154488</heading>
+			<heading_end id="23 ">227.016346438</heading_end>
+			<threshold_lat id="05 ">41.6364681883</threshold_lat>
+			<threshold_lon id="05 ">-85.088104724</threshold_lon>
+			<threshold_lat_end id="23 ">41.643947</threshold_lat_end>
+			<threshold_lon_end id="23 ">-85.077406</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>41.64022719</latitude>
+			<longitude>-085.08413640</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.63554181</latitude>
+			<longitude>-085.09003182</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>41.64386314</latitude>
+			<longitude>-085.07692413</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12307">123.07</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13215">132.15</frequency>
+			<description>FORT WAYNE APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12720">127.2</frequency>
+			<description>FORT WAYNE APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

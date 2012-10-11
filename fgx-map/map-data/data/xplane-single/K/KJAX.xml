@@ -1,0 +1,1626 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KJAX">
+		<linecode>1</linecode>
+		<elevation>30</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KJAX</identifier>
+		<name>Jacksonville Intl</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>30.49621700</latitude>
+			<longitude>-081.69996700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>121.92</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>30.50537200</latitude_end>
+			<longitude_end>-081.67002800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>121.92</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="8">MALSR</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3048.02743832</length-meters>
+			<length-feet>9290.387632</length-feet>
+			<heading id="07 ">70.557856884</heading>
+			<heading_end id="25 ">250.542661335</heading_end>
+			<threshold_lat id="07 ">30.496217</threshold_lat>
+			<threshold_lon id="07 ">-81.699967</threshold_lon>
+			<threshold_lat_end id="25 ">30.505372</threshold_lat_end>
+			<threshold_lon_end id="25 ">-81.670028</threshold_lon_end>
+		</runway>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>30.49216347</latitude>
+			<longitude>-081.70083353</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="8">MALSR</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>30.47839753</latitude_end>
+			<longitude_end>-081.68226178</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2347.03228516</length-meters>
+			<length-feet>7153.75440518</length-feet>
+			<heading id="13 ">130.563347278</heading>
+			<heading_end id="31 ">310.553925513</heading_end>
+			<threshold_lat id="13 ">30.49216347</threshold_lat>
+			<threshold_lon id="13 ">-81.70083353</threshold_lon>
+			<threshold_lat_end id="31 ">30.47839753</threshold_lat_end>
+			<threshold_lon_end id="31 ">-81.68226178</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>30.49737520</latitude>
+			<longitude>-081.69777606</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>70.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>30.49090782</latitude>
+			<longitude>-081.69839522</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>130.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>30.50411517</latitude>
+			<longitude>-081.67251410</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>250.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>30.47958094</latitude>
+			<longitude>-081.68462917</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>310.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>30.49322754</latitude>
+			<longitude>081.68283847</longitude>
+			<height>180</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.48615885</latitude>
+			<longitude>081.68499281</longitude>
+			<heading>99.20</heading>
+			<name>Cargo Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.48603619</latitude>
+			<longitude>081.68208008</longitude>
+			<heading>79.00</heading>
+			<name>Cargo Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.49293872</latitude>
+			<longitude>081.68614712</longitude>
+			<heading>03.47</heading>
+			<name>Gate A3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.49296807</latitude>
+			<longitude>081.69985071</longitude>
+			<heading>20.70</heading>
+			<name>Hold Short Rwy 13</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.50421183</latitude>
+			<longitude>081.66974055</longitude>
+			<heading>40.60</heading>
+			<name>Hold Short Rwy 25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.47958231</latitude>
+			<longitude>081.68171143</longitude>
+			<heading>20.70</heading>
+			<name>Hold Short Rwy 31</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.49515262</latitude>
+			<longitude>081.69935143</longitude>
+			<heading>40.60</heading>
+			<name>Hold Short Rwy 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.49748454</latitude>
+			<longitude>081.68206653</longitude>
+			<heading>68.90</heading>
+			<name>SheltAir FBO</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>30.49672392</latitude>
+			<longitude>081.67819872</longitude>
+			<heading>87.22</heading>
+			<name>Signature FBO</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.49366308</latitude>
+			<longitude>-081.67686848</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.48155835</latitude>
+			<longitude>-081.68498335</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.49583820</latitude>
+			<longitude>-081.69811020</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.49436036</latitude>
+			<longitude>-081.69518688</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.49234909</latitude>
+			<longitude>-081.69953358</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.50158651</latitude>
+			<longitude>-081.67940977</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.50425474</latitude>
+			<longitude>-081.67045879</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48041792</latitude>
+			<longitude>-081.68444007</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49013987</latitude>
+			<longitude>-081.69866115</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50477544</latitude>
+			<longitude>-081.67316410</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}1{@@,@B}9</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50412977</latitude>
+			<longitude>-081.67290066</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}1{@@,@B}9</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48835808</latitude>
+			<longitude>-081.69625001</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48220821</latitude>
+			<longitude>-081.68685509</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50385650</latitude>
+			<longitude>-081.67617433</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}2{@@,@B}8</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48396105</latitude>
+			<longitude>-081.68921792</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48656920</latitude>
+			<longitude>-081.69383647</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50229235</latitude>
+			<longitude>-081.67891271</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}3{@@,@B}7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50293427</latitude>
+			<longitude>-081.67917861</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}3{@@,@B}7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48478101</latitude>
+			<longitude>-081.69142516</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48578370</latitude>
+			<longitude>-081.69167937</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50202275</latitude>
+			<longitude>-081.68217719</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}4{@@,@B}6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50137878</latitude>
+			<longitude>-081.68191369</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}4{@@,@B}6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48299201</latitude>
+			<longitude>-081.68900868</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}5</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50110072</latitude>
+			<longitude>-081.68517668</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}5{@@,@B}5</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48935629</latitude>
+			<longitude>-081.69649874</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48120407</latitude>
+			<longitude>-081.68659706</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}6</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49954204</latitude>
+			<longitude>-081.68790958</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}6{@@,@B}4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50018342</latitude>
+			<longitude>-081.68817486</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}6{@@,@B}4</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.47941382</latitude>
+			<longitude>-081.68418303</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49114464</latitude>
+			<longitude>-081.69891234</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}7</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49926552</latitude>
+			<longitude>-081.69117729</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}7{@@,@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49862155</latitude>
+			<longitude>-081.69091139</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}7{@@,@B}3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49770974</latitude>
+			<longitude>-081.69390912</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}8{@@,@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49835342</latitude>
+			<longitude>-081.69417916</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}8{@@,@B}2</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49743144</latitude>
+			<longitude>-081.69718134</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}9{@@,@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49678690</latitude>
+			<longitude>-081.69691694</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@B}9{@@,@B}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50383125</latitude>
+			<longitude>-081.67012656</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50341464</latitude>
+			<longitude>-081.67152338</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50329892</latitude>
+			<longitude>-081.67034593</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50190705</latitude>
+			<longitude>-081.67499028</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50201907</latitude>
+			<longitude>-081.67620369</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50065212</latitude>
+			<longitude>-081.68058561</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50055183</latitude>
+			<longitude>-081.67932762</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49931025</latitude>
+			<longitude>-081.68497802</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}H{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49921389</latitude>
+			<longitude>-081.68379931</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}H{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49687519</latitude>
+			<longitude>-081.69308432</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}J{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49693895</latitude>
+			<longitude>-081.69119374</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y,^l}J{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49511029</latitude>
+			<longitude>-081.69869567</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y}K{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50126774</latitude>
+			<longitude>-081.67469281</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y,^l}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50139376</latitude>
+			<longitude>-081.67581414</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y,^l}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49992692</latitude>
+			<longitude>-081.67908587</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y,^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50004650</latitude>
+			<longitude>-081.68020956</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y,^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49846154</latitude>
+			<longitude>-081.68399540</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y,^l}H{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49892126</latitude>
+			<longitude>-081.68392330</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y}FBO{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50453004</latitude>
+			<longitude>-081.67011694</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}C{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50426051</latitude>
+			<longitude>-081.66947449</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}C{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50363452</latitude>
+			<longitude>-081.66922222</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}C{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50410981</latitude>
+			<longitude>-081.67150612</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50245499</latitude>
+			<longitude>-081.67543348</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50382353</latitude>
+			<longitude>-081.67082497</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50302753</latitude>
+			<longitude>-081.67107594</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50083761</latitude>
+			<longitude>-081.67534839</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50148077</latitude>
+			<longitude>-081.67566683</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50181466</latitude>
+			<longitude>-081.67516486</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50322177</latitude>
+			<longitude>-081.67057874</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}E{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50270991</latitude>
+			<longitude>-081.67613389</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}F{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50110716</latitude>
+			<longitude>-081.68055637</longitude>
+			<orientation>310.65</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50126434</latitude>
+			<longitude>-081.67970895</longitude>
+			<orientation>138.23</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50014839</latitude>
+			<longitude>-081.68000442</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49951032</latitude>
+			<longitude>-081.67969472</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50047468</latitude>
+			<longitude>-081.67952460</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49811513</latitude>
+			<longitude>-081.67926401</longitude>
+			<orientation>13.82</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}G1{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49880326</latitude>
+			<longitude>-081.67893447</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}G{@Y,^l}G1{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49879582</latitude>
+			<longitude>-081.67966731</longitude>
+			<orientation>93.46</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@L}G1{@Y,^l}G{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49978330</latitude>
+			<longitude>-081.68506718</longitude>
+			<orientation>316.02</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}H{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49980356</latitude>
+			<longitude>-081.68418119</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}H{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49883113</latitude>
+			<longitude>-081.68476493</longitude>
+			<orientation>8.04</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}H{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49809821</latitude>
+			<longitude>-081.68488446</longitude>
+			<orientation>8.04</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}H{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49782226</latitude>
+			<longitude>-081.69228907</longitude>
+			<orientation>6.65</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}J{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49754147</latitude>
+			<longitude>-081.69158961</longitude>
+			<orientation>164.61</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}J{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49650539</latitude>
+			<longitude>-081.69176720</longitude>
+			<orientation>328.76</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}J{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49447908</latitude>
+			<longitude>-081.69842707</longitude>
+			<orientation>351.95</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}K{@Y,^l}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49294092</latitude>
+			<longitude>-081.69815350</longitude>
+			<orientation>185.60</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}K{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49252320</latitude>
+			<longitude>-081.69997375</longitude>
+			<orientation>220.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}L{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49546950</latitude>
+			<longitude>-081.69974048</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}L{@R}7-25{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49176348</latitude>
+			<longitude>-081.70270650</longitude>
+			<orientation>80.95</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}M1{@R}13-31{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49159699</latitude>
+			<longitude>-081.70379276</longitude>
+			<orientation>80.95</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}M1{@R}ILS</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49151887</latitude>
+			<longitude>-081.70145037</longitude>
+			<orientation>30.96</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}M2{@R}13-31{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48950209</latitude>
+			<longitude>-081.69886829</longitude>
+			<orientation>59.15</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}M3{@R}13-31{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49286454</latitude>
+			<longitude>-081.69931068</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y,^l}L{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48305536</latitude>
+			<longitude>-081.68458010</longitude>
+			<orientation>249.11</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48237060</latitude>
+			<longitude>-081.68516619</longitude>
+			<orientation>68.88</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48946501</latitude>
+			<longitude>-081.69383347</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y,^l}P{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48855014</latitude>
+			<longitude>-081.69342364</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y,^l}P{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49221958</latitude>
+			<longitude>-081.69832093</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y}K{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48259713</latitude>
+			<longitude>-081.68449192</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y}S{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48256013</latitude>
+			<longitude>-081.68526039</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}N{@Y}T{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48816473</latitude>
+			<longitude>-081.69378867</longitude>
+			<orientation>191.10</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}P{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48877235</latitude>
+			<longitude>-081.69436478</longitude>
+			<orientation>8.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}P{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48911111</latitude>
+			<longitude>-081.69304929</longitude>
+			<orientation>227.20</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}P{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48415723</latitude>
+			<longitude>-081.68882473</longitude>
+			<orientation>265.49</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}Q{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48358974</latitude>
+			<longitude>-081.68766613</longitude>
+			<orientation>189.96</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}R{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48393491</latitude>
+			<longitude>-081.68813291</longitude>
+			<orientation>11.33</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}R{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48525835</latitude>
+			<longitude>-081.68728416</longitude>
+			<orientation>190.49</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}R{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48160862</latitude>
+			<longitude>-081.68543227</longitude>
+			<orientation>247.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}T{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.47911143</latitude>
+			<longitude>-081.68179575</longitude>
+			<orientation>220.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}U{@R}31-13{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50002042</latitude>
+			<longitude>-081.68419990</longitude>
+			<orientation>8.48</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@R}7-25{@L}H{@@,safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49296288</latitude>
+			<longitude>-081.69940398</longitude>
+			<orientation>220.69</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@R}ILS</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49520500</latitude>
+			<longitude>-081.69908353</longitude>
+			<orientation>160.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}A{@L}L{@Y}L{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49893652</latitude>
+			<longitude>-081.68418953</longitude>
+			<orientation>188.04</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}B{@L}H</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49835070</latitude>
+			<longitude>-081.68360505</longitude>
+			<orientation>340.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50321654</latitude>
+			<longitude>-081.66986716</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}C{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50279222</latitude>
+			<longitude>-081.67124159</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}E{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50335005</latitude>
+			<longitude>-081.67552761</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}F</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49875352</latitude>
+			<longitude>-081.68295719</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}FBO{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50102745</latitude>
+			<longitude>-081.68307902</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}H</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49502964</latitude>
+			<longitude>-081.69740153</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}K{@L}A</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49326762</latitude>
+			<longitude>-081.69895763</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}K{@L}N</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49616614</latitude>
+			<longitude>-081.69902818</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}L</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48937099</latitude>
+			<longitude>-081.69764347</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}M3</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49155669</latitude>
+			<longitude>-081.70061441</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}MIL</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49358654</latitude>
+			<longitude>-081.69910372</longitude>
+			<orientation>190.90</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}N{@L}L{@Y}L{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48817278</latitude>
+			<longitude>-081.69482397</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}P</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48527062</latitude>
+			<longitude>-081.68816537</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}R{@L}N{@Y}Q{^rd}R{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48357018</latitude>
+			<longitude>-081.68580562</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}S{@L}N</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48205218</latitude>
+			<longitude>-081.68661491</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}T</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48188676</latitude>
+			<longitude>-081.68432449</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}T{@L}N</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.47921748</latitude>
+			<longitude>-081.68276016</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^l}U</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50418448</latitude>
+			<longitude>-081.67500998</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y,^ld}ARREST</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49736719</latitude>
+			<longitude>-081.69510739</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y,^ld}ARREST</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49870153</latitude>
+			<longitude>-081.69063725</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}J</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49426311</latitude>
+			<longitude>-081.69946022</longitude>
+			<orientation>12.92</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}L{@L}L{@Y}A{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49314912</latitude>
+			<longitude>-081.70001600</longitude>
+			<orientation>40.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}L{@L}L{@Y}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48489475</latitude>
+			<longitude>-081.69037740</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}Q</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48398264</latitude>
+			<longitude>-081.68723993</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}Q|{^ld}R{@L}N{@Y}R{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48281576</latitude>
+			<longitude>-081.68759388</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}R</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48458744</latitude>
+			<longitude>-081.68862328</longitude>
+			<orientation>84.04</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y,^lu}R{@L}Q{@Y,^l}N{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48445115</latitude>
+			<longitude>-081.68102492</longitude>
+			<orientation>100.24</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48432038</latitude>
+			<longitude>-081.68112672</longitude>
+			<orientation>77.53</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48423581</latitude>
+			<longitude>-081.68108920</longitude>
+			<orientation>11.34</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49569479</latitude>
+			<longitude>-081.68470409</longitude>
+			<orientation>14.78</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49651411</latitude>
+			<longitude>-081.68477147</longitude>
+			<orientation>149.23</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49622669</latitude>
+			<longitude>-081.68482910</longitude>
+			<orientation>52.14</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50280365</latitude>
+			<longitude>-081.66951558</longitude>
+			<orientation>98.85</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@Y,no-entry}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50358850</latitude>
+			<longitude>-081.67476501</longitude>
+			<orientation>250.50</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}ARREST{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49795883</latitude>
+			<longitude>-081.69535971</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}ARREST{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50486295</latitude>
+			<longitude>-081.67055608</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}C{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50445438</latitude>
+			<longitude>-081.67194064</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}E{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50304039</latitude>
+			<longitude>-081.67657102</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}F{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.50128284</latitude>
+			<longitude>-081.68226670</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}G{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49988961</latitude>
+			<longitude>-081.68685475</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}H{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49818754</latitude>
+			<longitude>-081.69244125</longitude>
+			<orientation>70.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}J{^rd}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.49203368</latitude>
+			<longitude>-081.70013761</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}L{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48998998</latitude>
+			<longitude>-081.69845127</longitude>
+			<orientation>130.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}M3{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>30.48708521</latitude>
+			<longitude>-081.69324035</longitude>
+			<orientation>310.70</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}P{^ru}</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12585">125.85</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12295">122.95</frequency>
+			<description>UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="11950">119.5</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11800">118.0</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11900">119.0</frequency>
+			<description>APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

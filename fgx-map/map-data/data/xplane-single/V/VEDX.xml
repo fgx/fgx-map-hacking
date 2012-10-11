@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VEDX">
+		<linecode>1</linecode>
+		<elevation>200</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VEDX</identifier>
+		<name>KALAIKUNDA</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>22.35182200</latitude>
+			<longitude>087.21274700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>365.76</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>22.32719400</latitude_end>
+			<longitude_end>087.21624700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>365.76</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2750.90903771</length-meters>
+			<length-feet>8384.77074695</length-feet>
+			<heading id="17 ">172.46946246</heading>
+			<heading_end id="35 ">352.468132131</heading_end>
+			<threshold_lat id="17 ">22.351822</threshold_lat>
+			<threshold_lon id="17 ">87.212747</threshold_lon>
+			<threshold_lat_end id="35 ">22.327194</threshold_lat_end>
+			<threshold_lon_end id="35 ">87.216247</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>22.35008660</latitude>
+			<longitude>087.21340448</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>172.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>22.32892941</latitude>
+			<longitude>087.21558967</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>352.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>22.33969815</latitude>
+			<longitude>087.21604059</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>22.35231038</latitude>
+			<longitude>087.21335064</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>22.32670563</latitude>
+			<longitude>087.21564346</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

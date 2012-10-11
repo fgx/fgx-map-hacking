@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="USDD">
+		<linecode>1</linecode>
+		<elevation>219</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>USDD</identifier>
+		<name>SALEKHARD</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>66.58491900</latitude>
+			<longitude>066.58413900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>45.72</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>66.59658600</latitude_end>
+			<longitude_end>066.63794400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>45.72</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2717.98761189</length-meters>
+			<length-feet>8284.42624105</length-feet>
+			<heading id="04 ">61.4252078678</heading>
+			<heading_end id="22 ">241.375831529</heading_end>
+			<threshold_lat id="04 ">66.584919</threshold_lat>
+			<threshold_lon id="04 ">66.584139</threshold_lon>
+			<threshold_lat_end id="22 ">66.596586</threshold_lat_end>
+			<threshold_lon_end id="22 ">66.637944</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>66.58644901</latitude>
+			<longitude>066.58906006</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>61.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>66.59505029</latitude>
+			<longitude>066.63298318</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>241.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>66.59202785</latitude>
+			<longitude>066.60928003</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.58526443</latitude>
+			<longitude>066.58247640</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.59624000</latitude>
+			<longitude>066.63960664</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>START</description>
+		</atc>
+	</airport>
+</PropertyList>

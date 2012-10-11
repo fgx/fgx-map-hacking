@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENNO">
+		<linecode>1</linecode>
+		<elevation>63</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENNO</identifier>
+		<name>Notodden</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>59.56945000</latitude>
+			<longitude>009.20205600</longitude>
+			<threshold>624.84</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>59.56191700</latitude_end>
+			<longitude_end>009.22172500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1393.0412309</length-meters>
+			<length-feet>4245.98967179</length-feet>
+			<heading id="12 ">127.052770639</heading>
+			<heading_end id="30 ">307.035811822</heading_end>
+			<threshold_lat id="12 ">59.5660701611</threshold_lat>
+			<threshold_lon id="12 ">9.21087752349</threshold_lon>
+			<threshold_lat_end id="30 ">59.561917</threshold_lat_end>
+			<threshold_lon_end id="30 ">9.221725</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>59.56525385</latitude>
+			<longitude>009.21416472</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>127.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>59.56550700</latitude>
+			<longitude>009.21910900</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>59.56442000</latitude>
+			<longitude>009.21946000</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>59.56447000</latitude>
+			<longitude>009.21662700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.56697000</latitude>
+			<longitude>009.21036900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>59.56196600</latitude>
+			<longitude>009.21962300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11880">118.8</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

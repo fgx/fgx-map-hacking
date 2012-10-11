@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UKFK">
+		<linecode>1</linecode>
+		<elevation>152</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UKFK</identifier>
+		<name>KERCH INTL</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>35.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>45.37067500</latitude>
+			<longitude>036.39266900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>25.91</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>45.37506100</latitude_end>
+			<longitude_end>036.41285300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>33.53</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1654.52552324</length-meters>
+			<length-feet>5042.99379483</length-feet>
+			<heading id="07 ">72.8724438713</heading>
+			<heading_end id="25 ">252.85807905</heading_end>
+			<threshold_lat id="07 ">45.370675</threshold_lat>
+			<threshold_lon id="07 ">36.392669</threshold_lon>
+			<threshold_lat_end id="25 ">45.375061</threshold_lat_end>
+			<threshold_lon_end id="25 ">36.412853</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.37392192</latitude>
+			<longitude>036.40229453</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.37103244</latitude>
+			<longitude>036.39204151</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.37470344</latitude>
+			<longitude>036.41348041</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12800">128.0</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UKLT">
+		<linecode>1</linecode>
+		<elevation>1072</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UKLT</identifier>
+		<name>TERNOPIL INTL</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>42.67</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>49.52642800</latitude>
+			<longitude>025.68687800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>45.72</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>49.52202800</latitude_end>
+			<longitude_end>025.71323600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>45.72</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1970.08676646</length-meters>
+			<length-feet>6004.82446417</length-feet>
+			<heading id="10 ">104.392815059</heading>
+			<heading_end id="28 ">284.372765041</heading_end>
+			<threshold_lat id="10 ">49.526428</threshold_lat>
+			<threshold_lon id="10 ">25.686878</threshold_lon>
+			<threshold_lat_end id="28 ">49.522028</threshold_lat_end>
+			<threshold_lon_end id="28 ">25.713236</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.52553145</latitude>
+			<longitude>025.70057235</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.52708148</latitude>
+			<longitude>025.68652587</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.52137444</latitude>
+			<longitude>025.71358775</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13270">132.7</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

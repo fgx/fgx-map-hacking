@@ -1,0 +1,181 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FKKD">
+		<linecode>1</linecode>
+		<elevation>33</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>FKKD</identifier>
+		<name>Douala</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>04.01186700</latitude>
+			<longitude>009.70804400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>49.99</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>04.00024200</latitude_end>
+			<longitude_end>009.73097500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>49.99</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2852.54284678</length-meters>
+			<length-feet>8694.55059698</length-feet>
+			<heading id="12 ">116.785982316</heading>
+			<heading_end id="30 ">296.784380313</heading_end>
+			<threshold_lat id="12 ">4.011867</threshold_lat>
+			<threshold_lon id="12 ">9.708044</threshold_lon>
+			<threshold_lat_end id="30 ">4.000242</threshold_lat_end>
+			<threshold_lon_end id="30 ">9.730975</threshold_lon_end>
+		</runway>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>44.81</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>04.01233810</latitude>
+			<longitude>009.70844647</longitude>
+			<threshold>106.68</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>04.03238390</latitude_end>
+			<longitude_end>009.71868553</longitude_end>
+			<threshold_end>106.68</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2491.26246036</length-meters>
+			<length-feet>7593.36797917</length-feet>
+			<heading id="03 ">27.1555595474</heading>
+			<heading_end id="21 ">207.15484132</heading_end>
+			<threshold_lat id="03 ">4.0131964918</threshold_lat>
+			<threshold_lon id="03 ">9.70888492404</threshold_lon>
+			<threshold_lat_end id="21 ">4.03152550285</threshold_lat_end>
+			<threshold_lon_end id="21 ">9.71824707688</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>04.01497861</latitude>
+			<longitude>009.70934558</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>27.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>04.01140906</latitude>
+			<longitude>009.70983459</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>116.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>04.02974341</latitude>
+			<longitude>009.71778636</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>207.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>04.01183200</latitude>
+			<longitude>009.71690600</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Douala Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.01768700</latitude>
+			<longitude>009.71004200</longitude>
+			<heading>67.00</heading>
+			<name>GA Ramp 23</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.01046100</latitude>
+			<longitude>009.71636400</longitude>
+			<heading>33.00</heading>
+			<name>Gate C 7</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.00732170</latitude>
+			<longitude>009.72015424</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.01225279</latitude>
+			<longitude>009.70772396</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.01259379</latitude>
+			<longitude>009.70795775</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.03246920</latitude>
+			<longitude>009.71940806</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>03.99951521</latitude>
+			<longitude>009.73106123</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>DOUALA TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

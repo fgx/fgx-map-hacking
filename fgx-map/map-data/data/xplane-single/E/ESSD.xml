@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ESSD">
+		<linecode>1</linecode>
+		<elevation>503</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ESSD</identifier>
+		<name>Borlange</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>60.42908900</latitude>
+			<longitude>015.49987800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>60.41509700</latitude_end>
+			<longitude_end>015.53083900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>34.44</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2310.71144974</length-meters>
+			<length-feet>7043.04849882</length-feet>
+			<heading id="14 ">132.442426499</heading>
+			<heading_end id="32 ">312.415500171</heading_end>
+			<threshold_lat id="14 ">60.429089</threshold_lat>
+			<threshold_lon id="14 ">15.499878</threshold_lon>
+			<threshold_lat_end id="32 ">60.415097</threshold_lat_end>
+			<threshold_lon_end id="32 ">15.530839</threshold_lon_end>
+		</runway>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>49.68</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>60.42836836</latitude>
+			<longitude>015.49064441</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>60.42513164</latitude_end>
+			<longitude_end>015.50200359</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>722.155635599</length-meters>
+			<length-feet>2201.1303773</length-feet>
+			<heading id="12 ">119.96426543</heading>
+			<heading_end id="30 ">299.954386063</heading_end>
+			<threshold_lat id="12 ">60.42836836</threshold_lat>
+			<threshold_lon id="12 ">15.49064441</threshold_lon>
+			<threshold_lat_end id="30 ">60.42513164</threshold_lat_end>
+			<threshold_lon_end id="30 ">15.50200359</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>60.42816971</latitude>
+			<longitude>015.50311705</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>132.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>60.41669804</latitude>
+			<longitude>015.52609633</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>312.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>60.43012600</latitude>
+			<longitude>015.50503200</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>60.42858100</latitude>
+			<longitude>015.50695400</longitude>
+			<heading>0.00</heading>
+			<name>essd ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>60.42269100</latitude>
+			<longitude>015.51646900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>60.42968800</latitude>
+			<longitude>015.50098500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>60.41449700</latitude>
+			<longitude>015.52972500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12730">127.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

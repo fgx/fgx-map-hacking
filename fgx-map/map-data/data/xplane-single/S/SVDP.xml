@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SVDP">
+		<linecode>1</linecode>
+		<elevation>2579</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SVDP</identifier>
+		<name>La Divina Pastora</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>21.34</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>04.72758183</latitude>
+			<longitude>-060.97132128</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>04.73241817</latitude_end>
+			<longitude_end>-060.95867912</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1501.063553</length-meters>
+			<length-feet>4575.24170954</length-feet>
+			<heading id="08 ">69.1281022857</heading>
+			<heading_end id="26 ">249.127059809</heading_end>
+			<threshold_lat id="08 ">4.72758183</threshold_lat>
+			<threshold_lon id="08 ">-60.97132128</threshold_lon>
+			<threshold_lat_end id="26 ">4.73241817</threshold_lat_end>
+			<threshold_lon_end id="26 ">-60.95867912</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>04.72847611</latitude>
+			<longitude>-060.96973125</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>69.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>04.73152392</latitude>
+			<longitude>-060.96026917</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>249.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.73062739</latitude>
+			<longitude>-060.96524188</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.72778190</latitude>
+			<longitude>-060.97160472</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.73221810</latitude>
+			<longitude>-060.95839568</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

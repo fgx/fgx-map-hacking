@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDMJ">
+		<linecode>1</linecode>
+		<elevation>1861</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EDMJ</identifier>
+		<name>Jesenwang</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>11.89</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>48.17367594</latitude>
+			<longitude>011.12262577</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>48.17502406</latitude_end>
+			<longitude_end>011.12818030</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>439.46646543</length-meters>
+			<length-feet>1339.49378663</length-feet>
+			<heading id="07 ">70.058099996</heading>
+			<heading_end id="25 ">250.053960885</heading_end>
+			<threshold_lat id="07 ">48.17367594</threshold_lat>
+			<threshold_lon id="07 ">11.12262577</threshold_lon>
+			<threshold_lat_end id="25 ">48.17502406</threshold_lat_end>
+			<threshold_lon_end id="25 ">11.1281803</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.17351798</latitude>
+			<longitude>011.12448765</longitude>
+			<height>24</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.17358300</latitude>
+			<longitude>011.12445700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>48.17365904</latitude>
+			<longitude>011.12310713</longitude>
+			<orientation>299.68</orientation>
+			<reserved>0</reserved>
+			<size code="1">Small taxiway sign</size>
+			<text>{@R}07</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>48.17483892</latitude>
+			<longitude>011.12786750</longitude>
+			<orientation>23.27</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}25</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12005">120.05</frequency>
+			<description>Jesenwang Info</description>
+		</atc>
+	</airport>
+</PropertyList>

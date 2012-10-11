@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIMJ">
+		<linecode>1</linecode>
+		<elevation>13</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LIMJ</identifier>
+		<name>Genova Sestri</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>44.41544087</latitude>
+			<longitude>008.82416198</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>44.40847396</latitude_end>
+			<longitude_end>008.85957047</longitude_end>
+			<threshold_end>163.98</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2924.58134394</length-meters>
+			<length-feet>8914.12393633</length-feet>
+			<heading id="10 ">105.362092717</heading>
+			<heading_end id="28 ">285.337313415</heading_end>
+			<threshold_lat id="10 ">44.41544087</threshold_lat>
+			<threshold_lon id="10 ">8.82416198</threshold_lon>
+			<threshold_lat_end id="28 ">44.4088642668</threshold_lat_end>
+			<threshold_lon_end id="28 ">8.85758511827</threshold_lon_end>
+		</runway>
+		<lightingobject id="11L">
+			<linecode>21</linecode>
+			<latitude>44.41503800</latitude>
+			<longitude>008.82857498</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>105.4</orientation>
+			<glideslope>3.30</glideslope>
+			<runway>11L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="11R">
+			<linecode>21</linecode>
+			<latitude>44.41415700</latitude>
+			<longitude>008.82824398</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>105.4</orientation>
+			<glideslope>3.30</glideslope>
+			<runway>11R</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="29L">
+			<linecode>21</linecode>
+			<latitude>44.40932100</latitude>
+			<longitude>008.85289998</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>285.4</orientation>
+			<glideslope>3.20</glideslope>
+			<runway>29L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="29R">
+			<linecode>21</linecode>
+			<latitude>44.41016300</latitude>
+			<longitude>008.85345198</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>285.4</orientation>
+			<glideslope>3.20</glideslope>
+			<runway>29R</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>44.41415400</latitude>
+			<longitude>008.84453098</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.41500362</latitude>
+			<longitude>008.84561871</longitude>
+			<heading>21.00</heading>
+			<name>105</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.41446100</latitude>
+			<longitude>008.84827200</longitude>
+			<heading>06.00</heading>
+			<name>301</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.41491666</latitude>
+			<longitude>008.84915060</longitude>
+			<heading>06.00</heading>
+			<name>302</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>44.41536970</latitude>
+			<longitude>008.84965960</longitude>
+			<heading>06.00</heading>
+			<name>303</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.41273500</latitude>
+			<longitude>008.84217498</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Rotating Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.41388400</latitude>
+			<longitude>008.82748998</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.40921800</latitude>
+			<longitude>008.85130898</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11960">119.6</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

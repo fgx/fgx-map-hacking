@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KEMP">
+		<linecode>1</linecode>
+		<elevation>1208</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KEMP</identifier>
+		<name>EMPORIA MUNI</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>38.32541523</latitude>
+			<longitude>-096.19299885</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>38.33882877</latitude_end>
+			<longitude_end>-096.18935381</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1522.66693744</length-meters>
+			<length-feet>4641.08882532</length-feet>
+			<heading id="01 ">12.0828250809</heading>
+			<heading_end id="19 ">192.080564358</heading_end>
+			<threshold_lat id="01 ">38.32541523</threshold_lat>
+			<threshold_lon id="01 ">-96.19299885</threshold_lon>
+			<threshold_lat_end id="19 ">38.33882877</threshold_lat_end>
+			<threshold_lon_end id="19 ">-96.18935381</threshold_lon_end>
+		</runway>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>91.14</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>38.32613790</latitude>
+			<longitude>-096.19441567</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>38.33087910</latitude_end>
+			<longitude_end>-096.18228894</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1183.7746988</length-meters>
+			<length-feet>3608.14528195</length-feet>
+			<heading id="06 ">63.6071032911</heading>
+			<heading_end id="24 ">243.599582664</heading_end>
+			<threshold_lat id="06 ">38.3261379</threshold_lat>
+			<threshold_lon id="06 ">-96.19441567</threshold_lon>
+			<threshold_lat_end id="24 ">38.3308791</threshold_lat_end>
+			<threshold_lon_end id="24 ">-96.18228894</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>38.32758430</latitude>
+			<longitude>-096.19277139</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>12.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>38.33700283</latitude>
+			<longitude>-096.18941353</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>192.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>38.33125509</latitude>
+			<longitude>096.18831444</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 2</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>38.33252979</latitude>
+			<longitude>096.18894519</longitude>
+			<heading>79.73</heading>
+			<name>Parking</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.33083367</latitude>
+			<longitude>-096.18741324</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 3</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.32522849</latitude>
+			<longitude>-096.19358583</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.32679966</latitude>
+			<longitude>-096.19622679</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.33901549</latitude>
+			<longitude>-096.18876705</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.33021717</latitude>
+			<longitude>-096.18047822</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12467">124.67</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12772">127.72</frequency>
+			<description>KANSAS CITY CNTR</description>
+		</atc>
+	</airport>
+</PropertyList>

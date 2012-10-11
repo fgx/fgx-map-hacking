@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KMTH">
+		<linecode>1</linecode>
+		<elevation>7</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>KMTH</identifier>
+		<name>The Florida Keys Marathon</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>24.72352200</latitude>
+			<longitude>-081.05832800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>124.97</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>24.72884400</latitude_end>
+			<longitude_end>-081.04440800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>124.97</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1526.72825282</length-meters>
+			<length-feet>4653.4677146</length-feet>
+			<heading id="07 ">67.2891596762</heading>
+			<heading_end id="25 ">247.283337188</heading_end>
+			<threshold_lat id="07 ">24.723522</threshold_lat>
+			<threshold_lon id="07 ">-81.058328</threshold_lon>
+			<threshold_lat_end id="25 ">24.728844</threshold_lat_end>
+			<threshold_lon_end id="25 ">-81.044408</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>24.72436665</latitude>
+			<longitude>-081.05702711</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>67.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>24.72802410</latitude>
+			<longitude>-081.04575360</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>247.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>24.72718400</latitude>
+			<longitude>081.05136900</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72657338</latitude>
+			<longitude>081.04713435</longitude>
+			<heading>67.00</heading>
+			<name>Gen. Avia. Parking</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72837600</latitude>
+			<longitude>081.04435000</longitude>
+			<heading>37.00</heading>
+			<name>Hold Short Rwy25</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72310983</latitude>
+			<longitude>081.05785094</longitude>
+			<heading>20.00</heading>
+			<name>Hold Short Rwy7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72732400</latitude>
+			<longitude>081.04506700</longitude>
+			<heading>37.00</heading>
+			<name>Marathon General Aviaiton</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72426358</latitude>
+			<longitude>081.05302881</longitude>
+			<heading>37.00</heading>
+			<name>Marathon Jet Center</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72312700</latitude>
+			<longitude>081.05611400</longitude>
+			<heading>37.00</heading>
+			<name>T-Hanger</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.72582600</latitude>
+			<longitude>081.04986600</longitude>
+			<heading>67.00</heading>
+			<name>Terminal</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.72862100</latitude>
+			<longitude>-081.04048423</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.72675214</latitude>
+			<longitude>-081.04781298</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.72214988</latitude>
+			<longitude>-081.05916378</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13552">135.52</frequency>
+			<description>ASOS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENFG">
+		<linecode>1</linecode>
+		<elevation>2697</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENFG</identifier>
+		<name>LEIRIN</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>61.01922200</latitude>
+			<longitude>009.28356900</longitude>
+			<threshold>146.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>61.00338900</latitude_end>
+			<longitude_end>009.30282800</longitude_end>
+			<threshold_end>63.09</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2048.8343828</length-meters>
+			<length-feet>6244.84719877</length-feet>
+			<heading id="15 ">149.449221564</heading>
+			<heading_end id="33 ">329.432375421</heading_end>
+			<threshold_lat id="15 ">61.0180936363</threshold_lat>
+			<threshold_lon id="15 ">9.2849413482</threshold_lon>
+			<threshold_lat_end id="33 ">61.0038765044</threshold_lat_end>
+			<threshold_lon_end id="33 ">9.30223494624</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>61.01674355</latitude>
+			<longitude>009.28754611</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>149.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>61.00522523</latitude>
+			<longitude>009.29963558</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>329.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>61.01202852</latitude>
+			<longitude>009.29572799</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.01988101</latitude>
+			<longitude>009.28422600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.00273009</latitude>
+			<longitude>009.30217096</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11992">119.92</frequency>
+			<description>INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

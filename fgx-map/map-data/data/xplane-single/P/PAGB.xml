@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PAGB">
+		<linecode>1</linecode>
+		<elevation>2670</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PAGB</identifier>
+		<name>Galbraith Lake</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>68.48511112</latitude>
+			<longitude>-149.50032354</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="5">SSALR</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>68.47301498</latitude_end>
+			<longitude_end>-149.47971924</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1591.38820447</length-meters>
+			<length-feet>4850.55124722</length-feet>
+			<heading id="12 ">147.986240776</heading>
+			<heading_end id="30 ">327.967072934</heading_end>
+			<threshold_lat id="12 ">68.48511112</threshold_lat>
+			<threshold_lon id="12 ">-149.50032354</threshold_lon>
+			<threshold_lat_end id="30 ">68.47301498</threshold_lat_end>
+			<threshold_lon_end id="30 ">-149.47971924</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>68.48378460</latitude>
+			<longitude>-149.49685124</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>147.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>68.47434193</latitude>
+			<longitude>-149.48318860</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>328.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>68.47982617</latitude>
+			<longitude>-149.48668956</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.48578715</latitude>
+			<longitude>-149.49949121</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>68.47233906</latitude>
+			<longitude>-149.48055169</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

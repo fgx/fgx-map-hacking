@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RORS">
+		<linecode>1</linecode>
+		<elevation>0</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>RORS</identifier>
+		<name>Shimojijima</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>24.84004000</latitude>
+			<longitude>125.14135300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>24.81376400</latitude_end>
+			<longitude_end>125.14853900</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2999.88544196</length-meters>
+			<length-feet>9143.6508271</length-feet>
+			<heading id="17 ">165.987681853</heading>
+			<heading_end id="35 ">345.984664607</heading_end>
+			<threshold_lat id="17 ">24.84004</threshold_lat>
+			<threshold_lon id="17 ">125.141353</threshold_lon>
+			<threshold_lat_end id="35 ">24.813764</threshold_lat_end>
+			<threshold_lon_end id="35 ">125.148539</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>24.81777505</latitude>
+			<longitude>125.14682108</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>346.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>24.83656955</latitude>
+			<longitude>125.14289656</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>166.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>24.82641884</latitude>
+			<longitude>125.14915695</longitude>
+			<height>80</height>
+			<deprecated>0</deprecated>
+			<name>Shimojijima Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.82739217</latitude>
+			<longitude>125.14815157</longitude>
+			<heading>47.07</heading>
+			<name>Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.82438236</latitude>
+			<longitude>125.14863954</longitude>
+			<heading>63.43</heading>
+			<name>Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>24.82911939</latitude>
+			<longitude>125.14768915</longitude>
+			<heading>75.31</heading>
+			<name>Ramp 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.82997130</latitude>
+			<longitude>125.14834462</longitude>
+			<type code="1">White-green flashing</type>
+			<description>Shimojijima Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.81343284</latitude>
+			<longitude>125.15080532</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 6</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.84126467</latitude>
+			<longitude>125.14315042</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 7</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12170">121.7</frequency>
+			<description>Shimojijima Ground</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>Shimojijima Tower</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12620">126.2</frequency>
+			<description>Shimojijima Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>Shimojijima Approach</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>Shimojijima Approach</description>
+		</atc>
+		<atc type="Departure">
+			<linecode>56</linecode>
+			<frequency raw="12500">125.0</frequency>
+			<description>Shimojijima Departure</description>
+		</atc>
+	</airport>
+</PropertyList>

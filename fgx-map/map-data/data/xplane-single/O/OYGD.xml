@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OYGD">
+		<linecode>1</linecode>
+		<elevation>134</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OYGD</identifier>
+		<name>AL GHAIDAH INTL</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>16.19155000</latitude>
+			<longitude>052.16073900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>16.19494700</latitude_end>
+			<longitude_end>052.18575800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>64.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2701.58554887</length-meters>
+			<length-feet>8234.43275295</length-feet>
+			<heading id="08 ">82.0050668757</heading>
+			<heading_end id="26 ">261.998089628</heading_end>
+			<threshold_lat id="08 ">16.19155</threshold_lat>
+			<threshold_lon id="08 ">52.160739</threshold_lon>
+			<threshold_lat_end id="26 ">16.194947</threshold_lat_end>
+			<threshold_lon_end id="26 ">52.185758</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>16.19219909</latitude>
+			<longitude>052.16253624</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>81.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>16.19429812</latitude>
+			<longitude>052.18396065</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>261.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.19209608</latitude>
+			<longitude>052.16023163</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>16.19440086</latitude>
+			<longitude>052.18626531</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

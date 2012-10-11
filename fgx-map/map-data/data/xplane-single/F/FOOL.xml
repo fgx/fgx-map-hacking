@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FOOL">
+		<linecode>1</linecode>
+		<elevation>39</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>FOOL</identifier>
+		<name>Leon M Ba</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>00.47081400</latitude>
+			<longitude>009.40635000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>58.52</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>00.44641700</latitude_end>
+			<longitude_end>009.41815000</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>63.70</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3000.47434806</length-meters>
+			<length-feet>9145.44581288</length-feet>
+			<heading id="16 ">154.038138498</heading>
+			<heading_end id="34 ">334.038044048</heading_end>
+			<threshold_lat id="16 ">0.470814</threshold_lat>
+			<threshold_lon id="16 ">9.40635</threshold_lon>
+			<threshold_lat_end id="34 ">0.446417</threshold_lat_end>
+			<threshold_lon_end id="34 ">9.41815</threshold_lon_end>
+		</runway>
+		<lightingobject id="16">
+			<linecode>21</linecode>
+			<latitude>00.46915151</latitude>
+			<longitude>009.40759950</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>154.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>16</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>00.45775400</latitude>
+			<longitude>009.41013000</longitude>
+			<height>19</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45827800</latitude>
+			<longitude>009.41055600</longitude>
+			<heading>10.00</heading>
+			<name>A1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45872200</latitude>
+			<longitude>009.41036100</longitude>
+			<heading>10.00</heading>
+			<name>A2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45891700</latitude>
+			<longitude>009.41005600</longitude>
+			<heading>44.00</heading>
+			<name>A3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45925000</latitude>
+			<longitude>009.40988900</longitude>
+			<heading>44.00</heading>
+			<name>A4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45733300</latitude>
+			<longitude>009.41066700</longitude>
+			<heading>10.00</heading>
+			<name>B1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45694400</latitude>
+			<longitude>009.41086100</longitude>
+			<heading>30.00</heading>
+			<name>B2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45658300</latitude>
+			<longitude>009.41102800</longitude>
+			<heading>44.00</heading>
+			<name>B3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45602800</latitude>
+			<longitude>009.41122200</longitude>
+			<heading>44.00</heading>
+			<name>B4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45547200</latitude>
+			<longitude>009.41150000</longitude>
+			<heading>44.00</heading>
+			<name>B5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>00.45486100</latitude>
+			<longitude>009.41177800</longitude>
+			<heading>44.00</heading>
+			<name>B6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>00.45569300</latitude>
+			<longitude>009.41472700</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>00.46249800</latitude>
+			<longitude>009.41175900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

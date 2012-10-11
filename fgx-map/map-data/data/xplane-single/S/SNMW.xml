@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SNMW">
+		<linecode>1</linecode>
+		<elevation>1798</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SNMW</identifier>
+		<name>Montalvania</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>17.98</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-14.39308297</latitude>
+			<longitude>-044.37124779</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-14.40358223</latitude_end>
+			<longitude_end>-044.36708681</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1245.32929434</length-meters>
+			<length-feet>3795.76368914</length-feet>
+			<heading id="18 ">158.878393218</heading>
+			<heading_end id="36 ">338.879427894</heading_end>
+			<threshold_lat id="18 ">-14.39308297</threshold_lat>
+			<threshold_lon id="18 ">-44.37124779</threshold_lon>
+			<threshold_lat_end id="36 ">-14.40358223</threshold_lat_end>
+			<threshold_lon_end id="36 ">-44.36708681</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>-14.39467301</latitude>
+			<longitude>-044.37033910</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>159.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>-14.40199221</latitude>
+			<longitude>-044.36799557</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>339.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-14.39813010</latitude>
+			<longitude>-044.36862272</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-14.39284538</latitude>
+			<longitude>-044.37107501</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-14.40381983</latitude>
+			<longitude>-044.36725959</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="OEPS">
+		<linecode>1</linecode>
+		<elevation>1651</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>OEPS</identifier>
+		<name>PRINCE SULTAN AB</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>24.08073600</latitude>
+			<longitude>047.57894700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>310.59</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>24.04466400</latitude_end>
+			<longitude_end>047.58212200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>300.23</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4008.33072494</length-meters>
+			<length-feet>12217.3920496</length-feet>
+			<heading id="17 ">175.379977317</heading>
+			<heading_end id="35 ">355.378682755</heading_end>
+			<threshold_lat id="17 ">24.080736</threshold_lat>
+			<threshold_lon id="17 ">47.578947</threshold_lon>
+			<threshold_lat_end id="35 ">24.044664</threshold_lat_end>
+			<threshold_lon_end id="35 ">47.582122</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>24.07792890</latitude>
+			<longitude>047.57963473</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>175.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>24.04809233</latitude>
+			<longitude>047.58137984</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>355.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>24.06281531</latitude>
+			<longitude>047.58208591</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.08118945</latitude>
+			<longitude>047.57957622</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>24.04421056</latitude>
+			<longitude>047.58149295</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13697">136.97</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12680">126.8</frequency>
+			<description>SULTAN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12342">123.42</frequency>
+			<description>SULTAN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

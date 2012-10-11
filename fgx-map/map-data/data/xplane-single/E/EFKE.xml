@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EFKE">
+		<linecode>1</linecode>
+		<elevation>61</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EFKE</identifier>
+		<name>Kemi Tornio</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>47.85</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>65.79301700</latitude>
+			<longitude>024.58601100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>28.96</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>65.77076100</latitude_end>
+			<longitude_end>024.57886100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>57.91</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2503.14389897</length-meters>
+			<length-feet>7629.58260405</length-feet>
+			<heading id="18 ">-172.487370904</heading>
+			<heading_end id="36 ">367.519149828</heading_end>
+			<threshold_lat id="18 ">65.793017</threshold_lat>
+			<threshold_lon id="18 ">24.586011</threshold_lon>
+			<threshold_lat_end id="36 ">65.770761</threshold_lat_end>
+			<threshold_lon_end id="36 ">24.578861</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>65.78966376</latitude>
+			<longitude>024.58594937</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>187.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>65.77259942</latitude>
+			<longitude>024.57843521</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>7.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>65.78026600</latitude>
+			<longitude>024.57584000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>65.78101300</latitude>
+			<longitude>024.57716900</longitude>
+			<heading>60.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>65.78177600</latitude>
+			<longitude>024.58451800</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.79290800</latitude>
+			<longitude>024.58809700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>65.77087400</latitude>
+			<longitude>024.57678000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12315">123.15</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11940">119.4</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

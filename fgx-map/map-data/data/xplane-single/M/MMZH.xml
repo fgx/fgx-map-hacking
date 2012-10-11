@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="MMZH">
+		<linecode>1</linecode>
+		<elevation>26</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>MMZH</identifier>
+		<name>IXTAPA ZIHUATANEJO INTL</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>17.60187800</latitude>
+			<longitude>-101.47232800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>17.60125800</latitude_end>
+			<longitude_end>-101.44874200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2504.36467474</length-meters>
+			<length-feet>7633.30352859</length-feet>
+			<heading id="08 ">91.5736545819</heading>
+			<heading_end id="26 ">271.56652227</heading_end>
+			<threshold_lat id="08 ">17.601878</threshold_lat>
+			<threshold_lon id="08 ">-101.472328</threshold_lon>
+			<threshold_lat_end id="26 ">17.601258</threshold_lat_end>
+			<threshold_lon_end id="26 ">-101.448742</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>17.60229648</latitude>
+			<longitude>-101.47042695</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>91.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>17.60083974</latitude>
+			<longitude>-101.45064310</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>271.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>17.60618000</latitude>
+			<longitude>101.46537800</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>17.60564000</latitude>
+			<longitude>101.46504200</longitude>
+			<heading>7.00</heading>
+			<name>Plataforma 1</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>17.60264800</latitude>
+			<longitude>-101.46050400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.60295800</latitude>
+			<longitude>-101.47229700</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.60017800</latitude>
+			<longitude>-101.44877400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>ZIHUATANEJO TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12100">121.0</frequency>
+			<description>ZIHUATANEJO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

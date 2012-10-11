@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ETSI">
+		<linecode>1</linecode>
+		<elevation>1202</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ETSI</identifier>
+		<name>Ingolstadt Manching</name>
+		<runway end="25L" id="07R">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07R</number>
+			<latitude>48.70450000</latitude>
+			<longitude>011.51866700</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>324.92</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25L</number_end>
+			<latitude_end>48.71433300</latitude_end>
+			<longitude_end>011.55583300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>324.92</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2945.75563289</length-meters>
+			<length-feet>8978.66316906</length-feet>
+			<heading id="07R">68.2242058265</heading>
+			<heading_end id="25L">248.196280312</heading_end>
+			<threshold_lat id="07R">48.7045</threshold_lat>
+			<threshold_lon id="07R">11.518667</threshold_lon>
+			<threshold_lat_end id="25L">48.714333</threshold_lat_end>
+			<threshold_lon_end id="25L">11.555833</threshold_lon_end>
+		</runway>
+		<runway end="25R" id="07L">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>07L</number>
+			<latitude>48.71666700</latitude>
+			<longitude>011.51550000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>459.03</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25R</number_end>
+			<latitude_end>48.72487900</latitude_end>
+			<longitude_end>011.54623700</longitude_end>
+			<threshold_end>183.49</threshold_end>
+			<overrrun_end>320.04</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2439.03838333</length-meters>
+			<length-feet>7434.18899239</length-feet>
+			<heading id="07L">68.0234562401</heading>
+			<heading_end id="25R">248.000357281</heading_end>
+			<threshold_lat id="07L">48.716667</threshold_lat>
+			<threshold_lon id="07L">11.5155</threshold_lon>
+			<threshold_lat_end id="25R">48.7242608762</threshold_lat_end>
+			<threshold_lon_end id="25R">11.5439246695</threshold_lon_end>
+		</runway>
+		<lightingobject id="07R">
+			<linecode>21</linecode>
+			<latitude>48.70560471</latitude>
+			<longitude>011.52093400</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>68.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25L">
+			<linecode>21</linecode>
+			<latitude>48.71274061</latitude>
+			<longitude>011.55171715</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>248.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>48.71429400</latitude>
+			<longitude>011.53226000</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>48.71041900</latitude>
+			<longitude>011.53664100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.70550500</latitude>
+			<longitude>011.51805900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.71332900</latitude>
+			<longitude>011.55644400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.71716300</latitude>
+			<longitude>011.51519400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>48.72438000</latitude>
+			<longitude>011.54654400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12065">120.65</frequency>
+			<description>MUNCHEN INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12525">125.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13652">136.52</frequency>
+			<description>MUNCHEN RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12060">120.6</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12557">125.57</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>RADAR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12330">123.3</frequency>
+			<description>RADAR</description>
+		</atc>
+	</airport>
+</PropertyList>

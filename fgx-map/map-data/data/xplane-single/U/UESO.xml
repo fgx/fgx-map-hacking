@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UESO">
+		<linecode>1</linecode>
+		<elevation>65</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>UESO</identifier>
+		<name>Chokurdah</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>49.99</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>70.62118540</latitude>
+			<longitude>147.87280263</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>70.62790960</latitude_end>
+			<longitude_end>147.92296874</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>323.09</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2003.95655871</length-meters>
+			<length-feet>6108.05959094</length-feet>
+			<heading id="08 ">68.0383904748</heading>
+			<heading_end id="26 ">247.991065528</heading_end>
+			<threshold_lat id="08 ">70.6211854</threshold_lat>
+			<threshold_lon id="08 ">147.87280263</threshold_lon>
+			<threshold_lat_end id="26 ">70.6279096</threshold_lat_end>
+			<threshold_lon_end id="26 ">147.92296874</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>70.62397312</latitude>
+			<longitude>147.91055468</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62457044</latitude>
+			<longitude>147.91316862</longitude>
+			<heading>58.62</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62440874</latitude>
+			<longitude>147.91202048</longitude>
+			<heading>58.62</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62423469</latitude>
+			<longitude>147.91083152</longitude>
+			<heading>57.32</heading>
+			<name>Stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62410485</latitude>
+			<longitude>147.90984481</longitude>
+			<heading>56.83</heading>
+			<name>Stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62397037</latitude>
+			<longitude>147.90890418</longitude>
+			<heading>57.07</heading>
+			<name>Stand 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>70.62384032</latitude>
+			<longitude>147.90793984</longitude>
+			<heading>58.09</heading>
+			<name>Stand 6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>70.62600950</latitude>
+			<longitude>147.89609007</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>70.62459424</latitude>
+			<longitude>147.90849089</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>70.62510324</latitude>
+			<longitude>147.90584271</longitude>
+			<orientation>335.85</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}8-26{@@}{@L}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>70.62521898</latitude>
+			<longitude>147.90674821</longitude>
+			<orientation>335.85</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}8-26{@@}{@L}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>70.62556726</latitude>
+			<longitude>147.90747931</longitude>
+			<orientation>248.59</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}{^l}1</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>70.62516145</latitude>
+			<longitude>147.90441430</longitude>
+			<orientation>70.56</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@Y}1{^r}{@@}{@L}1</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12120">121.2</frequency>
+			<description>Chokurdah Tower</description>
+		</atc>
+	</airport>
+</PropertyList>

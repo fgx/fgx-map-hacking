@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZYTL">
+		<linecode>1</linecode>
+		<elevation>107</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZYTL</identifier>
+		<name>ZHOUSHUIZI</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>38.96713100</latitude>
+			<longitude>121.51965600</longitude>
+			<threshold>198.12</threshold>
+			<overrrun>50.29</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>38.96420000</latitude_end>
+			<longitude_end>121.55754400</longitude_end>
+			<threshold_end>97.54</threshold_end>
+			<overrrun_end>50.29</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3299.76878772</length-meters>
+			<length-feet>10057.695265</length-feet>
+			<heading id="10 ">95.6709462475</heading>
+			<heading_end id="28 ">275.647120205</heading_end>
+			<threshold_lat id="10 ">38.9669546297</threshold_lat>
+			<threshold_lon id="10 ">121.521930811</threshold_lon>
+			<threshold_lat_end id="28 ">38.9642864522</threshold_lat_end>
+			<threshold_lon_end id="28 ">121.556424043</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>38.96708257</latitude>
+			<longitude>121.53878006</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.96777707</latitude>
+			<longitude>121.51921380</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>38.96355378</latitude>
+			<longitude>121.55798583</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12665">126.65</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11825">118.25</frequency>
+			<description>DALIAN TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>DALIAN TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12385">123.85</frequency>
+			<description>DALIAN APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12795">127.95</frequency>
+			<description>DALIAN APP</description>
+		</atc>
+	</airport>
+</PropertyList>

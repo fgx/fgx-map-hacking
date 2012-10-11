@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EPKT">
+		<linecode>1</linecode>
+		<elevation>995</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EPKT</identifier>
+		<name>PYRZOWICE</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>59.44</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>50.47430679</latitude>
+			<longitude>019.05464441</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>50.47421921</latitude_end>
+			<longitude_end>019.09406759</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2798.58928761</length-meters>
+			<length-feet>8530.10014862</length-feet>
+			<heading id="09 ">90.2146585115</heading>
+			<heading_end id="27 ">270.184249883</heading_end>
+			<threshold_lat id="09 ">50.47430679</threshold_lat>
+			<threshold_lon id="09 ">19.05464441</threshold_lon>
+			<threshold_lat_end id="27 ">50.47421921</threshold_lat_end>
+			<threshold_lon_end id="27 ">19.09406759</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>50.47476641</latitude>
+			<longitude>019.05747483</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>90.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>50.47133400</latitude>
+			<longitude>019.07515600</longitude>
+			<height>100</height>
+			<deprecated>0</deprecated>
+			<name>Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.47171700</latitude>
+			<longitude>019.07573300</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.47171700</latitude>
+			<longitude>019.07518300</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.47173300</latitude>
+			<longitude>019.07465000</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.47173300</latitude>
+			<longitude>019.07413300</longitude>
+			<heading>80.00</heading>
+			<name>Aircraft stand 4</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.47613700</latitude>
+			<longitude>019.07436100</longitude>
+			<type code="0">No beacon (suppress autp-generation)</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.47274900</latitude>
+			<longitude>019.07587600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.47287500</latitude>
+			<longitude>019.09806900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="13145">131.45</frequency>
+			<description>HANDLING</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12925">129.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12107">121.07</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SNOE">
+		<linecode>1</linecode>
+		<elevation>817</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SNOE</identifier>
+		<name>Oeiras</name>
+		<runway end="29" id="11">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>11</number>
+			<latitude>-07.01898321</latitude>
+			<longitude>-042.17238072</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>29</number_end>
+			<latitude_end>-07.01879479</latitude_end>
+			<longitude_end>-042.16150448</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1201.9048439</length-meters>
+			<length-feet>3663.40596419</length-feet>
+			<heading id="11 ">89.0059437755</heading>
+			<heading_end id="29 ">269.007272815</heading_end>
+			<threshold_lat id="11 ">-7.01898321</threshold_lat>
+			<threshold_lon id="11 ">-42.17238072</threshold_lon>
+			<threshold_lat_end id="29 ">-7.01879479</threshold_lat_end>
+			<threshold_lon_end id="29 ">-42.16150448</threshold_lon_end>
+		</runway>
+		<lightingobject id="11">
+			<linecode>21</linecode>
+			<latitude>-07.01870407</latitude>
+			<longitude>-042.17057190</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>89.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>11</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="29">
+			<linecode>21</linecode>
+			<latitude>-07.01907397</latitude>
+			<longitude>-042.16331329</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>269.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>29</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-07.01835146</latitude>
+			<longitude>-042.16695205</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-07.01875551</latitude>
+			<longitude>-042.17253951</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-07.01902249</latitude>
+			<longitude>-042.16134569</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

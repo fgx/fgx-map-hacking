@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LTAY">
+		<linecode>1</linecode>
+		<elevation>2795</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LTAY</identifier>
+		<name>CARDAK</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>37.77859200</latitude>
+			<longitude>029.68671400</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>146.30</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>37.79253600</latitude_end>
+			<longitude_end>029.71587800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>154.23</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2999.16672273</length-meters>
+			<length-feet>9141.46017089</length-feet>
+			<heading id="06 ">58.9421998829</heading>
+			<heading_end id="24 ">238.924330868</heading_end>
+			<threshold_lat id="06 ">37.778592</threshold_lat>
+			<threshold_lon id="06 ">29.686714</threshold_lon>
+			<threshold_lat_end id="24 ">37.792536</threshold_lat_end>
+			<threshold_lon_end id="24 ">29.715878</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>37.77984383</latitude>
+			<longitude>029.68841721</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>58.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>37.79084084</latitude>
+			<longitude>029.71324544</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>238.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.78678081</latitude>
+			<longitude>029.70036118</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.77890278</latitude>
+			<longitude>029.68587568</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.79222502</latitude>
+			<longitude>029.71671636</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>MENDERES APP</description>
+		</atc>
+	</airport>
+</PropertyList>

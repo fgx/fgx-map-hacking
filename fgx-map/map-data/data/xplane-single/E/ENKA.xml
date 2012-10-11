@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ENKA">
+		<linecode>1</linecode>
+		<elevation>1132</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ENKA</identifier>
+		<name>Kautokeino</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>69.03606177</latitude>
+			<longitude>023.03089413</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>69.04671623</latitude_end>
+			<longitude_end>023.03577187</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1204.35869428</length-meters>
+			<length-feet>3670.88530016</length-feet>
+			<heading id="01 ">9.3101615474</heading>
+			<heading_end id="19 ">189.305606523</heading_end>
+			<threshold_lat id="01 ">69.03606177</threshold_lat>
+			<threshold_lon id="01 ">23.03089413</threshold_lon>
+			<threshold_lat_end id="19 ">69.04671623</threshold_lat_end>
+			<threshold_lon_end id="19 ">23.03577187</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>69.03789463</latitude>
+			<longitude>023.03073962</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>9.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>69.04488337</latitude>
+			<longitude>023.03592589</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>189.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>69.04199200</latitude>
+			<longitude>023.03553000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>69.04105400</latitude>
+			<longitude>023.03521200</longitude>
+			<heading>80.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.04477700</latitude>
+			<longitude>023.04565400</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>69.05521400</latitude>
+			<longitude>023.05434800</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

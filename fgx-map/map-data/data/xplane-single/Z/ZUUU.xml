@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZUUU">
+		<linecode>1</linecode>
+		<elevation>1625</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZUUU</identifier>
+		<name>SHUANGLIU</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>30.56347800</latitude>
+			<longitude>103.94007800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>59.74</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>30.59357800</latitude_end>
+			<longitude_end>103.95409400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.74</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3597.60694601</length-meters>
+			<length-feet>10965.5059714</length-feet>
+			<heading id="02 ">21.947778221</heading>
+			<heading_end id="20 ">201.940648018</heading_end>
+			<threshold_lat id="02 ">30.563478</threshold_lat>
+			<threshold_lon id="02 ">103.940078</threshold_lon>
+			<threshold_lat_end id="20 ">30.593578</threshold_lat_end>
+			<threshold_lon_end id="20 ">103.954094</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>30.56625397</latitude>
+			<longitude>103.94078442</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>21.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>30.59074355</latitude>
+			<longitude>103.95335965</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>201.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>30.57923098</latitude>
+			<longitude>103.94504597</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.56327747</latitude>
+			<longitude>103.93897224</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>30.59377840</latitude>
+			<longitude>103.95520013</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12860">128.6</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12185">121.85</frequency>
+			<description>CHENGDU GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>CHENGDU TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11885">118.85</frequency>
+			<description>CHENGDU TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12560">125.6</frequency>
+			<description>CHENGDU APP AREA 1</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12020">120.2</frequency>
+			<description>CHENGDU APP AREA 1</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>CHENGDU APP AREA 2</description>
+		</atc>
+	</airport>
+</PropertyList>

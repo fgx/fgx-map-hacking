@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WITT">
+		<linecode>1</linecode>
+		<elevation>65</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>WITT</identifier>
+		<name>Banda Aceh Sultan Iskandarmuda</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>05.53456700</latitude>
+			<longitude>095.41808900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>64.01</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>05.51247800</latitude_end>
+			<longitude_end>095.42265600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>67.06</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2494.5707011</length-meters>
+			<length-feet>7603.45149694</length-feet>
+			<heading id="17 ">168.295904808</heading>
+			<heading_end id="35 ">348.295465214</heading_end>
+			<threshold_lat id="17 ">5.534567</threshold_lat>
+			<threshold_lon id="17 ">95.418089</threshold_lon>
+			<threshold_lat_end id="35 ">5.512478</threshold_lat_end>
+			<threshold_lon_end id="35 ">95.422656</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>05.53217409</latitude>
+			<longitude>095.41899504</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>168.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>05.51416009</latitude>
+			<longitude>095.42189696</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>348.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>05.51764870</latitude>
+			<longitude>095.41840360</longitude>
+			<height>40</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>05.51965520</latitude>
+			<longitude>095.41841890</longitude>
+			<heading>68.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>05.52381117</latitude>
+			<longitude>095.42177031</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>05.53508738</latitude>
+			<longitude>095.41860603</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>05.51195763</latitude>
+			<longitude>095.42213900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

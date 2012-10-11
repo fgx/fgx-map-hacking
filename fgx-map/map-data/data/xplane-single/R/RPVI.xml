@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RPVI">
+		<linecode>1</linecode>
+		<elevation>27</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RPVI</identifier>
+		<name>Iloilo</name>
+		<runway end="20" id="02">
+			<linecode>100</linecode>
+			<width>35.97</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>02</number>
+			<latitude>10.70434700</latitude>
+			<longitude>122.54145300</longitude>
+			<threshold>106.68</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="6">SSALF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>20</number_end>
+			<latitude_end>10.72174400</latitude_end>
+			<longitude_end>122.54914200</longitude_end>
+			<threshold_end>150.27</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2100.12212286</length-meters>
+			<length-feet>6401.17223047</length-feet>
+			<heading id="02 ">23.6106133202</heading>
+			<heading_end id="20 ">203.609184009</heading_end>
+			<threshold_lat id="02 ">10.7052307116</threshold_lat>
+			<threshold_lon id="02 ">122.54184358</threshold_lon>
+			<threshold_lat_end id="20 ">10.7204991861</threshold_lat_end>
+			<threshold_lon_end id="20 ">122.548591831</threshold_lon_end>
+		</runway>
+		<lightingobject id="02">
+			<linecode>21</linecode>
+			<latitude>10.70702183</latitude>
+			<longitude>122.54223590</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>23.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>02</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="20">
+			<linecode>21</linecode>
+			<latitude>10.71870941</latitude>
+			<longitude>122.54819997</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>203.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>20</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>10.71100300</latitude>
+			<longitude>122.54883600</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>10.71143700</latitude>
+			<longitude>122.54757500</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.70532900</latitude>
+			<longitude>122.54248600</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>10.72052400</latitude>
+			<longitude>122.54919000</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12340">123.4</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12100">121.0</frequency>
+			<description>BACOLOD APP</description>
+		</atc>
+	</airport>
+</PropertyList>

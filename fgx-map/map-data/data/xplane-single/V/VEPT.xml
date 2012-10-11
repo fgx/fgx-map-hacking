@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VEPT">
+		<linecode>1</linecode>
+		<elevation>170</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VEPT</identifier>
+		<name>PATNA</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>25.58806100</latitude>
+			<longitude>085.07894400</longitude>
+			<threshold>280.42</threshold>
+			<overrrun>297.18</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>25.59457200</latitude_end>
+			<longitude_end>085.09703600</longitude_end>
+			<threshold_end>134.11</threshold_end>
+			<overrrun_end>94.49</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1955.44508649</length-meters>
+			<length-feet>5960.19662362</length-feet>
+			<heading id="07 ">68.3581193769</heading>
+			<heading_end id="25 ">248.350304554</heading_end>
+			<threshold_lat id="07 ">25.5889945248</threshold_lat>
+			<threshold_lon id="07 ">85.0815384978</threshold_lon>
+			<threshold_lat_end id="25 ">25.5941253752</threshold_lat_end>
+			<threshold_lon_end id="25 ">85.0957952037</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>25.59003598</latitude>
+			<longitude>085.08323128</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>68.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>25.59273896</latitude>
+			<longitude>085.09314124</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>248.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>25.59263629</latitude>
+			<longitude>085.08740442</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.58847608</latitude>
+			<longitude>085.07827569</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>25.59415684</latitude>
+			<longitude>085.09770428</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12110">121.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

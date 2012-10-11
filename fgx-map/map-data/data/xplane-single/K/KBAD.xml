@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="KBAD">
+		<linecode>1</linecode>
+		<elevation>166</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>KBAD</identifier>
+		<name>BARKSDALE AFB</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>91.44</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="2">Concrete shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>32.51614607</latitude>
+			<longitude>-093.67176166</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="1">ALSF-I</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>32.48774593</latitude_end>
+			<longitude_end>-093.65350834</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>304.80</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3586.28960409</length-meters>
+			<length-feet>10931.0107133</length-feet>
+			<heading id="15 ">151.429952012</heading>
+			<heading_end id="33 ">331.420143987</heading_end>
+			<threshold_lat id="15 ">32.51614607</threshold_lat>
+			<threshold_lon id="15 ">-93.67176166</threshold_lon>
+			<threshold_lat_end id="33 ">32.48774593</threshold_lat_end>
+			<threshold_lon_end id="33 ">-93.65350834</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>32.51347826</latitude>
+			<longitude>-093.66922430</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>151.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>32.49022667</latitude>
+			<longitude>-093.65592398</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>331.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>32.49648100</latitude>
+			<longitude>093.67243700</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.51231100</latitude>
+			<longitude>093.67868100</longitude>
+			<heading>61.00</heading>
+			<name>North Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.51025000</latitude>
+			<longitude>093.67734100</longitude>
+			<heading>61.00</heading>
+			<name>North Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.50816800</latitude>
+			<longitude>093.67594900</longitude>
+			<heading>61.00</heading>
+			<name>North Ramp 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.49095900</latitude>
+			<longitude>093.66416400</longitude>
+			<heading>61.00</heading>
+			<name>South Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>32.48953400</latitude>
+			<longitude>093.66316700</longitude>
+			<heading>61.00</heading>
+			<name>South Ramp 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>32.49648100</latitude>
+			<longitude>-093.67244300</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.51744500</latitude>
+			<longitude>-093.67093100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>32.48630300</latitude>
+			<longitude>-093.65425800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12180">121.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12825">128.25</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11990">119.9</frequency>
+			<description>SHREVEPORT APP/DEP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12375">123.75</frequency>
+			<description>SHREVEPORT APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

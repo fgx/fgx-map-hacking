@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LRCK">
+		<linecode>1</linecode>
+		<elevation>353</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>LRCK</identifier>
+		<name>CONSTANTA - MIHAIL KOGALNICEANU</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>44.37773600</latitude>
+			<longitude>028.49058600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>44.34649200</latitude_end>
+			<longitude_end>028.48632200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3488.41193697</length-meters>
+			<length-feet>10632.6795839</length-feet>
+			<heading id="18 ">-174.409693561</heading>
+			<heading_end id="36 ">365.593287788</heading_end>
+			<threshold_lat id="18 ">44.377736</threshold_lat>
+			<threshold_lon id="18 ">28.490586</threshold_lon>
+			<threshold_lat_end id="36 ">44.346492</threshold_lat_end>
+			<threshold_lon_end id="36 ">28.486322</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>44.37551600</latitude>
+			<longitude>028.49111200</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>185.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>44.34871200</latitude>
+			<longitude>028.48578600</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>5.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>44.36197687</latitude>
+			<longitude>028.49043098</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.37808089</latitude>
+			<longitude>028.49148912</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>44.34614708</latitude>
+			<longitude>028.48541940</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="11875">118.75</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12045">120.45</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12290">122.9</frequency>
+			<description>BUCURESTI RDR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12735">127.35</frequency>
+			<description>BUCURESTI RDR</description>
+		</atc>
+	</airport>
+</PropertyList>

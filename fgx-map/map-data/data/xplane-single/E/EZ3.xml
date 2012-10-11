@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EZ3 ">
+		<linecode>1</linecode>
+		<elevation>2436</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EZ3</identifier>
+		<name>Edmonton Cooking Lake</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>53.42921795</latitude>
+			<longitude>-113.12103848</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>53.42517205</latitude_end>
+			<longitude_end>-113.10927752</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="12">RAIL</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>902.186834691</length-meters>
+			<length-feet>2749.86547214</length-feet>
+			<heading id="10 ">119.945500487</heading>
+			<heading_end id="28 ">299.936055256</heading_end>
+			<threshold_lat id="10 ">53.42921795</threshold_lat>
+			<threshold_lon id="10 ">-113.12103848</threshold_lon>
+			<threshold_lat_end id="28 ">53.42517205</threshold_lat_end>
+			<threshold_lon_end id="28 ">-113.10927752</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>53.42855532</latitude>
+			<longitude>-113.11819248</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>120.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>53.42583496</latitude>
+			<longitude>-113.11212308</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>300.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.42781738</latitude>
+			<longitude>-113.11455466</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.42958687</latitude>
+			<longitude>-113.12107975</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.42480313</latitude>
+			<longitude>-113.10923636</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

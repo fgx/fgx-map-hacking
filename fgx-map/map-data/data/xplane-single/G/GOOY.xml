@@ -1,0 +1,181 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="GOOY">
+		<linecode>1</linecode>
+		<elevation>85</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>GOOY</identifier>
+		<name>Dakar Leopold Sedar Senghor Intl</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>14.75711400</latitude>
+			<longitude>-017.48093900</longitude>
+			<threshold>160.02</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>14.72583300</latitude_end>
+			<longitude_end>-017.47672200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3490.78341975</length-meters>
+			<length-feet>10639.9078634</length-feet>
+			<heading id="18 ">172.526327449</heading>
+			<heading_end id="36 ">352.5252544</heading_end>
+			<threshold_lat id="18 ">14.7556800567</threshold_lat>
+			<threshold_lon id="18 ">-17.480745691</threshold_lon>
+			<threshold_lat_end id="36 ">14.725833</threshold_lat_end>
+			<threshold_lon_end id="36 ">-17.476722</threshold_lon_end>
+		</runway>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>14.73171100</latitude>
+			<longitude>-017.50426900</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>29.87</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>14.74418600</latitude_end>
+			<longitude_end>-017.49897500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>484.63</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1493.39434392</length-meters>
+			<length-feet>4551.86596026</length-feet>
+			<heading id="03 ">22.4409907803</heading>
+			<heading_end id="21 ">202.439643994</heading_end>
+			<threshold_lat id="03 ">14.731711</threshold_lat>
+			<threshold_lon id="03 ">-17.504269</threshold_lon>
+			<threshold_lat_end id="21 ">14.744186</threshold_lat_end>
+			<threshold_lon_end id="21 ">-17.498975</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>14.75395311</latitude>
+			<longitude>-017.48009467</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>172.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>14.74438900</latitude>
+			<longitude>017.48864400</longitude>
+			<height>40</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint Location</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>14.74333500</latitude>
+			<longitude>017.49056800</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>14.74246600</latitude>
+			<longitude>017.48806700</longitude>
+			<heading>20.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>14.74165794</latitude>
+			<longitude>-017.47737340</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.75425100</latitude>
+			<longitude>-017.48114000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.72714600</latitude>
+			<longitude>-017.47780500</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.73365900</latitude>
+			<longitude>-017.50281800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>14.74556800</latitude>
+			<longitude>-017.49775100</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12950">129.5</frequency>
+			<description>DAKAR INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12730">127.3</frequency>
+			<description>DAKAR INFO</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>DAKAR TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12050">120.5</frequency>
+			<description>DAKAR CON</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>DAKAR CON</description>
+		</atc>
+	</airport>
+</PropertyList>

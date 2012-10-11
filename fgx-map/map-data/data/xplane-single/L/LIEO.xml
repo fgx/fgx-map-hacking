@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LIEO">
+		<linecode>1</linecode>
+		<elevation>37</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LIEO</identifier>
+		<name>OLBIA COSTA SMERALDA</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>40.89241100</latitude>
+			<longitude>009.50568600</longitude>
+			<threshold>245.36</threshold>
+			<overrrun>54.86</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>40.90491100</latitude_end>
+			<longitude_end>009.52957200</longitude_end>
+			<threshold_end>150.88</threshold_end>
+			<overrrun_end>54.86</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2445.00148024</length-meters>
+			<length-feet>7452.36451176</length-feet>
+			<heading id="06 ">55.4143513645</heading>
+			<heading_end id="24 ">235.398712647</heading_end>
+			<threshold_lat id="06 ">40.893665124</threshold_lat>
+			<threshold_lon id="06 ">9.50808304542</threshold_lon>
+			<threshold_lat_end id="24 ">40.9041394691</threshold_lat_end>
+			<threshold_lon_end id="24 ">9.52809802225</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>40.89542003</latitude>
+			<longitude>009.51050209</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>55.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>40.90240519</latitude>
+			<longitude>009.52571405</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>235.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>40.90207670</latitude>
+			<longitude>009.51341440</longitude>
+			<height>80</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>40.90159990</latitude>
+			<longitude>009.51543520</longitude>
+			<heading>50.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.89982898</latitude>
+			<longitude>009.51655394</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.89268048</latitude>
+			<longitude>009.50478588</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.90464133</latitude>
+			<longitude>009.53047220</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12595">125.95</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11897">118.97</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

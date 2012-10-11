@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="WBKB">
+		<linecode>1</linecode>
+		<elevation>46</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>WBKB</identifier>
+		<name>Kota Belud</name>
+		<runway end="18" id="36">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>36</number>
+			<latitude>06.35549559</latitude>
+			<longitude>116.47222140</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>18</number_end>
+			<latitude_end>06.37006081</latitude_end>
+			<longitude_end>116.47222140</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1610.7372997</length-meters>
+			<length-feet>4909.52728948</length-feet>
+			<heading id="36 ">0.0</heading>
+			<heading_end id="18 ">180.0</heading_end>
+			<threshold_lat id="36 ">6.35549559</threshold_lat>
+			<threshold_lon id="36 ">116.4722214</threshold_lon>
+			<threshold_lat_end id="18 ">6.37006081</threshold_lat_end>
+			<threshold_lon_end id="18 ">116.4722214</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>06.36826096</latitude>
+			<longitude>116.47260045</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>180.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>06.35729544</latitude>
+			<longitude>116.47184236</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>0.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>06.36277820</latitude>
+			<longitude>116.47077241</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>06.37047226</latitude>
+			<longitude>116.47284241</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>06.35508414</latitude>
+			<longitude>116.47160041</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

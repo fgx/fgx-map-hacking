@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYDM">
+		<linecode>1</linecode>
+		<elevation>2314</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYDM</identifier>
+		<name>Ross River</name>
+		<runway end="26" id="08">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>08</number>
+			<latitude>61.97220424</latitude>
+			<longitude>-132.43678423</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>26</number_end>
+			<latitude_end>61.96679776</latitude_end>
+			<longitude_end>-132.40681377</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1683.48564814</length-meters>
+			<length-feet>5131.26425552</length-feet>
+			<heading id="08 ">110.984731633</heading>
+			<heading_end id="26 ">290.958276781</heading_end>
+			<threshold_lat id="08 ">61.97220424</threshold_lat>
+			<threshold_lon id="08 ">-132.43678423</threshold_lon>
+			<threshold_lat_end id="26 ">61.96679776</threshold_lat_end>
+			<threshold_lon_end id="26 ">-132.40681377</threshold_lon_end>
+		</runway>
+		<lightingobject id="08">
+			<linecode>21</linecode>
+			<latitude>61.97184731</latitude>
+			<longitude>-132.43297318</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>110.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>08</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="26">
+			<linecode>21</linecode>
+			<latitude>61.96715552</latitude>
+			<longitude>-132.41062380</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>291.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>26</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.97268663</latitude>
+			<longitude>-132.43701564</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>61.96631532</latitude>
+			<longitude>-132.40658287</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

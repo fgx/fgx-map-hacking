@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="4G4 ">
+		<linecode>1</linecode>
+		<elevation>1070</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>4G4</identifier>
+		<name>YOUNGSTOWN ELSER METRO</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>15.24</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>40.96172500</latitude>
+			<longitude>-080.68460800</longitude>
+			<threshold>104.85</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>40.96163900</latitude_end>
+			<longitude_end>-080.67008300</longitude_end>
+			<threshold_end>78.94</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1222.80832395</length-meters>
+			<length-feet>3727.11977139</length-feet>
+			<heading id="10 ">90.4522661343</heading>
+			<heading_end id="28 ">270.44274421</heading_end>
+			<threshold_lat id="10 ">40.9617175407</threshold_lat>
+			<threshold_lon id="10 ">-80.6833625505</threshold_lon>
+			<threshold_lat_end id="28 ">40.961644489</threshold_lat_end>
+			<threshold_lon_end id="28 ">-80.6710206806</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>40.96197027</latitude>
+			<longitude>-080.68097239</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>90.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>40.96139234</latitude>
+			<longitude>-080.67340992</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>270.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.96216248</latitude>
+			<longitude>-080.67734217</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.96193178</latitude>
+			<longitude>-080.68478750</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.96143219</latitude>
+			<longitude>-080.66990355</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12305">123.05</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="11925">119.25</frequency>
+			<description>AKRON CANTON CLNC</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12550">125.5</frequency>
+			<description>AKRON CANTON APP/DEP</description>
+		</atc>
+	</airport>
+</PropertyList>

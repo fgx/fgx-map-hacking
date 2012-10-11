@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FAPS">
+		<linecode>1</linecode>
+		<elevation>4520</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FAPS</identifier>
+		<name>Potchefstroom</name>
+		<runway end="21" id="03">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>03</number>
+			<latitude>-26.67756975</latitude>
+			<longitude>027.08019177</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>21</number_end>
+			<latitude_end>-26.66453825</latitude_end>
+			<longitude_end>027.08347823</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1480.46570045</length-meters>
+			<length-feet>4512.45945497</length-feet>
+			<heading id="03 ">12.7653732644</heading>
+			<heading_end id="21 ">192.76684845</heading_end>
+			<threshold_lat id="03 ">-26.67756975</threshold_lat>
+			<threshold_lon id="03 ">27.08019177</threshold_lon>
+			<threshold_lat_end id="21 ">-26.66453825</threshold_lat_end>
+			<threshold_lon_end id="21 ">27.08347823</threshold_lon_end>
+		</runway>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="5">Gravel (grey)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-26.66713656</latitude>
+			<longitude>027.08111224</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-26.67346944</latitude_end>
+			<longitude_end>027.08826376</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>999.559948898</length-meters>
+			<length-feet>3046.65872424</length-feet>
+			<heading id="15 ">134.584599707</heading>
+			<heading_end id="33 ">314.587809709</heading_end>
+			<threshold_lat id="15 ">-26.66713656</threshold_lat>
+			<threshold_lon id="15 ">27.08111224</threshold_lon>
+			<threshold_lat_end id="33 ">-26.67346944</threshold_lat_end>
+			<threshold_lon_end id="33 ">27.08826376</threshold_lon_end>
+		</runway>
+		<lightingobject id="03">
+			<linecode>21</linecode>
+			<latitude>-26.67574086</latitude>
+			<longitude>027.08027175</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>12.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>03</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>-26.66816740</latitude>
+			<longitude>027.08280466</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>134.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="21">
+			<linecode>21</linecode>
+			<latitude>-26.66636714</latitude>
+			<longitude>027.08339832</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>192.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>21</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>-26.67243869</latitude>
+			<longitude>027.08657119</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>314.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-26.67121000</latitude>
+			<longitude>027.07876400</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-26.66963471</latitude>
+			<longitude>027.08542900</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-26.67137000</latitude>
+			<longitude>027.08320600</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12300">123.0</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

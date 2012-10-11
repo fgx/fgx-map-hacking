@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="PHSF">
+		<linecode>1</linecode>
+		<elevation>6190</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>PHSF</identifier>
+		<name>BRADSHAW AAF</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>27.43</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>19.76096900</latitude>
+			<longitude>-155.55904200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>144.17</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>19.75906100</latitude_end>
+			<longitude_end>-155.54849200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>177.09</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1125.68378546</length-meters>
+			<length-feet>3431.08417809</length-feet>
+			<heading id="09 ">100.816602593</heading>
+			<heading_end id="27 ">280.813035836</heading_end>
+			<threshold_lat id="09 ">19.760969</threshold_lat>
+			<threshold_lon id="09 ">-155.559042</threshold_lon>
+			<threshold_lat_end id="27 ">19.759061</threshold_lat_end>
+			<threshold_lon_end id="27 ">-155.548492</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>19.76094503</latitude>
+			<longitude>-155.55709944</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>100.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>19.76086418</latitude>
+			<longitude>-155.55359648</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.76137923</latitude>
+			<longitude>-155.55922536</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.75865075</latitude>
+			<longitude>-155.54830867</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12470">124.7</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12630">126.3</frequency>
+			<description>CTAF</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12630">126.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

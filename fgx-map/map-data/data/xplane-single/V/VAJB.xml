@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VAJB">
+		<linecode>1</linecode>
+		<elevation>1624</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VAJB</identifier>
+		<name>JABALPUR</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>23.17313600</latitude>
+			<longitude>080.04377200</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>23.18251700</latitude_end>
+			<longitude_end>080.06032500</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>35.05</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1987.90583546</length-meters>
+			<length-feet>6059.13698647</length-feet>
+			<heading id="06 ">58.4953140496</heading>
+			<heading_end id="24 ">238.488799018</heading_end>
+			<threshold_lat id="06 ">23.173136</threshold_lat>
+			<threshold_lon id="06 ">80.043772</threshold_lon>
+			<threshold_lat_end id="24 ">23.182517</threshold_lat_end>
+			<threshold_lon_end id="24 ">80.060325</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>23.17442425</latitude>
+			<longitude>080.04520804</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>58.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>23.18122891</latitude>
+			<longitude>080.05888870</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>238.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.17344540</latitude>
+			<longitude>080.04303871</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>23.18220752</latitude>
+			<longitude>080.06105831</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

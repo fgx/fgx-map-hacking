@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LPVZ">
+		<linecode>1</linecode>
+		<elevation>2060</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LPVZ</identifier>
+		<name>VISEU</name>
+		<runway end="19" id="01">
+			<linecode>100</linecode>
+			<width>29.57</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>01</number>
+			<latitude>40.72004400</latitude>
+			<longitude>-007.88849700</longitude>
+			<threshold>58.52</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>19</number_end>
+			<latitude_end>40.73103600</latitude_end>
+			<longitude_end>-007.88955300</longitude_end>
+			<threshold_end>65.23</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1223.90217639</length-meters>
+			<length-feet>3730.45383363</length-feet>
+			<heading id="01 ">-4.1805309418</heading>
+			<heading_end id="19 ">535.820158031</heading_end>
+			<threshold_lat id="01 ">40.7205695748</threshold_lat>
+			<threshold_lon id="01 ">-7.88854749228</threshold_lon>
+			<threshold_lat_end id="19 ">40.7304501625</threshold_lat_end>
+			<threshold_lon_end id="19 ">-7.88949671913</threshold_lon_end>
+		</runway>
+		<lightingobject id="01">
+			<linecode>21</linecode>
+			<latitude>40.72234033</latitude>
+			<longitude>-007.88915550</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>355.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>01</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="19">
+			<linecode>21</linecode>
+			<latitude>40.72867949</latitude>
+			<longitude>-007.88888861</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>175.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>19</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>40.72546985</latitude>
+			<longitude>-007.89024842</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.71974975</latitude>
+			<longitude>-007.88899490</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>40.73133025</latitude>
+			<longitude>-007.88905502</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12230">122.3</frequency>
+			<description>RDO</description>
+		</atc>
+	</airport>
+</PropertyList>

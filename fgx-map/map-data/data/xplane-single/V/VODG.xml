@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="VODG">
+		<linecode>1</linecode>
+		<elevation>2013</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>VODG</identifier>
+		<name>DUNDIGUL</name>
+		<runway end="28R" id="10L">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10L</number>
+			<latitude>17.63139200</latitude>
+			<longitude>078.39015600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>304.80</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28R</number_end>
+			<latitude_end>17.62770000</latitude_end>
+			<longitude_end>078.41348100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>303.28</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2508.839812</length-meters>
+			<length-feet>7646.94374699</length-feet>
+			<heading id="10L">99.3770941436</heading>
+			<heading_end id="28R">279.370029902</heading_end>
+			<threshold_lat id="10L">17.631392</threshold_lat>
+			<threshold_lon id="10L">78.390156</threshold_lon>
+			<threshold_lat_end id="28R">17.6277</threshold_lat_end>
+			<threshold_lon_end id="28R">78.413481</threshold_lon_end>
+		</runway>
+		<runway end="28L" id="10R">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10R</number>
+			<latitude>17.62641100</latitude>
+			<longitude>078.39527500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>234.70</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28L</number_end>
+			<latitude_end>17.62331900</latitude_end>
+			<longitude_end>078.41453300</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>205.74</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2072.2388416</length-meters>
+			<length-feet>6316.1839892</length-feet>
+			<heading id="10R">99.5083144151</heading>
+			<heading_end id="28L">279.50248341</heading_end>
+			<threshold_lat id="10R">17.626411</threshold_lat>
+			<threshold_lon id="10R">78.395275</threshold_lon>
+			<threshold_lat_end id="28L">17.623319</threshold_lat_end>
+			<threshold_lon_end id="28L">78.414533</threshold_lon_end>
+		</runway>
+		<lightingobject id="10L">
+			<linecode>21</linecode>
+			<latitude>17.63149548</latitude>
+			<longitude>078.39208845</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>99.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28R">
+			<linecode>21</linecode>
+			<latitude>17.62759675</latitude>
+			<longitude>078.41154858</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>279.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.63206823</latitude>
+			<longitude>078.38983616</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.62708793</latitude>
+			<longitude>078.39495682</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.62264204</latitude>
+			<longitude>078.41485110</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>17.62702374</latitude>
+			<longitude>078.41380074</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11910">119.1</frequency>
+			<description>ACADEMY TWR</description>
+		</atc>
+	</airport>
+</PropertyList>

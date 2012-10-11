@@ -1,0 +1,355 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="YMAV">
+		<linecode>1</linecode>
+		<elevation>35</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>YMAV</identifier>
+		<name>Avalon</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>-38.02724602</latitude>
+			<longitude>144.46940540</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>242.93</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>-38.05444248</latitude_end>
+			<longitude_end>144.46485917</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>307.85</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3044.9980778</length-meters>
+			<length-feet>9281.15414112</length-feet>
+			<heading id="18 ">-172.467605913</heading>
+			<heading_end id="36 ">367.529592595</heading_end>
+			<threshold_lat id="18 ">-38.02724602</threshold_lat>
+			<threshold_lon id="18 ">144.4694054</threshold_lon>
+			<threshold_lat_end id="36 ">-38.05444248</threshold_lat_end>
+			<threshold_lon_end id="36 ">144.46485917</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>-38.02630029</latitude>
+			<longitude>144.48067048</longitude>
+			<orientation>7.13</orientation>
+			<width>38.10</width>
+			<length>38.10</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.25</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-38.05166927</latitude>
+			<longitude>144.46468866</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>7.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-38.05179152</latitude>
+			<longitude>144.46592490</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>7.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-38.05086044</latitude>
+			<longitude>144.46486715</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>7.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>-38.03102744</latitude>
+			<longitude>144.46945836</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>187.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-38.03951411</latitude>
+			<longitude>144.47086541</longitude>
+			<height>50</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 19</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.02629801</latitude>
+			<longitude>144.48066550</longitude>
+			<heading>13.17</heading>
+			<name>Helipad 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.02933795</latitude>
+			<longitude>144.47513148</longitude>
+			<heading>05.89</heading>
+			<name>Main Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.02991815</latitude>
+			<longitude>144.47507294</longitude>
+			<heading>58.36</heading>
+			<name>Main Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.02713645</latitude>
+			<longitude>144.47274055</longitude>
+			<heading>41.05</heading>
+			<name>North Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-38.02719406</latitude>
+			<longitude>144.47327686</longitude>
+			<heading>30.57</heading>
+			<name>North Apron 2</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-38.05199800</latitude>
+			<longitude>144.46409600</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-38.05146918</latitude>
+			<longitude>144.46284989</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 17</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-38.02765599</latitude>
+			<longitude>144.46688172</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>New Windsock 18</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.05416442</latitude>
+			<longitude>144.46606751</longitude>
+			<orientation>276.19</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03221054</latitude>
+			<longitude>144.47076023</longitude>
+			<orientation>234.66</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y}C{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03266043</latitude>
+			<longitude>144.47156010</longitude>
+			<orientation>224.25</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y}C{^ru}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.04593999</latitude>
+			<longitude>144.46877987</longitude>
+			<orientation>191.04</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}A{@Y}D{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02769529</latitude>
+			<longitude>144.47157983</longitude>
+			<orientation>276.08</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02732997</latitude>
+			<longitude>144.47169609</longitude>
+			<orientation>276.08</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02807186</latitude>
+			<longitude>144.47329346</longitude>
+			<orientation>100.78</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}B{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03220709</latitude>
+			<longitude>144.46988458</longitude>
+			<orientation>278.93</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}C{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03260409</latitude>
+			<longitude>144.46980858</longitude>
+			<orientation>277.20</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}C{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.04622670</latitude>
+			<longitude>144.46745792</longitude>
+			<orientation>279.27</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}D{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.04660670</latitude>
+			<longitude>144.46737492</longitude>
+			<orientation>278.85</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}D{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.05466103</latitude>
+			<longitude>144.46615433</longitude>
+			<orientation>275.34</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@L}D{@R}36-18</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02806231</latitude>
+			<longitude>144.47407849</longitude>
+			<orientation>277.48</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^l}A{@L}B</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.04650959</latitude>
+			<longitude>144.46864753</longitude>
+			<orientation>99.24</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^l}A{@L}D{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02825493</latitude>
+			<longitude>144.47326728</longitude>
+			<orientation>9.21</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^l}B{@L}A{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.02830905</latitude>
+			<longitude>144.47396571</longitude>
+			<orientation>13.50</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^l}B{@L}A{@Y}B{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03219674</latitude>
+			<longitude>144.46977861</longitude>
+			<orientation>95.30</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^lu}A{@L}C{@Y}A{^r}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>-38.03258076</latitude>
+			<longitude>144.46971903</longitude>
+			<orientation>95.30</orientation>
+			<reserved>0</reserved>
+			<size code="4">Large distance-remaining sign on runway edge</size>
+			<text>{@Y}{^lu}A{@L}C{@Y}A{^r}</text>
+		</sign>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12930">129.3</frequency>
+			<description>AVALON FLIGHT OPS UNIC</description>
+		</atc>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="11965">119.65</frequency>
+			<description>AVTIVATE LIGHTS ONLY MULT</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12010">120.1</frequency>
+			<description>AVALON TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12930">129.3</frequency>
+			<description>AVALON TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13569">135.69</frequency>
+			<description>MELBOURNE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

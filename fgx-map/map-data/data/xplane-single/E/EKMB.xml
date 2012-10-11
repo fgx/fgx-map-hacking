@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EKMB">
+		<linecode>1</linecode>
+		<elevation>16</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EKMB</identifier>
+		<name>Lolland Falster Maribo</name>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>54.70006714</latitude>
+			<longitude>011.42918056</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="6">SSALF</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="2">unidirectional REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>54.69885000</latitude_end>
+			<longitude_end>011.44766944</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="6">SSALF</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="2">unidirectional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1199.6826756</length-meters>
+			<length-feet>3656.63279524</length-feet>
+			<heading id="10 ">96.4922417806</heading>
+			<heading_end id="28 ">276.477152412</heading_end>
+			<threshold_lat id="10 ">54.70006714</threshold_lat>
+			<threshold_lon id="10 ">11.42918056</threshold_lon>
+			<threshold_lat_end id="28 ">54.69885</threshold_lat_end>
+			<threshold_lon_end id="28 ">11.44766944</threshold_lon_end>
+		</runway>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.69766294</latitude>
+			<longitude>011.44588819</longitude>
+			<heading>78.76</heading>
+			<name>Gate 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.69718209</latitude>
+			<longitude>011.44912884</longitude>
+			<heading>6.22</heading>
+			<name>Hanger</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>54.69774626</latitude>
+			<longitude>011.44649573</longitude>
+			<heading>75.74</heading>
+			<name>Parking</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>54.69737043</latitude>
+			<longitude>011.44520077</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>54.69846304</latitude>
+			<longitude>011.44190529</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>54.69843373</latitude>
+			<longitude>011.44465267</longitude>
+			<orientation>351.97</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@L}A{@R}10-28{@Y}{@@}{safety}</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>54.69839644</latitude>
+			<longitude>011.44523909</longitude>
+			<orientation>25.87</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}10-28{@L}A{@Y}{@@}{safety}</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11897">118.97</frequency>
+			<description>MARIBO AFIS</description>
+		</atc>
+	</airport>
+</PropertyList>

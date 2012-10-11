@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FIMR">
+		<linecode>1</linecode>
+		<elevation>95</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FIMR</identifier>
+		<name>PLAINE CORAIL</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-19.75606900</latitude>
+			<longitude>063.35507200</longitude>
+			<threshold>134.11</threshold>
+			<overrrun>29.87</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-19.75924700</latitude_end>
+			<longitude_end>063.36689200</longitude_end>
+			<threshold_end>73.15</threshold_end>
+			<overrrun_end>29.87</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1287.79685742</length-meters>
+			<length-feet>3925.2048214</length-feet>
+			<heading id="12 ">105.851970204</heading>
+			<heading_end id="30 ">285.855965866</heading_end>
+			<threshold_lat id="12 ">-19.7563999092</threshold_lat>
+			<threshold_lon id="12 ">63.3563029266</threshold_lon>
+			<threshold_lat_end id="30 ">-19.7590664585</threshold_lat_end>
+			<threshold_lon_end id="30 ">63.3662205959</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>-19.75657544</latitude>
+			<longitude>063.35824091</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>105.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-19.75889145</latitude>
+			<longitude>063.36428349</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>285.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-19.75675289</latitude>
+			<longitude>063.36125407</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-19.75560745</latitude>
+			<longitude>063.35491507</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-19.75970854</latitude>
+			<longitude>063.36704896</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

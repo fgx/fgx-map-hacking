@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LFOH">
+		<linecode>1</linecode>
+		<elevation>311</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LFOH</identifier>
+		<name>Le Havre-Octeville</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>49.52651939</latitude>
+			<longitude>000.07756640</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>49.54163861</latitude_end>
+			<longitude_end>000.09934797</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2305.12148379</length-meters>
+			<length-feet>7026.01028258</length-feet>
+			<heading id="05 ">43.1647152879</heading>
+			<heading_end id="23 ">223.148144041</heading_end>
+			<threshold_lat id="05 ">49.52651939</threshold_lat>
+			<threshold_lon id="05 ">0.0775664</threshold_lon>
+			<threshold_lat_end id="23 ">49.54163861</threshold_lat_end>
+			<threshold_lon_end id="23 ">0.09934797</threshold_lon_end>
+		</runway>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H1</designator>
+			<latitude>49.53494370</latitude>
+			<longitude>000.09638730</longitude>
+			<orientation>20.00</orientation>
+			<width>11.89</width>
+			<length>11.89</length>
+			<surface code="1">Asphalt</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="1">Asphalt shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<helipad>
+			<linecode>102</linecode>
+			<designator>H2</designator>
+			<latitude>49.53595781</latitude>
+			<longitude>000.09701167</longitude>
+			<orientation>23.43</orientation>
+			<width>11.89</width>
+			<length>11.89</length>
+			<surface code="2">Concrete</surface>
+			<markings code="0">Not supported yet</markings>
+			<shoulder_surface code="0">No shoulder</shoulder_surface>
+			<smoothness>0.00</smoothness>
+			<edge_lighting code="1">Yellow edge lights</edge_lighting>
+		</helipad>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.53341030</latitude>
+			<longitude>000.09521086</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.53230304</latitude>
+			<longitude>000.09297219</longitude>
+			<heading>59.72</heading>
+			<name>Stand 01</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.53279597</latitude>
+			<longitude>000.09494098</longitude>
+			<heading>35.63</heading>
+			<name>Stand ACB</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.53212398</latitude>
+			<longitude>000.09237758</longitude>
+			<heading>61.11</heading>
+			<name>Stand ATR</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.53182855</latitude>
+			<longitude>000.09225441</longitude>
+			<heading>63.19</heading>
+			<name>Stand Beech 200</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.53610614</latitude>
+			<longitude>000.09648424</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.53322490</latitude>
+			<longitude>000.09081894</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>49.53275847</latitude>
+			<longitude>000.08942556</longitude>
+			<orientation>286.48</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}23-05</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>49.53905150</latitude>
+			<longitude>000.09733955</longitude>
+			<orientation>330.76</orientation>
+			<reserved>0</reserved>
+			<size code="2">Medium taxiway sign</size>
+			<text>{@R}23-05</text>
+		</sign>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12617">126.17</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="13520">135.2</frequency>
+			<description>LE HAVRE TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12035">120.35</frequency>
+			<description>DEAUVILLE APP</description>
+		</atc>
+	</airport>
+</PropertyList>

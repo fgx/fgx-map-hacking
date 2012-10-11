@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EDRK">
+		<linecode>1</linecode>
+		<elevation>640</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>EDRK</identifier>
+		<name>Koblenz Winningen</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>20.12</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>50.32241900</latitude>
+			<longitude>007.52082800</longitude>
+			<threshold>180.14</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>50.32794400</latitude_end>
+			<longitude_end>007.53489200</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1175.04383568</length-meters>
+			<length-feet>3581.53361116</length-feet>
+			<heading id="06 ">58.4701523565</heading>
+			<heading_end id="24 ">238.459327574</heading_end>
+			<threshold_lat id="06 ">50.3232658596</threshold_lat>
+			<threshold_lon id="06 ">7.52298411868</threshold_lon>
+			<threshold_lat_end id="24 ">50.327944</threshold_lat_end>
+			<threshold_lon_end id="24 ">7.534892</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>50.32387600</latitude>
+			<longitude>007.52829300</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.32370000</latitude>
+			<longitude>007.52744000</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.32721200</latitude>
+			<longitude>007.53372800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.32267000</latitude>
+			<longitude>007.52283200</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12352">123.52</frequency>
+			<description>LANGEN INFO</description>
+		</atc>
+	</airport>
+</PropertyList>

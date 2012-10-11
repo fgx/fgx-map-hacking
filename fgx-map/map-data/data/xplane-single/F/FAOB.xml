@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FAOB">
+		<linecode>1</linecode>
+		<elevation>52</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FAOB</identifier>
+		<name>Overberg</name>
+		<runway end="35" id="17">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>17</number>
+			<latitude>-34.55439099</latitude>
+			<longitude>020.25028880</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>289.56</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>35</number_end>
+			<latitude_end>-34.57750501</latitude_end>
+			<longitude_end>020.26955120</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>289.56</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3114.36073406</length-meters>
+			<length-feet>9492.5715174</length-feet>
+			<heading id="17 ">145.412548851</heading>
+			<heading_end id="35 ">325.423477459</heading_end>
+			<threshold_lat id="17 ">-34.55439099</threshold_lat>
+			<threshold_lon id="17 ">20.2502888</threshold_lon>
+			<threshold_lat_end id="35 ">-34.57750501</threshold_lat_end>
+			<threshold_lon_end id="35 ">20.2695512</threshold_lon_end>
+		</runway>
+		<runway end="28" id="10">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>10</number>
+			<latitude>-34.55954583</latitude>
+			<longitude>020.22903004</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>289.56</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>28</number_end>
+			<latitude_end>-34.55472817</latitude_end>
+			<longitude_end>020.25134396</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>289.56</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2116.49699326</length-meters>
+			<length-feet>6451.08283544</length-feet>
+			<heading id="10 ">75.3676266993</heading>
+			<heading_end id="28 ">255.380283775</heading_end>
+			<threshold_lat id="10 ">-34.55954583</threshold_lat>
+			<threshold_lon id="10 ">20.22903004</threshold_lon>
+			<threshold_lat_end id="28 ">-34.55472817</threshold_lat_end>
+			<threshold_lon_end id="28 ">20.25134396</threshold_lon_end>
+		</runway>
+		<lightingobject id="10">
+			<linecode>21</linecode>
+			<latitude>-34.55872429</latitude>
+			<longitude>020.23102794</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>75.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>10</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>-34.55564593</latitude>
+			<longitude>020.25193075</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>145.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="28">
+			<linecode>21</linecode>
+			<latitude>-34.55555008</latitude>
+			<longitude>020.24934640</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>255.3</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>28</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>-34.57625033</latitude>
+			<longitude>020.26790851</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>325.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-34.56042800</latitude>
+			<longitude>020.24847100</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-34.55931100</latitude>
+			<longitude>020.24922400</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-34.55760700</latitude>
+			<longitude>020.24554600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11980">119.8</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

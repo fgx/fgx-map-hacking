@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJTF">
+		<linecode>1</linecode>
+		<elevation>135</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>RJTF</identifier>
+		<name>Chofu</name>
+		<runway end="17" id="35">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>35</number>
+			<latitude>35.66811857</latitude>
+			<longitude>139.52927092</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>17</number_end>
+			<latitude_end>35.67498303</latitude_end>
+			<longitude_end>139.52660668</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>798.915105748</length-meters>
+			<length-feet>2435.09324232</length-feet>
+			<heading id="35 ">-17.5738404352</heading>
+			<heading_end id="17 ">522.427713184</heading_end>
+			<threshold_lat id="35 ">35.66811857</threshold_lat>
+			<threshold_lon id="35 ">139.52927092</threshold_lon>
+			<threshold_lat_end id="17 ">35.67498303</threshold_lat_end>
+			<threshold_lon_end id="17 ">139.52660668</threshold_lon_end>
+		</runway>
+		<lightingobject id="17">
+			<linecode>21</linecode>
+			<latitude>35.67336645</latitude>
+			<longitude>139.52766320</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>162.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>17</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="35">
+			<linecode>21</linecode>
+			<latitude>35.66973518</latitude>
+			<longitude>139.52821453</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>342.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>35</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.67536066</latitude>
+			<longitude>139.52698056</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>35.66774096</latitude>
+			<longitude>139.52889706</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

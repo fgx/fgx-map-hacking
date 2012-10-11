@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CYBX">
+		<linecode>1</linecode>
+		<elevation>121</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CYBX</identifier>
+		<name>LOURDES DE BLANC SABLON</name>
+		<runway end="23" id="05">
+			<linecode>100</linecode>
+			<width>45.72</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>05</number>
+			<latitude>51.43664400</latitude>
+			<longitude>-057.19086100</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23</number_end>
+			<latitude_end>51.44756900</latitude_end>
+			<longitude_end>-057.18176100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1370.29621426</length-meters>
+			<length-feet>4176.66286105</length-feet>
+			<heading id="05 ">27.5024556231</heading>
+			<heading_end id="23 ">207.495339616</heading_end>
+			<threshold_lat id="05 ">51.436644</threshold_lat>
+			<threshold_lon id="05 ">-57.190861</threshold_lon>
+			<threshold_lat_end id="23 ">51.447569</threshold_lat_end>
+			<threshold_lon_end id="23 ">-57.181761</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>51.43842744</latitude>
+			<longitude>-057.19010557</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>27.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>51.44578562</latitude>
+			<longitude>-057.18251701</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>207.4</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.44276809</latitude>
+			<longitude>-057.18836436</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.43656317</latitude>
+			<longitude>-057.19204378</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.44764973</latitude>
+			<longitude>-057.18057790</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

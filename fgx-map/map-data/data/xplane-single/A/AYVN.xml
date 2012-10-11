@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="AYVN">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>AYVN</identifier>
+		<name>Vanimo</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>25.91</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-02.68762200</latitude>
+			<longitude>141.29679200</longitude>
+			<threshold>140.21</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-02.69776100</latitude_end>
+			<longitude_end>141.30891700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>28.96</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1753.50422473</length-meters>
+			<length-feet>5344.68087698</length-feet>
+			<heading id="12 ">129.744548929</heading>
+			<heading_end id="30 ">309.74511855</heading_end>
+			<threshold_lat id="12 ">-2.68843270812</threshold_lat>
+			<threshold_lon id="12 ">141.297761514</threshold_lon>
+			<threshold_lat_end id="30 ">-2.697761</threshold_lat_end>
+			<threshold_lon_end id="30 ">141.308917</threshold_lon_end>
+		</runway>
+		<runway end="13" id="31">
+			<linecode>100</linecode>
+			<width>30.48</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>31</number>
+			<latitude>-02.69784408</latitude>
+			<longitude>141.30948079</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>152.40</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>13</number_end>
+			<latitude_end>-02.68717192</latitude_end>
+			<longitude_end>141.29604921</longitude_end>
+			<threshold_end>152.40</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1903.50490016</length-meters>
+			<length-feet>5801.88293569</length-feet>
+			<heading id="31 ">-51.6866394187</heading>
+			<heading_end id="13 ">488.312729622</heading_end>
+			<threshold_lat id="31 ">-2.69784408</threshold_lat>
+			<threshold_lon id="31 ">141.30948079</threshold_lon>
+			<threshold_lat_end id="13 ">-2.68802635703</threshold_lat_end>
+			<threshold_lon_end id="13 ">141.297124581</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>-02.68936677</latitude>
+			<longitude>141.29932698</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>129.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-02.69682618</latitude>
+			<longitude>141.30735057</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>309.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-02.69337800</latitude>
+			<longitude>141.30017300</longitude>
+			<height>6</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-02.69270600</latitude>
+			<longitude>141.29904500</longitude>
+			<heading>0.00</heading>
+			<name>Custom Startup Location</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-02.69325938</latitude>
+			<longitude>141.30216664</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.69827900</latitude>
+			<longitude>141.30917500</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.69187600</latitude>
+			<longitude>141.29989600</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-02.68774500</latitude>
+			<longitude>141.29601800</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12770">127.7</frequency>
+			<description>VAI AWOS</description>
+		</atc>
+	</airport>
+</PropertyList>

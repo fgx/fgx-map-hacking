@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ESND">
+		<linecode>1</linecode>
+		<elevation>1178</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ESND</identifier>
+		<name>SVEG</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>62.04733600</latitude>
+			<longitude>014.40480000</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>62.04812200</latitude_end>
+			<longitude_end>014.43726100</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1700.49564246</length-meters>
+			<length-feet>5183.11071823</length-feet>
+			<heading id="09 ">87.0615797573</heading>
+			<heading_end id="27 ">267.03290571</heading_end>
+			<threshold_lat id="09 ">62.047336</threshold_lat>
+			<threshold_lon id="09 ">14.4048</threshold_lon>
+			<threshold_lat_end id="27 ">62.048122</threshold_lat_end>
+			<threshold_lon_end id="27 ">14.437261</threshold_lon_end>
+		</runway>
+		<lightingobject id="09">
+			<linecode>21</linecode>
+			<latitude>62.04776124</latitude>
+			<longitude>014.40859783</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>87.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>09</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="27">
+			<linecode>21</linecode>
+			<latitude>62.04769765</latitude>
+			<longitude>014.43346262</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>267.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>27</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>62.04867045</latitude>
+			<longitude>014.42092453</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.04772475</latitude>
+			<longitude>014.40418271</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>62.04773311</latitude>
+			<longitude>014.43787789</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12220">122.2</frequency>
+			<description>AFIS</description>
+		</atc>
+	</airport>
+</PropertyList>

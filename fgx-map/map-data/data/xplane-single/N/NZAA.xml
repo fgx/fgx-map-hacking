@@ -1,0 +1,330 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="NZAA">
+		<linecode>1</linecode>
+		<elevation>23</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>NZAA</identifier>
+		<name>Auckland International</name>
+		<runway end="23L" id="05R">
+			<linecode>100</linecode>
+			<width>46.33</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05R</number>
+			<latitude>-37.01747887</latitude>
+			<longitude>174.76657685</longitude>
+			<threshold>387.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="3">Calvert</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23L</number_end>
+			<latitude_end>-37.00666913</latitude_end>
+			<longitude_end>174.80578115</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="3">Calvert</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3689.56345756</length-meters>
+			<length-feet>11245.7894187</length-feet>
+			<heading id="05R">71.0138605445</heading>
+			<heading_end id="23L">251.037460879</heading_end>
+			<threshold_lat id="05R">-37.0163439888</threshold_lat>
+			<threshold_lon id="05R">174.770690008</threshold_lon>
+			<threshold_lat_end id="23L">-37.00666913</threshold_lat_end>
+			<threshold_lon_end id="23L">174.80578115</threshold_lon_end>
+		</runway>
+		<runway end="23R" id="05L">
+			<linecode>100</linecode>
+			<width>47.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.35</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>05L</number>
+			<latitude>-37.01437678</latitude>
+			<longitude>174.77090021</longitude>
+			<threshold>377.95</threshold>
+			<overrrun>140.21</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="1">omni-directional REIL</reil>
+			<number_end>23R</number_end>
+			<latitude_end>-37.00465122</latitude_end>
+			<longitude_end>174.80606579</longitude_end>
+			<threshold_end>323.09</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3310.63644475</length-meters>
+			<length-feet>10090.8198836</length-feet>
+			<heading id="05L">70.9622580844</heading>
+			<heading_end id="23R">250.983425922</heading_end>
+			<threshold_lat id="05L">-37.0132658256</threshold_lat>
+			<threshold_lon id="05L">174.774914736</threshold_lon>
+			<threshold_lat_end id="23R">-37.0055997947</threshold_lat_end>
+			<threshold_lon_end id="23R">174.802633885</threshold_lon_end>
+		</runway>
+		<lightingobject id="05L">
+			<linecode>21</linecode>
+			<latitude>-37.01228495</latitude>
+			<longitude>174.77688634</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>70.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="05R">
+			<linecode>21</linecode>
+			<latitude>-37.01456990</latitude>
+			<longitude>174.77557417</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>70.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23L">
+			<linecode>21</linecode>
+			<latitude>-37.00820568</latitude>
+			<longitude>174.80177103</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>250.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23L</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23R">
+			<linecode>21</linecode>
+			<latitude>-37.00658315</latitude>
+			<longitude>174.80066553</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>250.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23R</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-37.00640500</latitude>
+			<longitude>174.78871200</longitude>
+			<height>70</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00705700</latitude>
+			<longitude>174.79061900</longitude>
+			<heading>40.00</heading>
+			<name>ANZ Domestic 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00713700</latitude>
+			<longitude>174.79150400</longitude>
+			<heading>00.00</heading>
+			<name>ANZ Domestic 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00659200</latitude>
+			<longitude>174.79231300</longitude>
+			<heading>71.00</heading>
+			<name>Commuter Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00569500</latitude>
+			<longitude>174.79353300</longitude>
+			<heading>50.00</heading>
+			<name>Commuter Ramp 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00726700</latitude>
+			<longitude>174.79010000</longitude>
+			<heading>42.00</heading>
+			<name>FWA Domestic 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00488700</latitude>
+			<longitude>174.79336500</longitude>
+			<heading>50.00</heading>
+			<name>General Aviation Ramp</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00612300</latitude>
+			<longitude>174.78190600</longitude>
+			<heading>13.00</heading>
+			<name>International 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00858700</latitude>
+			<longitude>174.78213500</longitude>
+			<heading>24.00</heading>
+			<name>International 10</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00655700</latitude>
+			<longitude>174.78324900</longitude>
+			<heading>91.00</heading>
+			<name>International 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00672500</latitude>
+			<longitude>174.78170800</longitude>
+			<heading>11.00</heading>
+			<name>International 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00697300</latitude>
+			<longitude>174.78283700</longitude>
+			<heading>95.00</heading>
+			<name>International 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00723300</latitude>
+			<longitude>174.78121900</longitude>
+			<heading>08.00</heading>
+			<name>International 5</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00756500</latitude>
+			<longitude>174.78263900</longitude>
+			<heading>98.00</heading>
+			<name>International 6</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00777400</latitude>
+			<longitude>174.78115800</longitude>
+			<heading>68.00</heading>
+			<name>International 7</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00827800</latitude>
+			<longitude>174.78279100</longitude>
+			<heading>23.00</heading>
+			<name>International 8</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00826300</latitude>
+			<longitude>174.78147900</longitude>
+			<heading>39.00</heading>
+			<name>International 9</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00690500</latitude>
+			<longitude>174.78863500</longitude>
+			<heading>71.00</heading>
+			<name>Quantas Domestic 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00717200</latitude>
+			<longitude>174.78509500</longitude>
+			<heading>17.00</heading>
+			<name>Tarmac Ramp 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00779700</latitude>
+			<longitude>174.78590400</longitude>
+			<heading>64.00</heading>
+			<name>Tarmac Ramp 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>-37.00757600</latitude>
+			<longitude>174.78674300</longitude>
+			<heading>64.00</heading>
+			<name>Tarmac Ramp 6</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-37.01117700</latitude>
+			<longitude>174.78572100</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-37.00784300</latitude>
+			<longitude>174.80709800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-37.01211500</latitude>
+			<longitude>174.78942900</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-37.01693000</latitude>
+			<longitude>174.77285800</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12780">127.8</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12820">128.2</frequency>
+			<description>CLNC DEL</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12190">121.9</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

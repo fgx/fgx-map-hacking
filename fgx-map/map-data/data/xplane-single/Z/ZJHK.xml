@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZJHK">
+		<linecode>1</linecode>
+		<elevation>75</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>ZJHK</identifier>
+		<name>MEILAN</name>
+		<runway end="27" id="09">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>09</number>
+			<latitude>19.93477104</latitude>
+			<longitude>110.43803320</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>60.05</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>27</number_end>
+			<latitude_end>19.93490129</latitude_end>
+			<longitude_end>110.47249506</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>60.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3607.84373792</length-meters>
+			<length-feet>10996.7077132</length-feet>
+			<heading id="09 ">89.7768856826</heading>
+			<heading_end id="27 ">269.76513587</heading_end>
+			<threshold_lat id="09 ">19.93477104</threshold_lat>
+			<threshold_lon id="09 ">110.4380332</threshold_lon>
+			<threshold_lat_end id="27 ">19.93490129</threshold_lat_end>
+			<threshold_lon_end id="27 ">110.47249506</threshold_lon_end>
+		</runway>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>19.93425485</latitude>
+			<longitude>110.46927610</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>269.8</orientation>
+			<glideslope>4.00</glideslope>
+			<runway>New</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="New">
+			<linecode>21</linecode>
+			<latitude>19.93415400</latitude>
+			<longitude>110.44109174</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>89.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>New</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>19.93287657</latitude>
+			<longitude>110.45868430</longitude>
+			<type code="1">White-green flashing</type>
+			<description>New Airport Beacon 1</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.93537831</latitude>
+			<longitude>110.43759870</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>19.93429394</latitude>
+			<longitude>110.47292943</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="12765">127.65</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12165">121.65</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11860">118.6</frequency>
+			<description>HAIKOU TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>HAIKOU TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11915">119.15</frequency>
+			<description>HAIKOU APP</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12385">123.85</frequency>
+			<description>HAIKOU APP</description>
+		</atc>
+	</airport>
+</PropertyList>

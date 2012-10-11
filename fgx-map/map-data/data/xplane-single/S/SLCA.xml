@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SLCA">
+		<linecode>1</linecode>
+		<elevation>2615</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SLCA</identifier>
+		<name>Camiri</name>
+		<runway end="33" id="15">
+			<linecode>100</linecode>
+			<width>17.07</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>15</number>
+			<latitude>-19.99591128</latitude>
+			<longitude>-063.53087681</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>33</number_end>
+			<latitude_end>-20.00464572</latitude_end>
+			<longitude_end>-063.52412359</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1197.66558776</length-meters>
+			<length-feet>3650.4847115</length-feet>
+			<heading id="15 ">143.837045891</heading>
+			<heading_end id="33 ">323.839355659</heading_end>
+			<threshold_lat id="15 ">-19.99591128</threshold_lat>
+			<threshold_lon id="15 ">-63.53087681</threshold_lon>
+			<threshold_lat_end id="33 ">-20.00464572</threshold_lat_end>
+			<threshold_lon_end id="33 ">-63.52412359</threshold_lon_end>
+		</runway>
+		<lightingobject id="15">
+			<linecode>21</linecode>
+			<latitude>-19.99722177</latitude>
+			<longitude>-063.52953772</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>144.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>15</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="33">
+			<linecode>21</linecode>
+			<latitude>-20.00333528</latitude>
+			<longitude>-063.52546281</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>324.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>33</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-19.99996249</latitude>
+			<longitude>-063.52703743</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-19.99565158</latitude>
+			<longitude>-063.53077452</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-20.00490543</latitude>
+			<longitude>-063.52422587</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

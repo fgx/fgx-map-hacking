@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="CER3">
+		<linecode>1</linecode>
+		<elevation>2776</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>CER3</identifier>
+		<name>DRAYTON VALLEY INDUSTRIAL</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>22.86</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>53.27101700</latitude>
+			<longitude>-114.96291100</longitude>
+			<threshold>231.95</threshold>
+			<overrrun>239.27</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>53.25787200</latitude_end>
+			<longitude_end>-114.95541700</longitude_end>
+			<threshold_end>104.85</threshold_end>
+			<overrrun_end>96.01</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1546.02448292</length-meters>
+			<length-feet>4712.28262395</length-feet>
+			<heading id="14 ">161.131884669</heading>
+			<heading_end id="32 ">341.125878943</heading_end>
+			<threshold_lat id="14 ">53.2690448173</threshold_lat>
+			<threshold_lon id="14 ">-114.961786727</threshold_lon>
+			<threshold_lat_end id="32 ">53.258763466</threshold_lat_end>
+			<threshold_lon_end id="32 ">-114.955925247</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>53.26743493</latitude>
+			<longitude>-114.96033677</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>161.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>53.26037160</latitude>
+			<longitude>-114.95737294</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>341.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.26467813</latitude>
+			<longitude>-114.95802651</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.27131088</latitude>
+			<longitude>-114.96253583</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.25757814</latitude>
+			<longitude>-114.95579211</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12280">122.8</frequency>
+			<description>CTAF/UNICOM</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SKVV">
+		<linecode>1</linecode>
+		<elevation>1394</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>SKVV</identifier>
+		<name>VANGUARDIA</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>04.16188100</latitude>
+			<longitude>-073.61863300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>04.17386900</latitude_end>
+			<longitude_end>-073.60888600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1711.26343683</length-meters>
+			<length-feet>5215.93095545</length-feet>
+			<heading id="04 ">39.2268044071</heading>
+			<heading_end id="22 ">219.226096005</heading_end>
+			<threshold_lat id="04 ">4.161881</threshold_lat>
+			<threshold_lon id="04 ">-73.618633</threshold_lon>
+			<threshold_lat_end id="22 ">4.173869</threshold_lat_end>
+			<threshold_lon_end id="22 ">-73.608886</threshold_lon_end>
+		</runway>
+		<lightingobject id="05">
+			<linecode>21</linecode>
+			<latitude>04.16348833</latitude>
+			<longitude>-073.61775523</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>39.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>05</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="23">
+			<linecode>21</linecode>
+			<latitude>04.17226167</latitude>
+			<longitude>-073.60976380</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>219.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>23</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.16200649</latitude>
+			<longitude>073.61979843</longitude>
+			<heading>0.00</heading>
+			<name>Dirt Start 04</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.17084762</latitude>
+			<longitude>073.61285096</longitude>
+			<heading>12.47</heading>
+			<name>Dirt Start 22</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.16480895</latitude>
+			<longitude>073.61810184</longitude>
+			<heading>18.88</heading>
+			<name>Ramp Start - Terminal</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.16295885</latitude>
+			<longitude>073.61925322</longitude>
+			<heading>30.24</heading>
+			<name>Ramp Start 04</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>04.16545757</latitude>
+			<longitude>073.61759067</longitude>
+			<heading>12.01</heading>
+			<name>Ramp Start GA</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>04.16868124</latitude>
+			<longitude>-073.61478091</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.16207012</latitude>
+			<longitude>-073.61913683</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>04.17349296</latitude>
+			<longitude>-073.60868820</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11870">118.7</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>VILLAVICENCIO APP</description>
+		</atc>
+	</airport>
+</PropertyList>

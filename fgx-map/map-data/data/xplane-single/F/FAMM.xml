@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FAMM">
+		<linecode>1</linecode>
+		<elevation>4181</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>FAMM</identifier>
+		<name>Mafikeng</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>1</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>-25.81759445</latitude>
+			<longitude>025.53912885</longitude>
+			<threshold>95.10</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>-25.77929555</latitude_end>
+			<longitude_end>025.55708915</longitude_end>
+			<threshold_end>65.53</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>4609.4326397</length-meters>
+			<length-feet>14049.5506858</length-feet>
+			<heading id="04 ">22.9981543656</heading>
+			<heading_end id="22 ">203.005970808</heading_end>
+			<threshold_lat id="04 ">-25.8168042609</threshold_lat>
+			<threshold_lon id="04 ">25.5394993974</threshold_lon>
+			<threshold_lat_end id="22 ">-25.7798400117</threshold_lat_end>
+			<threshold_lon_end id="22 ">25.5568338162</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>-25.81292523</latitude>
+			<longitude>025.54083575</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>22.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>-25.78165298</latitude>
+			<longitude>025.55646736</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>202.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>-25.79687700</latitude>
+			<longitude>025.54096000</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-25.79812800</latitude>
+			<longitude>025.54719500</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-25.79703500</latitude>
+			<longitude>025.54635400</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11930">119.3</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

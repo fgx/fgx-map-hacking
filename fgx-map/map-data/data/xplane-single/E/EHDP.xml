@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EHDP">
+		<linecode>1</linecode>
+		<elevation>96</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EHDP</identifier>
+		<name>De Peel</name>
+		<runway end="06" id="24">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>24</number>
+			<latitude>51.52205578</latitude>
+			<longitude>005.87414372</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>06</number_end>
+			<latitude_end>51.51128422</latitude_end>
+			<longitude_end>005.84291628</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2476.88563943</length-meters>
+			<length-feet>7549.547429</length-feet>
+			<heading id="24 ">-118.94891997</heading>
+			<heading_end id="06 ">421.075524534</heading_end>
+			<threshold_lat id="24 ">51.52205578</threshold_lat>
+			<threshold_lon id="24 ">5.87414372</threshold_lon>
+			<threshold_lat_end id="06 ">51.51128422</threshold_lat_end>
+			<threshold_lon_end id="06 ">5.84291628</threshold_lon_end>
+		</runway>
+		<lightingobject id="06">
+			<linecode>21</linecode>
+			<latitude>51.51250779</latitude>
+			<longitude>005.84513289</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>60.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>06</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="24">
+			<linecode>21</linecode>
+			<latitude>51.52083280</latitude>
+			<longitude>005.87192573</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>241.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>24</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>51.51596000</latitude>
+			<longitude>005.85916300</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.52134700</latitude>
+			<longitude>005.87478000</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>51.51199400</latitude>
+			<longitude>005.84228300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

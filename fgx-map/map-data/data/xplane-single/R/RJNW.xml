@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="RJNW">
+		<linecode>1</linecode>
+		<elevation>718</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>RJNW</identifier>
+		<name>NOTO</name>
+		<runway end="25" id="07">
+			<linecode>100</linecode>
+			<width>45.11</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>07</number>
+			<latitude>37.28957500</latitude>
+			<longitude>136.95157500</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>57.91</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>25</number_end>
+			<latitude_end>37.29668300</latitude_end>
+			<longitude_end>136.97231700</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>59.44</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="1">ALSF-I</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2001.21308939</length-meters>
+			<length-feet>6099.69749647</length-feet>
+			<heading id="07 ">66.7905064603</heading>
+			<heading_end id="25 ">246.777939028</heading_end>
+			<threshold_lat id="07 ">37.289575</threshold_lat>
+			<threshold_lon id="07 ">136.951575</threshold_lon>
+			<threshold_lat_end id="25 ">37.296683</threshold_lat_end>
+			<threshold_lon_end id="25 ">136.972317</threshold_lon_end>
+		</runway>
+		<lightingobject id="07">
+			<linecode>21</linecode>
+			<latitude>37.29065547</latitude>
+			<longitude>136.95345320</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>66.6</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>07</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="25">
+			<linecode>21</linecode>
+			<latitude>37.29537639</latitude>
+			<longitude>136.96977719</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>246.7</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>25</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>37.29443469</latitude>
+			<longitude>136.96123797</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.28997360</latitude>
+			<longitude>136.95080350</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>37.29628427</latitude>
+			<longitude>136.97308847</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

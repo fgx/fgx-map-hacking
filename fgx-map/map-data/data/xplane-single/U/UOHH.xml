@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UOHH">
+		<linecode>1</linecode>
+		<elevation>95</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>UOHH</identifier>
+		<name>KHATANGA</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>48.16</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>71.97287200</latitude>
+			<longitude>102.45473600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>71.98324700</latitude_end>
+			<longitude_end>102.52628900</longitude_end>
+			<threshold_end>199.95</threshold_end>
+			<overrrun_end>199.95</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2729.47268702</length-meters>
+			<length-feet>8319.43275004</length-feet>
+			<heading id="06 ">64.9371812027</heading>
+			<heading_end id="24 ">244.869138727</heading_end>
+			<threshold_lat id="06 ">71.972872</threshold_lat>
+			<threshold_lon id="06 ">102.454736</threshold_lon>
+			<threshold_lat_end id="24 ">71.9824859365</threshold_lat_end>
+			<threshold_lon_end id="24 ">102.521047535</threshold_lon_end>
+		</runway>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>71.97943869</latitude>
+			<longitude>102.48840587</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>71.97327633</latitude>
+			<longitude>102.45257568</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>71.98284188</latitude>
+			<longitude>102.52844898</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>KRUG</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12900">129.0</frequency>
+			<description>KRUG</description>
+		</atc>
+	</airport>
+</PropertyList>

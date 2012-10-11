@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="FSIA">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>FSIA</identifier>
+		<name>SEYCHELLES INTL</name>
+		<runway end="31" id="13">
+			<linecode>100</linecode>
+			<width>46.02</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="1">Asphalt shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>13</number>
+			<latitude>-04.66663100</latitude>
+			<longitude>055.51080200</longitude>
+			<threshold>305.11</threshold>
+			<overrrun>85.04</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="7">SALS</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>31</number_end>
+			<latitude_end>-04.68212500</latitude_end>
+			<longitude_end>055.53285600</longitude_end>
+			<threshold_end>305.11</threshold_end>
+			<overrrun_end>35.05</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="7">SALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2987.14511135</length-meters>
+			<length-feet>9104.81829939</length-feet>
+			<heading id="13 ">124.999008122</heading>
+			<heading_end id="31 ">305.000805365</heading_end>
+			<threshold_lat id="13 ">-4.66821353394</threshold_lat>
+			<threshold_lon id="13 ">55.5130546228</threshold_lon>
+			<threshold_lat_end id="31 ">-4.68054238855</threshold_lat_end>
+			<threshold_lon_end id="31 ">55.5306033873</threshold_lon_end>
+		</runway>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>-04.67007027</latitude>
+			<longitude>055.51501890</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>125.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="13">
+			<linecode>21</linecode>
+			<latitude>-04.66942229</latitude>
+			<longitude>055.51549199</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>125.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>13</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>-04.67936208</latitude>
+			<longitude>055.52815227</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>305.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="31">
+			<linecode>21</linecode>
+			<latitude>-04.67862600</latitude>
+			<longitude>055.52864900</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>305.1</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>31</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-04.67145022</latitude>
+			<longitude>055.51252035</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-04.66788142</latitude>
+			<longitude>055.51328479</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-04.68102060</latitude>
+			<longitude>055.52997741</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11830">118.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11970">119.7</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EGXP">
+		<linecode>1</linecode>
+		<elevation>202</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EGXP</identifier>
+		<name>RAF Scampton</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>60.96</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>53.29867500</latitude>
+			<longitude>-000.56435300</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="5">UK-style precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>53.31721400</latitude_end>
+			<longitude_end>-000.53730800</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="4">UK-style non-precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2739.88913451</length-meters>
+			<length-feet>8351.18208198</length-feet>
+			<heading id="04 ">41.15652557</heading>
+			<heading_end id="22 ">221.134839306</heading_end>
+			<threshold_lat id="04 ">53.298675</threshold_lat>
+			<threshold_lon id="04 ">-0.564353</threshold_lon>
+			<threshold_lat_end id="22 ">53.317214</threshold_lat_end>
+			<threshold_lon_end id="22 ">-0.537308</threshold_lon_end>
+		</runway>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>53.30109676</latitude>
+			<longitude>-000.55968973</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>41.0</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="04">
+			<linecode>21</linecode>
+			<latitude>53.30179024</latitude>
+			<longitude>-000.56102198</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>41.0</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>04</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>53.31549237</latitude>
+			<longitude>-000.54098103</longitude>
+			<type code="3">PAPI-4R (four light) on right of runway</type>
+			<orientation>221.0</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4R</description>
+		</lightingobject>
+		<lightingobject id="22">
+			<linecode>21</linecode>
+			<latitude>53.31471978</latitude>
+			<longitude>-000.53977945</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>221.0</orientation>
+			<glideslope>2.50</glideslope>
+			<runway>22</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>53.30598569</latitude>
+			<longitude>000.54829482</longitude>
+			<height>19</height>
+			<deprecated>0</deprecated>
+			<name>Tower View</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.30121613</latitude>
+			<longitude>000.55382587</longitude>
+			<heading>18.46</heading>
+			<name>Apron 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.30148353</latitude>
+			<longitude>000.55190696</longitude>
+			<heading>25.02</heading>
+			<name>Apron 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>53.30276643</latitude>
+			<longitude>000.54868578</longitude>
+			<heading>99.26</heading>
+			<name>Apron 3</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>53.31292180</latitude>
+			<longitude>-000.56089991</longitude>
+			<type code="4">White-white-green flashing</type>
+			<description>Beacon</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.29869539</latitude>
+			<longitude>-000.56262772</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>53.31463168</latitude>
+			<longitude>-000.53907661</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="EBNM">
+		<linecode>1</linecode>
+		<elevation>594</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>EBNM</identifier>
+		<name>Namur</name>
+		<runway end="24R" id="06L">
+			<linecode>100</linecode>
+			<width>77.11</width>
+			<surface code="3">Turf or Grass</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06L</number>
+			<latitude>50.48796642</latitude>
+			<longitude>004.76555390</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24R</number_end>
+			<latitude_end>50.49171597</latitude_end>
+			<longitude_end>004.77539147</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>813.227463744</length-meters>
+			<length-feet>2478.71730949</length-feet>
+			<heading id="06L">59.1474314335</heading>
+			<heading_end id="24R">239.139841632</heading_end>
+			<threshold_lat id="06L">50.48796642</threshold_lat>
+			<threshold_lon id="06L">4.7655539</threshold_lon>
+			<threshold_lat_end id="24R">50.49171597</threshold_lat_end>
+			<threshold_lon_end id="24R">4.77539147</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>50.48734700</latitude>
+			<longitude>004.76778300</longitude>
+			<height>30</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>50.48667500</latitude>
+			<longitude>004.76481300</longitude>
+			<heading>41.00</heading>
+			<name>Custom Starting Position</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>50.49192243</latitude>
+			<longitude>004.76850769</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>50.48891800</latitude>
+			<longitude>004.77712300</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Unicom (US), CTAF (US), Radio (UK)">
+			<linecode>51</linecode>
+			<frequency raw="12690">126.9</frequency>
+			<description>Brussels Radio</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>Charleroi Tower</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13312">133.12</frequency>
+			<description>Charleroi Approach</description>
+		</atc>
+	</airport>
+</PropertyList>

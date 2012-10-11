@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LILE">
+		<linecode>1</linecode>
+		<elevation>925</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LILE</identifier>
+		<name>BIELLA CERRIONE</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>45.50138600</latitude>
+			<longitude>008.09892200</longitude>
+			<threshold>88.39</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>45.48921400</latitude_end>
+			<longitude_end>008.10663300</longitude_end>
+			<threshold_end>149.96</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1481.00810498</length-meters>
+			<length-feet>4514.11270399</length-feet>
+			<heading id="16 ">155.988066526</heading>
+			<heading_end id="34 ">335.982567095</heading_end>
+			<threshold_lat id="16 ">45.5006595311</threshold_lat>
+			<threshold_lon id="16 ">8.09938220446</threshold_lon>
+			<threshold_lat_end id="34 ">45.4904464523</threshold_lat_end>
+			<threshold_lon_end id="34 ">8.10585220293</threshold_lon_end>
+		</runway>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>45.49196849</latitude>
+			<longitude>008.10441176</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>336.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>45.49697490</latitude>
+			<longitude>008.10286810</longitude>
+			<height>0</height>
+			<deprecated>0</deprecated>
+			<name>ATC Tower</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>45.49956130</latitude>
+			<longitude>008.09714700</longitude>
+			<heading>60.00</heading>
+			<name>Ramp</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>45.49568371</latitude>
+			<longitude>008.10400392</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.50179533</latitude>
+			<longitude>008.09929210</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>45.48880469</latitude>
+			<longitude>008.10626292</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12305">123.05</frequency>
+			<description>AFIS</description>
+		</atc>
+	</airport>
+</PropertyList>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="SNJA">
+		<linecode>1</linecode>
+		<elevation>489</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>SNJA</identifier>
+		<name>Jardim De Angicos</name>
+		<runway end="30" id="12">
+			<linecode>100</linecode>
+			<width>15.85</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>12</number>
+			<latitude>-05.63764412</latitude>
+			<longitude>-035.96159290</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>30</number_end>
+			<latitude_end>-05.63902148</latitude_end>
+			<longitude_end>-035.95174490</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1101.58676711</length-meters>
+			<length-feet>3357.63646616</length-feet>
+			<heading id="12 ">97.9472117939</heading>
+			<heading_end id="30 ">277.948179347</heading_end>
+			<threshold_lat id="12 ">-5.63764412</threshold_lat>
+			<threshold_lon id="12 ">-35.9615929</threshold_lon>
+			<threshold_lat_end id="30 ">-5.63902148</threshold_lat_end>
+			<threshold_lon_end id="30 ">-35.9517449</threshold_lon_end>
+		</runway>
+		<lightingobject id="12">
+			<linecode>21</linecode>
+			<latitude>-05.63765468</latitude>
+			<longitude>-035.95976801</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>98.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>12</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="30">
+			<linecode>21</linecode>
+			<latitude>-05.63901095</latitude>
+			<longitude>-035.95356979</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>278.0</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>30</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>-05.63783844</latitude>
+			<longitude>-035.95659908</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-05.63741240</latitude>
+			<longitude>-035.96170491</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>-05.63925320</latitude>
+			<longitude>-035.95163289</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

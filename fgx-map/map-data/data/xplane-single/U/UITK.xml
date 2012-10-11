@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="UITK">
+		<linecode>1</linecode>
+		<elevation>1148</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>UITK</identifier>
+		<name>Kazachinsk</name>
+		<runway end="22" id="04">
+			<linecode>100</linecode>
+			<width>39.93</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="0">No edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>04</number>
+			<latitude>56.27372383</latitude>
+			<longitude>107.56012721</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>22</number_end>
+			<latitude_end>56.28524517</latitude_end>
+			<longitude_end>107.57439094</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>1557.67528622</length-meters>
+			<length-feet>4747.79427241</length-feet>
+			<heading id="04 ">34.5614516074</heading>
+			<heading_end id="22 ">214.549587673</heading_end>
+			<threshold_lat id="04 ">56.27372383</threshold_lat>
+			<threshold_lon id="04 ">107.56012721</threshold_lon>
+			<threshold_lat_end id="22 ">56.28524517</threshold_lat_end>
+			<threshold_lon_end id="22 ">107.57439094</threshold_lon_end>
+		</runway>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>56.28397471</latitude>
+			<longitude>107.57355038</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>214.0</orientation>
+			<glideslope>2.20</glideslope>
+			<runway>xxx</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightingobject id="xxx">
+			<linecode>21</linecode>
+			<latitude>56.27493414</latitude>
+			<longitude>107.56093490</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>34.0</orientation>
+			<glideslope>2.20</glideslope>
+			<runway>xxx</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>56.27804405</latitude>
+			<longitude>107.56181749</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>Tower Viewpoint</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.27712431</latitude>
+			<longitude>107.56153876</longitude>
+			<heading>08.10</heading>
+			<name>Stand 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.27740094</latitude>
+			<longitude>107.56188872</longitude>
+			<heading>03.46</heading>
+			<name>Stand 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.27802313</latitude>
+			<longitude>107.56274701</longitude>
+			<heading>02.31</heading>
+			<name>Stand 3</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.27826508</latitude>
+			<longitude>107.56304784</longitude>
+			<heading>01.34</heading>
+			<name>Stand 4</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>56.27849839</latitude>
+			<longitude>107.56333466</longitude>
+			<heading>08.16</heading>
+			<name>Stand 5</name>
+		</startuplocation>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>56.27790854</latitude>
+			<longitude>107.56383929</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>Windsock</description>
+		</windsock>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>56.27735306</latitude>
+			<longitude>107.56350803</longitude>
+			<orientation>122.62</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}22-04</text>
+		</sign>
+		<sign>
+			<linecode>20</linecode>
+			<latitude>56.27708773</latitude>
+			<longitude>107.56319753</longitude>
+			<orientation>122.62</orientation>
+			<reserved>0</reserved>
+			<size code="3">Large taxiway sign</size>
+			<text>{@R}22-04</text>
+		</sign>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12210">122.1</frequency>
+			<description>Kazachinsk Tower</description>
+		</atc>
+	</airport>
+</PropertyList>

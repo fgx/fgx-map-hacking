@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="LKPO">
+		<linecode>1</linecode>
+		<elevation>676</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>LKPO</identifier>
+		<name>Prerov</name>
+		<runway end="24" id="06">
+			<linecode>100</linecode>
+			<width>60.05</width>
+			<surface code="2">Concrete</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.00</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>06</number>
+			<latitude>49.42136845</latitude>
+			<longitude>017.38907640</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>24</number_end>
+			<latitude_end>49.43047270</latitude_end>
+			<longitude_end>017.42058163</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="10">MALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2499.82316291</length-meters>
+			<length-feet>7619.46100054</length-feet>
+			<heading id="06 ">66.1176319025</heading>
+			<heading_end id="24 ">246.093701612</heading_end>
+			<threshold_lat id="06 ">49.42136845</threshold_lat>
+			<threshold_lon id="06 ">17.3890764</threshold_lon>
+			<threshold_lat_end id="24 ">49.4304727</threshold_lat_end>
+			<threshold_lon_end id="24 ">17.42058163</threshold_lon_end>
+		</runway>
+		<viewpoint>
+			<linecode>14</linecode>
+			<latitude>49.42314925</latitude>
+			<longitude>017.40661650</longitude>
+			<height>82</height>
+			<deprecated>0</deprecated>
+			<name>New Tower Viewpoint 5</name>
+		</viewpoint>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.42279932</latitude>
+			<longitude>017.41242608</longitude>
+			<heading>24.87</heading>
+			<name>Stand EAST</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.43729460</latitude>
+			<longitude>017.40622594</longitude>
+			<heading>66.11</heading>
+			<name>Stand GA 1</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.43718909</latitude>
+			<longitude>017.40630381</longitude>
+			<heading>62.83</heading>
+			<name>Stand GA 2</name>
+		</startuplocation>
+		<startuplocation>
+			<linecode>15</linecode>
+			<latitude>49.42113691</latitude>
+			<longitude>017.39354968</longitude>
+			<heading>9.63</heading>
+			<name>Stand WEST</name>
+		</startuplocation>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>49.42764923</latitude>
+			<longitude>017.40364421</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.43626487</latitude>
+			<longitude>017.40529148</longitude>
+			<lighting code="0">Unlit</lighting>
+			<description>New Windsock 10</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>49.42353967</latitude>
+			<longitude>017.39023833</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11975">119.75</frequency>
+			<description>MTWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12778">127.78</frequency>
+			<description>MAPP</description>
+		</atc>
+	</airport>
+</PropertyList>

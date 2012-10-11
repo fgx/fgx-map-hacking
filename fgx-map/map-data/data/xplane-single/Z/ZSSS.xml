@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZSSS">
+		<linecode>1</linecode>
+		<elevation>10</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZSSS</identifier>
+		<name>HONGQIAO INTL</name>
+		<runway end="36" id="18">
+			<linecode>100</linecode>
+			<width>57.91</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="1">Centerline lights</centerline_lights>
+			<edge_lighting code="3">None</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>18</number>
+			<latitude>31.21325000</latitude>
+			<longitude>121.33544400</longitude>
+			<threshold>200.25</threshold>
+			<overrrun>158.50</overrrun>
+			<marking code="3">Presicision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>1</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>36</number_end>
+			<latitude_end>31.18250000</latitude_end>
+			<longitude_end>121.33719400</longitude_end>
+			<threshold_end>200.25</threshold_end>
+			<overrrun_end>158.50</overrrun_end>
+			<marking_end code="3">Presicision approach markings</marking_end>
+			<approach_lighting_end code="2">ALSF-II</approach_lighting_end>
+			<touchdown_zone_lighting_end>1</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>3413.41798689</length-meters>
+			<length-feet>10404.098024</length-feet>
+			<heading id="18 ">177.19975293</heading>
+			<heading_end id="36 ">357.198846439</heading_end>
+			<threshold_lat id="18 ">31.2114460381</threshold_lat>
+			<threshold_lon id="18 ">121.335546663</threshold_lon>
+			<threshold_lat_end id="36 ">31.1843039686</threshold_lat_end>
+			<threshold_lon_end id="36 ">121.337091333</threshold_lon_end>
+		</runway>
+		<lightingobject id="18">
+			<linecode>21</linecode>
+			<latitude>31.20966977</latitude>
+			<longitude>121.33618461</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>177.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>18</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="36">
+			<linecode>21</linecode>
+			<latitude>31.18608280</latitude>
+			<longitude>121.33645350</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>357.2</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>36</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>31.19796606</latitude>
+			<longitude>121.33844910</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.21380857</latitude>
+			<longitude>121.33632736</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>31.18194145</latitude>
+			<longitude>121.33631094</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="AWOS, ASOS or ATIS">
+			<linecode>50</linecode>
+			<frequency raw="13225">132.25</frequency>
+			<description>ATIS</description>
+		</atc>
+		<atc type="Clearance Delivery">
+			<linecode>52</linecode>
+			<frequency raw="12175">121.75</frequency>
+			<description>DELIVERY</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Ground">
+			<linecode>53</linecode>
+			<frequency raw="12160">121.6</frequency>
+			<description>GND</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="11810">118.1</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Tower">
+			<linecode>54</linecode>
+			<frequency raw="12430">124.3</frequency>
+			<description>TWR</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12030">120.3</frequency>
+			<description>SHANGHAI APP SCTR 1</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11975">119.75</frequency>
+			<description>SHANGHAI APP SCTR 2</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12080">120.8</frequency>
+			<description>SHANGHAI APP SCTR 2</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12130">121.3</frequency>
+			<description>SHANGHAI APP SCTR 3</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="11920">119.2</frequency>
+			<description>SHANGHAI APP SCTR 3</description>
+		</atc>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="12380">123.8</frequency>
+			<description>SHANGHAI APP SCTR 4</description>
+		</atc>
+	</airport>
+</PropertyList>

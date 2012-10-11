@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="BGSS">
+		<linecode>1</linecode>
+		<elevation>33</elevation>
+		<deprecated1>1</deprecated1>
+		<deprecated2>0</deprecated2>
+		<identifier>BGSS</identifier>
+		<name>Sisimiut</name>
+		<runway end="32" id="14">
+			<linecode>100</linecode>
+			<width>29.87</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>14</number>
+			<latitude>66.95206561</latitude>
+			<longitude>-053.73824879</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="2">ALSF-II</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>32</number_end>
+			<latitude_end>66.95033919</latitude_end>
+			<longitude_end>-053.72043041</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="11">ODALS</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>802.239043546</length-meters>
+			<length-feet>2445.22460473</length-feet>
+			<heading id="14 ">103.894365002</heading>
+			<heading_end id="32 ">283.877969032</heading_end>
+			<threshold_lat id="14 ">66.95206561</threshold_lat>
+			<threshold_lon id="14 ">-53.73824879</threshold_lon>
+			<threshold_lat_end id="32 ">66.95033919</threshold_lat_end>
+			<threshold_lon_end id="32 ">-53.72043041</threshold_lon_end>
+		</runway>
+		<lightingobject id="14">
+			<linecode>21</linecode>
+			<latitude>66.95195616</latitude>
+			<longitude>-053.73358212</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>103.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>14</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="32">
+			<linecode>21</linecode>
+			<latitude>66.95044917</latitude>
+			<longitude>-053.72509668</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>283.9</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>32</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>66.95211569</latitude>
+			<longitude>-053.72876200</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.95252157</latitude>
+			<longitude>-053.73866806</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>66.94988318</latitude>
+			<longitude>-053.72001151</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+	</airport>
+</PropertyList>

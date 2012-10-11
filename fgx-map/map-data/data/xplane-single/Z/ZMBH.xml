@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<PropertyList>
+	<airport id="ZMBH">
+		<linecode>1</linecode>
+		<elevation>6085</elevation>
+		<deprecated1>0</deprecated1>
+		<deprecated2>1</deprecated2>
+		<identifier>ZMBH</identifier>
+		<name>BAYANKHONGOR</name>
+		<runway end="34" id="16">
+			<linecode>100</linecode>
+			<width>34.75</width>
+			<surface code="1">Asphalt</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="1">Edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16</number>
+			<latitude>46.17475800</latitude>
+			<longitude>100.69700800</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="2">Non precision approach markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34</number_end>
+			<latitude_end>46.15186100</latitude_end>
+			<longitude_end>100.71116400</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="2">Non precision approach markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="1">omni-directional REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2770.00909462</length-meters>
+			<length-feet>8442.98772039</length-feet>
+			<heading id="16 ">156.757451006</heading>
+			<heading_end id="34 ">336.747240044</heading_end>
+			<threshold_lat id="16 ">46.174758</threshold_lat>
+			<threshold_lon id="16 ">100.697008</threshold_lon>
+			<threshold_lat_end id="34 ">46.151861</threshold_lat_end>
+			<threshold_lon_end id="34 ">100.711164</threshold_lon_end>
+		</runway>
+		<runway end="34L" id="16R">
+			<linecode>100</linecode>
+			<width>49.99</width>
+			<surface code="4">Dirt (brown)</surface>
+			<shoulder code="0">No shoulder</shoulder>
+			<smoothness>0.25</smoothness>
+			<centerline_lights code="0">No centerline lights</centerline_lights>
+			<edge_lighting code="2">Medium intensity edge lights</edge_lighting>
+			<autogenerate_distance_signs>0</autogenerate_distance_signs>
+			<number>16R</number>
+			<latitude>46.17466100</latitude>
+			<longitude>100.69595600</longitude>
+			<threshold>0.00</threshold>
+			<overrrun>0.00</overrrun>
+			<marking code="1">Visual markings</marking>
+			<approach_lighting code="0">No approach lighting</approach_lighting>
+			<touchdown_zone_lighting>0</touchdown_zone_lighting>
+			<reil code="0">No REIL</reil>
+			<number_end>34L</number_end>
+			<latitude_end>46.15783300</latitude_end>
+			<longitude_end>100.70648600</longitude_end>
+			<threshold_end>0.00</threshold_end>
+			<overrrun_end>0.00</overrrun_end>
+			<marking_end code="1">Visual markings</marking_end>
+			<approach_lighting_end code="0">No approach lighting</approach_lighting_end>
+			<touchdown_zone_lighting_end>0</touchdown_zone_lighting_end>
+			<reil_end code="0">No REIL</reil_end>
+			<!--++++++++++++++++++++++++++++++-->
+			<!--Additonal data, not in apt.dat-->
+			<!--++++++++++++++++++++++++++++++-->
+			<length-meters>2039.64871114</length-meters>
+			<length-feet>6216.84927155</length-feet>
+			<heading id="16R">156.505815058</heading>
+			<heading_end id="34L">336.498219217</heading_end>
+			<threshold_lat id="16R">46.174661</threshold_lat>
+			<threshold_lon id="16R">100.695956</threshold_lon>
+			<threshold_lat_end id="34L">46.157833</threshold_lat_end>
+			<threshold_lon_end id="34L">100.706486</threshold_lon_end>
+		</runway>
+		<lightingobject id="34">
+			<linecode>21</linecode>
+			<latitude>46.15337616</latitude>
+			<longitude>100.70967128</longitude>
+			<type code="2">PAPI-4L (four-light) on left of runway</type>
+			<orientation>336.8</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34</runway>
+			<description>PAPI-4L</description>
+		</lightingobject>
+		<lightingobject id="34L">
+			<linecode>21</linecode>
+			<latitude>46.15932709</latitude>
+			<longitude>100.70492847</longitude>
+			<type code="1">VASI Location is centre point between the two VASI units</type>
+			<orientation>336.5</orientation>
+			<glideslope>3.00</glideslope>
+			<runway>34L</runway>
+			<description>VASI</description>
+		</lightingobject>
+		<lightbeacon>
+			<linecode>18</linecode>
+			<latitude>46.16687373</latitude>
+			<longitude>100.70330828</longitude>
+			<type code="1">White-green flashing</type>
+			<description>BCN</description>
+		</lightbeacon>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.17523011</latitude>
+			<longitude>100.69745287</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.17534209</latitude>
+			<longitude>100.69659173</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.15138894</latitude>
+			<longitude>100.71071920</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<windsock>
+			<linecode>19</linecode>
+			<latitude>46.15715196</latitude>
+			<longitude>100.70585035</longitude>
+			<lighting code="1">Illuminated</lighting>
+			<description>WS</description>
+		</windsock>
+		<atc type="Approach">
+			<linecode>55</linecode>
+			<frequency raw="13000">130.0</frequency>
+			<description>APP</description>
+		</atc>
+	</airport>
+</PropertyList>
