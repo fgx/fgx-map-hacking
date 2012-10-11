@@ -20,6 +20,7 @@ ROOT =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
 
 
 def check_sane():
+	return True
 	sane =  os.path.exists(ROOT + "/local_config.yaml")
 	if not sane:
 		print "ERROR: local_config.yaml is missing, Create with ./run_config.py -l"

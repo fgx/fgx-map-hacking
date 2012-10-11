@@ -55,6 +55,10 @@ def write_js(ln=False):
 			os.remove(ln_path)
 		os.symlink(G.ROOT + out_path, ln_path)
 		
+		ln_path = G.ROOT + "/django_app/static/js/config.js"
+		if os.path.exists( ln_path ):
+			os.remove(ln_path)
+		os.symlink(G.ROOT + out_path, ln_path)
 	
 ## Writes out nginx config
 # @ todo by pete
