@@ -55,7 +55,7 @@ class Server():
 			return self.files
 		
 		#== Fetch the xplane downloads files index html page
-		#print "Fetching xplane index from %s" % XPLANE_URL 
+		print "> Fetching xplane index from %s" % XPLANE_URL 
 		response = urllib2.urlopen( XPLANE_URL )
 		html = response.read()
 		#print ">> Got reply"
@@ -123,8 +123,8 @@ class Server():
 
 	def show_index(self):
 		files = self.fetch_index()
-		line = ("-" * 40) + "\n"
-		s = "< got data > parsing > "  
+		line = ("-" * 50) + "\n"
+		s = "" #< got data > parsing > \n"  
 		s += line
 		s += "Idx " + "Zip File".ljust(25, " ") + "  Dated\n"
 		s += line
@@ -193,7 +193,6 @@ class Server():
 ##==========================================================================
 
 def print_remote_list():
-	print "> Wait for %s > " % XPLANE_URL
 	serverObj = Server()
 	print serverObj.show_index()
 
