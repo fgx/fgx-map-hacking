@@ -11,3 +11,6 @@ DATABASES = {
     }
 }
 
+## ??? said pete
+GEOS_LIBRARY_PATH = '/usr/lib/libgeos_c.so.1'
+

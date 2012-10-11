@@ -14,6 +14,7 @@ from optparse import OptionParser
 
 from fgx import shell_config
 
+Z = "/home/fgxl/fgx-map/fgx-map-consolidation/temp/downloads/AptNav201204XP1000"
 
 ## Handle Command Args
 usage = "usage: %prog [options] data ./path"
@@ -32,6 +33,7 @@ command = "fix"
 if command == "fix":
 	from fgx.xplane import fix
 
+	fix.import_dat(zip_dir=Z)
 	
 	
 	
