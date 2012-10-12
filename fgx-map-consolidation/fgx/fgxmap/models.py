@@ -5,7 +5,7 @@ from django.contrib.gis.db import models
 
 
 
-SRID = 3857 # ?? gral ?
+CustomSRID = 3857 # ?? gral ?
 
 ##=======================================================
 class Airport(models.Model):
@@ -17,7 +17,7 @@ class Airport(models.Model):
 	apt_icao = models.CharField(max_length=6, unique=True, db_index=True)
 	apt_name = models.CharField(max_length=100, db_index=True)
 	elevation = models.CharField(max_length=30)
-	geom = models.PointField(srid=SRID)
+	geom = models.PointField(srid=CustomSRID)
 	objects = models.GeoManager()
 
 	## center lat
@@ -43,7 +43,7 @@ class Dme(models.Model):
 	freq_mhz = models.CharField(max_length=10)
 	range_km = models.CharField(max_length=10)
 	bias_km = models.IntegerField()
-	geom = models.PointField(srid=SRID)
+	geom = models.PointField(srid=CustomSRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
@@ -61,7 +61,7 @@ class Fix(models.Model):
 	
 	fix_pk = models.AutoField( primary_key=True)
 	fix = models.CharField(max_length=10, db_index=True)	
-	geom = models.PointField(srid=SRID)
+	geom = models.PointField(srid=CustomSRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
@@ -82,7 +82,7 @@ class Runway(models.Model):
 	rwy = models.CharField(max_length=10, db_index=True)
 	length_ft = models.IntegerField()
 	length_m = models.IntegerField()
-	geom = models.MultiPolygonField(srid=SRID)
+	geom = models.MultiPolygonField(srid=CustomSRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
@@ -109,7 +109,7 @@ class Threshold(models.Model):
 	appr_light_id = models.IntegerField(db_index=True)
 	tdz_light_id = models.IntegerField(db_index=True)
 	
-	geom = models.MultiPolygonField(srid=SRID)
+	geom = models.MultiPolygonField(srid=CustomSRID)
 	objects = models.GeoManager()
 	
 	def __repr__(self):
