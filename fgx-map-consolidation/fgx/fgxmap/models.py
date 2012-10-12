@@ -42,7 +42,7 @@ class Dme(models.Model):
 	class Meta:
 		db_table = "dme"
 	
-	dme_pk = models.IntegerField(primary_key=True)
+	dme_pk = models.AutoField(primary_key=True)
 	ident = models.CharField(max_length=4, db_index=True)
 	name = models.CharField(max_length=40, db_index=True)
 	subtype = models.CharField(max_length=10)
@@ -65,7 +65,7 @@ class Fix(models.Model):
 		verbose_name = "fix"
 		verbose_name_plural = "fix"
 	
-	fix_pk = models.IntegerField( primary_key=True)
+	fix_pk = models.AutoField( primary_key=True)
 	fix = models.CharField(max_length=10, db_index=True)	
 	geom = models.PointField(srid=SRID)
 
@@ -82,7 +82,7 @@ class Runway(models.Model):
 	class Meta:
 		db_table = "runway"
 	
-	rwy_pk = models.IntegerField( primary_key=True)
+	rwy_pk = models.AutoField( primary_key=True)
 	apt_icao = models.CharField(max_length=10, db_index=True)
 	rwy = models.CharField(max_length=10, db_index=True)
 	length_ft = models.IntegerField()
