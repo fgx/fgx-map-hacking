@@ -11,14 +11,19 @@
  - \ref run_config 
  - \ref RelatedProjects
 
- - Elements
+ - Server Services
    - \ref PostGis 
    - \ref Mapnick
    - \ref TileCache
    - \ref Django
-   - \ref OSM, GeoExt, Ext
    
- - Tools
+  - Browser Libs
+   - \ref OSM 
+   - \ref GeoExt
+   - \ref Ext
+   
+ - Desktop Tools
+  - 
   - qgis, me included pyqt app
   
    
