@@ -3,17 +3,13 @@
 
 import sys
 import os
-#sys.path.append( os.path.abspath(  os.path.dirname(__file__) + "/../"  ) )
-
-#import fgx_shell_config as conf
-
 import datetime
 import telnetlib
 import socket
 import json
 
 from fgx.mpnet.models import MpServer
-from fgx.mpnet import telnet
+
 
 ##---------------------------------------------
 ## Fetch telnet data
@@ -97,7 +93,7 @@ def fetch_telnet(ip_addr,  ping_mode):
 
 
 
-def run():
+def ping_run():
 	
 	#fp = open(conf.DNS_FILE, "r")
 	

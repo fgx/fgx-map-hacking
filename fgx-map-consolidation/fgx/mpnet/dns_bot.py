@@ -17,7 +17,7 @@ from django.utils import timezone as dtz
 from django.contrib.gis.geoip import GeoIP
 
 from fgx.mpnet.models import MpServer, MpBotInfo
-
+from fgx.mpnet import mp_telnet
 
 
 class DnsLookupThread (threading.Thread):

@@ -18,17 +18,21 @@ from optparse import OptionParser
 from fgx import shell_config
 
 from fgx.mpnet import dns_bot
+from fgx.mpnet import mp_telnet
 
 ##==============================================
 ## Dns
 ##==============================================
 dnsLookupThread = dns_bot.DnsLookupThread()
-dnsLookupThread.setDaemon(True)
+dnsLookupThread.setDaemon(False)
 
 def run():
 	while True:
 		
-		dnsLookupThread.start()
+		if dnsLookupThread.is_alive():
+			pass
+		else:
+			dnsLookupThread.start()
 
 		time.sleep(5)
 		mp_telnet.ping_run()
