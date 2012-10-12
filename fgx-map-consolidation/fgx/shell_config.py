@@ -1,9 +1,13 @@
-## Configuration for shell
-
-
+"""
+@brief Loads teh Djanjo enviroment for a shell
+"""
 
 import os
 import sys
+
+## At present the PROJ_ROOT is the repos root
+PROJ_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../../"))
+print "PROJ_ROOT=", PROJ_ROOT
 
 
 sys.path.append( os.path.abspath(  os.path.dirname(__file__)  + "/fgxmap"  ) )
@@ -13,6 +17,19 @@ sys.path.append( os.path.abspath(  os.path.dirname(__file__)  + "/fgxmap"  ) )
 TEMP_DIR =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../_temp/")) 
 CACHE_DIR =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../_cache/")) 
 
+
+""" Checks if the shell enviroment is sane """
+def sanity_check():
+	print "Sanity Check"
+	
+	if os.path.exists(TEMP_DIR):
+		print "TEMP DIR NTO EXIST"
+		Throw_trntrum
+	
+	return False
+	
+	
+sanity_check()
 
 #print "TEMP_DIR=", TEMP_DIR
 

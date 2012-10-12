@@ -1,8 +1,40 @@
 FGx Map Project
 
-This project will hopefully have all the bits to setup a map solution.
 
-This stuff is actively being worked on and will change..
+--------------------------------
+PreAmble
+--------------------------------
+
+This project is under active devel, so some things
+may not work, be placeholders, etc.
+
+--------------------------------
+Structure
+--------------------------------
+
+config/
+  Contains the configuration for map data, etc
+
+fgx/
+  the Django wsgi app - but also shell purposed
+
+
+
+dev-docs/
+  The doxygen developer docs (work in progress)
+
+etc/
+ Placeholder fodler where config files are written to
+
+examples/
+  Example configurations, scripts etc
+
+
+
+
+
+
+
 
 
 ---------------------------------------

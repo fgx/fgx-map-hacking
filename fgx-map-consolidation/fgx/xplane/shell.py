@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 #from BeautifulSoup import BeautifulSoup
 import operator
 
+
 from fgx.shell_config import TEMP_DIR
 
 XPLANE_URL = 'http://data.x-plane.com/update/data/'

@@ -18,8 +18,7 @@ from fgx.xplane import shell
 ## Handle Command Args
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
-usage += "      avail - Lists latest files available on server\n"
-usage += "      download down d - Download a zip file\n"
+usage += "      avail - List and down zips from data.xplane.org server\n"
 usage += "      local - View local data\n"
 
 parser = OptionParser(usage=usage)
@@ -42,7 +41,7 @@ if len(args) == 0:
 	sys.exit(0)
 
 ##  Valid command ?
-if not args[0] in ['avail', 'download', "down", "d"]:
+if not args[0] in ['avail']:
 	print "Error: Unkown command %s" % args[0]
 	parser.print_help()
 	sys.exit(0)
@@ -57,12 +56,12 @@ command = args[0]
 	
 ##== List Remote Files
 if command == "avail":
-	shell.print_remote_list()
+	shell.do_download()
 	
 
 ##== Download a file
-elif command in ["download", "down", "d"]:
+#elif command in ["download", "down", "d"]:
 	
-	shell.do_download()
+	
 	
 
