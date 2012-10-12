@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'aptdat2',                      
+        'NAME': 'aptdat3',                      
         'USER': 'mash',                    
         'PASSWORD': 'mash',                 
         'HOST': 'localhost',                    
@@ -18,7 +18,7 @@ DATABASES = {
 
 ## ??? said pete
 #GEOS_LIBRARY_PATH = '/usr/local/lib/libgeos.so'
-GEOS_LIBRARY_PATH = '/usr/lib/libgeos_c.so.1' 
+#G#EOS_LIBRARY_PATH = '/usr/lib/libgeos_c.so.1' 
 #GEOS_LIBRARY_PATH = '/usr/local/lib/libgeos_c.so'
 
 
