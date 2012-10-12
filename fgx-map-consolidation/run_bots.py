@@ -20,22 +20,30 @@ from fgx import shell_config
 from fgx.mpnet import dns_bot
 from fgx.mpnet import mp_telnet
 
+
+
 ##==============================================
 ## Dns
 ##==============================================
-dnsLookupThread = dns_bot.DnsLookupThread()
+
+
+"""dns_bot.DnsLookupThread()
 dnsLookupThread.setDaemon(False)
+"""
+
 
 def run():
+	dnsLookupThread = None
 	while True:
 		
-		if dnsLookupThread.is_alive():
-			pass
-		else:
+		if dnsLookupThread == None:
+			dnsLookupThread = dns_bot.DnsLookupThread()
+			dnsLookupThread.setDaemon(False)
+			print "Started DNS lookup thread"
 			dnsLookupThread.start()
 
 		time.sleep(5)
-		mp_telnet.ping_run()
+		#mp_telnet.ping_run()
 		
 		print "WAKEUP"
 		#dnsLookupThread.stop()
@@ -43,7 +51,6 @@ def run():
 
 if "--run" in sys.argv:
 	run()
-	
 else:
 	print "Start the bot use --run"
 	

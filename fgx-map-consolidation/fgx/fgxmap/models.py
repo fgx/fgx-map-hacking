@@ -1,15 +1,7 @@
 
 
-from django.db import models
+#from django.db import models
 from django.contrib.gis.db import models
-
-"""
-Pete's guidelines
-
-* make the table names singular, avoids problems with 's's
-* needs a *_pk field each table, - use pk not is as avoid poss name clash
-
-"""
 
 
 
@@ -26,6 +18,7 @@ class Airport(models.Model):
 	apt_name = models.CharField(max_length=100, db_index=True)
 	elevation = models.CharField(max_length=30)
 	geom = models.PointField(srid=SRID)
+	objects = models.GeoManager()
 
 	## center lat
 	## center lon
@@ -51,6 +44,7 @@ class Dme(models.Model):
 	range_km = models.CharField(max_length=10)
 	bias_km = models.IntegerField()
 	geom = models.PointField(srid=SRID)
+	objects = models.GeoManager()
 
 	def __repr__(self):
 		return "<Dme: %s>" % (self.icao)
@@ -68,6 +62,7 @@ class Fix(models.Model):
 	fix_pk = models.AutoField( primary_key=True)
 	fix = models.CharField(max_length=10, db_index=True)	
 	geom = models.PointField(srid=SRID)
+	objects = models.GeoManager()
 
 	def __repr__(self):
 		return "<Fix: %s>" % (self.fix)
@@ -88,6 +83,7 @@ class Runway(models.Model):
 	length_ft = models.IntegerField()
 	length_m = models.IntegerField()
 	geom = models.MultiPolygonField(srid=SRID)
+	objects = models.GeoManager()
 
 	def __repr__(self):
 		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
@@ -114,6 +110,7 @@ class Threshold(models.Model):
 	tdz_light_id = models.IntegerField(db_index=True)
 	
 	geom = models.MultiPolygonField(srid=SRID)
+	objects = models.GeoManager()
 	
 	def __repr__(self):
 		return "<Threshold: %s-%s>" % (self.apt_icao, self.rwy)
