@@ -11,6 +11,21 @@
  - \ref run_config 
  - \ref RelatedProjects
 
+ - Elements
+   - \ref PostGis 
+   - \ref Mapnick
+   - \ref TileCache
+   - \ref Django
+   - \ref OSM, GeoExt, Ext
+   
+ - Tools
+  - qgis, me included pyqt app
+  
+   
+   
+ 
+ 
+ 
 
 \page ProjectLayout Project Layout
 

@@ -8,6 +8,26 @@ PreAmble
 This project is under active devel, so some things
 may not work, be placeholders, etc.
 
+
+----------------------------------------
+Djangok
+----------------------------------------
+The fgx/ directory contains teh django app..
+
+cd fgx
+
+## create config
+cp local_settings.skel.py local_settings.py
+## and modify to taste
+
+## populate db
+./manage.py syncdb
+
+## Run Server
+./manage.py runserver
+
+
+
 --------------------------------
 Structure
 --------------------------------
