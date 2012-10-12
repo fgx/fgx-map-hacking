@@ -1,7 +1,16 @@
 /*!
 \mainpage The Fgx Map Project
 
-\section Intro Introduction
+\section Intro Intro
+
+Whats in the BOX ?
+
+Well this is a complete mashup project, and it compises a set of tool to create or play with
+map development. its a set  of tools, server apps, server, configs, data definitions, import tools,
+compile kit, projection object, data and other stuff including an attempt at a mapual
+- a set of tools to setup a ma
+
+
 
 @todo: Gral to write sppech
 
@@ -16,6 +25,7 @@
    - \ref Mapnick
    - \ref TileCache
    - \ref Django
+   - \ref MpBot
    
   - Browser Libs
    - \ref OSM 
