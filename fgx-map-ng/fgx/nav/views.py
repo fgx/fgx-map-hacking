@@ -1,10 +1,14 @@
 
 from django.http import HttpResponse
+from django.contrib.gis.gdal.envelope import Envelope
+
 
 from fix.models import Fix
-
 from utils import rjson
 
+#W = 39.9; N = -82.9; E=40.4; S=-82.2
+#bounds = Envelope((N, W, S, E, ))
+#Base.objects.filter(location__intersects=bounds.wkt)
 
 @rjson(indent=2)
 def fix(request, ident=None):
@@ -30,3 +34,6 @@ def fix(request, ident=None):
 	return dic
 	
 	return HttpResponse( dic )
+	
+	
+	

@@ -36,27 +36,26 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 		else:
 			
 			line = raw_line.strip()
-			
-			if verbose > 0 and c % 500 == 0:
-				print "  > line: %s " % (c, line)
-		
-			
-			#print c, line
 			parts = line.split()
 			
+			if verbose > 0 and c % 500 == 0:
+				print "  > line: %s %s " % (c, line)
 			if verbose > 1:
 				print "  > line %s >>" % c, parts
 			
-			#print parts
-			parts = line.split()
+			ident = parts[2]
 			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
 			pnt = GEOSGeometry( 'POINT(%s %s)' % (parts[0], parts[1]) ) ## << WOrks 
 			
-			nuFix = Fix()
-			nuFix.fix = parts[2]
-			nuFix.wkb_geometry = pnt
 			
-			nuFix.save()
+			obs = Fix.objects.filter(fix=ident)
+			if len(obs) == 0:
+				ob = Fix()
+			else:
+				ob = obs[0]
+			ob.fix = parts[2]
+			ob.wkb_geometry = pnt
+			ob.save()
 			
 		
 		
