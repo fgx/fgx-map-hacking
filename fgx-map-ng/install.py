@@ -6,15 +6,19 @@ import os
 import commands
 from optparse import OptionParser
 
-import fgx.app_global as G
-from fgx.installer import check
+#import fgx.app_global as G
+#from fgx.installer import check
+
+from fgx.setup import INSTALLERS
+
+
 
 
 ## Handle Command Args
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
 usage += "      check - Checks for packages istalled\n"
-usage += "      install [postgres|postgis] - Install apt package"
+usage += "      install [%s] - Install FGx package" % " | ".join(INSTALLERS)
 parser = OptionParser(usage=usage)
 parser.add_option(	"-v", nargs=1,
 					action="store", type="int", dest="v", default=1,
@@ -37,10 +41,18 @@ else:
 	sys.exit(0)
 	
 
+## Validate install commands
 if command == "install":
-	#if args[1] == 
-	pass
+	if len(args) == 1:
+		print "Error: Require and installer "
+		parser.print_help()
+		sys.exit(1)
 
+	if not args[1] in INSTALLERS:
+		print "Error: Installer `%s` not recognised " % args[1]
+		parser.print_help()
+		sys.exit(1)
+installer = args[1]
 
 ##===========================================
 if command == "check":
@@ -48,4 +60,10 @@ if command == "check":
 	#print check.check_apt(as_string=True)
 	
 	
+##########################################################################
+if command == "install" and installer == "mapnik":
+	
+	print "Install Mapnik: >"
+	
+	setup.installer
 

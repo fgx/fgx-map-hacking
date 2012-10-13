@@ -16,10 +16,12 @@ from fgx import shell_config
 
 Z = "/home/fgxl/fgx-map/_temp/downloads/AptNav201204XP1000"
 
+x_files = ['fix', 'nav', 'apt', "all"]
+
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
-usage += "    import [fix|apt] eg ./%prog import fix apt vor\n"
+usage += "    import [fix|nav|apt|all] eg ./%prog import fix apt vor\n"
 parser = OptionParser(usage=usage)
  
 parser.add_option("-d", 
@@ -41,20 +43,31 @@ parser.add_option("-v", nargs=1,
 
 
 ############################################################
-## Check args
+
+## Check we have command
 if len(args) == 0:
 	
 	print "Error: need a command"
 	parser.print_help()
 	sys.exit(1)
 	
+## Check command is valid
 if not args[0] in ["import", "empty", "nuke", "create"]:
 	print "Error: `%s` is invalid command " % args[0]
 	parser.print_help()
 	sys.exit(1)
-
 command = args[0]
 
+## Check import command valid
+if command == "import":
+	if len(args) == 1:
+		print "Error: Need a file: %s " % (" | ").join(x_files)
+		sys.exit(1)
+		
+	if not args[1] in x_files:
+		print "Error: Need a vaid file: %s " % (" | ").join(x_files)
+		sys.exit(1)
+x_file = args[1]
 
 ############################################################
 #print "COMMAND=", command
@@ -62,11 +75,18 @@ command = args[0]
 if command == "import":
 	
 	# @todo: tables
-	#if table == "fix":
+	if x_file == "fix":
 	
-	from fgx.xplane import fix
-	fix.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		from fgx.xplane import fix
+		fix.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+	
+	elif x_file == "nav":
+		from fgx.xplane import nav
+		nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	
 	
-	
+	else:
+		print "Error: File `%s` unhandled" % x_file
+		
+		
 	

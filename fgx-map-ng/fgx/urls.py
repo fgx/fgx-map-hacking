@@ -5,11 +5,19 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
     
-    url(r'^ajax/fix$', 'fix.views.fix', name='fix'),
-    url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'fix.views.fix', name='fix'),
     
+    ## Fix
+    url(r'^ajax/fix$', 'nav.views.fix', name='fix'),
+    url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'nav.views.fix', name='fix'),
+    
+    
+    ## xplane
+    url(r'^ajax/xplane/avail$', 'xplane.views.avail', name='xplane'),
+    #url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'fix.views.fix', name='fix'),
+    
+    
+    ## Main
     url(r'^$', 'xmap.views.index', name='index'),
     
     

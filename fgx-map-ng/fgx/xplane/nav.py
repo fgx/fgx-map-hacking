@@ -1,8 +1,4 @@
 
-import sys
-import fileinput
-import datetime
-
 from django.contrib.gis.geos import Point, GEOSGeometry
 
 from fgx.nav.models import Fix

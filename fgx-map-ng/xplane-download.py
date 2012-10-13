@@ -12,7 +12,7 @@ from optparse import OptionParser
 
 
 #from fgx import shell_config
-from fgx.xplane import shell
+from fgx.xplane import server
 
 
 ## Handle Command Args
@@ -56,7 +56,7 @@ command = args[0]
 	
 ##== List Remote Files
 if command == "avail":
-	shell.do_download()
+	server.do_download()
 	
 
 ##== Download a file

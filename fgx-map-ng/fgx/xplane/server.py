@@ -26,7 +26,8 @@ import operator
 
 #from fgx.shell_config import TEMP_DIR
 
-XPLANE_URL = 'http://data.x-plane.com/update/data/'
+## URL of the data page
+XPLANE_DATA_PAGE = 'http://data.x-plane.com/update/data/'
 
 
 ##==========================================================================
@@ -57,8 +58,8 @@ class Server():
 			return self.files
 		
 		#== Fetch the xplane downloads files index html page
-		print "> Fetching xplane index from %s" % XPLANE_URL 
-		response = urllib2.urlopen( XPLANE_URL )
+		print "> Fetching xplane index from %s" % XPLANE_DATA_PAGE 
+		response = urllib2.urlopen( XPLANE_DATA_PAGE )
 		html = response.read()
 		#print ">> Got reply"
 		#print html
@@ -115,7 +116,7 @@ class Server():
 			#zip_file = "AptNav%sXP861.zip" % datetime.datetime.strftime(file_date, "%Y%m")
 			ob = AptZip()
 			ob.c = c
-			ob.url = '%s%s' % ( XPLANE_URL, f['file_name'])
+			ob.url = '%s%s' % ( XPLANE_DATA_PAGE, f['file_name'])
 			ob.file_name = f['file_name']
 			ob.dated = datetime.datetime.strftime(f['dated'], "%Y-%m-%d") 
 			self.files.append(ob)

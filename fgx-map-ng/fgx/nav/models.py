@@ -69,3 +69,27 @@ class Fix(models.Model):
 	
 	
 	
+##=======================================================
+class Ndb(models.Model):
+	
+	class Meta:
+		db_table = "ndb"
+	
+	ndb_pk = models.AutoField(primary_key=True)
+	ident = models.CharField(max_length=4, db_index=True)
+	#name = models.CharField(max_length=40, db_index=True)
+	#subtype = models.CharField(max_length=10)
+	#elevation_m = models.IntegerField()
+	freq_mhz = models.CharField(max_length=10)
+	range_km = models.CharField(max_length=10)
+	bias_km = models.IntegerField()
+	wkb_geometry = models.PointField(srid=FGX_SRID)
+	objects = models.GeoManager()
+
+	def __repr__(self):
+		return "<Dme: %s>" % (self.icao)
+	
+
+
+	
+	
