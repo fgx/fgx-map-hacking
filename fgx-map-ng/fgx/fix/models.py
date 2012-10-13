@@ -22,4 +22,13 @@ class Fix(models.Model):
 		return "<Fix: %s>" % (self.fix)
 	
 	
+	def dic(self):
+		
+		return dict(
+				fix = self.fix,
+				fix_pk = self.fix_pk,
+				lat = self.geom.coords[0], 
+				lon = self.geom.coords[1]
+			
+		)
 	

@@ -20,11 +20,15 @@ Z = "/home/fgxl/fgx-map/_temp/downloads/AptNav201204XP1000"
 usage = "usage: %prog [options]"
 parser = OptionParser(usage=usage)
  
+parser.add_option("-e", nargs=1,
+					action="store_bool", dest="empty", default=False,
+					help="Empty the table first, then use inserts"
+                  )
+                  
 parser.add_option("-v", nargs=1,
 					action="store", type="int", dest="v", default=1,
-					help="Prints more output 0-4 (0=none, 4=loads)"
+					help="Prints more verbose output 0-4 (0=none, 4=loads)"
                   )
-
 (opts, args) = parser.parse_args()
 #print  opts, args
 
