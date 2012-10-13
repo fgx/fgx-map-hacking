@@ -39,7 +39,9 @@ parser.add_option("-v", nargs=1,
 (opts, args) = parser.parse_args()
 #print  opts, args
 
-## Chack args
+
+############################################################
+## Check args
 if len(args) == 0:
 	
 	print "Error: need a command"
@@ -54,10 +56,14 @@ if not args[0] in ["import", "empty", "nuke", "create"]:
 command = args[0]
 
 
-print "COMMAND=", command
-
+############################################################
+#print "COMMAND=", command
 
 if command == "import":
+	
+	# @todo: tables
+	#if table == "fix":
+	
 	from fgx.xplane import fix
 	fix.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	

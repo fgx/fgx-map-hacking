@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     
     url(r'^ajax/fix$', 'fix.views.fix', name='fix'),
+    url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'fix.views.fix', name='fix'),
     
     url(r'^$', 'xmap.views.index', name='index'),
     
