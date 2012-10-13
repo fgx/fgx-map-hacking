@@ -15,20 +15,23 @@ class Fix(models.Model):
 	
 	fix_pk = models.AutoField( primary_key=True)
 	fix = models.CharField(max_length=10, db_index=True)	
-	geom = models.PointField(srid=FGX_SRID)
+	wkb_geometry = models.PointField(srid=FGX_SRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
 		return "<Fix: %s>" % (self.fix)
 	
 	
+	## Returns data in python dic
+	# @retval data as dict
 	def dic(self):
 		
 		return dict(
 				fix = self.fix,
 				fix_pk = self.fix_pk,
-				lat = self.geom.coords[0], 
-				lon = self.geom.coords[1]
-			
+				lat = self.wkb_geometry.json, 
+				lon = self.wkb_geometry.coords[1]
 		)
+	
+	
 	

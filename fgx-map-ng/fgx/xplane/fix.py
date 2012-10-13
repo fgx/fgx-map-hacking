@@ -9,15 +9,19 @@ import settings
 
 print "TEMP", settings.TEMP_DIR
 
-def import_dat(zip_dir, test_mode=False):
-	
-	print "zip_dir=", zip_dir
+def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	
 	file_path = zip_dir + "/earth_fix.dat"
 	
+	if verbose > 0:
+		print "> Importing Fix: ", zip_dir
 	
+		
 	## Nuke existing entries
-	Fix.objects.all().delete()
+	if empty:
+		if verbose > 0:
+			print "  > Emptied fix table"
+		Fix.objects.all().delete()
 	
 	c = 0
 	for raw_line in fileinput.input(file_path):
@@ -29,12 +33,15 @@ def import_dat(zip_dir, test_mode=False):
 			pass
 		else:
 			
+			if verbose > 0 and c % 500 == 0:
+				print c
 		
 			line = raw_line.strip()
 			#print c, line
 			parts = line.split()
 			
-			print ">>", parts
+			if verbose > 1:
+				print "  > line %s >>" % c, parts
 			
 			#print parts
 			parts = line.split()
@@ -49,5 +56,5 @@ def import_dat(zip_dir, test_mode=False):
 			
 		
 		
-		if test_mode and c == 1000:
+		if dev_mode and c == 1000:
 			sys.exit(0)
