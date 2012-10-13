@@ -1,4 +1,7 @@
-# Django settings for fgxmap project.
+## Django settings for fgxmap project.
+# @note;
+#   Do not change this file, instead override in local_settings.py 
+#   which is included at the bottom
 
 import os
 
@@ -12,7 +15,7 @@ APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__)))
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-
+FGX_STATIC = "http://static.fgx.ch"
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),

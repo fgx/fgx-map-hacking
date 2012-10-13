@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'fgxmap.views.index', name='index'),
+    url(r'^$', 'xmap.views.index', name='index'),
     # url(r'^fgxmap/', include('fgxmap.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
