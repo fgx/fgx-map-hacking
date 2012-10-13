@@ -21,16 +21,23 @@ class Fix(models.Model):
 	def __repr__(self):
 		return "<Fix: %s>" % (self.fix)
 	
+	@property
+	def lat(self):
+		return str(self.wkb_geometry.coords[0])
 	
-	## Returns data in python dic
+	@property
+	def lon(self):
+		return str(self.wkb_geometry.coords[1])
+		
+	## Returns data in python dic - this is a bit of a jhack and subject to change
 	# @retval data as dict
 	def dic(self):
 		
 		return dict(
 				fix = self.fix,
 				fix_pk = self.fix_pk,
-				lat = self.wkb_geometry.json, 
-				lon = self.wkb_geometry.coords[1]
+				lat = self.lat, 
+				lon = self.lon
 		)
 	
 	

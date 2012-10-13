@@ -1,6 +1,7 @@
 
 import sys
 import fileinput
+import datetime
 
 from django.contrib.gis.geos import Point, GEOSGeometry
 
@@ -16,6 +17,7 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	if verbose > 0:
 		print "> Importing Fix: ", zip_dir
 	
+	started = datetime.datetime.now()
 		
 	## Nuke existing entries
 	if empty:
@@ -33,10 +35,12 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 			pass
 		else:
 			
-			if verbose > 0 and c % 500 == 0:
-				print c
-		
 			line = raw_line.strip()
+			
+			if verbose > 0 and c % 500 == 0:
+				print "  > line: %s " % (c, line)
+		
+			
 			#print c, line
 			parts = line.split()
 			
@@ -50,7 +54,7 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 			
 			nuFix = Fix()
 			nuFix.fix = parts[2]
-			nuFix.geom = pnt
+			nuFix.wkb_geometry = pnt
 			
 			nuFix.save()
 			
@@ -58,3 +62,8 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 		
 		if dev_mode and c == 1000:
 			sys.exit(0)
+			
+			
+	print "  >> Done, imported %s lines " % c
+	
+	
