@@ -11,11 +11,16 @@ ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
 ## Absolute path to the django app
 APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__)))
 
+TEMP_DIR = ROOT + "/_temp"
+
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 FGX_STATIC = "http://static.fgx.ch"
+
+FGX_SRID = 3857
+
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -123,7 +128,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'fgxmap.wsgi.application' ## ????? said pete
+WSGI_APPLICATION = 'wsgi.application' ## ????? said pete
 
 
 TEMPLATE_DIRS = (
@@ -146,8 +151,13 @@ INSTALLED_APPS = (
     #'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'fgxmap',
-    'mpnet'
+    'xmap',
+    'mpnet',
+    'fix',
+    'xplane',
+    'vor',
+    'airport',
+    'setup'
 )
 
 # A sample logging configuration. The only tangible logging

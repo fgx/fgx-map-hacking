@@ -2,10 +2,7 @@
 
 from django.contrib.gis.db import models
 
-"""
-@todo: This lot needs to mix in
-
-"""
+from settings import FGX_SRID
 
 
 ##=======================================================
@@ -22,7 +19,7 @@ class Dme(models.Model):
 	freq_mhz = models.CharField(max_length=10)
 	range_km = models.CharField(max_length=10)
 	bias_km = models.IntegerField()
-	geom = models.PointField(srid=CustomSRID)
+	geom = models.PointField(srid=FGX_SRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):

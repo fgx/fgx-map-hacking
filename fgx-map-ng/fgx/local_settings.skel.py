@@ -3,6 +3,8 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+## Temp Directory
+#TEMP_DIR = ROOT + "/_temp"
 
 
 DATABASES = {

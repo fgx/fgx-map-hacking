@@ -5,33 +5,34 @@
 import os
 import sys
 
-## At present the PROJ_ROOT is the repos root
+sys.path.append( os.path.abspath(  os.path.dirname(__file__)  + "/../fgx"  ) )
 
-
-sys.path.append( os.path.abspath(  os.path.dirname(__file__)  + "/fgxmap"  ) )
-#sys.path.append( os.path.abspath(  os.path.dirname(__file__) + "/../fgx_www"  ) )
-#sys.path.append( os.path.abspath(  os.path.dirname(__file__) + "/../libs"  ) )
-
-TEMP_DIR =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../_temp/")) 
-CACHE_DIR =  os.path.abspath( os.path.join(os.path.dirname(__file__), "../_cache/")) 
-
+import settings
 
 """ Checks if the shell enviroment is sane """
 def sanity_check():
-	print "Sanity Check"
+	print "> Shell Sanity Check: "
 	
-	if os.path.exists(TEMP_DIR):
+	print "  > Check Temp Dir: ",
+	if os.path.exists(settings.TEMP_DIR):
 		print "TEMP DIR NTO EXIST"
+		print "Fail"
 		Throw_trntrum
+	else:
+		print "Ok = " + settings.TEMP_DIR
 	
-	return False
+	print "  > Sanity OK"
+	return True
 	
+sanity_check()
 
 
-#print "TEMP_DIR=", TEMP_DIR
 
+###############################################
 ## Load Django enviroment
+print "> Setup Django Shell: ",
 from django.core.management import setup_environ
-import settings
+
 setup_environ(settings)
+print "Succesful"
 

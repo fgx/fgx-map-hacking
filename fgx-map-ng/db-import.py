@@ -14,10 +14,10 @@ from optparse import OptionParser
 
 from fgx import shell_config
 
-Z = "/home/fgxl/fgx-map/fgx-map-consolidation/temp/downloads/AptNav201204XP1000"
+Z = "/home/fgxl/fgx-map/_temp/downloads/AptNav201204XP1000"
 
 ## Handle Command Args
-usage = "usage: %prog [options] data ./path"
+usage = "usage: %prog [options]"
 parser = OptionParser(usage=usage)
  
 parser.add_option("-v", nargs=1,
@@ -29,10 +29,9 @@ parser.add_option("-v", nargs=1,
 #print  opts, args
 
 command = "fix"
-
+print "COMMAND=", command
 if command == "fix":
 	from fgx.xplane import fix
-
 	fix.import_dat(zip_dir=Z)
 	
 	

@@ -2,9 +2,7 @@
 
 from django.contrib.gis.db import models
 
-
-
-CustomSRID = 3857 # ?? gral ?
+from settings import FGX_SRID
 
 ##=======================================================
 class Airport(models.Model):
@@ -16,7 +14,7 @@ class Airport(models.Model):
 	apt_icao = models.CharField(max_length=6, unique=True, db_index=True)
 	apt_name = models.CharField(max_length=100, db_index=True)
 	elevation = models.CharField(max_length=30)
-	geom = models.PointField(srid=CustomSRID)
+	geom = models.PointField(srid=FGX_SRID)
 	objects = models.GeoManager()
 
 	## center lat
@@ -40,7 +38,7 @@ class Runway(models.Model):
 	rwy = models.CharField(max_length=10, db_index=True)
 	length_ft = models.IntegerField()
 	length_m = models.IntegerField()
-	geom = models.MultiPolygonField(srid=CustomSRID)
+	geom = models.MultiPolygonField(srid=FGX_SRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
@@ -67,7 +65,7 @@ class Threshold(models.Model):
 	appr_light_id = models.IntegerField(db_index=True)
 	tdz_light_id = models.IntegerField(db_index=True)
 	
-	geom = models.MultiPolygonField(srid=CustomSRID)
+	geom = models.MultiPolygonField(srid=FGX_SRID)
 	objects = models.GeoManager()
 	
 	def __repr__(self):

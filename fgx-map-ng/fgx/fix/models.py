@@ -1,13 +1,10 @@
 
 
+
 from django.contrib.gis.db import models
 
-"""
-@todo: This lot needs to mix in
+from settings import FGX_SRID
 
-Can one fix ident be in more than one position
-
-"""
 ##=======================================================
 class Fix(models.Model):
 	
@@ -18,7 +15,7 @@ class Fix(models.Model):
 	
 	fix_pk = models.AutoField( primary_key=True)
 	fix = models.CharField(max_length=10, db_index=True)	
-	geom = models.PointField(srid=CustomSRID)
+	geom = models.PointField(srid=FGX_SRID)
 	objects = models.GeoManager()
 
 	def __repr__(self):
