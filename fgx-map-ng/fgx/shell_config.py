@@ -6,8 +6,6 @@ import os
 import sys
 
 ## At present the PROJ_ROOT is the repos root
-PROJ_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../../"))
-print "PROJ_ROOT=", PROJ_ROOT
 
 
 sys.path.append( os.path.abspath(  os.path.dirname(__file__)  + "/fgxmap"  ) )
@@ -28,8 +26,7 @@ def sanity_check():
 	
 	return False
 	
-	
-sanity_check()
+
 
 #print "TEMP_DIR=", TEMP_DIR
 

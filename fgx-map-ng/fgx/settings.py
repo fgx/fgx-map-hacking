@@ -1,6 +1,11 @@
 # Django settings for fgxmap project.
 
 import os
+
+## Absolute path to the project root
+ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
+
+## Absolute path to the django app
 APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__)))
 
 

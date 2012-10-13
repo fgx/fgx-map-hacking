@@ -11,6 +11,15 @@ compile kit, projection object, data and other stuff including an attempt at a m
 - a set of tools to setup a ma
 
 
+Types are slammed into string, for following reasons:
+ 
+ Fix can have dupes
+ postgis standard is "wkb_geometry", boring, I know
+ 
+ Fixed with apache for x reason ?
+ 
+ 
+ 
 
 @todo: Gral to write sppech
 

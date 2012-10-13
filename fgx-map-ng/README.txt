@@ -6,11 +6,16 @@ PreAmble
 --------------------------------
 
 This project is under active devel, so some things
-may not work, be placeholders, etc.
+may not work, be placeholders, etc. but under active devel
+
+The current map server is working, so the goal of this 
+project is to combine the efforts together
+
+
 
 
 ----------------------------------------
-Djangok
+Django
 ----------------------------------------
 The fgx/ directory contains teh django app..
 

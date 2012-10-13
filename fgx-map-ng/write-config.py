@@ -12,8 +12,7 @@ import sys
 import os
 from optparse import OptionParser
 
-import fgx.app_global as G
-from fgx.config import config
+
 
 ## Handle Command Args
 usage = "usage: %prog [-h -j -n -s -v] "
@@ -27,7 +26,7 @@ parser.add_option(	"-n",
 					help="Write nginx config to `/etc/nginx.conf`"
 					) 
 parser.add_option(	"-s", 
-					action="store_true", dest="ln", default=False, 
+					action="store_true", dest="ln", default=True, 
 					help="Write symlinks"
 					)
 parser.add_option(	"-t", 
@@ -43,8 +42,6 @@ parser.add_option(	"--make-local",
 					help="create local config file to `/local_config.yaml`"
 					) 
 (opts, args) = parser.parse_args()
-
-
 
 
 
@@ -71,10 +68,7 @@ if opts.local:
 	sys.exit(0)
 
 
-
-if not G.check_sane():
-	
-	sys.exit(0)
+from fgx.setup import config
 
 if opts.js:
 
