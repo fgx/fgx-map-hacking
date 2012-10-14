@@ -1,20 +1,37 @@
 
-from settings import ROOT
+import settings
 
 ## Reads file from project relative to ROOT
 def read_file(path):
-	f = open(ROOT + path, "r")
+	f = open(settings.ROOT + path, "r")
 	s = f.read()
 	f.close()
 	return s
 
 ## Reads file from project relative to ROOT
 def write_file(path, contents):
-	f = open(ROOT + path, "w")
+	f = open(settings.ROOT + path, "w")
 	s = f.write(contents)
 	f.close()
 	return
 
+
+######################################################################
+## Convenience context object for templating
+class Context(object):
+	pass
+
+## Create a default Context object
+def make_context():
+	
+	c = Context()
+	c.static_url = settings.FGX_STATIC_URL
+	
+	return c
+	
+	
+	
+######################################################################
 
 from functools import wraps
 from django.http import HttpResponse

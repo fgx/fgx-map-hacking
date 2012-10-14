@@ -17,6 +17,9 @@ urlpatterns = patterns('',
     #url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'fix.views.fix', name='fix'),
     
     
+    ## Maps
+     url(r'^map/(?P<map_name>\w{0,6})$', 'xmap.views.map', name='map'),
+    
     ## Main
     url(r'^$', 'xmap.views.index', name='index'),
     

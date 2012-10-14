@@ -8,58 +8,48 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	{## The Ext Stuff ##}
-    <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.4.0/adapter/ext/ext-base.js"></script>
-    <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.4.0/ext-all.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.4.0/resources/css/ext-all.css" />
-    <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.4.0/examples/shared/examples.css" />
+    <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/ext-all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/examples/shared/examples.css" />
+    
+    {## ExtGeo ##}
+    <script type="text/javascript" src="{{c.static_url}}/js/GeoExt-1.1/lib/GeoExt.js"></script>
 
-	<!-- JQuery from -->
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 
-	<!-- we provide openlayers locally, stable seems 2.10, but we like the new features of 2.12 -->
-	<!-- <script src="openlayers210/OpenLayers.js"></script>  
-		TODO Make this a config -->
-	<script src="http://static.fgx.ch/js/OpenLayers-2.12/OpenLayers.js"></script>
 
-	<!-- Proj4js -->
-	<script src="http://static.fgx.ch/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
+
+
+
+
+	{## JQuery ##}
+	{# <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> #}
+
+	{## Openlayers from static.fgx.ch ##}
+	<script src="{{c.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+
+	{## Proj4js ##}
+	<script src="{{c.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
   
-	<!-- this "theme" comes from openlayers. default edited by accident, so it is now FGx default ;-) -->
-	<!-- Is missing <link rel="stylesheet" href="theme/default/style.css" type="text/css" /> -->
 
-	<!-- use this to get OSM stuff 
-	<script src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>-->
-	<!-- local script -->
-	<script src="http://static.fgx.ch/js/osm/OpenStreetMap.js"></script>
+	{## use this to get OSM stuff ##} 
+	<script src="{{c.static_url}}/js/osm/OpenStreetMap.js"></script>
 
 
 	<link rel="stylesheet"  href="/static/style/fgx.css">
 
-	<script type="text/javascript" src="/static/js/fgx.map.js"></script>
+    <script type="text/javascript" src="/static/js/map-ng.js"></script>
 
 </head>
 
 
 <body>
   
+        #{{c.foo}}#
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>GeoExt Tree Components</title>
-        
-        <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.4.0/adapter/ext/ext-base.js"></script>
-        <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.4.0/ext-all.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.4.0/resources/css/ext-all.css" />
-        <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.4.0/examples/shared/examples.css" />
-        <script src="openlayers211/OpenLayers.js"></script>
-        <script type="text/javascript" src="GeoExt11/script/GeoExt.js"></script>
 
-        <script type="text/javascript" src="tree.js"></script>
-
-    </head>
-    <body>
         <div id="desc">
-            <h1>GeoExt.tree Components</h1>
+            <title>GeoExt Tree Components #{{c.FGX_STATIC}}</title>
             <p>This example shows how to work with a layer tree.  The basic
             component for building layer trees is the LayerNode, and there are
             different types of containers for automatically adding a map's

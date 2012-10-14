@@ -6,10 +6,10 @@
 import os
 
 ## Absolute path to the project root
-ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__), "../"))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 
 ## Absolute path to the django app
-APP_ROOT = os.path.abspath( os.path.join(os.path.dirname(__file__)))
+APP_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
 TEMP_DIR = ROOT + "/_temp"
 
@@ -17,7 +17,7 @@ TEMP_DIR = ROOT + "/_temp"
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-FGX_STATIC = "http://static.fgx.ch"
+FGX_STATIC_URL = "http://static.fgx.ch"
 
 FGX_SRID = 3857
 
@@ -33,11 +33,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': '', # Or path to database file if using sqlite3.
+        'USER': '', # Not used with sqlite3.
+        'PASSWORD': '', # Not used with sqlite3.
+        'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '', # Set to empty string for default. Not used with sqlite3.
     }
 }
 
