@@ -1,6 +1,17 @@
 
 import settings
 
+
+## Converts to int
+# @retval Noneif vaid, else integer
+def to_int(v):
+	try:
+		i = int(v)
+	except ValueError:
+		i = None
+	return i
+	
+	
 ## Reads file from project relative to ROOT
 def read_file(path):
 	f = open(settings.ROOT + path, "r")

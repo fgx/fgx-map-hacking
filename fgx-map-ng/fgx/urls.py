@@ -6,6 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     
+    ## AJAX ################################################
     
     ## Fix
     url(r'^ajax/fix$', 'nav.views.fix', name='fix'),
@@ -16,7 +17,10 @@ urlpatterns = patterns('',
     url(r'^ajax/xplane/avail$', 'xplane.views.avail', name='xplane'),
     #url(r'^ajax/fix/(?P<ident>\w{0,6})$', 'fix.views.fix', name='fix'),
     
+    ## MP
+    url(r'^ajax/mp/flights$', 'mpnet.views.flights', name='flights'),
     
+    ## HTML ################################################
     ## Maps
      url(r'^map/(?P<map_name>\w{0,6})$', 'xmap.views.map', name='map'),
     

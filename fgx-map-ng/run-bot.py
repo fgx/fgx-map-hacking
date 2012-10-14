@@ -14,10 +14,9 @@ from optparse import OptionParser
 
 #import fgx_shell_config as conf
 
-
 from fgx import shell_config
 
-from fgx.mpnet import dns_bot
+#from fgx.mpnet import dns_bot
 from fgx.mpnet import mp_telnet
 
 
@@ -26,12 +25,24 @@ from fgx.mpnet import mp_telnet
 ## Dns
 ##==============================================
 
+def run_bot():
+	while True:
+		mp_telnet.update_cache()
+		
+		#lag, flights = mp_telnet.fetch_telnet("mpserver14.flightgear.org", False)
+		#print lag, len(flights)
+		
+		time.sleep(1)
+		
+
+		
+run_bot()
 
 """dns_bot.DnsLookupThread()
 dnsLookupThread.setDaemon(False)
 """
 
-
+"""
 def run():
 	dnsLookupThread = None
 	while True:
@@ -48,7 +59,8 @@ def run():
 		print "WAKEUP"
 		#dnsLookupThread.stop()
 
-
+"""
+"""
 if "--run" in sys.argv:
 	run()
 else:
@@ -56,3 +68,4 @@ else:
 	
 print "<< exit"
 
+"""

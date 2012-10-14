@@ -21,6 +21,9 @@ FGX_STATIC_URL = "http://static.fgx.ch"
 
 FGX_SRID = 3857
 
+FGX_MP_SERVER = "mpserver14.flightgear.org"
+
+
 ## We Specifically want /end/point/here NOT /end/point/here/
 APPEND_SLASH = False
 
@@ -123,9 +126,23 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+
+## Memcached db
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
+CACHE_MIDDLEWARE_KEY_PREFIX = "fgx-map-ng"
+CACHE_MIDDLEWARE_SECONDS = 5
 
 ROOT_URLCONF = 'urls'
 
@@ -155,9 +172,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'xmap',
     'mpnet',
-    'fix',
+    'nav',
     'xplane',
-    'vor',
     'airport',
     'setup'
 )

@@ -1,7 +1,11 @@
 var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
 //map.setCenter(centerpoint,5);
 
-var mapPanel, tree;
+
+var mapPanel;
+var tree;
+
+
 Ext.onReady(function() {
     // create a map panel with some layers that we will show in our layer tree
     // below.
@@ -233,22 +237,27 @@ Ext.onReady(function() {
 													   }]
 											   });
 			
-			new Ext.Viewport({
-							 layout: "fit",
-							 hideBorders: true,
-							 items: {
-							 layout: "border",
-							 deferredRender: false,
-							 items: [mapPanel, tree, {
-									 contentEl: "desc",
-									 region: "east",
-									 bodyStyle: {"padding": "5px"},
-									 collapsible: true,
-									 collapseMode: "mini",
-									 split: true,
-									 width: 200,
-									 title: "Description"
-									 }]
-							 }
-							 });
-			});
+new Ext.Viewport({
+	 layout: "fit",
+	 hideBorders: true,
+	 items: {
+		 layout: "border",
+		 deferredRender: false,
+		 items: [
+		    mapPanel, 
+		    tree, 
+		    {
+			 contentEl: "desc",
+		 region: "east",
+		 bodyStyle: {"padding": "5px"},
+		 collapsible: true,
+		 collapseMode: "mini",
+		 split: true,
+		 width: 200,
+		 title: "Description"
+			 }]
+	 }
+ });
+
+
+});
