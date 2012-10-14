@@ -9,16 +9,26 @@ console.log("GRID+", this.flightsGrid);
 this.viewport = new Ext.Viewport({
 	layout: "border",
 	items: [
-		this.flightsGrid.grid,
-	{
-        region: 'center',
-        xtype: 'tabpanel', // TabPanel itself has no title
-        items: {
-            title: 'Default Tab',
-            html: 'The first tab\'s content. Others may be added dynamically'
-        }
+		{region: "north", title: "FGx Map - Next Gen",
+			html: 'The first tab\'s content. Others may be added dynamically'
+		},
+		{ region: 'center',
+			xtype: 'tabpanel', // TabPanel itself has no title
+			items: {
+				title: 'Default Tab',
+				html: 'The first tab\'s content. Others may be added dynamically'
+			}
         
-	}
+		},
+		{region: 'east', width: 300,
+			xtype: 'tabpanel',
+			activeItem: 0,
+			items: [
+				this.flightsGrid.grid,
+				
+			]
+        
+		},
 	]
 })
 	
