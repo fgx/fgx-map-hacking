@@ -8,6 +8,19 @@ from fgx.nav.models import Ndb
 import settings
 
 
+class NAV_ROW_CODE:
+	ndb = 2
+	vor = 3
+	ils = 4
+	ils2 = 5
+	gs = 6
+	om = 7
+	mm = 8
+	im = 9
+	dme = 12
+	dme2 = 13
+	
+
 
 def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	

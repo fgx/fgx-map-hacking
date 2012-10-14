@@ -3,14 +3,14 @@
 
 from django.shortcuts import render_to_response
 
-from utils import make_context
+import helpers as h
 
 
 
 ## Show Index page
 def index(request):
 	
-	c = make_context()
+	c = h.make_context()
 
 	
 	return render_to_response('index.html', {'c': c})	
@@ -19,6 +19,6 @@ def index(request):
 ## Show Map page
 def map(request, map_name):
 	
-	c = make_context()
+	c = h.make_context()
 	
 	return render_to_response('map-%s.html' % map_name, {'c': c})	

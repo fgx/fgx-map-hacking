@@ -11,13 +11,13 @@
     <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/adapter/ext/ext-base.js"></script>
     <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/ext-all.js"></script>
     <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/resources/css/ext-all.css" />
-    <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/examples/shared/examples.css" />
+   {#  <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/examples/shared/examples.css" /> #}
     
+	{## Openlayers from static.fgx.ch ##}
+	<script src="{{c.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+
     {## ExtGeo ##}
     <script type="text/javascript" src="{{c.static_url}}/js/GeoExt-1.1/lib/GeoExt.js"></script>
-
-
-
 
 
 
@@ -25,8 +25,7 @@
 	{## JQuery ##}
 	{# <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> #}
 
-	{## Openlayers from static.fgx.ch ##}
-	<script src="{{c.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+
 
 	{## Proj4js ##}
 	<script src="{{c.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
@@ -38,59 +37,20 @@
 
 	<link rel="stylesheet"  href="/static/style/fgx.css">
 
-    <script type="text/javascript" src="/static/js/map-ext.js"></script>
+	<script type="text/javascript" src="/static/js/fgx/FlightsGrid.js"></script>
+	<script type="text/javascript" src="/static/js/fgx/MainViewport.js"></script>	
+	<script type="text/javascript" src="/static/js/fgx/main.js"></script>
+    {# <script type="text/javascript" src="/static/js/map-ext.js"></script> #}
 
 </head>
 
 
 <body>
-  
-        #{{c.foo}}#
-
-
-        <div id="desc">
-            <title>GeoExt Tree Components #{{c.FGX_STATIC}}</title>
-            <p>This example shows how to work with a layer tree.  The basic
-            component for building layer trees is the LayerNode, and there are
-            different types of containers for automatically adding a map's
-            layers to the tree. The tree configuration of this example is pure
-            JSON and can be edited live by clicking on the "Show/Edit Tree Config"
-            button below the layers panel.<p>
-            <p>The js is not minified so it is readable. See
-            <a href="tree.js">tree.js</a>.</p>
-            <p>Also see the <a href="layercontainer.html">Layer Container</a>
-            example for drag-n-drop support.</p>
-        </div>
-    </body>
-</html>
-
-
-	<div id="map_div"></div>
-	<!--<div id="fitinfo">
-	<h1 style="font-size:1em;">GetFeatureInfo Test</h1>
-	<div id="clickInfo" style="padding:10px; overflow: auto;">
-	</div>
-	<div id="featureInfo">
-	</div>
-	</div>-->
-
-	
-	<div id="fgxlogo">
-		<p><img src="http://static.fgx.ch/fgx/fgx-cap-40x30.png" alt="FGx Logo">&nbsp;&nbsp;
-		<b>FGx Mapserver</b>, © 2012 Yves Sablonier (Zurich) --- EPSG:3857 --- Data: CC-By-SA by OpenStreetMap/GPLv2 by xplane (1000, 08.12) and Yves Sablonier
-		</p>
-	</div>
-	
-	<script type="text/javascript">
-	$(function(){
-
-		$('#map_div').width($(window).width());
-		$('#map_div').height($(window).height());
-		
-		fgxMap = new FGxMap();
-		fgxMap.init();
-	});
+	{# <div id="main-div"></div> #}
+	<script>
+		display_map();
 	</script>
 
-	</body>
+
+</body>
 </html>
