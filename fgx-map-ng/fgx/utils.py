@@ -7,21 +7,20 @@ def read_file(path):
 	s = f.read()
 	f.close()
 	return s
-	
+
 ## Reads file from project relative to ROOT
 def write_file(path, contents):
 	f = open(ROOT + path, "w")
 	s = f.write(contents)
 	f.close()
-	return 
-	
-	
-	
+	return
+
+
 from functools import wraps
 from django.http import HttpResponse
 from django.utils import simplejson as json
 
-def rjson(**jsonargs):
+def render_to_json(**jsonargs):
     """
     Renders a JSON response with a given returned instance. Assumes json.dumps() can
     handle the result. The default output uses an indent of 4.

@@ -1,23 +1,26 @@
 
+import datetime
+import fileinput
+
 from django.contrib.gis.geos import Point, GEOSGeometry
 
-from fgx.nav.models import Fix
+from fgx.nav.models import Ndb
 import settings
 
-print "TEMP", settings.TEMP_DIR
+
 
 def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	
-	file_path = zip_dir + "/earth_fix.dat"
+	file_path = zip_dir + "/earth_nav.dat"
 	
 	if verbose > 0:
-		print "> Importing Fix: ", zip_dir
+		print "> Importing NAV: ", zip_dir
 	
 	started = datetime.datetime.now()
 		
 	## Nuke existing entries
 	if empty:
-		if verbose > 0:
+		if sssverbose > 0:
 			print "  > Emptied fix table"
 		Fix.objects.all().delete()
 	

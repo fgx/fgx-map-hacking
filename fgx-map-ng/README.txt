@@ -11,12 +11,37 @@ may not work, be placeholders, etc. but under active devel
 The current map server is working, so the goal of this 
 project is to combine the efforts together
 
+-------------------------------------
+Goal
+-------------------------------------
+- Create a complete project that 
+  is used to create maps,
+- Include all the tools from
+  - Installers - managed compile etc
+  - Web services with django
+  - Map Services with Tilecached
+  - Documentation
+  - playground for fun
+  - Desktop gui for map devel
+
+Simple shell commands 
+eg
+
+./install.py 
+
+
+./xplane-download.py 
+
+./import.py  xplane fix
+
+and other dreams to come true
 
 
 
 ----------------------------------------
-Django
+Platform
 ----------------------------------------
+Django and 
 The fgx/ directory contains teh django app..
 
 cd fgx

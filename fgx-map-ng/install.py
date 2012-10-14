@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 
+"""
+The idea in the install script is to remove the pain of isntalling common stuff..
+
+and instead contain in a managed enviroment, 
+eg a shell script to isntall postigis, can be a django call from within the database
+
+"""
 
 import sys
 import os
 import commands
 from optparse import OptionParser
-
-#import fgx.app_global as G
-#from fgx.installer import check
 
 from fgx.setup import INSTALLERS
 
@@ -17,7 +21,7 @@ from fgx.setup import INSTALLERS
 ## Handle Command Args
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
-usage += "      check - Checks for packages istalled\n"
+usage += "      status - Checks current install status\n"
 usage += "      install [%s] - Install FGx package" % " | ".join(INSTALLERS)
 parser = OptionParser(usage=usage)
 parser.add_option(	"-v", nargs=1,
@@ -27,6 +31,7 @@ parser.add_option(	"-v", nargs=1,
 
 (opts, args) = parser.parse_args()
 
+##########################################################
 ## Check we have a command
 if len(args) == 0:
 	parser.print_usage()
@@ -34,10 +39,16 @@ if len(args) == 0:
 
 ## Check its a valid comamnd
 command = None
-if args[0] in ['check', 'install', 'remove']:
+if args[0] in ['check', 'install', 'remove', 'status']:
 	command = args[0]
 else:
 	parser.print_usage()
+	sys.exit(0)
+	
+if command == "status":
+	from fgx.setup import config
+	
+	print config.print_install_info()
 	sys.exit(0)
 	
 
@@ -52,7 +63,7 @@ if command == "install":
 		print "Error: Installer `%s` not recognised " % args[1]
 		parser.print_help()
 		sys.exit(1)
-installer = args[1]
+	installer = args[1]
 
 ##===========================================
 if command == "check":

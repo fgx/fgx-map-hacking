@@ -59,7 +59,7 @@ class Server():
 		
 		#== Fetch the xplane downloads files index html page
 		print "> Fetching xplane index from %s" % XPLANE_DATA_PAGE 
-		response = urllib2.urlopen( XPLANE_DATA_PAGE )
+		response = urllib2.urlopen(XPLANE_DATA_PAGE)
 		html = response.read()
 		#print ">> Got reply"
 		#print html
@@ -75,11 +75,11 @@ class Server():
 		V10 = "XP1000.zip"
 			
 		##== Get all the links and loop them
-		all_rows =  soup.findAll("tr")
+		all_rows = soup.findAll("tr")
 		#print len(all_rows)
 		
 		## Cut off apache info
-		rows  = all_rows[3:-1]
+		rows = all_rows[3:-1]
 		
 		lst = []
 		for a in rows:
@@ -88,7 +88,7 @@ class Server():
 			tds = a.findAll("td")
 			
 			#= Get the filename ie the text of the <a href="">text</a>
-			file_name =  tds[1].findAll("a")[0].text
+			file_name = tds[1].findAll("a")[0].text
 			
 			if file_name.startswith("AptNav"):
 				if file_name.endswith(V8) or file_name.endswith(V10):
@@ -97,7 +97,7 @@ class Server():
 					#print "'%s'" % file_date_str, datetime.datetime.strftime(datetime.datetime.now(), "%d-%b-%Y %H:%M")
 					file_date = datetime.datetime.strptime(file_date_str, "%d-%b-%Y %H:%M")
 									
-					lst.append( dict(file_name=file_name, dated=file_date) )
+					lst.append(dict(file_name=file_name, dated=file_date))
 
 			else:
 				#print "Ignore: ", file_name
@@ -114,15 +114,25 @@ class Server():
 			#print file_date
 			c += 1
 			#zip_file = "AptNav%sXP861.zip" % datetime.datetime.strftime(file_date, "%Y%m")
-			ob = AptZip()
-			ob.c = c
-			ob.url = '%s%s' % ( XPLANE_DATA_PAGE, f['file_name'])
-			ob.file_name = f['file_name']
-			ob.dated = datetime.datetime.strftime(f['dated'], "%Y-%m-%d") 
-			self.files.append(ob)
+			#ob = AptZip()
+			#ob.c = c
+			#ob.url = '%s%s' % (XPLANE_DATA_PAGE, f['file_name'])
+			#ob.file_name = f['file_name']
+			#ob.dated = datetime.datetime.strftime(f['dated'], "%Y-%m-%d")
+			
+			d = dict(c=c,
+						url='%s%s' % (XPLANE_DATA_PAGE, f['file_name']),
+						file_name=f['file_name'],
+						dated=datetime.datetime.strftime(f['dated'], "%Y-%m-%d  %H:%M:00")
+					)
+			 
+			self.files.append(d)
+			
 			
 		return self.files
 
+	def get_index(self):
+		return self.fetch_index()
 
 	def show_index(self):
 		files = self.fetch_index()
@@ -132,7 +142,7 @@ class Server():
 		s += "Idx " + "Zip File".ljust(25, " ") + "  Dated\n"
 		s += line
 		for l in files:
-			s += "%s) %s %s\n" % (str(l.c).rjust(2," "), l.file_name.ljust(25, " "), l.dated)
+			s += "%s) %s %s\n" % (str(l.c).rjust(2, " "), l.file_name.ljust(25, " "), l.dated)
 			
 		return s
 
@@ -187,7 +197,7 @@ class Server():
 			file_size_dl += len(buffer)
 			f.write(buffer)
 			status = r"%10d  [%3.2f%%]" % (file_size_dl, file_size_dl * 100. / file_size)
-			status = status + chr(8)*(len(status)+1)
+			status = status + chr(8) * (len(status) + 1)
 			print status,
 
 		f.close()
@@ -198,9 +208,9 @@ class Server():
 ## ALSO: Please listen to "funky" by dMob, a mix by peteffs ala mash from yonder year
 ##==========================================================================
 
-def print_remote_list():
+def get_remote_list():
 	serverObj = Server()
-	print serverObj.show_index()
+	return serverObj.get_index()
 
 	
 def do_download():
