@@ -27,8 +27,9 @@ from fgx.mpnet import mp_telnet
 
 def run_bot():
 	while True:
-		mp_telnet.update_cache()
 		
+		mp_telnet.update_cache()
+		#print "update", datetime.datetime.now()
 		#lag, flights = mp_telnet.fetch_telnet("mpserver14.flightgear.org", False)
 		#print lag, len(flights)
 		

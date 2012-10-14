@@ -8,18 +8,34 @@ import telnetlib
 import socket
 import json
 
+from django.core.cache import cache
+
 import settings
 #from fgx.mpnet.models import MpServer
 
 
+
+## Represents a reply 
+class MpReply(object):
+	def __init__(self):	
+		self.error = None
+		self.address = None
+		self.lag = None
+		self.flights = None
+	
+
+
 ##---------------------------------------------
 ## Fetch telnet data from MP Server admin port
+# @todo Need to set a timeout of 5 seconds, but not work atmo
 # @param address fqdn or ip of server
 # @param ping_mode - True return lab, False return flights parsed
 # @retval Mp Object
 def fetch_telnet(address,  ping_mode):
 
-	print "address=", address
+	reply = MpReply()
+	reply.address = address
+	
 	try:
 		start = datetime.datetime.now()
 		
@@ -30,12 +46,13 @@ def fetch_telnet(address,  ping_mode):
 		conn.close()
 		
 		delta = datetime.datetime.now() - start 
-		lag = (delta.seconds * 1000) + (delta.microseconds / 1000)
+		reply.lag = (delta.seconds * 1000) + (delta.microseconds / 1000)
 		#print  "diff=", delta.seconds, delta.microseconds, ms
 
 	except 	socket.error as err:
-		print " telnet err=", address, err
-		return None,  None
+		#print " telnet err=", address, err
+		reply.error = err
+		return reply
 		
 	lines = data.split("\n")
 	
@@ -62,7 +79,7 @@ def fetch_telnet(address,  ping_mode):
 					}
 		
 	else: # Flights Mode
-		flights = []
+		reply.flights = []
 		
 		for line_raw in lines:
 			line = line_raw.strip()
@@ -97,8 +114,8 @@ def fetch_telnet(address,  ping_mode):
 					dic['pitch'] = ob.pitch
 					dic['heading'] = ob.heading
 					"""
-					flights.append(dic)
-		return lag, flights
+					reply.flights.append(dic)
+		return reply
 				
 		
 
@@ -127,9 +144,18 @@ def ping_run():
 	return results
 
 
+## Updates the memcache with flightdata
+# Keys are "flights" and "last_update"
 def update_cache():
 	
-	lag, flights = fetch_telnet("ss" + settings.FGX_MP_SERVER, False)
+	reply = fetch_telnet(settings.FGX_MP_SERVER, False)
+	dt = str(datetime.datetime.now())
+	if not reply.error:
+		cache.set("flights", reply.flights)
+		cache.set("last_update", dt )
+		print "updated cache", dt
+	else:
+		print "Cache update fail", dt
 	
-	print "yes=", len(flights)
+	
 	
