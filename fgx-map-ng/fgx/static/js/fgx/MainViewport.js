@@ -8,6 +8,9 @@ this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
 //============================================================
 this.flightsGrid = new FGx.FlightsGrid();
 
+
+
+
 this.mapLayersTree = new FGx.MapLayersTree();
 
 
@@ -115,6 +118,7 @@ this.viewport = new Ext.Viewport({
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
 			plain: true,
+			border: 0,
 			collapsible: true,
 			activeItem: 0,
 			items: [
@@ -124,7 +128,19 @@ this.viewport = new Ext.Viewport({
         
 		},
 	]
-})
+});
+
+
+
+this.flightsGrid.store.on("add", function(store, recs, idx){
+	console.log(recs);
+	Ext.each(recs, function(rec){
+		//var rec = recs[i];
+		console.log(rec.get("callsign"));
+		// = show_radar (mcallsign, mlat, mlon, mheading, maltitude)
+		//self.show_radar(rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("altitude"));
+	}, this);
+});
 	
 	
 } //< FGx.MainViewport
