@@ -1,10 +1,11 @@
 FGx Map Project
 
-This whole reposirory is a work in progress and compises two parts.
+This whole repository is a work in progress and has two parts.
 
 fgx-map/
  - This is the stuff that is currently running on server as test version
  - http://map.fgx.ch
+ - http://maptest.fgx.ch
 
 
 -fgx-map-ng/
