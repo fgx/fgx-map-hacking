@@ -21,7 +21,8 @@ FGX_STATIC_URL = "http://static.fgx.ch"
 
 FGX_SRID = 3857
 
-FGX_MP_SERVER = "mpserver14.flightgear.org"
+#FGX_MP_SERVER = "mpserver14.flightgear.org"
+FGX_MP_SERVER = "217.150.241.103"
 
 
 ## We Specifically want /end/point/here NOT /end/point/here/
