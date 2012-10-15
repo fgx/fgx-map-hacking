@@ -4,7 +4,7 @@
 
 <!--<html xmlns="http://www.w3.org/1999/xhtml">-->
 <head>
-  <title>FGx Mapnik Mapserver - Navaid Tests - do not use for real navigation</title>
+  <title>index2.htm - FGx Mapnik Mapserver - Navaid Tests - do not use for real navigation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   
   <!-- we provide openlayers locally, stable seems 2.10, but we like the new features of 2.12 -->
@@ -56,6 +56,18 @@
 
 
 <script type="text/javascript">
+function gup( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+
         var map;
 		
 		document.namespaces;
@@ -77,8 +89,7 @@
 					//visibility:false
                 });
         
-        function init() {
-		
+        function init(lon,lat,zoom) {
             
             var options = { 
                 units: 'm',
@@ -286,9 +297,27 @@
 			// to get the center point you can disable displayProjection and get the values in
 			// meters with the mouse position or permalink
 			
-			var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
-			map.setCenter(centerpoint,5);
-			
+            // REPLACE this hard coded code...
+            // var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
+            // map.setCenter(centerpoint,5);
+
+            // NOTES:
+            // EPSG:4326 is natural WGS84 lat/lon - projection coordinate are spherical mercator, EPSG:900913
+            // var lonlat = new OpenLayers.LonLat(40.4,-86.86).transform(
+            //                  new OpenLayers.Projection("EPSG:4326"), //transform from WGS 1984
+            //                  map.getProjectionObject() );            // to Sperical Mercator Projection
+
+            if (zoom.length == 0) {
+                zoom = 5;   // set default ZOOM
+            }
+
+            var centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882); // get a default center
+            if (lon.length && lat.length) {     // if URL contains lon,lat points
+                centerpoint = new OpenLayers.LonLat(lon,lat).transform(
+                                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                                map.getProjectionObject() );            // to Sperical Mercator Projection
+            }
+            map.setCenter(centerpoint,zoom);
 			
             }
     </script>
@@ -311,7 +340,12 @@
 		</p>
 	</div>
    <script type="text/javascript" defer="defer">
-         init();
+         var lat = gup('lat');
+         var lon = gup('lon');
+         var zoom = gup('zoom');
+         // var obj = document.getElementById('fgxlogo')
+         // obj.innerHTML = '<img src="images/fgx-cap-40x30.png" alt="FGx Logo">&nbsp;&nbsp;lat '+lat+' lon '+lon+' zoom '+zoom+' ';
+         init(lon,lat,zoom);
     </script>
   </body>
 </html>
