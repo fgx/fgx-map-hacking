@@ -153,9 +153,10 @@ def update_cache():
 	if not reply.error:
 		cache.set("flights", reply.flights)
 		cache.set("last_update", dt )
-		print "updated cache", dt
+		#print "updated cache", dt
 	else:
-		print "Cache update fail", dt
+		#print "Cache update fail", dt
+		pass
 	
 	
 	
