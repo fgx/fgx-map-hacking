@@ -6,13 +6,13 @@
 import yaml
 import json
 
-from fgx import utils as ut
+from fgx import helpers as h
 
 
 ## Return the layers.yaml in text format
 # @return string with yaml contents
 def layers_raw():
-	s = ut.read_file("/config/layers.yaml")
+	s = h.read_file("/config/layers.yaml")
 	return s
 
 ## Return a list of layers from the config
@@ -34,7 +34,7 @@ def layers_list():
 
 
 def resolutions_raw():
-	s = ut.read_file("/config/resolutions.yaml")
+	s = h.read_file("/config/resolutions.yaml")
 	return s
 	
 def resolutions():

@@ -6,7 +6,7 @@ from string import Template
 
 
 from fgx.xmap import layers
-from fgx import utils as ut
+from fgx import helpers as h
 from fgx import settings
     
 ## Write out the layers.js file
@@ -48,7 +48,7 @@ def write_js(ln=True):
 	
 		
 	out_path = "/etc/config.js"	
-	ut.write_file(out_path, js_str)
+	h.write_file(out_path, js_str)
 		
 	if ln:
 		ln_path = settings.ROOT + "/www_static/js/config.js"

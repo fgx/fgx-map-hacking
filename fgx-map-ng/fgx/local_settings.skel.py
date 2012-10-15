@@ -6,22 +6,18 @@ TEMPLATE_DEBUG = DEBUG
 ## Temp Directory
 #TEMP_DIR = ROOT + "/_temp"
 
+## DB at https://pg.fgx.ch:10995/
+
+# python-yaml python-git python-memcache
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'aptdat3',                      
-        'USER': 'mash',                    
-        'PASSWORD': 'mash',                 
+        'NAME': 'fgx-map-ng',                      
+        'USER': 'fgxmap2',                    
+        'PASSWORD': 'secret',                 
         'HOST': 'localhost',                    
         'PORT': '',             
     }
 }
 
-## ??? said pete
-#GEOS_LIBRARY_PATH = '/usr/local/lib/libgeos.so'
-#G#EOS_LIBRARY_PATH = '/usr/lib/libgeos_c.so.1' 
-#GEOS_LIBRARY_PATH = '/usr/local/lib/libgeos_c.so'
-
-
-#GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
