@@ -1,8 +1,8 @@
-FGx Map Project
+FGx Map ToolKit
 
 
 --------------------------------
-PreAmble
+PreAmble + dream on...
 --------------------------------
 
 This project is under active devel, so some things
@@ -10,6 +10,15 @@ may not work, be placeholders, etc. but under active devel
 
 The current map server is working, so the goal of this 
 project is to combine the efforts together
+
+Roles
+ - Its a toolkit, so the idea is u chackit out, and use different parts,
+ - eg marble map and desktop required for  local playground
+ - a server is aa import or configuration
+
+
+
+
 
 -------------------------------------
 Goal
@@ -24,23 +33,25 @@ Goal
   - playground for fun
   - Desktop gui for map devel
 
-Simple shell commands 
-eg
-
-./install.py 
-
-
-./xplane-download.py 
-
-./import.py  xplane fix
-
-and other dreams to come true
-
+Simple shell commands to do focused tasks
+ eg
+## 
+install check
 
 
 ----------------------------------------
 Platform
 ----------------------------------------
+The platfrom was decided as they 
+are active in spacial space
+- PostGIS2 ie Postgres with spaciale xtentions
+- Ddhango and GeoDjanjo dor playground
+- GeoExt - a client side toolkit built on
+  - OpenLayers
+  - Ext-3.4 - the gpl.dodgy licences Ext lib which works.
+
+
+
 Django and 
 The fgx/ directory contains teh django app..
 

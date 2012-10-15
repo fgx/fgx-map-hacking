@@ -3,6 +3,8 @@ Ext.namespace("FGx");
 
 FGx.FlightsGrid = function(){
 
+var self = this;	
+	
 //== Flights Store
 this.store = new Ext.data.JsonStore({
 	idProperty: 'callsign',
@@ -17,7 +19,7 @@ this.store = new Ext.data.JsonStore({
 				{name: "alt_trend", type: 'string'},
 				{name: "heading", type: 'string'}
 	],
-	url: '/ajax/flights',
+	url: '/ajax/mp/flights',
 	root: 'flights',
 	remoteSort: false,
 	sortInfo: {
@@ -26,7 +28,9 @@ this.store = new Ext.data.JsonStore({
 	}
 });
 
-
+this.load_flights = function(){
+	self.store.load();
+}
 
 //== Grid
 this.grid = new Ext.grid.GridPanel({
@@ -36,7 +40,7 @@ this.grid = new Ext.grid.GridPanel({
 	autoWidth: true,
 	enableHdMenu: false,
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
-	store: this.flightsStore,
+	store: this.store,
 	loadMask: false,
 	columns: [  //this.selModel,	
 		{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: true},
@@ -82,7 +86,9 @@ this.grid = new Ext.grid.GridPanel({
 	listeners: {},
 	
 	bbar: [	//this.pilotsDataCountLabel
-		{text: 'Refresh', handler: this.load }
+		{xtype: "checkbox", text: "Auto Refresh"},
+		{xtype: "button", text: 'Refresh', handler: this.load_flights,  iconCls: "icoRefresh"}
+		
 	]
 });
 this.grid.on("rowdblclick", function(grid, idx, e){
@@ -105,5 +111,7 @@ this.grid.on("rowdblclick", function(grid, idx, e){
 	//self.Map.panTo(latlng);
 });  
 	
-	
+
+
+
 } //< FGx.FlightsGrid

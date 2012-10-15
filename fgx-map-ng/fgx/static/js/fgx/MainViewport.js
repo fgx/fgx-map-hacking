@@ -4,14 +4,12 @@ Ext.namespace("FGx");
 FGx.MainViewport = function(){
 
 this.flightsGrid = new FGx.FlightsGrid();
-console.log("GRID+", this.flightsGrid);
 	
 this.viewport = new Ext.Viewport({
 	layout: "border",
+	plain: true,
 	items: [
-		{region: "north", title: "FGx Map - Next Gen",
-			html: 'The first tab\'s content. Others may be added dynamically'
-		},
+
 		{ region: 'center',
 			xtype: 'tabpanel', // TabPanel itself has no title
 			items: {
@@ -20,7 +18,7 @@ this.viewport = new Ext.Viewport({
 			}
         
 		},
-		{region: 'east', width: 300,
+		{region: 'east', width: 300, title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
 			activeItem: 0,
 			items: [

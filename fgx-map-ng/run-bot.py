@@ -12,7 +12,18 @@ import commands
 from optparse import OptionParser
 
 
-#import fgx_shell_config as conf
+
+## Handle Command Args
+usage = "usage: %prog [-h -j -n -s -v] "
+parser = OptionParser(usage=usage)
+parser.add_option(	"-i", nargs=1, 
+					action="store", type="int",  dest="interval", default=1, 
+					help="Write javascript configuration to `/etc/config.js`"
+					)   
+
+(opts, args) = parser.parse_args()
+
+
 
 from fgx import shell_config
 
@@ -33,7 +44,7 @@ def run_bot():
 		#lag, flights = mp_telnet.fetch_telnet("mpserver14.flightgear.org", False)
 		#print lag, len(flights)
 		
-		time.sleep(1)
+		time.sleep(opts.interval)
 		
 
 		
