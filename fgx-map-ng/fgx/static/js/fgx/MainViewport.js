@@ -72,7 +72,7 @@ this.mapPanel = new GeoExt.MapPanel({
 
 		new OpenLayers.Layer.WMS( "Natural Earth", 
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
-			layers: 'fgx_ne_landmass', 
+			layers: 'natural_earth_landmass', 
 			format: 'image/png', 
 			isBaselayer: true 
 			}, {
@@ -87,9 +87,9 @@ this.mapPanel = new GeoExt.MapPanel({
 		new OpenLayers.Layer.WMS("VFR",
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
 				layers: [
-					"fgx_850_vor",
-					"fgx_850_dme",
-					"fgx_850_ndb"
+					"VOR",
+					"DME",
+					"NDB"
 				],
 				transparent: true,
 				format: "image/png"
@@ -105,9 +105,9 @@ this.mapPanel = new GeoExt.MapPanel({
 		new OpenLayers.Layer.WMS("IFR",
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
 				layers: [
-					"fgx_850_ils",
-					"fgx_850_ils_info",
-					"fgx_850_ils_marker"
+					"ILS",
+					"ILS_Info",
+					"ILS_Marker"
 					],
 					transparent: true,
 					format: "image/png"

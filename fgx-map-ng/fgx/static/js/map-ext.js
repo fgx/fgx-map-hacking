@@ -49,7 +49,7 @@ Ext.onReady(function() {
 
 			new OpenLayers.Layer.WMS( "Natural Earth", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
-				layers: 'fgx_ne_landmass', 
+				layers: 'natural_earth_landmass', 
 				format: 'image/png', 
 				isBaselayer: true 
 				}, {
