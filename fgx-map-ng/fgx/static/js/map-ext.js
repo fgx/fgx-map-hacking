@@ -64,9 +64,9 @@ Ext.onReady(function() {
             new OpenLayers.Layer.WMS("VFR",
                 "http://map.fgx.ch:81/mapnik/fgxcache.py?", {
                     layers: [
-                        "fgx_850_vor",
-                        "fgx_850_dme",
-                        "fgx_850_ndb"
+                        "VOR",
+                        "DME",
+                        "NDB"
                     ],
                     transparent: true,
                     format: "image/png"
@@ -82,9 +82,9 @@ Ext.onReady(function() {
 			new OpenLayers.Layer.WMS("IFR",
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
 					layers: [
-						"fgx_850_ils",
-						"fgx_850_ils_info",
-						"fgx_850_ils_marker"
+						"ILS",
+						"ILS_Info",
+						"ILS_Marker"
 						],
 						transparent: true,
 						format: "image/png"
