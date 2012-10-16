@@ -26,7 +26,11 @@ def write_file(path, contents):
 	f.close()
 	return
 
-
+## Reads file from project relative to ROOT and return yaml data, or None	
+def read_yaml(path):
+	s = read_file(path)
+	return yaml.load(s)
+	
 ######################################################################
 ## Convenience context object for templating
 class Context(object):

@@ -18,11 +18,17 @@ this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
 this.on_nav_toggled = function(butt, checked){
+	// @todo:
 	console.log(butt, checked, butt.navaid);
 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
 	
 }
-
+this.on_apt_toggled = function(butt, checked){
+	// @todo:
+	console.log(butt, checked, butt.apt);
+	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+	
+}
 
 //============================================================
 this.mapPanel = new GeoExt.MapPanel({
@@ -130,12 +136,12 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Airports',
             columns: 6,
             items: [
-				{text: "Major", enableToggle: true, iconCls: "icoOn", navaid: "major", toggleHandler: this.on_apt_toggled},
-				{text: "Minor", enableToggle: true, iconCls: "icoOff", navaid: "minor", toggleHandler: this.on_apt_toggled},
-				{text: "Small", enableToggle: true, iconCls: "icoOff", navaid: "small", toggleHandler: this.on_apt_toggled},
-				{text: "Military", enableToggle: true, iconCls: "icoOff", navaid: "military", toggleHandler: this.on_apt_toggled},
-				{text: "Seaports", enableToggle: true, iconCls: "icoOff", navaid: "seaports", toggleHandler: this.on_apt_toggled},
-				{text: "Heliports", enableToggle: true, iconCls: "icoOff", navaid: "heliports", toggleHandler: this.on_apt_toggled},
+				{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
+				{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+				{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+				{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled},
+				{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+				{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
             ]   
 		},		
 		"->",
@@ -152,7 +158,7 @@ this.mapPanel = new GeoExt.MapPanel({
 	]
 }); //< mapPanel
 this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {      
-    
+    // @todo: make this proper lat/lon
 	self.lblLat.setValue( e.x );
 	self.lblLon.setValue( e.y );
     //OpenLayers.Util.getElement("tooltip").innerHTML = position 

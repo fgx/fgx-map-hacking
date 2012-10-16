@@ -1,0 +1,28 @@
+apt-get:
+    info: "Please list here the apt-get packages"
+    packages:
+        postgres:
+            version: 9.1
+            comment: "need 9.1"
+        python-memcache:
+            version: 
+        python-yaml:
+            
+
+pip-install:
+    info: "These are easy_install or pip install. The import: is used in script to test lib exists eg try import bs4"
+    packages:
+        BeautifulSoup4:
+            import: bs4
+        SimpleJson:
+            import: simplejson
+
+
+
+git-python:
+    info: "These are git pull, followed by a ./setup.py install distutils setup"
+    packages:
+    django:
+        version: 1.5+dev
+        git: http:?
+

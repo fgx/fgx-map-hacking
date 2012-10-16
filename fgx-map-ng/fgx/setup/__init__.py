@@ -1,3 +1,3 @@
 
-## List of Install Packages
-INSTALLERS = ['mapnik', 'postgis','python','all']
+## List of Install "zones"
+INSTALLERS = ['mapnik', 'postgis', 'python', 'all']

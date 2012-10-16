@@ -135,4 +135,8 @@ def print_install_info():
 	
 	print "==============================="
 	
+	dic = h.read_yaml("/config/install.yaml")
+	print dic
+	
+	
 	

@@ -4,7 +4,7 @@
 The idea in the install script is to remove the pain of isntalling common stuff..
 
 and instead contain in a managed enviroment, 
-eg a shell script to isntall postigis, can be a django call from within the database
+eg a shell script to install postigis, can be a django call from within the database
 
 """
 
