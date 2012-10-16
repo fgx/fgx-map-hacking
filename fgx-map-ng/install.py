@@ -15,7 +15,7 @@ from optparse import OptionParser
 
 from fgx.setup import INSTALLERS
 
-## memcached python-memcached (use djanjo from github)
+## memcached BeautifulSoup4 python-yaml python-memcached (use djanjo from github)
 # #manick if from head, 
 # postgis is from tarballs
 

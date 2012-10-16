@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 import operator
 
 
-#from fgx.shell_config import TEMP_DIR
+from fgx import settings
 
 ## URL of the data page
 XPLANE_DATA_PAGE = 'http://data.x-plane.com/update/data/'
@@ -149,15 +149,15 @@ class Server():
 	##============================================================
 	def fetch_zip(self, idx=None):
 		
-		fileObj = self.fetch_index()[idx - 1]
+		fileDic = self.fetch_index()[idx - 1]
 		
 		#print "NFO=", fileObj
 		
-		download_dir = TEMP_DIR + "/downloads/"
+		download_dir = settings.TEMP_DIR + "/downloads/"
 		if not os.path.exists(download_dir):
 			os.mkdir(download_dir)
 		
-		save_target = download_dir + fileObj.file_name
+		save_target = download_dir + fileDic['file_name']
 		print "save_target=%s" % save_target
 		## check target exists
 		if os.path.exists(save_target):
@@ -169,6 +169,17 @@ class Server():
 				if zf.testzip() == None:
 					print "   Yes valid zip"
 					print ">> Skipping"
+					
+					## check unzipped dir
+					unzipped_dir =  settings.TEMP_DIR + "/unzipped/"
+					if not os.path.exists(unzipped_dir):
+						os.mkdir(unzipped_dir)
+						
+					xplane_dir =  unzipped_dir + "/xplane/"  
+					if not os.path.exists(xplane_dir):
+						os.mkdir(xplane_dir)		
+					
+					zf.extractall(xplane_dir)
 					return
 					
 			except:
@@ -179,13 +190,13 @@ class Server():
 		#print ">> Downloading"
 		#return
 		
-		u = urllib2.urlopen(fileObj.url)
+		u = urllib2.urlopen(fileDic['url'])
 		
 		#print save_target
 		f = open(save_target, 'wb')
 		meta = u.info()
 		file_size = int(meta.getheaders("Content-Length")[0])
-		print ">> Downloading: %s Bytes: %s" % (fileObj.file_name, file_size)
+		print ">> Downloading: %s Bytes: %s" % (fileDic['file_name'], file_size)
 
 		file_size_dl = 0
 		block_sz = 8192
