@@ -14,10 +14,10 @@ def sanity_check():
 	print "> Shell Sanity Check: "
 	
 	print "  > Check Temp Dir: ",
-	if os.path.exists(settings.TEMP_DIR):
-		print "TEMP DIR NTO EXIST"
+	if not os.path.exists(settings.TEMP_DIR):
+		print "TEMP DIR NOT EXIST: %s" % settings.TEMP_DIR
 		print "Fail"
-		Throw_trntrum
+		return False
 	else:
 		print "Ok = " + settings.TEMP_DIR
 	

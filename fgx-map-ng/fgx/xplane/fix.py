@@ -8,7 +8,7 @@ from django.contrib.gis.geos import Point, GEOSGeometry
 from fgx.nav.models import Fix
 import settings
 
-print "TEMP", settings.TEMP_DIR
+#print "TEMP", settings.TEMP_DIR
 
 def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	

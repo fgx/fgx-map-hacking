@@ -13,8 +13,9 @@ import os
 from optparse import OptionParser
 
 from fgx import shell_config
+from fgx import settings
 
-Z = "/home/fgxl/fgx-map/_temp/downloads/AptNav201204XP1000"
+Z = settings.TEMP_DIR + "/unzipped/xplane/"
 
 x_files = ['fix', 'nav', 'apt', "all"]
 
