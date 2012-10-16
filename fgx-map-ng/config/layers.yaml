@@ -7,11 +7,20 @@ natural_earth_landmass:
         isBaselayer: true 
     visibility: false
     
-airfield: 
+Airfield: 
     title: "Airfield"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: airfield
+        layers: Airfield
+        format: image/png
+        transparent: true
+    visibility: false
+	
+Runway: 
+    title: "Runway"
+    url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
+    vars:
+        layers: Runway
         format: image/png
         transparent: true
     visibility: false
@@ -46,7 +55,7 @@ NDB:
     visibility: false
     
 ILS:
-    title: "ILS LOC"
+    title: "ILS"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
         layers: ILS 
@@ -54,8 +63,8 @@ ILS:
         transparent: true
     visibility: false
     
-ILS_info: 
-    title: "ILS INFO"
+ILS_Info: 
+    title: "ILS Info"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
         layers: ILS_Info 
@@ -64,8 +73,8 @@ ILS_info:
     visibility: false
 
     
-ILS_marker:
-    title: "ILS OM/MM"
+ILS_Marker:
+    title: "ILS Marker"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
         layers:: ILS_Marker 
