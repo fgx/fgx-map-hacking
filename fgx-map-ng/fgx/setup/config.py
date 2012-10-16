@@ -73,14 +73,14 @@ def write_nginx(ln=False):
 	s = "server: "
 	
 	out_path = "/etc/nginx.conf"	
-	G.write_file(out_path, s)
+	h.write_file(out_path, s)
 	
 	
 ## Writes out \b local_config.yaml	
 def write_local_config(dic):
 	
 	s = yaml.dump(dic)
-	G.write_file("/local_config.yaml", s)
+	h.write_file("/local_config.yaml", s)
 	
 	
 ## Writed out the \b /etc/tilecache.cfg file
@@ -111,7 +111,7 @@ def write_tilecache_cgf():
 
 	print s	
 	out_path = "/etc/tilecache.cfg"	
-	G.write_file(out_path, s)
+	h.write_file(out_path, s)
 	
 	
 """	
