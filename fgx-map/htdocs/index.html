@@ -128,7 +128,7 @@ function gup( name )
 
 			
 			
-			var fgx_ne_landmass = new OpenLayers.Layer.WMS( "Natural Earth", 
+			var natural_earth_landmass = new OpenLayers.Layer.WMS( "Natural Earth", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{
 					layers: 'natural_earth_landmass', 
@@ -137,7 +137,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_rwy = new OpenLayers.Layer.WMS( "Runways", 
+			var Runway = new OpenLayers.Layer.WMS( "Runways", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'Runway', 
 					format: 'image/png',
@@ -149,7 +149,7 @@ function gup( name )
 				);
 				
 				
-			var fgx_850_apt = new OpenLayers.Layer.WMS( "Airfield", 
+			var Airfield = new OpenLayers.Layer.WMS( "Airfield", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'Airfield', 
 					format: 'image/png',
@@ -160,7 +160,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_vor = new OpenLayers.Layer.WMS( "VOR", 
+			var VOR = new OpenLayers.Layer.WMS( "VOR", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'VOR', 
 					format: 'image/png',
@@ -171,7 +171,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_dme = new OpenLayers.Layer.WMS( "DME", 
+			var DME = new OpenLayers.Layer.WMS( "DME", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 					{layers: 'DME', 
 					format: 'image/png',
@@ -182,7 +182,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_ndb = new OpenLayers.Layer.WMS( "NDB", 
+			var NDB = new OpenLayers.Layer.WMS( "NDB", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'NDB', 
 					format: 'image/png',
@@ -193,7 +193,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_ils = new OpenLayers.Layer.WMS( "ILS LOC", 
+			var ILS = new OpenLayers.Layer.WMS( "ILS LOC", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'ILS', 
 					format: 'image/png',
@@ -204,7 +204,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_ils_info = new OpenLayers.Layer.WMS( "ILS INFO", 
+			var ILS_Info = new OpenLayers.Layer.WMS( "ILS INFO", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'ILS_Info', 
 					format: 'image/png',
@@ -215,9 +215,9 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_ils_marker = new OpenLayers.Layer.WMS( "ILS OM/MM", 
+			var ILS_Marker = new OpenLayers.Layer.WMS( "ILS OM/MM", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
-					{layers: 'ILS_marker', 
+					{layers: 'ILS_Marker', 
 					format: 'image/png',
 					transparent:'TRUE'
 					},
@@ -226,7 +226,7 @@ function gup( name )
 					}
 				);
 				
-			var fgx_850_fix = new OpenLayers.Layer.WMS( "FIX", 
+			var FIX = new OpenLayers.Layer.WMS( "FIX", 
 				"http://map.fgx.ch:81/mapnik/fgxcache.py?", 
 					{layers: 'FIX', 
 					format: 'image/png',
@@ -247,16 +247,16 @@ function gup( name )
 			map.addLayers([
 				mapnik_light,
 				mapnik,
-				fgx_ne_landmass,
-				fgx_850_rwy,
-				fgx_850_apt,
-				fgx_850_vor,
-				fgx_850_dme,
-				fgx_850_ndb,
-				fgx_850_ils,
-				fgx_850_ils_info,
-				fgx_850_ils_marker,
-				fgx_850_fix
+				natural_earth_landmass,
+				Runway,
+				Airfield,
+				VOR,
+				DME,
+				NDB,
+				ILS,
+				ILS_Info,
+				ILS_Marker,
+				FIX
 				
 				]);
 				
