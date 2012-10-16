@@ -1,4 +1,4 @@
-fgx_ne_landmass:
+natural_earth_landmass:
     title: "NE Landmass"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
@@ -7,7 +7,7 @@ fgx_ne_landmass:
         isBaselayer: true 
     visibility: false
     
-fgx_850_apt: 
+airfield: 
     title: "Airfield"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -16,7 +16,7 @@ fgx_850_apt:
         transparent: true
     visibility: false
     
-fgx_850_vor: 
+VOR: 
     title: "VOR"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -25,7 +25,7 @@ fgx_850_vor:
         transparent: true
     visibility: false
 
-fgx_850_dme: 
+DME: 
     title: "DME"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
@@ -35,7 +35,7 @@ fgx_850_dme:
     visibility: false
 
     
-fgx_850_ndb: 
+NDB: 
     title: "NDB"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
@@ -45,7 +45,7 @@ fgx_850_ndb:
         
     visibility: false
     
-fgx_850_ils:
+ILS:
     title: "ILS LOC"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -54,7 +54,7 @@ fgx_850_ils:
         transparent: true
     visibility: false
     
-fgx_850_ils_info: 
+ILS_info: 
     title: "ILS INFO"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -64,7 +64,7 @@ fgx_850_ils_info:
     visibility: false
 
     
-fgx_850_ils_marker:
+ILS_marker:
     title: "ILS OM/MM"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -73,7 +73,7 @@ fgx_850_ils_marker:
         transparent: true
     visibility: false
     
-fgx_850_fix: 
+FIX: 
     title: "FIX"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
