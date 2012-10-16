@@ -37,6 +37,7 @@ from fgx.mpnet import mp_telnet
 ##==============================================
 
 def run_bot():
+	print "Start Bot with %s seconds interval" % opts.interval
 	while True:
 		
 		mp_telnet.update_cache()

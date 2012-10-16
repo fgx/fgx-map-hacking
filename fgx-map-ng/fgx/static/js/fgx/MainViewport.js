@@ -3,6 +3,8 @@ Ext.namespace("FGx");
 
 FGx.MainViewport = function(){
 
+var self = this;	
+	
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 //============================================================
@@ -10,13 +12,23 @@ this.flightsGrid = new FGx.FlightsGrid();
 
 
 
-
 this.mapLayersTree = new FGx.MapLayersTree();
+
+this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
+this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
+
+this.on_nav_toggled = function(butt, checked){
+	console.log(butt, checked, butt.navaid);
+	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+	
+}
 
 
 //============================================================
 this.mapPanel = new GeoExt.MapPanel({
-	border: true,
+	border: 0,
+	frame: false,
+	plain: true,
     region: "center",
         // we do not want all overlays, to try the OverlayLayerContainer
     map: new OpenLayers.Map({
@@ -102,14 +114,57 @@ this.mapPanel = new GeoExt.MapPanel({
 			}
 		)
 				
+	],
+	tbar: [
+		{xtype: 'buttongroup',
+            title: 'Show Nav Aids',
+            columns: 4,
+            items: [
+				{text: "VOR-DME", enableToggle: true, pressed: true, iconCls: "icoOn", navaid: "vor", toggleHandler: this.on_nav_toggled},
+				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "ndb", toggleHandler: this.on_nav_toggled},
+				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "fix", toggleHandler: this.on_nav_toggled},
+				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "ndb", toggleHandler: this.on_nav_toggled}
+            ]   
+		},
+		{xtype: 'buttongroup',
+            title: 'Airports',
+            columns: 6,
+            items: [
+				{text: "Major", enableToggle: true, iconCls: "icoOn", navaid: "major", toggleHandler: this.on_apt_toggled},
+				{text: "Minor", enableToggle: true, iconCls: "icoOff", navaid: "minor", toggleHandler: this.on_apt_toggled},
+				{text: "Small", enableToggle: true, iconCls: "icoOff", navaid: "small", toggleHandler: this.on_apt_toggled},
+				{text: "Military", enableToggle: true, iconCls: "icoOff", navaid: "military", toggleHandler: this.on_apt_toggled},
+				{text: "Seaports", enableToggle: true, iconCls: "icoOff", navaid: "seaports", toggleHandler: this.on_apt_toggled},
+				{text: "Heliports", enableToggle: true, iconCls: "icoOff", navaid: "heliports", toggleHandler: this.on_apt_toggled},
+            ]   
+		},		
+		"->",
+		{xtype: 'buttongroup',
+            title: 'Lat / Lon',
+            columns: 2,
+            ddddefaults: {
+                scale: 'small'
+            },
+            items: [
+				this.lblLat, this.lblLon
+            ]   
+		}
 	]
 }); //< mapPanel
+this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {      
+    
+	self.lblLat.setValue( e.x );
+	self.lblLon.setValue( e.y );
+    //OpenLayers.Util.getElement("tooltip").innerHTML = position 
+});
+
 
 //============================================================
 // Viewport auto rendered to body
 //============================================================
 this.viewport = new Ext.Viewport({
 	layout: "border",
+	frame: false,
 	plain: true,
 	items: [
 
@@ -117,6 +172,7 @@ this.viewport = new Ext.Viewport({
 		{region: 'east', width: 300, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
+			frame: false,
 			plain: true,
 			border: 0,
 			collapsible: true,
@@ -133,10 +189,10 @@ this.viewport = new Ext.Viewport({
 
 
 this.flightsGrid.store.on("add", function(store, recs, idx){
-	console.log(recs);
+	//console.log(recs);
 	Ext.each(recs, function(rec){
 		//var rec = recs[i];
-		console.log(rec.get("callsign"));
+		//console.log(rec.get("callsign"));
 		// = show_radar (mcallsign, mlat, mlon, mheading, maltitude)
 		//self.show_radar(rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("altitude"));
 	}, this);
