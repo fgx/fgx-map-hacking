@@ -28,7 +28,7 @@ apt = Document()
 
 pointscollected = ""
 
-conn = psycopg2.connect("dbname=xplanedata1000 user=user password=password")
+conn = psycopg2.connect("dbname=xplanedata1000 user=mistermap password=mister2012map")
 cur = conn.cursor()
 #cur.execute("DROP TABLE IF EXISTS runways;")
 #cur.execute("CREATE TABLE runways (ogc_fid serial PRIMARY KEY, \
