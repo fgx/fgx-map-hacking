@@ -51,7 +51,7 @@
 	</Rule>
   </Style>
   
-  <Layer name="fgx_850_rwy" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="Runway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>RWY</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -82,7 +82,7 @@
   </Style>
 
   
-  <Layer name="fgx_850_apt" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="Airfield" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>APT</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -109,7 +109,7 @@
 	</Rule>
   </Style>
   
-  <Layer name="fgx_850_vor" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="VOR" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>VOR</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -135,7 +135,7 @@
 	</Rule>
   </Style>
   
-  <Layer name="fgx_850_dme" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="DME" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>DME</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -161,7 +161,7 @@
 	</Rule>
   </Style>
   
-  <Layer name="fgx_850_ndb" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="NDB" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>NDB</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -183,7 +183,7 @@
 	</Rule>
   </Style>
   
-  <Layer name="fgx_850_ils" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="ILS" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>ILS</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -208,7 +208,7 @@
 	 </Rule>
   </Style>
   
-  <Layer name="fgx_850_ils_info" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="ILS_Info" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>ILS_INFO</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -231,7 +231,7 @@
 	 </Rule>
   </Style>
   
-  <Layer name="fgx_850_ils_marker" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="ILS_Marker" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>ILS_MARKER</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -254,7 +254,7 @@
 	 </Rule>
   </Style>
   
-  <Layer name="fgx_850_fix" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+  <Layer name="FIX" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>FIX</StyleName>
 	<Datasource>
       <Parameter name="type">postgis</Parameter>
