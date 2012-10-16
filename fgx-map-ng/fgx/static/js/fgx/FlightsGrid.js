@@ -35,7 +35,7 @@ this.load_flights = function(){
 //== Grid
 this.grid = new Ext.grid.GridPanel({
 	title: 'Flights Data',
-	iconCls: 'iconPilots',
+	iconCls: 'icoFlights',
 	autoScroll: true,
 	autoWidth: true,
 	enableHdMenu: false,
