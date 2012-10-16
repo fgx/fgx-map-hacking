@@ -2,7 +2,7 @@ natural_earth_landmass:
     title: "NE Landmass"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
-        layers: fgx_ne_landmass
+        layers: natural_earth_landmass
         format: image/png
         isBaselayer: true 
     visibility: false
@@ -11,7 +11,7 @@ airfield:
     title: "Airfield"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: fgx_850_apt
+        layers: airfield
         format: image/png
         transparent: true
     visibility: false
@@ -20,7 +20,7 @@ VOR:
     title: "VOR"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: fgx_850_vor
+        layers: VOR
         format: image/png
         transparent: true
     visibility: false
@@ -29,7 +29,7 @@ DME:
     title: "DME"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
-        layers: fgx_850_dme 
+        layers: DME 
         format: image/png
         transparent: true
     visibility: false
@@ -39,7 +39,7 @@ NDB:
     title: "NDB"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
-        layers: fgx_850_ndb 
+        layers: NDB 
         format: image/png
         transparent: true
         
@@ -49,7 +49,7 @@ ILS:
     title: "ILS LOC"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: fgx_850_ils 
+        layers: ILS 
         format: image/png
         transparent: true
     visibility: false
@@ -58,7 +58,7 @@ ILS_info:
     title: "ILS INFO"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: fgx_850_ils_info 
+        layers: ILS_Info 
         format: image/png
         transparent: true
     visibility: false
@@ -68,7 +68,7 @@ ILS_marker:
     title: "ILS OM/MM"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers:: fgx_850_ils_marker 
+        layers:: ILS_Marker 
         format: image/png
         transparent: true
     visibility: false
@@ -77,7 +77,7 @@ FIX:
     title: "FIX"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers: fgx_850_fix 
+        layers: FIX 
         format: image/png
         transparent: true
     visibility: false
