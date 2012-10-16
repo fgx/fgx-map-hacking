@@ -142,7 +142,7 @@ class Server():
 		s += "Idx " + "Zip File".ljust(25, " ") + "  Dated\n"
 		s += line
 		for l in files:
-			s += "%s) %s %s\n" % (str(l.c).rjust(2, " "), l.file_name.ljust(25, " "), l.dated)
+			s += "%s) %s %s\n" % (str(l['c']).rjust(2, " "), l['file_name'].ljust(25, " "), l['dated'])
 			
 		return s
 
@@ -213,7 +213,7 @@ def get_remote_list():
 	return serverObj.get_index()
 
 	
-def do_download():
+def show_downloads():
 	serverObj = Server()
 	print serverObj.show_index()
 

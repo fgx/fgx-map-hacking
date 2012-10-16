@@ -56,7 +56,7 @@ command = args[0]
 	
 ##== List Remote Files
 if command == "avail":
-	server.do_download()
+	server.show_downloads()
 	
 
 ##== Download a file
