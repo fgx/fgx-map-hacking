@@ -23,7 +23,7 @@ from fgx.setup import INSTALLERS
 ## Handle Command Args
 usage = "usage: %prog [options] COMMAND\n"
 usage += " commands:\n"
-usage += "      status - Checks current install status\n"
+usage += "      chacks - Checks current install status\n"
 usage += "      install [%s] - Install FGx package" % " | ".join(INSTALLERS)
 parser = OptionParser(usage=usage)
 parser.add_option(	"-v", nargs=1,
@@ -47,7 +47,7 @@ else:
 	parser.print_usage()
 	sys.exit(0)
 	
-if command == "status":
+if command == "check":
 	from fgx.setup import config
 	
 	print config.print_install_info()

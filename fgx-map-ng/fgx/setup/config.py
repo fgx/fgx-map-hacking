@@ -113,30 +113,28 @@ def write_tilecache_cgf():
 	out_path = "/etc/tilecache.cfg"	
 	h.write_file(out_path, s)
 	
-	
-"""	
-	[fgx_850_ils_marker]
-type=WMS
-url=http://map.fgx.ch:81/mapnik/fgxwms.py?&TRANSPARENT=TRUE&
-extension=png
-bbox=-20037508.34,-20037508.34,20037508.34,20037508.34
-srs=EPSG:3857
-levels=20
-metaTile=true
-metaSize=2,2
-metaBuffer=128
-extent_type=loose
-resolutions=156543.03390624999883584678,78271.51695312499941792339,39135.75847656249970896170,19567.87923828124985448085,9783.93961914062492724042,4891.96980957031246362021,2445.98490478515623181011,1222.99245239257811590505,611.49622619628905795253,305.74811309814452897626,152.87405654907226448813,76.43702827453613224407,38.21851413726806612203,19.10925706863403306102,9.55462853431701653051,4.77731426715850826525,2.38865713357925413263,1.19432856678962706631,0.59716428339481353316,0.29858214169740676658
-"""	
 
 def print_install_info():
 	print "==============================="
 	print "ROOT = %s" % settings.ROOT
 	
-	print "==============================="
+	print "Install Checklist: >>"
+	
+	## @TODO: check this lot is installed
 	
 	dic = h.read_yaml("/config/install.yaml")
-	print dic
+	for ki in dic:
+		d = dic[ki]
+		print " > %s " % ki
+		#print dic[d]
+		print "   > %s " % d['info']
+		print "   > Packages: "
+		for p in d['packages']:
+			# TODO echeck it exists etc
+			print "      > %s "  % p
+		
+		
+		
 	
 	
 	
