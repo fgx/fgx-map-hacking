@@ -76,11 +76,16 @@ class Ndb(models.Model):
 		db_table = "ndb"
 	
 	ndb_pk = models.AutoField(primary_key=True)
+	
 	ident = models.CharField(max_length=10, db_index=True)
 	name = models.CharField(max_length=50, db_index=True)
 	freq_khz = models.CharField(max_length=6)
+	
+	elevation_ft = models.IntegerField()
+	elevation_m = models.IntegerField()
 	range_nm = models.IntegerField()
 	range_m = models.IntegerField()
+	
 	wkb_geometry = models.PointField(srid=FGX_SRID)
 	objects = models.GeoManager()
 

@@ -15,7 +15,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 ## Absolute path to the django app
 APP_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
-TEMP_DIR = ROOT + "/_temp"
+TEMP_DIR = PROJ_ROOT + "/_temp"
 
 
 DEBUG = False
