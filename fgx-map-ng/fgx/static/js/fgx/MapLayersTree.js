@@ -11,9 +11,10 @@ this.layerNodeUI = Ext.extend(GeoExt.tree.LayerNodeUI, new GeoExt.tree.TreeNodeU
 // using OpenLayers.Format.JSON to create a nice formatted string of the
 // configuration for editing it in the UI
 this.treeConfigL = [ 
-	{	
-		nodeType: "gx_baselayercontainer"
-	}, {
+	{nodeType: "gx_baselayercontainer"
+		
+	}, 
+	{
 		nodeType: "gx_overlaylayercontainer",
 		expanded: true,
 		// render the nodes inside this container with a radio button,
@@ -24,7 +25,8 @@ this.treeConfigL = [
 			uiProvider: "layernodeui"
 		}
 		}
-	}, {
+	}, 
+	{
 		nodeType: "gx_layer",
 		layer: "VFR",
 		isLeaf: false,

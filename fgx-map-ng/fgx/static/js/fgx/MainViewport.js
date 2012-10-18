@@ -12,20 +12,21 @@ this.flightsGrid = new FGx.FlightsGrid();
 
 
 
-this.mapLayersTree = new FGx.MapLayersTree();
+//this.mapLayersTree = new FGx.MapLayersTree();
 
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
 this.on_nav_toggled = function(butt, checked){
 	// @todo:
-	console.log(butt, checked, butt.navaid);
+	//console.log(butt, checked, butt.navaid);
 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+	self.mapPanel.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
 	
 }
 this.on_apt_toggled = function(butt, checked){
 	// @todo:
-	console.log(butt, checked, butt.apt);
+	//console.log(butt, checked, butt.apt);
 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
 	
 }
@@ -67,7 +68,10 @@ this.mapPanel = new GeoExt.MapPanel({
 		zoomLevels: 20
 	}),
     center: this.centerpoint,
-    zoom: 5,
+    zoom: 7,
+	layers: LAYERS,
+	
+	/*
     layers: [
 		
 		new OpenLayers.Layer.WMS( "Natural Earth", 
@@ -121,16 +125,18 @@ this.mapPanel = new GeoExt.MapPanel({
 			}
 		)
 				
-	],
+	], */
+	
 	tbar: [
 		{xtype: 'buttongroup',
             title: 'Show Nav Aids',
-            columns: 4,
+            columns: 5,
             items: [
-				{text: "VOR-DME", enableToggle: true, pressed: true, iconCls: "icoOn", navaid: "vor", toggleHandler: this.on_nav_toggled},
-				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "ndb", toggleHandler: this.on_nav_toggled},
-				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "fix", toggleHandler: this.on_nav_toggled},
-				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "ndb", toggleHandler: this.on_nav_toggled}
+				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", toggleHandler: this.on_nav_toggled},
+				{text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", toggleHandler: this.on_nav_toggled},
+				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
+				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
+				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled}
             ]   
 		},
 		{xtype: 'buttongroup',
@@ -146,16 +152,12 @@ this.mapPanel = new GeoExt.MapPanel({
             ]   
 		},		
 		"->",
-		{xtype: 'buttongroup',
-            title: 'Lat / Lon',
-            columns: 2,
-            ddddefaults: {
-                scale: 'small'
-            },
-            items: [
-				this.lblLat, this.lblLon
-            ]   
-		}
+		
+	],
+	bbar: [
+		{text: "Lat: "}, this.lblLat, 
+		{text: "Lon: "},  this.lblLon
+	
 	]
 }); //< mapPanel
 this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {      
@@ -185,7 +187,7 @@ this.viewport = new Ext.Viewport({
 			collapsible: true,
 			activeItem: 0,
 			items: [
-				this.mapLayersTree.tree,
+				//this.mapLayersTree.tree,
 				this.flightsGrid.grid
 				
 			]

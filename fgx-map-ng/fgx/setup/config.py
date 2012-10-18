@@ -39,9 +39,16 @@ def write_js(ln=True):
     ## If anyone can think of a better way  than this mashed strings
 	for d in layers_l:
 		s = "LAYERS.push( new OpenLayers.Layer.WMS(\n"
-		s += '  "%s",\n  "%s",\n' % ( d['title'], d['url'] )
-		s += "  %s,\n" % json.dumps(d['vars']) 
-		s += "  {visibility: %s}\n" % ("true" if d['visibility'] else "false")
+		s += '  "%s",\n' % d['title']
+		s += '  "%s",\n' % d['url'] 
+		s +=    "    {"
+		arr = []
+		for k in d['vars']:
+			arr.append(   '%s: "%s" ' % ( k, d['vars'][k] ) )
+		s += ", ".join(arr)
+		s += "\n    }, {"
+		##s += "  %s,\n" % json.dumps(d['vars']) 
+		s += "  visibility: %s}\n" % ("true" if d['visibility'] else "false")
 		s += "));\n"
 		js_str += s
 		print s

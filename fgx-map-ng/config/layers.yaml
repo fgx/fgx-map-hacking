@@ -1,4 +1,5 @@
 natural_earth_landmass:
+    type: WMS
     title: "NE Landmass"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
@@ -8,6 +9,7 @@ natural_earth_landmass:
     visibility: false
     
 Airfield: 
+    type: WMS
     title: "Airfield"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -17,6 +19,7 @@ Airfield:
     visibility: false
 
 Runway: 
+    type: WMS
     title: "Runway"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -25,7 +28,8 @@ Runway:
         transparent: true
     visibility: false
     
-VOR: 
+VOR:
+    type: WMS 
     title: "VOR"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -34,17 +38,19 @@ VOR:
         transparent: true
     visibility: true
 
-DME: 
+DME:
+    type: WMS 
     title: "DME"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
         layers: DME 
         format: image/png
         transparent: true
-    visibility: true
+    visibility: false
 
     
-NDB: 
+NDB:
+    type: WMS 
     title: "NDB"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars: 
@@ -55,6 +61,7 @@ NDB:
     visibility: false
     
 ILS:
+    type: WMS
     title: "ILS"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -64,6 +71,7 @@ ILS:
     visibility: false
     
 ILS_Info: 
+    type: WMS
     title: "ILS Info"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
@@ -74,19 +82,21 @@ ILS_Info:
 
     
 ILS_Marker:
+    type: WMS
     title: "ILS Marker"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
-        layers:: ILS_Marker 
+        layers: ILS_Marker 
         format: image/png
         transparent: true
     visibility: false
     
-FIX: 
+FIX:
+    type: WMS 
     title: "FIX"
     url: "http://map.fgx.ch:81/mapnik/fgxcache.py?"
     vars:
         layers: FIX 
         format: image/png
         transparent: true
-    visibility: true
+    visibility: false
