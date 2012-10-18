@@ -4,6 +4,9 @@ Ext.namespace("FGx");
 FGx.MainViewport = function(){
 
 var self = this;	
+
+var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
+
 	
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
@@ -132,18 +135,32 @@ this.mapPanel = new GeoExt.MapPanel({
 	
 		/** Map Type  */
 		{xtype: 'buttongroup',
-            title: 'Map Core',
-            columns: 1,
+            title: 'Settings', width: 80,
+            columns: 2,
             items: [
-				{text: "OSM", toggleHandler: this.on_nav_toggled,
-						
-				
+				{text: "Base", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+					menu: {
+						items: [
+							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass"},
+							{text: "OSM - TODO", group: "map_core", checked: false, disabled: true, xLayer: "mapnick_gral"},
+							{text: "OSM Light - TODO", group: "map_core", checked: false, disabled: true, xLayer: "mapnick_xgral"}
+						]
+					}
+				},
+				{text: "Civil", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+					menu: {
+						items: [
+							{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
+							{text: "Military Mode - only military and vortac", group: "map_mode", checked: false, disabled: true, xMode: "mil"},
+							{text: "Both", group: "map_mode", checked: false, disabled: true, xMode: "all"}
+						]
+					}
 				}
             ]   
 		},
 		
 		{xtype: 'buttongroup',
-            title: 'Show Nav Aids',
+            title: 'Navigation Aids',
             columns: 5,
             items: [
 				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", toggleHandler: this.on_nav_toggled},
@@ -168,7 +185,26 @@ this.mapPanel = new GeoExt.MapPanel({
 		"->",
 		
 	],
+	/****************************************************************************/
+	/** Bottom Toolbar **/
+	/****************************************************************************/
 	bbar: [
+		/** TODO Opacity Slider
+		http://api.geoext.org/1.1/examples/layeropacityslider.html
+		new GeoExt.LayerOpacitySlider({
+			TODO_layer: "natural_earth_landmass",
+			aggressive: true, 
+			width: 200,
+			isFormField: true,
+			inverse: true,
+			fieldLabel: "opacity",
+			renderTo: "slider",
+			plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
+		}),
+		*/
+		{text: "Zoom:"},
+		
+		"->",
 		{text: "TODO: Lat: "}, this.lblLat, 
 		{text: "Lon: "},  this.lblLon
 	
