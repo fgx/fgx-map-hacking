@@ -10,7 +10,7 @@ this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
 //============================================================
 this.flightsGrid = new FGx.FlightsGrid();
 
-
+this.navSearchWidget = new FGx.NavSearchWidget();
 
 //this.mapLayersTree = new FGx.MapLayersTree();
 

@@ -34,7 +34,7 @@ this.load_flights = function(){
 
 //== Grid
 this.grid = new Ext.grid.GridPanel({
-	title: 'Flights Data',
+	title: 'Live MultiPlayer',
 	iconCls: 'icoFlights',
 	autoScroll: true,
 	autoWidth: true,

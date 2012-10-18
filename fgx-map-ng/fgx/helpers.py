@@ -13,25 +13,45 @@ def to_int(v):
 		i = None
 	return i
 	
+
+#############################################################
+
+def temp_dir(path=None):
 	
+	if path == None:
+		return settings.TEMP_DIR
+		
+	s = settings.TEMP_DIR
+	
+	s = s + path
+	
+	return  s
+
+
 ## Reads file from project relative to ROOT
 def read_file(path):
-	f = open(settings.ROOT + path, "r")
+	f = open(path, "r")
 	s = f.read()
 	f.close()
 	return s
 
 ## Reads file from project relative to ROOT
 def write_file(path, contents):
-	f = open(settings.ROOT + path, "w")
+	f = open(path, "w")
 	s = f.write(contents)
 	f.close()
 	return
 
+	
+def write_json(path, data_dic):
+	return write_file(path, json.dumps(data_dic))
+	
+	
 ## Reads file from project relative to ROOT and return yaml data, or None	
 def read_yaml(path):
 	s = read_file(path)
 	return yaml.load(s)
+	
 	
 ######################################################################
 ## Convenience context object for templating

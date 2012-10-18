@@ -11,15 +11,16 @@ import os
 from optparse import OptionParser
 
 
-#from fgx import shell_config
-from fgx.xplane import server
+from fgx import shell_config
+from fgx.xplane import server, nav
 
 
 ## Handle Command Args
-usage = "usage: %prog [options] COMMAND\n"
+usage = "usage: %prog [options] COMMAND args\n"
 usage += " commands:\n"
 usage += "      avail - List and down zips from data.xplane.org server\n"
-usage += "      local - View local data\n"
+#usage += "      statuc - View local data status\n"
+usage += "      split - Split files into bits [nav]\n"
 
 parser = OptionParser(usage=usage)
 parser.add_option(	"-v", nargs=1,
@@ -41,7 +42,7 @@ if len(args) == 0:
 	sys.exit(0)
 
 ##  Valid command ?
-if not args[0] in ['avail']:
+if not args[0] in ['avail', 'split']:
 	print "Error: Unkown command %s" % args[0]
 	parser.print_help()
 	sys.exit(0)
@@ -58,7 +59,16 @@ command = args[0]
 if command == "avail":
 	server.show_downloads()
 	
-
+elif command == "split":
+	#if not args[1] in TODO
+	# crash
+	
+	if args[1] == "nav":
+		## Split nav files
+		nav.split_to_seperate_files()
+		
+	
+	
 ##== Download a file
 #elif command in ["download", "down", "d"]:
 	

@@ -94,5 +94,29 @@ class Ndb(models.Model):
 	
 
 
+##=======================================================
+class Vor(models.Model):
 	
+	class Meta:
+		db_table = "vor"
+	
+	vor_pk = models.AutoField(primary_key=True)
+	
+	ident = models.CharField(max_length=10, db_index=True)
+	name = models.CharField(max_length=50, db_index=True)
+	freq_mhz = models.CharField(max_length=6)
+	
+	elevation_ft = models.IntegerField()
+	elevation_m = models.IntegerField()
+	range_nm = models.IntegerField()
+	range_m = models.IntegerField()
+	
+	# TODO What is this exactly ?
+	variation = models.CharField(max_length=10)
+	
+	wkb_geometry = models.PointField(srid=FGX_SRID)
+	objects = models.GeoManager()
+
+	def __repr__(self):
+		return "<Ndb: %s>" % (self.ident)
 	
