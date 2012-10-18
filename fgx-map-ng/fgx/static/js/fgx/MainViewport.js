@@ -139,8 +139,8 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled}
             ]   
 		},
-		{xtype: 'buttongroup',
-            title: 'Airports',
+		{xtype: 'buttongroup', disabled: true,
+            title: 'Airports - TODO', 
             columns: 6,
             items: [
 				{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
@@ -155,7 +155,7 @@ this.mapPanel = new GeoExt.MapPanel({
 		
 	],
 	bbar: [
-		{text: "Lat: "}, this.lblLat, 
+		{text: "TODO: Lat: "}, this.lblLat, 
 		{text: "Lon: "},  this.lblLon
 	
 	]

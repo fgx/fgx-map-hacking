@@ -20,7 +20,19 @@ class NAV_ROW_CODE:
 	dme = 12
 	dme2 = 13
 	
-
+def process_ndb(parts):
+	#0  1           2                  3   4    5     6   7    8 
+	#2  05.25041700 -003.95802800      0   294  50    0.0 PB   ABIDJAN FELIX HOUPHOUET BOIGNY NDB
+	print "NDB, ", parts
+	
+	
+	
+	ob = Ndb.objects.filter():
+		
+		
+		
+	
+	
 
 def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 	
@@ -54,6 +66,13 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 				print "  > line: %s %s " % (c, line)
 			if verbose > 1:
 				print "  > line %s >>" % c, parts
+			
+			
+			if row_code == 2:
+				## Process NDB
+				self.process_ndb(parts)
+				
+				
 			
 			ident = parts[2]
 			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
