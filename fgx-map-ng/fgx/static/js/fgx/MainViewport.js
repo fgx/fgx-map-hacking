@@ -10,7 +10,7 @@ this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
 //============================================================
 this.flightsGrid = new FGx.FlightsGrid();
 
-this.navSearchWidget = new FGx.NavSearchWidget();
+//this.navSearchWidget = new FGx.NavSearchWidget();
 
 //this.mapLayersTree = new FGx.MapLayersTree();
 
@@ -127,7 +127,21 @@ this.mapPanel = new GeoExt.MapPanel({
 				
 	], */
 	
+	/** Top Toolbar, these are all in butto groups */
 	tbar: [
+	
+		/** Map Type  */
+		{xtype: 'buttongroup',
+            title: 'Map Core',
+            columns: 1,
+            items: [
+				{text: "OSM", toggleHandler: this.on_nav_toggled,
+						
+				
+				}
+            ]   
+		},
+		
 		{xtype: 'buttongroup',
             title: 'Show Nav Aids',
             columns: 5,
