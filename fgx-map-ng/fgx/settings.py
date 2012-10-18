@@ -5,7 +5,11 @@
 
 import os
 
-## Absolute path to the project root
+## Absolute path to the project root (ie the GIT root)
+PROJ_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+
+
+## Absolute path to the project root ie abve djjano in -ng curr
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 
 ## Absolute path to the django app

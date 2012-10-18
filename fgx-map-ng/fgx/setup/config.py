@@ -41,10 +41,10 @@ def write_js(ln=True):
 		s = "LAYERS.push( new OpenLayers.Layer.WMS(\n"
 		s += '  "%s",\n  "%s",\n' % ( d['title'], d['url'] )
 		s += "  %s,\n" % json.dumps(d['vars']) 
-		s += "  %s\n" % json.dumps( {'visibility': d['visibility']} ) 
+		s += "  {visibility: %s}\n" % ("true" if d['visibility'] else "false")
 		s += "));\n"
 		js_str += s
-		
+		print s
 	
 		
 	out_path = "/etc/config.js"	

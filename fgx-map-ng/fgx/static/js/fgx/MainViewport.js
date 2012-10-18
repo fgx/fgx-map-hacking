@@ -69,7 +69,7 @@ this.mapPanel = new GeoExt.MapPanel({
     center: this.centerpoint,
     zoom: 5,
     layers: [
-
+		
 		new OpenLayers.Layer.WMS( "Natural Earth", 
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
 			layers: 'natural_earth_landmass', 
@@ -89,7 +89,8 @@ this.mapPanel = new GeoExt.MapPanel({
 				layers: [
 					"VOR",
 					"DME",
-					"NDB"
+					"NDB",
+					"FIX"
 				],
 				transparent: true,
 				format: "image/png"
@@ -116,7 +117,7 @@ this.mapPanel = new GeoExt.MapPanel({
 					buffer: 0,
 					// exclude this layer from layer container nodes
 					displayInLayerSwitcher: false,
-					visibility: false
+					visibility: true
 			}
 		)
 				
@@ -184,8 +185,9 @@ this.viewport = new Ext.Viewport({
 			collapsible: true,
 			activeItem: 0,
 			items: [
-				this.flightsGrid.grid,
-				this.mapLayersTree.tree
+				this.mapLayersTree.tree,
+				this.flightsGrid.grid
+				
 			]
         
 		},
