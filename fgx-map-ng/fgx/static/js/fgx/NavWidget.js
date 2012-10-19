@@ -5,16 +5,19 @@ FGx.NavWidget = function(){
 
 var self = this;	
 	
-//== Flights Store
+//== Store
 this.store = new Ext.data.JsonStore({
 	idProperty: 'callsign',
-	fields: [ 	{name: "fix", type: 'string'},
-				{name: "lat", type: 'string'},
-				{name: "lon", type: 'string'}
+	fields: [ 	
+		{name: "fix", type: 'string'},
+		{name: "lat", type: 'string'},
+		{name: "lon", type: 'string'}
 	],
-	url: '/ajax/fix',
-	root: 'flights',
-	method: "GET",
+	proxy: new Ext.data.HttpProxy({
+		url: '/ajax/fix',
+		method: "GET"
+	}),
+	root: 'fix',
 	remoteSort: false,
 	sortInfo: {
 		field: "fix", 
@@ -22,9 +25,7 @@ this.store = new Ext.data.JsonStore({
 	}
 });
 
-this.load_flights = function(){
-	self.store.load();
-}
+
 
 this.txtSearch = new Ext.form.TextField({
 	width: 100,
@@ -53,46 +54,15 @@ this.grid = new Ext.grid.GridPanel({
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
 	store: this.store,
 	loadMask: false,
-	columns: [  //this.selModel,	
-		{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: true},
-		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 100},
-		{header: 'Aircraft',  dataIndex:'aero', sortable: true, sssrenderer: this.render_callsign, hidden: true}, 
-		{header: 'Alt', dataIndex:'altitude', sortable: true, align: 'right',
-			renderer: this.render_altitude
-		},
-		{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
-			renderer: this.render_altitude_trend},
-		{header: 'Heading', dataIndex:'heading', sortable: true, align: 'right',
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return v; //Ext.util.Format.number(v, '0');
+	columns: [ 
+		{header: 'Fix', dataIndex:'fix', sortable: true, align: 'left', hidden: false,
+			renderer: function(v, meta, rec){
+				// @TODO Make this a css class
+				return "<b>" + v + "</b>";
 			}
 		},
-		{header: 'Dist', dataIndex:'dist', sortable: true, align: 'right', hidden: true,
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return v; //Ext.util.Format.number(v, '0');
-			}
-		},
-		{header: 'Airspeed', dataIndex:'airspeed', sortable: true, align: 'right', hidden: true,
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return Ext.util.Format.number(v, '0');
-			}
-		},
-		{header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: false,
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return Ext.util.Format.number(v, '0.00000');
-			}
-		},
-		{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: false,
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return Ext.util.Format.number(v, '0.00000');
-			}
-		},
-		{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: true,
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return v;
-			}
-		}
-
+		{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
+		{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
 	],
 	
 	/* Top Toolbar */
