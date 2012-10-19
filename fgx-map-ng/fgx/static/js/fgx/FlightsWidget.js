@@ -1,7 +1,7 @@
 
 Ext.namespace("FGx");
 
-FGx.FlightsGrid = function(){
+FGx.FlightsWidget = function(){
 
 var self = this;	
 	
@@ -114,4 +114,4 @@ this.grid.on("rowdblclick", function(grid, idx, e){
 
 
 
-} //< FGx.FlightsGrid
+} //< FGx.FlightsWidget

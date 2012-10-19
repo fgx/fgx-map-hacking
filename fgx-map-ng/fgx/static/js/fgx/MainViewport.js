@@ -11,9 +11,9 @@ var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 //============================================================
-this.flightsGrid = new FGx.FlightsGrid();
+this.flightsWidget = new FGx.FlightsWidget();
 
-//this.navSearchWidget = new FGx.NavSearchWidget();
+this.navWidget = new FGx.NavWidget();
 
 //this.mapLayersTree = new FGx.MapLayersTree();
 
@@ -138,7 +138,7 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Settings', width: 80,
             columns: 2,
             items: [
-				{text: "Base", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+				{text: "Base", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
 							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass"},
@@ -238,7 +238,8 @@ this.viewport = new Ext.Viewport({
 			activeItem: 0,
 			items: [
 				//this.mapLayersTree.tree,
-				this.flightsGrid.grid
+				this.navWidget.grid,
+				this.flightsWidget.grid
 				
 			]
         
@@ -248,8 +249,9 @@ this.viewport = new Ext.Viewport({
 
 
 
-this.flightsGrid.store.on("add", function(store, recs, idx){
+this.flightsWidget.store.on("add", function(store, recs, idx){
 	//console.log(recs);
+	return;
 	Ext.each(recs, function(rec){
 		//var rec = recs[i];
 		//console.log(rec.get("callsign"));
