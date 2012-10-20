@@ -12,6 +12,14 @@ body {
     height: 800px;
 }
 
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:100px;
+    width:500px;
+    z-index:80000;
+}
+
 /*#fitinfo {
     position: absolute;
     width: 200px;
@@ -34,11 +42,14 @@ body {
 
 
 
-
+/* This uses famfam which is in root at pete's http://ico.daffodil.uk.com/ */
 .icoRefresh{background-image: url('http://ico.daffodil.uk.com/arrow_refresh.png') !important; background-repeat: no-repeat;}
 
 .icoOn{background-image: url('http://ico.daffodil.uk.com/bullet_pink.png') !important; background-repeat: no-repeat;}
 .icoOff{background-image: url('http://ico.daffodil.uk.com/bullet_black.png') !important; background-repeat: no-repeat;}
+
+.icoCallSign{background-image: url('http://ico.daffodil.uk.com/page_white_c.png') !important; background-repeat: no-repeat;}
+
 
 .icoFlights{background-image: url('http://ico.daffodil.uk.com/text_horizontalrule.png') !important; background-repeat: no-repeat;}
 

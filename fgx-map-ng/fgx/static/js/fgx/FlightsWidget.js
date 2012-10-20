@@ -48,6 +48,15 @@ this.load_flights = function(){
 	self.store.load();
 }
 
+
+//===========================================================
+//== Renderers 
+// @todo: pete to put in css
+this.render_callsign = function(v, meta, rec){
+	return "<b>" + v + "</b>";
+}
+
+
 //===========================================================
 //== Grid
 this.grid = new Ext.grid.GridPanel({
@@ -60,9 +69,9 @@ this.grid = new Ext.grid.GridPanel({
 	store: this.store,
 	loadMask: true,
 	columns: [  //this.selModel,	
-		{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: true},
+		{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
 		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 100},
-		{header: 'Aircraft',  dataIndex:'aero', sortable: true, sssrenderer: this.render_callsign, hidden: true}, 
+		{header: 'Aircraft',  dataIndex:'aero', sortable: true, sssrenderer: this.render_callsign, hidden: false}, 
 		{header: 'Alt', dataIndex:'altitude', sortable: true, align: 'right',
 			renderer: this.render_altitude
 		},

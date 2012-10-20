@@ -34,6 +34,12 @@ this.on_apt_toggled = function(butt, checked){
 	
 }
 
+
+this.on_me = function(){
+	FGx.msg("Yes", "it works");
+	alert("TODO, this will allow custom settings");
+}
+
 //============================================================
 this.mapPanel = new GeoExt.MapPanel({
 	border: 0,
@@ -135,10 +141,11 @@ this.mapPanel = new GeoExt.MapPanel({
 	
 		/** Map Type  */
 		{xtype: 'buttongroup',
-            title: 'Settings', width: 80,
+            title: 'Settings', width: 80, id: "fgx-settings-box", 
             columns: 2,
             items: [
-				{text: "Base", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
+				{text: "Me", iconCls: "icoCallSign",  handler: this.on_me , tooltip: "My Settings", disabled: true},
+				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
 							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass"},
@@ -147,7 +154,7 @@ this.mapPanel = new GeoExt.MapPanel({
 						]
 					}
 				},
-				{text: "Civil", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+				/*{text: "Civil", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
 					menu: {
 						items: [
 							{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
@@ -155,7 +162,7 @@ this.mapPanel = new GeoExt.MapPanel({
 							{text: "Both", group: "map_mode", checked: false, disabled: true, xMode: "all"}
 						]
 					}
-				}
+				} */
             ]   
 		},
 		
@@ -228,7 +235,7 @@ this.viewport = new Ext.Viewport({
 	items: [
 
 		this.mapPanel,
-		{region: 'east', width: 300, 
+		{region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
 			frame: false,
