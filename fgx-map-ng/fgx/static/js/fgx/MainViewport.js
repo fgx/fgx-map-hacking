@@ -42,9 +42,11 @@ this.on_me = function(){
 
 //============================================================
 this.mapPanel = new GeoExt.MapPanel({
-	border: 0,
+	
 	frame: false,
 	plain: true,
+	border: 0,
+	bodyBorder: false,
     region: "center",
         // we do not want all overlays, to try the OverlayLayerContainer
     map: new OpenLayers.Map({
@@ -142,7 +144,7 @@ this.mapPanel = new GeoExt.MapPanel({
 		/** Map Type  */
 		{xtype: 'buttongroup',
             title: 'Settings', width: 80, id: "fgx-settings-box", 
-            columns: 2,
+            columns: 3,
             items: [
 				{text: "Me", iconCls: "icoCallSign",  handler: this.on_me , tooltip: "My Settings", disabled: true},
 				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
@@ -154,15 +156,21 @@ this.mapPanel = new GeoExt.MapPanel({
 						]
 					}
 				},
-				/*{text: "Civil", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+				{iconCls: "icoSettings", 
 					menu: {
 						items: [
-							{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
-							{text: "Military Mode - only military and vortac", group: "map_mode", checked: false, disabled: true, xMode: "mil"},
-							{text: "Both", group: "map_mode", checked: false, disabled: true, xMode: "all"}
+							{text: "Mode" ,
+								menu: {
+									items: [
+										{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
+										{text: "Military Mode - only military and vortac", group: "map_mode", checked: false, xMode: "mil"},
+										{text: "Both", group: "map_mode", checked: false, xMode: "all"}
+									]
+								}
+							}
 						]
 					}
-				} */
+				} 
             ]   
 		},
 		
@@ -170,7 +178,15 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Navigation Aids',
             columns: 5,
             items: [
-				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", toggleHandler: this.on_nav_toggled},
+				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
+					toggleHandler: this.on_nav_toggled,
+					menu: {
+						items: [
+							{text: "Show range", checked: false},
+							{text: "Show FOO ", checked: true}
+						]
+					}
+				},
 				{text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", toggleHandler: this.on_nav_toggled},
 				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
 				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
@@ -232,6 +248,7 @@ this.viewport = new Ext.Viewport({
 	layout: "border",
 	frame: false,
 	plain: true,
+	border: 0,
 	items: [
 
 		this.mapPanel,
