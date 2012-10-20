@@ -17,12 +17,12 @@ from fgx import settings
 
 Z = settings.TEMP_DIR + "/unzipped/xplane/"
 
-x_files = ['fix', 'nav', 'apt', "all"]
+x_files = ['fix', 'nav', 'ndb', 'vor', 'apt', "all"]
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
-usage += "    import [fix|nav|apt|all] eg ./%prog import fix apt vor\n"
+usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
 parser = OptionParser(usage=usage)
  
 parser.add_option("-d", 
@@ -66,12 +66,13 @@ if command == "import":
 		sys.exit(1)
 		
 	if not args[1] in x_files:
-		print "Error: Need a vaid file: %s " % (" | ").join(x_files)
+		print "Error: Need a valid file: %s " % (" | ").join(x_files)
 		sys.exit(1)
 x_file = args[1]
 
 ############################################################
 #print "COMMAND=", command
+
 
 if command == "import":
 	
@@ -84,6 +85,15 @@ if command == "import":
 	elif x_file == "nav":
 		from fgx.xplane import nav
 		nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+	
+	elif x_file == "ndb":
+		from fgx.xplane import nav
+		nav.import_split_file(nav.NAV_TYPE.ndb, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		
+	elif x_file == "vor":
+		from fgx.xplane import nav
+		nav.import_split_file(nav.NAV_TYPE.vor, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		
 	
 	
 	else:

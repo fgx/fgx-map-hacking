@@ -34,11 +34,26 @@ this.on_apt_toggled = function(butt, checked){
 	
 }
 
+this.on_civmil_mode = function(butt){
+	console.log(butt.xCivMilMode);
+	var show_mil = butt.xCivMilMode != "civilian";
+	Ext.getCmp("fgx-vortac").setVisible( show_mil )
+	Ext.getCmp("fgx-mil-airports").setVisible( show_mil )
+}
+
+
+this.on_me = function(){
+	FGx.msg("Yes", "it works");
+	alert("TODO, this will allow custom settings");
+}
+
 //============================================================
 this.mapPanel = new GeoExt.MapPanel({
-	border: 0,
+	
 	frame: false,
 	plain: true,
+	border: 0,
+	bodyBorder: false,
     region: "center",
         // we do not want all overlays, to try the OverlayLayerContainer
     map: new OpenLayers.Map({
@@ -135,10 +150,11 @@ this.mapPanel = new GeoExt.MapPanel({
 	
 		/** Map Type  */
 		{xtype: 'buttongroup',
-            title: 'Settings', width: 80,
-            columns: 2,
+            title: 'Settings', width: 80, id: "fgx-settings-box", 
+            columns: 3,
             items: [
-				{text: "Base", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
+				{text: "Me", iconCls: "icoCallSign",  handler: this.on_me , tooltip: "My Settings", disabled: true},
+				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
 							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass"},
@@ -147,15 +163,24 @@ this.mapPanel = new GeoExt.MapPanel({
 						]
 					}
 				},
-				{text: "Civil", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore",
+				{iconCls: "icoSettings", 
 					menu: {
 						items: [
-							{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
-							{text: "Military Mode - only military and vortac", group: "map_mode", checked: false, disabled: true, xMode: "mil"},
-							{text: "Both", group: "map_mode", checked: false, disabled: true, xMode: "all"}
+							{text: "Mode" ,
+								menu: {
+									items: [
+										{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
+											checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
+										{text: "Military Mode - only military and vortac", group: "map_mode", 
+											checked: false, xCivMilMode: "military" , handler: this.on_civmil_mode},
+										{text: "Both", group: "map_mode", 
+											checked: false, xCivMilMode: "all", handler: this.on_civmil_mode}
+									]
+								}
+							}
 						]
 					}
-				}
+				} 
             ]   
 		},
 		
@@ -163,11 +188,20 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Navigation Aids',
             columns: 5,
             items: [
-				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", toggleHandler: this.on_nav_toggled},
+				{xtype: "splitbutton", text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
+					toggleHandler: this.on_nav_toggled,
+					menu: {
+						items: [
+							{text: "Show range", checked: false},
+							{text: "Show FOO ", checked: true}
+						]
+					}
+				},
 				{text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", toggleHandler: this.on_nav_toggled},
 				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
 				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
-				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled}
+				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled, 
+					hidden: true, id: "fgx-vortac"}
             ]   
 		},
 		{xtype: 'buttongroup', disabled: true,
@@ -177,7 +211,8 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
 				{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
 				{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-				{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled},
+				{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+					hidden: true, id: "fgx-mil-airports"},
 				{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
 				{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
             ]   
@@ -218,17 +253,18 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 });
 
 
-//============================================================
-// Viewport auto rendered to body
-//============================================================
+//=================================================================================
+// Main Viewport auto rendered to body
+//=================================================================================
 this.viewport = new Ext.Viewport({
 	layout: "border",
 	frame: false,
 	plain: true,
+	border: 0,
 	items: [
 
 		this.mapPanel,
-		{region: 'east', width: 300, 
+		{region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
 			frame: false,
@@ -238,8 +274,9 @@ this.viewport = new Ext.Viewport({
 			activeItem: 0,
 			items: [
 				//this.mapLayersTree.tree,
-				this.navWidget.grid,
-				this.flightsWidget.grid
+				
+				this.flightsWidget.grid,
+				this.navWidget.grid
 				
 			]
         

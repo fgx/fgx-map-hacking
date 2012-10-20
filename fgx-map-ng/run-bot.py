@@ -20,7 +20,10 @@ parser.add_option(	"-i", nargs=1,
 					action="store", type="int",  dest="interval", default=3, 
 					help="Write javascript configuration to `/etc/config.js`"
 					)   
-
+parser.add_option(	"-v", 
+					action="store_true",  default=False, dest="verbose",
+					help="Verbose shows update output"
+					) 
 (opts, args) = parser.parse_args()
 
 
@@ -37,10 +40,10 @@ from fgx.mpnet import mp_telnet
 ##==============================================
 
 def run_bot():
-	print "Start Bot with %s seconds interval" % opts.interval
+	print "Started bot with %s seconds interval" % opts.interval
 	while True:
 		
-		mp_telnet.update_cache()
+		mp_telnet.update_cache(verbose=opts.verbose)
 		#print "update", datetime.datetime.now()
 		#lag, flights = mp_telnet.fetch_telnet("mpserver14.flightgear.org", False)
 		#print lag, len(flights)

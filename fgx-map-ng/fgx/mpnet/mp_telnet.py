@@ -91,37 +91,46 @@ def fetch_telnet(address,  ping_mode):
 				#print line
 				if line.startswith("* Bad Client *"):
 					print "BAD_CLIENT=", line
-				else:	
+				else:
+					
+					## This is silly but somehow spaces can get into usernames
+					# and other trivials, so each line must be sane kinda.. 
 					parts = line.split(' ')
-					callsign, server = parts[0].split('@')
-					dic = {}
-					dic['callsign'] = callsign
-					dic['server'] = server
-					dic['model'] = os.path.basename(parts[10])[0:-4]
-					dic['lat'] = parts[4]
-					dic['lon'] = parts[5]
-					dic['altitude'] = parts[6]
-					
-					"""
-					ob = simgear.euler_get(	float(parts[4]), float(parts[5]), # lat lon
-											float(parts[7]), # ox
-											float(parts[8]), # oy
-											float(parts[9])  # oz
-											)
-					
-					#print ob
-					dic['roll'] = ob.roll
-					dic['pitch'] = ob.pitch
-					dic['heading'] = ob.heading
-					"""
-					reply.flights.append(dic)
+					try:
+						callsign, server = parts[0].split('@')
+						dic = {}
+						dic['callsign'] = callsign
+						dic['server'] = server
+						dic['model'] = os.path.basename(parts[10])[0:-4]
+						dic['lat'] = parts[4]
+						dic['lon'] = parts[5]
+						dic['altitude'] = parts[6]
+						
+						"""
+						ob = simgear.euler_get(	float(parts[4]), float(parts[5]), # lat lon
+												float(parts[7]), # ox
+												float(parts[8]), # oy
+												float(parts[9])  # oz
+												)
+						"""
+						#print ob.roll, ob.pitch, ob.headinh
+						dic['roll'] = None # ob.roll
+						dic['pitch'] = None # ob.pitch
+						dic['heading'] = None # ob.heading
+						
+						reply.flights.append(dic)
+						
+					except Exception, e:
+						print "\tLine Error", e
+						print "\t%s" % line
 		return reply
 				
 		
 
 
 
-
+## Pings all nameservers
+# @todo: by pete
 def ping_run():
 	
 	#fp = open(conf.DNS_FILE, "r")
@@ -146,16 +155,17 @@ def ping_run():
 
 ## Updates the memcache with flightdata
 # Keys are "flights" and "last_update"
-def update_cache():
+def update_cache(verbose=False):
 	
 	reply = fetch_telnet(settings.FGX_MP_SERVER, False)
 	dt = str(datetime.datetime.now())
 	if not reply.error:
 		cache.set("flights", reply.flights)
 		cache.set("last_update", dt )
-		#print "updated cache", dt
+		print "updated cache: ", dt
 	else:
-		#print "Cache update fail", dt
+		print "update fail: ", dt
+		print reply.error
 		pass
 	
 	

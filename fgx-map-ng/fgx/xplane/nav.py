@@ -10,15 +10,15 @@ import fileinput
 
 from django.contrib.gis.geos import Point, GEOSGeometry
 
-from fgx.nav.models import Ndb
+from fgx.nav.models import Ndb, Vor
 
 import settings
 import helpers as h
 
 ## The row codes for reading earth_nav
-class NAV_ROW_CODES:
+class NAV_TYPE:
 	
-	# Non Directtional beacon
+	# Non Directional beacon
 	ndb = 2
 	
 	# VOR, 
@@ -32,6 +32,10 @@ class NAV_ROW_CODES:
 	dme = 12
 	dme2 = 13
 
+## Tables to give stats for	
+tables_to_list = ['vor','ndb','fix']	
+	
+	
 DAT_DIR = h.temp_dir("/unzipped/xplane/")
 DAT_FILE = DAT_DIR + "earth_nav.dat"
 SPLIT_DIR = DAT_DIR + "nav_split/"
@@ -39,15 +43,15 @@ SPLIT_DIR = DAT_DIR + "nav_split/"
 ## Creates the file_path for a row_code file
 # @ @param The row code
 # @return the Abs path to file
-def row_code_file_path(code):
-	return  SPLIT_DIR + code + ".dat"
+def row_code_file_path(row_code):
+	return  "%s%s.dat" % (SPLIT_DIR,  row_code )
 	
 ############################################
 def ndb_2_db(parts, verbose=1, empty=False):
 	#   lat         lon             elv/ft  khz rng_nm n/a ID 8>>>>> desciprions 
 	#0  1           2                  3   4    5     6   7    8 
 	#2  05.25041700 -003.95802800      0   294  50    0.0 PB   ABIDJAN FELIX HOUPHOUET BOIGNY NDB
-	print "NDB, ", parts
+	#print "NDB, ", parts
 	
 	ident = parts[7]
 	
@@ -57,9 +61,12 @@ def ndb_2_db(parts, verbose=1, empty=False):
 		obs = Ndb.objects.filter(ident=ident)
 		if len(obs) == 0:
 			ob = Ndb()
+			if verbose > 0:
+				print "NDB: new: %s" % ident
 		else:
 			ob = obs[0]
-		
+			if verbose > 0:
+				print "NDB: update: %s" % ident
 	ob.wkb_geometry = GEOSGeometry( 'POINT(%s %s)' % (parts[1], parts[2]) )
 	ob.ident = ident
 	ob.name = " ".join(parts[8:])
@@ -167,20 +174,7 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 			
 	print "  >> Done, imported %s lines " % c
 	
-#########################################################################
-## Imports a split_file
-def import_split_file(row_code, verbose=1, empty=None):
-	
-	# TODO check it valid row_code
-	file_path =  row_code_file_path(row_code)
-	print "  > Reading: %s" % file_path
-	c = 0
-	for raw_line in fileinput.input(file_path):
-		
-		line = raw_line.strip()
-		parts = line.split()
-		
-		ndb_2_db(parts, verbose=verbose, empty=empty)
+
 		
 	
 	
@@ -235,3 +229,30 @@ def split_to_seperate_files(verbose=1):
 			line_count[row_code] += 1
 			
 	h.write_json(SPLIT_DIR + "summary.json", line_count)	
+	
+	
+	
+#########################################################################
+## Imports a split_file
+def import_split_file(row_code, verbose=1, empty=None, dev_mode=False):
+	
+	# TODO check it valid row_code
+	file_path =  row_code_file_path(row_code)
+	print "  > Reading: %s" % file_path
+	c = 0
+	for raw_line in fileinput.input(file_path):
+		
+		line = raw_line.strip()
+		parts = line.split()
+		
+		if row_code == NAV_TYPE.ndb:
+			ndb_2_db(parts, verbose=verbose, empty=empty)
+			
+		elif row_code == NAV_TYPE.vor:
+			vor_2_db(parts, verbose=verbose, empty=empty)
+			
+		else:
+			print "ROw-code: %s not andled" % row_code
+			sys.exit(0)
+		
+		
