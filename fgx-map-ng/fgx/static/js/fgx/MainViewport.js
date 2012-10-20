@@ -218,9 +218,9 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 });
 
 
-//============================================================
-// Viewport auto rendered to body
-//============================================================
+//=================================================================================
+// Main Viewport auto rendered to body
+//=================================================================================
 this.viewport = new Ext.Viewport({
 	layout: "border",
 	frame: false,
@@ -238,8 +238,9 @@ this.viewport = new Ext.Viewport({
 			activeItem: 0,
 			items: [
 				//this.mapLayersTree.tree,
-				this.navWidget.grid,
-				this.flightsWidget.grid
+				
+				this.flightsWidget.grid,
+				this.navWidget.grid
 				
 			]
         

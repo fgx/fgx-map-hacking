@@ -3,9 +3,25 @@ Ext.namespace("FGx");
 
 FGx.FlightsWidget = function(){
 
-var self = this;	
-	
-//== Flights Store
+var self = this;
+
+this.refresh_rate = 0;
+
+//= Triggered when a refresh toolbar button is clicked
+this.on_refresh_toggled = function(butt, checked){
+	butt.setIconClass( checked ? "icoOn" : "icoOff");
+	if(checked){
+		self.refresh_rate = parseInt(butt.ref_rate, 10);
+	}
+}
+
+//= Riggered for reshresh now
+this.on_refresh_now = function(){
+	self.store.load();
+}
+
+//===========================================================
+//== Store
 this.store = new Ext.data.JsonStore({
 	idProperty: 'callsign',
 	fields: [ 	{name: 'flag', type: 'int'},
@@ -32,6 +48,7 @@ this.load_flights = function(){
 	self.store.load();
 }
 
+//===========================================================
 //== Grid
 this.grid = new Ext.grid.GridPanel({
 	title: 'Live MultiPlayer',
@@ -41,7 +58,7 @@ this.grid = new Ext.grid.GridPanel({
 	enableHdMenu: false,
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
 	store: this.store,
-	loadMask: false,
+	loadMask: true,
 	columns: [  //this.selModel,	
 		{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: true},
 		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 100},
@@ -83,12 +100,27 @@ this.grid = new Ext.grid.GridPanel({
 		}
 
 	],
-	listeners: {},
 	
-	bbar: [	//this.pilotsDataCountLabel
-		{xtype: "checkbox", text: "Auto Refresh"},
-		{xtype: "button", text: 'Refresh', handler: this.load_flights,  iconCls: "icoRefresh"}
-		
+	tbar: [	//this.pilotsDataCountLabel
+		{xtype: 'buttongroup',
+            title: 'Refresh Secs',
+            columns: 7,
+            items: [
+				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now},
+				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, 
+					toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
+				{text: "2", iconCls: "icoOff", enableToggle: true,  
+					toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
+				{text: "3", iconCls: "icoOff", enableToggle: true,  
+					toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
+				{text: "4", iconCls: "icoOff", enableToggle: true,  
+					toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
+				{text: "5", iconCls: "icoOff", enableToggle: true,  
+					toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
+				{text: "10", iconCls: "icoOff", enableToggle: true,  
+					toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
+            ]   
+		}
 	]
 });
 this.grid.on("rowdblclick", function(grid, idx, e){
