@@ -34,6 +34,13 @@ this.on_apt_toggled = function(butt, checked){
 	
 }
 
+this.on_civmil_mode = function(butt){
+	console.log(butt.xCivMilMode);
+	var show_mil = butt.xCivMilMode != "civilian";
+	Ext.getCmp("fgx-vortac").setVisible( show_mil )
+	Ext.getCmp("fgx-mil-airports").setVisible( show_mil )
+}
+
 
 this.on_me = function(){
 	FGx.msg("Yes", "it works");
@@ -162,9 +169,12 @@ this.mapPanel = new GeoExt.MapPanel({
 							{text: "Mode" ,
 								menu: {
 									items: [
-										{text: "Civilian mode - no military AF or vortac", group: "map_mode", checked: true, xMode: "civ"},
-										{text: "Military Mode - only military and vortac", group: "map_mode", checked: false, xMode: "mil"},
-										{text: "Both", group: "map_mode", checked: false, xMode: "all"}
+										{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
+											checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
+										{text: "Military Mode - only military and vortac", group: "map_mode", 
+											checked: false, xCivMilMode: "military" , handler: this.on_civmil_mode},
+										{text: "Both", group: "map_mode", 
+											checked: false, xCivMilMode: "all", handler: this.on_civmil_mode}
 									]
 								}
 							}
@@ -178,7 +188,7 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Navigation Aids',
             columns: 5,
             items: [
-				{text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
+				{xtype: "splitbutton", text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
 					toggleHandler: this.on_nav_toggled,
 					menu: {
 						items: [
@@ -190,7 +200,8 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", toggleHandler: this.on_nav_toggled},
 				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
 				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
-				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled}
+				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled, 
+					hidden: true, id: "fgx-vortac"}
             ]   
 		},
 		{xtype: 'buttongroup', disabled: true,
@@ -200,7 +211,8 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
 				{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
 				{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-				{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled},
+				{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+					hidden: true, id: "fgx-mil-airports"},
 				{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
 				{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
             ]   
