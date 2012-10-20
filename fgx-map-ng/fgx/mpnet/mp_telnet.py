@@ -93,6 +93,7 @@ def fetch_telnet(address,  ping_mode):
 					print "BAD_CLIENT=", line
 				else:	
 					parts = line.split(' ')
+					#print parts
 					callsign, server = parts[0].split('@')
 					dic = {}
 					dic['callsign'] = callsign
@@ -121,7 +122,8 @@ def fetch_telnet(address,  ping_mode):
 
 
 
-
+## Pings all nameservers
+# @todo: by pete
 def ping_run():
 	
 	#fp = open(conf.DNS_FILE, "r")
@@ -146,16 +148,17 @@ def ping_run():
 
 ## Updates the memcache with flightdata
 # Keys are "flights" and "last_update"
-def update_cache():
+def update_cache(verbose=False):
 	
 	reply = fetch_telnet(settings.FGX_MP_SERVER, False)
 	dt = str(datetime.datetime.now())
 	if not reply.error:
 		cache.set("flights", reply.flights)
 		cache.set("last_update", dt )
-		#print "updated cache", dt
+		print "updated cache: ", dt
 	else:
-		#print "Cache update fail", dt
+		print "update fail: ", dt
+		print reply.error
 		pass
 	
 	

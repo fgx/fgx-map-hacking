@@ -47,7 +47,7 @@ this.txtSearch.on("keypress", function(txtFld, e){
 //== Grid
 this.grid = new Ext.grid.GridPanel({
 	title: 'Fix',
-	iconCls: 'icoFlights',
+	iconCls: 'icoFix',
 	autoScroll: true,
 	autoWidth: true,
 	enableHdMenu: false,
@@ -76,7 +76,9 @@ this.grid = new Ext.grid.GridPanel({
 		this.txtSearch
 	]
 });
-
+this.grid.on("", function(){
+	
+});
 	
 
 
