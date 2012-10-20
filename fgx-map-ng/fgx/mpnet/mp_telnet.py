@@ -94,7 +94,7 @@ def fetch_telnet(address,  ping_mode):
 				else:
 					
 					## This is silly but somehow spaces can get into usernames
-					
+					# and other trivials, so each line must be sane kinda.. 
 					parts = line.split(' ')
 					try:
 						callsign, server = parts[0].split('@')
@@ -112,15 +112,17 @@ def fetch_telnet(address,  ping_mode):
 												float(parts[8]), # oy
 												float(parts[9])  # oz
 												)
-						
-						#print ob
-						dic['roll'] = ob.roll
-						dic['pitch'] = ob.pitch
-						dic['heading'] = ob.heading
 						"""
+						#print ob.roll, ob.pitch, ob.headinh
+						dic['roll'] = None # ob.roll
+						dic['pitch'] = None # ob.pitch
+						dic['heading'] = None # ob.heading
+						
 						reply.flights.append(dic)
-					except Exception e:
-						print "error", e
+						
+					except Exception, e:
+						print "\tLine Error", e
+						print "\t%s" % line
 		return reply
 				
 		
