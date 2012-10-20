@@ -91,31 +91,36 @@ def fetch_telnet(address,  ping_mode):
 				#print line
 				if line.startswith("* Bad Client *"):
 					print "BAD_CLIENT=", line
-				else:	
+				else:
+					
+					## This is silly but somehow spaces can get into usernames
+					
 					parts = line.split(' ')
-					#print parts
-					callsign, server = parts[0].split('@')
-					dic = {}
-					dic['callsign'] = callsign
-					dic['server'] = server
-					dic['model'] = os.path.basename(parts[10])[0:-4]
-					dic['lat'] = parts[4]
-					dic['lon'] = parts[5]
-					dic['altitude'] = parts[6]
-					
-					"""
-					ob = simgear.euler_get(	float(parts[4]), float(parts[5]), # lat lon
-											float(parts[7]), # ox
-											float(parts[8]), # oy
-											float(parts[9])  # oz
-											)
-					
-					#print ob
-					dic['roll'] = ob.roll
-					dic['pitch'] = ob.pitch
-					dic['heading'] = ob.heading
-					"""
-					reply.flights.append(dic)
+					try:
+						callsign, server = parts[0].split('@')
+						dic = {}
+						dic['callsign'] = callsign
+						dic['server'] = server
+						dic['model'] = os.path.basename(parts[10])[0:-4]
+						dic['lat'] = parts[4]
+						dic['lon'] = parts[5]
+						dic['altitude'] = parts[6]
+						
+						"""
+						ob = simgear.euler_get(	float(parts[4]), float(parts[5]), # lat lon
+												float(parts[7]), # ox
+												float(parts[8]), # oy
+												float(parts[9])  # oz
+												)
+						
+						#print ob
+						dic['roll'] = ob.roll
+						dic['pitch'] = ob.pitch
+						dic['heading'] = ob.heading
+						"""
+						reply.flights.append(dic)
+					except Exception e:
+						print "error", e
 		return reply
 				
 		
