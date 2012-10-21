@@ -12,8 +12,8 @@ this.store = new Ext.data.JsonStore({
 	idProperty: 'callsign',
 	fields: [ 	
 		{name: "fix", type: 'string'},
-		{name: "lat", type: 'string'},
-		{name: "lon", type: 'string'}
+		{name: "lat", type: 'float'},
+		{name: "lon", type: 'float'}
 	],
 	proxy: new Ext.data.HttpProxy({
 		url: '/ajax/fix',
@@ -80,9 +80,9 @@ this.grid = new Ext.grid.GridPanel({
 	]
 });
 this.grid.on("rowclick", function(grid, rowIdx, e){
-	var data = self.store.getAt(rowIdx).data;
-	console.log("lat/lon", data.lat, data.lon);
-	self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(data.lon, data.lat) );
+	var rec = self.store.getAt(rowIdx);
+	console.log("lat/lon", rec, rec.get("lon"), rec.get("lat"));
+	self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")) );
 });
 	
 
