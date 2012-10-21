@@ -12,7 +12,7 @@
 import sys, csv, os, re, psycopg2
 
 # Hm, I keep this snipplet below ATM. Because I will need it somewhere else.
-# Please ignore. (Maybe you can use it instead of bs4, it’s ways faster to strip
+# Please ignore. (Maybe you can use it instead of bs4, its ways faster to strip
 # all the tags and put it into database without beautyfulsoup, in case you have
 # an easy searchable html/attribute or xml structure.)
 
@@ -46,7 +46,7 @@ inputfile = sys.argv[1]
 reader = open(inputfile, 'r')
 
 
-conn = psycopg2.connect("dbname=mydatabase user=myuser password=mypass")
+conn = psycopg2.connect("dbname=atc user=webuser password=password")
 cur = conn.cursor()
 cur.execute("DROP TABLE IF EXISTS aircraft;")
 cur.execute("CREATE TABLE aircraft (id serial PRIMARY KEY, \
@@ -54,26 +54,24 @@ cur.execute("CREATE TABLE aircraft (id serial PRIMARY KEY, \
 			model varchar, \
 			type_designator varchar, \
 			engines varchar, \
-			weight_class varchar, \
 			climb_rate varchar, \
 			descent_rate varchar, \
 			srs varchar, \
-			LAHSO_group);")
+			LAHSO_group varchar);")
 
 def insert_aircraft(manufacturer,
 			model,
 			type_designator,
 			engines,
-			weight_class,
 			climb_rate,
 			descent_rate,
 			srs,
 			LAHSO_group):
 				
 	sql = '''
-		INSERT INTO aircraft (manufacturer, model, type_designator, engines, weight_class, climb_rate, descent_rate, srs, LAHSO_group)
-		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)'''
-	params = [manufacturer, model, type_designator, engines, weight_class, climb_rate, descent_rate, srs, LAHSO_group]
+		INSERT INTO aircraft (manufacturer, model, type_designator, engines, climb_rate, descent_rate, srs, LAHSO_group)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'''
+	params = [manufacturer, model, type_designator, engines, climb_rate, descent_rate, srs, LAHSO_group]
 	cur.execute(sql, params)
 
 	
@@ -81,7 +79,8 @@ def get_aircraft_list():
 
 		reader = csv.reader(open(inputfile, "rU"),delimiter=';')
 		for row in reader:
-			insert_aircraft(row)
+			print row[0]+row[1]+row[2]+row[3]+row[4]+row[5]+row[6]+row[7]
+			insert_aircraft(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7])
 	
 			
 get_aircraft_list()
