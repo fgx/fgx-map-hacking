@@ -10,30 +10,36 @@ import helpers as h
 #bounds = Envelope((N, W, S, E, ))
 #Base.objects.filter(location__intersects=bounds.wkt)
 
+## This is called as /fix?search=foo and /fix/<ident>
+
 @h.render_to_json()
 def fix(request, ident=None):
 	
-	## We got an ident
+	## We got an ident , ie sungular
 	if ident:
 		obs = Fix.objects.filter(fix=ident)[:10]	
 	
 	else:
-		q = request.GET.get("search")
-		#print q
-		if q:
-			obs = Fix.objects.filter(fix__icontains=q)[:100]	
+		## get the ?search=Foo
+		search = request.GET.get("search")
+
+		if search:
+			## Get the fix ojects _icontains == insensitive ==  ilike '%foo%' in sql limit to 100
+			obs = Fix.objects.filter(fix__icontains=search)[:100]	
 			#sprint 
 		else:
 			obs = []
 	
+	##  loop the objects to a list, calling getting the dic() for each object
+	fix_data_list = [ o.dic() for o in obs ]
 	
-	data = [ o.dic() for o in obs ]
+	## Make return payload 
+	payload = dict(fix=fix_data_list, success=True)
 	
-	dic = dict(fix=data, success=True)
+	## This is encoded to json by @h.render_to_json()
+	return payload
 	
-	return dic
 	
-	return HttpResponse( dic )
 	
 	
 	
