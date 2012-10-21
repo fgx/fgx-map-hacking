@@ -10,12 +10,7 @@ var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 	
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
-//============================================================
-this.flightsWidget = new FGx.FlightsWidget();
 
-this.navWidget = new FGx.NavWidget();
-
-//this.mapLayersTree = new FGx.MapLayersTree();
 
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
@@ -252,6 +247,15 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
     //OpenLayers.Util.getElement("tooltip").innerHTML = position 
 });
 
+//=================================================================================
+// Other Widgets - Note the Map is passed in constructor as ref
+//============================================================
+this.flightsWidget = new FGx.FlightsWidget({mapPanel: this.mapPanel});
+
+this.navWidget = new FGx.NavWidget({mapPanel: this.mapPanel});
+
+//this.mapLayersTree = new FGx.MapLayersTree();
+
 
 //=================================================================================
 // Main Viewport auto rendered to body
@@ -271,7 +275,7 @@ this.viewport = new Ext.Viewport({
 			plain: true,
 			border: 0,
 			collapsible: true,
-			activeItem: 0,
+			activeItem: 1,
 			items: [
 				//this.mapLayersTree.tree,
 				

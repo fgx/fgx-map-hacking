@@ -1,9 +1,11 @@
 
 Ext.namespace("FGx");
 
-FGx.NavWidget = function(){
+FGx.NavWidget = function(conf){
 
 var self = this;	
+
+this.conf = conf;
 	
 //== Store
 this.store = new Ext.data.JsonStore({
@@ -53,7 +55,8 @@ this.grid = new Ext.grid.GridPanel({
 	enableHdMenu: false,
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
 	store: this.store,
-	loadMask: false,
+	loadMask: true,
+	sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 	columns: [ 
 		{header: 'Fix', dataIndex:'fix', sortable: true, align: 'left', hidden: false,
 			renderer: function(v, meta, rec){
@@ -76,8 +79,10 @@ this.grid = new Ext.grid.GridPanel({
 		this.txtSearch
 	]
 });
-this.grid.on("", function(){
-	
+this.grid.on("rowclick", function(grid, rowIdx, e){
+	var data = self.store.getAt(rowIdx).data;
+	console.log("lat/lon", data.lat, data.lon);
+	self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(data.lon, data.lat) );
 });
 	
 
