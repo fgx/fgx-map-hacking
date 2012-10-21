@@ -56,7 +56,7 @@ def fix(request, ident=None):
 		
 		payload['fix_data'] = queries.fix(search=search)
 		
-		
+		payload['foo']	= "BAR"
 	
 	return payload
 	
