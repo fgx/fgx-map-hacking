@@ -99,7 +99,7 @@ def fetch_telnet(address,  ping_mode):
 					try:
 						callsign, server = parts[0].split('@')
 						dic = {}
-						dic['callsign'] = callsign
+						dic['callsign'] = caallsign.upper()
 						dic['server'] = server
 						dic['model'] = os.path.basename(parts[10])[0:-4]
 						dic['lat'] = parts[4]
