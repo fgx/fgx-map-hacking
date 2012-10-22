@@ -11,8 +11,10 @@ def get_airport(req, searchstring):
 		cur = conn.cursor()
 
 		#cur.execute("SELECT icao, name, ST_AsGeoJSON(wkb_geometry, 8, 1) FROM airports WHERE icao ||' '|| name LIKE (%s) LIMIT 50;", ["%"+searchstring+"%"])
-		cur.execute("SELECT icao, name, ST_AsText(ST_Transform(wkb_geometry,4326)) FROM airports WHERE icao ||' '|| name LIKE (%s) LIMIT 50;", ["%"+searchstring+"%"])
+		cur.execute("SELECT airports.icao, airports.name, ST_AsText(ST_Transform(wkb_geometry,4326)) FROM \
+					airports WHERE airports.icao ||' '|| airports.name  LIKE (%s) LIMIT 100;", ["%"+searchstring+"%"])
 
+		
 		output = cur.fetchall()
 	
 		conn.commit()
@@ -58,6 +60,39 @@ def get_navaid(req, searchstring):
 		conn.close()
 	
 		return output
+	
+	except psycopg2.DatabaseError, e:
+		print 'Error %s' % e    
+		sys.exit(1)
+    
+	finally:
+    
+		if conn:
+			conn.close()
+			
+			
+def get_points(req, searchstring):
+	req.content_type = 'text/html'
+	collected = ""
+	
+	try:
+		conn = psycopg2.connect("dbname=xplanedata1000 user=webuser password=password")
+		cur = conn.cursor()
+
+		cur.execute("SELECT ST_AsText(wkb_geometry) FROM airports WHERE icao ||' '|| name LIKE (%s) LIMIT 50;", ["%"+searchstring+"%"])
+
+		output = cur.fetchall()
+	
+		conn.commit()
+		cur.close()
+		conn.close()
+		
+		for row in output:
+			collected += str(row[0]) + ","
+			
+		return collected
+		
+		
 	
 	except psycopg2.DatabaseError, e:
 		print 'Error %s' % e    
