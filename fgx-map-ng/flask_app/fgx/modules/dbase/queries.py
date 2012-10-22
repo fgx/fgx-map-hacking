@@ -2,7 +2,7 @@
 import datetime
 import re
 
-from fgx_data import db  #, cache
+from fgx import db  #, cache
 
 
 ##==============================================================================
