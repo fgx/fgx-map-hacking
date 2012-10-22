@@ -102,6 +102,45 @@ def get_points(req, searchstring):
     
 		if conn:
 			conn.close()
+	
+					
+def get_airport_json(req, searchstring):
+	req.content_type = 'application/json'
+	collected = ""
+	
+	try:
+		conn = psycopg2.connect("dbname=xplanedata1000 user=webuser password=password")
+		cur = conn.cursor()
+
+		cur.execute("SELECT row_to_json(row(icao,name, ST_AsText(wkb_geometry))) FROM airports WHERE icao ||' '|| name LIKE (%s) LIMIT 50;", ["%"+searchstring+"%"])
+		
+		output = cur.fetchall()
+		
+		
+		rep01 = str(output).replace("\"f1\":","\"icao\":")
+		rep02 = rep01.replace("\"f2\":","\"name\":")
+		rep03 = rep02.replace("\"f3\":","\"geometry\":")
+		rep04 = rep03.replace("',), ('","\n")
+		rep05 = rep04.replace("[('","{\n\"success\": \"true\",\n\"airports\": [\n")
+		rep06 = rep05.replace("',)]","]}")
+		rep07 = rep06.replace("}\n{","},\n{")
+	
+		conn.commit()
+		cur.close()
+		conn.close()
+		
+		return rep07
+		
+		
+	
+	except psycopg2.DatabaseError, e:
+		print 'Error %s' % e    
+		sys.exit(1)
+    
+	finally:
+    
+		if conn:
+			conn.close()
 
 	
 	
