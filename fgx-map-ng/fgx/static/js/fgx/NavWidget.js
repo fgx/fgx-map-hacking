@@ -28,22 +28,28 @@ this.store = new Ext.data.JsonStore({
 });
 
 
-
-this.txtSearch = new Ext.form.TextField({
-	width: 100,
+//=======================================================
+// Search Form
+//=======================================================
+this.txtSearchFix = new Ext.form.TextField({
+	width: 50,
 	enableKeyEvents: true
-	
 });
-this.txtSearch.on("keypress", function(txtFld, e){
+this.txtSearchFix.on("keypress", function(txtFld, e){
 	console.log("press", e);
 	if( e.getKey() == e.ENTER ){
-		self.txtSearch.setValue( self.txtSearch.getValue().trim() );
-		var txt = self.txtSearch.getValue();
+		self.txtSearchFix.setValue( self.txtSearchFix.getValue().trim() );
+		var txt = self.txtSearchFix.getValue();
 		if(txt.length == 0){
 			return;
 		}
 		self.store.load({params: {search: txt}});
 	}
+});
+
+this.txtSearchVorDme = new Ext.form.TextField({
+	width: 50,
+	enableKeyEvents: true
 });
 
 //== Grid
@@ -70,13 +76,34 @@ this.grid = new Ext.grid.GridPanel({
 	
 	/* Top Toolbar */
 	tbar: [
-		{text: "Search Fix", 
-			handler: function(){
-				self.txtSearch.setValue("");
-				self.txtSearch.setFocus();
-			}
+		{xtype: 'buttongroup',
+            title: "find Fix",
+            columns: 3,
+            items: [
+				{text: "Clr",
+					handler: function(){
+						self.txtSearchFix.setValue("");
+						self.txtSearchFix.focus();
+					}
+				},
+				this.txtSearchFix,
+				{text: "Neraby"}
+			]
 		},
-		this.txtSearch
+		{xtype: 'buttongroup',
+            title: "find Vor/Dme",
+            columns: 3,
+            items: [
+				{text: "Clr",
+					handler: function(){
+						self.txtSearchVorDme.setValue("");
+						self.txtSearchVorDme.focus();
+					}
+				},
+				this.txtSearchVorDme,
+				{text: "Neraby"}
+			]
+		}
 	]
 });
 this.grid.on("rowclick", function(grid, rowIdx, e){
