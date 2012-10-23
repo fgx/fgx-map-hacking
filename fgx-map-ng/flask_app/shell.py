@@ -18,5 +18,5 @@ ses = db.session
 
 
 ## create's all tables
-#db.create_all()
+db.create_all()
 

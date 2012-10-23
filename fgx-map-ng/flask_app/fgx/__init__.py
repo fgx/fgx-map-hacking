@@ -19,7 +19,7 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # argument can be given to disable loading models for a given module.
 MODULES = [
 	{'name': 'airports',  'url_prefix': '/'},
-	#{'name': 'flights',  'url_prefix': '/'      },
+	{'name': 'navaids',  'url_prefix': '/'      },
 	
 	{'name': 'dbase', 'url_prefix': '/'},
 	{'name': 'mpservers', 'url_prefix': '/'},
