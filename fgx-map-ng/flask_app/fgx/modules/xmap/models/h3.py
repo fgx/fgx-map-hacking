@@ -1,4 +1,4 @@
-from skeleton import db
+from fgx import db
 
 class H3(db.Model):
     id = db.Column(db.Integer, primary_key=True)

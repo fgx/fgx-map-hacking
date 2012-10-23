@@ -1,4 +1,4 @@
-from skeleton import db
+from fgx import db
 
 PageTags = db.Table('page_tags', db.metadata,
     db.Column('page_id', db.Integer, db.ForeignKey('public.page.id')),

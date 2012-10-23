@@ -4,7 +4,7 @@ from flask import current_app, flash, redirect, render_template, \
     session, url_for
 from flaskext.babel import to_user_timezone
 
-from skeleton import babel, db
+from fgx import babel, db
 from aaa import login_required
 from aaa.user import get_user_timezone
 
