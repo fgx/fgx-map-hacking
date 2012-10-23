@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request
 
-#from xmap import module
 
 mod = Blueprint('xmap', __name__, url_prefix='/')
 
