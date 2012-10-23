@@ -2,14 +2,19 @@
 
 import datetime
 
-from flask import render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify
+import queries as q
 
-from dbase import module
-from dbase import queries as q
+
+
+mod = Blueprint('dbase', __name__, url_prefix='/')
+
+
+
 
 ##======================================================================
 ## HTML
-@module.route('/dbase')
+@mod.route('/dbase')
 def dbase():
 	
 	 return render_template('dbase/dbase.html')
@@ -22,7 +27,7 @@ def dbase():
 ## AJAX
 
 ##= List databases
-@module.route('/ajax/dbase')
+@mod.route('/ajax/dbase')
 def dbase_databases_ajax():
 	
 	payload = {'success/': True}
@@ -34,7 +39,7 @@ def dbase_databases_ajax():
 
 
 ##= List <database> Tables
-@module.route('/ajax/dbase/<database>')
+@mod.route('/ajax/dbase/<database>')
 def dbase_tables_ajax(database):
 	
 	payload = {'success/': True}
@@ -45,7 +50,7 @@ def dbase_tables_ajax(database):
 
 
 ##= List <database> Tables Columns
-@module.route('/ajax/dbase/<database>/<table>')
+@mod.route('/ajax/dbase/<database>/<table>')
 def dbase_columns_ajax(database, table):
 	
 	payload = {'success/': True}

@@ -21,7 +21,7 @@ MODULES = [
 	#{'name': 'airports',  'url_prefix': '/'},
 	#{'name': 'navaids',  'url_prefix': '/'},
 	
-	#{'name': 'dbase', 'url_prefix': '/'},
+	{'name': 'dbase', 'url_prefix': '/'},
 	#{'name': 'mpservers', 'url_prefix': '/'},
 	{'name': 'xmap', 'url_prefix': '/'},
 	#{'name': 'mod3', 'url_prefix': '/scenery'  },
@@ -95,7 +95,8 @@ def register_local_modules(app):
 	app.register_blueprint(xmapModule)
   
 	
-		
+	from dbase.views import mod as dbaseModule
+	app.register_blueprint(dbaseModule)
 		
 	"""
 		#for m in MODULES:

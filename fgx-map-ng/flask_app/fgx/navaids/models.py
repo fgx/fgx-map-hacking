@@ -11,5 +11,5 @@ class Fix(db.Model):
 	
 	fix_pk = db.Column(db.Integer, primary_key=True)
 	fix = db.Column(db.String)
-    
+    geometry = db.GeometryColumn(Point(2))
     
