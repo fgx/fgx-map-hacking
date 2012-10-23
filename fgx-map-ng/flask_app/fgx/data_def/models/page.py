@@ -1,4 +1,4 @@
-from skeleton import db
+from fgx import db
 
 from .page_tags import PageTags
 

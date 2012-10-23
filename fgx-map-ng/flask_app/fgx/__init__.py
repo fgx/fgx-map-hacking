@@ -19,7 +19,7 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # argument can be given to disable loading models for a given module.
 MODULES = [
 	{'name': 'airports',  'url_prefix': '/'},
-	#{'name': 'flights',  'url_prefix': '/'      },
+	{'name': 'navaids',  'url_prefix': '/'      },
 	
 	{'name': 'dbase', 'url_prefix': '/'},
 	{'name': 'mpservers', 'url_prefix': '/'},
@@ -85,10 +85,12 @@ def load_module_models(app, module):
 
 def register_local_modules(app):
 	cur = os.path.abspath(__file__)
-	sys.path.append(os.path.dirname(cur) + '/modules')
+	#sys.path.append(os.path.dirname(cur) + '/modules')
+	sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
 	for m in MODULES:
+		print ">> %s " % m
 		mod_name = '%s.views' % m['name']
-		#print "import mod=" + mod_name
+		print "import mod=" + mod_name
 		views = __import__(mod_name, globals(), locals(), [], -1)
 		try:
 			views = __import__(mod_name, globals(), locals(), [], -1)
@@ -103,8 +105,8 @@ def register_local_modules(app):
 			if app.config['DEBUG']:
 				print '[VIEW ] Mapping views in %s to prefix: %s' % (mod_name, url_prefix)
 
-				# Automatically map '/' to None to prevent modules from
-				# stepping on one another.
+			# Automatically map '/' to None to prevent modules from
+			# stepping on one another.
 			if url_prefix == '/':
 				url_prefix = None
 			load_module_models(app, m)
@@ -135,7 +137,7 @@ cache = Cache() #<< for later said peteffs
 
 
 # Models are added to the db's metadata when create_app() is actually called.
-db = SQLAlchemy() # << Later said peteffs
+db = SQLAlchemy()
 
 # Heed SecureCookie.rst's warning and use json instead of pickle for
 # serialization.

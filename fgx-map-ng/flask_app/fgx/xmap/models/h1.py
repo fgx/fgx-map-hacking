@@ -1,6 +1,6 @@
-from skeleton import db
+from fgx import db
 
-class H3(db.Model):
+class H1(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    val2 = db.Column(db.String)
+    val = db.Column(db.String)
     __table_args__ = {'schema':'public'}
