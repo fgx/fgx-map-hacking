@@ -4,7 +4,8 @@ import datetime
 
 from flask import render_template, request, jsonify
 
-from dbase import module, queries as q
+from dbase import module
+from dbase import queries as q
 
 ##======================================================================
 ## HTML

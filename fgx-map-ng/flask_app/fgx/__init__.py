@@ -19,7 +19,7 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # argument can be given to disable loading models for a given module.
 MODULES = [
 	{'name': 'airports',  'url_prefix': '/'},
-	{'name': 'navaids',  'url_prefix': '/'      },
+	{'name': 'navaids',  'url_prefix': '/'},
 	
 	{'name': 'dbase', 'url_prefix': '/'},
 	{'name': 'mpservers', 'url_prefix': '/'},
@@ -88,12 +88,13 @@ def register_local_modules(app):
 	#sys.path.append(os.path.dirname(cur) + '/modules')
 	sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
 	for m in MODULES:
-		print ">> %s " % m
+		print ">> %s " % m['name']
 		mod_name = '%s.views' % m['name']
-		print "import mod=" + mod_name
-		views = __import__(mod_name, globals(), locals(), [], -1)
+		print "  import mod=" + mod_name
+		#views = __import__(mod_name, globals(), locals(), [], -1)
 		try:
 			views = __import__(mod_name, globals(), locals(), [], -1)
+			print "VIEWS=", views.module
 		except ImportError:
 			print "import error", m
 			load_module_models(app, m)
@@ -103,7 +104,7 @@ def register_local_modules(app):
 				url_prefix = m['url_prefix']
 
 			if app.config['DEBUG']:
-				print '[VIEW ] Mapping views in %s to prefix: %s' % (mod_name, url_prefix)
+				print '[VIEW ] Mapping views in `%s` to prefix: %s' % (mod_name, url_prefix)
 
 			# Automatically map '/' to None to prevent modules from
 			# stepping on one another.

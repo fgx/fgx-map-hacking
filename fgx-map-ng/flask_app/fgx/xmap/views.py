@@ -11,6 +11,6 @@ def index():
 	c = Context()
 	c.remote_addr = request.environ['REMOTE_ADDR']
 	c.static_url = "http://static.fgx.ch"
-	return render_template('xmap/index.html', c=c)
+	return render_template('sxmap/index.html', c=c)
 
 	
