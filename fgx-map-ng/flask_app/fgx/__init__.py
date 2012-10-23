@@ -18,22 +18,26 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # 'name', the remaining arguments are optional. An optional 'models': False
 # argument can be given to disable loading models for a given module.
 MODULES = [
-	{'name': 'airports',  'url_prefix': '/'},
-	{'name': 'navaids',  'url_prefix': '/'},
+	#{'name': 'airports',  'url_prefix': '/'},
+	#{'name': 'navaids',  'url_prefix': '/'},
 	
-	{'name': 'dbase', 'url_prefix': '/'},
-	{'name': 'mpservers', 'url_prefix': '/'},
+	#{'name': 'dbase', 'url_prefix': '/'},
+	#{'name': 'mpservers', 'url_prefix': '/'},
 	{'name': 'xmap', 'url_prefix': '/'},
 	#{'name': 'mod3', 'url_prefix': '/scenery'  },
 ]
 
-# Create the Skeleton app
+# Create the app
 def create_app(name = __name__):
+	
 	app = Flask(__name__, static_path='/static')
+	
 	load_config(app)
 	#babel.init_app(app)
+	
 	cache.init_app(app)
 	db.init_app(app)
+	
 	#filters.init_app(app)
 	register_local_modules(app)
 
@@ -84,10 +88,17 @@ def load_module_models(app, module):
 
 
 def register_local_modules(app):
-	cur = os.path.abspath(__file__)
+	#cur = os.path.abspath(__file__)
 	#sys.path.append(os.path.dirname(cur) + '/modules')
-	sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
-	for m in MODULES:
+	#sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
+	from xmap.views import mod as xmapModule
+	app.register_blueprint(xmapModule)
+  
+	
+		
+		
+	"""
+		#for m in MODULES:
 		print ">> %s " % m['name']
 		mod_name = '%s.views' % m['name']
 		print "  import mod=" + mod_name
@@ -113,7 +124,7 @@ def register_local_modules(app):
 			load_module_models(app, m)
 			app.register_module(views.module, url_prefix=url_prefix)
 
-
+	"""
 # Seeing 127.0.0.1 is almost never correct, promise.  We're proxied 99.9% of
 # the time behind a load balancer or proxying webserver. Pull the right IP
 # address from the correct HTTP header. In my hosting environments, I inject

@@ -1,4 +1,4 @@
-from flask import Module
+#from flask import Module
 
-print "__NAME==", __name__
-module = Module(__name__, 'xmap')
+#print "__NAME==", __name__
+#module = Module(__name__, 'xmap')
