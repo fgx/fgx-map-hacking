@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vml="urn:schemas-microsoft-com:vml">
+<!-- (c) 2011 Yves Sablonier, Zurich, GPLv2 -->
+
+<head>
+	<title>FGx Mapnik Mapserver - Navaid Tests - do not use for real navigation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	{##  Ext js ##}
+    <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="{{c.static_url}}/js/ext-3.4.0/ext-all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/resources/css/ext-all.css" />
+   {#  <link rel="stylesheet" type="text/css" href="{{c.static_url}}/js/ext-3.4.0/examples/shared/examples.css" /> #}
+    
+	{## Openlayers from static.fgx.ch ##}
+	<script src="{{c.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+
+    {## ExtGeo ##}
+    <script type="text/javascript" src="{{c.static_url}}/js/GeoExt-1.1/lib/GeoExt.js"></script>
+
+
+
+
+	{## JQuery ##}
+	{# <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> #}
+
+
+
+	{## Proj4js ##}
+	<script src="{{c.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
+  
+
+	{## OSM stuff ##} 
+	<script src="{{c.static_url}}/js/osm/OpenStreetMap.js"></script>
+
+
+	<link rel="stylesheet"  href="/static/style/fgx.css">
+
+	{# main must be first #}
+	<script type="text/javascript" src="/static/js/fgx/main.js"></script>
+	<script type="text/javascript" src="/static/js/config.js"></script>
+
+	<script type="text/javascript" src="/static/js/fgx/FlightsWidget.js"></script>
+	<script type="text/javascript" src="/static/js/fgx/NavWidget.js"></script>
+	{# <script type="text/javascript" src="/static/js/fgx/MapLayersTree.js"></script> #}
+	<script type="text/javascript" src="/static/js/fgx/MainViewport.js"></script>	
+	
+    {# <script type="text/javascript" src="/static/js/map-ext.js"></script> #}
+
+</head>
+
+
+<body>
+	{# <div id="main-div"></div> #}
+	<script>
+		display_map();
+	</script>
+
+
+</body>
+</html>

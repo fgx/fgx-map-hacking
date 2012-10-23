@@ -1,0 +1,15 @@
+from flask import render_template, request
+
+from xmap import module
+
+class Context(object):
+	pass
+
+@module.route('/')
+def index():
+	c = Context()
+	c.remote_addr = request.environ['REMOTE_ADDR']
+    
+	return render_template('xmap/index.html', c=c)
+
+    

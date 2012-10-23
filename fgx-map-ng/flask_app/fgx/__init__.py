@@ -17,12 +17,12 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # 'name', the remaining arguments are optional. An optional 'models': False
 # argument can be given to disable loading models for a given module.
 MODULES = [
-	{'name': 'airports',  'url_prefix': '/' },
+	{'name': 'airports',  'url_prefix': '/'},
 	#{'name': 'flights',  'url_prefix': '/'      },
 	
-	{'name': 'dbase', 'url_prefix': '/'      },
-	{'name': 'mpservers', 'url_prefix': '/'  },
-	{'name': 'home', 'url_prefix': '/'      },
+	{'name': 'dbase', 'url_prefix': '/'},
+	{'name': 'mpservers', 'url_prefix': '/'},
+	{'name': 'xmap', 'url_prefix': '/'},
 	#{'name': 'mod3', 'url_prefix': '/scenery'  },
 ]
 
@@ -38,14 +38,14 @@ def create_app(name = __name__):
 
 	app.wsgi_app = ProxyFixupHelper(app.wsgi_app)
 
-	print db, cache
+	#print db, cache
 	# Enable the DebugToolbar
 	if app.config['DEBUG_TOOLBAR']:
 		toolbar = DebugToolbarExtension(app)
 
 	# Always attempt to set a BrowserId. At some point this will get used,
 	# but let's start setting it now.
-	"""  later baybe daid peteffs
+	"""  later maybe said peteffs
 	app.wsgi_app = BrowserIdMiddleware(
 		app.wsgi_app, secret_key=app.config['BROWSER_SECRET_KEY'],
 		cookie_name='b', cookie_path='/',
