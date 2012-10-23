@@ -3,7 +3,7 @@ import json, os, re, sys
 from flask import Flask
 #from pytz.gae import pytz # NOTE: Import gae.pytz before Babel!!!
 #from flaskext.babel import Babel
-from flaskext.cache import Cache
+from flask.ext.cache import Cache
 #from flaskext.debugtoolbar import DebugToolbarExtension
 from flask.ext.sqlalchemy import SQLAlchemy
 #from repoze.browserid.middleware import BrowserIdMiddleware
