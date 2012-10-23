@@ -88,6 +88,7 @@ def register_local_modules(app):
 	#sys.path.append(os.path.dirname(cur) + '/modules')
 	sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
 	for m in MODULES:
+		print "--------------------------------------------------"
 		mod_name = '%s.views' % m['name']
 		#print "import mod=" + mod_name
 		views = __import__(mod_name, globals(), locals(), [], -1)
