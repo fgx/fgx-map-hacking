@@ -7,7 +7,7 @@ import queries as q
 
 
 
-mod = Blueprint('dbase', __name__, url_prefix='/')
+mod = Blueprint('dbase', __name__)
 
 
 
@@ -17,7 +17,7 @@ mod = Blueprint('dbase', __name__, url_prefix='/')
 @mod.route('/dbase')
 def dbase():
 	
-	 return render_template('dbase/dbase.html')
+	 return render_template('dbase.html')
 	
 
 

@@ -17,7 +17,7 @@ __all__ = ['create_app', 'db'] #, 'cache']
 # A list of app modules and their prefixes. Each APP entry must contain a
 # 'name', the remaining arguments are optional. An optional 'models': False
 # argument can be given to disable loading models for a given module.
-MODULES = [
+NOT_USED_MODULES = [
 	#{'name': 'airports',  'url_prefix': '/'},
 	#{'name': 'navaids',  'url_prefix': '/'},
 	
@@ -30,11 +30,14 @@ MODULES = [
 # Create the app
 def create_app(name = __name__):
 	
-	app = Flask(__name__, static_path='/static')
+	app = Flask(__name__, static_path='/static', template_folder='templates')
 	
-	load_config(app)
+	app.config.from_object(__name__)
+	app.config.from_object('settings')
+	app.config.from_envvar('SKELETON_SETTINGS', silent=True)
+	
+	
 	#babel.init_app(app)
-	
 	cache.init_app(app)
 	db.init_app(app)
 	
@@ -48,22 +51,9 @@ def create_app(name = __name__):
 	if app.config['DEBUG_TOOLBAR']:
 		toolbar = DebugToolbarExtension(app)
 
-	# Always attempt to set a BrowserId. At some point this will get used,
-	# but let's start setting it now.
-	"""  later maybe said peteffs
-	app.wsgi_app = BrowserIdMiddleware(
-		app.wsgi_app, secret_key=app.config['BROWSER_SECRET_KEY'],
-		cookie_name='b', cookie_path='/',
-		cookie_domain=None, cookie_lifetime=86400 * 365 * 10,
-		cookie_secure=None, vary=())
-	"""
+
 	return app
 
-
-def load_config(app):
-	app.config.from_object(__name__)
-	app.config.from_object('default_settings')
-	app.config.from_envvar('SKELETON_SETTINGS', silent=True)
 
 
 # Load the local modules
@@ -91,12 +81,23 @@ def register_local_modules(app):
 	#cur = os.path.abspath(__file__)
 	#sys.path.append(os.path.dirname(cur) + '/modules')
 	#sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
+	
+	## dbase
+	from dbase.views import mod as dbaseModule
+	app.register_blueprint(dbaseModule)
+	
+	
+	## navaids
+	from navaids.views import mod as navaidsModule
+	app.register_blueprint(navaidsModule)
+	from navaids import models
+	
+	## xmap
 	from xmap.views import mod as xmapModule
 	app.register_blueprint(xmapModule)
   
 	
-	from dbase.views import mod as dbaseModule
-	app.register_blueprint(dbaseModule)
+
 		
 	"""
 		#for m in MODULES:
@@ -143,7 +144,8 @@ class ProxyFixupHelper(object):
 			if host:
 				environ['REMOTE_ADDR'] = host
 		return self.app(environ, start_response)
-
+		
+##############################################################
 # Flask Extensions
 #babel = Babel() << for later said peteffs
 cache = Cache() #<< for later said peteffs
@@ -152,11 +154,4 @@ cache = Cache() #<< for later said peteffs
 # Models are added to the db's metadata when create_app() is actually called.
 db = SQLAlchemy()
 
-# Heed SecureCookie.rst's warning and use json instead of pickle for
-# serialization.
 
-## later said peteffs
-"""
-class JSONSecureCookie(SecureCookie):
-	serialization_method = json
-"""

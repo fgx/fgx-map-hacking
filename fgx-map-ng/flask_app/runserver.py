@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from fgx import create_app
 
+from fgx import create_app
 
 app = create_app(__name__)
 

@@ -1,6 +1,6 @@
 from flask import current_app, request, session
 
-from aaa import LOGIN_SUFFIX_BLACKLIST
+#from aaa import LOGIN_SUFFIX_BLACKLIST
 
 def fixup_destination_url(src_param_name, dst_param_name):
     """ Saves the destination URL tagged as a URL parameter or in the session and

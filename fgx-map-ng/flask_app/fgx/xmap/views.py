@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
 
 
-mod = Blueprint('xmap', __name__, url_prefix='/')
+mod = Blueprint('xmap', __name__)
 
 
 class Context(object):
