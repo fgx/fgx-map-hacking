@@ -85,7 +85,8 @@ def load_module_models(app, module):
 
 def register_local_modules(app):
 	cur = os.path.abspath(__file__)
-	sys.path.append(os.path.dirname(cur) + '/modules')
+	#sys.path.append(os.path.dirname(cur) + '/modules')
+	sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
 	for m in MODULES:
 		mod_name = '%s.views' % m['name']
 		#print "import mod=" + mod_name
