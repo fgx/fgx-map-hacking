@@ -4,8 +4,8 @@
 from fgx import db
 
 
-
-class FixMeUp(db.Model):
+## TODO
+class Fix(db.Model):
 	
 	__tablename__ = 'fix222'
 	
