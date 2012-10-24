@@ -1,9 +1,11 @@
 
 ## First attemp at Flask + sqlAlchemy + Postgis
 
-from fgx import db
-from geoalchemy import GeometryColumn, Point, Geometry, GeometryDDL
 
+from geoalchemy import GeometryColumn, Point, Geometry, GeometryDDL
+from geoalchemy.postgis import PGComparator
+
+from fgx import db
 from settings import FGX_SRID
 
 
@@ -22,7 +24,7 @@ class Dme(db.Model):
 	freq_mhz = db.Column(db.String(10))
 	range_km = db.Column(db.String(10))
 	bias_km = db.Column(db.Integer())
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID))
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Dme: %s>" % (self.icao)
@@ -37,7 +39,7 @@ class Fix(db.Model):
 	
 	fix_pk = db.Column(db.Integer(), primary_key=True)
 	fix = db.Column(db.String(10), index=True)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID))
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 GeometryDDL(Fix.__table__)
 
@@ -58,7 +60,7 @@ class Ndb(db.Model):
 	range_nm = db.Column(db.Integer())
 	range_m = db.Column(db.Integer())
 	
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID))
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Ndb: %s>" % (self.ident)
@@ -84,7 +86,7 @@ class Vor(db.Model):
 	# TODO What is this exactly ?
 	variation = db.Column(db.String(10))
 	
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID))
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Vor: %s>" % (self.ident)

@@ -19,11 +19,8 @@ ctx = app.test_request_context()
 ctx.push()
 
 ## No import the db
-from fgx import db
-ses = db.session
+#from fgx import db
+#ses = db.session
 
 
-##======================================
-## create's all tables
-#db.create_all()
 

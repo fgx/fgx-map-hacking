@@ -12,10 +12,11 @@ import sys
 import os
 from optparse import OptionParser
 
-##from fgx import shell_config
+from www import shell
 from www import settings
+from www.fgx.dbase import db_utils
 
-Z = settings.TEMP_DIR + "/unzipped/xplane/"
+#Z = settings.TEMP_DIR + "/unzipped/xplane/"
 
 x_files = ['fix', 'nav', 'ndb', 'vor', 'apt', "all"]
 
@@ -53,11 +54,29 @@ if len(args) == 0:
 	sys.exit(1)
 	
 ## Check command is valid
-if not args[0] in ["import", "empty", "nuke", "create"]:
+if not args[0] in ["import", "empty", "nuke", "create", "dropall", "drop"]:
 	print "Error: `%s` is invalid command " % args[0]
 	parser.print_help()
 	sys.exit(1)
 command = args[0]
+
+
+
+
+
+## Create
+if command == "create":
+	
+	db_utils.create_all()
+	sys.exit(0)
+
+
+## Drop All
+if command == "dropall":
+	
+	db_utils.drop_all()
+	sys.exit(0)
+
 
 ## Check import command valid
 if command == "import":

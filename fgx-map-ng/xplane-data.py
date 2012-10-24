@@ -11,11 +11,7 @@ import os
 #import commands
 from optparse import OptionParser
 
-"""
-xpath = os.path.abspath(os.path.join(os.path.dirname(__file__), "flask_app"))  
-if not xpath in sys.path:
-	sys.path.insert(0, xpath)
-"""
+
 from www import shell
 from www.fgx.xplane import server, nav
 
