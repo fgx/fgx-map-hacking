@@ -17,6 +17,8 @@ def drop_all_tables():
 	print "Drop All"
 	db.drop_all()
 	
+	
+	
 def drop_table(table):
 	
 	print "Drop: %s" % table

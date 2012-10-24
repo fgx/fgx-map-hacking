@@ -34,6 +34,7 @@ BROWSER_SECRET_KEY = 'Ianreakkboredwitheveryonegettingexistedaboutprofilightsima
 CACHE_TYPE = 'memcached'
 CACHE_MEMCACHED_SERVERS = ['127.0.0.1:11211']
 
+
 # When behind a load balancer, set CANONICAL_NAME to the value contained in
 # Host headers (e.g. 'www.example.org')
 CANONICAL_NAME = '127.0.0.1'

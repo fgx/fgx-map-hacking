@@ -39,7 +39,7 @@ class Fix(db.Model):
 	__tablename__ = 'fix'
 	
 	fix_pk = db.Column(db.Integer(), primary_key=True)
-	fix = db.Column(db.String(10), index=True)
+	fix = db.Column(db.String(10), index=True, nullable=False)
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
 GeometryDDL(Fix.__table__)

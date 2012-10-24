@@ -28,10 +28,10 @@ parser.add_option(	"-v",
 
 
 
-from fgx import shell_config
+from www import shell
 
 #from fgx.mpnet import dns_bot
-from fgx.mpnet import mp_telnet
+from www.fgx.mpnet import mp_telnet
 
 
 
