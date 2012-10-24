@@ -54,7 +54,7 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			pnt =  WKTSpatialElement('POINT(%s %s)' % (parts[0], parts[1])) 
 			
 			
-			obs = Fix.objects.filter(fix=ident)
+			obs = session.query(Fix).filter(fix=ident)
 			if len(obs) == 0:
 				ob = Fix()
 			else:
