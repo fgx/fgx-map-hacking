@@ -52,18 +52,22 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 				print "  > line %s >>" % c, parts
 			
 			ident = parts[2]
-			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
-			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			
-			print pnt
+			## Check if fix in in DB already
 			obs = db.session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:
+				## Not in DB so create and add
 				ob = Fix()
 				db.session.add(ob)
 			else:
+				## Found, so its the first one
 				ob = obs[0]
+			
+			## Update the object and save
+			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
+			#print pnt
 			ob.fix = ident
-			ob.wkb_geometry = WKTSpatialElement(pnt) #, settings.FGX_SRID)
+			ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
 			db.session.commit()
 			
 		
