@@ -3,6 +3,8 @@ import sys
 import fileinput
 import datetime
 
+from fgx import db
+
 from geoalchemy import WKTSpatialElement
 from fgx.navaids.models import Fix
 #from django.contrib.gis.geos import Point, GEOSGeometry
@@ -54,14 +56,15 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			pnt =  WKTSpatialElement('POINT(%s %s)' % (parts[0], parts[1])) 
 			
 			
-			obs = session.query(Fix).filter(fix=ident)
+			obs = db.session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:
 				ob = Fix()
+				db.session.add(ob)
 			else:
 				ob = obs[0]
 			ob.fix = parts[2]
 			ob.wkb_geometry = pnt
-			ob.save()
+			db.session.commit()
 			
 		
 		
