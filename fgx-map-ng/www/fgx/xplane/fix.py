@@ -62,7 +62,7 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 				db.session.add(ob)
 			else:
 				ob = obs[0]
-			ob.fix = parts[2]
+			ob.fix = ident
 			ob.wkb_geometry = WKTSpatialElement(pnt) #, settings.FGX_SRID)
 			db.session.commit()
 			
