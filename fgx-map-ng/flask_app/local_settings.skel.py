@@ -18,3 +18,9 @@ DB_PASS = ''
 
 DB_SCHEMA = 'skeleton_schema'
 DB_NAME = 'skeleton'
+
+
+TEMP_DIR = "/home/map/_TEMP"
+
+DATA_DIR = "/home/map/_DATA"
+
