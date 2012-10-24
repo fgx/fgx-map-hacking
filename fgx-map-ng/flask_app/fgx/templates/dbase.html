@@ -1,4 +1,24 @@
-{% extends "layout/base.html" %}
+
+
+{% extends "_base.html" %}
+{% import "_macros.html" as mac with context %}
+
+
+{% set page_title = "Db Struct" %}
+
+
+
+
+{% block header %}
+
+{{ mac.ext_js() }}
+<script type="text/javascript" src="static/js/main.1.js"></script>
+<script type="text/javascript" src="static/js/dbase/dbase_columns_grid.js"></script>
+<script type="text/javascript" src="static/js/dbase/dbase_databases_grid.js"></script>
+<script type="text/javascript" src="static/js/dbase/dbase_tables_grid.js"></script>
+<script type="text/javascript" src="static/js/dbase/dbase_browser.js"></script>
+
+{% endblock header %}
 
 
 

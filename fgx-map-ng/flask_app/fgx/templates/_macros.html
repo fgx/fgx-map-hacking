@@ -1,0 +1,8 @@
+
+
+{##  Ext js ##}
+{% macro ext_js(ver="3.4.0") %}
+	<script type="text/javascript" src="{{config.FGX_STATIC_URL}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
+	<script type="text/javascript" src="{{config.FGX_STATIC_URL}}/js/ext-{{ver}}/ext-all.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{config.FGX_STATIC_URL}}/js/ext-{{ver}}/resources/css/ext-all.css" />
+{% endmacro %}

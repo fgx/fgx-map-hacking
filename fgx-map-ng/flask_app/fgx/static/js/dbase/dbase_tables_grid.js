@@ -12,7 +12,7 @@ FGx.DBaseTablesGrid = Ext.extend(Ext.grid.GridPanel, {
 			idProperty: "table",
 			ssortInfo: {},
 			proxy: new Ext.data.HttpProxy({
-				ssurl: "/ajax/airports/NULL",
+				url: "/ajax/airports/NULL",
 				method: 'GET'
 			}),
 			root: "tables"
@@ -53,7 +53,7 @@ FGx.DBaseTablesGrid = Ext.extend(Ext.grid.GridPanel, {
 	load_tables: function(database){
 		console.log("TablesGrid.load_tables for db=", database);
 		var u = "/ajax/dbase/" + database;
-		console.log(u);
+		console.log("u=", u);
 		
 		this.storeX.load({url: u});
 		

@@ -42,7 +42,7 @@ this.tabPanel  = new Ext.Panel({
 	renderTo: "widget_div",
 	activeTab: 0,
 	plain: true,
-	height: WIDGET_HEIGHT,
+	height: window.innerHeight - 5,
 	items: [
 		this.databasesGrid,
 		this.tablesGrid,
