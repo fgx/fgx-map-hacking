@@ -16,13 +16,16 @@ from www import shell
 from www import settings
 from www.fgx.dbase import db_utils
 
-#Z = settings.TEMP_DIR + "/unzipped/xplane/"
+
 
 x_files = ['fix', 'nav', 'ndb', 'vor', 'apt', "all"]
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
+usage += "    create - create database scbemas\n"
+usage += "    drop [tables] - eg drop fix ndb vor\n"
+usage += "    dropall - Drops ALL database tables\n"
 usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
 parser = OptionParser(usage=usage)
  
@@ -62,7 +65,7 @@ command = args[0]
 
 
 
-
+#############################################################################
 
 ## Create
 if command == "create":
@@ -99,7 +102,7 @@ if command == "import":
 	if x_file == "fix":
 	
 		from fgx.xplane import fix
-		fix.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		fix.import_dat(dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	
 	elif x_file == "nav":
 		from fgx.xplane import nav

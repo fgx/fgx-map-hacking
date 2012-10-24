@@ -3,21 +3,25 @@ import sys
 import fileinput
 import datetime
 
+from geoalchemy import WKTSpatialElement
+from fgx.navaids.models import Fix
 #from django.contrib.gis.geos import Point, GEOSGeometry
 
 """
 from fgx.nav.models import Fix
 import settings
 """
+import settings
 
 #print "TEMP", settings.TEMP_DIR
+UN_ZIP_DIR = settings.TEMP_DIR + "/unzipped/xplane/"
 
-def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
+def import_dat( dev_mode=False, verbose=1, empty=False):
 	
-	file_path = zip_dir + "/earth_fix.dat"
+	file_path = UN_ZIP_DIR + "/earth_fix.dat"
 	
 	if verbose > 0:
-		print "> Importing Fix: ", zip_dir
+		print "> Importing Fix: ", UN_ZIP_DIR
 	
 	started = datetime.datetime.now()
 		
@@ -47,7 +51,7 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 			
 			ident = parts[2]
 			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
-			pnt = GEOSGeometry( 'POINT(%s %s)' % (parts[0], parts[1]) ) ## << WOrks 
+			pnt =  WKTSpatialElement('POINT(%s %s)' % (parts[0], parts[1])) 
 			
 			
 			obs = Fix.objects.filter(fix=ident)
