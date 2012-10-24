@@ -18,7 +18,7 @@ from www.fgx.dbase import db_utils
 
 
 
-x_files = ['fix', 'nav', 'ndb', 'vor', 'apt', "all"]
+x_files = ['fix', 'nav', 'ndb', 'vor']
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
@@ -77,10 +77,24 @@ if command == "create":
 ## Drop All
 if command == "dropall":
 	
-	db_utils.drop_all()
+	db_utils.drop_all_tables()
 	sys.exit(0)
 
+	
+## Drop tables
+if command == "drop":
+	
+	if len(args) == 1:
+		print "Error: Need a table to drop "
+		sys.exit(1)
+	
+	for a in args[1:]:
+		db_utils.drop_table(a)
+	sys.exit(0)
 
+	
+#############################################################################	
+	
 ## Check import command valid
 if command == "import":
 	if len(args) == 1:

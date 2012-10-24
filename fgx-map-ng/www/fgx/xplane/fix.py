@@ -7,6 +7,8 @@ from fgx import db
 
 from geoalchemy import WKTSpatialElement
 from fgx.navaids.models import Fix
+import geos
+
 #from django.contrib.gis.geos import Point, GEOSGeometry
 
 """
