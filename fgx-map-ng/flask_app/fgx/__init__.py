@@ -2,57 +2,50 @@ import json, os, re, sys
 
 from flask import Flask
 #from pytz.gae import pytz # NOTE: Import gae.pytz before Babel!!!
-#from flaskext.babel import Babel
+
+
 from flask.ext.cache import Cache
-#from flaskext.debugtoolbar import DebugToolbarExtension
 from flask.ext.sqlalchemy import SQLAlchemy
-#from repoze.browserid.middleware import BrowserIdMiddleware
-#from werkzeug.contrib.securecookie import SecureCookie
 
-#from . import filters
-
-__all__ = ['create_app', 'db'] #, 'cache']
+#from flaskext.debugtoolbar import DebugToolbarExtension
 
 
-# A list of app modules and their prefixes. Each APP entry must contain a
-# 'name', the remaining arguments are optional. An optional 'models': False
-# argument can be given to disable loading models for a given module.
-NOT_USED_MODULES = [
-	#{'name': 'airports',  'url_prefix': '/'},
-	#{'name': 'navaids',  'url_prefix': '/'},
+
+#__all__ = ['create_app', 'db'] #, 'cache']
+
 	
-	{'name': 'dbase', 'url_prefix': '/'},
-	#{'name': 'mpservers', 'url_prefix': '/'},
-	{'name': 'xmap', 'url_prefix': '/'},
-	#{'name': 'mod3', 'url_prefix': '/scenery'  },
-]
+app = Flask(__name__, static_path='/static', template_folder='templates')
 
-# Create the app
-def create_app(name = __name__):
-	
-	app = Flask(__name__, static_path='/static', template_folder='templates')
-	
-	app.config.from_object(__name__)
-	app.config.from_object('settings')
-	app.config.from_envvar('SKELETON_SETTINGS', silent=True)
+app.config.from_object(__name__)
+app.config.from_object('settings')
+app.config.from_envvar('SKELETON_SETTINGS', silent=True)
 	
 	
-	#babel.init_app(app)
-	cache.init_app(app)
-	db.init_app(app)
-	
-	#filters.init_app(app)
-	register_local_modules(app)
+cache = Cache() 
+cache.init_app(app)
 
-	app.wsgi_app = ProxyFixupHelper(app.wsgi_app)
+db = SQLAlchemy()
+db.init_app(app)
 
-	#print db, cache
-	# Enable the DebugToolbar
-	if app.config['DEBUG_TOOLBAR']:
-		toolbar = DebugToolbarExtension(app)
+#################################################################
+## Import all the views as models so they are registered on load
+
+import dbase.views
+
+import navaids.views
+import navaids.models
+
+import xmap.views
 
 
-	return app
+
+
+
+# Enable the DebugToolbar
+if app.config['DEBUG_TOOLBAR']:
+	toolbar = DebugToolbarExtension(app)
+
+
 
 
 
@@ -77,24 +70,6 @@ def load_module_models(app, module):
 	return True
 
 
-def register_local_modules(app):
-	#cur = os.path.abspath(__file__)
-	#sys.path.append(os.path.dirname(cur) + '/modules')
-	#sys.path.append(os.path.dirname(cur) + '/') # pete moving from subdir
-	
-	## dbase
-	from dbase.views import mod as dbaseModule
-	app.register_blueprint(dbaseModule)
-	
-	
-	## navaids
-	from navaids.views import mod as navaidsModule
-	app.register_blueprint(navaidsModule)
-	from navaids import models
-	
-	## xmap
-	from xmap.views import mod as xmapModule
-	app.register_blueprint(xmapModule)
   
 	
 
@@ -144,14 +119,8 @@ class ProxyFixupHelper(object):
 			if host:
 				environ['REMOTE_ADDR'] = host
 		return self.app(environ, start_response)
-		
-##############################################################
-# Flask Extensions
-#babel = Babel() << for later said peteffs
-cache = Cache() #<< for later said peteffs
 
+app.wsgi_app = ProxyFixupHelper(app.wsgi_app)
 
-# Models are added to the db's metadata when create_app() is actually called.
-db = SQLAlchemy()
 
 

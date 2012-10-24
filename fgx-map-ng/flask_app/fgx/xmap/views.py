@@ -1,14 +1,14 @@
-from flask import Blueprint, render_template, request
 
 
-mod = Blueprint('xmap', __name__)
+from flask import render_template, request
 
+from fgx import app
 
 class Context(object):
 	pass
 
 	
-@mod.route('/')
+@app.route('/')
 def index():
 	c = Context()
 	c.remote_addr = request.environ['REMOTE_ADDR']
