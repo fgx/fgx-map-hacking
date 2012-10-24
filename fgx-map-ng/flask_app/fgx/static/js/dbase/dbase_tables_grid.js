@@ -43,19 +43,18 @@ FGx.DBaseTablesGrid = Ext.extend(Ext.grid.GridPanel, {
 	
 	row_click: function(grd, rowIdx, e){
 		var table = this.getStore().getAt(rowIdx).get("table");
-		console.log("FireEvent: TablesGrid.table=", table);
+		//console.log("FireEvent: TablesGrid.table=", table);
 		this.fireEvent("table", table);
 		
-		//alert("yes");	
 	},
 	
 	
 	load_tables: function(database){
-		console.log("TablesGrid.load_tables for db=", database);
+		//console.log("TablesGrid.load_tables for db=", database);
 		var u = "/ajax/dbase/" + database;
-		console.log("u=", u);
-		
-		this.storeX.load({url: u});
+		//console.log("u=", u);
+		this.storeX.proxy.setUrl(u);
+		this.storeX.load();
 		
 	}
 	

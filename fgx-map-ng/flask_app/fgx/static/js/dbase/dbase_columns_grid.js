@@ -13,7 +13,7 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
 			ssortInfo: {},
 			url: "/ajax/dbase",
 			root: "columns",
-			autoLoad: true
+			autoLoad: false
 			
 		});
 		
@@ -33,10 +33,11 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
 	},
 	
 	load_columns: function(database, table){
-		console.log("Load Columns", database, table);
+		//console.log("Load Columns", database, table);
 		var u = "/ajax/dbase/" + database + "/" + table;
-		this.getStore().load({url: u});
-		console.log(u);
+		this.getStore().proxy.setUrl(u);
+		this.getStore().load();
+		//console.log(u);
 	}
 	
 }); 
