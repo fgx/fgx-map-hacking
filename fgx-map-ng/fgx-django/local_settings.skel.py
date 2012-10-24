@@ -13,10 +13,10 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'fgx-map-ng',                      
-        'USER': 'fgxmap2',                    
-        'PASSWORD': 'secret',                 
-        'HOST': 'localhost',                    
+        'NAME': '',                      
+        'USER': '',                    
+        'PASSWORD': '',                 
+        'HOST': '',                    
         'PORT': '',             
     }
 }
