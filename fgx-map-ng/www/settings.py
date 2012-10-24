@@ -13,8 +13,8 @@ PROJ_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 ## Absolute path to the django app , currently in fgx/
 APP_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
-TEMP_DIR = GIT_ROOT + "/_temp"
-
+TEMP_DIR = None
+DATA_DIR = None
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -72,15 +72,23 @@ SQLALCHEMY_ECHO = False
 # If users want to pass specific werkzeug options
 WERKZEUG_OPTS = {'host': LISTEN_HOST, 'port' : 8866}
 
+
+#######################################################
 # Import user-provided values
 try:
 	from local_settings import *
 except ImportError:
 	print "Fatal Error: `local_settings.py` is missing"
 	sys.exit(0)
-	pass
 
+## idiot checks
+if TEMP_DIR == None:
+	print "Fatal Error: No  `TEMP_DIR` in `local_settings.py`"
+	sys.exit(0)
 
+if DATA_DIR == None:
+	print "Fatal Error: No  DATA_DIR in `local_settings.py`"
+	sys.exit(0)
 
 
 # Derived values

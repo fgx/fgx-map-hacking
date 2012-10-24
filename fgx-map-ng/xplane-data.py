@@ -5,14 +5,15 @@
 #
 
 
+
 import sys
 import os
 #import commands
 from optparse import OptionParser
 
 
-from fgx import shell_config
-from fgx.xplane import server, nav
+from www import shell
+from www.fgx.xplane import server, nav
 
 
 ## Handle Command Args

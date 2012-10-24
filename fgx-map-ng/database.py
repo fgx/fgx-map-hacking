@@ -12,16 +12,20 @@ import sys
 import os
 from optparse import OptionParser
 
-from fgx import shell_config
-from fgx import settings
+from www import shell
+from www import settings
+from www.fgx.dbase import db_utils
 
-Z = settings.TEMP_DIR + "/unzipped/xplane/"
 
-x_files = ['fix', 'nav', 'ndb', 'vor', 'apt', "all"]
+
+x_files = ['fix', 'nav', 'ndb', 'vor']
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
+usage += "    create - create database scbemas\n"
+usage += "    drop [tables] - eg drop fix ndb vor\n"
+usage += "    dropall - Drops ALL database tables\n"
 usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
 parser = OptionParser(usage=usage)
  
@@ -53,12 +57,44 @@ if len(args) == 0:
 	sys.exit(1)
 	
 ## Check command is valid
-if not args[0] in ["import", "empty", "nuke", "create"]:
+if not args[0] in ["import", "empty", "nuke", "create", "dropall", "drop"]:
 	print "Error: `%s` is invalid command " % args[0]
 	parser.print_help()
 	sys.exit(1)
 command = args[0]
 
+
+
+#############################################################################
+
+## Create
+if command == "create":
+	
+	db_utils.create_all()
+	sys.exit(0)
+
+
+## Drop All
+if command == "dropall":
+	
+	db_utils.drop_all_tables()
+	sys.exit(0)
+
+	
+## Drop tables
+if command == "drop":
+	
+	if len(args) == 1:
+		print "Error: Need a table to drop "
+		sys.exit(1)
+	
+	for a in args[1:]:
+		db_utils.drop_table(a)
+	sys.exit(0)
+
+	
+#############################################################################	
+	
 ## Check import command valid
 if command == "import":
 	if len(args) == 1:
@@ -80,7 +116,7 @@ if command == "import":
 	if x_file == "fix":
 	
 		from fgx.xplane import fix
-		fix.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		fix.import_dat(dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	
 	elif x_file == "nav":
 		from fgx.xplane import nav

@@ -42,7 +42,7 @@ def columns(table):
 		
 	ret = []
 	for row in db.session.execute(sql).fetchall():
-		ret.append(row[0])
+		ret.append({'column': row[0]})
 		
 	#sql = "SELECT column_name FROM information_schema.columns WHERE table_name ='table';"
 		 
