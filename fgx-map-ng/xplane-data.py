@@ -5,14 +5,19 @@
 #
 
 
+
 import sys
 import os
 #import commands
 from optparse import OptionParser
 
-
-from fgx import shell_config
-from fgx.xplane import server, nav
+"""
+xpath = os.path.abspath(os.path.join(os.path.dirname(__file__), "flask_app"))  
+if not xpath in sys.path:
+	sys.path.insert(0, xpath)
+"""
+from www import shell
+from www.fgx.xplane import server, nav
 
 
 ## Handle Command Args

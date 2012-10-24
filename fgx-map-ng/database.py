@@ -12,8 +12,8 @@ import sys
 import os
 from optparse import OptionParser
 
-from fgx import shell_config
-from fgx import settings
+##from fgx import shell_config
+from www import settings
 
 Z = settings.TEMP_DIR + "/unzipped/xplane/"
 

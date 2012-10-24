@@ -33,7 +33,8 @@ db.init_app(app)
 import dbase.views
 
 import navaids.views
-import navaids.models
+
+#import navaids.models
 
 import xmap.views
 
