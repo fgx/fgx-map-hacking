@@ -10,7 +10,7 @@ from settings import FGX_SRID
 
 
 ##=======================================================
-class Dme(models.Model):
+class Dme(db.Model):
 	
 	__tablename__ = "dme"
 	
@@ -43,7 +43,7 @@ GeometryDDL(Fix.__table__)
 
 
 ##=======================================================
-class Ndb(models.Model):
+class Ndb(db.Model):
 	
 	__tablename__ = "ndb"
 	
@@ -72,9 +72,9 @@ class Vor(db.Model):
 	
 	vor_pk = db.Column(db.Integer, primary_key=True)
 	
-	ident = db.Column(db.String(10, index=True)
-	name = db.Column(db.String(50, index=True)
-	freq_mhz = db.Column(db.String(6)
+	ident = db.Column(db.String(10), index=True)
+	name = db.Column(db.String(50), index=True)
+	freq_mhz = db.Column(db.String(6))
 	
 	elevation_ft = db.Column(db.Integer())
 	elevation_m = db.Column(db.Integer())
@@ -82,7 +82,7 @@ class Vor(db.Model):
 	range_m = db.Column(db.Integer())
 	
 	# TODO What is this exactly ?
-	variation = db.Column(db.String(10)
+	variation = db.Column(db.String(10))
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID))
 
