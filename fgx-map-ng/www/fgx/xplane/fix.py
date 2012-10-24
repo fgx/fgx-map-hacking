@@ -53,9 +53,9 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			
 			ident = parts[2]
 			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
-			pnt =  WKTSpatialElement('POINT(%s %s)' % (parts[0], parts[1])) 
+			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			
-			
+			print pnt
 			obs = db.session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:
 				ob = Fix()
@@ -63,7 +63,7 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			else:
 				ob = obs[0]
 			ob.fix = parts[2]
-			ob.wkb_geometry = pnt
+			ob.wkb_geometry = WKTSpatialElement(pnt) #, settings.FGX_SRID)
 			db.session.commit()
 			
 		
