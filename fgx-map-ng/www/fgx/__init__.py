@@ -31,6 +31,7 @@ import dbase.views
 
 import navaids.views
 
+import mpnet.views
 #import navaids.models
 
 import xmap.views

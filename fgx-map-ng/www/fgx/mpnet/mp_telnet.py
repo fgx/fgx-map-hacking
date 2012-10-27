@@ -159,6 +159,7 @@ def update_cache(verbose=False):
 	dt = str(datetime.datetime.now())
 	if not reply.error:
 		cache.set("flights", reply.flights)
+		#print reply.flights
 		cache.set("last_update", dt )
 		print "updated cache: ", dt
 	else:

@@ -1,10 +1,15 @@
 
-from django.views.decorators.cache import never_cache
-from django.core.cache import cache
+
+from flask import render_template, request, jsonify
 
 import settings
 import helpers as h
-from mpnet import mp_telnet
+#from mpnet import mp_telnet
+
+
+
+from fgx import app
+from fgx import cache
 
 """
 
@@ -47,15 +52,13 @@ def mpservers():
 
 	
 """	
-
-@never_cache
-@h.render_to_json()
-def flights(request):
+@app.route('/ajax/mp/flights', methods=['GET'])
+def flights():
 	
-	dic = dict(success=True, flights=None)
+	payload = dict(success=True, flights=None)
 	
 	## If we got a custom server then its a manual call
-	server = request.GET.get('server')
+	server = request.args.get('server')
 	if server:
 		i = h.to_int(server)
 		if i > 0:
@@ -67,12 +70,12 @@ def flights(request):
 		
 	else:	
 		## Were reading from cache
-		server = settings.FGX_MP_SERVER
+		#server = settings.FGX_MP_SERVER
 		
-		dic['flights'] = cache.get("flights")
-		dic['source'] = "memcache"
-		dic['last_update'] = cache.get("last_update")
+		payload['flights'] = cache.get("flights")
+		payload['source'] = "memcache"
+		payload['last_update'] = cache.get("last_update")
 
 		
-	return dic
+	return jsonify(payload)
 	

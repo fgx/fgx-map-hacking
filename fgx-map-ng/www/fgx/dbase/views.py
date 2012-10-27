@@ -2,7 +2,7 @@
 
 import datetime
 
-from flask import Blueprint, render_template, request, jsonify
+from flask import render_template, request, jsonify
 import queries as q
 
 from fgx import app
@@ -27,7 +27,7 @@ def dbase():
 @app.route('/ajax/dbase')
 def dbase_databases_ajax():
 	
-	payload = {'success/': True}
+	payload = {'success': True}
 	
 	payload['databases'] = q.databases()
 	
@@ -39,7 +39,7 @@ def dbase_databases_ajax():
 @app.route('/ajax/dbase/<database>')
 def dbase_tables_ajax(database):
 	
-	payload = {'success/': True}
+	payload = {'success': True}
 	
 	payload['tables'] = q.tables(database)
 	
@@ -50,7 +50,7 @@ def dbase_tables_ajax(database):
 @app.route('/ajax/dbase/<database>/<table>')
 def dbase_columns_ajax(database, table):
 	
-	payload = {'success/': True}
+	payload = {'success': True}
 	
 	payload['columns'] = q.columns(table)
 	
