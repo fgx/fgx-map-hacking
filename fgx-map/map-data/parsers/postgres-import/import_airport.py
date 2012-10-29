@@ -6,7 +6,6 @@
 #
 
 import sys, csv, os, re, psycopg2, yaml
-from xml.dom.minidom import Document
 
 # geographiclib 1.24 by (c) Charles Karney
 from geographiclib.geodesic import Geodesic
@@ -27,7 +26,9 @@ conf = open('database.yaml')
 confMap = yaml.load(conf)
 conf.close()
 
-apt = Document()
+fields = open('airport.yaml')
+airportMap = yaml.load(fields)
+fields.close()
 
 connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
 
@@ -35,21 +36,6 @@ pointscollected = ""
 
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
-			
-#cur.execute("DROP TABLE IF EXISTS airport;")
-#cur.execute("CREATE TABLE airport (apt_id serial PRIMARY KEY, \
-#			apt_gps_code varchar, \
-#			apt_name_ascii varchar, \
-#			apt_elev_ft varchar, \
-#			apt_center geometry(Point,3857));")
-
-
-propertylist = apt.createElement("PropertyList")
-apt.appendChild(propertylist)
-
-airport = apt.createElement("airport")
-propertylist.appendChild(airport)
-	
 	
 # Collect runway points to insert Airport with ST_Centroid
 def collectpoints(points):
@@ -57,7 +43,7 @@ def collectpoints(points):
 	pointscollected += points
 
 
-def insert_airport(apt_identifier, apt_name_ascii, apt_elev_ft):
+def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft):
 
 	lastcoma = len(pointscollected)-1
 	pointscollected2 = pointscollected[0:lastcoma] 
@@ -72,7 +58,7 @@ def insert_airport(apt_identifier, apt_name_ascii, apt_elev_ft):
 		
 	#print sql
 	
-	params = [apt_identifier, apt_name_ascii, apt_elev_ft, apt_geometry]
+	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_geometry]
 	cur.execute(sql, params)
 				
 
@@ -84,34 +70,29 @@ def readapt():
 		# airport line
 		if line.startswith("1  "):
 		
-			apt_linecode = line[0]+line[1]
-			apt_elev_ft = line[5]+line[6]+line[7]+line[8]+line[9]
+			apt_xplane_code = line[0]+line[1]
+			apt_elev_ft_read = line[5]+line[6]+line[7]+line[8]+line[9]
 			apt_deprecated1 = line[11]
 			apt_deprecated2 = line[13]
-			apt_identifier = line[15]+line[16]+line[17]+line[18]
+			apt_gps_code_read = line[15]+line[16]+line[17]+line[18]
 			
 			tilend = len(line)
-			apt_name_ascii = line[20:tilend-2]
+			apt_name_ascii_read = line[20:tilend-2]
 						
-			global apt_identifier_ins
-			global apt_name_ascii_ins
-			global apt_elev_ft_ins
+			global apt_gps_code
+			apt_gps_code = apt_gps_code_read
+			global apt_name_ascii
+			apt_name_ascii = apt_name_ascii_read
+			global apt_elev_ft
+			apt_elev_ft = apt_elev_ft_read
 			
-			apt_identifier_ins = apt_identifier
-			apt_name_ascii_ins = apt_name_ascii
-			apt_elev_ft_ins = apt_elev_ft
-			
-			print "Processing airport:" + apt_identifier
+			print "Processing airport:" + apt_gps_code
 		
 		# runways
 		if line.startswith("100 "):
 		
-			runway = apt.createElement("runway")
 			rwy_id = str(line[31:34])
 			rwy_id_end = str(line[87:90])
-			runway.setAttribute("id", rwy_id.replace(" ",""))
-			runway.setAttribute("end", rwy_id_end.replace(" ",""))
-			airport.appendChild(runway)
 		
 			rwy_linecode = line[0:3]
 			rwy_width =  line[5:13]
@@ -176,11 +157,11 @@ def readapt():
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
 			collectpoints(points)
 
-			#print "Airport: "+apt_identifier+ " " + "Runway: " + rwy_id + ", " + rwy_id_end
+			#print "Airport: "+apt_gps_code+ " " + "Runway: " + rwy_id + ", " + rwy_id_end
 
 readapt()
 
-insert_airport(apt_identifier_ins, apt_name_ascii_ins, apt_elev_ft_ins)
+insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft)
 
 conn.commit()
 cur.close()
