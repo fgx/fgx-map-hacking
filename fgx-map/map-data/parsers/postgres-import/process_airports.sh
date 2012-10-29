@@ -10,7 +10,7 @@ date
 for FILE in ../../parsers/apt-extractor/extracted/*/*.dat
 	do
 	echo 'Processing '$FILE
-	python airport.py $FILE
+	python import_airport.py $FILE
 done
 
 date
