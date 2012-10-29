@@ -36,29 +36,71 @@ pointscollected = ""
 
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
+
+runwaycount = 0
+rwy_len_collect = []
+apt_max_rwy_len_ft = 0
+apt_min_rwy_len_ft = 0
+apt_size = ""
 	
-# Collect runway points to insert Airport with ST_Centroid
-def collectpoints(points):
+# Collect runway points to insert airport center with ST_Centroid for all runway points,
+# collect runway length to insert min/max runway length (feet)
+def collectpoints(points, rwy_len):
 	global pointscollected
 	pointscollected += points
+	
+	global runwaycount
+	runwaycount += 1
+	
+	global rwy_len_collect
+	rwy_len_collect.append(rwy_len)
 
+# Look for min/max runway length in rwy_len_collect
+# prepared for a more sophisticated list type
+def get_rwy_min_max(rwy_len_collect):
 
-def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft):
+	how_many_large_rwy = 0
+	
+	lenlist = zip(rwy_len_collect)
+	
+	global apt_max_rwy_len_ft
+	global apt_min_rwy_len_ft
+	apt_max_rwy_len_ft = int(round(float(map(max, zip(*lenlist))[0])))
+	apt_min_rwy_len_ft = int(round(float(map(min, zip(*lenlist))[0])))
+	
+	# Counting runways longer than 3500 meters
+	for i in rwy_len_collect:
+		if int(float(i)) >= 3500:
+			how_many_large_rwy += 1
+	
+	# 3 runways >= 3500 meter > large
+	# at least 1 runway >= 3500 meter > medium
+	# rest is small
+	global apt_size
+	if how_many_large_rwy >= 3:
+		apt_size = "large"
+	elif how_many_large_rwy >= 1:
+		apt_size = "medium"
+	else:
+		apt_size = "small"
+
+def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
 	lastcoma = len(pointscollected)-1
 	pointscollected2 = pointscollected[0:lastcoma] 
 	
-	apt_geometry = "MULTIPOINT ("+pointscollected2+")"
-	#print apt_geometry
+	apt_center = "MULTIPOINT ("+pointscollected2+")"
 	
-	# Geometry is reprojected to EPSG:3857
+	apt_rwy_count = runwaycount
+	
+	# Geometry is reprojected to EPSG:3857, should become a command line parameter
 	sql = '''
-		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_center)
-		VALUES (%s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
+		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_center)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
 		
 	#print sql
 	
-	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_geometry]
+	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_center]
 	cur.execute(sql, params)
 				
 
@@ -70,7 +112,7 @@ def readapt():
 		# airport line
 		if line.startswith("1  "):
 		
-			apt_xplane_code = line[0]+line[1]
+			apt_xplane_code_read = line[0]+line[1]
 			apt_elev_ft_read = line[5]+line[6]+line[7]+line[8]+line[9]
 			apt_deprecated1 = line[11]
 			apt_deprecated2 = line[13]
@@ -85,6 +127,12 @@ def readapt():
 			apt_name_ascii = apt_name_ascii_read
 			global apt_elev_ft
 			apt_elev_ft = apt_elev_ft_read
+			global apt_elev_m
+			apt_elev_m = int(float(apt_elev_ft_read)*0.3048)
+			global apt_type
+			apt_type = "land"
+			global apt_xplane_code
+			apt_xplane_code = apt_xplane_code_read
 			
 			print "Processing airport:" + apt_gps_code
 		
@@ -155,13 +203,15 @@ def readapt():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collectpoints(points)
+			collectpoints(points, rwy_length_meters)
 
 			#print "Airport: "+apt_gps_code+ " " + "Runway: " + rwy_id + ", " + rwy_id_end
 
 readapt()
 
-insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft)
+get_rwy_min_max(rwy_len_collect)
+
+insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 
 conn.commit()
 cur.close()
