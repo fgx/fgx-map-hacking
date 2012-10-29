@@ -47,6 +47,9 @@ apt_center_lon = ""
 apt_center_lat = ""
 apt_authority = ""
 apt_services = ""
+apt_country = ""
+apt_name_utf8 = ""
+apt_local_code = ""
 	
 # Collect runway points to insert airport center with ST_Centroid for all runway points,
 # collect runway length to insert min/max runway length (feet)
@@ -132,7 +135,7 @@ def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_ty
 	cur.execute(sql2)
 				
 
-def readapt():
+def readxplane():
 	reader = open(inputfile, 'r')
 	
 	for line in reader:
@@ -162,7 +165,7 @@ def readapt():
 			global apt_xplane_code
 			apt_xplane_code = apt_xplane_code_read
 			
-			print "Processing airport:" + apt_gps_code
+			print "--- Processing airport:" + apt_gps_code
 		
 		# runways
 		if line.startswith("100 "):
@@ -251,7 +254,7 @@ def readapt():
 			
 			
 
-readapt()
+readxplane()
 
 get_rwy_min_max(rwy_len_collect)
 
@@ -259,13 +262,40 @@ get_ifr(lightingcollected)
 
 get_authority(bcn_type)
 
-
-
 insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 
 conn.commit()
 cur.close()
 conn.close()
 
-print "--- SUCESS ---"
+print "--- "+apt_gps_code+" xplane-data imported."
+
+# Now take data from ourairports for various fields, if available
+
+def readourairports():
+	reader = open("../../data/ourairports/airports.csv", 'r')
+	csvreader = csv.reader(reader)
+	
+	conn = psycopg2.connect(connectstring)
+	cur = conn.cursor()
+
+	for row in csvreader:
+		if row[1] == apt_gps_code:
+			global apt_local_code
+			apt_local_code = row[13]
+			global apt_country
+			apt_country = row[8]
+			global apt_name_utf8
+			apt_name_utf8 = row[3]
+			
+			sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_gps_code='"+row[1]+"';"
+			cur.execute(sql3)
+	conn.commit()
+	cur.close()
+	conn.close()
+	
+	print "--- Updated '"+apt_name_utf8+"' with ourairports data."
+	print "--- SUCCESS"
+		
+readourairports()
 
