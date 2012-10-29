@@ -45,6 +45,8 @@ lightingcollected = []
 apt_ifr = "0"
 apt_center_lon = ""
 apt_center_lat = ""
+apt_authority = ""
+apt_services = ""
 	
 # Collect runway points to insert airport center with ST_Centroid for all runway points,
 # collect runway length to insert min/max runway length (feet)
@@ -98,6 +100,13 @@ def get_ifr(lightingcollected):
 		if i != "0":
 			global apt_ifr
 			apt_ifr = "1"
+			
+def get_authority(bcn_type):
+	global apt_authority
+	if bcn_type == "4":
+		apt_authority = "mil"
+	else:
+		apt_authority = "civ"
 		
 def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
@@ -110,15 +119,15 @@ def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_ty
 	
 	# Geometry is reprojected to EPSG:3857, should become a command line parameter
 	sql = '''
-		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_center)
-		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
+		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
 		
 	#print sql
 	
-	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_center]
+	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
 	
-	# Now this second query gives lon/lat (postgis x/y) for the center point
+	# Now this second query gives lon/lat (postgis x/y) as text for the center point
 	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_gps_code='"+apt_gps_code+"';"
 	cur.execute(sql2)
 				
@@ -227,12 +236,30 @@ def readapt():
 			
 
 			#print "Airport: "+apt_gps_code+ " " + "Runway: " + rwy_id + ", " + rwy_id_end
+			
+		# One green and two white flashes means military airport - no civil aircraft allowed.
+		# xplane data beacon type code 4: military
+		if line.startswith("18 "):
+			bcn_type_read = line[31:32]
+			global bcn_type
+			bcn_type = str(bcn_type_read)
+			
+		# When there is a tower frequency, there are services probably
+		if line.startswith("54 "):
+			global apt_services
+			apt_services = "1"
+			
+			
 
 readapt()
 
 get_rwy_min_max(rwy_len_collect)
 
 get_ifr(lightingcollected)
+
+get_authority(bcn_type)
+
+
 
 insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 
