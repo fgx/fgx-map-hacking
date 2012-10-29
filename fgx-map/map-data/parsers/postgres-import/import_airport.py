@@ -32,20 +32,23 @@ fields.close()
 
 connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
 
-pointscollected = ""
-
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
 
+pointscollected = ""
 runwaycount = 0
 rwy_len_collect = []
 apt_max_rwy_len_ft = 0
 apt_min_rwy_len_ft = 0
 apt_size = ""
+lightingcollected = []
+apt_ifr = "0"
+apt_center_lon = ""
+apt_center_lat = ""
 	
 # Collect runway points to insert airport center with ST_Centroid for all runway points,
 # collect runway length to insert min/max runway length (feet)
-def collectpoints(points, rwy_len):
+def collecting(points, rwy_len, rwy_approach_lighting):
 	global pointscollected
 	pointscollected += points
 	
@@ -54,6 +57,12 @@ def collectpoints(points, rwy_len):
 	
 	global rwy_len_collect
 	rwy_len_collect.append(rwy_len)
+	
+	# Check if there is an approach light and indicate if IFR is available or not
+	# Needs to be discussed this one
+	global lightingcollected
+	lightingcollected += rwy_approach_lighting
+
 
 # Look for min/max runway length in rwy_len_collect
 # prepared for a more sophisticated list type
@@ -73,9 +82,9 @@ def get_rwy_min_max(rwy_len_collect):
 		if int(float(i)) >= 3500:
 			how_many_large_rwy += 1
 	
-	# 3 runways >= 3500 meter > large
-	# at least 1 runway >= 3500 meter > medium
-	# rest is small
+	# 3 runways >= 3500 meter = large
+	# at least 1 runway >= 3500 meter = medium
+	# rest = small
 	global apt_size
 	if how_many_large_rwy >= 3:
 		apt_size = "large"
@@ -83,7 +92,13 @@ def get_rwy_min_max(rwy_len_collect):
 		apt_size = "medium"
 	else:
 		apt_size = "small"
-
+		
+def get_ifr(lightingcollected):
+	for i in lightingcollected:
+		if i != "0":
+			global apt_ifr
+			apt_ifr = "1"
+		
 def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
 	lastcoma = len(pointscollected)-1
@@ -95,13 +110,17 @@ def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_ty
 	
 	# Geometry is reprojected to EPSG:3857, should become a command line parameter
 	sql = '''
-		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_center)
-		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
+		INSERT INTO airport (apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_center)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
 		
 	#print sql
 	
-	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_center]
+	params = [apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_center]
 	cur.execute(sql, params)
+	
+	# Now this second query gives lon/lat (postgis x/y) for the center point
+	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_gps_code='"+apt_gps_code+"';"
+	cur.execute(sql2)
 				
 
 def readapt():
@@ -203,13 +222,17 @@ def readapt():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collectpoints(points, rwy_length_meters)
+			collecting(points, rwy_length_meters, rwy_approach_lighting)
+			
+			
 
 			#print "Airport: "+apt_gps_code+ " " + "Runway: " + rwy_id + ", " + rwy_id_end
 
 readapt()
 
 get_rwy_min_max(rwy_len_collect)
+
+get_ifr(lightingcollected)
 
 insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 
