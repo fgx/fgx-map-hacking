@@ -208,6 +208,17 @@ def readxplane():
 			
 			# Now some additional data, not in apt.dat
 			
+			# The NZSP problem
+			if apt_gps_code == "NZSP":
+				print rwy_lat_end
+				if rwy_lat_end > -90.0:
+					rwy_lat_end = ( float(rwy_lat_end) + 90.0 )*-1.0
+					print rwy_lat_end
+				print rwy_lat
+				if rwy_lat > -90.0:
+					rwy_lat = ( float(rwy_lat) + 90.0 )*-1.0
+					print rwy_lat
+			
 			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
 			rwy_length_meters = str(rwy_length.get("s12"))
 			
@@ -215,6 +226,7 @@ def readxplane():
 			
 			rwy_heading = rwy_length.get("azi2")
 			
+		
 			rwy_length_end = Geodesic.WGS84.Inverse(float(rwy_lat_end), float(rwy_lon_end), float(rwy_lat), float(rwy_lon))
 			rwy_heading_end = str(360.0 + rwy_length_end.get("azi2"))
 			
@@ -261,17 +273,22 @@ def readxplane():
 			apt_services = "0"
 			
 		if line.startswith("\r\n"):
-			print "NEWLINE"
+			# Now this is a new line, means a new airport
+			try:
+				get_rwy_min_max(rwy_len_collect)
+
+				get_ifr(lightingcollected)
+
+				get_authority(bcn_type)
+
+				insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 			
-			get_rwy_min_max(rwy_len_collect)
-
-			get_ifr(lightingcollected)
-
-			get_authority(bcn_type)
-
-			insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
-			
-			conn.commit()
+				conn.commit()
+				
+			except:
+				print "There is an error in apt.dat (probably newline)."
+				print "Last airport scanned: "+apt_gps_code
+				pass
 			
 			global pointscollected
 			pointscollected = ""
