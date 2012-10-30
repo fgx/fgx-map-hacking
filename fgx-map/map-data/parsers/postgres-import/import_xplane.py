@@ -76,6 +76,7 @@ def collecting(points, rwy_len, rwy_approach_lighting):
 	global lightingcollected
 	lightingcollected += rwy_approach_lighting
 
+	#print rwy_len_collect
 
 # Look for min/max runway length in rwy_len_collect
 # prepared for a more sophisticated list type
@@ -311,62 +312,64 @@ def readxplane():
 		# WATER runways, we need it for some calculation, i.e. centerpoint
 		if line.startswith("101 "):
 		
-			rwy_linecode = line[0:3]
-			rwy_width =  line[4:11]
-			rwy_buoys = line[12:13]
-			rwy_id = str(line[14:16])
-			rwy_lat = line[17:30]
-			rwy_lon = line[31:44]
+			wwy_linecode = line[0:3]
+			wwy_width =  line[4:11]
+			wwy_buoys = line[12:13]
+			wwy_id = str(line[14:16])
+			wwy_lat = line[17:31]
+			wwy_lon = line[32:45]
 			
-			rwy_id_end = str(line[45:47])
-			rwy_lat_end = line[48:62]
-			rwy_lon_end = line[63:76]
+			wwy_id_end = str(line[46:48])
+			wwy_lat_end = line[49:62]
+			wwy_lon_end = line[63:79]
+			
+			wwy_approach_lighting = "0"
+			
+			#print wwy_linecode 
+			#print wwy_width 
+			#print wwy_buoys
+			#print wwy_id
+			#print wwy_lat
+			#print wwy_lon
+			
+			#print wwy_id_end
+			#print wwy_lat_end
+			#print wwy_lon_end
 			
 			# Now some additional data, not in apt.dat
 			
-			# The NZSP problem
-			if apt_gps_code == "NZSP":
-				if rwy_lat_end > -90.0:
-					rwy_lat_end = ( float(rwy_lat_end) + 90.0 )*-1.0
-					log.write("NZSP problem solved in airport "+apt_gps_code+", runway "+rwy_number+"\n")
-				if rwy_lat > -90.0:
-					rwy_lat = ( float(rwy_lat) + 90.0 )*-1.0
-					log.write("NZSP problem solved in airport "+apt_gps_code+", runway "+rwy_number+"\n")
+			wwy_length = Geodesic.WGS84.Inverse(float(wwy_lat), float(wwy_lon), float(wwy_lat_end), float(wwy_lon_end))
+			wwy_length_meters = str(wwy_length.get("s12"))
 			
-			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
-			rwy_length_meters = str(rwy_length.get("s12"))
+			print "Meters: "+wwy_length_meters
 			
-			rwy_length_feet = rwy_length.get("s12")*3.048
+			wwy_length_feet = wwy_length.get("s12")*3.048
 			
-			rwy_heading = rwy_length.get("azi2")
+			wwy_heading = wwy_length.get("azi2")
 			
-		
-			rwy_length_end = Geodesic.WGS84.Inverse(float(rwy_lat_end), float(rwy_lon_end), float(rwy_lat), float(rwy_lon))
-			rwy_heading_end = str(360.0 + rwy_length_end.get("azi2"))
-			
-			rwy_threshold_direct = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_heading),float(rwy_threshold))
-			rwy_threshold_direct_end = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),rwy_length_end.get("azi2"),float(rwy_threshold_end))
+			wwy_length_end = Geodesic.WGS84.Inverse(float(wwy_lat_end), float(wwy_lon_end), float(wwy_lat), float(wwy_lon))
+			wwy_heading_end = str(360.0 + wwy_length_end.get("azi2"))
 
 			# Calculating runway points
-			rwy_direct_A = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_heading-90.0),(float(rwy_width))/2)
-			A_lat = rwy_direct_A.get("lat2")
-			A_lon = rwy_direct_A.get("lon2")
+			wwy_direct_A = Geodesic.WGS84.Direct(float(wwy_lat),float(wwy_lon),float(wwy_heading-90.0),(float(wwy_width))/2)
+			A_lat = wwy_direct_A.get("lat2")
+			A_lon = wwy_direct_A.get("lon2")
 			
-			rwy_direct_B = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_heading+90.0),(float(rwy_width))/2)
-			B_lat = rwy_direct_B.get("lat2")
-			B_lon = rwy_direct_B.get("lon2")
+			wwy_direct_B = Geodesic.WGS84.Direct(float(wwy_lat),float(wwy_lon),float(wwy_heading+90.0),(float(wwy_width))/2)
+			B_lat = wwy_direct_B.get("lat2")
+			B_lon = wwy_direct_B.get("lon2")
 			
-			rwy_direct_C = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),-360.0 + float(rwy_heading_end)-90.0,(float(rwy_width))/2)
-			C_lat = rwy_direct_C.get("lat2")
-			C_lon = rwy_direct_C.get("lon2")
+			wwy_direct_C = Geodesic.WGS84.Direct(float(wwy_lat_end),float(wwy_lon_end),-360.0 + float(wwy_heading_end)-90.0,(float(wwy_width))/2)
+			C_lat = wwy_direct_C.get("lat2")
+			C_lon = wwy_direct_C.get("lon2")
 			
-			rwy_direct_D = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),-360.0 + float(rwy_heading_end)+90.0,(float(rwy_width))/2)
-			D_lat = rwy_direct_D.get("lat2")
-			D_lon = rwy_direct_D.get("lon2")
+			wwy_direct_D = Geodesic.WGS84.Direct(float(wwy_lat_end),float(wwy_lon_end),-360.0 + float(wwy_heading_end)+90.0,(float(wwy_width))/2)
+			D_lat = wwy_direct_D.get("lat2")
+			D_lon = wwy_direct_D.get("lon2")
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, rwy_length_meters, rwy_approach_lighting)
+			collecting(points, wwy_length_meters, wwy_approach_lighting)
 			
 			
 		# One green and two white flashes means military airport - no civil aircraft allowed.
