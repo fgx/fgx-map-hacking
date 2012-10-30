@@ -4,3 +4,10 @@ So for whatever reasons, please sticj stuff in here.. We can use in many places 
 
 Anything u think is wrong, or should be added then PLEASE go an correct..
 
+Reserved "key" for each file is
+
+INFO: "yes info in CAPS and a brief decription"
+CHANGES:
+    - A list of changes and updated and by who to make things nice.
+
+

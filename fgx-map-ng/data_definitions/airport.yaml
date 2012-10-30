@@ -15,9 +15,9 @@ apt_code:
 
 apt_is_icao:
     type: boolean
-    notes: "A flag to indicate id this airport is a proper ICAO airport and code"
+    notes: "A flag to indicate if this airport is a proper ICAO airport and code"
 
-apt_local_code:
+apt_iata_code:
     type: string
     length: 8
     example: "SFO"
@@ -34,7 +34,7 @@ apt_country_code:
     length: 2
     example: "US"
     notes: "The ISO country code, capitalised. This is the short eg UK and a ref to country_codes"
-    upstream: country_codes > country_code
+    reference: country_codes > country_code
 
 
 
