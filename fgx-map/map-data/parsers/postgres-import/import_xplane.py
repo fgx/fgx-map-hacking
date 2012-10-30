@@ -85,19 +85,19 @@ def get_rwy_min_max(rwy_len_collect):
 	
 	global apt_max_rwy_len_ft
 	global apt_min_rwy_len_ft
-	apt_max_rwy_len_ft = int(round(float(map(max, zip(*lenlist))[0])))
-	apt_min_rwy_len_ft = int(round(float(map(min, zip(*lenlist))[0])))
+	apt_max_rwy_len_ft = int(round(float(map(max, zip(*lenlist))[0])*3.048))
+	apt_min_rwy_len_ft = int(round(float(map(min, zip(*lenlist))[0])*3.048))
 	
-	# Counting runways longer than 3500 meters
+	# Counting runways longer than 3200 meters / 9700 feet
 	for i in rwy_len_collect:
-		if int(float(i)) >= 3500:
+		if int(float(i)*3.048) >= 9700:
 			how_many_large_rwy += 1
 	
-	# 3 runways >= 3500 meter = large
-	# at least 1 runway >= 3500 meter = medium
+	# 2 runways >= 3200 meter = large
+	# at least 1 runway >= 3200 meter = medium
 	# rest = small
 	global apt_size
-	if how_many_large_rwy >= 3:
+	if how_many_large_rwy >= 2:
 		apt_size = "large"
 	elif how_many_large_rwy >= 1:
 		apt_size = "medium"
