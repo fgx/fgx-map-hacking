@@ -361,7 +361,9 @@ def readxplane():
 			collecting(points, wwy_length_meters, wwy_approach_lighting)
 			
 		# HELIPADS, we need it for heliport calculation, i.e. centerpoint
-		if line.startswith("102 "):
+		# but we dont want to take this points into account for regular airports
+		# so we look out for (H)
+		if line.startswith("102 ") and apt_name_ascii.startswith("[H]"):
 		
 			pad_linecode = line[0:3]
 			pad_id = str(line[4:6])
@@ -382,7 +384,7 @@ def readxplane():
 			
 			# We get the centerpoint of the pad, but we want the center point at shape start, 
 			# to get it calculated like runways and to prevent me from writing all separated for pads
-			pad_direct = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_heading_tr-180.0),(float(pad_length_m))/2)
+			pad_direct = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_heading_tr)-180.0,(float(pad_length_m))/2)
 			pad_lat = pad_direct.get("lat2")
 			pad_lon = pad_direct.get("lon2")
 			
@@ -395,7 +397,7 @@ def readxplane():
 			
 			print "Meters: "+pad_length_m
 			
-			pad_length_ft = pad_length_m*3.048
+			pad_length_ft = float(pad_length_m)*3.048
 			
 			pad_heading = pad_length.get("azi2")
 			
@@ -403,19 +405,19 @@ def readxplane():
 			pad_heading_end = str(360.0 + pad_length_end.get("azi2"))
 
 			# Calculating runway points
-			pad_direct_A = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading-90.0),(float(pad_width))/2)
+			pad_direct_A = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading-90.0),(float(pad_width_m))/2)
 			A_lat = pad_direct_A.get("lat2")
 			A_lon = pad_direct_A.get("lon2")
 			
-			pad_direct_B = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading+90.0),(float(pad_width))/2)
+			pad_direct_B = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading+90.0),(float(pad_width_m))/2)
 			B_lat = pad_direct_B.get("lat2")
 			B_lon = pad_direct_B.get("lon2")
 			
-			pad_direct_C = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)-90.0,(float(pad_width))/2)
+			pad_direct_C = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)-90.0,(float(pad_width_m))/2)
 			C_lat = pad_direct_C.get("lat2")
 			C_lon = pad_direct_C.get("lon2")
 			
-			pad_direct_D = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)+90.0,(float(pad_width))/2)
+			pad_direct_D = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)+90.0,(float(pad_width_m))/2)
 			D_lat = pad_direct_D.get("lat2")
 			D_lon = pad_direct_D.get("lon2")
 			
