@@ -5,7 +5,7 @@
 # Do not change or remove this copyright notice.
 #
 
-import sys, csv, os, re, psycopg2, yaml
+import sys, time, datetime, csv, os, re, psycopg2, yaml
 
 # geographiclib 1.24 by (c) Charles Karney
 from geographiclib.geodesic import Geodesic
@@ -23,6 +23,9 @@ if not os.path.exists(sys.argv[1]):
 inputfile = sys.argv[1]
 
 log = open("import_xplane.log", 'w')
+
+starttime = time.asctime()
+log.write("Import started: "+starttime+"\n")
 
 conf = open('database.yaml')
 confMap = yaml.load(conf)
@@ -144,10 +147,17 @@ def insert_airport(apt_gps_code, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_ty
 def readxplane():
 	reader = open(inputfile, 'r')
 	
+	
+	print "Processing "+inputfile+" ..."
+	log.write("Processing "+inputfile+" ...\n")
+	
 	reader.next()
 	reader.next()
 	reader.next()
 	reader.next()
+	
+	print "First 4 lines of apt.dat skipped."
+	log.write("First 4 lines of apt.dat skipped.\n")
 	
 	for line in reader:
 	
@@ -176,9 +186,11 @@ def readxplane():
 			global apt_xplane_code
 			apt_xplane_code = apt_xplane_code_read
 			
-			print "--- Processing airport:" + apt_gps_code
+			#print "Processing airports ..." + apt_gps_code
 		
-		# runways
+		# runways, we need it for some calculation, i.e. centerpoint
+		# but also for getting shortest/longest runway, to set the apt_ifr
+		# flag and much more
 		if line.startswith("100 "):
 		
 			rwy_id = str(line[31:34])
@@ -324,18 +336,22 @@ def readxplane():
 			
 			
 
-#readxplane()
+readxplane()
 
-# The parser has some tolerance with wrong newlines ... but:
-# Please remove this wrong newlines in apt.dat
-# then I dont need to remove duplicates at the end
+# The parser has some tolerance with wrong newlines, but we
+# need to remove duplicates produced with tolerance.
+# This is not that dangerous, because the apt_identifier should
+# be unique anyway ...
 cur.execute("DELETE FROM airport WHERE apt_id NOT IN (SELECT MAX(dup.apt_id) FROM airport As dup GROUP BY dup.apt_gps_code);")
-print "Removing duplicates ... this will take some time. Be patient.\n"
+print "Removing duplicates ...\n"
 log.write("Duplicates removed.\n")
 conn.commit()
 
 cur.close()
 conn.close()
+
+endtime = time.asctime()
+log.write("Finished: "+endtime+"\n")
 
 log.close()
 
