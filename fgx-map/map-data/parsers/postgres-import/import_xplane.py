@@ -404,7 +404,7 @@ def readxplane():
 		if line.startswith("\r\n"):
 			# Now this is a new line, means a new airport
 			
-			warnings.filterwarnings("ignore", category=SyntaxWarning)
+			#warnings.filterwarnings("ignore", category=SyntaxWarning)
 			
 			try:
 				get_rwy_min_max(rwy_len_collect)
