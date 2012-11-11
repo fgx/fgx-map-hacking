@@ -5,7 +5,7 @@ import settings
 
 
 ## Converts to int
-# @retval Noneif vaid, else integer
+# @retval None if invalid, else int
 def to_int(v):
 	try:
 		i = int(v)

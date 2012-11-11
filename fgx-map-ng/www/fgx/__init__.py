@@ -8,24 +8,21 @@ from flask.ext.cache import Cache
 from flask.ext.sqlalchemy import SQLAlchemy
 
 #from flaskext.debugtoolbar import DebugToolbarExtension
-
-
-
 #__all__ = ['create_app', 'db'] #, 'cache']
 
 	
-app = Flask(__name__, static_path='/static', template_folder='templates')
+app = Flask(__name__, static_url_path='/static', template_folder='templates')
 
 app.config.from_object(__name__)
 app.config.from_object('settings')
-app.config.from_envvar('SKELETON_SETTINGS', silent=True)
+#app.config.from_envvar('SKELETON_SETTINGS', silent=True)
 	
 	
-cache = Cache() 
-cache.init_app(app)
+cache = Cache(app) 
+#cache.init_app(app)
 
-db = SQLAlchemy()
-db.init_app(app)
+db = SQLAlchemy(app)
+#db.init_app(app)
 
 #################################################################
 ## Import all the views as models so they are registered on load
@@ -34,6 +31,7 @@ import dbase.views
 
 import navaids.views
 
+import mpnet.views
 #import navaids.models
 
 import xmap.views
@@ -51,6 +49,7 @@ if app.config['DEBUG_TOOLBAR']:
 
 
 # Load the local modules
+"""
 def load_module_models(app, module):
 	if 'models' in module and module['models'] == False:
 		print "out ########?"
@@ -69,13 +68,7 @@ def load_module_models(app, module):
 			print '[MODEL] Other(%s): %s' % (model_name, e.message)
 		return False
 	return True
-
-
-  
-	
-
-		
-	"""
+	DEAD UNDER HERE
 		#for m in MODULES:
 		print ">> %s " % m['name']
 		mod_name = '%s.views' % m['name']
@@ -102,7 +95,8 @@ def load_module_models(app, module):
 			load_module_models(app, m)
 			app.register_module(views.module, url_prefix=url_prefix)
 
-	"""
+"""
+
 # Seeing 127.0.0.1 is almost never correct, promise.  We're proxied 99.9% of
 # the time behind a load balancer or proxying webserver. Pull the right IP
 # address from the correct HTTP header. In my hosting environments, I inject

@@ -6,3 +6,23 @@
 	<script type="text/javascript" src="{{config.FGX_STATIC_URL}}/js/ext-{{ver}}/ext-all.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{config.FGX_STATIC_URL}}/js/ext-{{ver}}/resources/css/ext-all.css" />
 {% endmacro %}
+
+
+{#--------------------------------#}
+{# OpenLayers and assoc #}
+{% macro openlayers_js() %}
+
+	{# Openlayers #}
+	<script src="{{c.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+
+    {# GeoExt #}
+    <script type="text/javascript" src="{{c.static_url}}/js/GeoExt-1.1/lib/GeoExt.js"></script>
+
+	{# Proj4js #}
+	<script src="{{c.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
+
+
+	{# OSM stuff #} 
+	<script src="{{c.static_url}}/js/osm/OpenStreetMap.js"></script>
+
+{% endmacro %}

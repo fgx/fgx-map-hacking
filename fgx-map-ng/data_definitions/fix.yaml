@@ -1,0 +1,22 @@
+DESCRIPTION: "Describes the fields for a named point FIX"
+
+fix_pk:
+    type: primary
+    notes: "The primary key for a database entry, entity or cache"
+
+fix:
+    type: string
+    length: 8?
+    example: "WOBUN"
+    notes: "The Fix ident "
+
+fix_lat:
+    type: string
+    example: "1.2342345"
+    info: "The lattide north to south in decimal degrees"
+    
+
+fix_lon:
+    type: string
+    example: "The longitude east to west in decimal degrees"
+    

@@ -17,7 +17,7 @@ from optparse import OptionParser
 usage = "usage: %prog [-h -j -n -s -v] "
 parser = OptionParser(usage=usage)
 parser.add_option(	"-i", nargs=1, 
-					action="store", type="int",  dest="interval", default=3, 
+					action="store", type="int",  dest="interval", default=5, 
 					help="Write javascript configuration to `/etc/config.js`"
 					)   
 parser.add_option(	"-v", 
@@ -28,10 +28,10 @@ parser.add_option(	"-v",
 
 
 
-from fgx import shell_config
+from www import shell
 
 #from fgx.mpnet import dns_bot
-from fgx.mpnet import mp_telnet
+from www.fgx.mpnet import mp_telnet
 
 
 

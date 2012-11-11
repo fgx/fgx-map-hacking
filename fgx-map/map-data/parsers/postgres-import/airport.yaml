@@ -1,0 +1,100 @@
+# airport
+apt_id:
+    field: apt_id
+    type: serial PRIMARY KEY
+    size: 
+
+apt_identifier:
+    field: apt_identifier
+    type: varchar
+    size: 8
+
+apt_local_code:
+    field: apt_local_code
+    type: varchar
+    size: 8
+
+apt_name_ascii:
+    field: apt_name_ascii
+    type: varchar
+    size: 255
+
+apt_name_utf8:
+    field: apt_name_utf8
+    type: varchar
+    size: 255
+
+apt_country:
+    field: apt_country
+    type: varchar
+    size: 8
+
+apt_type:
+    field: apt_type
+    type: varchar
+    size: 255
+
+apt_elev_ft:
+    field: apt_elev_ft
+    type: varchar
+    size: 32
+
+apt_elev_m:
+    field: apt_elev_m
+    type: varchar
+    size: 32
+
+apt_authority:
+    field: apt_authority
+    type: varchar
+    size: 32
+
+apt_services:
+    field: apt_services
+    type: varchar
+    size: 1
+
+apt_ifr:
+    field: apt_ifr
+    type: varchar
+    size: 1
+
+apt_size:
+    field: apt_size
+    type: varchar
+    size: 32
+
+apt_center:
+    field: apt_center
+    type: geometry(Point,3857)
+    size:
+
+apt_center_lon:
+    field: apt_center_lon
+    type: varchar
+    size: 32
+
+apt_center_lat:
+    field: apt_center_lat
+    type: varchar
+    size: 32
+
+apt_rwy_count:
+    field: apt_rwy_count
+    type: varchar
+    size: 2
+
+apt_min_rwy_len_ft:
+    field: apt_min_rwy_len_ft
+    type: varchar
+    size: 32
+
+apt_max_rwy_len_ft:
+    field: apt_max_rwy_len_ft
+    type: varchar
+    size: 32
+
+apt_xplane_code:
+    field: apt_xplane_code
+    type: varchar
+    size: 8

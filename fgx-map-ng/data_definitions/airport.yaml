@@ -1,0 +1,40 @@
+DESCRIPTION: "Describes the fields for an airport"
+
+apt_pk:
+    type: primary
+    notes: "The primary key for a database entry, entity or cache"
+
+apt_code:
+    type: string
+    length: 8
+    example: "KSFO"
+    notes: "The ICAO Code"
+    def: "The ICAO code is the standard and links etc"
+    - standards:
+      link: here
+
+apt_is_icao:
+    type: boolean
+    notes: "A flag to indicate if this airport is a proper ICAO airport and code"
+
+apt_iata_code:
+    type: string
+    length: 8
+    example: "SFO"
+    notes: "The IATA Code"
+
+apt_name:
+    type: string
+    length: 50
+    example: "San Fransisco USA"
+    notes: "Short description of airport"
+
+apt_country_code:
+    type: string
+    length: 2
+    example: "US"
+    notes: "The ISO country code, capitalised. This is the short eg UK and a ref to country_codes"
+    reference: country_codes > country_code
+
+
+

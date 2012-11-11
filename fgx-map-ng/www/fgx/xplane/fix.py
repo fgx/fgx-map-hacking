@@ -7,9 +7,9 @@ from fgx import db
 
 from geoalchemy import WKTSpatialElement
 from fgx.navaids.models import Fix
-import geos
 
-#from django.contrib.gis.geos import Point, GEOSGeometry
+#import geos
+#from django.contrib.gis.geos import GEOSGeometry #, Point
 
 """
 from fgx.nav.models import Fix
@@ -35,6 +35,9 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			print "  > Emptied fix table"
 		Fix.objects.all().delete()
 	
+	conn = db.session.condnection()
+
+	
 	c = 0
 	for raw_line in fileinput.input(file_path):
 		
@@ -55,6 +58,12 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 			
 			ident = parts[2]
 			
+			obs = db.session.query(Fix).filter_by(fix=ident).all()
+			print obs
+			#sql = "insert into fix(fix, wkb_geometry)values( %s, %s)"
+			conn.execute("insert into fix(fix)values( '%s')" % ident)
+			db.session.commit()
+			"""
 			## Check if fix in in DB already
 			obs = db.session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:
@@ -66,12 +75,16 @@ def import_dat( dev_mode=False, verbose=1, empty=False):
 				ob = obs[0]
 			
 			## Update the object and save
+			
 			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			#print pnt
+			print "##", parts
+			print pnt
 			ob.fix = ident
 			ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
+			#ob.wkb_geometry = GEOSGeometry(pnt)
 			db.session.commit()
-			
+			"""
 		
 		
 		if dev_mode and c == 1000:
