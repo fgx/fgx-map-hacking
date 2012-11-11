@@ -13,7 +13,7 @@ this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
-
+//================================================================
 this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 	"Radar Markers", 
 	{styleMap: new OpenLayers.StyleMap({
@@ -42,11 +42,17 @@ this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 				fillOpacity: 1,
 			}
 		})
-	}
+	}, {  visibility: true}
 )
 
 
 
+this.get_layers = function(){
+	
+	LAYERS.push( this.flightMarkersLayer );
+	return LAYERS;
+	
+}
 
 
 this.on_nav_toggled = function(butt, checked){
@@ -76,12 +82,13 @@ this.on_me = function(){
 	alert("TODO, this will allow custom settings");
 }
 this.displayProjection = new OpenLayers.Projection("EPSG:4326"),
+this.projection = new OpenLayers.Projection("EPSG:3857")
 
 this.map = new OpenLayers.Map({
 		allOverlays: false,
 		units: 'm',
 		// this is the map projection here
-		projection: new OpenLayers.Projection("EPSG:3857"),
+		projection: this.projection,
 		//sphericalMercator: true,
 		
 		// this is the display projection, I need that to show lon/lat in degrees and not in meters
@@ -118,8 +125,8 @@ this.mapPanel = new GeoExt.MapPanel({
         // we do not want all overlays, to try the OverlayLayerContainer
     map: this.map,
     center: this.centerpoint,
-    zoom: 7,
-	layers: LAYERS,
+    zoom: 2,
+	layers: this.get_layers(),
 	
 	/** Top Toolbar, these are all in button groups */
 	tbar: [
@@ -276,12 +283,10 @@ this.viewport = new Ext.Viewport({
 	]
 });
 
-this.initialize = function(){
-	this.mapPanel.map.addLayer( this.flightMarkersLayer );
-	
-	
-}
 
+this.initialize = function(){
+		
+}
 //==========================================================
 // Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
 this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
@@ -297,10 +302,10 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 		radarLabelMarkers.removeFeatures(existing_lbl);
 	}
 	*/
-	var map = this.mapPanel.map;
+
 	
-	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.displayProjection, map.getProjectionObject() );	
-	if(!map.getExtent().containsPixel(pointImg, false)){
+	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.projection, this.displayProjection );	
+	if(!this.map.getExtent().containsPixel(pointImg, false)){
 		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
 	}
 
@@ -309,9 +314,12 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 				planerotation: mheading
 				}); 
 	imgFeat._callsign = mcallsign;
-	radarImageMarkers.addFeatures([imgFeat]);	
+	this.flightMarkersLayer.addFeatures([imgFeat]);	
+	console.log(mcallsign, mlat, mlon, mheading, maltitude);
+	return
 	
 	
+	//# TODO add the label
 	
 	var gxOff = 4;
 	var gyOff = -8;
@@ -352,7 +360,7 @@ this.flightsWidget.store.on("load", function(store, recs, idx){
 	for(var i = 0; i < recs_length; i++){
 		var rec = recs[i];
 		//console.log(rec.get("callsign"));
-		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("mlon"), rec.get("heading"), rec.get("alt_ft") );
+		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
 		//self.show_radar(rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("altitude"));
 	};
 }, this);
