@@ -6,14 +6,13 @@ FGx.MainViewport = function(){
 var self = this;	
 
 var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
-
-	
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
-this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
-this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
-//================================================================
+
+//===========================================================================
+//= Layers
+//===========================================================================
 this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 	"Radar Markers", 
 	{styleMap: new OpenLayers.StyleMap({
@@ -88,16 +87,16 @@ this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
 );
 
 
-
 this.get_layers = function(){
 	
 	LAYERS.push( this.flightMarkersLayer );
 	LAYERS.push( this.flightLabelsLayer );
-	return LAYERS;
-	
+	return LAYERS;	
 }
 
-
+//===========================================================================
+//= Handlers
+//===========================================================================
 this.on_nav_toggled = function(butt, checked){
 	// @todo:
 	//console.log(butt, checked, butt.navaid);
@@ -124,6 +123,10 @@ this.on_me = function(){
 	FGx.msg("Yes", "it works");
 	alert("TODO, this will allow custom settings");
 }
+
+//===========================================================================
+//= Map Setup
+//===========================================================================
 this.displayProjection = new OpenLayers.Projection("EPSG:4326"),
 this.projection = new OpenLayers.Projection("EPSG:3857")
 
@@ -158,6 +161,12 @@ this.map = new OpenLayers.Map({
 });
 
 //============================================================
+// mapPanel - geoExt
+//============================================================
+this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
+this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
+
+
 this.mapPanel = new GeoExt.MapPanel({
 	
 	frame: false,
@@ -230,11 +239,16 @@ this.mapPanel = new GeoExt.MapPanel({
 						]
 					}
 				},
-				
-				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
-				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
-				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled, 
-					hidden: true, id: "fgx-vortac"}
+				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+					toggleHandler: this.on_nav_toggled
+				},
+				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
+					toggleHandler: this.on_nav_toggled
+				},
+				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+					toggleHandler: this.on_nav_toggled, 
+					hidden: true, id: "fgx-vortac"
+				}
             ]   
 		},
 		{xtype: 'buttongroup', disabled: true,
