@@ -94,6 +94,10 @@ this.get_layers = function(){
 	return LAYERS;	
 }
 
+
+
+
+
 //===========================================================================
 //= Handlers
 //===========================================================================
@@ -177,7 +181,7 @@ this.mapPanel = new GeoExt.MapPanel({
         // we do not want all overlays, to try the OverlayLayerContainer
     map: this.map,
     center: this.centerpoint,
-    zoom: 2,
+    zoom: 5,
 	layers: this.get_layers(),
 	
 	/** Top Toolbar, these are all in button groups */
@@ -223,7 +227,7 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Navigation Aids',
             columns: 5,
             items: [
-				{xtype: "splitbutton", text: "VOR", pressed: true, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
+				{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
 					toggleHandler: this.on_nav_toggled,
 					menu: {
 						items: [
@@ -373,11 +377,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 				}); 
 	imgFeat._callsign = mcallsign;
 	this.flightMarkersLayer.addFeatures([imgFeat]);	
-	console.log(mcallsign, mlat, mlon, mheading, maltitude);
-	//#return
-	
-	
-	//# TODO add the label
+	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
 	
 	var gxOff = 4;
 	var gyOff = -8;
@@ -415,14 +415,15 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 this.flightsWidget.store.on("load", function(store, recs, idx){
 	//console.log(recs.length);
 	//return;
+	this.flightLabelsLayer.removeAllFeatures();
+	this.flightMarkersLayer.removeAllFeatures();
 	recs_length = recs.length;
 	for(var i = 0; i < recs_length; i++){
 		var rec = recs[i];
-		//console.log(rec.get("callsign"));
 		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
-		//self.show_radar(rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("altitude"));
 	};
 }, this);
-	
+
+
 	
 } //< FGx.MainViewport

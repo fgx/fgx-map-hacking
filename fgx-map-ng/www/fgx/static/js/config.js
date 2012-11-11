@@ -70,7 +70,7 @@ LAYERS.push( new OpenLayers.Layer.WMS(
   "VOR",
   "http://map.fgx.ch:81/mapnik/fgxcache.py?",
     {layers: "VOR" , transparent: "True" , format: "image/png" 
-    }, {  visibility: true}
+    }, {  visibility: false}
 ));
 LAYERS.push( new OpenLayers.Layer.WMS(
   "NE Landmass",

@@ -6,18 +6,25 @@ FGx.FlightsWidget = function(){
 var self = this;
 
 this.refresh_rate = 0;
+this.runner = new Ext.util.TaskRunner();
 
 //= Triggered when a refresh toolbar button is clicked
 this.on_refresh_toggled = function(butt, checked){
 	butt.setIconClass( checked ? "icoOn" : "icoOff");
 	if(checked){
-		self.refresh_rate = parseInt(butt.ref_rate, 10);
+		this.runner.stopAll(); // stop if already ruinning
+		this.refresh_rate = parseInt(butt.ref_rate, 10);
+		if(this.refresh_rate === 0){
+			//this.runner.stop()
+		}else{
+			this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
+		}
 	}
 }
 
 //= Riggered for reshresh now
 this.on_refresh_now = function(){
-	self.store.load();
+	this.store.load();
 }
 
 //===========================================================
@@ -45,11 +52,13 @@ this.store = new Ext.data.JsonStore({
 	}
 });
 
-this.load_flights = function(){
+this.update_flights = function(){
 	self.store.load();
 }
 
 
+
+	
 //===========================================================
 //== Renderers 
 // @todo: pete to put in css
@@ -118,17 +127,17 @@ this.grid = new Ext.grid.GridPanel({
             columns: 7,
             items: [
 				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now},
-				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, 
+				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
 					toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-				{text: "2", iconCls: "icoOff", enableToggle: true,  
+				{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this,
 					toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-				{text: "3", iconCls: "icoOff", enableToggle: true,  
+				{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this, 
 					toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-				{text: "4", iconCls: "icoOff", enableToggle: true,  
+				{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this, 
 					toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
-				{text: "5", iconCls: "icoOff", enableToggle: true,  
+				{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this, 
 					toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-				{text: "10", iconCls: "icoOff", enableToggle: true,  
+				{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this,
 					toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
             ]   
 		}
