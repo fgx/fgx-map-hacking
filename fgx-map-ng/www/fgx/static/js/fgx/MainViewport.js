@@ -275,7 +275,7 @@ this.viewport = new Ext.Viewport({
 			plain: true,
 			border: 0,
 			collapsible: true,
-			activeItem: 1,
+			activeItem: 0,
 			items: [
 				//this.mapLayersTree.tree,
 				

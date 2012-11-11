@@ -1,5 +1,8 @@
 
 
+import urllib2
+import json
+
 from flask import render_template, request, jsonify
 
 import settings
@@ -11,49 +14,35 @@ import helpers as h
 from fgx import app
 from fgx import cache
 
-"""
+def get_crossfeed():
+	
+	
+	#cf_data = None #cache.get("cf_data")
+	#if not cf_data:
+	req = urllib2.Request('http://cf.fgx.ch/data')
+	response = urllib2.urlopen(req)
+	cf_data = response.read()
+	#print "remote", cf_data
+	#cache.set("cf_data", cf_data)
+	#workaround
+	cf_data =  cf_data[0:-6] + "]}"
+	return cf_data
+	#return json.loads(cf_data)
 
-@module.route('/flights')
-def flights():
+@app.route('/ajax/mp/flights/cf', methods=['GET'])
+def flights_crossfeed():
 	
-	#Fetches the latest flights from upstream, fgx-mpstatus-bot
-	#return an error if the call is unsuccesful
-	#TODO maybe return return "last memcached ?
+	data =   get_crossfeed()
 	
-	payload = {'success': True}
+	#payload = dict(success=True, data=data)
 	
-	req = urllib2.Request("http://localhost:8099/ajax/mpservers")
-	try:
-		req.urlopen(req)
-	except:
-		print "FAIL", req
-	return Foo
-
-	@module.route('/ajax/mpservers')
-
-def mpservers():
 	
-	#Fetches the latest list of MPservers from upstream, fgx-mpstatus-bot
-	#return an error if the call is unsuccesful
-	#TODO maybe return return "last memcached ?
 	
-	payload = {'success': True}
+	return data
 	
 
-	#req = urllib2.Request("http://localhost:8099/ajax/mpservers")
-	#try:
-	#	req.urlopen(req)
-	#except:
-	#	print "FAIL", req
-
-	
-	#entries = H2.query.all()c
-	return jsonify(payload)
-
-	
-"""	
-@app.route('/ajax/mp/flights', methods=['GET'])
-def flights():
+@app.route('/ajax/mp/flights/telnet', methods=['GET'])
+def flights_telnet():
 	
 	payload = dict(success=True, flights=None)
 	
@@ -78,4 +67,6 @@ def flights():
 
 		
 	return jsonify(payload)
+	
+	
 	
