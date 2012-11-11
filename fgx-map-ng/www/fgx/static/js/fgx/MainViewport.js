@@ -45,11 +45,54 @@ this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 	}, {  visibility: true}
 )
 
+this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+	"Radar Label", 
+	{
+		styleMap:  new OpenLayers.StyleMap({
+			"default": {
+				fill: true,
+				fillOpacity: 1,
+				fillColor: "black",
+				strokeColor: "green",
+				strokeWidth: 1,
+
+				//graphic: false,
+				externalGraphic: "/static/images/fgx-background-black.png",
+				graphicWidth: 50,
+				graphicHeight: 12,
+				graphicOpacity: 0.8,
+				graphicXOffset: "${gxOff}",
+				graphicYOffset: "${gyOff}",
+				
+				
+				fontColor: "white",
+				fontSize: "10px",
+				fontFamily: "sans-serif",
+				fontWeight: "bold",
+				labelAlign: "left",
+				labelXOffset: "${lxOff}", 
+				labelYOffset: "${lyOff}", 
+				label : "${callsign}",
+				//rotation : "${planerotation}",
+
+			},
+			"select": {
+				fillColor: "black",
+				strokeColor: "yellow",
+				pointRadius: 12,
+				fillOpacity: 1,
+			}
+
+		})
+	}
+);
+
 
 
 this.get_layers = function(){
 	
 	LAYERS.push( this.flightMarkersLayer );
+	LAYERS.push( this.flightLabelsLayer );
 	return LAYERS;
 	
 }
@@ -304,7 +347,8 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 	*/
 
 	
-	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.projection, this.displayProjection );	
+	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
+						).transform(this.displayProjection, this.map.getProjectionObject() );	
 	if(!this.map.getExtent().containsPixel(pointImg, false)){
 		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
 	}
@@ -316,7 +360,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 	imgFeat._callsign = mcallsign;
 	this.flightMarkersLayer.addFeatures([imgFeat]);	
 	console.log(mcallsign, mlat, mlon, mheading, maltitude);
-	return
+	//#return
 	
 	
 	//# TODO add the label
@@ -341,14 +385,15 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 	}
 
 	// Add callsign label as separate feature, to have a background color (graphic) with offset
-	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.displayProjection, map.getProjectionObject() );
+	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
+					).transform(this.displayProjection, this.map.getProjectionObject() );
 	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
                 callsign: mcallsign,
 				lxOff: lxOff, lyOff: lyOff,
 				gxOff: gxOff, gyOff: gyOff
 				});
 	lblFeat._callsign = mcallsign;
-	radarLabelMarkers.addFeatures([lblFeat]);	
+	this.flightLabelsLayer.addFeatures([lblFeat]);	
 	
 }
 
