@@ -25,7 +25,7 @@ def get_crossfeed():
 	#print "remote", cf_data
 	#cache.set("cf_data", cf_data)
 	#workaround
-	cf_data =  cf_data[0:-6] + "]}"
+	#cf_data =  cf_data[0:-6] + "]}"
 	return cf_data
 	#return json.loads(cf_data)
 

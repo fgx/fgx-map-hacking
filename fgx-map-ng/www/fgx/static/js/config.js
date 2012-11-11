@@ -84,3 +84,6 @@ LAYERS.push( new OpenLayers.Layer.WMS(
     {layers: "FIX" , transparent: "True" , format: "image/png" 
     }, {  visibility: false}
 ));
+
+
+

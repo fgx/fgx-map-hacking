@@ -69,7 +69,8 @@ this.grid = new Ext.grid.GridPanel({
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
 	store: this.store,
 	loadMask: true,
-	columns: [  //this.selModel,	
+	//sm: new  Ext.grid.RowSelectionModel(),
+	columns: [ 
 		//{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
 		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 140},
 		{header: 'Aircraft',  dataIndex:'model', sortable: true, sssrenderer: this.render_callsign, hidden: false}, 

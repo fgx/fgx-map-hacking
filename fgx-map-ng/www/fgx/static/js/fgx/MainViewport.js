@@ -10,10 +10,44 @@ var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 	
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
-
-
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
+
+
+this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+	"Radar Markers", 
+	{styleMap: new OpenLayers.StyleMap({
+			"default": {
+				strokeColor: "lime",
+				strokeWidth: 1,
+				fillColor: "lime",
+
+				externalGraphic: "/static/images/radar_blip2.png",
+				graphicWidth: 8,
+				graphicHeight: 24,
+				graphicOpacity: 1,
+				graphicXOffset: 0,
+				graphicYOffset: -20,
+				
+				fontColor: "black",
+				fontSize: "12px",
+				fontFamily: "Helvetica, Arial, sans-serif",
+				fontWeight: "bold",
+				rotation : "${planerotation}",
+			},
+			"select": {
+				fillColor: "black",
+				strokeColor: "yellow",
+				pointRadius: 12,
+				fillOpacity: 1,
+			}
+		})
+	}
+)
+
+
+
+
 
 this.on_nav_toggled = function(butt, checked){
 	// @todo:
@@ -41,17 +75,9 @@ this.on_me = function(){
 	FGx.msg("Yes", "it works");
 	alert("TODO, this will allow custom settings");
 }
+this.displayProjection = new OpenLayers.Projection("EPSG:4326"),
 
-//============================================================
-this.mapPanel = new GeoExt.MapPanel({
-	
-	frame: false,
-	plain: true,
-	border: 0,
-	bodyBorder: false,
-    region: "center",
-        // we do not want all overlays, to try the OverlayLayerContainer
-    map: new OpenLayers.Map({
+this.map = new OpenLayers.Map({
 		allOverlays: false,
 		units: 'm',
 		// this is the map projection here
@@ -59,7 +85,7 @@ this.mapPanel = new GeoExt.MapPanel({
 		//sphericalMercator: true,
 		
 		// this is the display projection, I need that to show lon/lat in degrees and not in meters
-		displayProjection: new OpenLayers.Projection("EPSG:4326"),
+		displayProjection: this.displayProjection,
 		
 		// the resolutions are calculated by tilecache, when there is no resolution parameter but a bbox in
 		// tilecache.cfg it shows you resolutions for all calculated zoomlevels in your browser: 
@@ -79,68 +105,23 @@ this.mapPanel = new GeoExt.MapPanel({
 		
 		// zoomlevels 0-13 = 14 levels ?
 		zoomLevels: 20
-	}),
+});
+
+//============================================================
+this.mapPanel = new GeoExt.MapPanel({
+	
+	frame: false,
+	plain: true,
+	border: 0,
+	bodyBorder: false,
+    region: "center",
+        // we do not want all overlays, to try the OverlayLayerContainer
+    map: this.map,
     center: this.centerpoint,
     zoom: 7,
 	layers: LAYERS,
 	
-	/*
-    layers: [
-		
-		new OpenLayers.Layer.WMS( "Natural Earth", 
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
-			layers: 'natural_earth_landmass', 
-			format: 'image/png', 
-			isBaselayer: true 
-			}, {
-				buffer:0,
-				visibility: false
-			}
-		),
-				
-				
-		// create a group layer (with several layers in the "layers" param)
-		// to show how the LayerParamLoader works
-		new OpenLayers.Layer.WMS("VFR",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
-				layers: [
-					"VOR",
-					"DME",
-					"NDB",
-					"FIX"
-				],
-				transparent: true,
-				format: "image/png"
-			}, {
-				isBaseLayer: false,
-				buffer: 0,
-				// exclude this layer from layer container nodes
-				displayInLayerSwitcher: false,
-				visibility: false
-			}
-		),
-		
-		new OpenLayers.Layer.WMS("IFR",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?", {
-				layers: [
-					"ILS",
-					"ILS_Info",
-					"ILS_Marker"
-					],
-					transparent: true,
-					format: "image/png"
-				}, {
-					isBaseLayer: false,
-					buffer: 0,
-					// exclude this layer from layer container nodes
-					displayInLayerSwitcher: false,
-					visibility: true
-			}
-		)
-				
-	], */
-	
-	/** Top Toolbar, these are all in butto groups */
+	/** Top Toolbar, these are all in button groups */
 	tbar: [
 	
 		/** Map Type  */
@@ -187,12 +168,19 @@ this.mapPanel = new GeoExt.MapPanel({
 					toggleHandler: this.on_nav_toggled,
 					menu: {
 						items: [
-							{text: "Show range", checked: false},
-							{text: "Show FOO ", checked: true}
+							{text: "Show range - TODO", checked: false, disabled: true}
 						]
 					}
 				},
-				{text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", toggleHandler: this.on_nav_toggled},
+				{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
+					toggleHandler: this.on_nav_toggled,
+					menu: {
+						items: [
+							{text: "Show range - TODO", checked: false, disabled: true}
+						]
+					}
+				},
+				
 				{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled},
 				{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", toggleHandler: this.on_nav_toggled},
 				{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", toggleHandler: this.on_nav_toggled, 
@@ -288,18 +276,86 @@ this.viewport = new Ext.Viewport({
 	]
 });
 
+this.initialize = function(){
+	this.mapPanel.map.addLayer( this.flightMarkersLayer );
+	
+	
+}
+
+//==========================================================
+// Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
+this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
+
+	// remove xisting iamge/label if exist
+	/*
+	var existing_img = radarImageMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_img){
+		radarImageMarkers.removeFeatures(existing_img);
+	}
+	var existing_lbl  = radarLabelMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_lbl){
+		radarLabelMarkers.removeFeatures(existing_lbl);
+	}
+	*/
+	var map = this.mapPanel.map;
+	
+	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.displayProjection, map.getProjectionObject() );	
+	if(!map.getExtent().containsPixel(pointImg, false)){
+		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
+	}
+
+	// Add Image
+	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
+				planerotation: mheading
+				}); 
+	imgFeat._callsign = mcallsign;
+	radarImageMarkers.addFeatures([imgFeat]);	
+	
+	
+	
+	var gxOff = 4;
+	var gyOff = -8;
+
+	var lxOff = 6;
+	var lyOff = 2;
+	
+	//+ WTF they are different points +- !!!
+	if(mheading > 0  && mheading < 90){
+		lyOff = lyOff - 15;
+		gyOff = gyOff  + 15 ;
+	}else if( mheading > 90 && mheading < 150){
+		lyOff = lyOff + 5;
+		gyOff = gyOff - 5;
+	}else if( mheading > 270 && mheading < 360){
+		lyOff = lyOff - 10;
+		gyOff = gyOff  + 10;
+		
+	}
+
+	// Add callsign label as separate feature, to have a background color (graphic) with offset
+	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat).transform(this.displayProjection, map.getProjectionObject() );
+	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
+                callsign: mcallsign,
+				lxOff: lxOff, lyOff: lyOff,
+				gxOff: gxOff, gyOff: gyOff
+				});
+	lblFeat._callsign = mcallsign;
+	radarLabelMarkers.addFeatures([lblFeat]);	
+	
+}
 
 
-this.flightsWidget.store.on("add", function(store, recs, idx){
-	//console.log(recs);
-	return;
-	Ext.each(recs, function(rec){
-		//var rec = recs[i];
+this.flightsWidget.store.on("load", function(store, recs, idx){
+	//console.log(recs.length);
+	//return;
+	recs_length = recs.length;
+	for(var i = 0; i < recs_length; i++){
+		var rec = recs[i];
 		//console.log(rec.get("callsign"));
-		// = show_radar (mcallsign, mlat, mlon, mheading, maltitude)
+		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("mlon"), rec.get("heading"), rec.get("alt_ft") );
 		//self.show_radar(rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("altitude"));
-	}, this);
-});
+	};
+}, this);
 	
 	
 } //< FGx.MainViewport

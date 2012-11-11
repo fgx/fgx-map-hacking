@@ -29,6 +29,8 @@ var VP;
 function display_map(){
 		
 	VP = new FGx.MainViewport();
+	VP.initialize();
+	
 	//console.log("VP");
 	
 }
