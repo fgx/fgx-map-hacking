@@ -8,6 +8,9 @@ from fgx.lib.base import BaseController, render
 
 log = logging.getLogger(__name__)
 
+
+
+
 class AjaxMpController(BaseController):
 
 	@jsonify

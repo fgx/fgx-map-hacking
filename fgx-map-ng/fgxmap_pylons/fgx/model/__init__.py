@@ -12,10 +12,10 @@ from fgx.model.meta import Session, Base
 def init_model(engine):
     """Call me before using any of the tables or classes in the model"""
     Session.configure(bind=engine)
-
-    
-    
+   
 FGX_SRID = 3857
+
+
 
 
 ##=======================================================
@@ -50,6 +50,32 @@ class Airport(Base):
 GeometryDDL(Airport.__table__)
 
 
+	
+##=======================================================
+class Aero(models.Model):
+	
+	class Meta:
+		db_table = "aircraft"
+	
+	aero_pk = models.IntegerField(primary_key=True) 
+	#manufacturers = models.Remotekey()
+	
+	model = models.CharField(max_length=10, unique=True, db_index=True)
+	type_designator =  models.CharField(max_length=10)
+	
+	engines = models.IntegerField()
+	engine_type = models.CharField(max_length=1)
+	
+	weight_class = models.CharField(max_length=40)
+	
+	climb_rate_fpm = models.CharField(max_length=40)
+	descent_rate_fpm = models.CharField(max_length=40)
+	
+	srs = models.CharField(max_length=40)
+	lahso = models.IntegerField()
+			
+
+
 ##=======================================================
 class Dme(Base):
 	
@@ -70,6 +96,14 @@ class Dme(Base):
 	
 GeometryDDL(Dme.__table__)
 	
+
+class EngineType(models.Model):
+	engine_pk  models.IntegerField(primary_key=True) 
+	eng = models.CharField(max_length=1, unique=True, db_index=True)
+	engine = models.CharField(max_length=10, unique=True, db_index=True)
+	
+
+	
 	
 	
 ##=======================================================	
@@ -84,6 +118,89 @@ class Fix(Base):
 GeometryDDL(Fix.__table__)
 
 
+class Manufacturer(models.Model):
+	class Meta:
+		db_table = "manufacturer"
+	
+	manuf_pk = models.IntegerField(primary_key=True) 
+	manuf = models.CharField(max_length=20, unique=True, db_index=True)
+	
+	"""
+	manufacturer varchar, \
+			model varchar, \
+			type_designator varchar, \
+			engines varchar, \
+			weight_class varchar, \
+			climb_rate varchar, \
+			descent_rate varchar, \
+			srs varchar, \
+			LAHSO_group);
+	"""
+	
+
+##=================================================================
+## MpServer
+##=================================================================
+class MpServer(Base):
+	
+	__tablename__ = 'mp_server'
+	
+	MP_STATUS_CHOICES = (
+		('unknown', 'Unknown'),
+		('up', 'Up'),
+		('down', 'Down')
+	)
+	no = Column(Integer(), primary_key=True)
+	subdomain = Column(String(100), index=True) 
+	fqdn = models.CharField(max_length=100, db_index=True, unique=True) 
+	ip = models.IPAddressField( db_index=True)
+	last_checked = models.DateTimeField(db_index=True, null=True)
+	last_seen = models.DateTimeField(db_index=True, null=True)
+	country = models.CharField(max_length=100, null=True)
+	lag = models.IntegerField(null=True)
+	status = models.CharField(max_length=20, choices=MP_STATUS_CHOICES, default="unknown")
+
+	def __unicode__(self):
+		return self.fqdn
+		
+		
+	def dic(self):
+		return { 'no': self.no,
+				'fqdn': self.fqdn,
+				'ip': self.ip,
+				'country': self.country,
+		}
+		
+		
+		
+	@staticmethod
+	def fqdn_from_no(server_no):
+		return "mpserver%02d.flightgear.org" % server_no
+	
+	@staticmethod
+	def subdomain_from_no(server_no):
+		return "mpserver%02d" % server_no	
+		
+		
+##=================================================================
+## Bot Info
+##=================================================================
+
+## Records when the bot last did a DNS check
+class MpBotInfo(Base):
+	
+	__tablename__ = "mp_bot_info"
+
+	id = Column(Integer(), primary_key=True)
+	
+	last_dns_start = Column(DateTimeField())
+	last_dns_end = Column(DateTimeField())
+	
+	last_check_start = Column(DateTimeField())
+	last_check_end = Column(DateTimeField())
+
+		
+		
 
 ##=======================================================
 class Ndb(Base):
@@ -109,6 +226,50 @@ class Ndb(Base):
 GeometryDDL(Ndb.__table__)		
 
 
+##=======================================================
+class Runway(models.Model):
+	
+	class Meta:
+		db_table = "runway"
+	
+	rwy_pk = models.AutoField( primary_key=True)
+	apt_icao = models.CharField(max_length=10, db_index=True)
+	rwy = models.CharField(max_length=10, db_index=True)
+	length_ft = models.IntegerField()
+	length_m = models.IntegerField()
+	geom = models.MultiPolygonField(srid=FGX_SRID)
+	objects = models.GeoManager()
+
+	def __repr__(self):
+		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
+	
+
+
+##=======================================================
+class Threshold(models.Model):
+	
+	class Meta:
+		db_table = "threshold"
+
+	thresh_pk = models.IntegerField(primary_key=True)
+	rwy_id = models.CharField(max_length=5, db_index=True)
+	apt_icao = models.CharField(max_length=10, db_index=True)
+	rwy = models.CharField(max_length=10, db_index=True)
+	
+	overrun_id = models.IntegerField(db_index=True)
+	marking_id = models.IntegerField(db_index=True)
+	appr_light_id = models.IntegerField(db_index=True)
+	tdz_light_id = models.IntegerField(db_index=True)
+	
+	geom = models.MultiPolygonField(srid=FGX_SRID)
+	objects = models.GeoManager()
+	
+	def __repr__(self):
+		return "<Threshold: %s-%s>" % (self.apt_icao, self.rwy)
+	
+
+	
+	
 
 ##=======================================================
 class Vor(Base):
@@ -135,3 +296,10 @@ class Vor(Base):
 		return "<Vor: %s>" % (self.ident)
 		
 GeometryDDL(Vor.__table__)
+
+
+#class WeightClass(models.Model):
+
+
+
+

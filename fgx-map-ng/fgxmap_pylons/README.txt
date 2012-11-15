@@ -44,6 +44,7 @@ The public/ directory contains all the static stuff eg favicon, js/, css, images
 Anything in here is read first, and if there, is send to browser
 (in production this is statically mapped with nginx, apache probably not)
 
+
 --------------------------
 routing.py
 --------------------------
@@ -95,5 +96,15 @@ def fix(self, fix=None):
 	payload = dict(success=True, 
 					flights=mylib.get_flights_function() )
 	return payload 
+
+
+--------------------------
+Database
+--------------------------
+
+The database models are contained in
+models/__init__.py
+Yes, a lot of models in one file, but this makes it easier.
+This is where native sqlalchemy, geoalchemy object exist.
 
 
