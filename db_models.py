@@ -48,6 +48,7 @@ class Airport(DeclarativeBase):
 	apt_rwy_count = Column(Integer(), nullable=True)
 	apt_min_rwy_len_ft = Column(Integer(), nullable=True)
 	apt_max_rwy_len_ft = Column(Integer(), nullable=True)
+	apt_xplane_code = Column(Integer(), nullable=True)
 	#wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
