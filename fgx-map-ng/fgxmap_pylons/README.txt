@@ -107,4 +107,5 @@ models/__init__.py
 Yes, a lot of models in one file, but this makes it easier.
 This is where native sqlalchemy, geoalchemy object exist.
 
+The http://www.geoalchemy.org/ is also included for geometry types
 

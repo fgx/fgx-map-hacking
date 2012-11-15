@@ -1,8 +1,8 @@
 """The application's model objects"""
 
 
-from sqlalchemy import Integer, String, Date, DateTime
-from geoalchemy import Column, GeometryColumn, GeometryDDL, Point
+from sqlalchemy import Column, Integer, String, Date, DateTime
+from geoalchemy import  GeometryColumn, GeometryDDL, Point, Polygon
 from geoalchemy.postgis import PGComparator
 
 
@@ -52,30 +52,37 @@ GeometryDDL(Airport.__table__)
 
 	
 ##=======================================================
-class Aero(models.Model):
+class Aero(Base):
 	
-	class Meta:
-		db_table = "aircraft"
+	__tablename__ = "aircraft"
 	
-	aero_pk = models.IntegerField(primary_key=True) 
+	aero_pk = Column(Integer(), primary_key=True) 
 	#manufacturers = models.Remotekey()
 	
-	model = models.CharField(max_length=10, unique=True, db_index=True)
-	type_designator =  models.CharField(max_length=10)
+	model = Column(String(10), unique=True, index=True)
+	type_designator =  Column(String(10))
 	
-	engines = models.IntegerField()
-	engine_type = models.CharField(max_length=1)
+	engines = Column(Integer())
+	engine_type = Column(String(1))
 	
-	weight_class = models.CharField(max_length=40)
+	weight_class = Column(String(40))
 	
-	climb_rate_fpm = models.CharField(max_length=40)
-	descent_rate_fpm = models.CharField(max_length=40)
+	climb_rate_fpm = Column(String(40))
+	descent_rate_fpm = Column(String(40))
 	
-	srs = models.CharField(max_length=40)
-	lahso = models.IntegerField()
-			
+	srs = Column(String(40))
+	lahso = Column(Integer())
+	
+	
+##=======================================================
+class Country(Base):
+	
+	__tablename__ = "country"
+	
+	country_code = Column(String(2), primary_key=True)
+	country_name = Column(String(100), index=True)
 
-
+	
 ##=======================================================
 class Dme(Base):
 	
@@ -85,7 +92,7 @@ class Dme(Base):
 	ident = Column(String(4), index=True)
 	name = Column(String(40), index=True)
 	subtype = Column(String(10))
-	elevation_m = Column(Integer())
+	elevation_m = Column(Integer())	
 	freq_mhz = Column(String(10))
 	range_km = Column(String(10))
 	bias_km = Column(Integer())
@@ -97,14 +104,16 @@ class Dme(Base):
 GeometryDDL(Dme.__table__)
 	
 
-class EngineType(models.Model):
-	engine_pk  models.IntegerField(primary_key=True) 
-	eng = models.CharField(max_length=1, unique=True, db_index=True)
-	engine = models.CharField(max_length=10, unique=True, db_index=True)
+	
+class EngineType(Base):
+	
+	__tablename__ = "engine_type"
+		
+	engine_pk  = Column(Integer(), primary_key=True)
+	eng = Column(String(1), unique=True, index=True)
+	engine = Column(String(10), unique=True, index=True)
 	
 
-	
-	
 	
 ##=======================================================	
 class Fix(Base):
@@ -118,12 +127,12 @@ class Fix(Base):
 GeometryDDL(Fix.__table__)
 
 
-class Manufacturer(models.Model):
-	class Meta:
-		db_table = "manufacturer"
+class Manufacturer(Base):
 	
-	manuf_pk = models.IntegerField(primary_key=True) 
-	manuf = models.CharField(max_length=20, unique=True, db_index=True)
+	__tablename__ = "manufacturer"
+	
+	manuf_pk = Column(Integer(), primary_key=True)
+	manuf = Column(String(20), unique=True, index=True)
 	
 	"""
 	manufacturer varchar, \
@@ -152,13 +161,13 @@ class MpServer(Base):
 	)
 	no = Column(Integer(), primary_key=True)
 	subdomain = Column(String(100), index=True) 
-	fqdn = models.CharField(max_length=100, db_index=True, unique=True) 
-	ip = models.IPAddressField( db_index=True)
-	last_checked = models.DateTimeField(db_index=True, null=True)
-	last_seen = models.DateTimeField(db_index=True, null=True)
-	country = models.CharField(max_length=100, null=True)
-	lag = models.IntegerField(null=True)
-	status = models.CharField(max_length=20, choices=MP_STATUS_CHOICES, default="unknown")
+	fqdn = Column(String(100), index=True, unique=True) 
+	ip = Column(String(16), index=True)
+	last_checked = Column(DateTime(), index=True, nullable=True)
+	last_seen = Column(DateTime(timezone=False), index=True, nullable=True)
+	country = Column(String(100), nullable=True)
+	lag = Column(Integer(), nullable=True)
+	status = Column(String(20))
 
 	def __unicode__(self):
 		return self.fqdn
@@ -193,11 +202,11 @@ class MpBotInfo(Base):
 
 	id = Column(Integer(), primary_key=True)
 	
-	last_dns_start = Column(DateTimeField())
-	last_dns_end = Column(DateTimeField())
+	last_dns_start = Column(DateTime())
+	last_dns_end = Column(DateTime())
 	
-	last_check_start = Column(DateTimeField())
-	last_check_end = Column(DateTimeField())
+	last_check_start = Column(DateTime())
+	last_check_end = Column(DateTime())
 
 		
 		
@@ -227,48 +236,44 @@ GeometryDDL(Ndb.__table__)
 
 
 ##=======================================================
-class Runway(models.Model):
+class Runway(Base):
 	
-	class Meta:
-		db_table = "runway"
+	__tablename__ = "runway"
 	
-	rwy_pk = models.AutoField( primary_key=True)
-	apt_icao = models.CharField(max_length=10, db_index=True)
-	rwy = models.CharField(max_length=10, db_index=True)
-	length_ft = models.IntegerField()
-	length_m = models.IntegerField()
-	geom = models.MultiPolygonField(srid=FGX_SRID)
-	objects = models.GeoManager()
+	rwy_pk = Column(Integer(), primary_key=True)
+	apt_ident = Column(String(10), index=True)
+	rwy = Column(String(10), index=True)
+	length_ft = Column(Integer())
+	length_m = Column(Integer())
+	geom = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
 	
-
+GeometryDDL(Runway.__table__)	
 
 ##=======================================================
-class Threshold(models.Model):
+class Threshold(Base):
 	
-	class Meta:
-		db_table = "threshold"
+	__tablename__ = "threshold"
 
-	thresh_pk = models.IntegerField(primary_key=True)
-	rwy_id = models.CharField(max_length=5, db_index=True)
-	apt_icao = models.CharField(max_length=10, db_index=True)
-	rwy = models.CharField(max_length=10, db_index=True)
+	thresh_pk = Column(Integer(), primary_key=True)
+	rwy_id = Column(String(5), index=True)
+	apt_icao = Column(String(10), index=True)
+	rwy = Column(String(10), index=True)
 	
-	overrun_id = models.IntegerField(db_index=True)
-	marking_id = models.IntegerField(db_index=True)
-	appr_light_id = models.IntegerField(db_index=True)
-	tdz_light_id = models.IntegerField(db_index=True)
+	overrun_id = Column(Integer(), index=True)
+	marking_id = Column(Integer(), index=True)
+	appr_light_id = Column(Integer(), index=True)
+	tdz_light_id = Column(Integer(), index=True)
 	
-	geom = models.MultiPolygonField(srid=FGX_SRID)
-	objects = models.GeoManager()
+	geom = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
 	
 	def __repr__(self):
 		return "<Threshold: %s-%s>" % (self.apt_icao, self.rwy)
 	
 
-	
+GeometryDDL(Threshold.__table__)	
 	
 
 ##=======================================================
@@ -298,7 +303,7 @@ class Vor(Base):
 GeometryDDL(Vor.__table__)
 
 
-#class WeightClass(models.Model):
+#class WeightClass(Base):
 
 
 
