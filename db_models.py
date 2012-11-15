@@ -23,23 +23,35 @@ DeclarativeBase = declarative_base()
 metadata = DeclarativeBase.metadata
 metadata.bind = engine
 
+
+
 ##=======================================================
 class Airport(DeclarativeBase):
 	
 	__tablename__ = "airport"
 	
-	dme_pk = Column(Integer(), primary_key=True)
-	ident = Column(String(4), index=True)
-	name = Column(String(40), index=True)
-	subtype = Column(String(10))
-	elevation_m = Column(Integer())
-	freq_mhz = Column(String(10))
-	range_km = Column(String(10))
-	bias_km = Column(Integer())
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	apt_pk = Column(Integer(), primary_key=True)
+	apt_ident = Column(String(4), index=True)
+	apt_iata = Column(String(8), index=True, nullable=True)
+	apt_name = Column(String(40), index=True, nullable=True)
+	apt_country = Column(String(2), nullable=True)
+	apt_type = Column(String(4), nullable=True)
+	apt_elev_ft = Column(Integer(10), nullable=True)
+	apt_elev_m = Column(Integer(10), nullable=True)
+	apt_authority = Column(Integer(10), nullable=True)
+	apt_services = Column(Integer(10), nullable=True)
+	apt_ifr = Column(Integer(10), nullable=True)
+	apt_size = Column(Integer(10), nullable=True)
+	apt_center = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator, nullable=True)
+	apt_center_lat = Column(String(20), nullable=True)
+	apt_center_lon = Column(String(20), nullable=True)
+	apt_rwy_count = Column(Integer(), nullable=True)
+	apt_min_rwy_len_ft = Column(Integer(), nullable=True)
+	apt_max_rwy_len_ft = Column(Integer(), nullable=True)
+	#wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
-		return "<Dme: %s>" % (self.icao)
+		return "<Airport: %s>" % (self.apt_ident)
 	
 GeometryDDL(Airport.__table__)
 
@@ -129,6 +141,8 @@ class Vor(DeclarativeBase):
 		return "<Vor: %s>" % (self.ident)
 		
 GeometryDDL(Vor.__table__)
+
+
 
 
 
