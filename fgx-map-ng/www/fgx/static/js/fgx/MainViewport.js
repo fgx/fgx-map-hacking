@@ -308,6 +308,23 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 //============================================================
 this.flightsWidget = new FGx.FlightsWidget({mapPanel: this.mapPanel});
 
+this.flightsWidget.grid.on("rowdblclick", function(grid, idx, e){
+	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
+	//console.log(">>>>>>>>", callsign);
+	//var existing_img = self.flightMarkersLayer.getFeatureBy("_callsign", callsign);
+	//console.log("exist=", existing_img);
+	//if(existing_img){
+		//radarImageMarkers.removeFeatures(existing_img);
+		//console.log("geom=", existing_img.geometry);
+	var rec = self.flightsWidget.store.getAt(idx);
+	 var pt = new OpenLayers.Geometry.Point(rec.get("lon"), rec.get("lat")
+					).transform(this.displayProjection, this.map.getProjectionObject() );
+	console.log(rec.get("lon"), rec.get("lat"), pt);
+					
+	this.map.setCenter( pt );
+}, this);  
+
+
 this.navWidget = new FGx.NavWidget({mapPanel: this.mapPanel});
 
 //this.mapLayersTree = new FGx.MapLayersTree();
@@ -385,7 +402,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 	var lxOff = 6;
 	var lyOff = 2;
 	
-	//+ WTF they are different points +- !!!
+	// move the label offset
 	if(mheading > 0  && mheading < 90){
 		lyOff = lyOff - 15;
 		gyOff = gyOff  + 15 ;

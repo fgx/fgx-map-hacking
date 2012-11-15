@@ -77,8 +77,8 @@ this.grid = new Ext.grid.GridPanel({
 	enableHdMenu: false,
 	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
 	store: this.store,
-	loadMask: true,
-	//sm: new  Ext.grid.RowSelectionModel(),
+	loadMask: false,
+	sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 	columns: [ 
 		//{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
 		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 140},
@@ -89,11 +89,6 @@ this.grid = new Ext.grid.GridPanel({
 		{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
 			renderer: this.render_altitude_trend},
 		{header: 'Hdg', dataIndex:'heading', sortable: true, align: 'right',
-			renderer: function(v, meta, rec, rowIdx, colIdx, store){
-				return v; //Ext.util.Format.number(v, '0');
-			}
-		},
-		{header: 'Dist', dataIndex:'dist', sortable: true, align: 'right', hidden: true,
 			renderer: function(v, meta, rec, rowIdx, colIdx, store){
 				return v; //Ext.util.Format.number(v, '0');
 			}
@@ -143,25 +138,7 @@ this.grid = new Ext.grid.GridPanel({
 		}
 	]
 });
-this.grid.on("rowdblclick", function(grid, idx, e){
-	var callsign = self.flightsStore.getAt(idx).get("callsign");
-	console.log(">>>>>>>>", callsign);
-	var existing_img = self.radarImageMarkers.getFeatureBy("_callsign", callsign);
-	console.log("exist=", existing_img);
-	if(existing_img){
-		//radarImageMarkers.removeFeatures(existing_img);
-		console.log("geom=", existing_img.geometry);
-	
-		self.map.setCenter(
-			existing_img.geometry.transform(
-				self.osmprojection,
-				self.map.getProjectionObject()
-			)
-		);
-	}
-	//var latlng = new google.maps.LatLng(rec.get('lat'), rec.get('lng'));
-	//self.Map.panTo(latlng);
-});  
+
 	
 
 
