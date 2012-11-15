@@ -20,17 +20,33 @@ def make_map(config):
 
 	# The ErrorController route (handles 404/500 error pages); it should
 	# likely stay at the top, ensuring it can always be resolved
+	## @todo: pete to make this a custom handler
 	map.connect('/error/{action}', controller='error')
 	map.connect('/error/{action}/{id}', controller='error')
 
-	# CUSTOM ROUTES HERE
+	
+	
+	
+	##=======================================================================
+	# Ajax Routes
+	##=======================================================================
+	
+	## MultiPlayer
 	map.connect('/ajax/mp/flights', controller="ajax_mp", action="flights")
 	
 	
+	## Database Browsing
+	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
 	
-	map.connect('/index', controller="www", action="index")
-	map.connect('/', controller="www", action="index")
 	
-	#map.connect('/{controller}/{action}/{id}')
+	
+	##=======================================================================
+	## HTML Pages
+	##=======================================================================
+	map.connect('/database', controller="html_pages", action="database")
+	
+	map.connect('/index', controller="html_pages", action="index")
+	map.connect('/', controller="html_pages", action="index")
+	
 
 	return map

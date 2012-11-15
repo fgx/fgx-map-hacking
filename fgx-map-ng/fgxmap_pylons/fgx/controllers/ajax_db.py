@@ -7,11 +7,10 @@ from fgx.lib.base import BaseController, render
 
 log = logging.getLogger(__name__)
 
-class HtmlPagesController(BaseController):
+class AjaxDbController(BaseController):
 
-	
-	def index(self):
-		return render("map-ext.html")
-
-	def database(self):
-		return render("database.html")
+    def index(self):
+        # Return a rendered template
+        #return render('/ajax_db.mako')
+        # or, return a string
+        return 'Hello World'
