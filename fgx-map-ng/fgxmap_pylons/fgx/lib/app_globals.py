@@ -26,5 +26,6 @@ class Globals(object):
 	@property
 	def static_url(self):
 		# Later this will be a selection of servers of random(x, y, x) if busy
-		return "http://static.fgx.ch"
+		#return "http://static.fgx.ch"
+		return "http://fgx-static.freeflightsim.org"
 		

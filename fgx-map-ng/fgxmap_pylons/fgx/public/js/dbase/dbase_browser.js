@@ -27,12 +27,12 @@ this.table = ""
 this.tablesGrid = new FGx.DBaseTablesGrid({region: 'center'});
 this.columnsGrid = new FGx.DBaseColumnsGrid({region: 'east', width: 300});
 
-/*
-this.databasesGrid.on("database", function(database){
-	self.database = database;
-	self.tablesGrid.load_tables(self.database);	
+
+this.tablesGrid.on("TABLE", function(table){
+	
+	self.columnsGrid.load_columns(table);	
 })
-*/;
+
 
 
 //===================================================================
@@ -50,9 +50,7 @@ this.tabPanel  = new Ext.Panel({
 	
 });
 
-this.tablesGrid.on("table", function(table){
-	self.columnsGrid.load_columns(self.database, table);	
-});
+this.tablesGrid.load_tables();
 
 
 } // end function cinstructor

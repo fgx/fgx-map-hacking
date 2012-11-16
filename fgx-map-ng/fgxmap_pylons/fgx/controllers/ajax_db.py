@@ -2,15 +2,34 @@ import logging
 
 from pylons import request, response, session, tmpl_context as c, url
 from pylons.controllers.util import abort, redirect
+from pylons.decorators import jsonify
 
 from fgx.lib.base import BaseController, render
 
+from fgx.queries import database
+
 log = logging.getLogger(__name__)
+
+
 
 class AjaxDbController(BaseController):
 
-    def index(self):
-        # Return a rendered template
-        #return render('/ajax_db.mako')
-        # or, return a string
-        return 'Hello World'
+	@jsonify
+	def tables(self):
+
+		payload = dict(
+					success=True,
+					tables=database.tables()
+				)
+		
+		return payload
+		
+		
+	def columns(self, table):
+		payload = dict(
+					success=True,
+					tables=database.columns(table)
+				)
+		
+		return payload
+		

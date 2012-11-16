@@ -32,9 +32,9 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
 		FGx.DBaseColumnsGrid.superclass.constructor.call(this, config);
 	},
 	
-	load_columns: function(database, table){
+	load_columns: function( table){
 		//console.log("Load Columns", database, table);
-		var u = "/ajax/dbase/" + database + "/" + table;
+		var u = "/ajax/database/" + table + "/columns";
 		this.getStore().proxy.setUrl(u);
 		this.getStore().load();
 		//console.log(u);
