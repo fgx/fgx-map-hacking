@@ -46,8 +46,8 @@ FGx.MapPanel = function(){
 	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
-	var zoomSlider = new GeoExt.ZoomSlider({
-		map: this.map,
+	this.zoomSlider = new GeoExt.ZoomSlider({
+		map: xMap,
 		aggressive: true,                                                                                                                                                   
 		width: 200,
 		plugins: new GeoExt.ZoomSliderTip({
@@ -62,6 +62,7 @@ FGx.MapPanel = function(){
 	
 
 	function on_base_layer(butt){
+		console.log(butt.xLayer);
 		if( butt.xLayer == "ne_landmass"){
 			self.map.setBaseLayer( BASE_LAYERS.ne_landmass );
 			
@@ -188,18 +189,18 @@ FGx.MapPanel = function(){
 					//{text: "Me", iconCls: "icoCallSign",  
 					//	handler: this.on_me , tooltip: "My Settings", disabled: true
 					//},
-					{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
+					{text: "Map", iconCls: "icoMapCore", 
 						menu: {
 							items: [
 								{text: "Landmass", group: "map_core", checked: false, xLayer: "ne_landmass",
-									handler: this.on_base_layer, scope: this
+									handler: on_base_layer
 								},
 								{text: "OSM Normal", group: "map_core", checked: false, 
-									xLayer: "osm_normal", handler: this.on_base_layer, ddscope: this
+									xLayer: "osm_normal", handler: on_base_layer
 								},
 								{text: "OSM Light", group: "map_core", checked: true, 
 									xLayer: "osm_light", 
-									handler: this.on_base_layer, scope: this
+									handler: on_base_layer
 								}
 							]
 						}
@@ -282,7 +283,7 @@ FGx.MapPanel = function(){
 		bbar: [
 
 			{text: "Zoom:"},
-			zoomSlider,
+			this.zoomSlider,
 			"->",
 			{text: "TODO: Lat: "}, lblLat, 
 			{text: "Lon: "},  lblLon
