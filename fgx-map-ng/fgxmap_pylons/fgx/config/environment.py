@@ -64,7 +64,7 @@ def load_environment(global_conf, app_conf):
 	# any Pylons config options)
 
 	## Start the background processes
-	mpstatus.start_mpstatus_thread()
+	#mpstatus.start_mpstatus_thread()
 		
 	
 	return config

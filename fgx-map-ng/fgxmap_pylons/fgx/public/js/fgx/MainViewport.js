@@ -21,7 +21,7 @@ this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 				strokeWidth: 1,
 				fillColor: "lime",
 
-				externalGraphic: "/static/images/radar_blip2.png",
+				externalGraphic: "/images/radar_blip2.png",
 				graphicWidth: 8,
 				graphicHeight: 24,
 				graphicOpacity: 1,
@@ -56,7 +56,7 @@ this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
 				strokeWidth: 1,
 
 				//graphic: false,
-				externalGraphic: "/static/images/fgx-background-black.png",
+				externalGraphic: "/images/fgx-background-black.png",
 				graphicWidth: 50,
 				graphicHeight: 12,
 				graphicOpacity: 0.8,

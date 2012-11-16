@@ -3,6 +3,7 @@
 from beaker.cache import CacheManager
 from beaker.util import parse_cache_config_options
 
+
 class Globals(object):
 	"""Globals acts as a container for objects available throughout the
 	life of the application
@@ -17,11 +18,11 @@ class Globals(object):
 		"""
 		self.cache = CacheManager(**parse_cache_config_options(config))
 
+		self.crossfeed_data_url = config['crossfeed_ajax_url']
 		
 
-
 		#FGX_MP_SERVER = "mpserver14.flightgear.org"
-		fgx_ = "217.150.241.103"
+		#fgx_ = "217.150.241.103"
 		
 	@property
 	def static_url(self):
@@ -29,3 +30,4 @@ class Globals(object):
 		#return "http://static.fgx.ch"
 		return "http://fgx-static.freeflightsim.org"
 		
+	
