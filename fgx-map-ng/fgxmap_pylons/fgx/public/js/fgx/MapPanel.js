@@ -12,7 +12,7 @@ FGx.MapPanel = function(){
 	var xDisplayProjection = new OpenLayers.Projection("EPSG:4326");
 	var xProjection = new OpenLayers.Projection("EPSG:3857");
 	
-	var xMap = new OpenLayers.Map({
+	this.xMap = new OpenLayers.Map({
 			allOverlays: false,
 			units: 'm',
 			// this is the map projection here
@@ -42,97 +42,95 @@ FGx.MapPanel = function(){
 			zoomLevels: 20
 	});
 	
-		var LAYERS = [];
-		//=================================================
-		// Overlay
-		//=================================================
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"DME",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "DME" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"ILS Info",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "ILS_Info" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"Runway",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "Runway" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"NDB",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "NDB" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"ILS Marker",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"Airfield",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "Airfield" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"ILS",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "ILS" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"VOR",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "VOR" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
+	var LAYERS = [];
+	//=================================================
+	// Overlay
+	//=================================================
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"DME",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "DME" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS Info",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS_Info" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"Runway",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "Runway" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"NDB",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "NDB" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS Marker",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"Airfield",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "Airfield" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"VOR",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "VOR" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
 
-		LAYERS.push( new OpenLayers.Layer.WMS(
-		"FIX",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "FIX" , transparent: "True" , format: "image/png" 
-			}, {  visibility: false}
-		));
-
-
-		//=================================================
-		// Underlay
-		//=================================================
-		this.BASE_LAYERS = {};
-		this.BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
-		"NE Landmass",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
-			}, {  visibility: false}
-		);
-		LAYERS.push(this.BASE_LAYERS.ne_landmass);
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"FIX",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "FIX" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
 
 
+	//=================================================
+	// Underlay
+	//=================================================
+	this.BASE_LAYERS = {};
+	this.BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
+	"NE Landmass",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
+		}, {  visibility: false}
+	);
+	LAYERS.push(this.BASE_LAYERS.ne_landmass);
 
-		this.BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
-		this.BASE_LAYERS.osm_normal.setOpacity(1.0);
-		LAYERS.push( this.BASE_LAYERS.osm_normal );
+	
+	this.BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+	this.BASE_LAYERS.osm_normal.setOpacity(1.0);
+	LAYERS.push( this.BASE_LAYERS.osm_normal );
 
 
-
-		this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
-		this.BASE_LAYERS.osm_light.setOpacity(0.4);
-		LAYERS.push( this.BASE_LAYERS.osm_light );
+	this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+	this.BASE_LAYERS.osm_light.setOpacity(0.4);
+	LAYERS.push( this.BASE_LAYERS.osm_light );
 
 	
 	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
 	this.zoomSlider = new GeoExt.ZoomSlider({
-		map: xMap,
+		map: this.xMap,
 		aggressive: true,                                                                                                                                                   
 		width: 200,
 		plugins: new GeoExt.ZoomSliderTip({
@@ -159,7 +157,7 @@ FGx.MapPanel = function(){
 		}
 	}
 	
-
+	
 
 	FGx.MapPanel.superclass.constructor.call(this, {
 		title: "Map",
@@ -170,7 +168,7 @@ FGx.MapPanel = function(){
 		bodyBorder: false,
 		region: "center",
 			// we do not want all overlays, to try the OverlayLayerContainer
-		map: xMap,
+		map: this.xMap,
 		center: xCenterPoint,
 		zoom: 5,
 		layers: LAYERS,
@@ -188,13 +186,13 @@ FGx.MapPanel = function(){
 					{text: "Map", iconCls: "icoMapCore", 
 						menu: {
 							items: [
-								{text: "Landmass", group: "map_core", checked: false, xLayer: "ne_landmass",
+								{text: "Landmass", group: "map_core", checked: true, xLayer: "ne_landmass",
 									handler: on_base_layer
 								},
 								{text: "OSM Normal", group: "map_core", checked: false, 
 									xLayer: "osm_normal", handler: on_base_layer
 								},
-								{text: "OSM Light", group: "map_core", checked: true, 
+								{text: "OSM Light", group: "map_core", checked: false, 
 									xLayer: "osm_light", 
 									handler: on_base_layer
 								}
