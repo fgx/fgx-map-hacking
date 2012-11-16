@@ -42,39 +42,6 @@ FGx.MapPanel = function(){
 			zoomLevels: 20
 	});
 	
-	
-	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
-	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
-
-	this.zoomSlider = new GeoExt.ZoomSlider({
-		map: xMap,
-		aggressive: true,                                                                                                                                                   
-		width: 200,
-		plugins: new GeoExt.ZoomSliderTip({
-			template: "<div>Zoom Level: {zoom}</div>"
-		})
-	});
-		
-	function on_nav_toggled(butt, checked){
-		butt.setIconClass( checked ? "icoOn" : "icoOff" );
-		self.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
-	}
-	
-
-	function on_base_layer(butt){
-		console.log(butt.xLayer);
-		if( butt.xLayer == "ne_landmass"){
-			self.map.setBaseLayer( BASE_LAYERS.ne_landmass );
-			
-		}else if ( butt.xLayer == "osm_normal"){
-			self.map.setBaseLayer( BASE_LAYERS.osm_normal );
-			
-		}else if ( butt.xLayer == "osm_light"){
-			self.map.setBaseLayer( BASE_LAYERS.osm_light );
-		}
-	}
-	
-	function make_layers(){
 		var LAYERS = [];
 		//=================================================
 		// Overlay
@@ -139,30 +106,59 @@ FGx.MapPanel = function(){
 		//=================================================
 		// Underlay
 		//=================================================
-		var BASE_LAYERS = {};
-		BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
+		this.BASE_LAYERS = {};
+		this.BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
 		"NE Landmass",
 		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 			}, {  visibility: false}
 		);
-		LAYERS.push(BASE_LAYERS.ne_landmass);
+		LAYERS.push(this.BASE_LAYERS.ne_landmass);
 
 
 
-		BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
-		BASE_LAYERS.osm_normal.setOpacity(1.0);
-		LAYERS.push( BASE_LAYERS.osm_normal );
+		this.BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+		this.BASE_LAYERS.osm_normal.setOpacity(1.0);
+		LAYERS.push( this.BASE_LAYERS.osm_normal );
 
 
 
-		BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
-		BASE_LAYERS.osm_light.setOpacity(0.4);
-		LAYERS.push( BASE_LAYERS.osm_light );
+		this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+		this.BASE_LAYERS.osm_light.setOpacity(0.4);
+		LAYERS.push( this.BASE_LAYERS.osm_light );
 
-		return LAYERS;
+	
+	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
+	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
+
+	this.zoomSlider = new GeoExt.ZoomSlider({
+		map: xMap,
+		aggressive: true,                                                                                                                                                   
+		width: 200,
+		plugins: new GeoExt.ZoomSliderTip({
+			template: "<div>Zoom Level: {zoom}</div>"
+		})
+	});
 		
+	function on_nav_toggled(butt, checked){
+		butt.setIconClass( checked ? "icoOn" : "icoOff" );
+		self.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
 	}
+	
+
+	function on_base_layer(butt){
+		console.log(butt.xLayer);
+		if( butt.xLayer == "ne_landmass"){
+			self.map.setBaseLayer( self.BASE_LAYERS.ne_landmass );
+			
+		}else if ( butt.xLayer == "osm_normal"){
+			self.map.setBaseLayer( self.BASE_LAYERS.osm_normal );
+			
+		}else if ( butt.xLayer == "osm_light"){
+			self.map.setBaseLayer( self.BASE_LAYERS.osm_light );
+		}
+	}
+	
 
 
 	FGx.MapPanel.superclass.constructor.call(this, {
@@ -177,7 +173,7 @@ FGx.MapPanel = function(){
 		map: xMap,
 		center: xCenterPoint,
 		zoom: 5,
-		layers: make_layers(),
+		layers: LAYERS,
 		
 		tbar: [
 		
