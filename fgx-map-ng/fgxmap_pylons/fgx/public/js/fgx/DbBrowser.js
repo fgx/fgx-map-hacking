@@ -1,7 +1,7 @@
 
 
 //================================================================
-FGx.DBaseBrowser = function (){
+FGx.DbBrowser = function (){
 	
 
 //======================================================
@@ -94,13 +94,15 @@ this.tabPanel  = new Ext.Panel({
 	height: window.innerHeight - 5,
 	items: [
 		//this.databasesGrid,
-		this.tablesGrid,
-		this.columnsGrid
+		this.gridTables,
+		this.gridColumns
 	]
 	
 });
 
 //this.tablesGrid.load_tables();
-
+this.load = function(){
+	this.storeTables.load();
+}
 
 } // end function cinstructor
