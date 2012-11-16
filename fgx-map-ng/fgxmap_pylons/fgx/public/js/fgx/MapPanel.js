@@ -3,6 +3,8 @@ Ext.namespace("FGx");
 		
 FGx.MapPanel = function(){
 	
+	var self = this;
+	
 	var xCenterPoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 	var xDisplayProjection = new OpenLayers.Projection("EPSG:4326");
@@ -38,6 +40,11 @@ FGx.MapPanel = function(){
 			zoomLevels: 20
 	});
 	
+	function on_nav_toggled(butt, checked){
+		butt.setIconClass( checked ? "icoOn" : "icoOff" );
+		self.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
+	}
+	
 	FGx.MapPanel.superclass.constructor.call(this, {
 		title: "Foo",
 		frame: false,
@@ -50,6 +57,106 @@ FGx.MapPanel = function(){
 		center: xCenterPoint,
 		zoom: 5,
 		layers: LAYERS,
+		
+		tbar: [
+		
+			//== Map Type  
+			{xtype: 'buttongroup', 
+				title: 'Settings', width: 80, id: "fgx-settings-box", 
+				columns: 2,
+				items: [
+					//{text: "Me", iconCls: "icoCallSign",  
+					//	handler: this.on_me , tooltip: "My Settings", disabled: true
+					//},
+					{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
+						menu: {
+							items: [
+								{text: "Landmass", group: "map_core", checked: false, xLayer: "ne_landmass",
+									handler: this.on_base_layer, scope: this
+								},
+								{text: "OSM Normal", group: "map_core", checked: false, 
+									xLayer: "osm_normal", handler: this.on_base_layer, ddscope: this
+								},
+								{text: "OSM Light", group: "map_core", checked: true, 
+									xLayer: "osm_light", 
+									handler: this.on_base_layer, scope: this
+								}
+							]
+						}
+					},
+					{iconCls: "icoSettings", 
+						menu: {
+							items: [
+								{text: "Mode" ,
+									menu: {
+										items: [
+											{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
+												checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
+											{text: "Military Mode - only military and vortac - TODO", group: "map_mode", 
+												checked: false, xCivMilMode: "military", disabled: true,
+												handler: this.on_civmil_mode
+											},
+											{text: "Both - TODO", group: "map_mode", 
+												checked: false, xCivMilMode: "all", disabled: true,
+												handler: this.on_civmil_mode
+											}
+										]
+									}
+								}
+							]
+						}
+					} 
+				]   
+			},
+			
+			{xtype: 'buttongroup',
+				title: 'Navigation Aids',
+				columns: 5,
+				items: [
+					{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
+						toggleHandler: on_nav_toggled,
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
+						}
+					},
+					{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
+						toggleHandler: on_nav_toggled, 
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
+						}
+					},
+					{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+						toggleHandler: on_nav_toggled
+					},
+					{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
+						toggleHandler: on_nav_toggled
+					},
+					{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+						toggleHandler: on_nav_toggled, 
+						hidden: true, id: "fgx-vortac"
+					}
+				]   
+			},
+			{xtype: 'buttongroup', disabled: true,
+				title: 'Airports - TODO', 
+				columns: 6,
+				items: [
+					{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
+					{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+					{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+					{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+						hidden: true, id: "fgx-mil-airports"},
+					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
+				]   
+			},		
+			"->",
+			
+		],
 		
 	});
 	
