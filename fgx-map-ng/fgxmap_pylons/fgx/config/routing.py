@@ -7,6 +7,7 @@ refer to the routes manual at http://routes.groovie.org/docs/
 from routes import Mapper
 
 ## FGx Notes:
+# * The FIRST match is the stuff in /public/
 # * The FIRST match in the list below is the one processed.
 #
 
@@ -31,14 +32,14 @@ def make_map(config):
 	# Ajax Routes
 	##=======================================================================
 	
-	## MultiPlayer
+	#### MultiPlayer
 	map.connect('/ajax/mp/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mp/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mp/flights', controller="ajax_mpnet", action="flights")
 	
 	
 	
-	## Database Browsing
+	#### Database Browsing
 	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
 	map.connect('/ajax/database/table/{table}/columns', controller="ajax_db", action="columns")
 	
