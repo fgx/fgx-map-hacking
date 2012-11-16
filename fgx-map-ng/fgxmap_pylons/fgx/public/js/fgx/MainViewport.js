@@ -172,8 +172,15 @@ this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
 
 this.on_base_layer = function(butt){
-	console.log("on_base", butt.xLayer);
-	
+	if( butt.xLayer == "ne_landmass"){
+		this.map.setBaseLayer( BASE_LAYERS.ne_landmass );
+		
+	}else if ( butt.xLayer == "osm_normal"){
+		this.map.setBaseLayer( BASE_LAYERS.osm_normal );
+		
+	}else if ( butt.xLayer == "osm_light"){
+		this.map.setBaseLayer( BASE_LAYERS.osm_light );
+	}
 }
 
 this.mapPanel = new GeoExt.MapPanel({
@@ -203,15 +210,15 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
-							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass",
-								handler: this.on_base_layer
+							{text: "Landmass", group: "map_core", checked: true, xLayer: "ne_landmass",
+								handler: this.on_base_layer, scope: this
 							},
 							{text: "OSM - TODO", group: "map_core", checked: false, 
-								xLayer: "mapnick_gral", handler: this.on_base_layer
+								xLayer: "osm_normal", handler: this.on_base_layer, scope: this
 							},
 							{text: "OSM Light - TODO", group: "map_core", checked: false, 
-								xLayer: "mapnick_xgral", 
-								handler: this.on_base_layer
+								xLayer: "osm_light", 
+								handler: this.on_base_layer, scope: this
 							}
 						]
 					}

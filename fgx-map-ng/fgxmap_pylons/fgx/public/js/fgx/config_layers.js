@@ -24,6 +24,10 @@ var RESOLUTIONS = [
 ]
 
 var LAYERS = [];
+
+//=================================================
+// Overlay
+//=================================================
 LAYERS.push( new OpenLayers.Layer.WMS(
   "DME",
   "http://map.fgx.ch:81/mapnik/fgxcache.py?",
@@ -72,12 +76,7 @@ LAYERS.push( new OpenLayers.Layer.WMS(
     {layers: "VOR" , transparent: "True" , format: "image/png" 
     }, {  visibility: false}
 ));
-LAYERS.push( new OpenLayers.Layer.WMS(
-  "NE Landmass",
-  "http://map.fgx.ch:81/mapnik/fgxcache.py?",
-    {layers: "natural_earth_landmass" , isBaselayer: "True" , format: "image/png" 
-    }, {  visibility: false}
-));
+
 LAYERS.push( new OpenLayers.Layer.WMS(
   "FIX",
   "http://map.fgx.ch:81/mapnik/fgxcache.py?",
@@ -86,4 +85,27 @@ LAYERS.push( new OpenLayers.Layer.WMS(
 ));
 
 
+//=================================================
+// Underlay
+//=================================================
+var BASE_LAYERS = {};
+BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
+  "NE Landmass",
+  "http://map.fgx.ch:81/mapnik/fgxcache.py?",
+    {layers: "natural_earth_landmass" , isBaselayer: "True" , format: "image/png" 
+    }, {  visibility: false}
+);
+LAYERS.push(BASE_LAYERS.ne_landmass);
+
+
+
+BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+BASE_LAYERS.osm_normal.setOpacity(1.0);
+LAYERS.push( BASE_LAYERS.osm_normal );
+
+
+
+BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+BASE_LAYERS.osm_light.setOpacity(0.4);
+LAYERS.push( BASE_LAYERS.osm_light );
 
