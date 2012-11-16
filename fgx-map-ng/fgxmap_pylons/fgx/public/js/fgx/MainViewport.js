@@ -170,6 +170,15 @@ this.map = new OpenLayers.Map({
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
+this.zoomSlider = new GeoExt.ZoomSlider({
+	map: this.map,
+	aggressive: true,                                                                                                                                                   
+	width: 200,
+	plugins: new GeoExt.ZoomSliderTip({
+		template: "<div>Zoom Level: {zoom}</div>"
+	})
+});
+
 
 this.on_base_layer = function(butt){
 	if( butt.xLayer == "ne_landmass"){
@@ -314,7 +323,7 @@ this.mapPanel = new GeoExt.MapPanel({
 		}),
 		*/
 		{text: "Zoom:"},
-		
+		this.zoomSlider,
 		"->",
 		{text: "TODO: Lat: "}, this.lblLat, 
 		{text: "Lon: "},  this.lblLon
