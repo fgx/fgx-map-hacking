@@ -149,7 +149,7 @@ this.map = new OpenLayers.Map({
 		// by http://yoururltothemap.org/tilecache.py/1.0.0/layername/ etc.
 		// (This would not be necessary for 4326/900913 because this values are widely spread in
 		// openlayer/osm/google threads, you will find the resolutions there)
-		resolutions:RESOLUTIONS,
+		resolutions: RESOLUTIONS,
 		
 		// I set a max and min resolution, means setting available zoomlevels by default
 		maxResolution: 156543.03390624999883584678,
@@ -171,6 +171,11 @@ this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
 
+this.on_base_layer = function(butt){
+	console.log("on_base", butt.xLayer);
+	
+}
+
 this.mapPanel = new GeoExt.MapPanel({
 	
 	frame: false,
@@ -190,15 +195,24 @@ this.mapPanel = new GeoExt.MapPanel({
 		/** Map Type  */
 		{xtype: 'buttongroup',
             title: 'Settings', width: 80, id: "fgx-settings-box", 
-            columns: 3,
+            columns: 2,
             items: [
-				{text: "Me", iconCls: "icoCallSign",  handler: this.on_me , tooltip: "My Settings", disabled: true},
+				//{text: "Me", iconCls: "icoCallSign",  
+				//	handler: this.on_me , tooltip: "My Settings", disabled: true
+				//},
 				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
-							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass"},
-							{text: "OSM - TODO", group: "map_core", checked: false, disabled: true, xLayer: "mapnick_gral"},
-							{text: "OSM Light - TODO", group: "map_core", checked: false, disabled: true, xLayer: "mapnick_xgral"}
+							{text: "Landmass", group: "map_core", checked: true, xLayer: "landmass",
+								handler: this.on_base_layer
+							},
+							{text: "OSM - TODO", group: "map_core", checked: false, 
+								xLayer: "mapnick_gral", handler: this.on_base_layer
+							},
+							{text: "OSM Light - TODO", group: "map_core", checked: false, 
+								xLayer: "mapnick_xgral", 
+								handler: this.on_base_layer
+							}
 						]
 					}
 				},
@@ -210,10 +224,14 @@ this.mapPanel = new GeoExt.MapPanel({
 									items: [
 										{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
 											checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
-										{text: "Military Mode - only military and vortac", group: "map_mode", 
-											checked: false, xCivMilMode: "military" , handler: this.on_civmil_mode},
-										{text: "Both", group: "map_mode", 
-											checked: false, xCivMilMode: "all", handler: this.on_civmil_mode}
+										{text: "Military Mode - only military and vortac - TODO", group: "map_mode", 
+											checked: false, xCivMilMode: "military", disabled: true,
+											handler: this.on_civmil_mode
+										},
+										{text: "Both - TODO", group: "map_mode", 
+											checked: false, xCivMilMode: "all", disabled: true,
+											handler: this.on_civmil_mode
+										}
 									]
 								}
 							}
