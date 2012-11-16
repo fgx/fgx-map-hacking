@@ -43,7 +43,7 @@ this.store = new Ext.data.JsonStore({
 				//{name: "alt_trend", type: 'string'},
 				{name: "heading", type: 'string'}
 	],
-	url: '/ajax/mp/flights/cf',
+	url: '/ajax/mp/flights/crossfeed',
 	root: 'flights',
 	remoteSort: false,
 	sortInfo: {

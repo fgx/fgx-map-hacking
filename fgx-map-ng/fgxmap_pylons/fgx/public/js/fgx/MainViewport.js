@@ -227,7 +227,7 @@ this.mapPanel = new GeoExt.MapPanel({
             title: 'Navigation Aids',
             columns: 5,
             items: [
-				{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOn", navaid: "VOR", 
+				{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
 					toggleHandler: this.on_nav_toggled,
 					menu: {
 						items: [

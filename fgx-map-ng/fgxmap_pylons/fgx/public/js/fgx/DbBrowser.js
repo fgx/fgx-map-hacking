@@ -14,7 +14,7 @@ this.storeTables = new Ext.data.JsonStore({
 	idProperty: "table",
 	ssortInfo: {},
 	proxy: new Ext.data.HttpProxy({
-		url: "/ajax/airports/NULL",
+		url: "/ajax/database/tables",
 		method: 'GET'
 	}),
 	root: "tables"
@@ -28,13 +28,19 @@ this.gridTables = new Ext.grid.GridPanel({
 		forceFit: true
 	},
 	columns: [ 
-		{header: "Table", dataIndex: "table"},
+		{header: "Table", dataIndex: "table",
+			renderer: function(val, meta, record, idx){
+				meta.style = "font-weight: bold;"
+				return val;
+			}
+		},
 		{header: "rows", dataIndex: "rows"}
 	],
 	listeners:{
-		rowclick: {
-			scope: this,
-			//##fn: this.on_table_row_click
+		scope: this,
+		rowclick: function(){
+			
+			console.log("yes");
 		}
 	}
 });

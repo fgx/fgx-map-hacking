@@ -32,7 +32,10 @@ def make_map(config):
 	##=======================================================================
 	
 	## MultiPlayer
-	map.connect('/ajax/mp/flights', controller="ajax_mp", action="flights")
+	map.connect('/ajax/mp/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
+	map.connect('/ajax/mp/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
+	map.connect('/ajax/mp/flights', controller="ajax_mpnet", action="flights")
+	
 	
 	
 	## Database Browsing
