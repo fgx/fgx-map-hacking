@@ -218,13 +218,13 @@ this.mapPanel = new GeoExt.MapPanel({
 				{text: "Map", toggleHandler: this.on_nav_toggled, iconCls: "icoMapCore", 
 					menu: {
 						items: [
-							{text: "Landmass", group: "map_core", checked: true, xLayer: "ne_landmass",
+							{text: "Landmass", group: "map_core", checked: false, xLayer: "ne_landmass",
 								handler: this.on_base_layer, scope: this
 							},
 							{text: "OSM Normal", group: "map_core", checked: false, 
 								xLayer: "osm_normal", handler: this.on_base_layer, scope: this
 							},
-							{text: "OSM Light", group: "map_core", checked: false, 
+							{text: "OSM Light", group: "map_core", checked: true, 
 								xLayer: "osm_light", 
 								handler: this.on_base_layer, scope: this
 							}

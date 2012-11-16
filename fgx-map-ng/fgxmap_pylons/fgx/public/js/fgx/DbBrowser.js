@@ -3,9 +3,10 @@
 //================================================================
 FGx.DbBrowser = function (){
 	
+var self = this;
 
 //======================================================
-// Tables
+// Stores
 this.storeTables = new Ext.data.JsonStore({
 	fields: [	
 		{name: "table", type:"string"}
@@ -19,7 +20,26 @@ this.storeTables = new Ext.data.JsonStore({
 	}),
 	root: "tables"
 });
+this.storeColumns = new Ext.data.JsonStore({
+	fields: [	
+		{name: "column", type:"string"},
+		{name: "type", type:"string"},
+		{name: "max_char", type:"string"}
+	
+	],
+	idProperty: "column",
+	proxy: new Ext.data.HttpProxy({
+		url: "/ajax/database/table/_TABLE_NAME_/columns",
+		method: 'GET'
+	}),
+	root: "columns",
+	autoLoad: false
+	
+});
 
+
+//======================================================
+// Tables Grid
 this.gridTables = new Ext.grid.GridPanel({
 	region: 'center',
 	title: "Tables",
@@ -38,10 +58,16 @@ this.gridTables = new Ext.grid.GridPanel({
 	],
 	listeners:{
 		scope: this,
-		rowclick: function(){
+		rowclick: function(grid, idx, e){
 			
 			console.log("yes");
 			//var r = this
+			var rec = self.storeTables.getAt(idx);
+			var table = rec.get("table");
+			var url = "/ajax/database/table/" + table + "/columns";
+			console.log(url);
+			self.storeColumns.proxy.setUrl(url);
+			self.storeColumns.load();
 		}
 	}
 });
@@ -49,26 +75,13 @@ this.gridTables = new Ext.grid.GridPanel({
 //=================================================================
 //== Columns
 
-this.storeColumns = new Ext.data.JsonStore({
-	fields: [	
-		{name: "column", type:"string"},
-		{name: "type", type:"string"},
-		{name: "max_char", type:"string"}
-	
-	],
-	idProperty: "column",
-	ssortInfo: {},
-	//url: "/ajax/dbase",
-	root: "columns",
-	autoLoad: false
-	
-});
+
 
 this.gridColumns = new Ext.grid.GridPanel({
 	region: 'east', 
 	title: "Columns",
 	width: 300,
-	store: this.storeTables,
+	store: this.storeColumns,
 	viewConfig:{
 		forceFit: true
 	},
