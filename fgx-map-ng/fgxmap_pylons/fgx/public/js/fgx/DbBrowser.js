@@ -41,6 +41,7 @@ this.gridTables = new Ext.grid.GridPanel({
 		rowclick: function(){
 			
 			console.log("yes");
+			//var r = this
 		}
 	}
 });

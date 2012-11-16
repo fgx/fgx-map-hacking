@@ -8,6 +8,8 @@ var self = this;
 this.refresh_rate = 0;
 this.runner = new Ext.util.TaskRunner();
 
+var tbw = 35;
+
 //= Triggered when a refresh toolbar button is clicked
 this.on_refresh_toggled = function(butt, checked){
 	butt.setIconClass( checked ? "icoOn" : "icoOff");
@@ -66,39 +68,49 @@ this.render_callsign = function(v, meta, rec){
 	return "<b>" + v + "</b>";
 }
 
+this.render_altitude = function(v, meta, rec){
+	return Ext.util.Format.number(v, '00,000');	
+}
 
 //===========================================================
 //== Grid
 this.grid = new Ext.grid.GridPanel({
-	title: 'Live MultiPlayer',
+	title: 'Flights',
 	iconCls: 'icoFlights',
 	autoScroll: true,
 	autoWidth: true,
 	enableHdMenu: false,
-	viewConfig: {emptyText: 'No flights online', forceFit: true}, 
+	viewConfig: {
+		emptyText: 'No flights in view', 
+		deferEmptyText: false,
+		forceFit: true
+	}, 
+	stripeRows: true,
 	store: this.store,
 	loadMask: false,
 	sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 	columns: [ 
 		//{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
-		{header: 'CallSign',  dataIndex:'callsign', sortable: true, renderer: this.render_callsign, width: 140},
-		{header: 'Aircraft',  dataIndex:'model', sortable: true, sssrenderer: this.render_callsign, hidden: false}, 
-		{header: 'Alt', dataIndex:'alt_ft', sortable: true, align: 'right',
+		{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
+			renderer: this.render_callsign, width: 100
+		},
+		
+		{header: 'Alt', dataIndex:'alt_ft', sortable: true, align: 'right', width: 80,
 			renderer: this.render_altitude
 		},
-		{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
-			renderer: this.render_altitude_trend},
-		{header: 'Hdg', dataIndex:'heading', sortable: true, align: 'right',
+		//{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
+		//	renderer: this.render_altitude_trend},
+		{header: 'Hdg', dataIndex:'heading', sortable: true, align: 'right', width: 50,
 			renderer: function(v, meta, rec, rowIdx, colIdx, store){
 				return v; //Ext.util.Format.number(v, '0');
 			}
 		},
-		{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right', 
+		{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right',  
 			renderer: function(v, meta, rec, rowIdx, colIdx, store){
 				return Ext.util.Format.number(v, '0');
 			}
 		},
-		{header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: false,
+		/* {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: false,
 			renderer: function(v, meta, rec, rowIdx, colIdx, store){
 				return Ext.util.Format.number(v, '0.00000');
 			}
@@ -108,11 +120,15 @@ this.grid = new Ext.grid.GridPanel({
 				return Ext.util.Format.number(v, '0.00000');
 			}
 		},
-		{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: true,
+		{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: false,
 			renderer: function(v, meta, rec, rowIdx, colIdx, store){
 				return v;
 			}
 		}
+		 */
+		{header: 'Aircraft',  dataIndex:'model', sortable: true, hidden: false,
+			width: 100,
+		},
 
 	],
 	
@@ -121,21 +137,30 @@ this.grid = new Ext.grid.GridPanel({
             title: 'Refresh Secs',
             columns: 7,
             items: [
-				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now},
+				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
 					toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-				{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this,
+				{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: tbw,
 					toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-				{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this, 
+				{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: tbw,
 					toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-				{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this, 
+				{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: tbw,
 					toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
-				{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this, 
+				{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: tbw,
 					toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-				{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this,
+				{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: tbw,
 					toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
             ]   
 		}
+	],
+	bbar: [
+		new Ext.PagingToolbar({
+			//frame: false, plain: true, 
+			store: this.store,       
+			displayInfo: true,
+			pageSize: 500,
+			prependButtons: true	
+		})
 	]
 });
 

@@ -209,7 +209,7 @@ this.mapPanel = new GeoExt.MapPanel({
 	tbar: [
 	
 		/** Map Type  */
-		{xtype: 'buttongroup',
+		{xtype: 'buttongroup', 
             title: 'Settings', width: 80, id: "fgx-settings-box", 
             columns: 2,
             items: [
@@ -222,10 +222,10 @@ this.mapPanel = new GeoExt.MapPanel({
 							{text: "Landmass", group: "map_core", checked: true, xLayer: "ne_landmass",
 								handler: this.on_base_layer, scope: this
 							},
-							{text: "OSM - TODO", group: "map_core", checked: false, 
+							{text: "OSM Normal", group: "map_core", checked: false, 
 								xLayer: "osm_normal", handler: this.on_base_layer, scope: this
 							},
-							{text: "OSM Light - TODO", group: "map_core", checked: false, 
+							{text: "OSM Light", group: "map_core", checked: false, 
 								xLayer: "osm_light", 
 								handler: this.on_base_layer, scope: this
 							}
@@ -332,8 +332,16 @@ this.mapPanel = new GeoExt.MapPanel({
 }); //< mapPanel
 this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {      
     // @todo: make this proper lat/lon
-	self.lblLat.setValue( e.x );
-	self.lblLon.setValue( e.y );
+   // console.log(e);
+	var pixel = new OpenLayers.Pixel(e.xy.x,e.xy.y);
+	var lonlat = self.map.getLonLatFromPixel(pixel);
+    //var pt = new OpenLayers.Geometry.Point(e.x,  e.y
+	//		).transform(self.map.getProjectionObject(), self.displayProjection);
+	
+	//self.lblLat.setValue( pt.x );
+	//self.lblLon.setValue( pt.y );
+	self.lblLat.setValue( lonlat.lat );
+	self.lblLon.setValue( lonlat.lon );
     //OpenLayers.Util.getElement("tooltip").innerHTML = position 
 });
 
