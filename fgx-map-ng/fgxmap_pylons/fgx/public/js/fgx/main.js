@@ -23,16 +23,3 @@ FGx.msg = function(title, body, tim){
 	m.slideIn('t', {duration: 500}).pause(Timmy * 1000).ghost("t", {remove:true});
 }
 
-
-var VP;
-
-function display_map(){
-		
-	VP = new FGx.MainViewport();
-	VP.initialize();
-	
-	//console.log("VP");
-	
-}
-
-

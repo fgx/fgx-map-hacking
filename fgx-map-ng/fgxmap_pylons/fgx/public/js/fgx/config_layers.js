@@ -92,7 +92,7 @@ var BASE_LAYERS = {};
 BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
   "NE Landmass",
   "http://map.fgx.ch:81/mapnik/fgxcache.py?",
-    {layers: "natural_earth_landmass" , isBaselayer: "True" , format: "image/png" 
+    {layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
     }, {  visibility: false}
 );
 LAYERS.push(BASE_LAYERS.ne_landmass);
