@@ -5,6 +5,8 @@ FGx.MapPanel = function(){
 	
 	var self = this;
 	
+	
+	
 	var xCenterPoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 	var xDisplayProjection = new OpenLayers.Projection("EPSG:4326");
@@ -40,13 +42,131 @@ FGx.MapPanel = function(){
 			zoomLevels: 20
 	});
 	
+	
+	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
+	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
+
+	var zoomSlider = new GeoExt.ZoomSlider({
+		map: this.map,
+		aggressive: true,                                                                                                                                                   
+		width: 200,
+		plugins: new GeoExt.ZoomSliderTip({
+			template: "<div>Zoom Level: {zoom}</div>"
+		})
+	});
+		
 	function on_nav_toggled(butt, checked){
 		butt.setIconClass( checked ? "icoOn" : "icoOff" );
 		self.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
 	}
 	
+
+	function on_base_layer(butt){
+		if( butt.xLayer == "ne_landmass"){
+			self.map.setBaseLayer( BASE_LAYERS.ne_landmass );
+			
+		}else if ( butt.xLayer == "osm_normal"){
+			self.map.setBaseLayer( BASE_LAYERS.osm_normal );
+			
+		}else if ( butt.xLayer == "osm_light"){
+			self.map.setBaseLayer( BASE_LAYERS.osm_light );
+		}
+	}
+	
+	function make_layers(){
+		var LAYERS = [];
+		//=================================================
+		// Overlay
+		//=================================================
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"DME",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "DME" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"ILS Info",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "ILS_Info" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"Runway",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "Runway" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"NDB",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "NDB" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"ILS Marker",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"Airfield",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "Airfield" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"ILS",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "ILS" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"VOR",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "VOR" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+
+		LAYERS.push( new OpenLayers.Layer.WMS(
+		"FIX",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "FIX" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		));
+
+
+		//=================================================
+		// Underlay
+		//=================================================
+		var BASE_LAYERS = {};
+		BASE_LAYERS.ne_landmass = new OpenLayers.Layer.WMS(
+		"NE Landmass",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
+			}, {  visibility: false}
+		);
+		LAYERS.push(BASE_LAYERS.ne_landmass);
+
+
+
+		BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+		BASE_LAYERS.osm_normal.setOpacity(1.0);
+		LAYERS.push( BASE_LAYERS.osm_normal );
+
+
+
+		BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+		BASE_LAYERS.osm_light.setOpacity(0.4);
+		LAYERS.push( BASE_LAYERS.osm_light );
+
+		return LAYERS;
+		
+	}
+
+
 	FGx.MapPanel.superclass.constructor.call(this, {
-		title: "Foo",
+		title: "Map",
+		iconCls: "icoMap",
 		frame: false,
 		plain: true,
 		border: 0,
@@ -56,7 +176,7 @@ FGx.MapPanel = function(){
 		map: xMap,
 		center: xCenterPoint,
 		zoom: 5,
-		layers: LAYERS,
+		layers: make_layers(),
 		
 		tbar: [
 		
@@ -158,6 +278,16 @@ FGx.MapPanel = function(){
 			
 		],
 		
+		//== Bottom Toolbar
+		bbar: [
+
+			{text: "Zoom:"},
+			zoomSlider,
+			"->",
+			{text: "TODO: Lat: "}, lblLat, 
+			{text: "Lon: "},  lblLon
+		
+		]
 	});
 	
 	

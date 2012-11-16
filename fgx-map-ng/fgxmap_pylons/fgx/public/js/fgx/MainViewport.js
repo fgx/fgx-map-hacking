@@ -370,14 +370,17 @@ this.navWidget = new FGx.NavWidget({});
 //=================================================================================
 
 this.mapPanels = {};
-this.mapPanels.base = new FGx.MapPanel({});
-
+this.mapPanels.base = new FGx.MapPanel({title: "map1"});
+this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
+	tabPosition: "top",
+	frame: false, plain: true,
 	activeItem: 0,
 	items: [
-		this.mapPanels.base
+		this.mapPanels.base,
+		this.mapPanels.base2
 	]
 	
 });
