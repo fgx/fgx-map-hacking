@@ -88,7 +88,6 @@ this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
 
 
 this.get_layers = function(){
-	
 	LAYERS.push( this.flightMarkersLayer );
 	LAYERS.push( this.flightLabelsLayer );
 	return LAYERS;	
@@ -405,7 +404,7 @@ this.viewport = new Ext.Viewport({
 
 
 this.initialize = function(){
-		
+	self.map.setBaseLayer( BASE_LAYERS.osm_light );	
 }
 //==========================================================
 // Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
