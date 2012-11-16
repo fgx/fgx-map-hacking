@@ -17,7 +17,7 @@
 //================================================================
 FGx.DBaseBrowser = function (){
 	
-var self = this;
+//var self = this;
 
 this.database = "";
 this.table = ""
@@ -29,9 +29,8 @@ this.columnsGrid = new FGx.DBaseColumnsGrid({region: 'east', width: 300});
 
 
 this.tablesGrid.on("TABLE", function(table){
-	
-	self.columnsGrid.load_columns(table);	
-})
+	this.columnsGrid.load_columns(table);	
+}, this);
 
 
 

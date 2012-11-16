@@ -4,14 +4,16 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
     constructor: function(config) {
 		
 		
-		var store = new Ext.data.JsonStore({
+		this.xStore = new Ext.data.JsonStore({
 			fields: [	
-				{name: "column", type:"string"}
+				{name: "column", type:"string"},
+				{name: "type", type:"string"},
+				{name: "max_char", type:"string"}
 			
 			],
 			idProperty: "column",
 			ssortInfo: {},
-			url: "/ajax/dbase",
+			//url: "/ajax/dbase",
 			root: "columns",
 			autoLoad: false
 			
@@ -19,10 +21,11 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
 		
 		
 		config = Ext.apply({
-			store: store,
+			store: this.xStore,
 			title: "Columns",
 			columns: [ 
-				{header: "Column", dataIndex: "column"}
+				{header: "Column", dataIndex: "column"},
+				{header: "Type", dataIndex: "type"},
 			
 			]
 			
@@ -32,11 +35,12 @@ FGx.DBaseColumnsGrid = Ext.extend(Ext.grid.GridPanel, {
 		FGx.DBaseColumnsGrid.superclass.constructor.call(this, config);
 	},
 	
-	load_columns: function( table){
+	load_columns: function( table ){
 		//console.log("Load Columns", database, table);
-		var u = "/ajax/database/" + table + "/columns";
-		this.getStore().proxy.setUrl(u);
-		this.getStore().load();
+		var u = "/ajax/database/table/" + table + "/columns";
+		console.log(u);
+		this.xStore.proxy.setUrl(u);
+		this.xStore.load();
 		//console.log(u);
 	}
 	

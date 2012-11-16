@@ -18,17 +18,17 @@ class AjaxDbController(BaseController):
 	def tables(self):
 
 		payload = dict(
-					success=True,
-					tables=database.tables()
+					success = True,
+					tables = database.tables()
 				)
 		
 		return payload
 		
-		
+	@jsonify	
 	def columns(self, table):
 		payload = dict(
-					success=True,
-					tables=database.columns(table)
+					success = True,
+					columns = database.columns(table)
 				)
 		
 		return payload
