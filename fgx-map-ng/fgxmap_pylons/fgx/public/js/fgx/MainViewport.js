@@ -9,7 +9,6 @@ var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 
-
 //===========================================================================
 //= Layers
 //===========================================================================
@@ -130,9 +129,12 @@ this.on_me = function(){
 //===========================================================================
 //= Map Setup
 //===========================================================================
+
+/*
 this.displayProjection = new OpenLayers.Projection("EPSG:4326"),
 this.projection = new OpenLayers.Projection("EPSG:3857")
-
+*/
+/*
 this.map = new OpenLayers.Map({
 		allOverlays: false,
 		units: 'm',
@@ -162,10 +164,12 @@ this.map = new OpenLayers.Map({
 		// zoomlevels 0-13 = 14 levels ?
 		zoomLevels: 20
 });
+*/
 
 //============================================================
 // mapPanel - geoExt
 //============================================================
+/*
 this.lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
 this.lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
@@ -190,7 +194,8 @@ this.on_base_layer = function(butt){
 		this.map.setBaseLayer( BASE_LAYERS.osm_light );
 	}
 }
-
+*/
+/*
 this.mapPanel = new GeoExt.MapPanel({
 	
 	frame: false,
@@ -204,10 +209,10 @@ this.mapPanel = new GeoExt.MapPanel({
     zoom: 5,
 	layers: this.get_layers(),
 	
-	/** Top Toolbar, these are all in button groups */
+	/// Top Toolbar, these are all in button groups
 	tbar: [
 	
-		/** Map Type  */
+		//== Map Type  
 		{xtype: 'buttongroup', 
             title: 'Settings', width: 80, id: "fgx-settings-box", 
             columns: 2,
@@ -304,23 +309,11 @@ this.mapPanel = new GeoExt.MapPanel({
 		"->",
 		
 	],
-	/****************************************************************************/
-	/** Bottom Toolbar **/
-	/****************************************************************************/
+	
+	///========================================
+	//== Bottom Toolbar 
 	bbar: [
-		/** TODO Opacity Slider
-		http://api.geoext.org/1.1/examples/layeropacityslider.html
-		new GeoExt.LayerOpacitySlider({
-			TODO_layer: "natural_earth_landmass",
-			aggressive: true, 
-			width: 200,
-			isFormField: true,
-			inverse: true,
-			fieldLabel: "opacity",
-			renderTo: "slider",
-			plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
-		}),
-		*/
+
 		{text: "Zoom:"},
 		this.zoomSlider,
 		"->",
@@ -343,11 +336,12 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 	self.lblLon.setValue( lonlat.lon );
     //OpenLayers.Util.getElement("tooltip").innerHTML = position 
 });
+*/
 
 //=================================================================================
 // Other Widgets - Note the Map is passed in constructor as ref
 //============================================================
-this.flightsWidget = new FGx.FlightsWidget({mapPanel: this.mapPanel});
+this.flightsWidget = new FGx.FlightsWidget({});
 
 this.flightsWidget.grid.on("rowdblclick", function(grid, idx, e){
 	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
@@ -366,7 +360,7 @@ this.flightsWidget.grid.on("rowdblclick", function(grid, idx, e){
 }, this);  
 
 
-this.navWidget = new FGx.NavWidget({mapPanel: this.mapPanel});
+this.navWidget = new FGx.NavWidget({});
 
 //this.mapLayersTree = new FGx.MapLayersTree();
 
@@ -374,6 +368,23 @@ this.navWidget = new FGx.NavWidget({mapPanel: this.mapPanel});
 //=================================================================================
 // Main Viewport auto rendered to body
 //=================================================================================
+
+this.mapPanels = {};
+this.mapPanels.base = new FGx.MapPanel({});
+
+
+this.tabPanel = new Ext.TabPanel({
+	region: "center",
+	activeItem: 0,
+	items: [
+		this.mapPanels.base
+	]
+	
+});
+
+
+
+
 this.viewport = new Ext.Viewport({
 	layout: "border",
 	frame: false,
@@ -381,7 +392,8 @@ this.viewport = new Ext.Viewport({
 	border: 0,
 	items: [
 
-		this.mapPanel,
+		//this.mapPanel,
+		this.tabPanel,
 		{region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
@@ -404,7 +416,7 @@ this.viewport = new Ext.Viewport({
 
 
 this.initialize = function(){
-	self.map.setBaseLayer( BASE_LAYERS.osm_light );	
+	//self.map.setBaseLayer( BASE_LAYERS.osm_light );	
 }
 //==========================================================
 // Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)

@@ -1,19 +1,24 @@
 
-Ext.ns("FGx");
-Ext.define('FGx,MapPanel', {
+Ext.namespace("FGx");
+		
+FGx.MapPanel = function(){
+	
+	FGx.MapPanel.superclass.constructor.call(this, {
+		
+		title: "FOO",
+		
+	});
+	
+	
+	
+	
+} /* end MapPanel */
 
-	extend: 'Ext.Panel',
-
-	constructor: function (name) {
-		if (name) {
-			this.name = name;
-		}
-		return this;
+Ext.extend(FGx.MapPanel, Ext.Panel, {
+	initComponent: function(){
+		FGx.MapPanel.superclass.initComponent.apply(this, arguments);
 	},
-
-	calc: function () {
-		alert('base calc');
-		return this;
-	}
+	onRender: function(){
+		FGx.MapPanel.superclass.onRender.apply(this, arguments);
+	},
 });
-			 
