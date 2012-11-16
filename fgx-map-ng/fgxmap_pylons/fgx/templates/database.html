@@ -1,0 +1,42 @@
+
+
+{% extends "_base.html" %}
+{% import "_macros.html" as mac with context %}
+
+
+{% set page_title = "Db Struct" %}
+
+
+
+
+{% block header %}
+
+{{ mac.ext_js() }}
+
+<script type="text/javascript" src="/js/main.1.js"></script>
+{# <script type="text/javascript" src="/js/config.js"></script> #}
+<script type="text/javascript" src="/js/fgx/DbBrowser.js"></script>
+
+{% endblock header %}
+
+
+
+
+{% block content %}
+
+<div id="widget_div"></div>
+
+
+<script>
+
+Ext.onReady(function(){
+
+	var widget = new FGx.DbBrowser();
+	widget.load();
+
+});
+</script>
+
+
+
+{% endblock %}

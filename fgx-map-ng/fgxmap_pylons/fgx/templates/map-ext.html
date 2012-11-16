@@ -1,0 +1,37 @@
+
+
+{% extends "_base.html" %}
+{% import "_macros.html" as mac with context %}
+
+
+{% set page_title = "FGx Map" %}
+
+{#=======================================================#}
+{% block header %}
+
+
+
+{{ mac.ext_js() }}
+{{ mac.openlayers_js() }}
+
+<script type="text/javascript" src="/js/fgx/main.js"></script>
+<script type="text/javascript" src="/js/fgx/config_layers.js"></script>
+
+<script type="text/javascript" src="/js/fgx/FlightsWidget.js"></script>
+<script type="text/javascript" src="/js/fgx/NavWidget.js"></script>
+
+<script type="text/javascript" src="/js/fgx/MainViewport.js"></script>	
+
+{% endblock header %}
+
+
+
+{#=======================================================#}
+{% block content %}
+
+
+<script>
+	display_map();
+</script>
+
+{% endblock %}
