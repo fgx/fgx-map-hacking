@@ -29,35 +29,7 @@ on_refresh_now: function(){
 	this.store.load();
 },
 
-//===========================================================
-//== Store
-/*
-this.store = new Ext.data.JsonStore({
-	idProperty: 'callsign',
-	fields: [ 	{name: 'flag', type: 'int'},
-				{name: 'check', type: 'int'},
-				{name: "callsign", type: 'string'},
-				{name: "server", type: 'string'},
-				{name: "model", type: 'string'},
-				{name: "lat", type: 'float'},
-				{name: "lon", type: 'float'},
-				{name: "alt_ft", type: 'int'},
-				{name: "spd_kts", type: 'int'},
-				//{name: "alt_trend", type: 'string'},
-				{name: "heading", type: 'string'}
-	],
-	url: '/ajax/mp/flights/crossfeed',
-	root: 'flights',
-	remoteSort: false,
-	sortInfo: {
-		field: "callsign", 
-		direction: 'ASC'
-	}
-});
-*/
-update_flights: function(){
-	self.store.load();
-},
+
 
 
 

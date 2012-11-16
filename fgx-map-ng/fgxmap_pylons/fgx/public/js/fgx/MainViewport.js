@@ -39,6 +39,10 @@ this.update_flights = function(){
 	self.flightsStore.load();
 }
 
+
+this.runner = new Ext.util.TaskRunner();
+
+
 //===========================================================================
 //= Layers
 //===========================================================================
@@ -372,7 +376,7 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 // Other Widgets - Note the Map is passed in constructor as ref
 //============================================================
 //this.flightsWidget = new FGx.FlightsWidget({});
-this.flightsGrid = new FGx.FlightsGrid({store: this.flightsStore, title: "Flights"});
+this.flightsGrid = new FGx.FlightsGrid({store: this.flightsStore, title: "Flights", closable: true});
 
 this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
@@ -402,7 +406,7 @@ this.navWidget = new FGx.NavWidget({});
 
 this.mapPanels = {};
 this.mapPanels.base = new FGx.MapPanel({title: "map1"});
-//this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
+this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
@@ -410,9 +414,11 @@ this.tabPanel = new Ext.TabPanel({
 	frame: false, plain: true,
 	activeItem: 0,
 	items: [
+		this.mapPanels.base,
+		this.mapPanels.base2,
 		this.flightsGrid,
-		this.mapPanels.base
-		//,.this.mapPanels.base2
+		
+		//
 	]
 	
 });
