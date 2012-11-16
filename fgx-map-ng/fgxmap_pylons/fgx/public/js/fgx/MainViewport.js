@@ -9,6 +9,36 @@ var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
 
+//===========================================================
+//== FlightsStore
+this.flightsStore = new Ext.data.JsonStore({
+	idProperty: 'callsign',
+	fields: [ 	{name: 'flag', type: 'int'},
+				{name: 'check', type: 'int'},
+				{name: "callsign", type: 'string'},
+				{name: "server", type: 'string'},
+				{name: "model", type: 'string'},
+				{name: "lat", type: 'float'},
+				{name: "lon", type: 'float'},
+				{name: "alt_ft", type: 'int'},
+				{name: "spd_kts", type: 'int'},
+				//{name: "alt_trend", type: 'string'},
+				{name: "heading", type: 'string'}
+	],
+	url: '/ajax/mp/flights/crossfeed',
+	root: 'flights',
+	remoteSort: false,
+	sortInfo: {
+		field: "callsign", 
+		direction: 'ASC'
+	},
+	autoLoad: true,
+});
+
+this.update_flights = function(){
+	self.flightsStore.load();
+}
+
 //===========================================================================
 //= Layers
 //===========================================================================
@@ -341,9 +371,10 @@ this.mapPanel.map.events.register("mousemove", this.mapPanel.map, function(e) {
 //=================================================================================
 // Other Widgets - Note the Map is passed in constructor as ref
 //============================================================
-this.flightsWidget = new FGx.FlightsWidget({});
+//this.flightsWidget = new FGx.FlightsWidget({});
+this.flightsGrid = new FGx.FlightsGrid({store: this.flightsStore, title: "Flights"});
 
-this.flightsWidget.grid.on("rowdblclick", function(grid, idx, e){
+this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
 	//console.log(">>>>>>>>", callsign);
 	//var existing_img = self.flightMarkersLayer.getFeatureBy("_callsign", callsign);
@@ -371,7 +402,7 @@ this.navWidget = new FGx.NavWidget({});
 
 this.mapPanels = {};
 this.mapPanels.base = new FGx.MapPanel({title: "map1"});
-this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
+//this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
@@ -379,8 +410,9 @@ this.tabPanel = new Ext.TabPanel({
 	frame: false, plain: true,
 	activeItem: 0,
 	items: [
-		this.mapPanels.base,
-		this.mapPanels.base2
+		this.flightsGrid,
+		this.mapPanels.base
+		//,.this.mapPanels.base2
 	]
 	
 });
@@ -396,8 +428,9 @@ this.viewport = new Ext.Viewport({
 	items: [
 
 		//this.mapPanel,
-		this.tabPanel,
-		{region: 'east', width: 400, 
+		this.tabPanel
+		,
+		/* {region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',
 			frame: false,
@@ -407,13 +440,14 @@ this.viewport = new Ext.Viewport({
 			activeItem: 0,
 			items: [
 				//this.mapLayersTree.tree,
-				
-				this.flightsWidget.grid,
+				this.flightsGrid,
+				//this.flightsWidget.grid,
 				this.navWidget.grid
 				
 			]
         
 		},
+		*/
 	]
 });
 
@@ -436,7 +470,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 		radarLabelMarkers.removeFeatures(existing_lbl);
 	}
 	*/
-
+	return;
 	
 	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
 						).transform(this.displayProjection, this.map.getProjectionObject() );	
@@ -485,7 +519,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 }
 
 
-this.flightsWidget.store.on("load", function(store, recs, idx){
+this.flightsStore.on("load", function(store, recs, idx){
 	//console.log(recs.length);
 	//return;
 	this.flightLabelsLayer.removeAllFeatures();

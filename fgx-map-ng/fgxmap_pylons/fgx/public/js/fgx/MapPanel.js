@@ -161,13 +161,12 @@ FGx.MapPanel = function(){
 
 	FGx.MapPanel.superclass.constructor.call(this, {
 		title: "Map",
+		closable: true,
 		iconCls: "icoMap",
 		frame: false,
 		plain: true,
 		border: 0,
 		bodyBorder: false,
-		region: "center",
-			// we do not want all overlays, to try the OverlayLayerContainer
 		map: this.xMap,
 		center: xCenterPoint,
 		zoom: 5,
