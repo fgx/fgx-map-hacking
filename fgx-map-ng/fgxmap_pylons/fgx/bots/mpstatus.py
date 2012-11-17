@@ -57,6 +57,8 @@ class MpStatusThread(threading.Thread):
 					ob = MpServer()
 					ob.no = server_no
 					ob.fqdn = self.host_name(server_no)
+					ob.lag = None
+					ob.last_seen = None
 					meta.Session.add(ob)
 					
 				ob.ip = details['ip']
@@ -65,10 +67,7 @@ class MpStatusThread(threading.Thread):
 				meta.Session.commit()
 				
 				lag, flights = self.fetch_telnet(server_no, True)
-				if lag == None:
-					ob.lag = lag
-					ob.last_seen = datetime.datetime.now()
-				else:
+				if lag > 0:
 					ob.lag = lag
 					ob.last_seen = datetime.datetime.now()
 				meta.Session.commit()	

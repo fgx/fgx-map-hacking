@@ -75,6 +75,12 @@ constructor: function(config) {
 			{header: 'Last Seen', dataIndex:'last_seen', sortable: true, align: 'right',
 			},
 			{header: 'Last Lag', dataIndex:'lag', sortable: true, align: 'right',
+				renderer: function(v){
+					if(v > 0){
+						return v;
+					}
+					return "-";
+				}
 			},
 			{header: 'Status',  dataIndex:'status', sortable: true, hidden: false,
 				width: 100,
