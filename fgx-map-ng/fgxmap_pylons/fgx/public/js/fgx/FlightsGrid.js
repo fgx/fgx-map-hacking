@@ -135,6 +135,7 @@ constructor: function(config) {
 				prependButtons: true	
 			})
 		]
+		
 	}, config);
 	FGx.FlightsGrid.superclass.constructor.call(this, config);
 } // Constructor	

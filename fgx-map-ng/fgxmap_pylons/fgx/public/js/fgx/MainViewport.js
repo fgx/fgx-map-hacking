@@ -59,21 +59,6 @@ this.flightsGrid = new FGx.FlightsGrid({
 	xHidden: false
 });
 
-this.flightsGrid.on("rowdblclick", function(grid, idx, e){
-	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
-	//console.log(">>>>>>>>", callsign);
-	//var existing_img = self.flightMarkersLayer.getFeatureBy("_callsign", callsign);
-	//console.log("exist=", existing_img);
-	//if(existing_img){
-		//radarImageMarkers.removeFeatures(existing_img);
-		//console.log("geom=", existing_img.geometry);
-	var rec = self.flightsWidget.store.getAt(idx);
-	 var pt = new OpenLayers.Geometry.Point(rec.get("lon"), rec.get("lat")
-					).transform(this.displayProjection, this.map.getProjectionObject() );
-	console.log(rec.get("lon"), rec.get("lat"), pt);
-					
-	this.map.setCenter( pt );
-}, this);  
 
 
 //this.navWidget = new FGx.NavWidget({});
@@ -143,96 +128,6 @@ this.viewport = new Ext.Viewport({
 
 this.initialize = function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );	
-}
-//==========================================================
-// Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
-this.DEADshow_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
-
-	// remove xisting iamge/label if exist
-	/*
-	var existing_img = radarImageMarkers.getFeatureBy("_callsign", mcallsign);
-	if(existing_img){
-		radarImageMarkers.removeFeatures(existing_img);
-	}
-	var existing_lbl  = radarLabelMarkers.getFeatureBy("_callsign", mcallsign);
-	if(existing_lbl){
-		radarLabelMarkers.removeFeatures(existing_lbl);
-	}
-	*/
-	return;
-	
-	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
-						).transform(this.displayProjection, this.map.getProjectionObject() );	
-	if(!this.map.getExtent().containsPixel(pointImg, false)){
-		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
-	}
-
-	// Add Image
-	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
-				planerotation: mheading
-				}); 
-	imgFeat._callsign = mcallsign;
-	this.flightMarkersLayer.addFeatures([imgFeat]);	
-	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
-	
-	var gxOff = 4;
-	var gyOff = -8;
-
-	var lxOff = 6;
-	var lyOff = 2;
-	
-	// move the label offset
-	if(mheading > 0  && mheading < 90){
-		lyOff = lyOff - 15;
-		gyOff = gyOff  + 15 ;
-	}else if( mheading > 90 && mheading < 150){
-		lyOff = lyOff + 5;
-		gyOff = gyOff - 5;
-	}else if( mheading > 270 && mheading < 360){
-		lyOff = lyOff - 10;
-		gyOff = gyOff  + 10;
-		
-	}
-
-	// Add callsign label as separate feature, to have a background color (graphic) with offset
-	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
-					).transform(this.displayProjection, this.map.getProjectionObject() );
-	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
-                callsign: mcallsign,
-				lxOff: lxOff, lyOff: lyOff,
-				gxOff: gxOff, gyOff: gyOff
-				});
-	lblFeat._callsign = mcallsign;
-	this.flightLabelsLayer.addFeatures([lblFeat]);	
-	
-}
-
-/*
-this.flightsStore.on("load", function(store, recs, idx){
-	//console.log(recs.length);
-	//return;
-	this.flightLabelsLayer.removeAllFeatures();
-	this.flightMarkersLayer.removeAllFeatures();
-	recs_length = recs.length;
-	for(var i = 0; i < recs_length; i++){
-		var rec = recs[i];
-		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
-	};
-}, this);
-*/
-
-//= Triggered when a refresh toolbar button is clicked
-this.on_refresh_toggled = function(butt, checked){
-	butt.setIconClass( checked ? "icoOn" : "icoOff");
-	if(checked){
-		this.runner.stopAll(); // stop if already ruinning
-		this.refresh_rate = parseInt(butt.ref_rate, 10);
-		if(this.refresh_rate === 0){
-			//this.runner.stop()
-		}else{
-			this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
-		}
-	}
 }
 
 //= Riggered for reshresh now

@@ -68,17 +68,34 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
+
+//======================================================
+// Flights Grid
 flights_grid: function(sto){
 	if(!this.xFlightsGrid){
+		
 		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights", xHidden: true});
+		
+		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+				
 	}
 	return this.xFlightsGrid;
 },
 
+//======================================================
+// Create the Layers
 get_layers: function(){
 	
-	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM Light" );
-	osm_light.setOpacity(0.5);
+	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
+	osm_light.setOpacity(0.3);
 	
 	var LAYERS = [
 		//=================================================
@@ -145,7 +162,7 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		new OpenLayers.Layer.OSM.Mapnik( "OSM Normal" ),
+		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
 		osm_light
 	];
 	return LAYERS;
@@ -182,10 +199,10 @@ constructor: function(config) {
 							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOn", pressed: true,
 								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "OSM Normal", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
+							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "OSM Light", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
+							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -446,7 +463,7 @@ init: function(){
 	this.get_map().addLayer( this.flightMarkersLayer );
 	this.get_map().addLayer( this.flightLabelsLayer );
 	
-	this.set_base_layer("OSM Light"); //??? WTF!!
+	this.set_base_layer("Dark"); //??? WTF!!
 	
 	this.flights_grid().getStore().on("load", function(store, recs, idx){
 		//console.log("YESSSSS");
