@@ -6,9 +6,18 @@ FGx.MapPanel = Ext.extend(Ext.Panel, {
 
 	
 //var self = this;
-						  
-xDisplayProjection: new OpenLayers.Projection("EPSG:4326"),
-xProjection: new OpenLayers.Projection("EPSG:3857"),
+get_display_projection: function(){
+	if(!this.xDisplayProjection){
+		this.xDisplayProjection = new OpenLayers.Projection("EPSG:4326");
+	}
+	return this.xDisplayProjection;
+},
+get_projection: function(){
+	if(!this.xProjection){
+		this.xProjection = OpenLayers.Projection("EPSG:3857");
+	}
+	return this.xProjection;
+},
 
 get_map: function(){
 	if(!this.xMap){
@@ -16,11 +25,11 @@ get_map: function(){
 			allOverlays: false,
 			units: 'm',
 			// this is the map projection here
-			projection: this.xProjection,
+			projection: this.get_projection(),
 			//sphericalMercator: true,
 			
 			// this is the display projection, I need that to show lon/lat in degrees and not in meters
-			displayProjection: this.xDisplayProjection,
+			displayProjection: this.get_display_projection(),
 			
 			// the resolutions are calculated by tilecache, when there is no resolution parameter but a bbox in
 			// tilecache.cfg it shows you resolutions for all calculated zoomlevels in your browser: 
@@ -283,7 +292,7 @@ constructor: function(config) {
 				plain: true,
 				border: 0,
 				collapsible: true,
-				collapsed: true,
+				collapsed: false,
 				activeItem: 0,
 				items: [
 					//this.mapLayersTree.tree,
@@ -305,14 +314,18 @@ constructor: function(config) {
 }, // Constructor	
 
 on_base_layer: function(butt, checked){
-	console.log(butt.xLayer);
+	//console.log(butt.xLayer);
 	
 	if(checked){
-		var layer = this.xMap.getLayersByName(butt.text)[0];
-		console.log(layer);
-		this.xMap.setBaseLayer( layer );
+		this.set_base_layer(butt.text);
 	}
 	butt.setIconClass(checked ? "icoOn" : "icoOff");
+},
+
+set_base_layer: function(layer_name){
+	var layer = this.get_map().getLayersByName(layer_name)[0];
+	//console.log(layer);
+	this.get_map().setBaseLayer( layer );
 },
 
 on_nav_toggled: function(butt, checked){
@@ -332,6 +345,161 @@ on_civmil_mode: function(butt, checked){
 	//Ext.getCmp("fgx-mil-airports").setVisible( show_mil )
 },
 
+
+
+//==========================================================
+// Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
+show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
+
+	// remove xisting iamge/label if exist
+	/*
+	var existing_img = radarImageMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_img){
+		radarImageMarkers.removeFeatures(existing_img);
+	}
+	var existing_lbl  = radarLabelMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_lbl){
+		radarLabelMarkers.removeFeatures(existing_lbl);
+	}
+	*/
+	//c//onsole.log(mcallsign, mlat, mlon, mheading, maltitude)
+	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
+						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+	//if(!this.get_map().getExtent().containsPixel(pointImg, false)){
+		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
+	//}
+
+	// Add Image
+	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
+				planerotation: mheading
+				}); 
+	imgFeat._callsign = mcallsign;
+	this.flightMarkersLayer.addFeatures([imgFeat]);	
+	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
+	
+	var gxOff = 4;
+	var gyOff = -8;
+
+	var lxOff = 6;
+	var lyOff = 2;
+	
+	// move the label offset
+	if(mheading > 0  && mheading < 90){
+		lyOff = lyOff - 15;
+		gyOff = gyOff  + 15 ;
+	}else if( mheading > 90 && mheading < 150){
+		lyOff = lyOff + 5;
+		gyOff = gyOff - 5;
+	}else if( mheading > 270 && mheading < 360){
+		lyOff = lyOff - 10;
+		gyOff = gyOff  + 10;
+		
+	}
+
+	// Add callsign label as separate feature, to have a background color (graphic) with offset
+	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
+                callsign: mcallsign,
+				lxOff: lxOff, lyOff: lyOff,
+				gxOff: gxOff, gyOff: gyOff
+				});
+	lblFeat._callsign = mcallsign;
+	this.flightLabelsLayer.addFeatures([lblFeat]);	
+	
+},
+
+init: function(){
+	//console.log("INIT");
+	
+	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+		"Radar Markers", 
+		{styleMap: new OpenLayers.StyleMap({
+				"default": {
+					strokeColor: "lime",
+					strokeWidth: 1,
+					fillColor: "lime",
+
+					externalGraphic: "/images/radar_blip2.png",
+					graphicWidth: 8,
+					graphicHeight: 24,
+					graphicOpacity: 1,
+					graphicXOffset: 0,
+					graphicYOffset: -20,
+					
+					fontColor: "black",
+					fontSize: "12px",
+					fontFamily: "Helvetica, Arial, sans-serif",
+					fontWeight: "bold",
+					rotation : "${planerotation}",
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+			})
+		}, {  visibility: true}
+	)
+
+	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+		"Radar Label", 
+		{
+			styleMap:  new OpenLayers.StyleMap({
+				"default": {
+					fill: true,
+					fillOpacity: 1,
+					fillColor: "black",
+					strokeColor: "green",
+					strokeWidth: 1,
+
+					//graphic: false,
+					externalGraphic: "/images/fgx-background-black.png",
+					graphicWidth: 50,
+					graphicHeight: 12,
+					graphicOpacity: 0.8,
+					graphicXOffset: "${gxOff}",
+					graphicYOffset: "${gyOff}",
+					
+					
+					fontColor: "white",
+					fontSize: "10px",
+					fontFamily: "sans-serif",
+					fontWeight: "bold",
+					labelAlign: "left",
+					labelXOffset: "${lxOff}", 
+					labelYOffset: "${lyOff}", 
+					label : "${callsign}",
+					//rotation : "${planerotation}",
+
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+
+			})
+		}
+	);
+	this.get_map().addLayer( this.flightMarkersLayer );
+	this.get_map().addLayer( this.flightLabelsLayer );
+	
+	this.set_base_layer("OSM Light"); //??? WTF!!
+	
+	this.flights_grid().getStore().on("load", function(store, recs, idx){
+		//console.log("YESSSSS");
+		this.flightLabelsLayer.removeAllFeatures();
+		this.flightMarkersLayer.removeAllFeatures();
+		var recs_length = recs.length;
+		for(var i = 0; i < recs_length; i++){
+			var rec = recs[i];
+			this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
+		};
+	}, this);
+},
 //get_info_panel: 
 
 
