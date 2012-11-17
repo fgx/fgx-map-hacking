@@ -7,8 +7,6 @@ FGx.MapPanel = Ext.extend(GeoExt.MapPanel, {
 	
 //var self = this;
 
-
-
 xCenterPoint: new OpenLayers.LonLat(939262.20344,5938898.34882),
 						  
 xDisplayProjection: new OpenLayers.Projection("EPSG:4326"),
@@ -55,7 +53,7 @@ zoomSlider: new GeoExt.ZoomSlider({
 		template: "<div>Zoom Level: {zoom}</div>"
 	})
 }),
-
+/*
 BASE_LAYERS: {
 	ne_landmass: new OpenLayers.Layer.WMS(
 		"NE Landmass",
@@ -66,6 +64,7 @@ BASE_LAYERS: {
 	osm_normal: new OpenLayers.Layer.OSM.Mapnik( "OSM normal" ),
 	osm_light: new OpenLayers.Layer.OSM.Mapnik( "OSM light" )
 },
+*/
 //LAYERS.push(this.BASE_LAYERS.ne_landmass);
 
 
@@ -77,80 +76,75 @@ BASE_LAYERS: {
 //this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
 //this.BASE_LAYERS.osm_light.setOpacity(0.4);
 //LAYERS.push( this.BASE_LAYERS.osm_light );
-get_layers: function(){
-	var LAYERS = [];
+LAYERS: [
 	//=================================================
 	// Overlay
 	//=================================================
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"DME",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-		{layers: "DME" , transparent: "True" , format: "image/png" 
-		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"ILS Info",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-		{layers: "ILS_Info" , transparent: "True" , format: "image/png" 
-		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
+	new OpenLayers.Layer.WMS(
+		"DME",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "DME" , transparent: "True" , format: "image/png"}, 
+		{ visibility: false}
+	),
+	new OpenLayers.Layer.WMS(
+		"ILS Info",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS_Info" , transparent: "True" , format: "image/png"}, 
+		{visibility: false}
+	),
+	new OpenLayers.Layer.WMS(
 	"Runway",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-		{layers: "Runway" , transparent: "True" , format: "image/png" 
-		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"NDB",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "Runway" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+	),
+	new OpenLayers.Layer.WMS(
+		"NDB",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "NDB" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"ILS Marker",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+	),
+	new OpenLayers.Layer.WMS(
+		"ILS Marker",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"Airfield",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+	),
+	new OpenLayers.Layer.WMS(
+		"Airfield",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "Airfield" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"ILS",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+	),
+	new OpenLayers.Layer.WMS(
+		"ILS",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "ILS" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"VOR",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+	),
+	new OpenLayers.Layer.WMS(
+		"VOR",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "VOR" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
-
-	LAYERS.push( new OpenLayers.Layer.WMS(
-	"FIX",
-	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+	),
+	new OpenLayers.Layer.WMS(
+		"FIX",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 		{layers: "FIX" , transparent: "True" , format: "image/png" 
 		}, {  visibility: false}
-	));
+	),
+	/// Underlays
+	new OpenLayers.Layer.WMS(
+		"Landmass",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
+			}, {  visibility: false}
+	),
+	new OpenLayers.Layer.OSM.Mapnik( "OSM Normal" ),
+	new OpenLayers.Layer.OSM.Mapnik( "OSM Light" )
+],
 
-
-	//=================================================
-	// Underlay
-	//=================================================
-	LAYERS.push(this.BASE_LAYERS.ne_landmass);
-
-	this.BASE_LAYERS.osm_normal.setOpacity(1.0);
-	LAYERS.push( this.BASE_LAYERS.osm_normal );
-
-	this.BASE_LAYERS.osm_light.setOpacity(0.4);
-	LAYERS.push( this.BASE_LAYERS.osm_light );
-	return LAYERS;
-},
 	
 //===========================================================
 //== Grid
@@ -167,7 +161,7 @@ constructor: function(config) {
 		map: this.xMap,
 		center: this.xCenterPoint,
 		zoom: 5,
-		layers: this.get_layers(),
+		layers: this.LAYERS,
 		
 		tbar: [
 		
@@ -225,7 +219,7 @@ constructor: function(config) {
 				columns: 5,
 				items: [
 					{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
-						toggleHandler: this.on_nav_toggled,
+						toggleHandler: this.on_nav_toggled, scope: this,
 						menu: {
 							items: [
 								{text: "Show range - TODO", checked: false, disabled: true}
@@ -233,7 +227,7 @@ constructor: function(config) {
 						}
 					},
 					{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
-						toggleHandler: this.on_nav_toggled, 
+						toggleHandler: this.on_nav_toggled,  scope: this,
 						menu: {
 							items: [
 								{text: "Show range - TODO", checked: false, disabled: true}
@@ -241,13 +235,13 @@ constructor: function(config) {
 						}
 					},
 					{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-						toggleHandler: this.on_nav_toggled
+						toggleHandler: this.on_nav_toggled, scope: this
 					},
 					{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
-						toggleHandler: this.on_nav_toggled
+						toggleHandler: this.on_nav_toggled, scope: this
 					},
 					{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-						toggleHandler: this.on_nav_toggled, 
+						toggleHandler: this.on_nav_toggled, scope: this,
 						hidden: true, id: "fgx-vortac"
 					}
 				]   
@@ -287,6 +281,10 @@ constructor: function(config) {
 
 on_base_layer: function(butt){
 	console.log(butt.xLayer);
+	var layer = this.xMap.getLayersByName(butt.text)[0];
+	console.log(layer);
+	this.xMap.setBaseLayer( layer );
+	return;
 	if( butt.xLayer == "ne_landmass"){
 		this.xMap.setBaseLayer( this.BASE_LAYERS.ne_landmass );
 		
@@ -300,7 +298,7 @@ on_base_layer: function(butt){
 
 on_nav_toggled: function(butt, checked){
 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
-	self.map.getLayersByName(butt.navaid)[0].setVisibility(checked);
+	this.xMap.getLayersByName(butt.navaid)[0].setVisibility(checked);
 },
 
 on_apt_toggled: function(butt, checked){
