@@ -405,8 +405,8 @@ this.navWidget = new FGx.NavWidget({});
 //=================================================================================
 
 this.mapPanels = {};
-this.mapPanels.base = new FGx.MapPanel({title: "map1"});
-this.mapPanels.base2 = new FGx.MapPanel({title: "map2"});
+this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false});
+this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",

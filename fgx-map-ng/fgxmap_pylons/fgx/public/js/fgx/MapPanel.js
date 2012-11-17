@@ -152,7 +152,6 @@ constructor: function(config) {
 	
 	config = Ext.apply({
 		sstitle: "Map",
-		closable: true,
 		iconCls: "icoMap",
 		frame: false,
 		plain: true,
