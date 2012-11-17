@@ -68,17 +68,34 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
+
+//======================================================
+// Flights Grid
 flights_grid: function(sto){
 	if(!this.xFlightsGrid){
-		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights"});
+		
+		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights", xHidden: true});
+		
+		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+				
 	}
 	return this.xFlightsGrid;
 },
 
+//======================================================
+// Create the Layers
 get_layers: function(){
 	
-	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM Light" );
-	osm_light.setOpacity(0.5);
+	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
+	osm_light.setOpacity(0.3);
 	
 	var LAYERS = [
 		//=================================================
@@ -145,7 +162,7 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		new OpenLayers.Layer.OSM.Mapnik( "OSM Normal" ),
+		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
 		osm_light
 	];
 	return LAYERS;
@@ -182,10 +199,10 @@ constructor: function(config) {
 							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOn", pressed: true,
 								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "OSM Normal", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
+							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "OSM Light", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
+							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -262,8 +279,28 @@ constructor: function(config) {
 							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
 							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
 						]   
-					},		
-					"->",
+					},
+					{xtype: 'buttongroup', 
+						title: 'Utils', 
+						columns: 1,
+						items: [
+							{text: "Goto", iconCls: "icoOff",
+								menu: [
+									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787 , 
+										handler: this.on_goto, scope: this},
+									{text: "London", aptIdent: "EGLL",  lat: 51.484, lon: -0.1510, 
+										handler: this.on_goto, scope: this},
+									{text: "Paris", aptIdent: "LFPG", lat: 48.994, lon: 2.650, 
+										handler: this.on_goto, scope: this},
+									{text: "San Fransisco", aptIdent: "KSFO", lat: 37.621302, lon: -122.371216, 
+										handler: this.on_goto, scope: this},
+									{text: "Zurich", aptIdent: "LSZH", lat: 47.467, lon: 8.5597, 
+										handler: this.on_goto, scope: this},
+								]
+								
+							}
+						]   
+					}
 					
 				],
 				
@@ -347,67 +384,6 @@ on_civmil_mode: function(butt, checked){
 
 
 
-//==========================================================
-// Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
-show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
-
-	// remove xisting iamge/label if exist
-	/*
-	var existing_img = radarImageMarkers.getFeatureBy("_callsign", mcallsign);
-	if(existing_img){
-		radarImageMarkers.removeFeatures(existing_img);
-	}
-	var existing_lbl  = radarLabelMarkers.getFeatureBy("_callsign", mcallsign);
-	if(existing_lbl){
-		radarLabelMarkers.removeFeatures(existing_lbl);
-	}
-	*/
-	//c//onsole.log(mcallsign, mlat, mlon, mheading, maltitude)
-	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
-						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
-	//if(!this.get_map().getExtent().containsPixel(pointImg, false)){
-		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
-	//}
-
-	// Add Image
-	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
-				planerotation: mheading
-				}); 
-	imgFeat._callsign = mcallsign;
-	this.flightMarkersLayer.addFeatures([imgFeat]);	
-	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
-	
-	var gxOff = 4;
-	var gyOff = -8;
-
-	var lxOff = 6;
-	var lyOff = 2;
-	
-	// move the label offset
-	if(mheading > 0  && mheading < 90){
-		lyOff = lyOff - 15;
-		gyOff = gyOff  + 15 ;
-	}else if( mheading > 90 && mheading < 150){
-		lyOff = lyOff + 5;
-		gyOff = gyOff - 5;
-	}else if( mheading > 270 && mheading < 360){
-		lyOff = lyOff - 10;
-		gyOff = gyOff  + 10;
-		
-	}
-
-	// Add callsign label as separate feature, to have a background color (graphic) with offset
-	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
-					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
-                callsign: mcallsign,
-				lxOff: lxOff, lyOff: lyOff,
-				gxOff: gxOff, gyOff: gyOff
-				});
-	lblFeat._callsign = mcallsign;
-	this.flightLabelsLayer.addFeatures([lblFeat]);	
-	
-},
 
 init: function(){
 	//console.log("INIT");
@@ -487,7 +463,7 @@ init: function(){
 	this.get_map().addLayer( this.flightMarkersLayer );
 	this.get_map().addLayer( this.flightLabelsLayer );
 	
-	this.set_base_layer("OSM Light"); //??? WTF!!
+	this.set_base_layer("Dark"); //??? WTF!!
 	
 	this.flights_grid().getStore().on("load", function(store, recs, idx){
 		//console.log("YESSSSS");
@@ -500,7 +476,84 @@ init: function(){
 		};
 	}, this);
 },
-//get_info_panel: 
+
+
+
+//==========================================================
+// Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
+show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
+
+	// remove xisting iamge/label if exist
+	/*
+	var existing_img = radarImageMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_img){
+		radarImageMarkers.removeFeatures(existing_img);
+	}
+	var existing_lbl  = radarLabelMarkers.getFeatureBy("_callsign", mcallsign);
+	if(existing_lbl){
+		radarLabelMarkers.removeFeatures(existing_lbl);
+	}
+	*/
+	//c//onsole.log(mcallsign, mlat, mlon, mheading, maltitude)
+	var pointImg = new OpenLayers.Geometry.Point(mlon, mlat
+						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+	//if(!this.get_map().getExtent().containsPixel(pointImg, false)){
+		//return; //alert(map.getExtent().containsLonLat(pointImg, false));
+	//}
+
+	// Add Image
+	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
+				planerotation: mheading
+				}); 
+	imgFeat._callsign = mcallsign;
+	this.flightMarkersLayer.addFeatures([imgFeat]);	
+	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
+	
+	var gxOff = 4;
+	var gyOff = -8;
+
+	var lxOff = 6;
+	var lyOff = 2;
+	
+	// move the label offset
+	if(mheading > 0  && mheading < 90){
+		lyOff = lyOff - 15;
+		gyOff = gyOff  + 15 ;
+	}else if( mheading > 90 && mheading < 150){
+		lyOff = lyOff + 5;
+		gyOff = gyOff - 5;
+	}else if( mheading > 270 && mheading < 360){
+		lyOff = lyOff - 10;
+		gyOff = gyOff  + 10;
+		
+	}
+
+	// Add callsign label as separate feature, to have a background color (graphic) with offset
+	var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	var lblFeat = new OpenLayers.Feature.Vector(pointLabel, {
+                callsign: mcallsign,
+				lxOff: lxOff, lyOff: lyOff,
+				gxOff: gxOff, gyOff: gyOff
+				});
+	lblFeat._callsign = mcallsign;
+	this.flightLabelsLayer.addFeatures([lblFeat]);	
+	
+},
+
+on_goto: function(where){
+	console.log(where.aptIdent);
+	
+	var lonLat = new OpenLayers.LonLat(where.lon, where.lat
+			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+	this.get_map().setCenter( lonLat );
+	this.get_map().zoomTo( 10 );
+	//var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
+	//				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+					
+	console.log(lonLat);
+}
 
 
 });

@@ -65,7 +65,6 @@ constructor: function(config) {
 		loadMask: false,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
-			//{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
 				renderer: this.render_callsign, width: 100
 			},
@@ -85,22 +84,22 @@ constructor: function(config) {
 					return Ext.util.Format.number(v, '0');
 				}
 			},
-			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: false,
+			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: config.xHidden,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: false,
+			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: config.xHidden,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: false,
+			{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: config.xHidden,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return v;
 				}
 			},
-			{header: 'Aircraft',  dataIndex:'model', sortable: true, hidden: false,
+			{header: 'Aircraft',  dataIndex:'model', sortable: true, hidden: config.xHidden,
 				width: 100,
 			},
 
@@ -136,6 +135,7 @@ constructor: function(config) {
 				prependButtons: true	
 			})
 		]
+		
 	}, config);
 	FGx.FlightsGrid.superclass.constructor.call(this, config);
 } // Constructor	
