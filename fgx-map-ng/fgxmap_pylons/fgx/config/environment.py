@@ -14,7 +14,7 @@ from fgx.model import init_model
 ## FGx add the bots
 from fgx.bots import mpstatus
 
-def load_environment(global_conf, app_conf):
+def load_environment(global_conf, app_conf, start_bots):
 	"""Configure the Pylons environment via the ``pylons.config``
 	object
 	"""
@@ -55,7 +55,8 @@ def load_environment(global_conf, app_conf):
 	# any Pylons config options)
 
 	## Start the background processes
-	mpstatus.start_mpstatus_thread()
+	if start_bots:
+		mpstatus.start_mpstatus_thread()
 		
-	
+	print "ENV loaded"
 	return config
