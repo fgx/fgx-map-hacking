@@ -55,6 +55,102 @@ zoomSlider: new GeoExt.ZoomSlider({
 		template: "<div>Zoom Level: {zoom}</div>"
 	})
 }),
+
+BASE_LAYERS: {
+	ne_landmass: new OpenLayers.Layer.WMS(
+		"NE Landmass",
+		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
+			}, {  visibility: false}
+	),
+	osm_normal: new OpenLayers.Layer.OSM.Mapnik( "OSM normal" ),
+	osm_light: new OpenLayers.Layer.OSM.Mapnik( "OSM light" )
+},
+//LAYERS.push(this.BASE_LAYERS.ne_landmass);
+
+
+//this.BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
+//this.BASE_LAYERS.osm_normal.setOpacity(1.0);
+//LAYERS.push( this.BASE_LAYERS.osm_normal );
+
+
+//this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
+//this.BASE_LAYERS.osm_light.setOpacity(0.4);
+//LAYERS.push( this.BASE_LAYERS.osm_light );
+get_layers: function(){
+	var LAYERS = [];
+	//=================================================
+	// Overlay
+	//=================================================
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"DME",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "DME" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS Info",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS_Info" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"Runway",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "Runway" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"NDB",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "NDB" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS Marker",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"Airfield",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "Airfield" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"ILS",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "ILS" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"VOR",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "VOR" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+
+	LAYERS.push( new OpenLayers.Layer.WMS(
+	"FIX",
+	"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+		{layers: "FIX" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+	));
+
+
+	//=================================================
+	// Underlay
+	//=================================================
+	LAYERS.push(this.BASE_LAYERS.ne_landmass);
+
+	this.BASE_LAYERS.osm_normal.setOpacity(1.0);
+	LAYERS.push( this.BASE_LAYERS.osm_normal );
+
+	this.BASE_LAYERS.osm_light.setOpacity(0.4);
+	LAYERS.push( this.BASE_LAYERS.osm_light );
+	return LAYERS;
+},
 	
 //===========================================================
 //== Grid
@@ -71,7 +167,7 @@ constructor: function(config) {
 		map: this.xMap,
 		center: this.xCenterPoint,
 		zoom: 5,
-		layers: LAYERS,
+		layers: this.get_layers(),
 		
 		tbar: [
 		
@@ -86,15 +182,15 @@ constructor: function(config) {
 					{text: "Map", iconCls: "icoMapCore", 
 						menu: {
 							items: [
-								{text: "Landmass", group: "map_core", checked: true, xLayer: "ne_landmass",
-									handler: this.on_base_layer
+								{text: "Landmass", group: "map_core", checked: true, 
+									xLayer: "ne_landmass", handler: this.on_base_layer, scope: this
 								},
 								{text: "OSM Normal", group: "map_core", checked: false, 
-									xLayer: "osm_normal", handler: this.on_base_layer
+									xLayer: "osm_normal", handler: this.on_base_layer, scope: this
 								},
 								{text: "OSM Light", group: "map_core", checked: false, 
 									xLayer: "osm_light", 
-									handler: this.on_base_layer
+									handler: this.on_base_layer, scope: this
 								}
 							]
 						}
@@ -192,13 +288,13 @@ constructor: function(config) {
 on_base_layer: function(butt){
 	console.log(butt.xLayer);
 	if( butt.xLayer == "ne_landmass"){
-		self.map.setBaseLayer( self.BASE_LAYERS.ne_landmass );
+		this.xMap.setBaseLayer( this.BASE_LAYERS.ne_landmass );
 		
 	}else if ( butt.xLayer == "osm_normal"){
-		self.map.setBaseLayer( self.BASE_LAYERS.osm_normal );
+		this.xMap.setBaseLayer( this.BASE_LAYERS.osm_normal );
 		
 	}else if ( butt.xLayer == "osm_light"){
-		self.map.setBaseLayer( self.BASE_LAYERS.osm_light );
+		this.xMap.setBaseLayer( this.BASE_LAYERS.osm_light );
 	}
 },
 
