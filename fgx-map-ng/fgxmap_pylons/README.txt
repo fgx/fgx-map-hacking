@@ -18,9 +18,14 @@ Required:
 pylons, jinja2, sqlalchemy, geoalchemy
 
 
---------------------------=========
+sudo easy_install Pylons
+sudo easy_install SQLAlchemy
+sudo easy_install GeoAlchemy
+
+
+--------------------------------------
 Installation and Setup
---------------------------=========
+--------------------------------------
 
 copy the skel_dev.ini to for your local setup 
 
