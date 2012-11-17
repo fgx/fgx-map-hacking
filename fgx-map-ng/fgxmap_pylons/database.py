@@ -17,8 +17,9 @@ from www import shell
 from www import settings
 from www.fgx.dbase import db_utils
 """
-##import shell_config
+from  shell_config import config
 
+"""
 from paste.deploy import appconfig
 from pylons import config
 
@@ -36,8 +37,9 @@ conf = appconfig('config:' + "local.ini", relative_to=x_path)
 
 from fgx.config.environment import load_environment
 shell_config = load_environment( conf.global_conf, conf.local_conf, False)
+"""
 
-print "SH=", shell_config.keys()
+print "SH=", config.keys()
 from fgx.model import meta, MpServer
 from fgx.lib import app_globals
 from fgx.lib import helpers as h
@@ -142,7 +144,7 @@ if command == "import":
 	if x_file == "fix":
 	
 		from fgx.xplane import fix
-		file_path = shell_config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
+		file_path = config.temp_dir("/unzipped/xplane/earth_fix.dat")
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	
 	elif x_file == "nav":

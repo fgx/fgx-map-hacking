@@ -12,8 +12,9 @@ import os
 from optparse import OptionParser
 
 
-#from www import shell
-from fgx.xplane import server, nav
+from shell_config import config
+
+from fgx.xplane import server #, nav
 
 
 ## Handle Command Args
@@ -58,7 +59,7 @@ command = args[0]
 	
 ##== List Remote Files
 if command == "avail":
-	server.show_downloads()
+	server.show_downloads(temp_dir=config['temp_dir'])
 	
 elif command == "split":
 	#if not args[1] in TODO

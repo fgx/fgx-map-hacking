@@ -19,23 +19,10 @@ from www.fgx.dbase import db_utils
 """
 ##import shell_config
 
-from paste.deploy import appconfig
-from pylons import config
+##from paste.deploy import appconfig
+##from pylons import config
 
-#import os, sys
-here_path = os.path.abspath(  os.path.dirname(__file__) )  
-x_path =   os.path.abspath(os.path.join(here_path, "fgxmap_pylons"))
-if not x_path in sys.path:
-	sys.path.append(x_path)
-	print "  > Appended path ", x_path
-	
-print here_path, x_path
-ini = x_path + '/development.ini'
-print "ini=", ini
-conf = appconfig('config:' + "development.ini", relative_to=x_path)
-
-from fgx.config.environment import load_environment
-load_environment( conf.global_conf, conf.local_conf, False)
+import shell_config
 
 
 from fgx.model import meta, MpServer
