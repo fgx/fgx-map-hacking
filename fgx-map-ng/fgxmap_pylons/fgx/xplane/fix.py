@@ -4,15 +4,15 @@ import fileinput
 import datetime
 
 from geoalchemy import WKTSpatialElement
+from sqlalchemy.sql.expression import func 
 
-
-from fgx.model import meta, Fix
+from fgx.model import meta, Fix, FGX_SRID
 from fgx.lib import helpers as h
 
 
 
 #import geos
-from django.contrib.gis.geos import GEOSGeometry, Point
+#from django.contrib.gis.geos import GEOSGeometry, Point
 
 """
 from fgx.nav.models import Fix
@@ -85,14 +85,14 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 			
 			## Update the object and save
 			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
-			#print pnt
-			#print "##", parts
-			#print pnt
+
 			ob.fix = ident
 			ob.lat = parts[0]
 			ob.lon = parts[1]
-			#ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
-			#ob.wkb_geometry = GEOSGeometry(pnt)
+			
+			#geometry_type='POINT',
+			#ob.wkb_geometry = WKTSpatialElement(pnt, FGX_SRID)
+			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)			
 			meta.Session.commit()
 			
 		

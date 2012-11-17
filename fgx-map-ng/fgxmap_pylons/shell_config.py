@@ -31,6 +31,4 @@ appConfig = appconfig('config:local.ini', relative_to=ROOT_PATH)
 from fgx.config.environment import load_environment
 config = load_environment( appConfig.global_conf, appConfig.local_conf, False)
 
-def temp_dir():
-	return config['temp_dir']
 	

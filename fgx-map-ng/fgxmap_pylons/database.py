@@ -7,39 +7,12 @@
 # @version 0.1.exp
 # 
 
-
 import sys
 import os
 from optparse import OptionParser
 
-"""
-from www import shell
-from www import settings
-from www.fgx.dbase import db_utils
-"""
 from  shell_config import config
 
-"""
-from paste.deploy import appconfig
-from pylons import config
-
-#import os, sys
-here_path = os.path.abspath(  os.path.dirname(__file__) )  
-x_path =   here_path # os.path.abspath(os.path.join(here_path, "fgxmap_pylons"))
-if not x_path in sys.path:
-	sys.path.append(x_path)
-	print "  > Appended path ", x_path
-	
-#print here_path, x_path
-#ini = x_path + '/development.ini'
-#print "ini=", ini
-conf = appconfig('config:' + "local.ini", relative_to=x_path)
-
-from fgx.config.environment import load_environment
-shell_config = load_environment( conf.global_conf, conf.local_conf, False)
-"""
-
-print "SH=", config.keys()
 from fgx.model import meta, MpServer
 from fgx.lib import app_globals
 from fgx.lib import helpers as h
@@ -144,7 +117,7 @@ if command == "import":
 	if x_file == "fix":
 	
 		from fgx.xplane import fix
-		file_path = config.temp_dir("/unzipped/xplane/earth_fix.dat")
+		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 	
 	elif x_file == "nav":
