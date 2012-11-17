@@ -109,7 +109,26 @@ get_nav_widget: function(){
 				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	
 			this.get_map().panTo( lonLat );
-			//this.get_map().zoomTo( 12 );
+			this.get_map().zoomTo( 10 );
+			
+			
+			var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+			var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+				pt,
+					0, // wtf. .I want a larger cicle
+					20
+				);
+			var style = {
+				strokeColor: "red",
+				strokeOpacity: 1,
+				strokeWidth: 3,
+				fillColor: "yellow",
+				fillOpacity: 0.8 };
+			var feature = new OpenLayers.Feature.Vector(circle, null, style);
+			this.highLightMarkers.addFeatures([feature]);
+			
+			console.log("ADD", feature);
 		}, this);  
 			
 	}
@@ -144,7 +163,106 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
+	this.highLightMarkers = new OpenLayers.Layer.Vector(
+		"HighLight Markers"
+												 );
+	/*
+		{styleMap: new OpenLayers.StyleMap({
+			"default": {
+				strokeColor: "red",
+				strokeWidth: 1,
+				fillColor: "lime",
+
+				
+				fontColor: "black",
+				fontSize: "12px",
+				fontFamily: "Helvetica, Arial, sans-serif",
+				fontWeight: "bold",
+				wwrotation : "${planerotation}",
+			},
+			"select": {
+				fillColor: "black",
+				strokeColor: "yellow",
+				pointRadius: 12,
+				fillOpacity: 1,
+			}
+		})
+		}, {  visibility: true}
+	)*/
 	
+	
+	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+		"Radar Markers", 
+		{styleMap: new OpenLayers.StyleMap({
+				"default": {
+					strokeColor: "lime",
+					strokeWidth: 1,
+					fillColor: "lime",
+
+					externalGraphic: "/images/radar_blip2.png",
+					graphicWidth: 8,
+					graphicHeight: 24,
+					graphicOpacity: 1,
+					graphicXOffset: 0,
+					graphicYOffset: -20,
+					
+					fontColor: "black",
+					fontSize: "12px",
+					fontFamily: "Helvetica, Arial, sans-serif",
+					fontWeight: "bold",
+					rotation : "${planerotation}",
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+			})
+		}, {  visibility: true}
+	)
+
+	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+		"Radar Label", 
+		{
+			styleMap:  new OpenLayers.StyleMap({
+				"default": {
+					fill: true,
+					fillOpacity: 1,
+					fillColor: "black",
+					strokeColor: "green",
+					strokeWidth: 1,
+
+					//graphic: false,
+					externalGraphic: "/images/fgx-background-black.png",
+					graphicWidth: 50,
+					graphicHeight: 12,
+					graphicOpacity: 0.8,
+					graphicXOffset: "${gxOff}",
+					graphicYOffset: "${gyOff}",
+					
+					
+					fontColor: "white",
+					fontSize: "10px",
+					fontFamily: "sans-serif",
+					fontWeight: "bold",
+					labelAlign: "left",
+					labelXOffset: "${lxOff}", 
+					labelYOffset: "${lyOff}", 
+					label : "${callsign}",
+					//rotation : "${planerotation}",
+
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+
+			})
+		}
+	);
 
 	var LAYERS = [
 		//=================================================
@@ -214,6 +332,10 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
+		this.highLightMarkers,
+		this.flightLabelsLayer,
+		this.flightMarkersLayer
+		
 	];
 	return LAYERS;
 },
@@ -466,82 +588,11 @@ on_civmil_mode: function(butt, checked){
 
 
 init: function(){
-	//console.log("INIT");
+
 	
-	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
-		"Radar Markers", 
-		{styleMap: new OpenLayers.StyleMap({
-				"default": {
-					strokeColor: "lime",
-					strokeWidth: 1,
-					fillColor: "lime",
-
-					externalGraphic: "/images/radar_blip2.png",
-					graphicWidth: 8,
-					graphicHeight: 24,
-					graphicOpacity: 1,
-					graphicXOffset: 0,
-					graphicYOffset: -20,
-					
-					fontColor: "black",
-					fontSize: "12px",
-					fontFamily: "Helvetica, Arial, sans-serif",
-					fontWeight: "bold",
-					rotation : "${planerotation}",
-				},
-				"select": {
-					fillColor: "black",
-					strokeColor: "yellow",
-					pointRadius: 12,
-					fillOpacity: 1,
-				}
-			})
-		}, {  visibility: true}
-	)
-
-	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
-		"Radar Label", 
-		{
-			styleMap:  new OpenLayers.StyleMap({
-				"default": {
-					fill: true,
-					fillOpacity: 1,
-					fillColor: "black",
-					strokeColor: "green",
-					strokeWidth: 1,
-
-					//graphic: false,
-					externalGraphic: "/images/fgx-background-black.png",
-					graphicWidth: 50,
-					graphicHeight: 12,
-					graphicOpacity: 0.8,
-					graphicXOffset: "${gxOff}",
-					graphicYOffset: "${gyOff}",
-					
-					
-					fontColor: "white",
-					fontSize: "10px",
-					fontFamily: "sans-serif",
-					fontWeight: "bold",
-					labelAlign: "left",
-					labelXOffset: "${lxOff}", 
-					labelYOffset: "${lyOff}", 
-					label : "${callsign}",
-					//rotation : "${planerotation}",
-
-				},
-				"select": {
-					fillColor: "black",
-					strokeColor: "yellow",
-					pointRadius: 12,
-					fillOpacity: 1,
-				}
-
-			})
-		}
-	);
-	this.get_map().addLayer( this.flightMarkersLayer );
-	this.get_map().addLayer( this.flightLabelsLayer );
+	//this.get_map().addLayer( this.highLightMarkers );
+	//this.get_map().addLayer( this.flightMarkersLayer );
+	//this.get_map().addLayer( this.flightLabelsLayer );
 	
 	//this.set_base_layer("Dark"); //??? WTF!!
 	
