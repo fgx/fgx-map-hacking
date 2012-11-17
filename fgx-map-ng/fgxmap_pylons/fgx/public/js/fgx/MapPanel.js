@@ -284,11 +284,11 @@ constructor: function(config) {
 							},
 							{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
 								toggleHandler: this.on_nav_toggled, scope: this
-							},
-							{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-								toggleHandler: this.on_nav_toggled, scope: this,
-								hidden: true, id: "fgx-vortac"
 							}
+							//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+							//	toggleHandler: this.on_nav_toggled, scope: this,
+							//	hidden: true, id: "fgx-vortac"
+							//}
 						]   
 					},
 					{xtype: 'buttongroup', disabled: true,
@@ -298,8 +298,8 @@ constructor: function(config) {
 							{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
 							{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
 							{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-							{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
-								hidden: true, id: "fgx-mil-airports"},
+							//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+							//	hidden: true, id: "fgx-mil-airports"},
 							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
 							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
 						]   
@@ -325,7 +325,7 @@ constructor: function(config) {
 							},*/
 							
 							{text: "New", iconCls: "icoMapAdd", scope: this, handler: this.on_goto, xtype: "splitbutton",
-								zoom: 5, lat: 47.467, lon: 8.5597
+								zoom: 5, lat: 47.467, lon: 8.5597,
 								menu: [
 									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787, zoom: 10,
 										handler: this.on_goto, scope: this},
