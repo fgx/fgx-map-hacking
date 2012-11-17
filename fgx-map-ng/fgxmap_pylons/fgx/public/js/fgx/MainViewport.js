@@ -52,7 +52,12 @@ this.runner = new Ext.util.TaskRunner();
 // Other Widgets - Note the Map is passed in constructor as ref
 //============================================================
 //this.flightsWidget = new FGx.FlightsWidget({});
-this.flightsGrid = new FGx.FlightsGrid({flightsStore: this.flightsStore, title: "Flights", closable: true});
+this.flightsGrid = new FGx.FlightsGrid({
+	flightsStore: this.flightsStore, 
+	title: "Flights", 
+	closable: true,
+	xHidden: false
+});
 
 this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
