@@ -96,7 +96,23 @@ get_osm_dark: function(){
 		this.xOsmDark.setOpacity(0.5);	
 	}
 	return this.xOsmDark;
-	
+},
+
+get_bookmark_button: function(){
+		if(!this.xBookMarkButton){
+		this.xBookMarkButton = new Ext.Button({
+			text: "Bookmark",
+			iconCls: "icoBookMarkAdd",
+			scope: this,
+			handler: function(){
+				var d = new FGx.BookMarkDialog({bookmark_pk: 0});
+				d.run_show();
+				
+			}
+		});
+		//this.xOsmDark.setOpacity(0.5);	
+	}
+	return this.xBookMarkButton;
 },
 
 //======================================================
@@ -290,7 +306,7 @@ constructor: function(config) {
 					},
 					{xtype: 'buttongroup', 
 						title: 'Utils', 
-						columns: 1,
+						columns: 2,
 						items: [
 							{text: "Goto", iconCls: "icoOff",
 								menu: [
@@ -306,7 +322,8 @@ constructor: function(config) {
 										handler: this.on_goto, scope: this},
 								]
 								
-							}
+							},
+							this.get_bookmark_button()
 						]   
 					}
 					

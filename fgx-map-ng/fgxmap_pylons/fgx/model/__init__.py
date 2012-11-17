@@ -73,6 +73,20 @@ class Aero(Base):
 	srs = Column(String(40))
 	lahso = Column(Integer())
 	
+
+##=======================================================
+class BookMark(Base):
+	
+	__tablename__ = "bookmark"
+	
+	bookmark_pk = Column(Integer(), primary_key=True) 
+	
+	name = Column(String(100), index=True)
+	lat = Column(String(15))
+	lon = Column(String(15))
+	zoom = Column(Integer())
+
+	
 	
 ##=======================================================
 class Country(Base):
