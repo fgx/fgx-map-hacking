@@ -2,7 +2,7 @@
 
 Ext.namespace("FGx");
 
-FGx.MapPanel = Ext.extend(GeoExt.MapPanel, {
+FGx.MapPanel = Ext.extend(Ext.Panel, {
 
 	
 //var self = this;
@@ -41,9 +41,9 @@ get_map: function(){
 			// zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 20
 		});
-		console.log("CREATED_map");
+		//console.log("CREATED_map");
 	}
-	console.log("get_map");
+	//console.log("get_map");
 	return this.xMap;
 },
 lbl_lat: function(){
@@ -59,31 +59,13 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
-
-
-/*
-BASE_LAYERS: {
-	ne_landmass: new OpenLayers.Layer.WMS(
-		"NE Landmass",
-		"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-			{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
-			}, {  visibility: false}
-	),
-	osm_normal: new OpenLayers.Layer.OSM.Mapnik( "OSM normal" ),
-	osm_light: new OpenLayers.Layer.OSM.Mapnik( "OSM light" )
+flights_grid: function(){
+	if(!this.xFlightsGrid){
+		this.xFlightsGrid =  new Ext.Panel({title: "Foo"}); 
+	}
+	return this.xFlightsGrid;
 },
-*/
-//LAYERS.push(this.BASE_LAYERS.ne_landmass);
 
-
-//this.BASE_LAYERS.osm_normal = new OpenLayers.Layer.OSM.Mapnik( "OSM normal" );
-//this.BASE_LAYERS.osm_normal.setOpacity(1.0);
-//LAYERS.push( this.BASE_LAYERS.osm_normal );
-
-
-//this.BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
-//this.BASE_LAYERS.osm_light.setOpacity(0.4);
-//LAYERS.push( this.BASE_LAYERS.osm_light );
 get_layers: function(){
 	
 	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM Light" );
@@ -166,132 +148,152 @@ get_layers: function(){
 constructor: function(config) {
 	
 	config = Ext.apply({
+		
+		
 		iconCls: "icoMap",
-		frame: false,
-		plain: true,
-		border: 0,
-		bodyBorder: false,
-		map: this.get_map(),
-		center:  new OpenLayers.LonLat(939262.20344,5938898.34882),
-		zoom: 5,
-		layers: this.get_layers(),
+		frame: false, plain: true,border: 0,	bodyBorder: false,
 		
-		tbar: [
-		
-			//== Map Type  
-			{xtype: 'buttongroup', 
-				title: 'Settings', width: 80, id: "fgx-settings-box", 
-				columns: 2,
-				items: [
-					//{text: "Me", iconCls: "icoCallSign",  
-					//	handler: this.on_me , tooltip: "My Settings", disabled: true
-					//},
-					{text: "Map", iconCls: "icoMapCore", 
-						menu: {
-							items: [
-								{text: "Landmass", group: "map_core", checked: true, 
-									xLayer: "ne_landmass", handler: this.on_base_layer, scope: this
-								},
-								{text: "OSM Normal", group: "map_core", checked: false, 
-									xLayer: "osm_normal", handler: this.on_base_layer, scope: this
-								},
-								{text: "OSM Light", group: "map_core", checked: false, 
-									xLayer: "osm_light", 
-									handler: this.on_base_layer, scope: this
-								}
-							]
-						}
-					},
-					{iconCls: "icoSettings", 
-						menu: {
-							items: [
-								{text: "Mode" ,
-									menu: {
-										items: [
-											{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
-												checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
-											{text: "Military Mode - only military and vortac - TODO", group: "map_mode", 
-												checked: false, xCivMilMode: "military", disabled: true,
-												handler: this.on_civmil_mode
-											},
-											{text: "Both - TODO", group: "map_mode", 
-												checked: false, xCivMilMode: "all", disabled: true,
-												handler: this.on_civmil_mode
-											}
-										]
-									}
-								}
-							]
-						}
-					} 
-				]   
-			},
-			
-			{xtype: 'buttongroup',
-				title: 'Navigation Aids',
-				columns: 5,
-				items: [
-					{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
-						toggleHandler: this.on_nav_toggled, scope: this,
-						menu: {
-							items: [
-								{text: "Show range - TODO", checked: false, disabled: true}
-							]
-						}
-					},
-					{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
-						toggleHandler: this.on_nav_toggled,  scope: this,
-						menu: {
-							items: [
-								{text: "Show range - TODO", checked: false, disabled: true}
-							]
-						}
-					},
-					{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-						toggleHandler: this.on_nav_toggled, scope: this
-					},
-					{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
-						toggleHandler: this.on_nav_toggled, scope: this
-					},
-					{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-						toggleHandler: this.on_nav_toggled, scope: this,
-						hidden: true, id: "fgx-vortac"
-					}
-				]   
-			},
-			{xtype: 'buttongroup', disabled: true,
-				title: 'Airports - TODO', 
-				columns: 6,
-				items: [
-					{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
-					{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
-					{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-					{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
-						hidden: true, id: "fgx-mil-airports"},
-					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
-					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
-				]   
-			},		
-			"->",
-			
-		],
-		
-		//== Bottom Toolbar
-		bbar: [
-
-			{text: "Zoom:"},
-			new GeoExt.ZoomSlider({
+		layout: "border",
+		items: [
+			{xtype: "gx_mappanel", region: "center",
+				frame: false, plain: true, border: 0,	bodyBorder: false,
 				map: this.get_map(),
-				aggressive: true,                                                                                                                                                   
-				width: 200,
-				plugins: new GeoExt.ZoomSliderTip({
-					template: "<div>Zoom Level: {zoom}</div>"
-				})
-			}),
-			"->",
-			{text: "TODO: Lat: "}, this.lbl_lat(), 
-			{text: "Lon: "},  this.lbl_lon()
+				center:  new OpenLayers.LonLat(939262.20344,5938898.34882),
+				zoom: 5,
+				layers: this.get_layers(),
 		
+				tbar: [
+				
+					//== Map Type  
+					{xtype: 'buttongroup', 
+						title: 'Base Layer', width: 80, id: "fgx-settings-box", 
+						columns: 3,
+						items: [
+	
+							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOn", pressed: true,
+								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
+							},
+							{text: "OSM Normal", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
+								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
+							},
+							{text: "OSM Light", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
+								xLayer: "osm_light", 
+								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
+							}
+			
+							
+							
+							/*
+							{iconCls: "icoSettings", 
+								menu: {
+									items: [
+										{text: "Mode" ,
+											menu: {
+												items: [
+													{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
+														checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
+													{text: "Military Mode - only military and vortac - TODO", group: "map_mode", 
+														checked: false, xCivMilMode: "military", disabled: true,
+														handler: this.on_civmil_mode
+													},
+													{text: "Both - TODO", group: "map_mode", 
+														checked: false, xCivMilMode: "all", disabled: true,
+														handler: this.on_civmil_mode
+													}
+												]
+											}
+										}
+									]
+								}
+							} */
+						]   
+					},
+					
+					{xtype: 'buttongroup',
+						title: 'Navigation Aids',
+						columns: 5,
+						items: [
+							{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
+								toggleHandler: this.on_nav_toggled, scope: this,
+								menu: {
+									items: [
+										{text: "Show range - TODO", checked: false, disabled: true}
+									]
+								}
+							},
+							{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
+								toggleHandler: this.on_nav_toggled,  scope: this,
+								menu: {
+									items: [
+										{text: "Show range - TODO", checked: false, disabled: true}
+									]
+								}
+							},
+							{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+								toggleHandler: this.on_nav_toggled, scope: this
+							},
+							{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
+								toggleHandler: this.on_nav_toggled, scope: this
+							},
+							{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+								toggleHandler: this.on_nav_toggled, scope: this,
+								hidden: true, id: "fgx-vortac"
+							}
+						]   
+					},
+					{xtype: 'buttongroup', disabled: true,
+						title: 'Airports - TODO', 
+						columns: 6,
+						items: [
+							{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
+							{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+							{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+							{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+								hidden: true, id: "fgx-mil-airports"},
+							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
+						]   
+					},		
+					"->",
+					
+				],
+				
+				//== Bottom Toolbar
+				bbar: [
+
+					{text: "Zoom:"},
+					new GeoExt.ZoomSlider({
+						map: this.get_map(),
+						aggressive: true,                                                                                                                                                   
+						width: 200,
+						plugins: new GeoExt.ZoomSliderTip({
+							template: "<div>Zoom Level: {zoom}</div>"
+						})
+					}),
+					"->",
+					{text: "TODO: Lat: "}, this.lbl_lat(), 
+					{text: "Lon: "},  this.lbl_lon()
+				
+				]
+			},
+			{region: 'east', width: 400, 
+				title: "FGx Map - Next Gen",
+				xtype: 'tabpanel',
+				frame: false,
+				plain: true,
+				border: 0,
+				collapsible: true,
+				activeItem: 0,
+				items: [
+					//this.mapLayersTree.tree,
+					//this.flightsGrid,
+					//this.flightsWidget.grid,
+					//this.navWidget.grid
+					this.flights_grid()
+					
+				]
+			
+			}
 		]
 		
 		
@@ -301,21 +303,15 @@ constructor: function(config) {
 	
 }, // Constructor	
 
-on_base_layer: function(butt){
+on_base_layer: function(butt, checked){
 	console.log(butt.xLayer);
-	var layer = this.xMap.getLayersByName(butt.text)[0];
-	console.log(layer);
-	this.xMap.setBaseLayer( layer );
-	return;
-	if( butt.xLayer == "ne_landmass"){
-		this.xMap.setBaseLayer( this.BASE_LAYERS.ne_landmass );
-		
-	}else if ( butt.xLayer == "osm_normal"){
-		this.xMap.setBaseLayer( this.BASE_LAYERS.osm_normal );
-		
-	}else if ( butt.xLayer == "osm_light"){
-		this.xMap.setBaseLayer( this.BASE_LAYERS.osm_light );
+	
+	if(checked){
+		var layer = this.xMap.getLayersByName(butt.text)[0];
+		console.log(layer);
+		this.xMap.setBaseLayer( layer );
 	}
+	butt.setIconClass(checked ? "icoOn" : "icoOff");
 },
 
 on_nav_toggled: function(butt, checked){
@@ -333,7 +329,9 @@ on_civmil_mode: function(butt, checked){
 	var show_mil = butt.xCivMilMode != "civilian";
 	//Ext.getCmp("fgx-vortac").setVisible( show_mil )
 	//Ext.getCmp("fgx-mil-airports").setVisible( show_mil )
-}
+},
+
+//get_info_panel: 
 
 
 });
