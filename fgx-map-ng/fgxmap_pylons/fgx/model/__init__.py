@@ -60,7 +60,7 @@ class Aero(Base):
 	#manufacturers = models.Remotekey()
 	
 	model = Column(String(10), unique=True, index=True)
-	type_designator =  Column(String(10))
+	type_designator = Column(String(10))
 	
 	engines = Column(Integer())
 	engine_type = Column(String(1))
@@ -109,7 +109,7 @@ class EngineType(Base):
 	
 	__tablename__ = "engine_type"
 		
-	engine_pk  = Column(Integer(), primary_key=True)
+	engine_pk = Column(Integer(), primary_key=True)
 	eng = Column(String(1), unique=True, index=True)
 	engine = Column(String(10), unique=True, index=True)
 	
@@ -210,6 +210,10 @@ class MpServer(Base):
 				'fqdn': self.fqdn,
 				'ip': self.ip,
 				'country': self.country,
+				'last_checked': str(self.last_checked),
+				'last_seen': str(self.last_checked) if self.last_checked else None,
+				'lag': self.lag
+				
 		}
 		
 		

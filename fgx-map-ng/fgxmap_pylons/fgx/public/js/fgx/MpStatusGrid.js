@@ -64,42 +64,19 @@ constructor: function(config) {
 		loadMask: false,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
-			//{header: 'F',  dataIndex:'flag', sortable: true, width: 40, hidden: false},
-			{header: 'ip',  dataIndex:'ip', sortable: true, 
-				renderer: this.render_callsign, width: 100
+			{header: 'No',  dataIndex:'no', sortable: true, width: 40},
+			{header: 'Domain',  dataIndex:'fqdn', sortable: true
+			},
+			{header: 'IP Address',  dataIndex:'ip', sortable: true
 			},
 			
-			{header: 'Alt', dataIndex:'alt_ft', sortable: true, align: 'right', width: 80,
-				renderer: this.render_altitude
+			{header: 'Last Checked', dataIndex:'last_checked', sortable: true, align: 'right',
 			},
-			//{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
-			//	renderer: this.render_altitude_trend},
-			{header: 'Hdg', dataIndex:'heading', sortable: true, align: 'right', width: 50,
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return v; //Ext.util.Format.number(v, '0');
-				}
+			{header: 'Last Seen', dataIndex:'last_seen', sortable: true, align: 'right',
 			},
-			{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right',  
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return Ext.util.Format.number(v, '0');
-				}
+			{header: 'Last Lag', dataIndex:'lag', sortable: true, align: 'right',
 			},
-			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: false,
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return Ext.util.Format.number(v, '0.00000');
-				}
-			},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: false,
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return Ext.util.Format.number(v, '0.00000');
-				}
-			},
-			{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: false,
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return v;
-				}
-			},
-			{header: 'Aircraft',  dataIndex:'model', sortable: true, hidden: false,
+			{header: 'Status',  dataIndex:'status', sortable: true, hidden: false,
 				width: 100,
 			},
 
@@ -123,17 +100,13 @@ get_store: function(){
 	if(!this.xStore){
 		this.xStore = new Ext.data.JsonStore({
 			idProperty: 'callsign',
-			fields: [ 	{name: 'no', type: 'int'},
-						{name: 'fqdn', type: 'string'},
-						{name: "ip", type: 'string'},
-						{name: "server", type: 'string'},
-						{name: "model", type: 'string'},
-						{name: "lat", type: 'float'},
-						{name: "lon", type: 'float'},
-						{name: "alt_ft", type: 'int'},
-						{name: "spd_kts", type: 'int'},
-						//{name: "alt_trend", type: 'string'},
-						{name: "heading", type: 'string'}
+			fields: [ 	
+				{name: 'no', type: 'int'},
+				{name: 'fqdn', type: 'string'},
+				{name: "ip", type: 'string'},
+				{name: "last_checked", type: 'string'},
+				{name: "last_seen", type: 'string'},
+				{name: "lag", type: 'int'}
 			],
 			url: '/ajax/mp/status',
 			root: 'mpservers',
