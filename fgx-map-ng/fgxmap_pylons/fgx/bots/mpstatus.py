@@ -7,10 +7,17 @@ import telnetlib
 
 from pylons import config
 
+import pygeoip
+
 from fgx.model import meta, MpServer, MpBotInfo
 
-#from geo2pylons.model import MailQ
-#from geo2pylons.lib.mailq.despatcher import Despatcher 
+
+
+geoCity = pygeoip.GeoIP('/home/fgxx/_TEMP/maxmind/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+
+"""
+{'city': '', 'region_name': '', 'area_code': 0, 'time_zone': 'Europe/Paris', 'dma_code': 0, 'metro_code': '', 'country_code3': 'FRA', 'latitude': 46.0, 'postal_code': '', 'longitude': 2.0, 'country_code': 'FR', 'country_name': 'France'}
+"""
 
 
 class MpStatusThread(threading.Thread):
@@ -30,10 +37,16 @@ class MpStatusThread(threading.Thread):
 		try:
 			socket.setdefaulttimeout(10)
 			ip_address = socket.gethostbyname(domain_name)
+			geo_data = geoCity.record_by_addr(ip_address)
 			#print socket.getaddrinfo(domain_name, 5000)
 			if self.DEBUG:
 				print "  > Found ADDR: %s = %s " % (domain_name, ip_address)
-			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address}
+			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address,
+							'lat': geo_data['latitude'] if geo_data else None,
+							'lon': geo_data['longitude'] if geo_data else None,
+							'country': geo_data['country_name'] if geo_data else None,
+							'time_zone': geo_data['time_zone'] if geo_data else None
+						}
 			
 		except socket.gaierror, e:
 			if self.DEBUG:
@@ -62,6 +75,11 @@ class MpStatusThread(threading.Thread):
 					meta.Session.add(ob)
 					
 				ob.ip = details['ip']
+				ob.lat = details['lat']
+				ob.lon = details['lon']
+				ob.country = details['country']
+				ob.time_zone = details['time_zone']
+				
 				ob.last_checked = datetime.datetime.now()
 				ob.status = "unknown"
 				meta.Session.commit()
