@@ -21,6 +21,13 @@ pylons, jinja2, sqlalchemy, geoalchemy
 sudo easy_install Pylons
 sudo easy_install SQLAlchemy
 sudo easy_install GeoAlchemy
+sudo easy_install pyGeoIP
+
+--------------------------------------
+maxmind
+--------------------------------------
+http://www.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 
 
 --------------------------------------

@@ -82,10 +82,15 @@ constructor: function(config) {
 					return "-";
 				}
 			},
+			{header: 'Country',  dataIndex:'country', sortable: true, hidden: false,
+				width: 100,
+			},
+			{header: 'Time Zone',  dataIndex:'time_zone', sortable: true, hidden: false,
+				width: 100,
+			},
 			{header: 'Status',  dataIndex:'status', sortable: true, hidden: false,
 				width: 100,
 			},
-
 		],
 		
 		bbar: [
@@ -112,7 +117,8 @@ get_store: function(){
 				{name: "ip", type: 'string'},
 				{name: "last_checked", type: 'string'},
 				{name: "last_seen", type: 'string'},
-				{name: "lag", type: 'int'}
+				{name: "lag", type: 'int'},
+				'country', 'time_zone', 'lat', 'lon'
 			],
 			url: '/ajax/mp/status',
 			root: 'mpservers',

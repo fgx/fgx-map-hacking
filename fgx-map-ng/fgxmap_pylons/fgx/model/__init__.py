@@ -236,6 +236,13 @@ class MpServer(Base):
 	country = Column(String(100), nullable=True)
 	lag = Column(Integer(), nullable=True)
 	status = Column(String(20))
+	
+	lat = Column(String(20), nullable=True)
+	lon = Column(String(20), nullable=True)
+	#wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	
+	country = Column(String(50), nullable=True)
+	time_zone = Column(String(50), nullable=True)
 
 	def __unicode__(self):
 		return self.fqdn
@@ -248,8 +255,11 @@ class MpServer(Base):
 				'country': self.country,
 				'last_checked': str(self.last_checked),
 				'last_seen': str(self.last_seen) if self.last_seen else None,
-				'lag': self.lag
-				
+				'lag': self.lag,
+				'lat': self.lat,
+				'lon': self.lon,
+				'country': self.country,
+				'time_zone': self.time_zone
 		}
 		
 		
