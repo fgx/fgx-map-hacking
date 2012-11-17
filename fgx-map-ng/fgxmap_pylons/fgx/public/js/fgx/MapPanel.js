@@ -79,7 +79,7 @@ lbl_lon: function(){
 
 //======================================================
 // Flights Grid
-flights_grid: function(sto){
+get_flights_grid: function(sto){
 	if(!this.xFlightsGrid){
 		
 		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights", xHidden: true});
@@ -96,6 +96,25 @@ flights_grid: function(sto){
 				
 	}
 	return this.xFlightsGrid;
+},
+
+get_nav_widget: function(){
+	if(!this.xNavWidget){
+		
+		this.xNavWidget =  new FGx.NavWidget({});
+		/*
+		this.xNavWidget.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+		*/		
+	}
+	return this.xNavWidget;
 },
 
 get_osm_dark: function(){
@@ -397,8 +416,8 @@ constructor: function(config) {
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
-					//this.navWidget.grid
-					this.flights_grid(config.flightsStore)
+					this.get_nav_widget(),
+					this.get_flights_grid(config.flightsStore)
 					
 				]
 			
@@ -527,7 +546,7 @@ init: function(){
 	
 	//this.set_base_layer("Dark"); //??? WTF!!
 	
-	this.flights_grid().getStore().on("load", function(store, recs, idx){
+	this.get_flights_grid().getStore().on("load", function(store, recs, idx){
 		//console.log("YESSSSS");
 		this.flightLabelsLayer.removeAllFeatures();
 		this.flightMarkersLayer.removeAllFeatures();
