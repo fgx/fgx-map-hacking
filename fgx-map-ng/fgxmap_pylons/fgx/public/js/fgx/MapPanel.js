@@ -102,17 +102,16 @@ get_nav_widget: function(){
 	if(!this.xNavWidget){
 		
 		this.xNavWidget =  new FGx.NavWidget({});
-		/*
-		this.xNavWidget.on("rowdblclick", function(grid, idx, e){
+		this.xNavWidget.on("GOTO", function(obj){
 
-			var rec = grid.getStore().getAt(idx);
-			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+			
+			var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	
-			this.get_map().setCenter( lonLat );
-			this.get_map().zoomTo( 10 );
+			this.get_map().panTo( lonLat );
+			//this.get_map().zoomTo( 12 );
 		}, this);  
-		*/		
+			
 	}
 	return this.xNavWidget;
 },

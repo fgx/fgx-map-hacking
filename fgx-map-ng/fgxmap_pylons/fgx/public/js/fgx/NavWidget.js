@@ -59,7 +59,21 @@ constructor: function(config) {
 					{text: "Neraby"}
 				]
 			}
-		]
+		],
+		listeners: {
+			scope: this,
+			rowclick:  function(grid, rowIdx, e){
+				var rec = this.get_store().getAt(rowIdx);
+				//console.log("lat/lon", rec, rec.get("lon"), rec.get("lat"));
+				obj = {};
+				obj.lat = rec.get("lat");
+				obj.lon = rec.get("lon");
+				obj.title = rec.get("fix");
+				//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat") );
+				this.fireEvent("GOTO", obj);
+				//self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")) );
+			}
+		}
 		
 	}, config);
 	
@@ -108,7 +122,6 @@ get_search_text: function(){
 			enableKeyEvents: true
 		});
 		this.txtSearchFix.on("keypress", function(txtFld, e){
-			console.log("press", e);
 			if( e.getKey() == e.ENTER ){
 				var t = this.get_search_text();
 				t.setValue( t.getValue().trim() );
@@ -132,13 +145,7 @@ this.txtSearchVorDme = new Ext.form.TextField({
 	enableKeyEvents: true
 });
 */
-/*
-this.grid.on("rowclick", function(grid, rowIdx, e){
-	var rec = self.store.getAt(rowIdx);
-	console.log("lat/lon", rec, rec.get("lon"), rec.get("lat"));
-	self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")) );
-});
-*/
+
 
 
 
