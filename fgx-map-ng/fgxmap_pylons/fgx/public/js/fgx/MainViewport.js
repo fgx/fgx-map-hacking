@@ -61,18 +61,46 @@ this.flightsGrid = new FGx.FlightsGrid({
 
 
 
-//this.navWidget = new FGx.NavWidget({});
+this.settingsWidget = new FGx.SettingsWidget({runner: this.runner});
+this.settingsWidget.on("SET_REFRESH", function(rate){
+	//console.log("SET_REFRESH", rate);
+	this.runner.stopAll(); // stop if already running
+	this.refresh_rate = rate;
+	if(this.refresh_rate === 0){
+		//this.runner.stop()
+	}else{
+		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
+	}
+}, this);
 
 
-this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title: "Server Status", closable: true});
+this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title: "Server Status"});
 
 //=================================================================================
-// Main Viewport auto rendered to body
+// Map Panels
 //=================================================================================
 
-this.mapPanels = {};
-this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false, flightsStore: this.flightsStore});
-this.mapPanels.base.init();
+this.on_open_map = function(lonLat, zoom, title){
+	var newMap = new FGx.MapPanel({
+		title: title, closable: true, 
+		flightsStore: self.flightsStore,
+		lonLat: lonLat, zoom: zoom
+	});
+	console.log(self.flightsStore);
+	//newMap.on("OPEN_MAP", function(lonLat, zoom, title){
+	///	this.on_open_map(lonLat, zoom, title);
+	//, this);
+	this.tabPanel.add(newMap);
+	this.tabPanel.setActiveTab(newMap);
+	
+};
+
+
+
+//this.mapPanels.mainMap.init();
+//this.mapPanels.mainMap.on("OPEN_MAP", this.on_open_map, this);
+	
+
 
 //this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
 //this.mapPanels.base2.init();
@@ -83,14 +111,34 @@ this.tabPanel = new Ext.TabPanel({
 	frame: false, plain: true,
 	activeItem: 0,
 	items: [
-		this.mapPanels.base,
+		
+		//this.mapPanels.mainMap,
 		//this.mapPanels.base2,
+		
+		this.flightsGrid,
 		this.mpStatusGrid,
-		this.flightsGrid
+		this.settingsWidget
 	]
 	
 });
 
+//this.mapPanels = {};
+this.add_map = function(title, closable, lonLat, zoom, idx){
+	var mapPanel = new FGx.MapPanel({
+		title: title, closable: closable, flightsStore: self.flightsStore,
+		lonLat: lonLat, zoom: zoom
+	});	
+	mapPanel.init();
+	if(idx == 0){
+		self.tabPanel.insert(idx, mapPanel);
+	}else{
+		self.tabPanel.add(mapPanel);
+	}
+	self.tabPanel.setActiveTab(mapPanel);
+	mapPanel.on("OPEN_MAP", self.add_map, self);
+}
+
+this.add_map("Main Map", false, false, false, 0);
 
 
 
@@ -103,7 +151,36 @@ this.viewport = new Ext.Viewport({
 
 		//this.mapPanel,
 		this.tabPanel
-		,
+		/*
+		{xtype: "panel",
+			region: "west",
+			collapsible: true,
+			width: 200,
+			title: "Options",
+			tbar: [
+				{xtype: 'buttongroup',
+					title: 'Refresh Secs',
+					columns: 7,
+					items: [
+						{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
+						{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
+							toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
+						{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+							toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
+						{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+							toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
+						{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+							toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
+						{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+							toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
+						{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+							toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
+					]   
+				}
+				
+			]
+		}
+		*/
 		/* {region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',

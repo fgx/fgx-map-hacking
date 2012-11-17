@@ -3,35 +3,6 @@ Ext.namespace("FGx");
 
 FGx.FlightsGrid = Ext.extend(Ext.grid.GridPanel, {
 
-//var self = this,
-
-//this.refresh_rate = 0,
-//this.runner = new Ext.util.TaskRunner(),
-
-tbw: 35,
-
-//= Triggered when a refresh toolbar button is clicked
-on_refresh_toggled: function(butt, checked){
-	butt.setIconClass( checked ? "icoOn" : "icoOff");
-	if(checked){
-		this.runner.stopAll(); // stop if already ruinning
-		this.refresh_rate = parseInt(butt.ref_rate, 10);
-		if(this.refresh_rate === 0){
-			//this.runner.stop()
-		}else{
-			this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
-		}
-	}
-},
-
-//= Riggered for reshresh now
-on_refresh_now: function(){
-	this.store.load();
-},
-
-
-
-
 
 	
 //===========================================================
@@ -99,33 +70,36 @@ constructor: function(config) {
 					return v;
 				}
 			},
-			{header: 'Aircraft',  dataIndex:'model', sortable: true, hidden: config.xHidden,
-				width: 100,
-			},
+			{header: 'Aircraft',  dataIndex:'model', sortable: true, 
+				width: 100
+			}
 
 		],
 		
+		//TODO make this a load
+		/*
 		tbar: [	//this.pilotsDataCountLabel
-			{xtype: 'buttongroup',
+			{xtype: 'buttongroup', hidden: config.xHidden,
 				title: 'Refresh Secs',
 				columns: 7,
 				items: [
 					{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
-					{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
+					{text: "Off", iconCls: "icoOn",  enableToggle: true, scope: this,
 						toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
 					{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
 						toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
 					{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
 						toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
 					{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
+						toggleGroup: "ref_rate", ref_rate: 4, pressed: true, toggleHandler: this.on_refresh_toggled},
 					{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
 						toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
 					{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
 						toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
 				]   
 			}
-		],
+		],*/
+		
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 

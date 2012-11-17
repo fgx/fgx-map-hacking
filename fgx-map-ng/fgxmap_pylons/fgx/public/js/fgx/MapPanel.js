@@ -90,13 +90,36 @@ flights_grid: function(sto){
 	return this.xFlightsGrid;
 },
 
+get_osm_dark: function(){
+	if(!this.xOsmDark){
+		this.xOsmDark = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
+		this.xOsmDark.setOpacity(0.5);	
+	}
+	return this.xOsmDark;
+},
+
+get_bookmark_button: function(){
+		if(!this.xBookMarkButton){
+		this.xBookMarkButton = new Ext.Button({
+			text: "Bookmark",
+			iconCls: "icoBookMarkAdd",
+			scope: this,
+			handler: function(){
+				var d = new FGx.BookMarkDialog({bookmark_pk: 0});
+				d.run_show();
+				
+			}
+		});
+		//this.xOsmDark.setOpacity(0.5);	
+	}
+	return this.xBookMarkButton;
+},
+
 //======================================================
 // Create the Layers
 get_layers: function(){
 	
-	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
-	osm_light.setOpacity(0.3);
-	
+
 	var LAYERS = [
 		//=================================================
 		// Overlay
@@ -156,14 +179,15 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		/// Underlays
+		this.get_osm_dark(),
+		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
+		
 		new OpenLayers.Layer.WMS(
 			"Landmass",
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
-		osm_light
 	];
 	return LAYERS;
 },
@@ -184,8 +208,8 @@ constructor: function(config) {
 			{xtype: "gx_mappanel", region: "center",
 				frame: false, plain: true, border: 0,	bodyBorder: false,
 				map: this.get_map(),
-				center:  new OpenLayers.LonLat(939262.20344,5938898.34882),
-				zoom: 5,
+				center:  config.lonLat ? config.lonLat : new OpenLayers.LonLat(939262.20344,5938898.34882),
+				zoom: config.zoom ? config.zoom :5,
 				layers: this.get_layers(),
 		
 				tbar: [
@@ -196,13 +220,13 @@ constructor: function(config) {
 						columns: 3,
 						items: [
 	
-							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOn", pressed: true,
+							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOff", pressed: false,
 								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
 							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
+							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -260,11 +284,11 @@ constructor: function(config) {
 							},
 							{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
 								toggleHandler: this.on_nav_toggled, scope: this
-							},
-							{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-								toggleHandler: this.on_nav_toggled, scope: this,
-								hidden: true, id: "fgx-vortac"
 							}
+							//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+							//	toggleHandler: this.on_nav_toggled, scope: this,
+							//	hidden: true, id: "fgx-vortac"
+							//}
 						]   
 					},
 					{xtype: 'buttongroup', disabled: true,
@@ -274,17 +298,17 @@ constructor: function(config) {
 							{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
 							{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
 							{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-							{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
-								hidden: true, id: "fgx-mil-airports"},
+							//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+							//	hidden: true, id: "fgx-mil-airports"},
 							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
 							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
 						]   
 					},
 					{xtype: 'buttongroup', 
 						title: 'Utils', 
-						columns: 1,
+						columns: 2,
 						items: [
-							{text: "Goto", iconCls: "icoOff",
+							/*{text: "Goto", iconCls: "icoOff",
 								menu: [
 									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787 , 
 										handler: this.on_goto, scope: this},
@@ -298,7 +322,25 @@ constructor: function(config) {
 										handler: this.on_goto, scope: this},
 								]
 								
-							}
+							},*/
+							
+							{text: "New", iconCls: "icoMapAdd", scope: this, handler: this.on_goto, xtype: "splitbutton",
+								zoom: 5, lat: 47.467, lon: 8.5597,
+								menu: [
+									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787, zoom: 10,
+										handler: this.on_goto, scope: this},
+									{text: "London", aptIdent: "EGLL",  lat: 51.484, lon: -0.1510, zoom: 10,
+										handler: this.on_goto, scope: this},
+									{text: "Paris", aptIdent: "LFPG", lat: 48.994, lon: 2.650, zoom: 10,
+										handler: this.on_goto, scope: this},
+									{text: "San Fransisco", aptIdent: "KSFO", lat: 37.621302, lon: -122.371216, zoom: 10,
+										handler: this.on_goto, scope: this},
+									{text: "Zurich", aptIdent: "LSZH", lat: 47.467, lon: 8.5597, zoom: 10,
+										handler: this.on_goto, scope: this},
+								]
+								
+							},
+							this.get_bookmark_button()
 						]   
 					}
 					
@@ -307,14 +349,26 @@ constructor: function(config) {
 				//== Bottom Toolbar
 				bbar: [
 
-					{text: "Zoom:"},
+					{text: "Zoom", tooltip: "Click for default zoom"},
 					new GeoExt.ZoomSlider({
 						map: this.get_map(),
 						aggressive: true,                                                                                                                                                   
-						width: 200,
+						width: 150,
 						plugins: new GeoExt.ZoomSliderTip({
 							template: "<div>Zoom Level: {zoom}</div>"
 						})
+					}),
+					"-",
+					{text: "Opacity", tooltip: "Click for default zoom"},
+					new GeoExt.LayerOpacitySlider({
+						layer: this.get_osm_dark(),
+						aggressive: true, 
+						width: 150,
+						isFormField: true,
+						inverse: true,
+						fieldLabel: "opacity",
+						ssrenderTo: "slider",
+						plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
 					}),
 					"->",
 					{text: "TODO: Lat: "}, this.lbl_lat(), 
@@ -356,7 +410,7 @@ on_base_layer: function(butt, checked){
 	if(checked){
 		this.set_base_layer(butt.text);
 	}
-	butt.setIconClass(checked ? "icoOn" : "icoOff");
+	butt.setIconClass(checked ? "icoBlue" : "icoOff");
 },
 
 set_base_layer: function(layer_name){
@@ -541,18 +595,21 @@ show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 	
 },
 
-on_goto: function(where){
-	console.log(where.aptIdent);
+on_goto: function(butt){
+	//console.log(where.aptIdent);
 	
-	var lonLat = new OpenLayers.LonLat(where.lon, where.lat
+	var lonLat = new OpenLayers.LonLat(butt.lon, butt.lat
 			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	
-	this.get_map().setCenter( lonLat );
-	this.get_map().zoomTo( 10 );
+	//this.get_map().setCenter( lonLat );
+	//this.get_map().zoomTo( 10 );
+	this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
+	
+	
 	//var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
 	//				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 					
-	console.log(lonLat);
+	//console.log(lonLat);
 }
 
 
