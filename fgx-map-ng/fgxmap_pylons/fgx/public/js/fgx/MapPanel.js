@@ -90,13 +90,20 @@ flights_grid: function(sto){
 	return this.xFlightsGrid;
 },
 
+get_osm_dark: function(){
+	if(!this.xOsmDark){
+		this.xOsmDark = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
+		this.xOsmDark.setOpacity(0.5);	
+	}
+	return this.xOsmDark;
+	
+},
+
 //======================================================
 // Create the Layers
 get_layers: function(){
 	
-	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
-	osm_light.setOpacity(0.3);
-	
+
 	var LAYERS = [
 		//=================================================
 		// Overlay
@@ -156,14 +163,15 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		/// Underlays
+		this.get_osm_dark(),
+		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
+		
 		new OpenLayers.Layer.WMS(
 			"Landmass",
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
-		osm_light
 	];
 	return LAYERS;
 },
@@ -196,13 +204,13 @@ constructor: function(config) {
 						columns: 3,
 						items: [
 	
-							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOn", pressed: true,
+							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOff", pressed: false,
 								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
 							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoOff", pressed: false,
+							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -307,14 +315,26 @@ constructor: function(config) {
 				//== Bottom Toolbar
 				bbar: [
 
-					{text: "Zoom:"},
+					{text: "Zoom", tooltip: "Click for default zoom"},
 					new GeoExt.ZoomSlider({
 						map: this.get_map(),
 						aggressive: true,                                                                                                                                                   
-						width: 200,
+						width: 150,
 						plugins: new GeoExt.ZoomSliderTip({
 							template: "<div>Zoom Level: {zoom}</div>"
 						})
+					}),
+					"-",
+					{text: "Opacity", tooltip: "Click for default zoom"},
+					new GeoExt.LayerOpacitySlider({
+						layer: this.get_osm_dark(),
+						aggressive: true, 
+						width: 150,
+						isFormField: true,
+						inverse: true,
+						fieldLabel: "opacity",
+						ssrenderTo: "slider",
+						plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
 					}),
 					"->",
 					{text: "TODO: Lat: "}, this.lbl_lat(), 
@@ -356,7 +376,7 @@ on_base_layer: function(butt, checked){
 	if(checked){
 		this.set_base_layer(butt.text);
 	}
-	butt.setIconClass(checked ? "icoOn" : "icoOff");
+	butt.setIconClass(checked ? "icoBlue" : "icoOff");
 },
 
 set_base_layer: function(layer_name){
