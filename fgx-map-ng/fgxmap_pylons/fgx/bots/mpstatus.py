@@ -1,6 +1,9 @@
 
+import socket
 import threading
 import time
+import datetime
+import telnetlib
 
 from pylons import config
 
@@ -12,6 +15,141 @@ from fgx.model import meta, MpServer, MpBotInfo
 
 class MpStatusThread(threading.Thread):
 	
+	#def zulu():
+	#	return datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%Sz")
+	DEBUG = True
+	
+	def host_name(self, server_no):
+		return "mpserver%02d.flightgear.org" % server_no
+	
+	
+	def lookup(self, server_no):
+	
+		"""Looks up a server"""
+		domain_name = self.host_name(server_no)
+		try:
+			socket.setdefaulttimeout(10)
+			ip_address = socket.gethostbyname(domain_name)
+			#print socket.getaddrinfo(domain_name, 5000)
+			if self.DEBUG:
+				print "  > Found ADDR: %s = %s " % (domain_name, ip_address)
+			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address}
+			
+		except socket.gaierror, e:
+			if self.DEBUG:
+				print "  > Error ADDR: %s = %s " % (domain_name, e)
+			return False, e
+
+
+
+
+	def lookup_all(self):
+		
+		"""Looks up all servers in range 1 to MAX_NAME_SERVER"""
+		results = {}
+		for server_no in range(1, 20 + 1):
+			ok, details = self.lookup(server_no)
+			#print ok, domain, details
+			if ok:
+				#results[details['host']] = details 
+				ob = meta.Session.query(MpServer).get(server_no)
+				if ob == None:
+					ob = MpServer()
+					ob.no = server_no
+					ob.fqdn = self.host_name(server_no)
+					meta.Session.add(ob)
+					
+				ob.ip = details['ip']
+				ob.last_checked = datetime.datetime.now()
+				ob.status = "unknown"
+				meta.Session.commit()
+				
+				lag, flights = self.fetch_telnet(server_no, True)
+				if lag and flights:
+					ob.lag = lag
+					ob.last_seen = datetime.datetime.now()
+					meta.Session.commit()	
+				
+		return results
+
+
+	def fetch_telnet(self, no, ping_mode):
+	
+		host_name = self.host_name(no)
+		try:
+			start = datetime.datetime.now()
+			
+			conn = telnetlib.Telnet(host_name, 5001, 5)
+			data = conn.read_all()
+			conn.close()
+			
+			delta = datetime.datetime.now() - start 
+			lag = (delta.seconds * 1000) + (delta.microseconds / 1000)
+			#print  "diff=", delta.seconds, delta.microseconds, ms
+			
+			lines = data.split("\n")
+			
+			if ping_mode: # MP Ping Mode
+				tracked = "@ Not Tracked"
+				if lines[2].find("tracked") != -1:
+					tracked = lines[2]
+					
+				if lines[3].find("tracked") != -1:
+					tracked = lines[3]
+					
+					
+				pilots = "@ No Pilots"
+				if lines[2].find("pilots") != -1:
+					pilots = lines[2]
+					
+				if lines[3].find("pilots") != -1:
+					pilots = lines[3]
+				
+				return lag, {'info': lines[0],
+							'version': lines[1],
+							'tracked': tracked,
+							'pilots': pilots
+							}
+				
+			else: # Flights Mode
+				flights = []
+				
+				for line_raw in lines:
+					line = line_raw.strip()
+					
+					if line.startswith('#') or line == '':
+						pass
+					else:
+						# we got a data line
+						parts = line.split(' ')
+						callsign, server = parts[0].split('@')
+						dic = {}
+						dic['callsign'] = callsign
+						dic['server'] = server
+						dic['model'] = os.path.basename(parts[10])[0:-4]
+						dic['lat'] = parts[4]
+						dic['lon'] = parts[5]
+						dic['altitude'] = parts[6]
+						
+						ob = simgear.euler_get(float(parts[4]), float(parts[5]), # lat lon
+												float(parts[7]), # ox
+												float(parts[8]), # oy
+												float(parts[9])  # oz
+												)
+						#print ob
+						dic['roll'] = ob.roll
+						dic['pitch'] = ob.pitch
+						dic['heading'] = ob.heading
+						flights.append(dic)
+				return lag, flights
+					
+			
+		except 	socket.error as err:
+			#print " telnet err=", address, err
+			return None, None
+
+
+
 	def run(self):
 		print 'T> MpStatusThread: Status thread is started'
 		
@@ -21,26 +159,29 @@ class MpStatusThread(threading.Thread):
 			botInfo = MpBotInfo()
 			meta.Session.add(botInfo)
 			
-		botInfo
+		
 		meta.Session.commit()
 		
 		time.sleep(2)
-		
-		#d = Despatcher()
-		
+				
 		while True:
 			
-			#print "\n-----------------------------------------------------"
-			#print "MailQThread: UP"
-			
-			#d.process_all()
-
 			print "\t MpStatusThread, awake then.. "
-			time.sleep(2)
-			print "\t.. Todo lookup the dns servers.... low priority"
-			time.sleep(10)
+			
+			botInfo.last_dns_start = datetime.datetime.now()
+			meta.Session.commit()
+			
+			self.lookup_all()
+			
+			botInfo.last_dns_end = datetime.datetime.now()
+			meta.Session.commit()
+			
+			
+			
 			print "\t: Sleep. zzzzzzzzzzzzz a while"
 			time.sleep(60)
+	
+	
 	
 def start_mpstatus_thread():
 	worker = MpStatusThread()
