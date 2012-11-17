@@ -185,6 +185,6 @@ class MpStatusThread(threading.Thread):
 	
 def start_mpstatus_thread():
 	worker = MpStatusThread()
-	worker.start()
+	#worker.start()
 	
 	

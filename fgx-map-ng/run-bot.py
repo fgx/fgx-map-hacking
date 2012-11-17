@@ -11,7 +11,7 @@ import time
 import commands
 from optparse import OptionParser
 
-
+print "DEAD"
 
 ## Handle Command Args
 usage = "usage: %prog [-h -j -n -s -v] "

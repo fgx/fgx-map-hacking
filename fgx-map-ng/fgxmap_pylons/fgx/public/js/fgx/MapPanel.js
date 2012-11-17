@@ -79,7 +79,7 @@ lbl_lon: function(){
 
 //======================================================
 // Flights Grid
-flights_grid: function(sto){
+get_flights_grid: function(sto){
 	if(!this.xFlightsGrid){
 		
 		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights", xHidden: true});
@@ -96,6 +96,43 @@ flights_grid: function(sto){
 				
 	}
 	return this.xFlightsGrid;
+},
+
+get_nav_widget: function(){
+	if(!this.xNavWidget){
+		
+		this.xNavWidget =  new FGx.NavWidget({});
+		this.xNavWidget.on("GOTO", function(obj){
+
+			
+			var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().panTo( lonLat );
+			this.get_map().zoomTo( 10 );
+			
+			
+			var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+			var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+				pt,
+					0, // wtf. .I want a larger cicle
+					20
+				);
+			var style = {
+				strokeColor: "red",
+				strokeOpacity: 1,
+				strokeWidth: 3,
+				fillColor: "yellow",
+				fillOpacity: 0.8 };
+			var feature = new OpenLayers.Feature.Vector(circle, null, style);
+			this.highLightMarkers.addFeatures([feature]);
+			
+			console.log("ADD", feature);
+		}, this);  
+			
+	}
+	return this.xNavWidget;
 },
 
 get_osm_dark: function(){
@@ -126,7 +163,106 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
+	this.highLightMarkers = new OpenLayers.Layer.Vector(
+		"HighLight Markers"
+												 );
+	/*
+		{styleMap: new OpenLayers.StyleMap({
+			"default": {
+				strokeColor: "red",
+				strokeWidth: 1,
+				fillColor: "lime",
+
+				
+				fontColor: "black",
+				fontSize: "12px",
+				fontFamily: "Helvetica, Arial, sans-serif",
+				fontWeight: "bold",
+				wwrotation : "${planerotation}",
+			},
+			"select": {
+				fillColor: "black",
+				strokeColor: "yellow",
+				pointRadius: 12,
+				fillOpacity: 1,
+			}
+		})
+		}, {  visibility: true}
+	)*/
 	
+	
+	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+		"Radar Markers", 
+		{styleMap: new OpenLayers.StyleMap({
+				"default": {
+					strokeColor: "lime",
+					strokeWidth: 1,
+					fillColor: "lime",
+
+					externalGraphic: "/images/radar_blip2.png",
+					graphicWidth: 8,
+					graphicHeight: 24,
+					graphicOpacity: 1,
+					graphicXOffset: 0,
+					graphicYOffset: -20,
+					
+					fontColor: "black",
+					fontSize: "12px",
+					fontFamily: "Helvetica, Arial, sans-serif",
+					fontWeight: "bold",
+					rotation : "${planerotation}",
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+			})
+		}, {  visibility: true}
+	)
+
+	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+		"Radar Label", 
+		{
+			styleMap:  new OpenLayers.StyleMap({
+				"default": {
+					fill: true,
+					fillOpacity: 1,
+					fillColor: "black",
+					strokeColor: "green",
+					strokeWidth: 1,
+
+					//graphic: false,
+					externalGraphic: "/images/fgx-background-black.png",
+					graphicWidth: 50,
+					graphicHeight: 12,
+					graphicOpacity: 0.8,
+					graphicXOffset: "${gxOff}",
+					graphicYOffset: "${gyOff}",
+					
+					
+					fontColor: "white",
+					fontSize: "10px",
+					fontFamily: "sans-serif",
+					fontWeight: "bold",
+					labelAlign: "left",
+					labelXOffset: "${lxOff}", 
+					labelYOffset: "${lyOff}", 
+					label : "${callsign}",
+					//rotation : "${planerotation}",
+
+				},
+				"select": {
+					fillColor: "black",
+					strokeColor: "yellow",
+					pointRadius: 12,
+					fillOpacity: 1,
+				}
+
+			})
+		}
+	);
 
 	var LAYERS = [
 		//=================================================
@@ -196,6 +332,10 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
+		this.highLightMarkers,
+		this.flightLabelsLayer,
+		this.flightMarkersLayer
+		
 	];
 	return LAYERS;
 },
@@ -397,8 +537,8 @@ constructor: function(config) {
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
-					//this.navWidget.grid
-					this.flights_grid(config.flightsStore)
+					this.get_nav_widget(),
+					this.get_flights_grid(config.flightsStore)
 					
 				]
 			
@@ -448,86 +588,15 @@ on_civmil_mode: function(butt, checked){
 
 
 init: function(){
-	//console.log("INIT");
+
 	
-	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
-		"Radar Markers", 
-		{styleMap: new OpenLayers.StyleMap({
-				"default": {
-					strokeColor: "lime",
-					strokeWidth: 1,
-					fillColor: "lime",
-
-					externalGraphic: "/images/radar_blip2.png",
-					graphicWidth: 8,
-					graphicHeight: 24,
-					graphicOpacity: 1,
-					graphicXOffset: 0,
-					graphicYOffset: -20,
-					
-					fontColor: "black",
-					fontSize: "12px",
-					fontFamily: "Helvetica, Arial, sans-serif",
-					fontWeight: "bold",
-					rotation : "${planerotation}",
-				},
-				"select": {
-					fillColor: "black",
-					strokeColor: "yellow",
-					pointRadius: 12,
-					fillOpacity: 1,
-				}
-			})
-		}, {  visibility: true}
-	)
-
-	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
-		"Radar Label", 
-		{
-			styleMap:  new OpenLayers.StyleMap({
-				"default": {
-					fill: true,
-					fillOpacity: 1,
-					fillColor: "black",
-					strokeColor: "green",
-					strokeWidth: 1,
-
-					//graphic: false,
-					externalGraphic: "/images/fgx-background-black.png",
-					graphicWidth: 50,
-					graphicHeight: 12,
-					graphicOpacity: 0.8,
-					graphicXOffset: "${gxOff}",
-					graphicYOffset: "${gyOff}",
-					
-					
-					fontColor: "white",
-					fontSize: "10px",
-					fontFamily: "sans-serif",
-					fontWeight: "bold",
-					labelAlign: "left",
-					labelXOffset: "${lxOff}", 
-					labelYOffset: "${lyOff}", 
-					label : "${callsign}",
-					//rotation : "${planerotation}",
-
-				},
-				"select": {
-					fillColor: "black",
-					strokeColor: "yellow",
-					pointRadius: 12,
-					fillOpacity: 1,
-				}
-
-			})
-		}
-	);
-	this.get_map().addLayer( this.flightMarkersLayer );
-	this.get_map().addLayer( this.flightLabelsLayer );
+	//this.get_map().addLayer( this.highLightMarkers );
+	//this.get_map().addLayer( this.flightMarkersLayer );
+	//this.get_map().addLayer( this.flightLabelsLayer );
 	
 	//this.set_base_layer("Dark"); //??? WTF!!
 	
-	this.flights_grid().getStore().on("load", function(store, recs, idx){
+	this.get_flights_grid().getStore().on("load", function(store, recs, idx){
 		//console.log("YESSSSS");
 		this.flightLabelsLayer.removeAllFeatures();
 		this.flightMarkersLayer.removeAllFeatures();

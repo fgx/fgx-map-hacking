@@ -34,7 +34,7 @@ def make_app(global_conf, full_stack=True, static_files=True, **app_conf):
 
     """
     # Configure the Pylons environment
-    config = load_environment(global_conf, app_conf)
+    config = load_environment(global_conf, app_conf, True)
 
     # The Pylons WSGI app
     app = PylonsApp(config=config)

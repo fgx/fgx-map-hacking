@@ -2,8 +2,7 @@ Ext.namespace("FGx");
 
 FGx.BookMarkDialog = Ext.extend(Ext.Window, {
 
-//===========================================================
-//== Grid
+
 constructor: function(config) {
 	
 	config = Ext.apply({
