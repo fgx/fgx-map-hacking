@@ -247,7 +247,7 @@ class MpServer(Base):
 				'ip': self.ip,
 				'country': self.country,
 				'last_checked': str(self.last_checked),
-				'last_seen': str(self.last_checked) if self.last_checked else None,
+				'last_seen': str(self.last_seen) if self.last_seen else None,
 				'lag': self.lag
 				
 		}
