@@ -44,7 +44,18 @@ xMap: new OpenLayers.Map({
 		zoomLevels: 20
 }),
 							
-						  
+lblLat: new Ext.form.DisplayField({width: 100, value: "-"}),
+lblLon: new Ext.form.DisplayField({width: 100, value: "-"}),
+
+zoomSlider: new GeoExt.ZoomSlider({
+	map: this.xMap,
+	aggressive: true,                                                                                                                                                   
+	width: 200,
+	plugins: new GeoExt.ZoomSliderTip({
+		template: "<div>Zoom Level: {zoom}</div>"
+	})
+}),
+	
 //===========================================================
 //== Grid
 constructor: function(config) {
@@ -168,8 +179,8 @@ constructor: function(config) {
 			{text: "Zoom:"},
 			this.zoomSlider,
 			"->",
-			{text: "TODO: Lat: "}, //lblLat, 
-			{text: "Lon: "},  //lblLon
+			{text: "TODO: Lat: "}, this.lblLat, 
+			{text: "Lon: "},  this.lblLon
 		
 		]
 		
@@ -197,6 +208,9 @@ on_nav_toggled: function(butt, checked){
 },
 
 on_apt_toggled: function(butt, checked){
+ // TODO	
+},
+on_civmil_mode: function(butt, checked){
  // TODO	
 }
 
@@ -320,17 +334,7 @@ on_apt_toggled: function(butt, checked){
 
 	*/
 /*
-	var lblLat = new Ext.form.DisplayField({width: 100, value: "-"});
-	var lblLon = new Ext.form.DisplayField({width: 100, value: "-"});
 
-	this.zoomSlider = new GeoExt.ZoomSlider({
-		map: this.xMap,
-		aggressive: true,                                                                                                                                                   
-		width: 200,
-		plugins: new GeoExt.ZoomSliderTip({
-			template: "<div>Zoom Level: {zoom}</div>"
-		})
-	});
 		
 	
 	
