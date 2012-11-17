@@ -61,7 +61,7 @@ constructor: function(config) {
 			forceFit: true
 		}, 
 		stripeRows: true,
-		store: config.store,
+		store: config.flightsStore,
 		loadMask: false,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
@@ -130,7 +130,7 @@ constructor: function(config) {
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 
-				store: config.store,
+				store: config.flightsStore,
 				displayInfo: true,
 				pageSize: 500,
 				prependButtons: true	

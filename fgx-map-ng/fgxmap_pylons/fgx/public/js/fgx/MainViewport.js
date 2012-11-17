@@ -135,7 +135,7 @@ this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
 // Other Widgets - Note the Map is passed in constructor as ref
 //============================================================
 //this.flightsWidget = new FGx.FlightsWidget({});
-this.flightsGrid = new FGx.FlightsGrid({store: this.flightsStore, title: "Flights", closable: true});
+this.flightsGrid = new FGx.FlightsGrid({flightsStore: this.flightsStore, title: "Flights", closable: true});
 
 this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 	//var callsign = self.flightsWidget.store.getAt(idx).get("callsign");
@@ -164,8 +164,8 @@ this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 //=================================================================================
 
 this.mapPanels = {};
-this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false});
-this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true});
+this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false, flightsStore: this.flightsStore});
+this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",

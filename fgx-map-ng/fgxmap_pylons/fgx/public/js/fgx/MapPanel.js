@@ -59,9 +59,9 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
-flights_grid: function(){
+flights_grid: function(sto){
 	if(!this.xFlightsGrid){
-		this.xFlightsGrid =  new Ext.Panel({title: "Foo"}); 
+		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights"});
 	}
 	return this.xFlightsGrid;
 },
@@ -283,13 +283,14 @@ constructor: function(config) {
 				plain: true,
 				border: 0,
 				collapsible: true,
+				collapsed: true,
 				activeItem: 0,
 				items: [
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
 					//this.navWidget.grid
-					this.flights_grid()
+					this.flights_grid(config.flightsStore)
 					
 				]
 			
