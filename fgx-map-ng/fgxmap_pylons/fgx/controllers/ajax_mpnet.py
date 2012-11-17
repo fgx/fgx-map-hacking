@@ -9,6 +9,8 @@ from pylons import app_globals
 
 from fgx.lib.base import BaseController, render
 
+from fgx.model import meta, MpServer
+
 log = logging.getLogger(__name__)
 
 
@@ -38,3 +40,14 @@ class AjaxMpnetController(BaseController):
 		response.headers['Content-Type'] = "text/plain"
 		#payload = dict(success=True,flights=  )
 		return data_str
+
+	@jsonify
+	def mpstatus(self):
+		payload = dict(success=True)
+		obs = meta.Session.query(MpServer).all()
+		payload['mpservers'] = [ob.dic() for ob in obs]
+		
+		return payload
+
+		
+		

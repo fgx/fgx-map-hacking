@@ -23,6 +23,7 @@ var RESOLUTIONS = [
     0.29858214169740677
 ]
 
+/*
 var LAYERS = [];
 
 //=================================================
@@ -109,3 +110,4 @@ BASE_LAYERS.osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM light" );
 BASE_LAYERS.osm_light.setOpacity(0.4);
 LAYERS.push( BASE_LAYERS.osm_light );
 
+*/

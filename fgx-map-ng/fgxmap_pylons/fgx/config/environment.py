@@ -39,15 +39,6 @@ def load_environment(global_conf, app_conf):
 	pylons.cache._push_object(config['pylons.app_globals'].cache)
 	
 
-	# Create the Mako TemplateLookup, with the default auto-escaping
-	"""
-	config['pylons.app_globals'].mako_lookup = TemplateLookup(
-		directories=paths['templates'],
-		error_handler=handle_mako_error,
-		module_directory=os.path.join(app_conf['cache_dir'], 'templates'),
-		input_encoding='utf-8', default_filters=['escape'],
-		imports=['from markupsafe import escape'])
-	"""
 	# Create the Jinja2 Environment
 	config['pylons.app_globals'].jinja2_env = Environment(
 							#extensions=[jinja_ext], 
@@ -64,7 +55,7 @@ def load_environment(global_conf, app_conf):
 	# any Pylons config options)
 
 	## Start the background processes
-	#mpstatus.start_mpstatus_thread()
+	mpstatus.start_mpstatus_thread()
 		
 	
 	return config
