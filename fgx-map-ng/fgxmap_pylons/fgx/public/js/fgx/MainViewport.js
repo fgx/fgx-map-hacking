@@ -39,7 +39,7 @@ this.update_flights = function(){
 	self.flightsStore.load();
 }
 
-this.refresh_rate = 2;
+this.refresh_rate = 3;
 this.runner = new Ext.util.TaskRunner();
 
 
@@ -61,7 +61,7 @@ this.flightsGrid = new FGx.FlightsGrid({
 
 
 
-this.settingsWidget = new FGx.SettingsWidget({runner: this.runner});
+this.settingsWidget = new FGx.SettingsWidget({runner: this.runner, refresh_rate: this.refresh_rate});
 this.settingsWidget.on("SET_REFRESH", function(rate){
 	//console.log("SET_REFRESH", rate);
 	this.runner.stopAll(); // stop if already running
