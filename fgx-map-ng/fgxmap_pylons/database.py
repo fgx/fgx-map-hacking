@@ -29,10 +29,10 @@ if not x_path in sys.path:
 	sys.path.append(x_path)
 	print "  > Appended path ", x_path
 	
-print here_path, x_path
-ini = x_path + '/development.ini'
-print "ini=", ini
-conf = appconfig('config:' + "development.ini", relative_to=x_path)
+#print here_path, x_path
+#ini = x_path + '/development.ini'
+#print "ini=", ini
+conf = appconfig('config:' + "local.ini", relative_to=x_path)
 
 from fgx.config.environment import load_environment
 shell_config = load_environment( conf.global_conf, conf.local_conf, False)
