@@ -165,8 +165,8 @@ this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title
 //=================================================================================
 
 this.mapPanels = {};
-//this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false, flightsStore: this.flightsStore});
-//this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
+this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false, flightsStore: this.flightsStore});
+this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
@@ -174,12 +174,10 @@ this.tabPanel = new Ext.TabPanel({
 	frame: false, plain: true,
 	activeItem: 0,
 	items: [
-		//this.mapPanels.base,
-		//this.mapPanels.base2,
+		this.mapPanels.base,
+		this.mapPanels.base2,
 		this.mpStatusGrid,
-		this.flightsGrid,
-		
-		//
+		this.flightsGrid
 	]
 	
 });

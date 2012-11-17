@@ -179,7 +179,7 @@ class MpStatusThread(threading.Thread):
 			
 			
 			print "\t: Sleep. zzzzzzzzzzzzz a while"
-			time.sleep(60)
+			time.sleep(300) 
 	
 	
 	
