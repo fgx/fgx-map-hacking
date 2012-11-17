@@ -121,7 +121,7 @@ get_bookmark_button: function(){
 		//this.xOsmDark.setOpacity(0.5);	
 	}
 	return this.xBookMarkButton;
-},s
+},
 
 //======================================================
 // Create the Layers

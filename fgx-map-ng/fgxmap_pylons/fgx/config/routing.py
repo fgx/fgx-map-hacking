@@ -40,6 +40,11 @@ def make_map(config):
 	map.connect('/ajax/mp/flights', controller="ajax_mpnet", action="flights")
 	
 	
+	#### Nav Aids
+	map.connect('/ajax/fix/{ident}', controller="ajax_nav", action="fix")
+	map.connect('/ajax/fix', controller="ajax_nav", action="fix")
+	
+	
 	
 	#### Database Browsing
 	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")

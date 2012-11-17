@@ -136,8 +136,14 @@ class Fix(Base):
 	
 	fix_pk = Column(Integer(), primary_key=True)
 	fix = Column(String(10), index=True, nullable=False)
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
+	def dic(self):
+		
+		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+			
 GeometryDDL(Fix.__table__)
 
 ##=======================================================

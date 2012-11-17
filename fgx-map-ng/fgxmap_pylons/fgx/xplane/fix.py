@@ -59,7 +59,7 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 				print "  > line %s >>" % c, parts
 			
 			ident = parts[2]
-			
+			"""
 			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
 			print ident, "fixOb=", obs
 			if len(obs) == 0:
@@ -67,32 +67,34 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 				ob.fix = ident
 				meta.Session.add(ob)
 				meta.Session.commit()
-				
+			else:
+				ob = obs[0]
 			#sql = "insert into fix(fix, wkb_geometry)values( %s, %s)"
 			##conn.execute("insert into fix(fix)values( '%s')" % ident)
 			##db.session.commit()
 			"""
 			## Check if fix in in DB already
-			obs = db.session.query(Fix).filter_by(fix=ident).all()
+			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:
 				## Not in DB so create and add
 				ob = Fix()
-				db.session.add(ob)
+				meta.Session.add(ob)
 			else:
 				## Found, so its the first one
 				ob = obs[0]
 			
 			## Update the object and save
-			
 			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			#print pnt
-			print "##", parts
-			print pnt
+			#print "##", parts
+			#print pnt
 			ob.fix = ident
-			ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
+			ob.lat = parts[0]
+			ob.lon = parts[1]
+			ob.wkb_geometry = None #WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
 			#ob.wkb_geometry = GEOSGeometry(pnt)
-			db.session.commit()
-			"""
+			meta.Session.commit()
+			
 		
 		
 		if dev_mode and c == 1000:
