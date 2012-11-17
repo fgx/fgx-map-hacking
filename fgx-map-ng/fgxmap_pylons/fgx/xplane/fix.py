@@ -91,7 +91,7 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 			ob.fix = ident
 			ob.lat = parts[0]
 			ob.lon = parts[1]
-			ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
+			#ob.wkb_geometry = WKTSpatialElement(pnt, geometry_type='POINT') #, settings.FGX_SRID)
 			#ob.wkb_geometry = GEOSGeometry(pnt)
 			meta.Session.commit()
 			

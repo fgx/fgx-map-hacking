@@ -12,5 +12,5 @@ def setup_app(command, conf, vars):
     load_environment(conf.global_conf, conf.local_conf, False)
 
     # Create the tables if they don't already exist
-    Base.metadata.drop_all(bind=Session.bind)
+    #Base.metadata.drop_all(bind=Session.bind)
     Base.metadata.create_all(bind=Session.bind)
