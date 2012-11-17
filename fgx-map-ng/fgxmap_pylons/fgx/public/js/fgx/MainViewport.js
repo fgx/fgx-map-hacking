@@ -39,92 +39,9 @@ this.update_flights = function(){
 	self.flightsStore.load();
 }
 
-
+this.refresh_rate = 2;
 this.runner = new Ext.util.TaskRunner();
 
-
-//===========================================================================
-//= Layers
-//===========================================================================
-this.flightMarkersLayer = new OpenLayers.Layer.Vector(
-	"Radar Markers", 
-	{styleMap: new OpenLayers.StyleMap({
-			"default": {
-				strokeColor: "lime",
-				strokeWidth: 1,
-				fillColor: "lime",
-
-				externalGraphic: "/images/radar_blip2.png",
-				graphicWidth: 8,
-				graphicHeight: 24,
-				graphicOpacity: 1,
-				graphicXOffset: 0,
-				graphicYOffset: -20,
-				
-				fontColor: "black",
-				fontSize: "12px",
-				fontFamily: "Helvetica, Arial, sans-serif",
-				fontWeight: "bold",
-				rotation : "${planerotation}",
-			},
-			"select": {
-				fillColor: "black",
-				strokeColor: "yellow",
-				pointRadius: 12,
-				fillOpacity: 1,
-			}
-		})
-	}, {  visibility: true}
-)
-
-this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
-	"Radar Label", 
-	{
-		styleMap:  new OpenLayers.StyleMap({
-			"default": {
-				fill: true,
-				fillOpacity: 1,
-				fillColor: "black",
-				strokeColor: "green",
-				strokeWidth: 1,
-
-				//graphic: false,
-				externalGraphic: "/images/fgx-background-black.png",
-				graphicWidth: 50,
-				graphicHeight: 12,
-				graphicOpacity: 0.8,
-				graphicXOffset: "${gxOff}",
-				graphicYOffset: "${gyOff}",
-				
-				
-				fontColor: "white",
-				fontSize: "10px",
-				fontFamily: "sans-serif",
-				fontWeight: "bold",
-				labelAlign: "left",
-				labelXOffset: "${lxOff}", 
-				labelYOffset: "${lyOff}", 
-				label : "${callsign}",
-				//rotation : "${planerotation}",
-
-			},
-			"select": {
-				fillColor: "black",
-				strokeColor: "yellow",
-				pointRadius: 12,
-				fillOpacity: 1,
-			}
-
-		})
-	}
-);
-
-
-//this.get_layers = function(){
-//	LAYERS.push( this.flightMarkersLayer );
-//	LAYERS.push( this.flightLabelsLayer );
-//	return LAYERS;	
-//}
 
 
 
@@ -156,7 +73,6 @@ this.flightsGrid.on("rowdblclick", function(grid, idx, e){
 
 //this.navWidget = new FGx.NavWidget({});
 
-//this.mapLayersTree = new FGx.MapLayersTree();
 
 this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title: "Server Status", closable: true});
 
@@ -166,7 +82,10 @@ this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title
 
 this.mapPanels = {};
 this.mapPanels.base = new FGx.MapPanel({title: "Map 1", closable: false, flightsStore: this.flightsStore});
-this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
+this.mapPanels.base.init();
+
+//this.mapPanels.base2 = new FGx.MapPanel({title: "Map 2", closable: true, flightsStore: this.flightsStore});
+//this.mapPanels.base2.init();
 
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
@@ -175,7 +94,7 @@ this.tabPanel = new Ext.TabPanel({
 	activeItem: 0,
 	items: [
 		this.mapPanels.base,
-		this.mapPanels.base2,
+		//this.mapPanels.base2,
 		this.mpStatusGrid,
 		this.flightsGrid
 	]
@@ -222,7 +141,7 @@ this.initialize = function(){
 }
 //==========================================================
 // Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
-this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
+this.DEADshow_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 
 	// remove xisting iamge/label if exist
 	/*
@@ -283,7 +202,7 @@ this.show_radar = function show_radar(mcallsign, mlat, mlon, mheading, maltitude
 	
 }
 
-
+/*
 this.flightsStore.on("load", function(store, recs, idx){
 	//console.log(recs.length);
 	//return;
@@ -295,7 +214,27 @@ this.flightsStore.on("load", function(store, recs, idx){
 		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
 	};
 }, this);
+*/
 
+//= Triggered when a refresh toolbar button is clicked
+this.on_refresh_toggled = function(butt, checked){
+	butt.setIconClass( checked ? "icoOn" : "icoOff");
+	if(checked){
+		this.runner.stopAll(); // stop if already ruinning
+		this.refresh_rate = parseInt(butt.ref_rate, 10);
+		if(this.refresh_rate === 0){
+			//this.runner.stop()
+		}else{
+			this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
+		}
+	}
+}
 
+//= Riggered for reshresh now
+this.on_refresh_now = function(){
+	this.store.load();
+}
+
+this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	
 } //< FGx.MainViewport
