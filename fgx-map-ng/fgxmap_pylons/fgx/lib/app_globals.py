@@ -20,6 +20,8 @@ class Globals(object):
 
 		self.crossfeed_data_url = config['crossfeed_ajax_url']
 		
+		self.temp_dir = config['temp_dir']
+		
 
 		#FGX_MP_SERVER = "mpserver14.flightgear.org"
 		#fgx_ = "217.150.241.103"

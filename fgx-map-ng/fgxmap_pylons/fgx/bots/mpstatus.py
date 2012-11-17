@@ -5,15 +5,13 @@ import time
 import datetime
 import telnetlib
 
-from pylons import config
 
 import pygeoip
 
 from fgx.model import meta, MpServer, MpBotInfo
 
 
-
-geoCity = pygeoip.GeoIP('/home/fgxx/_TEMP/maxmind/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+#print config
 
 """
 {'city': '', 'region_name': '', 'area_code': 0, 'time_zone': 'Europe/Paris', 'dma_code': 0, 'metro_code': '', 'country_code3': 'FRA', 'latitude': 46.0, 'postal_code': '', 'longitude': 2.0, 'country_code': 'FR', 'country_name': 'France'}
@@ -26,6 +24,12 @@ class MpStatusThread(threading.Thread):
 	#	return datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%Sz")
 	DEBUG = True
 	
+	def __init__(self, config):
+		threading.Thread.__init__(self)
+		self.geoCity = pygeoip.GeoIP(config['temp_dir'] + '/maxmind/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+
+	
+	
 	def host_name(self, server_no):
 		return "mpserver%02d.flightgear.org" % server_no
 	
@@ -37,7 +41,7 @@ class MpStatusThread(threading.Thread):
 		try:
 			socket.setdefaulttimeout(10)
 			ip_address = socket.gethostbyname(domain_name)
-			geo_data = geoCity.record_by_addr(ip_address)
+			geo_data = self.geoCity.record_by_addr(ip_address)
 			#print socket.getaddrinfo(domain_name, 5000)
 			if self.DEBUG:
 				print "  > Found ADDR: %s = %s " % (domain_name, ip_address)
@@ -204,8 +208,8 @@ class MpStatusThread(threading.Thread):
 	
 	
 	
-def start_mpstatus_thread():
-	worker = MpStatusThread()
+def start_mpstatus_thread(config):
+	worker = MpStatusThread(config)
 	worker.start()
 	
 	

@@ -56,7 +56,7 @@ def load_environment(global_conf, app_conf, start_bots):
 
 	## Start the background processes
 	if start_bots:
-		mpstatus.start_mpstatus_thread()
+		mpstatus.start_mpstatus_thread(config)
 		
-	print "ENV loaded"
+
 	return config
