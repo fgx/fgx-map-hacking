@@ -50,11 +50,19 @@ get_map: function(){
 			// zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 20
 		});
-		//console.log("CREATED_map");
+		this.xMap.events.register("mousemove", this, function (e) {
+			var pos = this.get_map().getLonLatFromViewPortPx(e.xy);
+			// TODO make sense
+			this.lbl_lat().setValue(pos.lat);
+			this.lbl_lon().setValue(pos.lon);
+		});
 	}
-	//console.log("get_map");
 	return this.xMap;
 },
+
+
+//======================================================
+//=== LatLon Labels
 lbl_lat: function(){
 	if(!this.xLblLat){
 		this.xLblLat =  new Ext.form.DisplayField({width: 100, value: "-"});
@@ -93,7 +101,7 @@ flights_grid: function(sto){
 get_osm_dark: function(){
 	if(!this.xOsmDark){
 		this.xOsmDark = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
-		this.xOsmDark.setOpacity(0.5);	
+		this.xOsmDark.setOpacity(0.4);	
 	}
 	return this.xOsmDark;
 },
@@ -517,7 +525,7 @@ init: function(){
 	this.get_map().addLayer( this.flightMarkersLayer );
 	this.get_map().addLayer( this.flightLabelsLayer );
 	
-	this.set_base_layer("Dark"); //??? WTF!!
+	//this.set_base_layer("Dark"); //??? WTF!!
 	
 	this.flights_grid().getStore().on("load", function(store, recs, idx){
 		//console.log("YESSSSS");
@@ -596,20 +604,9 @@ show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 },
 
 on_goto: function(butt){
-	//console.log(where.aptIdent);
-	
 	var lonLat = new OpenLayers.LonLat(butt.lon, butt.lat
 			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	
-	//this.get_map().setCenter( lonLat );
-	//this.get_map().zoomTo( 10 );
 	this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
-	
-	
-	//var pointLabel = new OpenLayers.Geometry.Point(mlon, mlat
-	//				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-					
-	//console.log(lonLat);
 }
 
 

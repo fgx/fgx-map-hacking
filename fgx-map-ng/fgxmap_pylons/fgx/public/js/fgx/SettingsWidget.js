@@ -19,17 +19,17 @@ constructor: function(config) {
 				columns: 7,
 				items: [
 					//{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
-					{text: "Off", iconCls: "icoOff", enableToggle: true, scope: this,
+					{text: "Off", iconCls: "icoOff", enableToggle: true, scope: this, pressed: config.refresh_rate == 0,
 						toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-					{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+					{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw, pressed: config.refresh_rate == 2,
 						toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-					{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+					{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw, pressed: config.refresh_rate == 3,
 						toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-					{text: "4", iconCls: "icoOn", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 4, pressed: true,  toggleHandler: this.on_refresh_toggled},
-					{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+					{text: "4", iconCls: "icoOn", enableToggle: true,  scope: this,  width: this.tbw, pressed: config.refresh_rate == 4,
+						toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
+					{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,pressed: config.refresh_rate == 5,
 						toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-					{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+					{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,pressed: config.refresh_rate == 6,
 						toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
 				]   
 			}
