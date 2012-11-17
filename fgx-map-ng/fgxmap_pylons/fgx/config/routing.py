@@ -49,6 +49,7 @@ def make_map(config):
 	#### Database Browsing
 	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
 	map.connect('/ajax/database/table/{table}/columns', controller="ajax_db", action="columns")
+	map.connect('/ajax/database/table/{table}/drop', controller="ajax_db", action="drop_table")
 	
 	#map.connect('/ajax/*', controller="ajax_db", action="scolumns")
 	

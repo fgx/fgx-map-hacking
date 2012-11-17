@@ -1,6 +1,6 @@
 FGx Map
 
-This is the app you all been waiting for..
+This is the app you all been waiting for ;-) hopefully...
 
 Just presents a map, and a list of all the stuff u want..
 Mas distribution is what we have later, but this is the start..
@@ -22,27 +22,32 @@ pylons, jinja2, sqlalchemy, geoalchemy
 Installation and Setup
 --------------------------=========
 
-copy the development.ini to for your setup
+copy the skel_dev.ini to for your local setup 
 
-> cp development.ini mysetup.ini
+> cp skel_dev.ini local.ini
 
-ammend the .ini to local requirements
+ammend the local.ini to local enviroment 
+* important are
+  sql_aclhemy_url
+  temp_dir # if importing
+  
+
 
 setup the database with
 
-> paster setup-app mysetup.ini
+> paster setup-app local.ini
 
 
 Run the app
 
-> paster server --reload mysetup.ini
+> paster serve --reload local.ini
 
 
 ## For production
-Use the production.ini which switches off debuging and debug logginng (error logs only)
+Use the skel_prod.ini which switches off debuging and debug logginng (error logs only)
 
 and start without reload
-> paster server myprod.ini
+> paster serve local.ini
 
 
 read HACKING.txt for more

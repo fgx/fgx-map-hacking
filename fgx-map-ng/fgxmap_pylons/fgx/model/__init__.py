@@ -1,8 +1,9 @@
 """The application's model objects"""
 
 
-from sqlalchemy import Column, Integer, String, Date, DateTime
-from geoalchemy import  GeometryColumn, GeometryDDL, Point, Polygon
+from sqlalchemy import  Integer, String, Date, DateTime
+from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon
+#from geoalchemy import *
 from geoalchemy.postgis import PGComparator
 
 
@@ -140,9 +141,22 @@ class Fix(Base):
 	lon = Column(String(15), index=True, nullable=False)
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
+	@property
+	def latp(self):
+		#print self.wkb_geometry.geometry_type
+		#dump(self.wkb_geometry)
+		return  "lat" #Session.scalar(self.wkb_geometry.geometry_type)
+		
+	@property
+	def lonp(self):
+		return "lon" #str(self.wkb_geometry.coords[1])
+	
 	def dic(self):
 		
 		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+		
+		
+	
 			
 GeometryDDL(Fix.__table__)
 
