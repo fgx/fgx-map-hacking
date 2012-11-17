@@ -85,7 +85,11 @@ BASE_LAYERS: {
 //this.BASE_LAYERS.osm_light.setOpacity(0.4);
 //LAYERS.push( this.BASE_LAYERS.osm_light );
 get_layers: function(){
-	var LAYERS: [
+	
+	var osm_light = new OpenLayers.Layer.OSM.Mapnik( "OSM Light" );
+	osm_light.setOpacity(0.5);
+	
+	var LAYERS = [
 		//=================================================
 		// Overlay
 		//=================================================
@@ -151,18 +155,17 @@ get_layers: function(){
 				}, {  visibility: false}
 		),
 		new OpenLayers.Layer.OSM.Mapnik( "OSM Normal" ),
-		new OpenLayers.Layer.OSM.Mapnik( "OSM Light" )
+		osm_light
 	];
 	return LAYERS;
-}
+},
 
 	
 //===========================================================
-//== Grid
+//== CONSTRUCT
 constructor: function(config) {
 	
 	config = Ext.apply({
-		sstitle: "Map",
 		iconCls: "icoMap",
 		frame: false,
 		plain: true,
@@ -294,6 +297,8 @@ constructor: function(config) {
 		
 	}, config);
 	FGx.MapPanel.superclass.constructor.call(this, config);
+
+	
 }, // Constructor	
 
 on_base_layer: function(butt){
