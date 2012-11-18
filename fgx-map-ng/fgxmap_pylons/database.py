@@ -116,16 +116,17 @@ if command == "import":
 	# @todo: tables
 	if x_file == "fix":
 	
-		from fgx.xplane import fix
+		from fgx.imports.xplane import fix
 		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
-	
-	elif x_file == "nav":
-		from fgx.xplane import nav
-		nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+
+	#elif x_file == "nav":
+	#	from fgx.imports.xplane import nav
+	#	nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+
 	
 	elif x_file == "ndb":
-		from fgx.xplane import nav
+		from fgx.imports.xplane import nav
 		nav.import_split_file(nav.NAV_TYPE.ndb, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	elif x_file == "vor":
