@@ -46,7 +46,7 @@ def columns(table):
 		dict(table=table)
 	).fetchall()
 	"""
-	results = Session.execute(sql).fetchall()
+	results = meta.Session.execute(sql).fetchall()
 	
 	ret = []
 	for r in results:
