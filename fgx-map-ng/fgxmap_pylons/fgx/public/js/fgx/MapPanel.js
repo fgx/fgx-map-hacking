@@ -128,7 +128,7 @@ get_nav_widget: function(){
 			var feature = new OpenLayers.Feature.Vector(circle, null, style);
 			this.highLightMarkers.addFeatures([feature]);
 			
-			console.log("ADD", feature);
+			//console.log("ADD", feature);
 		}, this);  
 			
 	}
