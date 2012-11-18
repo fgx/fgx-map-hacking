@@ -39,7 +39,7 @@ class NAV_TYPE:
 
 
 
-############################################
+##===============================================================
 def ndb_2_db(parts, verbose=1, empty=False):
 	#   lat         lon             elv/ft  khz rng_nm n/a ID 8>>>>> desciprions 
 	#0  1           2                  3   4    5     6   7    8 
@@ -70,7 +70,7 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	meta.Session.commit()
 
 	
-############################################
+##===============================================================
 def vor_2_db(parts, verbose=1, empty=False):
 	#   lat         lon             elv/ft  khz rng_nm n/a ID 8>>>>> desciprions 
 	#0  1           2                  3   4    5     6   7    8 
@@ -99,7 +99,7 @@ def vor_2_db(parts, verbose=1, empty=False):
 	meta.Session.add(ob)
 	meta.Session.commit()
 	
-
+##===============================================================
 def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 	
 
@@ -146,6 +146,8 @@ def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 			elif row_code == 3:
 				vor_2_db(parts, empty=empty, verbose=verbose)
 			
+	
+	
 	
 	
 	if dev_mode and c == 1000:
@@ -211,29 +213,3 @@ def split_to_seperate_files(verbose=1):
 	h.write_json(SPLIT_DIR + "summary.json", line_count)	
 	
 	
-	
-#########################################################################
-## Imports a split_file
-"""
-def import_split_file(row_code, verbose=1, empty=None, dev_mode=False):
-	
-	# TODO check it valid row_code
-	file_path =  row_code_file_path(row_code)
-	print "  > Reading: %s" % file_path
-	c = 0
-	for raw_line in fileinput.input(file_path):
-		
-		line = raw_line.strip()
-		parts = line.split()
-		
-		if row_code == NAV_TYPE.ndb:
-			ndb_2_db(parts, verbose=verbose, empty=empty)
-			
-		elif row_code == NAV_TYPE.vor:
-			vor_2_db(parts, verbose=verbose, empty=empty)
-			
-		else:
-			print "ROw-code: %s not andled" % row_code
-			sys.exit(0)
-		
-"""		
