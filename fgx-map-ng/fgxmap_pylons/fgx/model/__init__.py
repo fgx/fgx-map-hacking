@@ -147,7 +147,7 @@ class Fix(Base):
 		#dump(self.wkb_geometry)
 		#return self.wkb_geometry.coords[0]
 		#return self.wkb_geometry.x
-		return  "lat" #Session.scalar(self.wkb_geometry.geometry_type)
+		return  "argh" #Session.scalar(self.wkb_geometry.x)
 		
 	@property
 	def lonp(self):

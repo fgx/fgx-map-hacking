@@ -76,6 +76,26 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
+//======================================================
+// Airports Grid
+get_airports_grid: function(){
+	if(!this.xAirportsGrid){
+		
+		this.xAirportsGrid =  new FGx.AirportsGrid({});
+		/*
+		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+		*/		
+	}
+	return this.xAirportsGrid;
+},
 
 //======================================================
 // Flights Grid
@@ -537,6 +557,7 @@ constructor: function(config) {
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
+					this.get_airports_grid(),
 					this.get_nav_widget(),
 					this.get_flights_grid(config.flightsStore)
 					
