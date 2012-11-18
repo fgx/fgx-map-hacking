@@ -75,29 +75,29 @@ def vor_2_db(parts, verbose=1, empty=False):
 	#   lat         lon             elv/ft  khz rng_nm n/a ID 8>>>>> desciprions 
 	#0  1           2                  3   4    5     6   7    8 
 	#2  05.25041700 -003.95802800      0   294  50    0.0 PB   ABIDJAN FELIX HOUPHOUET BOIGNY NDB
-	print "VOR, ", parts
+	#print "VOR, ", parts
 	
 	ident = parts[7]
 	
-	if empty:
-		ob = Vor()
-	else:
-		obs = Vor.objects.filter(ident=ident)
-		if len(obs) == 0:
-			ob = Vor()
-		else:
-			ob = obs[0]
-		
-	ob.wkb_geometry = GEOSGeometry( 'POINT(%s %s)' % (parts[1], parts[2]) )
+	ob = Vor()
 	ob.ident = ident
 	ob.name = " ".join(parts[8:])
-	ob.elevation_ft = parts[3]
-	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048)
-	ob.range_nm = parts[4]
-	ob.range_m = h.to_int(ob.range_nm) * 1852
-	ob.freq_khz = parts[4]
 	
-	ob.save()
+	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
+	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
+	
+	elev_ft = h.to_int(parts[3])
+	ob.elevation_ft = elev_ft if elev_ft > 0 else None
+	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048) if ob.elevation_ft else None
+	
+	r_nm = h.to_int(parts[4])
+	ob.range_nm = r_nm if r_nm > 0 else None
+	ob.range_m = h.to_int(ob.range_nm) * 1852 if ob.range_nm else None
+	
+	ob.freq_mhz = parts[4]
+	
+	meta.Session.add(ob)
+	meta.Session.commit()
 	
 
 def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
@@ -143,6 +143,8 @@ def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 				## Process NDB
 				ndb_2_db(parts, empty=empty, verbose=verbose)
 				
+			elif row_code == 3:
+				vor_2_db(parts, empty=empty, verbose=verbose)
 			
 	
 	
