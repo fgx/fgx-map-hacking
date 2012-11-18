@@ -5,7 +5,7 @@ from fgx.model import meta
 def tables():
 
 	sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
-	results = Session.execute(sql).fetchall()
+	results = meta.Session.execute(sql).fetchall()
 	
 	ret = []
 	for r in results:
