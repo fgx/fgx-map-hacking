@@ -155,12 +155,12 @@ get_nav_widget: function(){
 	return this.xNavWidget;
 },
 
-get_osm_dark: function(){
-	if(!this.xOsmDark){
-		this.xOsmDark = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
-		this.xOsmDark.setOpacity(0.4);	
+get_osm_lite: function(){
+	if(!this.xOsmLite){
+		this.xOsmLite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
+		this.xOsmLite.setOpacity(0.4);	
 	}
-	return this.xOsmDark;
+	return this.xOsmLite;
 },
 
 get_bookmark_button: function(){
@@ -343,7 +343,7 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		/// Underlays
-		this.get_osm_dark(),
+		this.get_osm_lite(),
 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
 		
 		new OpenLayers.Layer.WMS(
@@ -394,7 +394,7 @@ constructor: function(config) {
 							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
+							{text: "Lite", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -529,7 +529,7 @@ constructor: function(config) {
 					"-",
 					{text: "Opacity", tooltip: "Click for default zoom"},
 					new GeoExt.LayerOpacitySlider({
-						layer: this.get_osm_dark(),
+						layer: this.get_osm_lite(),
 						aggressive: true, 
 						width: 150,
 						isFormField: true,
