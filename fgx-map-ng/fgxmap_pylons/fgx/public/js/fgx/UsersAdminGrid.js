@@ -130,6 +130,11 @@ action_delete: function(){
 	return this.xUserDelete;
 },
 
+edit_user: function(user_id){
+	var d = new UserAdminDialog();
+	d.run_show();
+},
+
 initialize: function(){
 	this.get_store().load();
 }
