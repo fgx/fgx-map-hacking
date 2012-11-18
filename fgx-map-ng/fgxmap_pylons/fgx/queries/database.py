@@ -1,6 +1,6 @@
 
 #from fgx import db
-from fgx.model.meta import Session
+from fgx.model import meta
 
 def tables():
 
@@ -13,6 +13,27 @@ def tables():
 	
 	return ret
 
+def drop_table(table):
+		
+	sql = "drop table if exists %s;" % table
+
+	meta.Session.execute(sql)
+	meta.Session.commit()
+	
+def empty_table(table):
+		
+	sql = "delete from  %s;" % table
+	meta.Session.execute(sql)
+	meta.Session.commit()
+	
+	## Also delete stuff from nav_search
+	if table in ['ndb', 'fix', 'vor', 'dme']:
+		sql = "delete from nav_search where nav_type = '%s';" % table
+		meta.Session.execute(sql)
+		meta.Session.commit()
+	
+	
+	
 	
 def columns(table):
 	

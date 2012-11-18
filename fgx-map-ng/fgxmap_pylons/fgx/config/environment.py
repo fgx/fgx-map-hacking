@@ -12,7 +12,7 @@ from fgx.config.routing import make_map
 from fgx.model import init_model
 
 ## FGx add the bots
-from fgx.bots import mpstatus
+from fgx.bots.mpstatus import MpStatusThread
 
 def load_environment(global_conf, app_conf, start_bots):
 	"""Configure the Pylons environment via the ``pylons.config``
@@ -53,10 +53,15 @@ def load_environment(global_conf, app_conf, start_bots):
 
 	# CONFIGURATION OPTIONS HERE (note: all config options will override
 	# any Pylons config options)
-
+	
+	
+	
+	##====================================================
 	## Start the background processes
 	if start_bots:
-		mpstatus.start_mpstatus_thread(config)
+		pass
+		#statusThread = MpStatusThread(config=config)
+		#statusThread.start()
 		
 
 	return config

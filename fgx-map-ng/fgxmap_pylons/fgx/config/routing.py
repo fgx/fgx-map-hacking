@@ -44,6 +44,11 @@ def make_map(config):
 	map.connect('/ajax/fix/{ident}', controller="ajax_nav", action="fix")
 	map.connect('/ajax/fix', controller="ajax_nav", action="fix")
 	
+	map.connect('/ajax/ndb/{ident}', controller="ajax_nav", action="ndb")
+	map.connect('/ajax/ndb', controller="ajax_nav", action="ndb")
+	
+	map.connect('/ajax/vor/{ident}', controller="ajax_nav", action="vor")
+	map.connect('/ajax/vor', controller="ajax_nav", action="vor")
 	
 	
 	#### Database Browsing

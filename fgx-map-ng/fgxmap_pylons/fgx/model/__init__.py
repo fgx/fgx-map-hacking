@@ -136,10 +136,12 @@ class Fix(Base):
 	__tablename__ = 'fix'
 	
 	fix_pk = Column(Integer(), primary_key=True)
-	fix = Column(String(10), index=True, nullable=False)
+	ident = Column(String(10), index=True, nullable=False)
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	
+	## These can go later
 	lat = Column(String(15), index=True, nullable=False)
 	lon = Column(String(15), index=True, nullable=False)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
 	@property
 	def latp(self):
@@ -155,7 +157,8 @@ class Fix(Base):
 	
 	def dic(self):
 		
-		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+		return dict(ident=self.ident, nav_type="fix",
+					lat=self.lat, lon=self.lon)
 		
 		
 	
@@ -290,7 +293,30 @@ class MpBotInfo(Base):
 	last_check_start = Column(DateTime())
 	last_check_end = Column(DateTime())
 
+##=======================================================
+class NavSearch(Base):
+	
+	__tablename__ = "nav_search"
+	
+	ns_pk = Column(Integer(), primary_key=True)
+	
+	ident = Column(String(10), index=True)
+	name = Column(String(50), index=True)
+	
+	nav_type = Column(String(10), index=True)
+	
+	"""
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
+	"""
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+
+	def __repr__(self):
+		return "<NavSearch: %s>" % (self.ident)
 		
+GeometryDDL(NavSearch.__table__)	
 		
 
 ##=======================================================
@@ -304,15 +330,23 @@ class Ndb(Base):
 	name = Column(String(50), index=True)
 	freq_khz = Column(String(6))
 	
-	elevation_ft = Column(Integer())
-	elevation_m = Column(Integer())
-	range_nm = Column(Integer())
-	range_m = Column(Integer())
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
+	## These can go later
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
+	
 	def __repr__(self):
 		return "<Ndb: %s>" % (self.ident)
+		
+	def dic(self):
+		return dict(ident=self.ident, name=self.name, nav_type="ndb",
+				lat=self.lat, lon=self.lon)
 		
 GeometryDDL(Ndb.__table__)		
 
@@ -369,23 +403,29 @@ class Vor(Base):
 	name = Column(String(50), index=True)
 	freq_mhz = Column(String(6))
 	
-	elevation_ft = Column(Integer())
-	elevation_m = Column(Integer())
-	range_nm = Column(Integer())
-	range_m = Column(Integer())
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
 	
 	# TODO What is this exactly ?
-	variation = Column(String(10))
+	variation = Column(String(10), nullable=True)
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
+	## These can go later
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
+	
 	def __repr__(self):
 		return "<Vor: %s>" % (self.ident)
+
+	def dic(self):
+		return dict(ident=self.ident, name=self.name, nav_type="vor",
+				lat=self.lat, lon=self.lon, )
 		
 GeometryDDL(Vor.__table__)
 
-
-#class WeightClass(Base):
 
 
 

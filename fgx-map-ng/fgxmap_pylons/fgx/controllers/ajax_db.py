@@ -33,7 +33,7 @@ class AjaxDbController(BaseController):
 		
 		return payload
 		
-		
+	"""	
 	@jsonify
 	def drop_table(self, table):
 		
@@ -41,6 +41,8 @@ class AjaxDbController(BaseController):
 					success=True
 		)
 		#Base.metadata.drop_all(bind=Session.bind)
-		meta.drop(bind=Session.bind)
+		database.drop_table(table)
 		return payload
-		
+	"""
+	
+	

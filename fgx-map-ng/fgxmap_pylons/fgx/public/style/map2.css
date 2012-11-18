@@ -40,9 +40,13 @@ body {
     font-size: 10px;
 }
 
+/* Set map Background Color vs opacity */
 .olMapViewport {
 	background-color: black;
 }
+
+/* ------------------------------------------------------------ */
+/*  TODO Move these to FGX */
 
 /* This uses famfam which is in root at pete's http://ico.daffodil.uk.com/ */
 .icoRefresh{background-image: url('http://ico.daffodil.uk.com/refresh.gif') !important; background-repeat: no-repeat;}
@@ -68,8 +72,18 @@ body {
 .icoMpServers{background-image: url('http://ico.daffodil.uk.com/server_database.png') !important; background-repeat: no-repeat;}
 
 
-.icoFix{background-image: url('/images/vfr_fix.png') !important; background-repeat: no-repeat;}
-
 
 .icoCancel{background-image: url('http://ico.daffodil.uk.com/bullet_black.png') !important; background-repeat: no-repeat;}
 .icoSave{background-image: url('http://ico.daffodil.uk.com/accept.png') !important; background-repeat: no-repeat;}
+
+.icoClr{background-image: url('http://ico.daffodil.uk.com/go.gif') !important; background-repeat: no-repeat;}
+
+
+
+
+
+
+
+.icoFix{background-image: url('/images/vfr_fix.png') !important; background-repeat: no-repeat;}
+.icoNdb{background-image: url('/images/ndb.png') !important; background-repeat: no-repeat;}
+.icoVor{background-image: url('/images/vor.png') !important; background-repeat: no-repeat;}

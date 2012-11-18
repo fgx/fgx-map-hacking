@@ -6,7 +6,7 @@ import datetime
 from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
-from fgx.model import meta, Fix, FGX_SRID
+from fgx.model import meta, Fix, NavSearch, FGX_SRID
 from fgx.lib import helpers as h
 
 
@@ -59,40 +59,26 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 				print "  > line %s >>" % c, parts
 			
 			ident = parts[2]
-			"""
-			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
-			print ident, "fixOb=", obs
-			if len(obs) == 0:
-				ob = Fix()
-				ob.fix = ident
-				meta.Session.add(ob)
-				meta.Session.commit()
-			else:
-				ob = obs[0]
-			#sql = "insert into fix(fix, wkb_geometry)values( %s, %s)"
-			##conn.execute("insert into fix(fix)values( '%s')" % ident)
-			##db.session.commit()
-			"""
-			## Check if fix in in DB already
-			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
-			if len(obs) == 0:
-				## Not in DB so create and add
-				ob = Fix()
-				meta.Session.add(ob)
-			else:
-				## Found, so its the first one
-				ob = obs[0]
-			
-			## Update the object and save
-			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 
-			ob.fix = ident
+			## Fix
+			ob = Fix()
+			
+			ob.ident = ident
 			ob.lat = parts[0]
 			ob.lon = parts[1]
 			
-			#geometry_type='POINT',
-			#ob.wkb_geometry = WKTSpatialElement(pnt, FGX_SRID)
-			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)			
+			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
+			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+			meta.Session.add(ob)
+			
+			## Search
+			obs = NavSearch()
+			obs.nav_type = "fix"
+			obs.ident = ident
+			obs.name = None
+			obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+			meta.Session.add(obs)
+			
 			meta.Session.commit()
 			
 		
