@@ -63,6 +63,8 @@ def make_map(config):
 	##=======================================================================
 	map.connect('/database', controller="html_pages", action="database")
 	
+	map.connect('/admin/users', controller="html_pages", action="admin_users")
+	
 	map.connect('/index', controller="html_pages", action="index")
 	map.connect('/', controller="html_pages", action="index")
 	

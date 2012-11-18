@@ -17,8 +17,6 @@ def init_model(engine):
 FGX_SRID = 3857
 
 
-
-
 ##=======================================================
 class Airport(Base):
 	
@@ -149,7 +147,7 @@ class Fix(Base):
 		#dump(self.wkb_geometry)
 		#return self.wkb_geometry.coords[0]
 		#return self.wkb_geometry.x
-		return  "lat" #Session.scalar(self.wkb_geometry.geometry_type)
+		return  "argh" #Session.scalar(self.wkb_geometry.x)
 		
 	@property
 	def lonp(self):
@@ -427,6 +425,23 @@ class Vor(Base):
 GeometryDDL(Vor.__table__)
 
 
-
+##=======================================================
+class User(Base):
+	
+	__tablename__ = "user"
+	
+	user_pk = Column(Integer, primary_key=True)
+	
+	email = Column(String(50), index=True, nullable=False)
+	name = Column(String(50), index=True, nullable=False)
+	callsign = Column(String(10), nullable=False)
+	passwd = Column(String(100), nullable=False)
+	
+	## Security level.. idea atmo is 0 = disabled, 1 = Auth, 2 = Admin, 
+	level = Column(Integer, nullable=False)
+	
+	created = Column(DateTime(), nullable=False)
+	
+	
 
 
