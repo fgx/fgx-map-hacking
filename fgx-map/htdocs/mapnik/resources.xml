@@ -24,7 +24,7 @@
     <StyleName>FGX_NE_LANDMASS</StyleName>
     <Datasource>
       <Parameter name="type">shape</Parameter>
-      <Parameter name="file">/home/map/htdocs/data/ne_layers/3857/landmass</Parameter>
+      <Parameter name="file">/home/map/fgx-map/fgx-map/htdocs/data/ne_layers/3857/landmass</Parameter>
     </Datasource>
   </Layer>
   
@@ -54,13 +54,13 @@
   <Style name="APT">
     <!--<Rule>
 	 <Filter>[has_tower] > 0</Filter>
-	  <PointSymbolizer file="/home/map/htdocs/images/apt-tower.png" width="16" height="16" type="png" opacity="0.7"/>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/apt-tower.png" width="16" height="16" type="png" opacity="0.7"/>
 	  <TextSymbolizer name="[apt_icao]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="10" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
       <TextSymbolizer name="[apt_name]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="8" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
 	</Rule>-->
    <Rule>
     <!--<ElseFilter/>-->
-	 <PointSymbolizer file="/home/map/htdocs/images/apt.png" width="14" height="14" type="png" opacity="0.75"/>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/apt.png" width="14" height="14" type="png" opacity="0.75"/>
 	 <TextSymbolizer name="[icao]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
      <TextSymbolizer name="[name]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
    </Rule>
@@ -85,7 +85,7 @@
   
   <Style name="VOR">
     <Rule>
-	  <PointSymbolizer file="/home/map/htdocs/images/vor.png" width="16" height="16" type="png" opacity="0.7"/>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/vor.png" width="16" height="16" type="png" opacity="0.7"/>
 	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="false"/>
       <TextSymbolizer name="[freq_mhz]" dy="9" dx="15" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
 	  <TextSymbolizer name="[navaid_name]" dy="0" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="false"/>
@@ -111,7 +111,7 @@
   
   <Style name="DME">
     <Rule>
-	<PointSymbolizer file="/home/map/htdocs/images/dme.png" width="16" height="16" type="png" opacity="0.7"/>
+	<PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/dme.png" width="16" height="16" type="png" opacity="0.7"/>
 	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
       <TextSymbolizer name="[navaid_name]" dy="0" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
 	  <TextSymbolizer name="[freq_mhz]" dy="9" dx="15" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
@@ -137,7 +137,7 @@
   
   <Style name="NDB">
     <Rule>
-	  <PointSymbolizer file="/home/map/htdocs/images/ndb.png" width="35" height="35" type="png" opacity="0.7"/>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ndb.png" width="35" height="35" type="png" opacity="0.7"/>
 	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="23" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
       <TextSymbolizer name="[navaid_name]" dy="0" dx="23" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
  	  <TextSymbolizer name="[freq_khz]" dy="9" dx="23" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
@@ -163,7 +163,7 @@
   
   <Style name="ILS">
     <Rule>
-	 <PointSymbolizer file="/home/map/htdocs/images/ils_localizer.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ils_localizer.png" width="16" height="16" type="png" opacity="0.9"/>
 	 <TextSymbolizer name="[navaid_id]" dy="-12" dx="14" face-name="Asap Regular" character-spacing="2" size="11" fill="#ff0000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
 	</Rule>
   </Style>
@@ -185,7 +185,7 @@
   
   <Style name="ILS_INFO">
     <Rule>
-	  <ShieldSymbolizer file="/home/map/htdocs/images/bg_666666_20x13.png" name="[rwy_num]" dy="0" dx="0" shield-dy="0" shield-dx="23" face-name="Asap Bold" character-spacing="1" size="11" fill="#ffffff" type="png" width="20" height="13" />
+	  <ShieldSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/bg_666666_20x13.png" name="[rwy_num]" dy="0" dx="0" shield-dy="0" shield-dx="23" face-name="Asap Bold" character-spacing="1" size="11" fill="#ffffff" type="png" width="20" height="13" />
 	  <TextSymbolizer name="[subtype]" dy="0" dx="38" face-name="Asap Regular" character-spacing="1" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
 	  <TextSymbolizer name="[freq_mhz]" dy="9" dx="14" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
 	  <TextSymbolizer name="[elevation_m]" dy="10" dx="66" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
@@ -211,7 +211,7 @@
   <Style name="ILS_MARKER">
     <Rule>
 	 <Filter>[subtype] != 'IM'</Filter>
-	 <PointSymbolizer file="/home/map/htdocs/images/ils_marker.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ils_marker.png" width="16" height="16" type="png" opacity="0.9"/>
 	 <TextSymbolizer name="[subtype]" dy="-5" dx="7" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
 	 </Rule>
   </Style>
@@ -234,7 +234,7 @@
   <Style name="FIX">
     <Rule>
 	 <Filter>[fix_name].match('[A-Z][A-Z][A-Z][A-Z][A-Z]')</Filter>
-	 <PointSymbolizer file="/home/map/htdocs/images/vfr_fix.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/vfr_fix.png" width="16" height="16" type="png" opacity="0.9"/>
 	 <TextSymbolizer name="[fix_name]" dy="-5" dx="7" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
 	 </Rule>
   </Style>
