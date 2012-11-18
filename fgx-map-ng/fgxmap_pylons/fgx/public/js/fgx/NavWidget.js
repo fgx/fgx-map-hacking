@@ -7,13 +7,15 @@ FGx.NavWidget = Ext.extend(Ext.grid.GridPanel, {
 constructor: function(config) {
 	
 	config = Ext.apply({
-		title: 'Fix',
+		title: 'NavAids',
 		iconCls: 'icoFix',
 		autoScroll: true,
 		autoWidth: true,
 		enableHdMenu: false,
 		viewConfig: {
-			emptyText: 'No flights online', forceFit: true
+			emptyText: 'No items', 
+			forceFit: true,
+			deferEmptyText: false
 		}, 
 		store: this.get_store(),
 		loadMask: true,
