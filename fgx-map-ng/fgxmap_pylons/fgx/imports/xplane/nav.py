@@ -12,7 +12,7 @@ from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
 from fgx.lib import helpers as h
-from fgx.model import meta, Ndb, Vor, FGX_SRID
+from fgx.model import meta, Ndb, Vor, NavSearch, FGX_SRID
 
 
 #import helpers as h
@@ -48,7 +48,7 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	
 	ident = parts[7]
 	
-
+	## Ndb
 	ob = Ndb()
 	ob.ident = ident
 	
@@ -67,6 +67,16 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	ob.freq_khz = parts[4]  # TODO now come we have 4 didgit freq ??
 	
 	meta.Session.add(ob)
+	
+	## Search
+	obs = NavSearch()
+	obs.nav_type = "ndb"
+	obs.ident = ident
+	obs.name = ob.name
+	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+	meta.Session.add(obs)
+	
+	
 	meta.Session.commit()
 
 	
@@ -79,6 +89,7 @@ def vor_2_db(parts, verbose=1, empty=False):
 	
 	ident = parts[7]
 	
+	## Vor
 	ob = Vor()
 	ob.ident = ident
 	ob.name = " ".join(parts[8:])
@@ -97,6 +108,17 @@ def vor_2_db(parts, verbose=1, empty=False):
 	ob.freq_mhz = parts[4]
 	
 	meta.Session.add(ob)
+	
+	
+	## Search
+	obs = NavSearch()
+	obs.nav_type = "vor"
+	obs.ident = ident
+	obs.name = ob.name
+	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+	meta.Session.add(obs)
+	
+	
 	meta.Session.commit()
 	
 ##===============================================================

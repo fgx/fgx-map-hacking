@@ -34,31 +34,45 @@ constructor: function(config) {
 		/* Top Toolbar */
 		tbar: [
 			{xtype: 'buttongroup',
-				title: "find Fix",
+				title: "Fix",
 				columns: 3,
 				items: [
-					{text: "Clr", scope: this,
+					{iconCls: "icoClr", scope: this,
 						handler: function(){
-							this.get_search_text().setValue("");
-							this.get_search_text().focus();
+							this.get_fix_search_text().setValue("");
+							this.get_fix_search_text().focus();
 						}
 					},
-					this.get_search_text(),
-					{text: "Neraby"}
+					this.get_fix_search_text(),
+					{text: "Nearby"}
 				]
 			},
 			{xtype: 'buttongroup',
-				title: "find Vor/Dme",
+				title: "VOR/DME",
 				columns: 3,
 				items: [
-					{text: "Clr",
+					{iconCls: "icoClr",	scope: this,
 						handler: function(){
-							//self.txtSearchVorDme.setValue("");
-							//self.txtSearchVorDme.focus();
+							this.get_vor_search_text().setValue("");
+							this.get_vor_search_text().focus();
 						}
 					},
-					//this.txtSearchVorDme,
-					{text: "Neraby"}
+					this.get_fix_search_text(),
+					{text: "Nearby"}
+				]
+			},
+			{xtype: 'buttongroup',
+				title: "NDB",
+				columns: 3,
+				items: [
+					{iconCls: "icoClr",	scope: this,
+						handler: function(){
+							this.get_ndb_search_text().setValue("");
+							this.get_ndb_search_text().focus();
+						}
+					},
+					this.get_ndb_search_text(),
+					{text: "Nearby"}
 				]
 			}
 		],
@@ -117,7 +131,7 @@ get_store: function(){
 //=======================================================
 // Search Form
 //=======================================================
-get_search_text: function(){
+get_fix_search_text: function(){
 	if(!this.txtSearchFix){
 		this.txtSearchFix = new Ext.form.TextField({
 			width: 50,
@@ -125,18 +139,57 @@ get_search_text: function(){
 		});
 		this.txtSearchFix.on("keypress", function(txtFld, e){
 			if( e.getKey() == e.ENTER ){
-				var t = this.get_search_text();
+				var t = this.get_fix_search_text();
 				t.setValue( t.getValue().trim() );
 				var txt = t.getValue();
 				if(txt.length == 0){
 					return;
 				}
-				this.get_store().load({params: {q: txt}});
+				this.get_store().load({params: {q: txt, type: "fix"}});
 			}
 		}, this);
 	}
 	return this.txtSearchFix;
-	
+},
+get_vor_search_text: function(){
+	if(!this.txtSearchVor){
+		this.txtSearchVor = new Ext.form.TextField({
+			width: 50,
+			enableKeyEvents: true
+		});
+		this.txtSearchVor.on("keypress", function(txtFld, e){
+			if( e.getKey() == e.ENTER ){
+				var t = this.get_vor_search_text();
+				t.setValue( t.getValue().trim() );
+				var txt = t.getValue();
+				if(txt.length == 0){
+					return;
+				}
+				this.get_store().load({params: {q: txt, type: "vor"}});
+			}
+		}, this);
+	}
+	return this.txtSearchVor;
+},
+get_ndb_search_text: function(){
+	if(!this.txtSearchNdb){
+		this.txtSearchNdb = new Ext.form.TextField({
+			width: 50,
+			enableKeyEvents: true
+		});
+		this.txtSearchNdb.on("keypress", function(txtFld, e){
+			if( e.getKey() == e.ENTER ){
+				var t = this.get_ndb_search_text();
+				t.setValue( t.getValue().trim() );
+				var txt = t.getValue();
+				if(txt.length == 0){
+					return;
+				}
+				this.get_store().load({params: {q: txt, type: "vor"}});
+			}
+		}, this);
+	}
+	return this.txtSearchNdb;
 },
 
 

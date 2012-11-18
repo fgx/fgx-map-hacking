@@ -9,6 +9,8 @@ from fgx.model import meta, Fix
 
 log = logging.getLogger(__name__)
 
+
+
 class AjaxNavController(BaseController):
 
 	@jsonify
@@ -22,9 +24,12 @@ class AjaxNavController(BaseController):
 		else:
 			q = request.params['q'].upper()
 			
-			obs = meta.Session.query(Fix).filter(Fix.fix.contains(q)).all()
+			obs = meta.Session.query(Fix).filter(Fix.ident.contains(q)).all()
 			
 			payload['fix'] = [ob.dic() for ob in obs]
 		
 		
 		return payload
+		
+		
+		

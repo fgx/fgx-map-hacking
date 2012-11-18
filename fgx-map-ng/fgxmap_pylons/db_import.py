@@ -25,7 +25,6 @@ x_files = ['fix', 'nav', 'ndb', 'vor']
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
-usage += "    create - create database scbemas\n"
 usage += "    drop [tables] - eg drop fix ndb vor\n"
 usage += "    dropall - Drops ALL database tables\n"
 usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
@@ -68,12 +67,6 @@ command = args[0]
 
 
 #############################################################################
-
-## Create
-if command == "create":
-	
-	db_utils.create_all()
-	sys.exit(0)
 
 
 	
@@ -121,6 +114,7 @@ if command == "import":
 	
 		from fgx.imports.xplane import fix
 		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
+		database.empty_table("fix")
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 
 	#elif x_file == "nav":

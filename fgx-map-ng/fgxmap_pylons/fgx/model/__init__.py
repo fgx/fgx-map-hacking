@@ -136,7 +136,7 @@ class Fix(Base):
 	__tablename__ = 'fix'
 	
 	fix_pk = Column(Integer(), primary_key=True)
-	fix = Column(String(10), index=True, nullable=False)
+	ident = Column(String(10), index=True, nullable=False)
 	lat = Column(String(15), index=True, nullable=False)
 	lon = Column(String(15), index=True, nullable=False)
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
@@ -155,7 +155,7 @@ class Fix(Base):
 	
 	def dic(self):
 		
-		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+		return dict(ident=self.ident, lat=self.lat, lon=self.lon)
 		
 		
 	
@@ -290,7 +290,30 @@ class MpBotInfo(Base):
 	last_check_start = Column(DateTime())
 	last_check_end = Column(DateTime())
 
+##=======================================================
+class NavSearch(Base):
+	
+	__tablename__ = "nav_search"
+	
+	ns_pk = Column(Integer(), primary_key=True)
+	
+	ident = Column(String(10), index=True)
+	name = Column(String(50), index=True)
+	
+	nav_type = Column(String(10), index=True)
+	
+	"""
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
+	"""
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+
+	def __repr__(self):
+		return "<NavSearch: %s>" % (self.ident)
 		
+GeometryDDL(NavSearch.__table__)	
 		
 
 ##=======================================================

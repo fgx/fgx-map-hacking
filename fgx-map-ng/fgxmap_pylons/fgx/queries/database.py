@@ -26,6 +26,13 @@ def empty_table(table):
 	meta.Session.execute(sql)
 	meta.Session.commit()
 	
+	## Also delete stuff from nav_search
+	if table in ['ndb', 'fix', 'vor', 'dme']:
+		sql = "delete from nav_search where nav_type = '%s';" % table
+		meta.Session.execute(sql)
+		meta.Session.commit()
+	
+	
 	
 	
 def columns(table):
