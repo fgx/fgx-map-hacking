@@ -216,12 +216,7 @@ get_ndb_search_text: function(){
 
 
 });
-/*
-this.txtSearchVorDme = new Ext.form.TextField({
-	width: 50,
-	enableKeyEvents: true
-});
-*/
+
 
 
 
