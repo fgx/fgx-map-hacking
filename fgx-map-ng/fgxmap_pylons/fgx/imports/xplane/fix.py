@@ -51,6 +51,11 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 		else:
 			
 			line = raw_line.strip()
+			
+			if line == "99":
+				print ">> Reached end of fix file"
+				return
+			
 			parts = line.split()
 			
 			if verbose > 0 and c % 500 == 0:
