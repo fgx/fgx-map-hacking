@@ -21,12 +21,29 @@ constructor: function(config) {
 		loadMask: true,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
-			{header: 'Fix', dataIndex:'fix', sortable: true, align: 'left', hidden: false,
+			{header: '&nbsp;', dataIndex:'nav_type', width: 20,
+				renderer: function(v, meta, rec){
+					//meta.attr = 'style= "background-image: url(/images/vfr_fix.png) !important; background-repeat: no-repeat;"';
+					if(v == "fix"){
+						meta.css = "icoFix";
+						
+					}else if(v == "ndb"){
+						meta.css = "icoNdb";
+							
+					}else if(v == "vor"){
+						meta.css = "icoVor";
+					}
+					return " ";
+					//return "<img src='/images/vfr_fix.png'>";
+				}
+			},
+			{header: 'Ident', dataIndex:'ident', sortable: true, align: 'left', hidden: false,
 				renderer: function(v, meta, rec){
 					// @TODO Make this a css class
 					return "<b>" + v + "</b>";
 				}
 			},
+			{header: 'Name', dataIndex:'name', sortable: true, align: 'left', hidden: false},
 			{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
 			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
 		],
@@ -37,42 +54,42 @@ constructor: function(config) {
 				title: "Fix",
 				columns: 3,
 				items: [
-					{iconCls: "icoClr", scope: this,
+					{iconCls: "icoClr", scope: this, tooltip: "Clear text box",
 						handler: function(){
 							this.get_fix_search_text().setValue("");
 							this.get_fix_search_text().focus();
 						}
 					},
-					this.get_fix_search_text(),
-					{text: "Nearby"}
+					this.get_fix_search_text()
+					//{text: "Nearby"}
 				]
 			},
 			{xtype: 'buttongroup',
 				title: "VOR/DME",
 				columns: 3,
 				items: [
-					{iconCls: "icoClr",	scope: this,
+					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
 						handler: function(){
 							this.get_vor_search_text().setValue("");
 							this.get_vor_search_text().focus();
 						}
 					},
-					this.get_fix_search_text(),
-					{text: "Nearby"}
+					this.get_vor_search_text()
+					//{text: "Nearby"}
 				]
 			},
 			{xtype: 'buttongroup',
 				title: "NDB",
 				columns: 3,
 				items: [
-					{iconCls: "icoClr",	scope: this,
+					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
 						handler: function(){
 							this.get_ndb_search_text().setValue("");
 							this.get_ndb_search_text().focus();
 						}
 					},
-					this.get_ndb_search_text(),
-					{text: "Nearby"}
+					this.get_ndb_search_text()
+					//{text: "Nearby"}
 				]
 			}
 		],
@@ -84,7 +101,7 @@ constructor: function(config) {
 				obj = {};
 				obj.lat = rec.get("lat");
 				obj.lon = rec.get("lon");
-				obj.title = rec.get("fix");
+				obj.title = rec.get("ident");
 				//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat") );
 				this.fireEvent("GOTO", obj);
 				//self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")) );
@@ -107,18 +124,20 @@ get_store: function(){
 		this.xStore = new Ext.data.JsonStore({
 			idProperty: 'callsign',
 			fields: [ 	
-				{name: "fix", type: 'string'},
+				{name: "nav_type", type: 'string'},
+				{name: "ident", type: 'string'},
+				{name: "name", type: 'string'},
 				{name: "lat", type: 'float'},
 				{name: "lon", type: 'float'}
 			],
 			proxy: new Ext.data.HttpProxy({
-				url: '/ajax/fix',
+				url: '/ajax/__SET_IN_CODE__',
 				method: "GET"
 			}),
-			root: 'fix',
+			root: 'rows',
 			remoteSort: false,
 			sortInfo: {
-				field: "fix", 
+				field: "ident", 
 				direction: 'ASC'
 			}
 		});
@@ -145,6 +164,7 @@ get_fix_search_text: function(){
 				if(txt.length == 0){
 					return;
 				}
+				this.get_store().proxy.setUrl("/ajax/fix")
 				this.get_store().load({params: {q: txt, type: "fix"}});
 			}
 		}, this);
@@ -162,9 +182,10 @@ get_vor_search_text: function(){
 				var t = this.get_vor_search_text();
 				t.setValue( t.getValue().trim() );
 				var txt = t.getValue();
-				if(txt.length == 0){
+				if(txt.length < 2){
 					return;
 				}
+				this.get_store().proxy.setUrl("/ajax/vor")
 				this.get_store().load({params: {q: txt, type: "vor"}});
 			}
 		}, this);
@@ -185,7 +206,8 @@ get_ndb_search_text: function(){
 				if(txt.length == 0){
 					return;
 				}
-				this.get_store().load({params: {q: txt, type: "vor"}});
+				this.get_store().proxy.setUrl("/ajax/ndb")
+				this.get_store().load({params: {q: txt, type: "ndb"}});
 			}
 		}, this);
 	}

@@ -137,9 +137,11 @@ class Fix(Base):
 	
 	fix_pk = Column(Integer(), primary_key=True)
 	ident = Column(String(10), index=True, nullable=False)
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	
+	## These can go later
 	lat = Column(String(15), index=True, nullable=False)
 	lon = Column(String(15), index=True, nullable=False)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
 	@property
 	def latp(self):
@@ -155,7 +157,8 @@ class Fix(Base):
 	
 	def dic(self):
 		
-		return dict(ident=self.ident, lat=self.lat, lon=self.lon)
+		return dict(ident=self.ident, nav_type="fix",
+					lat=self.lat, lon=self.lon)
 		
 		
 	
@@ -334,8 +337,16 @@ class Ndb(Base):
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
+	## These can go later
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
+	
 	def __repr__(self):
 		return "<Ndb: %s>" % (self.ident)
+		
+	def dic(self):
+		return dict(ident=self.ident, name=self.name, nav_type="ndb",
+				lat=self.lat, lon=self.lon)
 		
 GeometryDDL(Ndb.__table__)		
 
@@ -402,13 +413,19 @@ class Vor(Base):
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
+	## These can go later
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
+	
 	def __repr__(self):
 		return "<Vor: %s>" % (self.ident)
+
+	def dic(self):
+		return dict(ident=self.ident, name=self.name, nav_type="vor",
+				lat=self.lat, lon=self.lon, )
 		
 GeometryDDL(Vor.__table__)
 
-
-#class WeightClass(Base):
 
 
 

@@ -1,4 +1,7 @@
 
+Ext.QuickTips.init();
+Ext.Ajax.disableCaching = false;
+
 var FGx = {};
 FGx.msgCt = null;
 

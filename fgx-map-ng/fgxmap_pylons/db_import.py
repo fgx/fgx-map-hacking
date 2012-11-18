@@ -86,7 +86,7 @@ if command == "drop":
 		sys.exit(1)
 	
 	for a in args[1:]:
-		db_utils.drop_table(a)
+		database.drop_table(a)
 	sys.exit(0)
 
 	

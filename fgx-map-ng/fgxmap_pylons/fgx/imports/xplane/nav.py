@@ -51,10 +51,14 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	## Ndb
 	ob = Ndb()
 	ob.ident = ident
+	ob.name = " ".join(parts[8:])
 	
 	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
-	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
-	ob.name = " ".join(parts[8:])
+	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+	ob.lat = parts[1]
+	ob.lon = parts[2]
+	
+	
 	
 	elev_ft =  h.to_int(parts[3])
 	ob.elevation_ft = elev_ft if elev_ft > 0 else None
@@ -69,13 +73,14 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	meta.Session.add(ob)
 	
 	## Search
+	"""
 	obs = NavSearch()
 	obs.nav_type = "ndb"
 	obs.ident = ident
 	obs.name = ob.name
 	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
 	meta.Session.add(obs)
-	
+	"""
 	
 	meta.Session.commit()
 
@@ -96,7 +101,9 @@ def vor_2_db(parts, verbose=1, empty=False):
 	
 	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
 	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
-	
+	ob.lat = parts[1]
+	ob.lon = parts[2]
+			
 	elev_ft = h.to_int(parts[3])
 	ob.elevation_ft = elev_ft if elev_ft > 0 else None
 	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048) if ob.elevation_ft else None
@@ -111,13 +118,14 @@ def vor_2_db(parts, verbose=1, empty=False):
 	
 	
 	## Search
+	"""
 	obs = NavSearch()
 	obs.nav_type = "vor"
 	obs.ident = ident
 	obs.name = ob.name
 	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
 	meta.Session.add(obs)
-	
+	"""
 	
 	meta.Session.commit()
 	
@@ -160,7 +168,7 @@ def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 			pass
 		else:
 			row_code = h.to_int(parts[0])
-			print "row_code=", row_code
+			#print "row_code=", row_code
 			if row_code == 2:
 				## Process NDB
 				ndb_2_db(parts, empty=empty, verbose=verbose)
