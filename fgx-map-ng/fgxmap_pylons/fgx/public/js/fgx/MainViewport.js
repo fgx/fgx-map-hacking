@@ -8,7 +8,6 @@ var self = this;
 var zooms = [1, 2, 3, 4, 5, 7, 9, 10, 20, 50, 73, 100, 150, 250];
 //this.centerpoint = new OpenLayers.LonLat(939262.20344,5938898.34882);	
 	
-
 this.refresh_rate = 0;
 this.runner = new Ext.util.TaskRunner();
 
@@ -38,9 +37,9 @@ this.flightsStore = new Ext.data.JsonStore({
 	autoLoad: false,
 });
 
-//this.update_flights = function(){
-//	self.flightsStore.load();
-//}
+this.update_flights = function(){
+	self.flightsStore.load();
+}
 
 
 
@@ -50,7 +49,8 @@ this.flightsStore = new Ext.data.JsonStore({
 //============================================================
 //this.flightsWidget = new FGx.FlightsWidget({});
 this.flightsGrid = new FGx.FlightsGrid({
-	flightsStore: this.flightsStore, 
+	flightsStore: this.flightsStore,
+	refresh_rate: this.refresh_rate,
 	title: "Flights", 
 	closable: false,
 	xHidden: false
@@ -211,6 +211,7 @@ this.on_refresh_now = function(){
 	this.store.load();
 }
 
-//this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
-	
+if(this.refresh_rate > 0){
+	this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
+}
 } //< FGx.MainViewport
