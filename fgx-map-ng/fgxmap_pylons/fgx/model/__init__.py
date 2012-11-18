@@ -304,10 +304,10 @@ class Ndb(Base):
 	name = Column(String(50), index=True)
 	freq_khz = Column(String(6))
 	
-	elevation_ft = Column(Integer())
-	elevation_m = Column(Integer())
-	range_nm = Column(Integer())
-	range_m = Column(Integer())
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
@@ -369,13 +369,13 @@ class Vor(Base):
 	name = Column(String(50), index=True)
 	freq_mhz = Column(String(6))
 	
-	elevation_ft = Column(Integer())
-	elevation_m = Column(Integer())
-	range_nm = Column(Integer())
-	range_m = Column(Integer())
+	elevation_ft = Column(Integer(), nullable=True)
+	elevation_m = Column(Integer(), nullable=True)
+	range_nm = Column(Integer(), nullable=True)
+	range_m = Column(Integer(), nullable=True)
 	
 	# TODO What is this exactly ?
-	variation = Column(String(10))
+	variation = Column(String(10), nullable=True)
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 

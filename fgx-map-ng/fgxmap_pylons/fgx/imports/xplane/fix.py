@@ -59,20 +59,7 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 				print "  > line %s >>" % c, parts
 			
 			ident = parts[2]
-			"""
-			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
-			print ident, "fixOb=", obs
-			if len(obs) == 0:
-				ob = Fix()
-				ob.fix = ident
-				meta.Session.add(ob)
-				meta.Session.commit()
-			else:
-				ob = obs[0]
-			#sql = "insert into fix(fix, wkb_geometry)values( %s, %s)"
-			##conn.execute("insert into fix(fix)values( '%s')" % ident)
-			##db.session.commit()
-			"""
+
 			## Check if fix in in DB already
 			obs = meta.Session.query(Fix).filter_by(fix=ident).all()
 			if len(obs) == 0:

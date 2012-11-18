@@ -14,6 +14,7 @@ from optparse import OptionParser
 from shell_config import config
 
 from fgx.model import meta, MpServer
+from fgx.queries import database
 from fgx.lib import app_globals
 from fgx.lib import helpers as h
 
@@ -129,7 +130,9 @@ if command == "import":
 	
 	elif x_file == "ndb":
 		from fgx.imports.xplane import nav
-		nav.import_split_file(nav.NAV_TYPE.ndb, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		database.empty_table("ndb")
+		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/2.dat"
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	elif x_file == "vor":
 		from fgx.xplane import nav

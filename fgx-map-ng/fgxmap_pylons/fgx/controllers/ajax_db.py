@@ -41,6 +41,6 @@ class AjaxDbController(BaseController):
 					success=True
 		)
 		#Base.metadata.drop_all(bind=Session.bind)
-		meta.drop(bind=Session.bind)
+		database.drop_table(table)
 		return payload
 		

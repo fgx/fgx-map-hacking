@@ -59,8 +59,9 @@ def load_environment(global_conf, app_conf, start_bots):
 	##====================================================
 	## Start the background processes
 	if start_bots:
-		statusThread = MpStatusThread(config=config)
-		statusThread.start()
+		pass
+		#statusThread = MpStatusThread(config=config)
+		#statusThread.start()
 		
 
 	return config

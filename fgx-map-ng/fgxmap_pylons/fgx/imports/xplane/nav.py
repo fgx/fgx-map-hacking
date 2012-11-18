@@ -8,8 +8,12 @@ import os
 import datetime
 import fileinput
 
+from geoalchemy import WKTSpatialElement
+from sqlalchemy.sql.expression import func 
 
-from fgx.model import meta, Ndb, Vor
+from fgx.lib import helpers as h
+from fgx.model import meta, Ndb, Vor, FGX_SRID
+
 
 #import helpers as h
 
@@ -31,21 +35,10 @@ class NAV_TYPE:
 	dme2 = 13
 
 ## Tables to give stats for	
-tables_to_list = ['vor','ndb','fix']	
-	
-"""
-DAT_DIR = h.temp_dir("/unzipped/xplane/")
-DAT_FILE = DAT_DIR + "earth_nav.dat"
-SPLIT_DIR = DAT_DIR + "nav_split/"
-"""
+#tables_to_list = ['vor','ndb','fix']	
 
-## Creates the file_path for a row_code file
-# @ @param The row code
-# @return the Abs path to file
-def row_code_file_path(row_code):
-	return  "%s%s.dat" % (SPLIT_DIR,  row_code )
-	
-	
+
+
 ############################################
 def ndb_2_db(parts, verbose=1, empty=False):
 	#   lat         lon             elv/ft  khz rng_nm n/a ID 8>>>>> desciprions 
@@ -55,28 +48,26 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	
 	ident = parts[7]
 	
-	if empty:
-		ob = Ndb()
-	else:
-		obs = Ndb.objects.filter(ident=ident)
-		if len(obs) == 0:
-			ob = Ndb()
-			if verbose > 0:
-				print "NDB: new: %s" % ident
-		else:
-			ob = obs[0]
-			if verbose > 0:
-				print "NDB: update: %s" % ident
-	ob.wkb_geometry = GEOSGeometry( 'POINT(%s %s)' % (parts[1], parts[2]) )
+
+	ob = Ndb()
 	ob.ident = ident
-	ob.name = " ".join(parts[8:])
-	ob.elevation_ft = parts[3]
-	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048)
-	ob.range_nm = parts[4]
-	ob.range_m = h.to_int(ob.range_nm) * 1852
-	ob.freq_khz = parts[4]
 	
-	ob.save()
+	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
+	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
+	ob.name = " ".join(parts[8:])
+	
+	elev_ft =  h.to_int(parts[3])
+	ob.elevation_ft = elev_ft if elev_ft > 0 else None
+	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048) if ob.elevation_ft else None
+	
+	r_nm = h.to_int(parts[4])
+	ob.range_nm = r_nm if r_nm > 0 else None
+	ob.range_m = h.to_int(ob.range_nm) * 1852 if ob.range_nm else None
+	
+	ob.freq_khz = parts[4]  # TODO now come we have 4 didgit freq ??
+	
+	meta.Session.add(ob)
+	meta.Session.commit()
 
 	
 ############################################
@@ -109,14 +100,13 @@ def vor_2_db(parts, verbose=1, empty=False):
 	ob.save()
 	
 
-def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
+def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 	
 
-	
-	file_path = unzipped_dir + "/earth_nav.dat"
+	#file_path = unzipped_dir + "/earth_nav.dat"
 	
 	if verbose > 0:
-		print "> Importing NAV: ", zip_dir
+		print "> Importing NAV: ", file_path
 	
 	started = datetime.datetime.now()
 		
@@ -131,45 +121,33 @@ def import_dat(zip_dir, dev_mode=False, verbose=1, empty=False):
 		
 		c += 1
 		
-		if c <= 3:
-			## Skip first three lines, redits etc
+		#if c <= 3:
+		#	## Skip first three lines, redits etc
+		#	pass
+		#else:
+			
+		line = raw_line.strip()		
+		parts = line.split()
+		
+		if verbose > 0 and c % 500 == 0:
+			print "  > line: %s %s " % (c, line)
+		if verbose > 1:
+			print "  > line %s >>" % c, parts
+		
+		if len(line) == 0:
 			pass
 		else:
-			
-			line = raw_line.strip()
-			parts = line.split()
-			
-			if verbose > 0 and c % 500 == 0:
-				print "  > line: %s %s " % (c, line)
-			if verbose > 1:
-				print "  > line %s >>" % c, parts
-			
 			row_code = h.to_int(parts[0])
 			print "row_code=", row_code
 			if row_code == 2:
 				## Process NDB
-				process_ndb(parts, empty=empty, verbose=verbose)
+				ndb_2_db(parts, empty=empty, verbose=verbose)
 				
-				
-			"""
-			ident = parts[2]
-			#pnt = Point(parts[0], parts[1]) ## << fails cos its a String ? 
 			
-			
-			
-			obs = Fix.objects.filter(fix=ident)
-			if len(obs) == 0:
-				ob = Fix()
-			else:
-				ob = obs[0]
-			ob.fix = parts[2]
-			ob.wkb_geometry = pnt
-			ob.save()
-			"""
-		
-		
-		if dev_mode and c == 1000:
-			sys.exit(0)
+	
+	
+	if dev_mode and c == 1000:
+		sys.exit(0)
 			
 			
 	print "  >> Done, imported %s lines " % c
@@ -234,6 +212,7 @@ def split_to_seperate_files(verbose=1):
 	
 #########################################################################
 ## Imports a split_file
+"""
 def import_split_file(row_code, verbose=1, empty=None, dev_mode=False):
 	
 	# TODO check it valid row_code
@@ -255,4 +234,4 @@ def import_split_file(row_code, verbose=1, empty=None, dev_mode=False):
 			print "ROw-code: %s not andled" % row_code
 			sys.exit(0)
 		
-		
+"""		
