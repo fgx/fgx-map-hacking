@@ -161,7 +161,7 @@ get_fix_search_text: function(){
 				var t = this.get_fix_search_text();
 				t.setValue( t.getValue().trim() );
 				var txt = t.getValue();
-				if(txt.length == 0){
+				if(txt.length < 2){
 					return;
 				}
 				this.get_store().proxy.setUrl("/ajax/fix")
@@ -203,7 +203,7 @@ get_ndb_search_text: function(){
 				var t = this.get_ndb_search_text();
 				t.setValue( t.getValue().trim() );
 				var txt = t.getValue();
-				if(txt.length == 0){
+				if(txt.length < 2){
 					return;
 				}
 				this.get_store().proxy.setUrl("/ajax/ndb")
