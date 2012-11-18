@@ -53,7 +53,10 @@ def load_environment(global_conf, app_conf, start_bots):
 
 	# CONFIGURATION OPTIONS HERE (note: all config options will override
 	# any Pylons config options)
-
+	
+	
+	
+	##====================================================
 	## Start the background processes
 	if start_bots:
 		statusThread = MpStatusThread(config=config)
