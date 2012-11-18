@@ -208,8 +208,5 @@ class MpStatusThread(threading.Thread):
 	
 	
 	
-def start_mpstatus_thread(config):
-	worker = MpStatusThread(config)
-	worker.start()
 	
 	

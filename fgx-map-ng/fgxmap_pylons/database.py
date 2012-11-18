@@ -11,7 +11,7 @@ import sys
 import os
 from optparse import OptionParser
 
-from  shell_config import config
+from shell_config import config
 
 from fgx.model import meta, MpServer
 from fgx.lib import app_globals
@@ -75,13 +75,15 @@ if command == "create":
 	sys.exit(0)
 
 
+	
 ## Drop All
 if command == "dropall":
 	
 	db_utils.drop_all_tables()
 	sys.exit(0)
 
-	
+
+
 ## Drop tables
 if command == "drop":
 	
