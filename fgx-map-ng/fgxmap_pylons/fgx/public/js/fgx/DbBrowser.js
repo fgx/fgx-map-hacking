@@ -80,10 +80,12 @@ this.gridTables = new Ext.grid.GridPanel({
 this.gridColumns = new Ext.grid.GridPanel({
 	region: 'east', 
 	title: "Columns",
-	width: 300,
+	width: 500,
 	store: this.storeColumns,
 	viewConfig:{
-		forceFit: true
+		forceFit: true,
+		emptyText: "< Select a table",
+		deferEmptyText: false
 	},
 	columns: [ 
 		{header: "Column", dataIndex: "column"},
