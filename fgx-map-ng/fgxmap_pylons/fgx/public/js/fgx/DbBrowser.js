@@ -88,7 +88,12 @@ this.gridColumns = new Ext.grid.GridPanel({
 		deferEmptyText: false
 	},
 	columns: [ 
-		{header: "Column", dataIndex: "column"},
+		{header: "Column", dataIndex: "column",
+			renderer: function(val, meta, record, idx){
+				meta.style = "font-weight: bold;"
+				return val;
+			}
+		},
 		{header: "Type", dataIndex: "type"}
 	],
 	listeners:{

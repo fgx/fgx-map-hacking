@@ -157,10 +157,7 @@ class Fix(Base):
 		
 		return dict(ident=self.ident, nav_type="fix",
 					lat=self.lat, lon=self.lon)
-		
-		
-	
-			
+				
 GeometryDDL(Fix.__table__)
 
 ##=======================================================
