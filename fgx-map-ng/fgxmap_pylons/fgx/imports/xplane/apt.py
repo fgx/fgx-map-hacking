@@ -5,8 +5,6 @@
 # Do not change or remove this copyright notice.
 #
 
-
-
 import sys, time, datetime, csv, os, re #, psycopg2, yaml, warnings
 import fileinput
 
@@ -140,9 +138,6 @@ def insert_airport(A, apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, a
 
 def import_dat(file_path, dev_mode=None, empty=None, verbose=None):
 	
-	#reader = fileinput.input(file_path)
-
-
 	print "Processing: %s"  % file_path
 
 	## Create a new attributes helper
@@ -441,5 +436,7 @@ def import_dat(file_path, dev_mode=None, empty=None, verbose=None):
 				#		log.write("There is a suspicious line in apt.dat (probably wrong newline):\n")
 				#		log.write("Identifier of last airport line scanned: "+apt_identifier+"\n")
 				#		pass
+				
+				## Start again with new airport
 				A = Attr()
 
