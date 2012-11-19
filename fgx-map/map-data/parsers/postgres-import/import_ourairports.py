@@ -41,7 +41,7 @@ def readourairports():
 		#print apt_name_utf8
 		
 			
-		sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_gps_code='"+row[1]+"';"
+		sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
 		cur.execute(sql3)
 		conn.commit()
 		print "--- Updated '"+apt_name_utf8+"' with ourairports data."

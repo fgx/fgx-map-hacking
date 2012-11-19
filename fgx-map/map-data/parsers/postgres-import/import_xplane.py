@@ -123,7 +123,7 @@ def get_authority(bcn_type):
 		else:
 			apt_authority = "civ"
 		
-def insert_airport(apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
+def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
 	lastcoma = len(pointscollected)-1
 	pointscollected2 = pointscollected[0:lastcoma] 
@@ -134,16 +134,16 @@ def insert_airport(apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_
 	
 	# Geometry is reprojected to EPSG:3857, should become a command line parameter
 	sql = '''
-		INSERT INTO airport (apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
+		INSERT INTO airport (apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
 		
 	#print sql
 	
-	params = [apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
+	params = [apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
 	
 	# Now this second query gives lon/lat (postgis x/y) as text for the center point
-	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_identifier='"+apt_identifier+"';"
+	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+apt_ident+"';"
 	cur.execute(sql2)
 				
 
@@ -164,7 +164,7 @@ def readxplane():
 	
 	for line in reader:
 		
-		global apt_identifier
+		global apt_ident
 		global apt_name_ascii
 		global apt_elev_ft
 		global apt_elev_m
@@ -179,12 +179,12 @@ def readxplane():
 			apt_elev_ft_read = line[5]+line[6]+line[7]+line[8]+line[9]
 			apt_deprecated1 = line[11]
 			apt_deprecated2 = line[13]
-			apt_identifier_read = line[15]+line[16]+line[17]+line[18]
+			apt_ident_read = line[15]+line[16]+line[17]+line[18]
 			
 			tilend = len(line)
 			apt_name_ascii_read = line[20:tilend-2]
 						
-			apt_identifier = apt_identifier_read
+			apt_ident = apt_ident_read
 			apt_name_ascii = apt_name_ascii_read
 			apt_elev_ft = apt_elev_ft_read
 			apt_elev_m = int(float(apt_elev_ft_read)*0.3048)
@@ -197,12 +197,12 @@ def readxplane():
 			apt_elev_ft_read = line[5]+line[6]+line[7]+line[8]+line[9]
 			apt_deprecated1 = line[11]
 			apt_deprecated2 = line[13]
-			apt_identifier_read = line[15]+line[16]+line[17]+line[18]
+			apt_ident_read = line[15]+line[16]+line[17]+line[18]
 			
 			tilend = len(line)
 			apt_name_ascii_read = line[20:tilend-2]
 						
-			apt_identifier = apt_identifier_read
+			apt_ident = apt_ident_read
 			apt_name_ascii = apt_name_ascii_read
 			apt_elev_ft = apt_elev_ft_read
 			apt_elev_m = int(float(apt_elev_ft_read)*0.3048)
@@ -215,12 +215,12 @@ def readxplane():
 			apt_elev_ft_read = line[5]+line[6]+line[7]+line[8]+line[9]
 			apt_deprecated1 = line[11]
 			apt_deprecated2 = line[13]
-			apt_identifier_read = line[15]+line[16]+line[17]+line[18]
+			apt_ident_read = line[15]+line[16]+line[17]+line[18]
 			
 			tilend = len(line)
 			apt_name_ascii_read = line[20:tilend-2]
 						
-			apt_identifier = apt_identifier_read
+			apt_ident = apt_ident_read
 			apt_name_ascii = apt_name_ascii_read
 			apt_elev_ft = apt_elev_ft_read
 			apt_elev_m = int(float(apt_elev_ft_read)*0.3048)
@@ -265,13 +265,13 @@ def readxplane():
 			# Now some additional data, not in apt.dat
 			
 			# The NZSP problem
-			if apt_identifier == "NZSP":
+			if apt_ident == "NZSP":
 				if rwy_lat_end > -90.0:
 					rwy_lat_end = ( float(rwy_lat_end) + 90.0 )*-1.0
-					log.write("NZSP problem solved in airport "+apt_identifier+", runway "+rwy_number+"\n")
+					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
 				if rwy_lat > -90.0:
 					rwy_lat = ( float(rwy_lat) + 90.0 )*-1.0
-					log.write("NZSP problem solved in airport "+apt_identifier+", runway "+rwy_number+"\n")
+					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
 			
 			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
 			rwy_length_meters = str(rwy_length.get("s12"))
@@ -467,12 +467,12 @@ def readxplane():
 				get_rwy_min_max(rwy_len_collect)
 				get_ifr(lightingcollected)
 				get_authority(bcn_type)
-				insert_airport(apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
+				insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 				conn.commit()
 				
 			except:
 				log.write("There is a suspicious line in apt.dat (probably wrong newline):\n")
-				log.write("Identifier of last airport line scanned: "+apt_identifier+"\n")
+				log.write("Identifier of last airport line scanned: "+apt_ident+"\n")
 				pass
 				
 			pointscollected = ""
@@ -497,10 +497,10 @@ readxplane()
 
 # The parser has some tolerance with wrong newlines, but we
 # need to remove duplicates produced with tolerance.
-# This is not that dangerous, because the apt_identifier should
+# This is not that dangerous, because the apt_ident should
 # be unique anyway ...
 
-cur.execute("DELETE FROM airport WHERE apt_id NOT IN (SELECT MAX(dup.apt_id) FROM airport As dup GROUP BY dup.apt_identifier);")
+cur.execute("DELETE FROM airport WHERE apt_id NOT IN (SELECT MAX(dup.apt_id) FROM airport As dup GROUP BY dup.apt_ident);")
 print "Removing duplicates ...\n"
 log.write("Duplicates removed.\n")
 conn.commit()
