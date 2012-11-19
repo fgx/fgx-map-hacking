@@ -103,6 +103,7 @@ class Country(Base):
 
 	
 ##=======================================================
+"""
 class Dme(Base):
 	
 	__tablename__ = "dme"
@@ -121,7 +122,7 @@ class Dme(Base):
 		return "<Dme: %s>" % (self.icao)
 	
 GeometryDDL(Dme.__table__)
-	
+"""
 
 	
 class EngineType(Base):
@@ -136,7 +137,7 @@ class EngineType(Base):
 	
 ##=======================================================
 # SELECT st_y(wkb_geometry) as lat, st_x(wkb_geometry) as lon, ident FROM fix limit 10;
-
+"""
 class Fix(Base):
 	
 	__tablename__ = 'fix'
@@ -158,6 +159,7 @@ class Fix(Base):
 					lat=self.lat, lon=self.lon)
 				
 GeometryDDL(Fix.__table__)
+"""
 
 ##=======================================================
 class Ils(Base):
@@ -437,7 +439,7 @@ class Vor(Base):
 
 	def dic(self):
 		return dict(ident=self.ident, name=self.name, nav_type="vor",
-				lat=self.lat, lon=self.lon, )
+				lat=self.lat, lon=self.lon,)
 		
 GeometryDDL(Vor.__table__)
 

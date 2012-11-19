@@ -15,3 +15,43 @@ def to_int(v):
 	return i
 	
 	
+	
+########################################################################
+## Request Params Shortcut
+########################################################################
+def v(request, ki, ret_none=False):
+	"""Return the value from request.params or None if key not exist"""
+	if not ki in request.params:
+		return None
+	va =  request.params[ki]
+	if isinstance(va, str) or isinstance(va, unicode):
+		vs = va.strip()
+		if ret_none:
+			if len(vs) == 0:
+				return None
+		return vs		
+	return va
+
+def i(request, ki, null_zeros=False):
+	"""Returns an INTEGER"""
+	vv = v(request, ki)
+	if vv == None:
+		return None
+	ival =  to_int(vv)
+	if null_zeros and ival == 0:
+		return None
+	return ival
+		
+	
+def b(request, ki):
+	"""Return the value from request.params or None if key not exist"""
+	if not ki in request.params:
+		return None
+	s = str(request.params[ki]).strip()
+	if s == "" or s == "0" or s == "off":
+		return None
+	return 1
+	
+	
+	
+	

@@ -540,7 +540,13 @@ constructor: function(config) {
 					}),
 					"->",
 					{text: "TODO: Lat: "}, this.lbl_lat(), 
-					{text: "Lon: "},  this.lbl_lon()
+					{text: "Lon: "},  this.lbl_lon(),
+					"-",
+					{text: "DEV", scope: this,
+						handler: function(){
+							console.log(this.get_map().getExtent())
+						}
+					}
 				
 				]
 			},

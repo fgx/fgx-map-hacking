@@ -8,24 +8,24 @@ from sqlalchemy import or_
 
 from fgx.lib.base import BaseController, render
 
-from fgx.lib.base import BaseController, render
+from fgx.lib import helpers as h
 from fgx.model import meta, Airport
-from fgx.queries import airport
+from fgx.queries import airports
 
 log = logging.getLogger(__name__)
 
-class AjaxAptController(BaseController):
+class AjaxAirportController(BaseController):
 
 	@jsonify
 	def airports(self):
 	
 		payload = {'success': True}
 
-		q = h.v(request, "q")
+		search = h.v(request, "search")
 		bounds = h.v(request, "bounds")
 		
-		if q or bounds:
-			payload['airports'] = queries.airports(search=q, bounds=bounds, apt_type="all")
+		if search or bounds:
+			payload['airports'] = airports.airports(search=search, bounds=bounds)
 		
 		else:
 			payload['error'] = "Need a ?search  or ?bounds "
