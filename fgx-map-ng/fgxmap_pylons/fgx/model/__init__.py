@@ -46,6 +46,9 @@ class Airport(Base):
 	apt_xplane_code = Column(Integer(), nullable=True)
 	#wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 
+	def dic(self):
+		return dict(apt_pk=self.apt_pk, apt_ident=self.apt_ident)
+	
 	def __repr__(self):
 		return "<Airport: %s>" % (self.apt_ident)
 	

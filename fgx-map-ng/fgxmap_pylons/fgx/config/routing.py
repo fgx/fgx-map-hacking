@@ -32,15 +32,24 @@ def make_map(config):
 	# Ajax Routes
 	##=======================================================================
 	
-	#### MultiPlayer
-	map.connect('/ajax/mp/status', controller="ajax_mpnet", action="mpstatus")
+	# Database Browsing
+	map.connect('/ajax/airports', controller="ajax_apt", action="airports")
+	map.connect('/ajax/airport/{apt_ident}', controller="ajax_apt", action="airport")
 	
+	# Database Browsing
+	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
+	map.connect('/ajax/database/table/{table}/columns', controller="ajax_db", action="columns")
+	map.connect('/ajax/database/table/{table}/drop', controller="ajax_db", action="drop_table")
+	
+	
+	# MultiPlayer
+	map.connect('/ajax/mp/status', controller="ajax_mpnet", action="mpstatus")
 	map.connect('/ajax/mp/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mp/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mp/flights', controller="ajax_mpnet", action="flights")
 	
 	
-	#### Nav Aids
+	# Nav Aids
 	map.connect('/ajax/fix/{ident}', controller="ajax_nav", action="fix")
 	map.connect('/ajax/fix', controller="ajax_nav", action="fix")
 	
@@ -51,10 +60,7 @@ def make_map(config):
 	map.connect('/ajax/vor', controller="ajax_nav", action="vor")
 	
 	
-	#### Database Browsing
-	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
-	map.connect('/ajax/database/table/{table}/columns', controller="ajax_db", action="columns")
-	map.connect('/ajax/database/table/{table}/drop', controller="ajax_db", action="drop_table")
+
 	
 	#map.connect('/ajax/*', controller="ajax_db", action="scolumns")
 	
