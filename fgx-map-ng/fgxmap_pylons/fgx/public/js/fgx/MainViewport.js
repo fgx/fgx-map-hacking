@@ -48,7 +48,8 @@ update_flights: function(){
 
 flightsGrid: 0,
 
-load_flights_grid: function(){
+on_flights_grid: function(butt, checked){
+	console.log("on_flights_grid");
 	this.flightsGrid = new FGx.FlightsGrid({
 		flightsStore: this.flightsStore,
 		refresh_rate: this.refresh_rate,
@@ -56,7 +57,8 @@ load_flights_grid: function(){
 		closable: true,
 		xHidden: false
 	});
-	
+	this.get_tab_panel().add(this.flightsGrid);
+	this.get_tab_panel().setActiveTab(this.flightsGrid);
 },
 
 
@@ -153,12 +155,18 @@ constructor: function(config) {
 						]
 					},
 					"-",
-					{xtype: 'tbspacer', width: 50},
+					{xtype: 'tbspacer', width: 10},
 					"-",
-					{text: "Flights", iconCls: "icoFlights", enableToggle: true, pressed: true},
+					{text: "Flights", iconCls: "icoFlights", id: this.getId() + "butt-flights", 
+							enableToggle: true, pressed: false, 
+							handler: this.on_flights, scope: this
+					},
 					
 					"-",
-					{text: "Server Status", iconCls: "icoMpServers"},
+					{text: "Server Status", iconCls: "icoMpServers", 
+						enableToggle: true, pressed: false, id: this.getId() + "butt-server-status",
+						handler: this.on_server_status, scope: this
+					},
 					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
 					//"-",
@@ -181,7 +189,7 @@ constructor: function(config) {
 						
 					"->",	
 					"-",	
-					{text: "Login", iconCls: "icoLogin"},
+					{text: "Login", iconCls: "icoLogin", disabled: true},
 					"-",
 					{text: "FGx", iconCls: "icoFgx", 
 						menu: [
@@ -196,7 +204,8 @@ constructor: function(config) {
 										handler: this.on_open_url, scope: this }
 								]
 							},
-							{text: "Database Browser" },
+							{text: "Database Browser", xUrl: "/database",
+								handler: this.on_open_url, scope: this},
 						
 							
 							
