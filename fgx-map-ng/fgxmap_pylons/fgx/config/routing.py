@@ -71,6 +71,7 @@ def make_map(config):
 	
 	map.connect('/admin/users', controller="html_pages", action="admin_users")
 	
+	map.connect('/maptest', controller="html_pages", action="maptest")
 	map.connect('/index', controller="html_pages", action="index")
 	map.connect('/', controller="html_pages", action="index")
 	

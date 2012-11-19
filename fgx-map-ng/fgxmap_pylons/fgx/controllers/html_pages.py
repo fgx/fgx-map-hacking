@@ -12,10 +12,15 @@ class HtmlPagesController(BaseController):
 	
 	def index(self):
 		return render("map-ext.html")
-
+	
+	def maptest(self):
+		return render("map-test.html")
+		
 	def database(self):
 		return render("database.html")
 		
 		
 	def admin_users(self):
 		return render("admin_users.html")
+		
+		
