@@ -3,6 +3,7 @@ Ext.namespace("FGx");
 
 FGx.NavWidget = Ext.extend(Ext.grid.GridPanel, {
 
+tbw: 80,
 
 constructor: function(config) {
 	
@@ -153,7 +154,7 @@ get_store: function(){
 get_fix_search_text: function(){
 	if(!this.txtSearchFix){
 		this.txtSearchFix = new Ext.form.TextField({
-			width: 50,
+			width: this.tbw,
 			enableKeyEvents: true
 		});
 		this.txtSearchFix.on("keypress", function(txtFld, e){
@@ -174,7 +175,7 @@ get_fix_search_text: function(){
 get_vor_search_text: function(){
 	if(!this.txtSearchVor){
 		this.txtSearchVor = new Ext.form.TextField({
-			width: 50,
+			width: this.tbw,
 			enableKeyEvents: true
 		});
 		this.txtSearchVor.on("keypress", function(txtFld, e){
@@ -195,7 +196,7 @@ get_vor_search_text: function(){
 get_ndb_search_text: function(){
 	if(!this.txtSearchNdb){
 		this.txtSearchNdb = new Ext.form.TextField({
-			width: 50,
+			width: this.tbw,
 			enableKeyEvents: true
 		});
 		this.txtSearchNdb.on("keypress", function(txtFld, e){
@@ -212,7 +213,7 @@ get_ndb_search_text: function(){
 		}, this);
 	}
 	return this.txtSearchNdb;
-},
+}
 
 
 });

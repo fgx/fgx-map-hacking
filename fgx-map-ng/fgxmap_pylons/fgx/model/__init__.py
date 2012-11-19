@@ -5,7 +5,7 @@ from sqlalchemy import  Integer, String, Date, DateTime
 from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
 #from geoalchemy import *
 from geoalchemy.postgis import PGComparator
-
+from shapely import wkb;
 
 from fgx.model.meta import Session, Base
 
@@ -134,33 +134,26 @@ class EngineType(Base):
 	
 
 	
-##=======================================================	
+##=======================================================
+# SELECT st_y(wkb_geometry) as lat, st_x(wkb_geometry) as lon, ident FROM fix limit 10;
+
 class Fix(Base):
 	
 	__tablename__ = 'fix'
 	
 	fix_pk = Column(Integer(), primary_key=True)
 	ident = Column(String(10), index=True, nullable=False)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
-	
-	## These can go later
-	lat = Column(String(15), index=True, nullable=False)
-	lon = Column(String(15), index=True, nullable=False)
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)	
 	
 	@property
-	def latp(self):
-		#print self.wkb_geometry.geometry_type
-		#dump(self.wkb_geometry)
-		#return self.wkb_geometry.coords[0]
-		#return self.wkb_geometry.x
-		return  "argh" #Session.scalar(self.wkb_geometry.x)
+	def lat(self):
+		return wkb.loads(str(self.wkb_geometry.geom_wkb)).x
 		
 	@property
-	def lonp(self):
-		return "lon" #str(self.wkb_geometry.coords[1])
+	def lon(self):
+		return wkb.loads(str(self.wkb_geometry.geom_wkb)).y
 	
 	def dic(self):
-		
 		return dict(ident=self.ident, nav_type="fix",
 					lat=self.lat, lon=self.lon)
 				
@@ -295,27 +288,48 @@ class MpBotInfo(Base):
 	last_check_end = Column(DateTime())
 
 ##=======================================================
-class NavSearch(Base):
+class NavAids(Base):
 	
-	__tablename__ = "nav_search"
+	__tablename__ = "navaid"
 	
-	ns_pk = Column(Integer(), primary_key=True)
-	
-	ident = Column(String(10), index=True)
-	name = Column(String(50), index=True)
+	navaid_pk = Column(Integer(), primary_key=True)
 	
 	nav_type = Column(String(10), index=True)
 	
-	"""
+	ident = Column(String(10), index=True)
+	name = Column(String(50), index=True)
+	freq = Column(String(10), index=True)
+	
 	elevation_ft = Column(Integer(), nullable=True)
 	elevation_m = Column(Integer(), nullable=True)
 	range_nm = Column(Integer(), nullable=True)
 	range_m = Column(Integer(), nullable=True)
-	"""
+	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	
+	
+	## MAYBE these props need to strings
+	@property
+	def lat(self):
+		return wkb.loads(str(self.wkb_geometry.geom_wkb)).x	
+	@property
+	def lon(self):
+		return wkb.loads(str(self.wkb_geometry.geom_wkb)).y
 
 	def __repr__(self):
-		return "<NavSearch: %s>" % (self.ident)
+		return "<NavAid: %s>" % (self.ident)
+		
+	def dic(self):
+		return { 'nav_type': self.nav_type,
+				'ident': self.ident,
+				'name': self.name,
+				'lat': self.lat,
+				'lon': self.lon,
+				'elevation_ft': self.elevation_ft,
+				'elevation_m': self.elevation_m,
+				'range_nm': self.range_nm,
+				'range_m': self.range_m,
+		}
 		
 GeometryDDL(NavSearch.__table__)	
 		
