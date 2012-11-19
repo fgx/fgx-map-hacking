@@ -79,13 +79,13 @@ get_store: function(){
 				{name: "apt_center_lon", type: 'string'},
 			],
 			proxy: new Ext.data.HttpProxy({
-				url: '/ajax/__SET_IN_CODE__',
+				url: '/ajax/airports',
 				method: "GET"
 			}),
-			root: 'rows',
+			root: 'airports',
 			remoteSort: false,
 			sortInfo: {
-				field: "ident", 
+				field: "apt_ident", 
 				direction: 'ASC'
 			}
 		});
@@ -101,14 +101,13 @@ get_apt_search_text: function(){
 		});
 		this.txtSearchApt.on("keypress", function(txtFld, e){
 			if( e.getKey() == e.ENTER ){
-				var t = this.get_ndb_search_text();
+				var t = this.get_apt_search_text();
 				t.setValue( t.getValue().trim() );
 				var txt = t.getValue();
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().proxy.setUrl("/ajax/TODO")
-				this.get_store().load({params: {q: txt, type: "ndb"}});
+				this.get_store().load({params: {q: txt, type: "airport"}});
 			}
 		}, this);
 	}
