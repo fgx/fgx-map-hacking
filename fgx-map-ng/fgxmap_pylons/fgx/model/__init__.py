@@ -288,7 +288,7 @@ class MpBotInfo(Base):
 	last_check_end = Column(DateTime())
 
 ##=======================================================
-class NavAids(Base):
+class NavAid(Base):
 	
 	__tablename__ = "navaid"
 	
@@ -300,15 +300,15 @@ class NavAids(Base):
 	name = Column(String(50), index=True)
 	freq = Column(String(10), index=True)
 	
-	elevation_ft = Column(Integer(), nullable=True)
-	elevation_m = Column(Integer(), nullable=True)
-	range_nm = Column(Integer(), nullable=True)
-	range_m = Column(Integer(), nullable=True)
+	elev_ft = Column(String(10), nullable=True)
+	elev_m = Column(String(10), nullable=True)
+	range_nm = Column(String(10), nullable=True)
+	range_m = Column(String(10), nullable=True)
 	
 	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
 	
 	
-	## MAYBE these props need to strings
+	## MAYBE these props need to return strings ?
 	@property
 	def lat(self):
 		return wkb.loads(str(self.wkb_geometry.geom_wkb)).x	
@@ -325,13 +325,13 @@ class NavAids(Base):
 				'name': self.name,
 				'lat': self.lat,
 				'lon': self.lon,
-				'elevation_ft': self.elevation_ft,
-				'elevation_m': self.elevation_m,
+				'elev_ft': self.elev_ft,
+				'elev_m': self.elev_m,
 				'range_nm': self.range_nm,
 				'range_m': self.range_m,
 		}
 		
-GeometryDDL(NavSearch.__table__)	
+GeometryDDL(NavAid.__table__)	
 		
 
 ##=======================================================
