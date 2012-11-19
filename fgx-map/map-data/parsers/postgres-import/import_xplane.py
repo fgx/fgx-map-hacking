@@ -395,7 +395,7 @@ def readxplane():
 			pad_length = Geodesic.WGS84.Inverse(float(pad_lat), float(pad_lon), float(pad_lat_end), float(pad_lon_end))
 			pad_length_meters = str(pad_length.get("s12"))
 			
-			print "Meters: "+pad_length_m
+			#print "Meters: "+pad_length_m
 			
 			pad_length_ft = float(pad_length_m)*3.048
 			
@@ -500,7 +500,7 @@ readxplane()
 # This is not that dangerous, because the apt_ident should
 # be unique anyway ...
 
-cur.execute("DELETE FROM airport WHERE apt_id NOT IN (SELECT MAX(dup.apt_id) FROM airport As dup GROUP BY dup.apt_ident);")
+cur.execute("DELETE FROM airport WHERE apt_pk NOT IN (SELECT MAX(dup.apt_pk) FROM airport As dup GROUP BY dup.apt_ident);")
 print "Removing duplicates ...\n"
 log.write("Duplicates removed.\n")
 conn.commit()
