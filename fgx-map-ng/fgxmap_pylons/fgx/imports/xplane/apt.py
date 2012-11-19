@@ -18,36 +18,6 @@ from sqlalchemy.sql.expression import func
 
 from fgx.model import meta, Airport, FGX_SRID
 
-"""
-if sys.argv[1] == "--help" or sys.argv[1] == "-h" or sys.argv[1] == "":
-print "Usage: python airport.py <file.dat>"
-sys.exit(0)
-
-if not os.path.exists(sys.argv[1]):
-		print "Sorry, file not here, and also not there. Check paths."
-		print "Usage: python airport.py <file.dat>"
-		sys.exit(0)
-"""
-
-#inputfile = sys.argv[1]
-
-#log = open("import_xplane.log", 'w')
-
-#starttime = time.asctime()
-#log.write("Import started: "+starttime+"\n")
-
-#conf = open('database.yaml')
-#confMap = yaml.load(conf)
-#conf.close()
-
-#fields = open('airport.yaml')
-#airportMap = yaml.load(fields)
-#fields.close()
-
-#connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
-
-#conn = psycopg2.connect(connectstring)
-#cur = conn.cursor()
 
 class Attr:
 	pointscollected = ""
@@ -72,21 +42,17 @@ class Attr:
 # Collect runway points to insert airport center with ST_Centroid for all runway points,
 # collect runway length to insert min/max runway length (feet)
 def collecting(A, points, rwy_len, rwy_approach_lighting):
-	#global pointscollected
+
 	A.pointscollected += points
 
-	#global runwaycount
 	A.runwaycount += 1
 
-	#global rwy_len_collect
 	A.rwy_len_collect.append(rwy_len)
 
 	# Check if there is an approach light and indicate if IFR is available or not
 	# Needs to be discussed this one
-	#global lightingcollected
 	A.lightingcollected += rwy_approach_lighting
 
-	#print rwy_len_collect
 
 # Look for min/max runway length in rwy_len_collect
 # prepared for a more sophisticated list type
@@ -96,8 +62,6 @@ def get_rwy_min_max(A):
 
 	lenlist = zip(A.rwy_len_collect)
 
-	#global apt_max_rwy_len_ft
-	#global apt_min_rwy_len_ft
 	A.apt_max_rwy_len_ft = int(round(float(map(max, zip(*lenlist))[0])*3.048))
 	A.apt_min_rwy_len_ft = int(round(float(map(min, zip(*lenlist))[0])*3.048))
 
@@ -121,12 +85,12 @@ def get_rwy_min_max(A):
 		apt_size = "small"
 
 def get_ifr(A):
-	#global apt_ifr
 	A.apt_ifr = 0
 	for i in A.lightingcollected:
 		if i != "0":
 			A.apt_ifr = 1
 
+			
 def get_authority(A, apt_name_ascii):
 	
 	if A.bcn_type == "4":
@@ -136,6 +100,8 @@ def get_authority(A, apt_name_ascii):
 			A.apt_authority = "clo"
 		else:
 			A.apt_authority = "civ"
+			
+			
 
 def insert_airport(A, apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
@@ -147,15 +113,8 @@ def insert_airport(A, apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, a
 	apt_rwy_count = A.runwaycount
 
 	# Geometry is reprojected to EPSG:3857, should become a command line parameter
-	sql = '''
-			INSERT INTO airport (apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
-			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
-
-	#print sql
-
-	#params = [apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, #apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
-	#cur.execute(sql, params)
-	## create sqllachey obj
+	
+	## Create new DB object and insert
 	ob = Airport()
 	ob.apt_ident = apt_identifier
 	ob.apt_name = apt_name_ascii
@@ -185,15 +144,6 @@ def import_dat(file_path, dev_mode=None, empty=None, verbose=None):
 
 
 	print "Processing: %s"  % file_path
-	#log.write("Processing "+inputfile+" ...\n")
-
-	#reader.next()
-	#reader.next()
-	#reader.next()
-	#reader.next()
-
-	#print "First 4 lines of apt.dat skipped."
-	#log.write("First 4 lines of apt.dat skipped.\n")
 
 	## Create a new attributes helper
 	A = Attr()
@@ -203,23 +153,13 @@ def import_dat(file_path, dev_mode=None, empty=None, verbose=None):
 		
 		c += 1
 		if c <= 4:
-			## Skip first three lines, redits etc
-			#print "sktip=", raw_line
+			## Skip first three lines
 			pass
 		
 		else:
-			print "=", raw_line
+			#print "=", raw_line
 			line = raw_line.strip()
 			
-			"""
-			global apt_identifier
-			global apt_name_ascii
-			global apt_elev_ft
-			global apt_elev_m
-			global apt_type
-			global apt_xplane_code
-			"""
-
 			# airport line
 			if line.startswith("1  "):
 
@@ -476,91 +416,30 @@ def import_dat(file_path, dev_mode=None, empty=None, verbose=None):
 
 			# One green and two white flashes means military airport - no civil aircraft allowed.
 			# xplane data beacon type code 4: military
-			#global bcn_type
-
 			if line.startswith("18 "):
 				bcn_type_read = line[31:32]
 				bcn_type = str(bcn_type_read)
 
 			# When there is a tower frequency, there are services probably
-			#global apt_services
-
 			if line.startswith("54 "):
 				apt_services = 1
 			else:
 				apt_services = 0
 
-			"""
-			global pointscollected
-			global runwaycount
-			global rwy_len_collect
-			global apt_max_rwy_len_ft
-			global apt_min_rwy_len_ft
-			global apt_size
-			global lightingcollected
-			global apt_ifr
-			global apt_center_lon
-			global apt_center_lat
-			global apt_authority
-			global apt_country
-			global apt_name_utf8
-			global apt_local_code
-			"""
 
 			if line == "":
-					# Now this is a new line, means a new airport
+				# Now this is a new line, means commit last before  a new airport
 
-					#warnings.filterwarnings("ignore", category=SyntaxWarning)
+				#try:
+				get_rwy_min_max(A)
+				get_ifr(A)
+				get_authority(A, apt_name_ascii)
+				insert_airport(A, apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 
-					#try:
-					get_rwy_min_max(A)
-					get_ifr(A)
-					get_authority(A, apt_name_ascii)
-					insert_airport(A, apt_identifier, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
-					conn.commit()
 
-					#except:
-					#		log.write("There is a suspicious line in apt.dat (probably wrong newline):\n")
-					#		log.write("Identifier of last airport line scanned: "+apt_identifier+"\n")
-					#		pass
-					A = Attr()
-					"""
-					pointscollected = ""
-					runwaycount = 0
-					rwy_len_collect = []
-					apt_max_rwy_len_ft = 0
-					apt_min_rwy_len_ft = 0
-					apt_size = ""
-					lightingcollected = []
-					apt_ifr = "0"
-					apt_center_lon = ""
-					apt_center_lat = ""
-					apt_authority = ""
-					apt_services = ""
-					apt_country = ""
-					apt_name_utf8 = ""
-					apt_local_code = ""
-					bcn_type = ""
-					"""
+				#except:
+				#		log.write("There is a suspicious line in apt.dat (probably wrong newline):\n")
+				#		log.write("Identifier of last airport line scanned: "+apt_identifier+"\n")
+				#		pass
+				A = Attr()
 
-#readxplane()
-
-# The parser has some tolerance with wrong newlines, but we
-# need to remove duplicates produced with tolerance.
-# This is not that dangerous, because the apt_identifier should
-# be unique anyway ...
-
-"""
-cur.execute("DELETE FROM airport WHERE apt_id NOT IN (SELECT MAX(dup.apt_id) FROM airport As dup GROUP BY dup.apt_identifier);")
-print "Removing duplicates ...\n"
-log.write("Duplicates removed.\n")
-conn.commit()
-
-cur.close()
-conn.close()
-
-endtime = time.asctime()
-log.write("Finished: "+endtime+"\n")
-
-log.close()
-"""
