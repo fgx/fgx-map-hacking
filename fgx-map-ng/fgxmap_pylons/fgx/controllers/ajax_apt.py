@@ -10,6 +10,7 @@ from fgx.lib.base import BaseController, render
 
 from fgx.lib.base import BaseController, render
 from fgx.model import meta, Airport
+from fgx.queries import airport
 
 log = logging.getLogger(__name__)
 
@@ -20,11 +21,18 @@ class AjaxAptController(BaseController):
 	
 		payload = {'success': True}
 
-		q = request.params['q'].upper()
+		q = h.v(request, "q")
+		bounds = h.v(request, "bounds")
+		
+		if q or bounds:
+			payload['airports'] = queries.airports(search=q, bounds=bounds, apt_type="all")
+		
+		else:
+			payload['error'] = "Need a ?search  or ?bounds "
+			payload['aiports'] = []
 			
-		obs = meta.Session.query(Airport).filter(Airport.apt_ident.contains(q)).limit(100).all()
 			
-		payload['airports'] = [ob.dic() for ob in obs]
+		
 			
 	
 		return payload
