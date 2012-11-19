@@ -183,34 +183,9 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
-	this.highLightMarkers = new OpenLayers.Layer.Vector(
-		"HighLight Markers"
-												 );
-	/*
-		{styleMap: new OpenLayers.StyleMap({
-			"default": {
-				strokeColor: "red",
-				strokeWidth: 1,
-				fillColor: "lime",
+	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
+	
 
-				
-				fontColor: "black",
-				fontSize: "12px",
-				fontFamily: "Helvetica, Arial, sans-serif",
-				fontWeight: "bold",
-				wwrotation : "${planerotation}",
-			},
-			"select": {
-				fillColor: "black",
-				strokeColor: "yellow",
-				pointRadius: 12,
-				fillOpacity: 1,
-			}
-		})
-		}, {  visibility: true}
-	)*/
-	
-	
 	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 		"Radar Markers", 
 		{styleMap: new OpenLayers.StyleMap({
@@ -384,46 +359,25 @@ constructor: function(config) {
 				
 					//== Map Type  
 					{xtype: 'buttongroup', 
-						title: 'Base Layer', width: 80, id: "fgx-settings-box", 
-						columns: 3,
+						title: 'Base Layer',
+						columns: 1,
 						items: [
-	
-							{text: "Landmass", group: "map_core", checked: true, iconCls: "icoOff", pressed: false,
-								xLayer: "ne_landmass", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
-							},
-							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
-								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
-							},
-							{text: "Lite", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
-								xLayer: "osm_light", 
-								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
-							}
+							{text: "Lite", iconCls: "icoYellow", width: 90, 
+								id: this.getId() + "map-base-button",
+								menu: [
+									{text: "Outline", group: "map_core", checked: true, xiconCls: "icoBlue", pressed: false,
+										xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+									},
+									{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen", pressed: false,
+										xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+									},
+									{text: "Light", group: "map_core", checked: false,  xiconCls: "icoYellow", pressed: true,
+										xLayer: "Light", 
+										handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+									}
 			
-							
-							
-							/*
-							{iconCls: "icoSettings", 
-								menu: {
-									items: [
-										{text: "Mode" ,
-											menu: {
-												items: [
-													{text: "Civilian mode - no military AF or vortac", group: "map_mode", 
-														checked: true, xCivMilMode: "civilian", handler: this.on_civmil_mode},
-													{text: "Military Mode - only military and vortac - TODO", group: "map_mode", 
-														checked: false, xCivMilMode: "military", disabled: true,
-														handler: this.on_civmil_mode
-													},
-													{text: "Both - TODO", group: "map_mode", 
-														checked: false, xCivMilMode: "all", disabled: true,
-														handler: this.on_civmil_mode
-													}
-												]
-											}
-										}
-									]
-								}
-							} */
+								]
+							}
 						]   
 					},
 					
@@ -565,12 +519,13 @@ constructor: function(config) {
 }, // Constructor	
 
 on_base_layer: function(butt, checked){
-	//console.log(butt.xLayer);
-	
-	if(checked){
-		this.set_base_layer(butt.text);
-	}
-	butt.setIconClass(checked ? "icoBlue" : "icoOff");
+	console.log(butt.xLayer);
+	var bbButton = Ext.getCmp( this.getId() + "map-base-button");
+	//if(checked){
+	this.set_base_layer(butt.xLayer);
+	//}
+	bbButton.setIconClass(butt.xiconCls);
+	bbButton.setText(butt.text);
 },
 
 set_base_layer: function(layer_name){
