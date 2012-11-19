@@ -20,7 +20,7 @@ from fgx.lib import helpers as h
 
 
 
-x_files = ['fix', 'nav', 'ndb', 'vor']
+x_files = ['fix', 'nav', 'ndb', 'vor', "apt"]
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
@@ -109,8 +109,16 @@ x_file = args[1]
 
 if command == "import":
 	
-	# @todo: tables
-	if x_file == "fix":
+
+	if x_file == "apt":
+		from fgx.imports.xplane import nav
+		database.empty_table("vor")
+		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		
+	
+	
+	elif x_file == "fix":
 	
 		from fgx.imports.xplane import fix
 		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
