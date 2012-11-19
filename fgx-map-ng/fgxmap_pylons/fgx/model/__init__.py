@@ -292,6 +292,17 @@ class MpBotInfo(Base):
 ##=======================================================
 class NavAid(Base):
 	
+	class NAV_TYPE:
+		
+		fix = "FIX"
+		ndb = "NDB"
+		
+		dme = "DME"
+		vor = "VOR"
+		vor_dme = "VOR-DME"
+		vortac = "VORTAC"
+		
+	
 	__tablename__ = "navaid"
 	
 	navaid_pk = Column(Integer(), primary_key=True)
@@ -300,7 +311,7 @@ class NavAid(Base):
 	
 	ident = Column(String(10), index=True)
 	name = Column(String(50), index=True)
-	freq = Column(String(10), index=True)
+	freq = Column(String(10), index=True, nullable=True)
 	
 	elev_ft = Column(String(10), nullable=True)
 	elev_m = Column(String(10), nullable=True)

@@ -79,20 +79,23 @@ this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title
 // Map Panels
 //=================================================================================
 
-this.on_open_map = function(lonLat, zoom, title){
+this.on_open_map = function(title, lat, lon, zoom, closable){
 	var newMap = new FGx.MapPanel({
 		title: title, closable: true, 
 		flightsStore: self.flightsStore,
-		lonLat: lonLat, zoom: zoom
+		lat: lat, lon: lon, zoom: zoom
 	});
-	console.log(self.flightsStore);
-	//newMap.on("OPEN_MAP", function(lonLat, zoom, title){
-	///	this.on_open_map(lonLat, zoom, title);
-	//, this);
 	this.tabPanel.add(newMap);
 	this.tabPanel.setActiveTab(newMap);
 	
 };
+
+this.on_goto = function(butt){
+	//var lonLat = new OpenLayers.LonLat(
+	//		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	//this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
+	this.on_open_map( butt.text, true, butt.lon, butt.lat, butt.zoom);
+}
 
 
 
@@ -107,7 +110,7 @@ this.on_open_map = function(lonLat, zoom, title){
 this.tabPanel = new Ext.TabPanel({
 	region: "center",
 	tabPosition: "top",
-	frame: false, plain: true,
+	frame: false, plain: true, border: false, bodyBorder: false,
 	activeItem: 0,
 	items: [
 		
@@ -141,45 +144,89 @@ this.add_map("Main Map", false, false, false, 0);
 
 
 
+
 this.viewport = new Ext.Viewport({
 	layout: "border",
 	frame: false,
 	plain: true,
-	border: 0,
+	border: false,
+	
 	items: [
 
 		//this.mapPanel,
-		this.tabPanel
-		/*
+		this.tabPanel,
+		
 		{xtype: "panel",
-			region: "west",
-			collapsible: true,
-			width: 200,
-			title: "Options",
+			region: "north",
+			frame: false, plain: true, border: false, hideBorders: true,
+			margins: {top:0, right:0, bottom:5, left:0},
+			hideHeader: true,
 			tbar: [
-				{xtype: 'buttongroup',
-					title: 'Refresh Secs',
-					columns: 7,
-					items: [
-						{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
-						{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
-							toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-						{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-							toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-						{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-							toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-						{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-							toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
-						{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-							toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-						{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-							toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
-					]   
-				}
 				
+				"-",
+				{text: "New Map", iconCls: "icoMapAdd", 				
+					menu: [
+						{text: "World", handler: this.on_goto, scope: this,
+							zoom: 5, lat: 47.467, lon: 8.5597,
+						},
+						"-",
+						{text: "Africa", disabled: true },
+						{text: "Austrailia" , disabled: true},
+						{text: "Europe" , disabled: true},
+						{text: "Far East" , disabled: true},
+						
+						{text: "USA" , disabled: true},
+						"-",
+						{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787, zoom: 10,
+							handler: this.on_goto, scope: this},
+						{text: "London", aptIdent: "EGLL",  lat: 51.484, lon: -0.1510, zoom: 10,
+							handler: this.on_goto, scope: this},
+						{text: "Paris", aptIdent: "LFPG", lat: 48.994, lon: 2.650, zoom: 10,
+							handler: this.on_goto, scope: this},
+						{text: "San Fransisco", aptIdent: "KSFO", lat: 37.621302, lon: -122.371216, zoom: 10,
+							handler: this.on_goto, scope: this},
+						{text: "Zurich", aptIdent: "LSZH", lat: 47.467, lon: 8.5597, zoom: 10,
+							handler: this.on_goto, scope: this},
+					]
+								
+				},
+				"-",
+				{text: "Flights", iconCls: "icoFlights", enableToggle: true, pressed: true},
+				
+				"-",
+				{text: "Server Status", iconCls: "icoMpServers"},
+				"-",
+				{text: "Settings", iconCls: "icoSettings"},
+				"-",
+				"->",
+				
+				
+				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
+				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
+					toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
+				{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+					toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
+				{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+					toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
+				{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+					toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
+				{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
+					toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
+				{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
+					toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled},
+					
+					
+					
+					{text: "Login", iconCls: "icoLogin"},
+					{text: "FGx", iconCls: "icoFgx", 
+						menu: [
+							{text: "Database Browser" }
+						]
+					}
+					
 			]
 		}
-		*/
+		
 		/* {region: 'east', width: 400, 
 			title: "FGx Map - Next Gen",
 			xtype: 'tabpanel',

@@ -122,7 +122,6 @@ if command == "import":
 	
 		from fgx.imports.xplane import fix
 		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
-		database.empty_table("fix")
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 
 	#elif x_file == "nav":

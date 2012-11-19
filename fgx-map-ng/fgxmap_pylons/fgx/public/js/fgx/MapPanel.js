@@ -492,22 +492,7 @@ constructor: function(config) {
 								
 							},*/
 							
-							{text: "New", iconCls: "icoMapAdd", scope: this, handler: this.on_goto, xtype: "splitbutton",
-								zoom: 5, lat: 47.467, lon: 8.5597,
-								menu: [
-									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787, zoom: 10,
-										handler: this.on_goto, scope: this},
-									{text: "London", aptIdent: "EGLL",  lat: 51.484, lon: -0.1510, zoom: 10,
-										handler: this.on_goto, scope: this},
-									{text: "Paris", aptIdent: "LFPG", lat: 48.994, lon: 2.650, zoom: 10,
-										handler: this.on_goto, scope: this},
-									{text: "San Fransisco", aptIdent: "KSFO", lat: 37.621302, lon: -122.371216, zoom: 10,
-										handler: this.on_goto, scope: this},
-									{text: "Zurich", aptIdent: "LSZH", lat: 47.467, lon: 8.5597, zoom: 10,
-										handler: this.on_goto, scope: this},
-								]
-								
-							},
+							
 							this.get_bookmark_button()
 						]   
 					}
@@ -700,9 +685,9 @@ show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 },
 
 on_goto: function(butt){
-	var lonLat = new OpenLayers.LonLat(butt.lon, butt.lat
-			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
+	//var lonLat = new OpenLayers.LonLat(butt.lon, butt.lat
+	//		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	this.fireEvent("OPEN_MAP", butt.text, true, butt.lon, butt.lat, butt.zoom);
 }
 
 

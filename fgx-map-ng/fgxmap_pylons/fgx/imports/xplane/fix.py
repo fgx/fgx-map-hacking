@@ -6,8 +6,9 @@ import datetime
 from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
-from fgx.model import meta, Fix, NavSearch, FGX_SRID
+from fgx.model import meta, NavAid, FGX_SRID
 from fgx.lib import helpers as h
+
 
 
 def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
@@ -19,13 +20,9 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 	
 	started = datetime.datetime.now()
 		
-	## Nuke existing entries
-	if empty:
-		if verbose > 0:
-			print "  > Emptied fix table"
-		Fix.objects.all().delete()
+	meta.Session.query(NavAid).filter_by(nav_type = NavAid.NAV_TYPE.fix).delete()
+	meta.Session.commit()
 	
-	#conn = db.session.condnection()
 
 	
 	c = 0
@@ -53,25 +50,15 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 			
 			ident = parts[2]
 
-			## Fix
-			ob = Fix()
-			
+			## Create DB object
+			ob = NavAid()
+			ob.nav_type = NavAid.NAV_TYPE.fix
 			ob.ident = ident
-			ob.lat = parts[0]
-			ob.lon = parts[1]
 			
 			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
-			meta.Session.add(ob)
 			
-			## Search
-			obs = NavSearch()
-			obs.nav_type = "fix"
-			obs.ident = ident
-			obs.name = None
-			obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
-			meta.Session.add(obs)
-			
+			meta.Session.add(ob)			
 			meta.Session.commit()
 			
 		
