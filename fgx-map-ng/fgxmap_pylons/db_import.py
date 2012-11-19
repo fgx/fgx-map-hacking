@@ -7,25 +7,14 @@
 # @version 0.1.exp
 # 
 
-
 import sys
 import os
 from optparse import OptionParser
 
-"""
-from www import shell
-from www import settings
-from www.fgx.dbase import db_utils
-"""
-##import shell_config
-
-##from paste.deploy import appconfig
-##from pylons import config
-
-import shell_config
-
+from shell_config import config
 
 from fgx.model import meta, MpServer
+from fgx.queries import database
 from fgx.lib import app_globals
 from fgx.lib import helpers as h
 
@@ -36,7 +25,6 @@ x_files = ['fix', 'nav', 'ndb', 'vor']
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
 usage += " commands: \n"
-usage += "    create - create database scbemas\n"
 usage += "    drop [tables] - eg drop fix ndb vor\n"
 usage += "    dropall - Drops ALL database tables\n"
 usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
@@ -80,20 +68,16 @@ command = args[0]
 
 #############################################################################
 
-## Create
-if command == "create":
+
 	
-	db_utils.create_all()
-	sys.exit(0)
-
-
 ## Drop All
 if command == "dropall":
 	
 	db_utils.drop_all_tables()
 	sys.exit(0)
 
-	
+
+
 ## Drop tables
 if command == "drop":
 	
@@ -102,7 +86,7 @@ if command == "drop":
 		sys.exit(1)
 	
 	for a in args[1:]:
-		db_utils.drop_table(a)
+		database.drop_table(a)
 	sys.exit(0)
 
 	
@@ -128,20 +112,27 @@ if command == "import":
 	# @todo: tables
 	if x_file == "fix":
 	
-		from fgx.xplane import fix
-		fix.import_dat(dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
-	
-	elif x_file == "nav":
-		from fgx.xplane import nav
-		nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		from fgx.imports.xplane import fix
+		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
+		database.empty_table("fix")
+		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+
+	#elif x_file == "nav":
+	#	from fgx.imports.xplane import nav
+	#	nav.import_dat(zip_dir=Z, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+
 	
 	elif x_file == "ndb":
-		from fgx.xplane import nav
-		nav.import_split_file(nav.NAV_TYPE.ndb, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		from fgx.imports.xplane import nav
+		database.empty_table("ndb")
+		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/2.dat"
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	elif x_file == "vor":
-		from fgx.xplane import nav
-		nav.import_split_file(nav.NAV_TYPE.vor, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		from fgx.imports.xplane import nav
+		database.empty_table("vor")
+		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	
 	

@@ -15,3 +15,7 @@ class HtmlPagesController(BaseController):
 
 	def database(self):
 		return render("database.html")
+		
+		
+	def admin_users(self):
+		return render("admin_users.html")

@@ -8,12 +8,12 @@
 # Abstract: OGCServer provides a Mapnik WMS server for your data
 
 import sys
-sys.path.append('/home/map/wmsserver')
+sys.path.append('/home/map/fgx-map/fgx-map/wmsserver')
 
 from ogcserver.cgiserver import Handler
 from jon import fcgi
 
 class OGCServerHandler(Handler):
-    configpath = '/home/map/wmsserver/ogcserver.conf'
+    configpath = '/home/map/fgx-map/fgx-map/wmsserver/ogcserver.conf'
 
 fcgi.Server({fcgi.FCGI_RESPONDER: OGCServerHandler}).run()

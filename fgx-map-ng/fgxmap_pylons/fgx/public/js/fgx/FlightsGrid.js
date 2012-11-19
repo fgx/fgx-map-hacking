@@ -19,7 +19,6 @@ render_altitude: function(v, meta, rec){
 //===========================================================
 //== Grid
 constructor: function(config) {
-	
 	config = Ext.apply({
 		sstitle: 'Flights',
 		iconCls: 'icoFlights',
@@ -104,15 +103,15 @@ constructor: function(config) {
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 
 				store: config.flightsStore,
-				displayInfo: true,
+				displayInfo: false,
 				pageSize: 500,
-				prependButtons: true	
+				prependButtons: false
 			})
 		]
 		
 	}, config);
 	FGx.FlightsGrid.superclass.constructor.call(this, config);
-} // Constructor	
+}, // Constructor	
 
 
 

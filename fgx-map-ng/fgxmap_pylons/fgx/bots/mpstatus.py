@@ -208,5 +208,8 @@ class MpStatusThread(threading.Thread):
 	
 	
 	
-	
+## TODO ping check
+# http://blog.boa.nu/2012/10/python-threading-example-creating-pingerpy.html
+
+
 	

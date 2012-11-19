@@ -41,9 +41,11 @@ body {
 }
 
 /* Set map Background Color vs opacity */
+/*
 .olMapViewport {
 	background-color: black;
 }
+*/
 
 /* ------------------------------------------------------------ */
 /*  TODO Move these to FGX */
@@ -72,8 +74,25 @@ body {
 .icoMpServers{background-image: url('http://ico.daffodil.uk.com/server_database.png') !important; background-repeat: no-repeat;}
 
 
-.icoFix{background-image: url('/images/vfr_fix.png') !important; background-repeat: no-repeat;}
-
 
 .icoCancel{background-image: url('http://ico.daffodil.uk.com/bullet_black.png') !important; background-repeat: no-repeat;}
 .icoSave{background-image: url('http://ico.daffodil.uk.com/accept.png') !important; background-repeat: no-repeat;}
+
+.icoClr{background-image: url('http://ico.daffodil.uk.com/go.gif') !important; background-repeat: no-repeat;}
+
+
+.icoRefreshStop{background-image: url('http://ico.daffodil.uk.com/clock_stop.png') !important; background-repeat: no-repeat;}
+.icoRefreshRun{background-image: url('http://ico.daffodil.uk.com/clock_run.png') !important; background-repeat: no-repeat;}
+
+
+.icoAirport{background-image: url('/images/apt.png') !important; background-repeat: no-repeat;}
+.icoFix{background-image: url('/images/vfr_fix.png') !important; background-repeat: no-repeat;}
+.icoNdb{background-image: url('/images/ndb.png') !important; background-repeat: no-repeat;}
+.icoVor{background-image: url('/images/vor.png') !important; background-repeat: no-repeat;}
+
+
+.icoUsers{background-image: url('http://ico.daffodil.uk.com/group.png') !important; background-repeat: no-repeat;}
+.icoUser{background-image: url('http://ico.daffodil.uk.com/user.png') !important; background-repeat: no-repeat;}
+.icoUserAdd{background-image: url('http://ico.daffodil.uk.com/user_add.png') !important; background-repeat: no-repeat;}
+.icoUserEdit{background-image: url('http://ico.daffodil.uk.com/user_edit.png') !important; background-repeat: no-repeat;}
+.icoUserDelete{background-image: url('http://ico.daffodil.uk.com/user_delete.png') !important; background-repeat: no-repeat;}

@@ -76,6 +76,26 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
+//======================================================
+// Airports Grid
+get_airports_grid: function(){
+	if(!this.xAirportsGrid){
+		
+		this.xAirportsGrid =  new FGx.AirportsGrid({});
+		/*
+		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+		*/		
+	}
+	return this.xAirportsGrid;
+},
 
 //======================================================
 // Flights Grid
@@ -128,19 +148,19 @@ get_nav_widget: function(){
 			var feature = new OpenLayers.Feature.Vector(circle, null, style);
 			this.highLightMarkers.addFeatures([feature]);
 			
-			console.log("ADD", feature);
+			//console.log("ADD", feature);
 		}, this);  
 			
 	}
 	return this.xNavWidget;
 },
 
-get_osm_dark: function(){
-	if(!this.xOsmDark){
-		this.xOsmDark = new OpenLayers.Layer.OSM.Mapnik( "Dark" );
-		this.xOsmDark.setOpacity(0.4);	
+get_osm_lite: function(){
+	if(!this.xOsmLite){
+		this.xOsmLite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
+		this.xOsmLite.setOpacity(0.4);	
 	}
-	return this.xOsmDark;
+	return this.xOsmLite;
 },
 
 get_bookmark_button: function(){
@@ -323,7 +343,7 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		/// Underlays
-		this.get_osm_dark(),
+		this.get_osm_lite(),
 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
 		
 		new OpenLayers.Layer.WMS(
@@ -374,7 +394,7 @@ constructor: function(config) {
 							{text: "OSM", group: "map_core", checked: false, iconCls: "icoOff", pressed: false,
 								xLayer: "osm_normal", toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							},
-							{text: "Dark", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
+							{text: "Lite", group: "map_core", checked: false,  iconCls: "icoBlue", pressed: true,
 								xLayer: "osm_light", 
 								toggleHandler: this.on_base_layer, scope: this, toggleGroup: "xBaseLayer"
 							}
@@ -509,7 +529,7 @@ constructor: function(config) {
 					"-",
 					{text: "Opacity", tooltip: "Click for default zoom"},
 					new GeoExt.LayerOpacitySlider({
-						layer: this.get_osm_dark(),
+						layer: this.get_osm_lite(),
 						aggressive: true, 
 						width: 150,
 						isFormField: true,
@@ -537,6 +557,7 @@ constructor: function(config) {
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
+					this.get_airports_grid(),
 					this.get_nav_widget(),
 					this.get_flights_grid(config.flightsStore)
 					
