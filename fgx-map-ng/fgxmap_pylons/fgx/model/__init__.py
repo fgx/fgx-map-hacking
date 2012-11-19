@@ -2,7 +2,7 @@
 
 
 from sqlalchemy import  Integer, String, Date, DateTime
-from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon
+from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
 #from geoalchemy import *
 from geoalchemy.postgis import PGComparator
 
@@ -28,15 +28,18 @@ class Airport(Base):
 	apt_name = Column(String(40), index=True, nullable=True)
 	apt_country = Column(String(2), nullable=True)
 	apt_type = Column(String(4), nullable=True)
+	
 	apt_elev_ft = Column(Integer(), nullable=True)
 	apt_elev_m = Column(Integer(), nullable=True)
-	apt_authority = Column(Integer(), nullable=True)
-	apt_services = Column(Integer(), nullable=True)
-	apt_ifr = Column(Integer(), nullable=True)
-	apt_size = Column(Integer(), nullable=True)
-	apt_center = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator, nullable=True)
+	apt_authority = Column(String(4), nullable=True)
+	apt_services = Column(String(10), nullable=True)
+	apt_ifr = Column(String(10), nullable=True)
+	apt_size = Column(String(10), nullable=True)
+	
+	apt_center = GeometryColumn(MultiPoint(srid=FGX_SRID), comparator=PGComparator, nullable=True)
 	apt_center_lat = Column(String(20), nullable=True)
 	apt_center_lon = Column(String(20), nullable=True)
+	
 	apt_rwy_count = Column(Integer(), nullable=True)
 	apt_min_rwy_len_ft = Column(Integer(), nullable=True)
 	apt_max_rwy_len_ft = Column(Integer(), nullable=True)

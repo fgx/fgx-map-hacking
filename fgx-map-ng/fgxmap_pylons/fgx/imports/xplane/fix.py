@@ -10,18 +10,6 @@ from fgx.model import meta, Fix, NavSearch, FGX_SRID
 from fgx.lib import helpers as h
 
 
-
-#import geos
-#from django.contrib.gis.geos import GEOSGeometry, Point
-
-"""
-from fgx.nav.models import Fix
-import settings
-"""
-
-#print "TEMP", settings.TEMP_DIR
-##UN_ZIP_DIR = h.G().temp_dir("/unzipped/xplane/")
-
 def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 	
 	##file_path = UN_ZIP_DIR + "/earth_fix.dat"

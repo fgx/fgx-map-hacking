@@ -111,10 +111,10 @@ if command == "import":
 	
 
 	if x_file == "apt":
-		from fgx.imports.xplane import nav
+		from fgx.imports.xplane import apt
 		database.empty_table("vor")
-		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
-		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		file_path = config['temp_dir'] + "/unzipped/xplane/apt.dat"
+		apt.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	
 	
