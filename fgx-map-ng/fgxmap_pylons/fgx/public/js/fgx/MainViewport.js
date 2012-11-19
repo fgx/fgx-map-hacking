@@ -52,12 +52,12 @@ this.flightsGrid = new FGx.FlightsGrid({
 	flightsStore: this.flightsStore,
 	refresh_rate: this.refresh_rate,
 	title: "Flights", 
-	closable: false,
+	closable: true,
 	xHidden: false
 });
 
 
-
+/*
 this.settingsWidget = new FGx.SettingsWidget({
 	runner: this.runner, refresh_rate: this.refresh_rate
 });
@@ -71,9 +71,9 @@ this.settingsWidget.on("SET_REFRESH", function(rate){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
 }, this);
+*/
 
-
-this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title: "Server Status"});
+//this.mpStatusGrid = new FGx.MpStatusGrid({flightsStore: this.flightsStore, title: "Server Status"});
 
 //=================================================================================
 // Map Panels
@@ -118,8 +118,8 @@ this.tabPanel = new Ext.TabPanel({
 		//this.mapPanels.base2,
 		
 		this.flightsGrid,
-		this.mpStatusGrid,
-		this.settingsWidget
+		//this.mpStatusGrid,
+		//this.settingsWidget
 	]
 	
 });
@@ -162,7 +162,7 @@ this.viewport = new Ext.Viewport({
 			margins: {top:0, right:0, bottom:5, left:0},
 			hideHeader: true,
 			tbar: [
-				
+				{xtype: 'tbspacer', width: 5},
 				"-",
 				{text: "New Map", iconCls: "icoMapAdd", 				
 					menu: [
@@ -191,15 +191,17 @@ this.viewport = new Ext.Viewport({
 								
 				},
 				"-",
+				{xtype: 'tbspacer', width: 50},
+				"-",
 				{text: "Flights", iconCls: "icoFlights", enableToggle: true, pressed: true},
 				
 				"-",
 				{text: "Server Status", iconCls: "icoMpServers"},
 				"-",
-				{text: "Settings", iconCls: "icoSettings"},
+				//{text: "Settings", iconCls: "icoSettings"},
+				//"-",
+				{xtype: 'tbspacer', width: 50},
 				"-",
-				"->",
-				
 				
 				{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 				{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
@@ -215,14 +217,16 @@ this.viewport = new Ext.Viewport({
 				{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
 					toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled},
 					
-					
-					
-					{text: "Login", iconCls: "icoLogin"},
-					{text: "FGx", iconCls: "icoFgx", 
-						menu: [
-							{text: "Database Browser" }
-						]
-					}
+				"->",	
+				"-",	
+				{text: "Login", iconCls: "icoLogin"},
+				"-",
+				{text: "FGx", iconCls: "icoFgx", 
+					menu: [
+						{text: "Database Browser" }
+					]
+				},
+				{xtype: 'tbspacer', width: 10}
 					
 			]
 		}
