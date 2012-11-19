@@ -14,7 +14,7 @@ get_display_projection: function(){
 },
 get_projection: function(){
 	if(!this.xProjection){
-		this.xProjection = OpenLayers.Projection("EPSG:3857");
+		this.xProjection = new OpenLayers.Projection("EPSG:3857");
 	}
 	return this.xProjection;
 },
@@ -339,6 +339,17 @@ get_layers: function(){
 //===========================================================
 //== CONSTRUCT
 constructor: function(config) {
+	console.log("constr", config.title, config.lat, config.lon);
+	
+	var ll;
+	if(config.lat || config.lon){
+		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat).transform(this.get_display_projection(), this.get_map().getProjectionObject() ); 
+		console.log("New: ", ll.x, ll.y);
+	}else{
+		ll = new OpenLayers.LonLat(6.240, 49.468).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
+		//new OpenLayers.LonLat(939262.20344, 5938898.34882);
+		console.log("Default: ", ll.x, ll.y);
+	}
 	
 	config = Ext.apply({
 		
@@ -351,8 +362,8 @@ constructor: function(config) {
 			{xtype: "gx_mappanel", region: "center",
 				frame: false, plain: true, border: 0,	bodyBorder: false,
 				map: this.get_map(),
-				center:  config.lonLat ? config.lonLat : new OpenLayers.LonLat(939262.20344,5938898.34882),
-				zoom: config.zoom ? config.zoom :5,
+				center:  ll, 
+				zoom: config.zoom ? config.zoom : 5,
 				layers: this.get_layers(),
 		
 				tbar: [

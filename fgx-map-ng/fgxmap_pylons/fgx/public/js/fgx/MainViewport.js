@@ -66,8 +66,9 @@ load_flights_grid: function(){
 //=================================================================================
 
 on_open_map:  function(title, lat, lon, zoom, closable){
+	console.log("on_open_map", title, lat, lon, zoom, closable);
 	var newMap = new FGx.MapPanel({
-		title: title, closable: true, 
+		title: title, closable: closable, 
 		flightsStore: self.flightsStore,
 		lat: lat, lon: lon, zoom: zoom
 	});
@@ -80,28 +81,11 @@ on_goto: function(butt){
 	//var lonLat = new OpenLayers.LonLat(
 	//		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	//this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
-	this.on_open_map( butt.text, true, butt.lon, butt.lat, butt.zoom);
+	this.on_open_map( butt.text, butt.lat, butt.lon, butt.zoom, true);
+	console.log("on_goto");
 },
 
 
-
-//this.mapPanels = {};
-/*
-ssadd_map: function(title, lat lon, zoom, closable){
-	var mapPanel = new FGx.MapPanel({
-		title: title, closable: closable, flightsStore: self.flightsStore,
-		lonLat: lonLat, zoom: zoom
-	});	
-	mapPanel.init();
-	if(idx == 0){
-		self.tabPanel.insert(idx, mapPanel);
-	}else{
-		self.tabPanel.add(mapPanel);
-	}
-	self.tabPanel.setActiveTab(mapPanel);
-	//mapPanel.on("OPEN_MAP", self.add_map, self);
-},
-*/
 //=======================================
 //== Tab Panel
 get_tab_panel: function(){
@@ -201,7 +185,21 @@ constructor: function(config) {
 					"-",
 					{text: "FGx", iconCls: "icoFgx", 
 						menu: [
-							{text: "Database Browser" }
+							{text: "Issues", xUrl: "http://fgx.ch/projects/fgx-map/issues",
+								handler: this.on_open_url, scope: this,
+							},
+							{text: "Git Source Code" ,
+								menu: [
+									{text: "cgit- recommended", xUrl: "http://git.fgx.ch/fgx-map/",
+										handler: this.on_open_url, scope: this },
+									{text: "Chili", xUrl: "http://fgx.ch/projects/fgx-map/",
+										handler: this.on_open_url, scope: this }
+								]
+							},
+							{text: "Database Browser" },
+						
+							
+							
 						]
 					},
 					{xtype: 'tbspacer', width: 10}
@@ -218,17 +216,24 @@ constructor: function(config) {
 
 initialize:  function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );
-	this.on_open_map("Main Map")
+//	: new OpenLayers.LonLat(939262.20344,5938898.34882),
+	this.on_open_map("Main Map", null, null, null, false)
 	
-if(this.refresh_rate > 0){
-	this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
-}
+	if(this.refresh_rate > 0){
+		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
+	}
 },
 
 //= Riggered for reshresh now
 on_refresh_now: function(){
 	this.store.load();
 },
+
+on_open_url: function(butt){
+	
+	window.open(butt.xUrl);
+	
+}
 
 
 }) //< FGx.MainViewport
