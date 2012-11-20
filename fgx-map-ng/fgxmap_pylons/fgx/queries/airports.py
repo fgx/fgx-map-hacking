@@ -51,7 +51,7 @@ def airports(search=None, bounds=None, apt_type=None, lookup=True):
 		sql += " and apt_type l= %s" % apt_type
 		
 	
-	return meta.query_to_dic(meta.Session.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
 	
 	
 	

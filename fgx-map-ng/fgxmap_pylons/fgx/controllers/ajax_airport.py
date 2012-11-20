@@ -31,8 +31,4 @@ class AjaxAirportController(BaseController):
 			payload['error'] = "Need a ?search  or ?bounds "
 			payload['aiports'] = []
 			
-			
-		
-			
-	
 		return payload

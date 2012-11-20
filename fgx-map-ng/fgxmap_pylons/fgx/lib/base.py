@@ -5,7 +5,7 @@ Provides the BaseController class for subclassing.
 from pylons.controllers import WSGIController
 from pylons.templating import render_jinja2 as render
 
-from fgx.model.meta import Session
+from fgx.model.meta import Sess
 
 class BaseController(WSGIController):
 
@@ -17,4 +17,5 @@ class BaseController(WSGIController):
         try:
             return WSGIController.__call__(self, environ, start_response)
         finally:
-            Session.remove()
+            Sess.data.remove()
+            Sess.secure.remove()

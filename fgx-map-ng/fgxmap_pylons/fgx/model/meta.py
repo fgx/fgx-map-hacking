@@ -5,7 +5,14 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 __all__ = ['Base', 'Session']
 
 # SQLAlchemy session manager. Updated by model.init_model()
-Session = scoped_session(sessionmaker())
+## Need this is object
+class SessionHolder(object):
+	pass
+
+Sess = SessionHolder()
+Sess.data = scoped_session(sessionmaker())
+Sess.secure = scoped_session(sessionmaker())
+#ession.data = scoped_session(sessionmaker())
 
 # The declarative Base
 Base = declarative_base()

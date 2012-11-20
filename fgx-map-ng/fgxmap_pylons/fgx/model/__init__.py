@@ -7,12 +7,13 @@ from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, Mul
 from geoalchemy.postgis import PGComparator
 from shapely import wkb;
 
-from fgx.model.meta import Session, Base
+from fgx.model.meta import Sess, Base
 
 
-def init_model(engine):
+def init_model(engines):
     """Call me before using any of the tables or classes in the model"""
-    Session.configure(bind=engine)
+    Sess.data.configure(bind=engines.data)
+    Sess.secure.configure(bind=engines.secure)
    
 FGX_SRID = 3857
 

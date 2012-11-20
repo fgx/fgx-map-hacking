@@ -48,7 +48,7 @@ def load_environment(global_conf, app_conf, start_bots):
 	)
 	
 	# Setup the SQLAlchemy database engine
-	class Engines:
+	class Engines(object):
 		pass
 	engines = Engines()
 	engines.data = engine_from_config(config, 'sql_data.')
