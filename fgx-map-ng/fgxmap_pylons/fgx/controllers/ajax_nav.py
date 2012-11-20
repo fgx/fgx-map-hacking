@@ -11,6 +11,7 @@ from fgx.lib import helpers as h
 
 from fgx.model import meta
 from fgx.model.data import NavAid
+from fgx.queries import navaids
 
 log = logging.getLogger(__name__)
 
@@ -22,7 +23,10 @@ class AjaxNavController(BaseController):
 	def navaids(self):
 		payload = {'success': True}
 		
+		search = h.v(request, "search")
+		nav_type = h.v(request, "nav_type")
 		
+		payload['rows'] = navaids.search(search=search, nav_type=nav_type)
 		
 		
 		return payload
