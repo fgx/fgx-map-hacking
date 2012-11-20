@@ -87,8 +87,7 @@ flightsGrid: 0,
 
 
 on_flights_widget: function(butt, checked){
-	console.log("on_flights_grid");
-	if(checked){
+	if(!this.flightsGrid){
 		this.flightsGrid = new FGx.FlightsGrid({
 			flightsStore: this.xFlightsStore,
 			refresh_rate: this.refresh_rate,
@@ -96,8 +95,8 @@ on_flights_widget: function(butt, checked){
 			closable: true,
 			xHidden: false
 		});
+		this.get_tab_panel().add(this.flightsGrid);
 	}
-	this.get_tab_panel().add(this.flightsGrid);
 	this.get_tab_panel().setActiveTab(this.flightsGrid);
 },
 
@@ -142,10 +141,9 @@ get_tab_panel: function(){
 		this.xTabPanel.on("tabchange", function(foo, bar){
 			console.log("tabchanged");
 		}, this);
-		this.xTabPanel.on("beforeremove", function(panel, widget){
-			console.log("beforeremove", panel, widget);
+		this.xTabPanel.on("remove", function(panel, widget){
 			if(widget.xType == "flights"){
-				Ext.getCmp(this.getId() + "butt-flights").toggle();
+				this.flightsGrid = 0;
 			}
 		}, this);
 	}
@@ -206,14 +204,12 @@ constructor: function(config) {
 					"-",
 					{xtype: 'tbspacer', width: 10},
 					"-",
-					{text: "Flights", iconCls: "icoFlights", id: this.getId() + "butt-flights", 
-							enableToggle: true, pressed: false, 
+					{text: "Flights", iconCls: "icoFlights", 
 							handler: this.on_flights_widget, scope: this
 					},
 					
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
-						enableToggle: true, pressed: false, id: this.getId() + "butt-server-status",
 						handler: this.on_server_status, scope: this
 					},
 					"-",

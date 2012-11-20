@@ -51,6 +51,7 @@ constructor: function(config) {
 	
 	config = Ext.apply({
 		iconCls: 'icoMpServers',
+		xType: "mpservers",
 		autoScroll: true,
 		autoWidth: true,
 		enableHdMenu: false,
