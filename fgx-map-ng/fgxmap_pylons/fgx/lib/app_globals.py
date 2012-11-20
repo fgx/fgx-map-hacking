@@ -22,7 +22,10 @@ class Globals(object):
 		
 		self.temp_dir = config['temp_dir']
 		
-
+		## This is the version used on javascript=/fgx_js.X/* ,,
+		## Js is send cached, so new change means incrementing this number and directory rename
+		self.fgx_js_version = 1
+		
 		#FGX_MP_SERVER = "mpserver14.flightgear.org"
 		#fgx_ = "217.150.241.103"
 		
