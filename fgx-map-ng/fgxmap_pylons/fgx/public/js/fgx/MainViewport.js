@@ -52,7 +52,7 @@ xFlightsStore: new Ext.data.JsonStore({
 //},
 
 update_flights: function(){
-	this.get_flights_store().load();
+	this.xFlightsStore.load();
 },
 
 on_refresh_toggled: function(butt, checked){
@@ -88,13 +88,15 @@ flightsGrid: 0,
 
 on_flights_widget: function(butt, checked){
 	console.log("on_flights_grid");
-	this.flightsGrid = new FGx.FlightsGrid({
-		flightsStore: this.xFlightsStore,
-		refresh_rate: this.refresh_rate,
-		title: "Flights", 
-		closable: true,
-		xHidden: false
-	});
+	if(checked){
+		this.flightsGrid = new FGx.FlightsGrid({
+			flightsStore: this.xFlightsStore,
+			refresh_rate: this.refresh_rate,
+			title: "Flights", 
+			closable: true,
+			xHidden: false
+		});
+	}
 	this.get_tab_panel().add(this.flightsGrid);
 	this.get_tab_panel().setActiveTab(this.flightsGrid);
 },
@@ -109,7 +111,7 @@ on_open_map:  function(title, lat, lon, zoom, closable){
 	console.log("on_open_map", title, lat, lon, zoom, closable);
 	var newMap = new FGx.MapPanel({
 		title: title, closable: closable, 
-		flightsStore: self.flightsStore,
+		flightsStore: this.xFlightsStore,
 		lat: lat, lon: lon, zoom: zoom
 	});
 	this.get_tab_panel().add(newMap);
@@ -138,7 +140,13 @@ get_tab_panel: function(){
 			activeItem: 0
 		});
 		this.xTabPanel.on("tabchange", function(foo, bar){
-			
+			console.log("tabchanged");
+		}, this);
+		this.xTabPanel.on("beforeremove", function(panel, widget){
+			console.log("beforeremove", panel, widget);
+			if(widget.xType == "flights"){
+				Ext.getCmp(this.getId() + "butt-flights").toggle();
+			}
 		}, this);
 	}
 	return this.xTabPanel;
@@ -269,7 +277,7 @@ get_refresh_buttons: function(refresh_rate){
 	for(var i = 0; i < arr.length; i++){
 		var x = arr[i];
 		items.push({
-			text: x == 0 ? "None" : x, 
+			text: x == 0 ? "Off" : x, 
 			iconCls: this.refresh_rate == x ? "icoOn" : "icoOff", 
 			enableToggle: true,   
 			width: this.tbw,

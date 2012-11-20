@@ -22,6 +22,7 @@ constructor: function(config) {
 	config = Ext.apply({
 		sstitle: 'Flights',
 		iconCls: 'icoFlights',
+		xType: "flights",
 		autoScroll: true,
 		autoWidth: true,
 		enableHdMenu: false,
