@@ -25,7 +25,6 @@ constructor: function(config) {
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
 				ssrenderer: this.render_callsign, width: 100
 			},
-			
 			{header: 'Name', dataIndex:'name', sortable: true,
 				ssrenderer: this.render_altitude
 			},

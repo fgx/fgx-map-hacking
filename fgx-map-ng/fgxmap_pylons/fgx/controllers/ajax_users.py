@@ -22,21 +22,21 @@ class AjaxUsersController(BaseController):
 		
 		
 	@jsonify
-	def user(self, user_pk):
+	def user(self, user_id):
 		payload = dict(success=True)
 		
-		user_pk = int(user_pk)
+		user_id = int(user_id)
 	
 		
 		if request.method == "POST":
 				
-			if user_pk == 0:
+			if user_id == 0:
 				
 				ob = User()
 				meta.Session.secure.add(ob)
 				
 			else:
-				ob = meta.Session.secure.query(User).get(user_pk)
+				ob = meta.Session.secure.query(User).get(user_id)
 				
 			
 				

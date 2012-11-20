@@ -25,16 +25,27 @@ get_form: function(){
 				labelWidth: 100
 			},
 			bodyStyle: "padding: 20px",
-			default: {
+			defaulta: {
 				labelAlign: "right",
 			},
 			items: [
-				{fieldLabel: "Name", xtype: "textfield", width: 200, name: "name"},
-				{fieldLabel: "Email", xtype: "textfield", width: 300, name: "lat"},
-				{fieldLabel: "Callsign", xtype: "textfield", width: 50, name: "lat"},
-				{fieldLabel: "Level", xtype: "textfield", width: 50, name: "lon"}
+				{fieldLabel: "Name", xtype: "textfield", width: 200, labelAlign: "right", name: "name"},
+				{fieldLabel: "Email", xtype: "textfield", width: 300, name: "email"},
+				{fieldLabel: "Callsign", xtype: "textfield", width: 50, name: "callsign"},
+				{fieldLabel: "Level", xtype: "combo", editable: false, name: "level",
+					triggerAction: 'all', lazyRender:true, mode: 'local',
+					store: new Ext.data.ArrayStore({
+						sssid: 0,
+						fields: [
+							'level',
+							'label'
+						],
+						data: [[0, 'No Login'], [1, 'Normal Access'], [2, 'Admin Access']]
+					}),
+					valueField: 'level',
+					displayField: 'label'
+				}
 			],
-			
 			buttons: [
 				{text: "Cancel", iconCls: "icoCancel", xtype: "button", scope: this, 
 					handler: function(){
