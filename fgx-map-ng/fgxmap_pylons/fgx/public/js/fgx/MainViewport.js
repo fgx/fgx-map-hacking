@@ -54,8 +54,10 @@ update_flights: function(){
 	this.get_flights_store().load();
 },
 
-on_refresh_toggled: function(butt){
-	//console.log("on_refresh_toggled", butt.refresh_rate);
+on_refresh_toggled: function(butt, checked){
+	console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
+	
+	butt.setIconClass( checked ? "icoOn" : "icoOff" );
 	
 	//= set new refresh var
 	this.refresh_rate = butt.refresh_rate;

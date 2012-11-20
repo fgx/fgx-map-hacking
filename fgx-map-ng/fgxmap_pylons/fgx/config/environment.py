@@ -48,8 +48,14 @@ def load_environment(global_conf, app_conf, start_bots):
 	)
 	
 	# Setup the SQLAlchemy database engine
-	engine = engine_from_config(config, 'sqlalchemy.')
-	init_model(engine)
+	class Engines:
+		pass
+	engines = Engines()
+	engines.data = engine_from_config(config, 'sql_data.')
+	engines.secure = engine_from_config(config, 'sql_secure.')
+	engines.contrib = engine_from_config(config, 'sql_contrib.')
+	
+	init_model(engines)
 
 	# CONFIGURATION OPTIONS HERE (note: all config options will override
 	# any Pylons config options)
