@@ -19,3 +19,4 @@ class BaseController(WSGIController):
         finally:
             Sess.data.remove()
             Sess.secure.remove()
+            Sess.mpnet.remove()

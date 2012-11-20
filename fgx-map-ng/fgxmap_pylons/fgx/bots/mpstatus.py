@@ -9,7 +9,7 @@ import telnetlib
 import pygeoip
 
 from fgx.model import meta
-from fgx.model.multiplayer import MpServer, MpBotInfo
+from fgx.model.mpnet import MpServer, MpBotInfo
 
 
 #print config
@@ -70,14 +70,14 @@ class MpStatusThread(threading.Thread):
 			#print ok, domain, details
 			if ok:
 				#results[details['host']] = details 
-				ob = meta.Session.query(MpServer).get(server_no)
+				ob = meta.Sess.mpnet.query(MpServer).get(server_no)
 				if ob == None:
 					ob = MpServer()
 					ob.no = server_no
 					ob.fqdn = self.host_name(server_no)
 					ob.lag = None
 					ob.last_seen = None
-					meta.Session.add(ob)
+					meta.Sess.mpnet.add(ob)
 					
 				ob.ip = details['ip']
 				ob.lat = details['lat']
@@ -87,13 +87,13 @@ class MpStatusThread(threading.Thread):
 				
 				ob.last_checked = datetime.datetime.now()
 				ob.status = "unknown"
-				meta.Session.commit()
+				meta.Sess.mpnet.commit()
 				
 				lag, flights = self.fetch_telnet(server_no, True)
 				if lag > 0:
 					ob.lag = lag
 					ob.last_seen = datetime.datetime.now()
-				meta.Session.commit()	
+				meta.Sess.mpnet.commit()	
 					
 				
 		return results
@@ -179,14 +179,14 @@ class MpStatusThread(threading.Thread):
 	def run(self):
 		print 'T> MpStatusThread: Status thread is started'
 		
-		botInfo = meta.Session.query(MpBotInfo).get(1)
+		botInfo = meta.Sess.mpnet.query(MpBotInfo).get(1)
 		if botInfo == None:
 			## This should only run on the first setup, 
 			botInfo = MpBotInfo()
-			meta.Session.add(botInfo)
+			meta.Sess.mpnet.add(botInfo)
 			
 		
-		meta.Session.commit()
+		meta.Sess.mpnet.commit()
 		
 		time.sleep(2)
 				
@@ -195,12 +195,12 @@ class MpStatusThread(threading.Thread):
 			print "\t MpStatusThread, awake then.. "
 			
 			botInfo.last_dns_start = datetime.datetime.now()
-			meta.Session.commit()
+			meta.Sess.mpnet.commit()
 			
 			self.lookup_all()
 			
 			botInfo.last_dns_end = datetime.datetime.now()
-			meta.Session.commit()
+			meta.Sess.mpnet.commit()
 			
 			
 			

@@ -132,7 +132,7 @@ get_store: function(){
 				{name: "lon", type: 'float'}
 			],
 			proxy: new Ext.data.HttpProxy({
-				url: '/ajax/__SET_IN_CODE__',
+				url: '/ajax/navaids',
 				method: "GET"
 			}),
 			root: 'rows',
@@ -165,8 +165,7 @@ get_fix_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().proxy.setUrl("/ajax/fix")
-				this.get_store().load({params: {q: txt, type: "fix"}});
+				this.get_store().load({params: {search: txt, nav_type: "fix"}});
 			}
 		}, this);
 	}
@@ -186,8 +185,7 @@ get_vor_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().proxy.setUrl("/ajax/vor")
-				this.get_store().load({params: {q: txt, type: "vor"}});
+				this.get_store().load({params: {search: txt, nav_type: "vor"}});
 			}
 		}, this);
 	}
@@ -207,8 +205,7 @@ get_ndb_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().proxy.setUrl("/ajax/ndb")
-				this.get_store().load({params: {q: txt, type: "ndb"}});
+				this.get_store().load({params: {search: txt, nav_type: "ndb"}});
 			}
 		}, this);
 	}

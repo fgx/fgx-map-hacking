@@ -9,7 +9,8 @@ from pylons import app_globals
 
 from fgx.lib.base import BaseController, render
 
-from fgx.model import meta, MpServer
+from fgx.model import meta
+from fgx.model.mpnet import MpServer
 
 log = logging.getLogger(__name__)
 
@@ -44,7 +45,7 @@ class AjaxMpnetController(BaseController):
 	@jsonify
 	def mpstatus(self):
 		payload = dict(success=True)
-		obs = meta.Session.query(MpServer).all()
+		obs = meta.Sess.mpnet.query(MpServer).all()
 		payload['mpservers'] = [ob.dic() for ob in obs]
 		
 		return payload

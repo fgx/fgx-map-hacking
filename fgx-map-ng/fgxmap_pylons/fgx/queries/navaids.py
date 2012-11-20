@@ -37,6 +37,7 @@ def search(search=None, nav_type=None, bounds=None):
 	if nav_type:
 		sql += " and nav_type = '%s' " % nav_type.upper()
 		
+	sql += "limit 100"
 	
 	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
 	

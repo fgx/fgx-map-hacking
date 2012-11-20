@@ -12,7 +12,7 @@ class SessionHolder(object):
 Sess = SessionHolder()
 Sess.data = scoped_session(sessionmaker())
 Sess.secure = scoped_session(sessionmaker())
-Sess.mp = scoped_session(sessionmaker())
+Sess.mpnet = scoped_session(sessionmaker())
 #Sess.tracker = scoped_session(sessionmaker())
 
 
@@ -22,7 +22,7 @@ class BaseContainer(object):
 Base = BaseContainer()
 Base.data = declarative_base()
 Base.secure = declarative_base()
-Base.mp = declarative_base()
+Base.mpnet = declarative_base()
 #Base.tracker = declarative_base()
 #Base.contrib = declarative_base()
 

@@ -53,7 +53,7 @@ def load_environment(global_conf, app_conf, start_bots):
 	engines = Engines()
 	engines.data = engine_from_config(config, 'sql_data.')
 	engines.secure = engine_from_config(config, 'sql_secure.')
-	engines.mp = engine_from_config(config, 'sql_multiplayer.')
+	engines.mpnet = engine_from_config(config, 'sql_mpnet.')
 	
 	init_model(engines)
 
@@ -65,9 +65,9 @@ def load_environment(global_conf, app_conf, start_bots):
 	##====================================================
 	## Start the background processes
 	if start_bots:
-		pass
-		#statusThread = MpStatusThread(config=config)
-		#statusThread.start()
+		#pass
+		statusThread = MpStatusThread(config=config)
+		statusThread.start()
 		
 
 	return config

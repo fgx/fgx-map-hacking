@@ -26,8 +26,12 @@ class AjaxNavController(BaseController):
 		search = h.v(request, "search")
 		nav_type = h.v(request, "nav_type")
 		
-		payload['rows'] = navaids.search(search=search, nav_type=nav_type)
+		if search:
+			payload['rows'] = navaids.search(search=search, nav_type=nav_type)
 		
+		else:
+			payload['rows'] = []
+			payload['error'] = "Need a ?search="
 		
 		return payload
 		
