@@ -1,0 +1,80 @@
+# waterway
+wwy_pk:
+    field: wwy_pk
+    type: serial PRIMARY KEY
+    size: 
+
+apt_ident:
+    field: apt_ident
+    type: varchar
+    size: 8
+
+wwy_ident:
+    field: wwy_ident
+    type: varchar
+    size: 8
+
+wwy_ident_end:
+    field: wwy_ident_end
+    type: varchar
+    size: 8
+
+wwy_width:
+    field: wwy_width
+    type: varchar
+    size: 32
+
+wwy_lon:
+    field: wwy_lon
+    type: varchar
+    size: 32
+
+wwy_lat:
+    field: wwy_lat
+    type: varchar
+    size: 32
+
+wwy_lon_end:
+    field: wwy_lon_end
+    type: varchar
+    size: 32
+
+wwy_lat_end:
+    field: wwy_lat_end
+    type: varchar
+    size: 32
+
+wwy_len_feet:
+    field: wwy_len_feet
+    type: varchar
+    size: 32
+
+wwy_len_meters:
+    field: wwy_len_meters
+    type: varchar
+    size: 32
+
+wwy_hdg:
+    field: wwy_hdg
+    type: varchar
+    size: 32
+
+wwy_hdg_end:
+    field: wwy_hdg_end
+    type: varchar
+    size: 32
+
+wwy_buoys:
+    field: wwy_buoys
+    type: varchar
+    size: 8
+
+wwy_poly:
+    field: wwy_poly
+    type: geometry(Polygon,3857)
+    size:
+
+wwy_xplane_code:
+    field: wwy_xplane_code
+    type: varchar
+    size: 8

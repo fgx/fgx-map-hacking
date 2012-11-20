@@ -1,0 +1,105 @@
+# helipad
+pad_pk:
+    field: pad_pk
+    type: serial PRIMARY KEY
+    size: 
+
+apt_ident:
+    field: apt_ident
+    type: varchar
+    size: 8
+
+pad_ident:
+    field: pad_ident
+    type: varchar
+    size: 8
+
+pad_width_m:
+    field: pad_width_m
+    type: varchar
+    size: 32
+
+pad_width_ft:
+    field: pad_width_ft
+    type: varchar
+    size: 32
+
+pad_lon:
+    field: pad_lon
+    type: varchar
+    size: 32
+
+pad_lat:
+    field: pad_lat
+    type: varchar
+    size: 32
+
+pad_lon_end:
+    field: pad_lon_end
+    type: varchar
+    size: 32
+
+pad_lat_end:
+    field: pad_lat_end
+    type: varchar
+    size: 32
+
+pad_len_ft:
+    field: pad_len_ft
+    type: varchar
+    size: 32
+
+pad_len_m:
+    field: pad_len_m
+    type: varchar
+    size: 32
+
+pad_hdg:
+    field: pad_hdg
+    type: varchar
+    size: 32
+
+pad_hdg_end:
+    field: pad_hdg_end
+    type: varchar
+    size: 32
+
+pad_marking:
+    field: pad_marking
+    type: varchar
+    size: 8
+
+pad_surface:
+    field: pad_surface
+    type: varchar
+    size: 8
+
+pad_shoulder:
+    field: pad_shoulder
+    type: varchar
+    size: 8
+
+pad_edge_lighting:
+    field: pad_edge_lighting
+    type: varchar
+    size: 8
+
+pad_app_lighting:
+    field: pad_app_lighting
+    type: varchar
+    size: 8
+
+pad_app_lighting:
+    field: pad_app_lighting
+    type: varchar
+    size: 8
+
+pad_poly:
+    field: pad_poly
+    type: geometry(Polygon,3857)
+    size:
+
+pad_xplane_code:
+    field: pad_xplane_code
+    type: varchar
+    size: 8

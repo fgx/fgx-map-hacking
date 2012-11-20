@@ -5,7 +5,9 @@
 # Do not change or remove this copyright notice.
 #
 
-import psycopg2, yaml, yaml.constructor
+import sys, psycopg2, yaml, yaml.constructor
+
+table = sys.argv[1]
 
 
 # getting a ordered dict for yaml, you will  need ordereddict backport
@@ -65,17 +67,17 @@ conf = open('database.yaml')
 confMap = yaml.load(conf)
 conf.close()
 
-fields = open('airport.yaml')
-airportMap = yaml.load(fields, OrderedDictYAMLLoader)
+fields = open(table+".yaml")
+tableMap = yaml.load(fields, OrderedDictYAMLLoader)
 fields.close()
 
-sqlstring = "CREATE TABLE airport ("
+sqlstring = "CREATE TABLE "+table+" ("
 
-for i in airportMap.keys():
-	if airportMap[i]['size'] == None:
-		sqlstring += airportMap[i]['field'] + " " + airportMap[i]['type'] + ","# \\\n"
+for i in tableMap.keys():
+	if tableMap[i]['size'] == None:
+		sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + ","# \\\n"
 	else:
-		sqlstring += airportMap[i]['field'] + " " + airportMap[i]['type'] + "(" + str(airportMap[i]['size']) + ")" + ","# \\\n"
+		sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + "(" + str(tableMap[i]['size']) + ")" + ","# \\\n"
 	
 sqlstring = sqlstring + ");"
 exe = sqlstring.replace(",);",");")
@@ -87,7 +89,7 @@ connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + "
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
 			
-cur.execute("DROP TABLE IF EXISTS airport;")
+cur.execute("DROP TABLE IF EXISTS "+table+";")
 
 cur.execute(exe)
 
@@ -95,7 +97,7 @@ conn.commit()
 cur.close()
 conn.close()
 
-print "--- CREATED TABLE: AIRPORT ---"
+print "--- CREATED TABLE: "+table+" ---"
 
 
 
