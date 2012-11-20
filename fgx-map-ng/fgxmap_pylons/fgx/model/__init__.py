@@ -1,13 +1,11 @@
 """The application's model objects"""
 
 
-from sqlalchemy import  Integer, String, Date, DateTime
-from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
-from geoalchemy.postgis import PGComparator
-from shapely import wkb;
+
 
 from fgx.model.meta import Sess, Base
-
+from fgx.model.data import *
+from fgx.model.secure import *
 
 def init_model(engines):
     """Call me before using any of the tables or classes in the model"""
@@ -15,5 +13,5 @@ def init_model(engines):
     Sess.secure.configure(bind=engines.secure)
     Sess.mp.configure(bind=engines.mp)
    
-FGX_SRID = 3857
+
 

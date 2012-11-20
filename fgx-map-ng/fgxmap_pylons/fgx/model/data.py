@@ -1,4 +1,16 @@
 
+from sqlalchemy import  Integer, String, Date, DateTime
+from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
+from geoalchemy.postgis import PGComparator
+from shapely import wkb
+
+from sqlalchemy import  Integer, String, Date, DateTime, Column
+
+from fgx.model.meta import Sess, Base
+
+
+FGX_SRID = 3857
+
 ##=======================================================
 class Airport(Base.data):
 	

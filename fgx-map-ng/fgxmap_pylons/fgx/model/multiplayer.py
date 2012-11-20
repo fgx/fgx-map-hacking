@@ -2,7 +2,6 @@
 
 from sqlalchemy import  Integer, String, Date, DateTime, Column
 
-
 from fgx.model.meta import Sess, Base
 
 
