@@ -135,7 +135,7 @@ get_store: function(){
 				url: '/ajax/navaids',
 				method: "GET"
 			}),
-			root: 'rows',
+			root: 'navaids',
 			remoteSort: false,
 			sortInfo: {
 				field: "ident", 

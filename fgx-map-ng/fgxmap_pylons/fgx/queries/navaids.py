@@ -8,7 +8,7 @@ def search(search=None, nav_type=None, bounds=None):
 	
 	
 	 ## The cols to return, this is a string with spces and split later
-	cols_str = "navaid_pk ident nav_type"
+	cols_str = "navaid_pk ident name nav_type"
 	
 	#if lookup == False:
 	#	## lookup returns short data, this is long so add other cols as required
@@ -20,7 +20,10 @@ def search(search=None, nav_type=None, bounds=None):
 	## now we make the select.. parts
 	sql, cols = meta.select_sql(cols_str)
 
-		
+	sql += ", ST_X(wkb_geometry) as lat,  ST_Y(wkb_geometry) as lon "
+	cols.append("lat")
+	cols.append("lon")
+	
 	## now the tables and joins
 	sql += " from navaid  "
 	
@@ -32,7 +35,8 @@ def search(search=None, nav_type=None, bounds=None):
 		sql += " and '((POINT(%s %s),(POINT(%s %s))'" % ()
 		
 	if search:
-		sql += " and ident ilike '%s' " % ("%" + search + "%")
+		sql += " and( ident ilike '%s' " % ("%" + search + "%")
+		sql += " or name ilike '%s' " % ("%" + search + "%") + ")"
 		
 	if nav_type:
 		sql += " and nav_type = '%s' " % nav_type.upper()

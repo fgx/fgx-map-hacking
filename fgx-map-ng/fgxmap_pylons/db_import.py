@@ -69,11 +69,11 @@ command = args[0]
 import shell_config 
 shell_config.configure(opts.ini)
 
-from fgx.model import meta
+#from fgx.model import meta
 #from fgx.modes.mp.MpServer
-from fgx.queries import database
-from fgx.lib import app_globals
-from fgx.lib import helpers as h
+#from fgx.queries import database
+#from fgx.lib import app_globals
+#from fgx.lib import helpers as h
 
 
 #############################################################################
@@ -141,8 +141,8 @@ if command == "import":
 	
 	elif x_file == "ndb":
 		from fgx.imports.xplane import nav
-		database.empty_table("ndb")
-		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/2.dat"
+		#database.empty_table("ndb")
+		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/nav_split/2.dat"
 		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	elif x_file == "vor":

@@ -12,7 +12,8 @@ from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
 from fgx.lib import helpers as h
-from fgx.model import meta, Ndb, Vor, NavSearch, FGX_SRID
+from fgx.model import meta
+from fgx.model.data import FGX_SRID, NavAid
 
 
 #import helpers as h
@@ -49,20 +50,19 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	ident = parts[7]
 	
 	## Ndb
-	ob = Ndb()
+	ob = NavAid()
+	ob.nav_type = NavAid.NAV_TYPE.ndb
 	ob.ident = ident
 	ob.name = " ".join(parts[8:])
 	
 	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
 	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
-	ob.lat = parts[1]
-	ob.lon = parts[2]
-	
-	
+	#ob.lat = parts[1]
+	#ob.lon = parts[2]
 	
 	elev_ft =  h.to_int(parts[3])
-	ob.elevation_ft = elev_ft if elev_ft > 0 else None
-	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048) if ob.elevation_ft else None
+	ob.elev_ft = elev_ft if elev_ft > 0 else None
+	ob.elev_m = int( float(ob.elev_ft) * 0.3048) if ob.elev_ft else None
 	
 	r_nm = h.to_int(parts[4])
 	ob.range_nm = r_nm if r_nm > 0 else None
@@ -70,19 +70,8 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	
 	ob.freq_khz = parts[4]  # TODO now come we have 4 didgit freq ??
 	
-	meta.Session.add(ob)
-	
-	## Search
-	"""
-	obs = NavSearch()
-	obs.nav_type = "ndb"
-	obs.ident = ident
-	obs.name = ob.name
-	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
-	meta.Session.add(obs)
-	"""
-	
-	meta.Session.commit()
+	meta.Sess.data.add(ob)
+	meta.Sess.data.commit()
 
 	
 ##===============================================================

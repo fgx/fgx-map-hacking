@@ -50,16 +50,16 @@ def make_map(config):
 	
 	
 	# Nav Aids
-	map.connect('/ajax/navaids', controller="ajax_nav", action="navaids")
+	map.connect('/ajax/navaids', controller="ajax_navaids", action="navaids")
 	
-	map.connect('/ajax/fix/{ident}', controller="ajax_nav", action="fix")
-	map.connect('/ajax/fix', controller="ajax_nav", action="fix")
+	map.connect('/ajax/fix/{ident}', controller="ajax_navaids", action="fix")
+	map.connect('/ajax/fix', controller="ajax_navaids", action="fix")
 	
-	map.connect('/ajax/ndb/{ident}', controller="ajax_nav", action="ndb")
-	map.connect('/ajax/ndb', controller="ajax_nav", action="ndb")
+	map.connect('/ajax/ndb/{ident}', controller="ajax_navaids", action="ndb")
+	map.connect('/ajax/ndb', controller="ajax_navaids", action="ndb")
 	
-	map.connect('/ajax/vor/{ident}', controller="ajax_nav", action="vor")
-	map.connect('/ajax/vor', controller="ajax_nav", action="vor")
+	map.connect('/ajax/vor/{ident}', controller="ajax_navaids", action="vor")
+	map.connect('/ajax/vor', controller="ajax_navaids", action="vor")
 	
 	
 

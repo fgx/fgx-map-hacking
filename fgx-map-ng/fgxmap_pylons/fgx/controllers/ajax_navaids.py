@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 
 
 
-class AjaxNavController(BaseController):
+class AjaxNavaidsController(BaseController):
 
 	@jsonify
 	def navaids(self):
@@ -27,7 +27,7 @@ class AjaxNavController(BaseController):
 		nav_type = h.v(request, "nav_type")
 		
 		if search:
-			payload['rows'] = navaids.search(search=search, nav_type=nav_type)
+			payload['navaids'] = navaids.search(search=search, nav_type=nav_type)
 		
 		else:
 			payload['rows'] = []
@@ -92,3 +92,4 @@ class AjaxNavController(BaseController):
 		
 		
 		return payload	
+		
