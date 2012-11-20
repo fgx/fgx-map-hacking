@@ -56,7 +56,7 @@ update_flights: function(){
 },
 
 on_refresh_toggled: function(butt, checked){
-	console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
+	//console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
 	
 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
 	
@@ -83,9 +83,6 @@ on_refresh_toggled: function(butt, checked){
 
 
 flightsGrid: 0,
-
-
-
 on_flights_widget: function(butt, checked){
 	if(!this.flightsGrid){
 		this.flightsGrid = new FGx.FlightsGrid({
@@ -100,7 +97,18 @@ on_flights_widget: function(butt, checked){
 	this.get_tab_panel().setActiveTab(this.flightsGrid);
 },
 
-
+mpStatusGrid: 0,
+on_mpstatus_widget: function(butt, checked){
+	if(!this.mpStatusGrid){
+		this.mpStatusGrid = new FGx.MpStatusGrid({
+			title: "Network Status", 
+			closable: true,
+			xHidden: false
+		});
+		this.get_tab_panel().add(this.mpStatusGrid);
+	}
+	this.get_tab_panel().setActiveTab(this.mpStatusGrid);
+},
 
 //=================================================================================
 // Map Panels
@@ -139,11 +147,13 @@ get_tab_panel: function(){
 			activeItem: 0
 		});
 		this.xTabPanel.on("tabchange", function(foo, bar){
-			console.log("tabchanged");
+			//console.log("tabchanged");
 		}, this);
 		this.xTabPanel.on("remove", function(panel, widget){
 			if(widget.xType == "flights"){
 				this.flightsGrid = 0;
+			}else if(widget.xType == "mpstatus"){
+				this.mpStatusGrid = 0;
 			}
 		}, this);
 	}
@@ -205,12 +215,12 @@ constructor: function(config) {
 					{xtype: 'tbspacer', width: 10},
 					"-",
 					{text: "Flights", iconCls: "icoFlights", 
-							handler: this.on_flights_widget, scope: this
+						handler: this.on_flights_widget, scope: this
 					},
 					
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
-						handler: this.on_server_status, scope: this
+						handler: this.on_mpstatus_widget, scope: this
 					},
 					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
@@ -218,9 +228,9 @@ constructor: function(config) {
 					{xtype: 'tbspacer', width: 50},
 					"-",
 					
-					{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
+					//{text: "&nbsp;Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 					this.get_refresh_buttons(),
-						
+					"-",	
 					"->",	
 					"-",	
 					{text: "Login", iconCls: "icoLogin", disabled: true},
@@ -273,7 +283,8 @@ get_refresh_buttons: function(refresh_rate){
 	for(var i = 0; i < arr.length; i++){
 		var x = arr[i];
 		items.push({
-			text: x == 0 ? "Off" : x, 
+			text: x == 0 ? "Off" : x < 10 ? x + "&nbsp;" : x, 
+			//width: 50,
 			iconCls: this.refresh_rate == x ? "icoOn" : "icoOff", 
 			enableToggle: true,   
 			width: this.tbw,
