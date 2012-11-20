@@ -19,11 +19,8 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
 refresh_rate: 0,
 runner: new Ext.util.TaskRunner(),
-							  
-on_refresh_toggled: function(){
-	console.log("on_refresh_toggled")
-},
 
+//= this store is passed around.. its global kinda
 get_flights_store: function(){
 	if(!this.xFlightsStore){
 		this.xFlightsStore = new Ext.data.JsonStore({
@@ -54,8 +51,32 @@ get_flights_store: function(){
 },
 
 update_flights: function(){
-	this.get_flights_store.load();
+	this.get_flights_store().load();
 },
+
+on_refresh_toggled: function(butt){
+	//console.log("on_refresh_toggled", butt.refresh_rate);
+	
+	//= set new refresh var
+	this.refresh_rate = butt.refresh_rate;
+	
+	//= stop any runners.. but this will/might callback though.. does not cancel sent request..
+	this.runner.stopAll();
+	
+	//= start again with new rate..
+	if(this.refresh_rate > 0){
+		this.runner.start({
+			interval: this.refresh_rate * 1000,
+			run: this.update_flights, 
+			scope: this		
+		});
+	}
+},
+
+
+
+
+
 
 
 flightsGrid: 0,
@@ -113,6 +134,9 @@ get_tab_panel: function(){
 			frame: false, plain: true, border: false, bodyBorder: false,
 			activeItem: 0
 		});
+		this.xTabPanel.on("tabchange", function(foo, bar){
+			
+		}, this);
 	}
 	return this.xTabPanel;
 },
@@ -188,18 +212,7 @@ constructor: function(config) {
 					"-",
 					
 					{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
-					{text: "Off", iconCls: "icoOn", pressed: true, enableToggle: true, scope: this,
-						toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-					{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-					{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-					{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 4, toggleHandler: this.on_refresh_toggled},
-					{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-					{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled},
+					this.get_refresh_buttons(),
 						
 					"->",	
 					"-",	
@@ -247,6 +260,26 @@ initialize:  function(){
 	}
 },
 
+get_refresh_buttons: function(refresh_rate){
+	var items = [];
+	var arr = [0, 2, 3, 4, 5, 10, 20];
+	for(var i = 0; i < arr.length; i++){
+		var x = arr[i];
+		items.push({
+			text: x == 0 ? "None" : x, 
+			iconCls: this.refresh_rate == x ? "icoOn" : "icoOff", 
+			enableToggle: true,   
+			width: this.tbw,
+			pressed: this.refresh_rate == x,
+			toggleGroup: "ref_rate", 
+			refresh_rate: x, 
+			toggleHandler: this.on_refresh_toggled,
+			scope: this
+		})
+	}
+	return items;
+},
+
 //= Riggered for reshresh now
 refresh_now: function(){
 	console.log("refresh_now");
@@ -255,9 +288,7 @@ refresh_now: function(){
 },
 
 on_open_url: function(butt){
-	
 	window.open(butt.xUrl);
-	
 }
 
 
