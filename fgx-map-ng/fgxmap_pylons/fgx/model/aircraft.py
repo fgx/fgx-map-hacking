@@ -1,7 +1,7 @@
 
 	
 ##=======================================================
-class Aircraft(Base):
+class Aircraft(Base.aircraft):
 	
 	__tablename__ = "aircraft"
 	
@@ -26,7 +26,7 @@ class Aircraft(Base):
 
 
 	
-class EngineType(Base):
+class EngineType(Base.aircraft):
 	
 	__tablename__ = "engine_type"
 		
@@ -40,7 +40,7 @@ class EngineType(Base):
 
 
 
-class Manufacturer(Base):
+class Manufacturer(Base.aircraft):
 	
 	__tablename__ = "manufacturer"
 	

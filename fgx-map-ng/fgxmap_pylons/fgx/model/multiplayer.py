@@ -9,7 +9,7 @@ from fgx.model.meta import Sess, Base
 ##=================================================================
 ## MpServer
 ##=================================================================
-class MpServer(Base):
+class MpServer(Base.mp):
 	
 	__tablename__ = 'mp_server'
 	
@@ -69,7 +69,7 @@ class MpServer(Base):
 ##=================================================================
 
 ## Records when the bot last did a DNS check
-class MpBotInfo(Base):
+class MpBotInfo(Base.mp):
 	
 	__tablename__ = "mp_bot_info"
 

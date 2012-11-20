@@ -53,7 +53,7 @@ def load_environment(global_conf, app_conf, start_bots):
 	engines = Engines()
 	engines.data = engine_from_config(config, 'sql_data.')
 	engines.secure = engine_from_config(config, 'sql_secure.')
-	#engines.contrib = engine_from_config(config, 'sql_contrib.')
+	engines.mp = engine_from_config(config, 'sql_multiplayer.')
 	
 	init_model(engines)
 

@@ -1,6 +1,6 @@
 
 ##=======================================================
-class Airport(Base):
+class Airport(Base.data):
 	
 	__tablename__ = "airport"
 	
@@ -39,7 +39,7 @@ GeometryDDL(Airport.__table__)
 
 	
 ##=======================================================
-class Aero(Base):
+class Aero(Base.data):
 	
 	__tablename__ = "aircraft"
 	
@@ -63,7 +63,7 @@ class Aero(Base):
 	
 	
 ##=======================================================
-class Country(Base):
+class Country(Base.data):
 	
 	__tablename__ = "country"
 	
@@ -73,7 +73,7 @@ class Country(Base):
 	
 
 ##=======================================================
-class Ils(Base):
+class Ils(Base.data):
 	
 	__tablename__ = "ils"
 	
@@ -107,7 +107,7 @@ GeometryDDL(Airport.__table__)
 
 
 ##=======================================================
-class NavAid(Base):
+class NavAid(Base.data):
 	
 	class NAV_TYPE:
 		
@@ -168,7 +168,7 @@ GeometryDDL(NavAid.__table__)
 
 
 ##=======================================================
-class Runway(Base):
+class Runway(Base.data):
 	
 	__tablename__ = "runway"
 	
@@ -185,7 +185,7 @@ class Runway(Base):
 GeometryDDL(Runway.__table__)	
 
 ##=======================================================
-class Threshold(Base):
+class Threshold(Base.data):
 	
 	__tablename__ = "threshold"
 
