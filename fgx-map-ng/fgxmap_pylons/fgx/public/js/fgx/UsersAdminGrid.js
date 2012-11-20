@@ -41,7 +41,11 @@ constructor: function(config) {
 				title: 'Actions',
 				columns: 3,
 				items: [
-					{text: "New", iconCls: "icoUserAdd",  handler: this.on_refresh_now, scope: this},
+					{text: "New", iconCls: "icoUserAdd",  scope: this,
+						handler: function(){
+							this.edit_user(0);
+						}
+					},
 					this.action_edit(),
 					this.action_delete()
 				]
@@ -74,7 +78,7 @@ get_store: function(){
 				{name: "lon", type: 'float'}
 			],
 			proxy: new Ext.data.HttpProxy({
-				url: '/ajax/__SET_IN_CODE__',
+				url: '/ajax/users',
 				method: "GET"
 			}),
 			root: 'rows',
@@ -131,7 +135,7 @@ action_delete: function(){
 },
 
 edit_user: function(user_id){
-	var d = new UserAdminDialog();
+	var d = new FGx.UserAdminDialog();
 	d.run_show();
 },
 

@@ -1,7 +1,6 @@
 
 import urllib2
 import logging
-#import simplejson as json
 
 from pylons import response
 from pylons.decorators import jsonify
