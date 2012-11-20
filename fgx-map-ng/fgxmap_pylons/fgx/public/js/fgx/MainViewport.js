@@ -115,6 +115,7 @@ on_mpstatus_widget: function(butt, checked){
 //=================================================================================
 
 on_open_map:  function(title, lat, lon, zoom, closable){
+	console.log("-----------------------------------------");
 	console.log("on_open_map", title, lat, lon, zoom, closable);
 	var newMap = new FGx.MapPanel({
 		title: title, closable: closable, 
@@ -127,11 +128,7 @@ on_open_map:  function(title, lat, lon, zoom, closable){
 },
 
 on_goto: function(butt){
-	//var lonLat = new OpenLayers.LonLat(
-	//		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	//this.fireEvent("OPEN_MAP", butt.text, true, lonLat, butt.zoom);
 	this.on_open_map( butt.text, butt.lat, butt.lon, butt.zoom, true);
-	console.log("on_goto");
 },
 
 

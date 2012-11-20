@@ -7,16 +7,7 @@ FGx.MapPanel = Ext.extend(Ext.Panel, {
 	
 //var self = this;
 get_display_projection: function(){
-	if(!this.xDisplayProjection){
-		this.xDisplayProjection = new OpenLayers.Projection("EPSG:4326");
-	}
-	return this.xDisplayProjection;
-},
-get_projection: function(){
-	if(!this.xProjection){
-		this.xProjection = new OpenLayers.Projection("EPSG:3857");
-	}
-	return this.xProjection;
+	return new OpenLayers.Projection("EPSG:4326");
 },
 
 get_map: function(){
@@ -25,7 +16,7 @@ get_map: function(){
 			allOverlays: false,
 			units: 'm',
 			// this is the map projection here
-			projection: this.get_projection(),
+			projection: new OpenLayers.Projection("EPSG:3857"), // this.get_projection(),
 			//sphericalMercator: true,
 			
 			// this is the display projection, I need that to show lon/lat in degrees and not in meters
@@ -51,8 +42,11 @@ get_map: function(){
 			zoomLevels: 20
 		});
 		this.xMap.events.register("mousemove", this, function (e) {
-			var pos = this.get_map().getLonLatFromViewPortPx(e.xy);
+			var pos = this.get_map().getLonLatFromViewPortPx(e.xy		
+				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
 			// TODO make sense
+			//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+			//	).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 			this.lbl_lat().setValue(pos.lat);
 			this.lbl_lon().setValue(pos.lon);
 		});
@@ -339,18 +333,19 @@ get_layers: function(){
 //===========================================================
 //== CONSTRUCT
 constructor: function(config) {
+	
 	console.log("constr", config.title, config.lat, config.lon);
 	
 	var ll;
 	if(config.lat || config.lon){
-		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat).transform(this.get_display_projection(), this.get_map().getProjectionObject() ); 
-		console.log("New: ", ll.x, ll.y);
+		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat
+			).transform(this.get_display_projection(), this.get_map().getProjectionObject() ); 
+		ll.xFlag = "New";
 	}else{
-		ll = new OpenLayers.LonLat(6.240, 49.468).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
-		//new OpenLayers.LonLat(939262.20344, 5938898.34882);
-		console.log("Default: ", ll.x, ll.y);
+		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
+		ll.xFlag = "Default"
 	}
-	
+	//console.log(ll.xFlag, ll.x, ll.y);
 	config = Ext.apply({
 		
 		
@@ -373,20 +368,19 @@ constructor: function(config) {
 						title: 'Base Layer',
 						columns: 1,
 						items: [
-							{text: "Lite", iconCls: "icoYellow", width: 90, 
+							{text: "Light", iconCls: "icoYellow", width: 90, 
 								id: this.getId() + "map-base-button",
 								menu: [
-									{text: "Outline", group: "map_core", checked: true, xiconCls: "icoBlue", pressed: false,
+									{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
 										xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 									},
-									{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen", pressed: false,
+									{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
 										xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 									},
-									{text: "Light", group: "map_core", checked: false,  xiconCls: "icoYellow", pressed: true,
+									{text: "Light", group: "map_core", checked: true,  xiconCls: "icoYellow",
 										xLayer: "Light", 
 										handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 									}
-			
 								]
 							}
 						]   
