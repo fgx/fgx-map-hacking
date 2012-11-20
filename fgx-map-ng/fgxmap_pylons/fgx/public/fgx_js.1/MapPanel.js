@@ -443,7 +443,9 @@ constructor: function(config) {
 				//== Bottom Toolbar
 				bbar: [
 
-					{text: "Zoom", tooltip: "Click for default zoom"},
+					{text: "Zoom", tooltip: "Click for default zoom",
+						zoom: 4, handler: this.on_zoom_to, scope: this
+					},
 					new GeoExt.ZoomSlider({
 						map: this.get_map(),
 						aggressive: true,                                                                                                                                                   
@@ -452,8 +454,13 @@ constructor: function(config) {
 							template: "<div>Zoom Level: {zoom}</div>"
 						})
 					}),
+					{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
+					{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
+					{text: "10", zoom: 14, handler: this.on_zoom_to, scope: this},
+					{text: "&nbsp;5&nbsp;", zoom: 16, handler: this.on_zoom_to, scope: this},
+					{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
 					"-",
-					{text: "Opacity", tooltip: "Click for default zoom"},
+					{text: "Opacity", tooltip: "Click for default opacity"},
 					new GeoExt.LayerOpacitySlider({
 						layer: this.get_osm_lite(),
 						aggressive: true, 
@@ -540,7 +547,9 @@ on_civmil_mode: function(butt, checked){
 },
 
 
-
+on_zoom_to: function(butt){
+	this.get_map().zoomTo( butt.zoom );
+},
 
 init: function(){
 

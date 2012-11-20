@@ -24,10 +24,13 @@ get_form: function(){
 				
 				labelWidth: 100
 			},
-			bodyStyle: "padding: 50px",
+			bodyStyle: "padding: 20px",
+			default: {
+				labelAlign: "right",
+			},
 			items: [
-				{fieldLabel: "Name", xtype: "textfield", width: 100, name: "name"},
-				{fieldLabel: "Email", xtype: "textfield", width: 250, name: "lat"},
+				{fieldLabel: "Name", xtype: "textfield", width: 200, name: "name"},
+				{fieldLabel: "Email", xtype: "textfield", width: 300, name: "lat"},
 				{fieldLabel: "Callsign", xtype: "textfield", width: 50, name: "lat"},
 				{fieldLabel: "Level", xtype: "textfield", width: 50, name: "lon"}
 			],
