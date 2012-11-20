@@ -223,7 +223,41 @@ def insert_waterway(apt_ident,\
 	params = [apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_feet, wwy_len_meters, wwy_hdg, wwy_hdg_end, wwy_buoys,wwy_xplane_code, wwy_poly]
 	cur.execute(sql, params)
 	
-	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","				
+	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","			
+	
+def insert_helipad(apt_ident,\
+				pad_ident,\
+				pad_lon,\
+				pad_lat,\
+				pad_lon_end,\
+				pad_lat_end,\
+				pad_hdg,\
+				pad_hdg_end,\
+				pad_len_m,\
+				pad_len_ft,\
+				pad_width_m,\
+				pad_width_ft,\
+				pad_surface,\
+				pad_marking,\
+				pad_shoulder,\
+				pad_edge_lighting,\
+				pad_app_lighting,\
+				pad_xplane_code,\
+				A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon):
+				
+	# Coordinate ordering is (x, y) -- that is (lon, lat)
+	# Polygon needs to be closed, repeating starting point
+	pad_poly = "POLYGON (( " + str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + "," + str(A_lon) + " " + str(A_lat) + " ))"
+	#print wwy_polygon
+	
+	# Geometry is reprojected to EPSG:3857
+	sql = '''
+		INSERT INTO helipad (apt_ident, pad_ident, pad_lon, pad_lat, pad_lon_end, pad_lat_end, pad_hdg, pad_hdg_end, pad_len_m, pad_len_ft, pad_width_m, pad_width_ft, pad_surface, pad_marking, pad_shoulder, pad_edge_lighting, pad_app_lighting, pad_xplane_code, pad_poly)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
+	params = [apt_ident, pad_ident, pad_lon, pad_lat, pad_lon_end, pad_lat_end, pad_hdg, pad_hdg_end, pad_len_m, pad_len_ft, pad_width_m, pad_width_ft, pad_surface, pad_marking, pad_shoulder, pad_edge_lighting, pad_app_lighting, pad_xplane_code, pad_poly]
+	cur.execute(sql, params)
+	
+	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","	
 
 def readxplane():
 	reader = open(inputfile, 'r')
@@ -449,18 +483,18 @@ def readxplane():
 		# so we look out for (H)
 		if line.startswith("102 ") and apt_name_ascii.startswith("[H]"):
 		
-			pad_linecode = line[0:3]
-			pad_id = str(line[4:6])
+			pad_xplane_code = line[0:3]
+			pad_ident = str(line[4:6])
 			pad_lat_read = line[7:19]
 			pad_lon_read = line[21:33]
-			pad_heading_tr = line[34:41]
-			pad_length_m = line[42:49]
+			pad_hdg = line[34:41]
+			pad_len_m = line[42:49]
 			pad_width_m = line[50:57]
 			pad_surface = line[58:61]
 			pad_marking = line[61:63]
 			pad_shoulder = line[65:67]
 			pad_smoothness = line[68:72]
-			pad_edgelighting = line[73]
+			pad_edge_lighting = line[73]
 			
 			pad_app_lighting = "0"
 			
@@ -468,47 +502,50 @@ def readxplane():
 			
 			# We get the centerpoint of the pad, but we want the center point at shape start, 
 			# to get it calculated like runways and to prevent me from writing all separated for pads
-			pad_direct = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_heading_tr)-180.0,(float(pad_length_m))/2)
+			pad_direct = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_hdg)-180.0,(float(pad_len_m))/2)
 			pad_lat = pad_direct.get("lat2")
 			pad_lon = pad_direct.get("lon2")
 			
-			pad_direct_end = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_heading_tr),(float(pad_length_m)))
+			pad_direct_end = Geodesic.WGS84.Direct(float(pad_lat_read),float(pad_lon_read),float(pad_hdg),(float(pad_len_m)))
 			pad_lat_end = pad_direct_end.get("lat2")
 			pad_lon_end = pad_direct_end.get("lon2")
 			
-			pad_length = Geodesic.WGS84.Inverse(float(pad_lat), float(pad_lon), float(pad_lat_end), float(pad_lon_end))
-			pad_length_meters = str(pad_length.get("s12"))
+			pad_len = Geodesic.WGS84.Inverse(float(pad_lat), float(pad_lon), float(pad_lat_end), float(pad_lon_end))
+			pad_len_m = str(pad_len.get("s12"))
 			
-			#print "Meters: "+pad_length_m
+			#print "Meters: "+pad_len_m
 			
-			pad_length_ft = float(pad_length_m)*3.048
+			pad_len_ft = float(pad_len_m)*3.048
+			pad_width_ft = float(pad_width_m)*3.048
 			
-			pad_heading = pad_length.get("azi2")
+			pad_hdg = pad_len.get("azi2")
 			
-			pad_length_end = Geodesic.WGS84.Inverse(float(pad_lat_end), float(pad_lon_end), float(pad_lat), float(pad_lon))
-			pad_heading_end = str(360.0 + pad_length_end.get("azi2"))
+			pad_len_end = Geodesic.WGS84.Inverse(float(pad_lat_end), float(pad_lon_end), float(pad_lat), float(pad_lon))
+			pad_hdg_end = str(360.0 + pad_len_end.get("azi2"))
 
 			# Calculating runway points
-			pad_direct_A = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading-90.0),(float(pad_width_m))/2)
+			pad_direct_A = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_hdg-90.0),(float(pad_width_m))/2)
 			A_lat = pad_direct_A.get("lat2")
 			A_lon = pad_direct_A.get("lon2")
 			
-			pad_direct_B = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_heading+90.0),(float(pad_width_m))/2)
+			pad_direct_B = Geodesic.WGS84.Direct(float(pad_lat),float(pad_lon),float(pad_hdg+90.0),(float(pad_width_m))/2)
 			B_lat = pad_direct_B.get("lat2")
 			B_lon = pad_direct_B.get("lon2")
 			
-			pad_direct_C = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)-90.0,(float(pad_width_m))/2)
+			pad_direct_C = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_hdg_end)-90.0,(float(pad_width_m))/2)
 			C_lat = pad_direct_C.get("lat2")
 			C_lon = pad_direct_C.get("lon2")
 			
-			pad_direct_D = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_heading_end)+90.0,(float(pad_width_m))/2)
+			pad_direct_D = Geodesic.WGS84.Direct(float(pad_lat_end),float(pad_lon_end),-360.0 + float(pad_hdg_end)+90.0,(float(pad_width_m))/2)
 			D_lat = pad_direct_D.get("lat2")
 			D_lon = pad_direct_D.get("lon2")
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, pad_length_meters, pad_app_lighting)
+			collecting(points, pad_len_m, pad_app_lighting)
 			
+			insert_helipad(apt_ident, pad_ident, pad_lon, pad_lat, pad_lon_end, pad_lat_end, pad_hdg, pad_hdg_end, pad_len_m, pad_len_ft, pad_width_m, pad_width_ft, pad_surface, pad_marking, pad_shoulder, pad_edge_lighting, pad_app_lighting, pad_xplane_code,\
+			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 		# One green and two white flashes means military airport - no civil aircraft allowed.
 		# xplane data beacon type code 4: military
