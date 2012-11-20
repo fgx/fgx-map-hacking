@@ -435,27 +435,9 @@ constructor: function(config) {
 						title: 'Utils', 
 						columns: 2,
 						items: [
-							/*{text: "Goto", iconCls: "icoOff",
-								menu: [
-									{text: "Amsterdam", aptIdent: "EHAM", lat: 52.306, lon:4.7787 , 
-										handler: this.on_goto, scope: this},
-									{text: "London", aptIdent: "EGLL",  lat: 51.484, lon: -0.1510, 
-										handler: this.on_goto, scope: this},
-									{text: "Paris", aptIdent: "LFPG", lat: 48.994, lon: 2.650, 
-										handler: this.on_goto, scope: this},
-									{text: "San Fransisco", aptIdent: "KSFO", lat: 37.621302, lon: -122.371216, 
-										handler: this.on_goto, scope: this},
-									{text: "Zurich", aptIdent: "LSZH", lat: 47.467, lon: 8.5597, 
-										handler: this.on_goto, scope: this},
-								]
-								
-							},*/
-							
-							
 							this.get_bookmark_button()
-						]   
+						]
 					}
-					
 				],
 				
 				//== Bottom Toolbar

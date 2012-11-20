@@ -11,13 +11,7 @@ import sys
 import os
 from optparse import OptionParser
 
-from shell_config import config
 
-from fgx.model import meta
-#from fgx.modes.mp.MpServer
-from fgx.queries import database
-from fgx.lib import app_globals
-from fgx.lib import helpers as h
 
 
 
@@ -30,7 +24,11 @@ usage += "    drop [tables] - eg drop fix ndb vor\n"
 usage += "    dropall - Drops ALL database tables\n"
 usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
 parser = OptionParser(usage=usage)
- 
+
+parser.add_option("-i", 
+					action="store", dest="ini",
+					help="ini file"
+                  )
 parser.add_option("-d", 
 					action="store_true", dest="dev_mode", default=False,
 					help="Developer stops after 1000"
@@ -51,9 +49,9 @@ parser.add_option("-v", nargs=1,
 
 ############################################################
 
+
 ## Check we have command
 if len(args) == 0:
-	
 	print "Error: need a command"
 	parser.print_help()
 	sys.exit(1)
@@ -65,6 +63,17 @@ if not args[0] in ["import", "empty", "nuke", "create", "dropall", "drop"]:
 	sys.exit(1)
 command = args[0]
 
+
+
+
+import shell_config 
+shell_config.configure(opts.ini)
+
+from fgx.model import meta
+#from fgx.modes.mp.MpServer
+from fgx.queries import database
+from fgx.lib import app_globals
+from fgx.lib import helpers as h
 
 
 #############################################################################
@@ -122,7 +131,7 @@ if command == "import":
 	elif x_file == "fix":
 	
 		from fgx.imports.xplane import fix
-		file_path = config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
+		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
 		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 
 	#elif x_file == "nav":

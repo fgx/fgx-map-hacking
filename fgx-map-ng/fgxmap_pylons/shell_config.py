@@ -12,10 +12,13 @@ if not ROOT_PATH in sys.path:
 	
 
 from paste.deploy import appconfig
-appConfig = appconfig('config:local.ini', relative_to=ROOT_PATH)
-
-
 from fgx.config.environment import load_environment
-config = load_environment( appConfig.global_conf, appConfig.local_conf, False)
+
+config = None
+
+def configure(ini):
+	global config
+	appConfig = appconfig('config:%s' % ini, relative_to=ROOT_PATH)
+	config = load_environment( appConfig.global_conf, appConfig.local_conf, False)
 
 	
