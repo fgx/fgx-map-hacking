@@ -21,34 +21,35 @@ refresh_rate: 0,
 runner: new Ext.util.TaskRunner(),
 
 //= this store is passed around.. its global kinda
-get_flights_store: function(){
-	if(!this.xFlightsStore){
-		this.xFlightsStore = new Ext.data.JsonStore({
-			idProperty: 'callsign',
-			fields: [ 	{name: 'flag', type: 'int'},
-						{name: 'check', type: 'int'},
-						{name: "callsign", type: 'string'},
-						{name: "server", type: 'string'},
-						{name: "model", type: 'string'},
-						{name: "lat", type: 'float'},
-						{name: "lon", type: 'float'},
-						{name: "alt_ft", type: 'int'},
-						{name: "spd_kts", type: 'int'},
-						//{name: "alt_trend", type: 'string'},
-						{name: "heading", type: 'string'}
-			],
-			url: '/ajax/mp/flights/crossfeed',
-			root: 'flights',
-			remoteSort: false,
-			sortInfo: {
-				field: "callsign", 
-				direction: 'ASC'
-			},
-			autoLoad: false,
-		});
-	}
-	return this.xFlightsStore;
-},
+//get_flights_store: function(){
+//	if(!this.xFlightsStore){
+xFlightsStore: new Ext.data.JsonStore({
+	idProperty: 'callsign',
+	fields: [ 	{name: 'flag', type: 'int'},
+				{name: 'check', type: 'int'},
+				{name: "callsign", type: 'string'},
+				{name: "server", type: 'string'},
+				{name: "model", type: 'string'},
+				{name: "lat", type: 'float'},
+				{name: "lon", type: 'float'},
+				{name: "alt_ft", type: 'int'},
+				{name: "spd_kts", type: 'int'},
+				//{name: "alt_trend", type: 'string'},
+				{name: "heading", type: 'string'}
+	],
+	url: '/ajax/mp/flights/crossfeed',
+	root: 'flights',
+	remoteSort: false,
+	sortInfo: {
+		field: "callsign", 
+		direction: 'ASC'
+	},
+	autoLoad: false,
+}),
+
+//	}
+//	return this.xFlightsStore;
+//},
 
 update_flights: function(){
 	this.get_flights_store().load();
@@ -88,7 +89,7 @@ flightsGrid: 0,
 on_flights_widget: function(butt, checked){
 	console.log("on_flights_grid");
 	this.flightsGrid = new FGx.FlightsGrid({
-		flightsStore: this.get_flights_store(),
+		flightsStore: this.xFlightsStore,
 		refresh_rate: this.refresh_rate,
 		title: "Flights", 
 		closable: true,
