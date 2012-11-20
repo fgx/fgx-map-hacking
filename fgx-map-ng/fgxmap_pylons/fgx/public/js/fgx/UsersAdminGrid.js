@@ -135,7 +135,7 @@ action_delete: function(){
 },
 
 edit_user: function(user_id){
-	var d = new FGx.UserAdminDialog();
+	var d = new FGx.UserAdminDialog({user_id: user_id});
 	d.run_show();
 },
 

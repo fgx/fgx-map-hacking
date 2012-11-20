@@ -38,9 +38,19 @@ get_form: function(){
 						this.close();
 					}
 				},
-				{text: "Save -TODO", iconCls: "icoSave", xtype: "button", scope: this,
+				{text: "Save", iconCls: "icoSave", xtype: "button", scope: this,
 					handler: function(){
-						this.close();
+						
+						var f = this.get_form().getForm();
+						console.log("save", f.isValid() );
+						if( !f.isValid() ){
+							return;
+						}
+						f.submit({
+							url: "/ajax/user/" + this.user_id
+							
+							
+						});
 					}
 				}
 			]

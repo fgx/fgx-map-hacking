@@ -64,6 +64,7 @@ def make_map(config):
 	
 
 	map.connect('/ajax/users', controller="ajax_users", action="users")
+	map.connect('/ajax/user/{user_id}', controller="ajax_users", action="user")
 	
 	#map.connect('/ajax/*', controller="ajax_db", action="scolumns")
 	
