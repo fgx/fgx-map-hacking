@@ -6,7 +6,8 @@ import datetime
 from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
-from fgx.model import meta, NavAid, FGX_SRID
+from fgx.model import meta
+from fgx.model.data import NavAid, FGX_SRID
 from fgx.lib import helpers as h
 
 
@@ -20,8 +21,8 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 	
 	started = datetime.datetime.now()
 		
-	meta.Session.query(NavAid).filter_by(nav_type = NavAid.NAV_TYPE.fix).delete()
-	meta.Session.commit()
+	meta.Sess.data.query(NavAid).filter_by(nav_type = NavAid.NAV_TYPE.fix).delete()
+	meta.Sess.data.commit()
 	
 
 	
@@ -58,8 +59,8 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
 			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
 			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
 			
-			meta.Session.add(ob)			
-			meta.Session.commit()
+			meta.Sess.data.add(ob)			
+			meta.Sess.data.commit()
 			
 		
 		

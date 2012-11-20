@@ -13,7 +13,8 @@ from optparse import OptionParser
 
 from shell_config import config
 
-from fgx.model import meta, MpServer
+from fgx.model import meta
+#from fgx.modes.mp.MpServer
 from fgx.queries import database
 from fgx.lib import app_globals
 from fgx.lib import helpers as h

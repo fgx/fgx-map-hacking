@@ -50,6 +50,8 @@ def make_map(config):
 	
 	
 	# Nav Aids
+	map.connect('/ajax/navaids', controller="ajax_nav", action="navaids")
+	
 	map.connect('/ajax/fix/{ident}', controller="ajax_nav", action="fix")
 	map.connect('/ajax/fix', controller="ajax_nav", action="fix")
 	

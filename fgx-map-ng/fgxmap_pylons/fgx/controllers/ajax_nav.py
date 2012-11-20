@@ -7,7 +7,10 @@ from pylons.decorators import jsonify
 from sqlalchemy import or_
 
 from fgx.lib.base import BaseController, render
-from fgx.model import meta, Fix, Ndb, Vor
+from fgx.lib import helpers as h
+
+from fgx.model import meta
+from fgx.model.data import NavAid
 
 log = logging.getLogger(__name__)
 
@@ -15,6 +18,17 @@ log = logging.getLogger(__name__)
 
 class AjaxNavController(BaseController):
 
+	@jsonify
+	def navaids(self):
+		payload = {'success': True}
+		
+		
+		
+		
+		return payload
+		
+		
+		
 	@jsonify
 	def fix(self, ident=None):
 		
