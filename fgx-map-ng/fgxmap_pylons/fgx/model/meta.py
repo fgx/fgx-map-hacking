@@ -15,7 +15,14 @@ Sess.secure = scoped_session(sessionmaker())
 #ession.data = scoped_session(sessionmaker())
 
 # The declarative Base
-Base = declarative_base()
+class BaseContainer(object):
+	pass
+Base = BaseContainer()
+Base.data = declarative_base()
+Base.secure = declarative_base()
+Base.mp = declarative_base()
+Base.tracker = declarative_base()
+#Base.contrib = declarative_base()
 
 
 

@@ -1,21 +1,3 @@
-"""The application's model objects"""
-
-
-from sqlalchemy import  Integer, String, Date, DateTime
-from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
-from geoalchemy.postgis import PGComparator
-from shapely import wkb;
-
-from fgx.model.meta import Sess, Base
-
-
-def init_model(engines):
-    """Call me before using any of the tables or classes in the model"""
-    Sess.data.configure(bind=engines.data)
-    Sess.secure.configure(bind=engines.secure)
-   
-FGX_SRID = 3857
-
 
 ##=======================================================
 class Airport(Base):
@@ -78,19 +60,6 @@ class Aero(Base):
 	srs = Column(String(40))
 	lahso = Column(Integer())
 	
-
-##=======================================================
-class BookMark(Base):
-	
-	__tablename__ = "bookmark"
-	
-	bookmark_pk = Column(Integer(), primary_key=True) 
-	
-	name = Column(String(100), index=True)
-	lat = Column(String(15))
-	lon = Column(String(15))
-	zoom = Column(Integer())
-
 	
 	
 ##=======================================================
@@ -102,64 +71,6 @@ class Country(Base):
 	country_name = Column(String(100), index=True)
 
 	
-##=======================================================
-"""
-class Dme(Base):
-	
-	__tablename__ = "dme"
-	
-	dme_pk = Column(Integer(), primary_key=True)
-	ident = Column(String(4), index=True)
-	name = Column(String(40), index=True)
-	subtype = Column(String(10))
-	elevation_m = Column(Integer())	
-	freq_mhz = Column(String(10))
-	range_km = Column(String(10))
-	bias_km = Column(Integer())
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
-
-	def __repr__(self):
-		return "<Dme: %s>" % (self.icao)
-	
-GeometryDDL(Dme.__table__)
-"""
-
-	
-class EngineType(Base):
-	
-	__tablename__ = "engine_type"
-		
-	engine_pk = Column(Integer(), primary_key=True)
-	eng = Column(String(1), unique=True, index=True)
-	engine = Column(String(10), unique=True, index=True)
-	
-
-	
-##=======================================================
-# SELECT st_y(wkb_geometry) as lat, st_x(wkb_geometry) as lon, ident FROM fix limit 10;
-"""
-class Fix(Base):
-	
-	__tablename__ = 'fix'
-	
-	fix_pk = Column(Integer(), primary_key=True)
-	ident = Column(String(10), index=True, nullable=False)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)	
-	
-	@property
-	def lat(self):
-		return wkb.loads(str(self.wkb_geometry.geom_wkb)).x
-		
-	@property
-	def lon(self):
-		return wkb.loads(str(self.wkb_geometry.geom_wkb)).y
-	
-	def dic(self):
-		return dict(ident=self.ident, nav_type="fix",
-					lat=self.lat, lon=self.lon)
-				
-GeometryDDL(Fix.__table__)
-"""
 
 ##=======================================================
 class Ils(Base):
@@ -194,25 +105,6 @@ class Ils(Base):
 GeometryDDL(Airport.__table__)
 
 
-class Manufacturer(Base):
-	
-	__tablename__ = "manufacturer"
-	
-	manuf_pk = Column(Integer(), primary_key=True)
-	manuf = Column(String(20), unique=True, index=True)
-	
-	"""
-	manufacturer varchar, \
-			model varchar, \
-			type_designator varchar, \
-			engines varchar, \
-			weight_class varchar, \
-			climb_rate varchar, \
-			descent_rate varchar, \
-			srs varchar, \
-			LAHSO_group);
-	"""
-	
 
 ##=======================================================
 class NavAid(Base):
@@ -272,36 +164,7 @@ class NavAid(Base):
 GeometryDDL(NavAid.__table__)	
 		
 
-##=======================================================
-class Ndb(Base):
 	
-	__tablename__ = "ndb"
-	
-	ndb_pk = Column(Integer(), primary_key=True)
-	
-	ident = Column(String(10), index=True)
-	name = Column(String(50), index=True)
-	freq_khz = Column(String(6))
-	
-	elevation_ft = Column(Integer(), nullable=True)
-	elevation_m = Column(Integer(), nullable=True)
-	range_nm = Column(Integer(), nullable=True)
-	range_m = Column(Integer(), nullable=True)
-	
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
-
-	## These can go later
-	lat = Column(String(15), index=True, nullable=False)
-	lon = Column(String(15), index=True, nullable=False)
-	
-	def __repr__(self):
-		return "<Ndb: %s>" % (self.ident)
-		
-	def dic(self):
-		return dict(ident=self.ident, name=self.name, nav_type="ndb",
-				lat=self.lat, lon=self.lon)
-		
-GeometryDDL(Ndb.__table__)		
 
 
 ##=======================================================
@@ -345,58 +208,6 @@ class Threshold(Base):
 GeometryDDL(Threshold.__table__)	
 	
 
-##=======================================================
-class Vor(Base):
-	
-	__tablename__ = "vor"
-	
-	vor_pk = Column(Integer, primary_key=True)
-	
-	ident = Column(String(10), index=True)
-	name = Column(String(50), index=True)
-	freq_mhz = Column(String(6))
-	
-	elevation_ft = Column(Integer(), nullable=True)
-	elevation_m = Column(Integer(), nullable=True)
-	range_nm = Column(Integer(), nullable=True)
-	range_m = Column(Integer(), nullable=True)
-	
-	# TODO What is this exactly ?
-	variation = Column(String(10), nullable=True)
-	
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
-
-	## These can go later
-	lat = Column(String(15), index=True, nullable=False)
-	lon = Column(String(15), index=True, nullable=False)
-	
-	def __repr__(self):
-		return "<Vor: %s>" % (self.ident)
-
-	def dic(self):
-		return dict(ident=self.ident, name=self.name, nav_type="vor",
-				lat=self.lat, lon=self.lon,)
-		
-GeometryDDL(Vor.__table__)
 
 
-##=======================================================
-class User(Base):
 	
-	__tablename__ = "user"
-	
-	user_pk = Column(Integer, primary_key=True)
-	
-	email = Column(String(50), index=True, nullable=False)
-	name = Column(String(50), index=True, nullable=False)
-	callsign = Column(String(10), nullable=False)
-	passwd = Column(String(100), nullable=False)
-	
-	## Security level.. idea atmo is 0 = disabled, 1 = Auth, 2 = Admin, 
-	level = Column(Integer, nullable=False)
-	
-	created = Column(DateTime(), nullable=False)
-	
-	
-
-

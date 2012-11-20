@@ -8,7 +8,8 @@ import telnetlib
 
 import pygeoip
 
-from fgx.model import meta, MpServer, MpBotInfo
+from fgx.model import meta
+from fgx.model.multiplayer import MpServer, MpBotInfo
 
 
 #print config
