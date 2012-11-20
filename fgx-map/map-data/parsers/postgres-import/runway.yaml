@@ -1,0 +1,165 @@
+# runway
+rwy_pk:
+    field: rwy_pk
+    type: serial PRIMARY KEY
+    size: 
+
+apt_ident:
+    field: apt_ident
+    type: varchar
+    size: 8
+
+rwy_ident:
+    field: rwy_ident
+    type: varchar
+    size: 8
+
+rwy_ident_end:
+    field: rwy_ident_end
+    type: varchar
+    size: 8
+
+rwy_width:
+    field: rwy_width
+    type: varchar
+    size: 32
+
+rwy_lon:
+    field: rwy_lon
+    type: varchar
+    size: 32
+
+rwy_lat:
+    field: rwy_lat
+    type: varchar
+    size: 32
+
+rwy_lon_end:
+    field: rwy_lon_end
+    type: varchar
+    size: 32
+
+rwy_lat_end:
+    field: rwy_lat_end
+    type: varchar
+    size: 32
+
+rwy_len_feet:
+    field: rwy_len_feet
+    type: varchar
+    size: 32
+
+rwy_len_meters:
+    field: rwy_len_meters
+    type: varchar
+    size: 32
+
+rwy_hdg:
+    field: rwy_hdg
+    type: varchar
+    size: 32
+
+rwy_hdg_end:
+    field: rwy_hdg_end
+    type: varchar
+    size: 32
+
+rwy_surface:
+    field: rwy_surface
+    type: varchar
+    size: 32
+
+rwy_shoulder:
+    field: rwy_shoulder
+    type: varchar
+    size: 8
+
+rwy_smoothness:
+    field: rwy_smoothness
+    type: varchar
+    size: 8
+
+rwy_centerline_lights:
+    field: rwy_centerline_lights
+    type: varchar
+    size: 8
+
+rwy_edge_lighting:
+    field: rwy_edge_lighting
+    type: varchar
+    size: 8
+
+rwy_autogen_dist_signs:
+    field: rwy_auto_dist_signs
+    type: varchar
+    size: 8
+
+rwy_threshold:
+    field: rwy_threshold
+    type: varchar
+    size: 32
+
+rwy_overrun:
+    field: rwy_overrun
+    type: varchar
+    size: 32
+
+rwy_marking:
+    field: rwy_marking
+    type: varchar
+    size: 8
+
+rwy_app_lighting:
+    field: rwy_app_lighting
+    type: varchar
+    size: 8
+
+rwy_tdz_lighting:
+    field: rwy_tdz_lighting
+    type: varchar
+    size: 8
+
+rwy_reil:
+    field: rwy_reil
+    type: varchar
+    size: 8
+
+rwy_threshold_end:
+    field: rwy_threshold_end
+    type: varchar
+    size: 32
+
+rwy_overrun_end:
+    field: rwy_overrun_end
+    type: varchar
+    size: 32
+
+rwy_marking_end:
+    field: rwy_marking_end
+    type: varchar
+    size: 8
+
+rwy_app_lighting_end:
+    field: rwy_app_lighting_end
+    type: varchar
+    size: 8
+
+rwy_tdz_lighting_end:
+    field: rwy_tdz_lighting_end
+    type: varchar
+    size: 8
+
+rwy_reil_end:
+    field: rwy_reil_end
+    type: varchar
+    size: 8
+
+rwy_poly:
+    field: rwy_poly
+    type: geometry(Polygon,3857)
+    size:
+
+rwy_xplane_code:
+    field: rwy_xplane_code
+    type: varchar
+    size: 8
