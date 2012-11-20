@@ -7,10 +7,22 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
 	
 //===========================================================
-//== FlightsStore
+//== Flights data LIVE state
+// This this is location of the the "multiplyer stuff"..
+// The "Flights" are stored in an object and is passed around..
+/* flights: {
+	refresh_rate: 0,
+	runner: new Ext.util.TaskRunner(),
+	store: this.get_flights_store()						  
+}, NOT */
+
 
 refresh_rate: 0,
 runner: new Ext.util.TaskRunner(),
+							  
+on_refresh_toggled: function(){
+	console.log("on_refresh_toggled")
+},
 
 get_flights_store: function(){
 	if(!this.xFlightsStore){
@@ -48,10 +60,12 @@ update_flights: function(){
 
 flightsGrid: 0,
 
-on_flights_grid: function(butt, checked){
+
+
+on_flights_widget: function(butt, checked){
 	console.log("on_flights_grid");
 	this.flightsGrid = new FGx.FlightsGrid({
-		flightsStore: this.flightsStore,
+		flightsStore: this.get_flights_store(),
 		refresh_rate: this.refresh_rate,
 		title: "Flights", 
 		closable: true,
@@ -159,11 +173,11 @@ constructor: function(config) {
 					"-",
 					{text: "Flights", iconCls: "icoFlights", id: this.getId() + "butt-flights", 
 							enableToggle: true, pressed: false, 
-							handler: this.on_flights, scope: this
+							handler: this.on_flights_widget, scope: this
 					},
 					
 					"-",
-					{text: "Server Status", iconCls: "icoMpServers", 
+					{text: "Network Status", iconCls: "icoMpServers", 
 						enableToggle: true, pressed: false, id: this.getId() + "butt-server-status",
 						handler: this.on_server_status, scope: this
 					},
@@ -234,8 +248,10 @@ initialize:  function(){
 },
 
 //= Riggered for reshresh now
-on_refresh_now: function(){
-	this.store.load();
+refresh_now: function(){
+	console.log("refresh_now");
+	
+	this.get_flights_store().load();
 },
 
 on_open_url: function(butt){

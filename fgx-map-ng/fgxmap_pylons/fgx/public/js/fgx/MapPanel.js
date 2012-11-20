@@ -513,8 +513,9 @@ constructor: function(config) {
 					//this.mapLayersTree.tree,
 					//this.flightsGrid,
 					//this.flightsWidget.grid,
-					this.get_airports_grid(),
 					this.get_nav_widget(),
+					this.get_airports_grid(),
+					
 					this.get_flights_grid(config.flightsStore)
 					
 				]
