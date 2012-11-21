@@ -32,7 +32,7 @@ constructor: function(config) {
 			forceFit: true
 		}, 
 		stripeRows: true,
-		store: config.flightsStore,
+		store: Ext.StoreMgr.lookup("flights_store"),
 		loadMask: false,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 

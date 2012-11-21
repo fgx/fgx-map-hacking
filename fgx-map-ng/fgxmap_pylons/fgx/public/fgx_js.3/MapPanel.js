@@ -103,9 +103,19 @@ get_airports_grid: function(){
 // Flights Grid
 get_flights_grid: function(sto){
 	if(!this.xFlightsGrid){
-		
-		this.xFlightsGrid =  new FGx.FlightsGrid({flightsStore: sto, title: "Flights", xHidden: true});
-		
+		this.xFlightsGrid =  new FGx.FlightsGrid({
+			//flightsStore: Ext.StoreMgr.lookup("flights_store"), 
+			title: "Flights", xHidden: true
+		});
+		this.xFlightsGrid.getStore().on("load", function(store, recs, idx){
+			this.flightLabelsLayer.removeAllFeatures();
+			this.flightMarkersLayer.removeAllFeatures();
+			var recs_length = recs.length;
+			for(var i = 0; i < recs_length; i++){
+				var rec = recs[i];
+				this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
+			};
+		}, this);
 		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
 
 			var rec = grid.getStore().getAt(idx);
@@ -502,7 +512,7 @@ constructor: function(config) {
 						border: 0,
 						collapsible: true,
 						collapsed: false,
-						activeItem: 0,
+						activeItem: 2,
 						items: [
 							//this.mapLayersTree.tree,
 							//this.flightsGrid,
@@ -573,7 +583,7 @@ init: function(){
 	
 	//this.set_base_layer("Dark"); //??? WTF!!
 	
-	this.get_flights_grid().getStore().on("load", function(store, recs, idx){
+	DEADthis.get_flights_grid().getStore().on("load", function(store, recs, idx){
 		console.log("YESSSSS");
 		this.flightLabelsLayer.removeAllFeatures();
 		this.flightMarkersLayer.removeAllFeatures();
