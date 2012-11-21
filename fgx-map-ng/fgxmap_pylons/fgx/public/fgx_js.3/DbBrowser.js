@@ -122,8 +122,9 @@ constructor: function(config) {
 	
 	config = Ext.apply({
 		layout: 'border',
-		fgxType: "db_browser",
+		fgxType: "DbBrowser",
 		title: "Db Browser",
+		iconCls: "icoDatabase",
 		activeTab: 0,
 		tbar: [
 			{xtype: 'buttongroup', 

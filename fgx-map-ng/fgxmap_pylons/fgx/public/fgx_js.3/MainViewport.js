@@ -6,9 +6,9 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
 	
 widgets: {
-	flightsGrid: 0,	
-	mpStatusGrid: 0,
-	dbBrowser: 0
+	FlightsGrid: 0,	
+	mPStatusGrid: 0,
+	DbBrowser: 0
 },
 
 
@@ -33,7 +33,7 @@ xFlightsStore: new Ext.data.JsonStore({
 				//{name: "alt_trend", type: 'string'},
 				{name: "heading", type: 'string'}
 	],
-	url: '/ajax/mp/flights/crossfeed',
+	url: '/ajax/mpnet/flights/crossfeed',
 	root: 'flights',
 	remoteSort: false,
 	sortInfo: {
@@ -75,36 +75,34 @@ on_refresh_toggled: function(butt, checked){
 
 
 on_flights_widget: function(butt, checked){
-	if(!this.widgets.flightsGrid){
-		this.widgets.flightsGrid = new FGx.FlightsGrid({
+	if(!this.widgets.FlightsGrid){
+		this.widgets.FlightsGrid = new FGx.FlightsGrid({
 			flightsStore: this.xFlightsStore,
 			refresh_rate: this.refresh_rate,
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.flightsGrid);
+		this.get_tab_panel().add(this.widgets.FlightsGrid);
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.flightsGrid);
+	this.get_tab_panel().setActiveTab(this.widgets.FlightsGrid);
 },
 
 on_mpstatus_widget: function(butt, checked){
-	if(!this.widgets.mpStatusGrid){
-		this.widgets.mpStatusGrid = new FGx.MpStatusGrid({
+	if(!this.widgets.MpStatusGrid){
+		this.widgets.MpStatusGrid = new FGx.MpStatusGrid({
 			title: "Network Status", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.mpStatusGrid);
+		this.get_tab_panel().add(this.widgets.MpStatusGrid);
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.mpStatusGrid);
+	this.get_tab_panel().setActiveTab(this.widgets.MpStatusGrid);
 },
 on_db_browser_widget: function(butt, checked){
 	if(!this.widgets.DbBrowser){
 		this.widgets.DbBrowser = new FGx.DbBrowser({
-			ssstitle: "Network Status", 
-			sssclosable: true,
-			sssxHidden: false
+			closable: true
 		});
 		this.get_tab_panel().add(this.widgets.DbBrowser);
 	}
@@ -147,14 +145,19 @@ get_tab_panel: function(){
 			//console.log("tabchanged");
 		}, this);
 		this.xTabPanel.on("remove", function(panel, widget){
-			if(widget.fgxType == "flights"){
+			
+			console.log("remove", widget.fgxType);
+			
+			this.widgets[widget.fgxType] = 0;
+			return;
+			if(widget.fgxType == "FlightsGrid"){
 				this.widgets.flightsGrid = 0;
 				
-			}else if(widget.fgxType == "mpstatus"){
+			}else if(widget.fgxType == "mpStatusGrid"){
 				this.widgets.mpStatusGrid = 0;
 				
-			}else if(widget.fgxType == "db_browser"){
-				this.widgets.dbBrowser = 0;
+			}else if(widget.fgxType == "DbBrowser"){
+				this.widgets.DbBrowser = 0;
 			}
 		}, this);
 	}
@@ -226,9 +229,10 @@ constructor: function(config) {
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{text: "Database Definition", handler: this.on_db_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "Database Browser", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
+					"-",
 					{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
 						menu: this.get_styles()
 					},
@@ -237,7 +241,7 @@ constructor: function(config) {
 					//"-",
 					{xtype: 'tbspacer', width: 50},
 					"-",
-					{xtype: "tbtext", text: "MP Refresh > ", tooltip: "MultiPlayer refresh in seconds"},
+					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
 					
 					//{text: "&nbsp;Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 					this.get_refresh_buttons(),

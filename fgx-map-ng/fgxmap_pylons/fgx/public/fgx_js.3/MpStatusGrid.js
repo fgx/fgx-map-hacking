@@ -51,7 +51,7 @@ constructor: function(config) {
 	
 	config = Ext.apply({
 		iconCls: 'icoMpServers',
-		xType: "mpstatus",
+		fgxType: "MpStatusGrid",
 		autoScroll: true,
 		autoWidth: true,
 		enableHdMenu: false,

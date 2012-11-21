@@ -1,6 +1,7 @@
 
 import urllib2
 import logging
+import json
 
 from pylons import response
 from pylons.decorators import jsonify
@@ -14,13 +15,15 @@ from fgx.model.mpnet import MpServer
 log = logging.getLogger(__name__)
 
 
-def get_crossfeed():
+def get_crossfeed(plain=False):
 
 	req = urllib2.Request(app_globals.crossfeed_data_url)
 	response = urllib2.urlopen(req)
 	cf_data_str = response.read()
-	#return json.loads(cf_data_str)
-	return cf_data_str
+	if plain:
+		return cf_data_str
+	return json.loads(cf_data_str)
+	
 
 	
 	
@@ -35,11 +38,15 @@ class AjaxMpnetController(BaseController):
 
 		
 	## Return the string straight from upstream
+	@jsonify
 	def crossfeed(self):
-		data_str = get_crossfeed()
-		response.headers['Content-Type'] = "text/plain"
+		data = get_crossfeed()
+		payload = dict(succes=True)
+		payload.update(data)
+		
+		#response.headers['Content-Type'] = "text/plain"
 		#payload = dict(success=True,flights=  )
-		return data_str
+		return payload
 
 	@jsonify
 	def mpstatus(self):

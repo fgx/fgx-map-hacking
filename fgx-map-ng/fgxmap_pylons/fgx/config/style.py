@@ -25,6 +25,7 @@ local_icons["icoClr"] = "go.gif"
 icons = {}
 
 icons['icoDev'] = "shape_align_bottom.png"
+icons['icoDatabase'] = "database.png"
 
 icons['icoSelectStyle'] = "color_swatch.png"
 
