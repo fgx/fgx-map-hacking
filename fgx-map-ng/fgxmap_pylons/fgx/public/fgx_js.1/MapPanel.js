@@ -4,8 +4,7 @@ Ext.namespace("FGx");
 
 FGx.MapPanel = Ext.extend(Ext.Panel, {
 
-	
-//var self = this;
+
 get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
 },
@@ -484,25 +483,29 @@ constructor: function(config) {
 				]
 			},
 			{region: 'east', width: 400, 
-				title: "FGx Map - Next Gen",
-				xtype: 'tabpanel',
-				frame: false,
-				plain: true,
-				border: 0,
-				collapsible: true,
-				collapsed: false,
-				activeItem: 0,
+				layout: "border",
 				items: [
-					//this.mapLayersTree.tree,
-					//this.flightsGrid,
-					//this.flightsWidget.grid,
-					this.get_nav_widget(),
-					this.get_airports_grid(),
-					
-					this.get_flights_grid(config.flightsStore)
-					
+					{title: "FGx Map - Next Gen",
+						xtype: 'tabpanel', region: "center", 
+						frame: false,
+						plain: true,
+						border: 0,
+						collapsible: true,
+						collapsed: false,
+						activeItem: 0,
+						items: [
+							//this.mapLayersTree.tree,
+							//this.flightsGrid,
+							//this.flightsWidget.grid,
+							this.get_nav_widget(),
+							this.get_airports_grid(),
+							
+							this.get_flights_grid(config.flightsStore)
+							
+						]
+					},
+					new FGx.MiniMapPanel({region: "south", height: 300, collapsible: true})
 				]
-			
 			}
 		]
 		
