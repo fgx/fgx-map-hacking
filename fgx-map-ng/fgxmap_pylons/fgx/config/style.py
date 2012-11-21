@@ -10,7 +10,7 @@ G = config['pylons.app_globals']
 ## local_icons are in the public path, eg /images/foo.png
 local_icons = {}
 
-
+local_icons['icoFgx'] = "fgx-cap-16.png"
 local_icons["icoAirport"] = "apt.png"
 local_icons["icoFix"] = "vfr_fix.png"
 local_icons["icoNdb"] = "ndb.16.png"
@@ -22,7 +22,7 @@ local_icons["icoClr"] = "go.gif"
 ## icons is the fam fam from http://fgx-static/icons/famfam_silk/*
 icons = {}
 
-icons['icoFgx'] = "fgx-cap-16.png"
+
 icons['icoLogin'] = "key.png"
 
 icons['icoRefresh'] = "refresh.gif"
