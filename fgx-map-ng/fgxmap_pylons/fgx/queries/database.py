@@ -1,18 +1,13 @@
 
 #from fgx import db
 from fgx.model import meta
+import sqlalchemy.orm
 
-def tables(db):
+def tables(db_name):
 
-	sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
-	
-	results = meta.Sess.__dict__[db].execute(sql).fetchall()
-	
-	ret = []
-	for r in results:
-		ret.append({'table': r[0]})
-	
-	return ret
+	sel_db = meta.Base.__dict__[db_name].metadata.tables.keys()
+	return [{"table": t} for t in sel_db]
+
 
 def drop_table(table):
 		
@@ -37,13 +32,27 @@ def empty_table(table):
 		meta.Session.commit()
 	
 	
+def attribute_names(cls):
+	return [prop.key for prop in class_mapper(cls).iterate_properties
+		if isinstance(prop, sqlalchemy.orm.ColumnProperty)]
 	
+def columns(db_name, table_name):
 	
-def columns(table):
+	tbl = meta.Base.__dict__[db_name].metadata.tables[table_name]
 	
+
+	#print attribute_names(meta.Base.__dict__[db_name].metadata.tables[table_name])
+	cols = meta.Base.__dict__[db_name].metadata.tables[table_name].columns
+	lst = []
+	for c in  cols:
+		print c, c.type
+		
+		lst.append( dict(column=c.name, type=str(c.type), nullable=c.nullable) )
+	return lst
+		
 	## IS this an injectin attack
-	sql = "SELECT column_name, data_type, character_maximum_length, numeric_precision, is_nullable "
-	sql += " FROM information_schema.columns WHERE table_name = '%s' " % table
+	#sql = "SELECT column_name, data_type, character_maximum_length, numeric_precision, is_nullable "
+	#sql += " FROM information_schema.columns WHERE table_name = '%s' " % table
 	"""
 	results = Session.execute(
 		"SELECT column_name FROM information_schema.columns WHERE table_name = %(table)s ",

@@ -2,41 +2,8 @@
 Ext.namespace("FGx");
 //================================================================
 FGx.DbBrowser = Ext.extend(Ext.Panel, {
-	
-//======================================================
-// Stores
-/*
-sssstoreTables:  new Ext.data.JsonStore({
-	fields: [	
-		{name: "table", type:"string"}
-	
-	],
-	idProperty: "table",
-	ssortInfo: {},
-	proxy: new Ext.data.HttpProxy({
-		url: "/ajax/database/tables",
-		method: 'GET'
-	}),
-	root: "tables"
-}),
 
-sssstoreColumns: new Ext.data.JsonStore({
-	fields: [	
-		{name: "column", type:"string"},
-		{name: "type", type:"string"},
-		{name: "max_char", type:"string"}
-	
-	],
-	idProperty: "column",
-	proxy: new Ext.data.HttpProxy({
-		url: "/ajax/database/table/_TABLE_NAME_/columns",
-		method: 'GET'
-	}),
-	root: "columns",
-	autoLoad: false
-	
-}),
-*/
+curr_database : "data",
 
 //======================================================
 // Tables Grid
@@ -45,10 +12,10 @@ grid_tables: function(){
 		this.gridTables = new Ext.grid.GridPanel({
 			region: 'center',
 			title: "Tables",
+			width: 200,
 			store:  new Ext.data.JsonStore({
 				fields: [	
 					{name: "table", type:"string"}
-				
 				],
 				idProperty: "table",
 				ssortInfo: {},
@@ -67,8 +34,8 @@ grid_tables: function(){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
-				},
-				{header: "rows", dataIndex: "rows"}
+				}
+				//{header: "rows", dataIndex: "rows"}
 			],
 			listeners:{
 				scope: this,
@@ -78,7 +45,7 @@ grid_tables: function(){
 					//var r = this
 					var rec = self.storeTables.getAt(idx);
 					var table = rec.get("table");
-					var url = "/ajax/database/table/" + table + "/columns";
+					var url = "/ajax/database/" + this.curr_database + "/table/" + table + "/columns";
 					console.log(url);
 					self.storeColumns.proxy.setUrl(url);
 					self.storeColumns.load();
@@ -97,7 +64,7 @@ grid_columns: function(){
 		this.gridColumns = new Ext.grid.GridPanel({
 			region: 'east', 
 			title: "Columns",
-			width: 500,
+			width: "70%",
 			store: new Ext.data.JsonStore({
 				fields: [	
 					{name: "column", type:"string"},
@@ -145,6 +112,15 @@ this.tablesGrid.on("TABLE", function(table){
 	this.columnsGrid.load_columns(table);	
 }, this);
 */
+on_select_db: function(butt, checked){
+	console.log(butt, checked);
+	if(checked){
+		this.curr_database = butt.text;
+		this.grid_tables().getStore().proxy.setUrl("/ajax/database/" + this.curr_database + "/tables");
+		this.grid_tables().getStore().load();
+	}
+	butt.setIconClass( checked ? "icoOn" : "icoOff");
+},
 
 
 constructor: function(config) {
@@ -153,6 +129,20 @@ constructor: function(config) {
 		layout: 'border',
 		renderTo: "widget_div",
 		activeTab: 0,
+		tbar: [
+			{xtype: 'buttongroup', 
+				title: 'Select Database',
+				columns: 3,
+				items: [
+					{text: "data", pressed: true, enableToggle: true, toggleGroup: "sel_db", 
+						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOn"},
+					{text: "secure", enableToggle: true, toggleGroup: "sel_db", 
+						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},
+					{text: "mpnet",  enableToggle: true,  toggleGroup: "sel_db", 
+						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},
+				]
+			}
+		],
 		plain: true,
 		height: window.innerHeight - 5,
 		items: [

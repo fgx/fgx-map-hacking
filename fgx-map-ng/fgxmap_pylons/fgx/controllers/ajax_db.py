@@ -15,20 +15,20 @@ log = logging.getLogger(__name__)
 class AjaxDbController(BaseController):
 
 	@jsonify
-	def tables(self, db=None):
+	def tables(self, db_name):
 
 		payload = dict(
 					success=True,
-					tables = database.tables(db=db)
+					tables = database.tables(db_name)
 				)
 		
 		return payload
 		
 	@jsonify	
-	def columns(self, table):
+	def columns(self, db_name, table_name):
 		payload = dict(
 					success=True,
-					columns=database.columns(table)
+					columns=database.columns(db_name, table_name)
 				)
 		
 		return payload

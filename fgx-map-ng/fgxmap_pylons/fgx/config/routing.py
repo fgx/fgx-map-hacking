@@ -38,16 +38,16 @@ def make_map(config):
 	
 	# Database Browsing
 	map.connect('/ajax/databases', controller="ajax_db", action="databases")
-	map.connect('/ajax/database/{db}/tables', controller="ajax_db", action="tables")
-	map.connect('/ajax/database/{db}/table/{table}/columns', controller="ajax_db", action="columns")
-	map.connect('/ajax/database/{db}/table/{table}/drop', controller="ajax_db", action="drop_table")
+	map.connect('/ajax/database/{db_name}/tables', controller="ajax_db", action="tables")
+	map.connect('/ajax/database/{db_name}/table/{table_name}/columns', controller="ajax_db", action="columns")
+	map.connect('/ajax/database/{db_name}/table/{table_name}/drop', controller="ajax_db", action="drop_table")
 	
 	
 	# MultiPlayer
-	map.connect('/ajax/mp/status', controller="ajax_mpnet", action="mpstatus")
-	map.connect('/ajax/mp/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
-	map.connect('/ajax/mp/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
-	map.connect('/ajax/mp/flights', controller="ajax_mpnet", action="flights")
+	map.connect('/ajax/mpnet/status', controller="ajax_mpnet", action="mpstatus")
+	map.connect('/ajax/mpnet/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
+	map.connect('/ajax/mpnet/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
+	map.connect('/ajax/mpnet/flights', controller="ajax_mpnet", action="flights")
 	
 	
 	# Nav Aids
