@@ -6,8 +6,11 @@ __all__ = ['Base', 'Session']
 
 # SQLAlchemy session manager. Updated by model.init_model()
 ## Need this is object
-class SessionHolder(object):
-	pass
+class SessionHolder:
+	def __init__(self):
+		self.data = None
+		self.secure = None
+		self.mpnet = None
 
 Sess = SessionHolder()
 Sess.data = scoped_session(sessionmaker())

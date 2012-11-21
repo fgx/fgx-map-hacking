@@ -2,10 +2,11 @@
 #from fgx import db
 from fgx.model import meta
 
-def tables():
+def tables(db):
 
 	sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
-	results = meta.Session.execute(sql).fetchall()
+	
+	results = meta.Sess.__dict__[db].execute(sql).fetchall()
 	
 	ret = []
 	for r in results:
@@ -19,6 +20,8 @@ def drop_table(table):
 
 	meta.Session.execute(sql)
 	meta.Session.commit()
+	
+	
 	
 def empty_table(table):
 		
