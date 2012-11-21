@@ -268,12 +268,7 @@ constructor: function(config) {
 									{text: "Chili", xUrl: "http://fgx.ch/projects/fgx-map/",
 										handler: this.on_open_url, scope: this }
 								]
-							},
-							{text: "Database Browser", xUrl: "/database",
-								handler: this.on_open_url, scope: this},
-						
-							
-							
+							}
 						]
 					},
 					"-",
