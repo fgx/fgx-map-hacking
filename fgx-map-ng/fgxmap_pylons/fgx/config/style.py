@@ -11,6 +11,8 @@ G = config['pylons.app_globals']
 local_icons = {}
 
 local_icons['icoFgx'] = "fgx-cap-16.png"
+local_icons['icoFlightGear'] = "flightgear_icon.png"
+
 local_icons["icoAirport"] = "apt.png"
 local_icons["icoFix"] = "vfr_fix.png"
 local_icons["icoNdb"] = "ndb.16.png"

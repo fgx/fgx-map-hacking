@@ -246,8 +246,8 @@ constructor: function(config) {
 					"->",
 					//"-",
 		
-					//{xtype: 'tbspacer', width: 80},
-					{text: "FlightGear", iconCls: "icoFlightGear", 
+					"-",
+					{text: "FlightGear", iconCls: "icoFlightGear", disabled: true
 					
 					},
 					"-",	
