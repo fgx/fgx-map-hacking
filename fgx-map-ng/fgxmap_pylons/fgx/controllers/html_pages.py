@@ -22,7 +22,8 @@ class HtmlPagesController(BaseController):
 			c.ext_theme = ext_theme_to_set
 		else:
 			c.ext_theme = request.cookies.get("ext_theme")
-		
+		if c.ext_theme == None:
+			c.ext_theme = "xtheme-access.css"
 		
 		
 		return render("map-ext.html")

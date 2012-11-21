@@ -209,7 +209,9 @@ constructor: function(config) {
 					//"-",
 					{xtype: 'tbspacer', width: 50},
 					"-",
-					
+					{text: "Style", iconCls: "icoSettings", 
+						menu: this.get_styles()
+					},
 					//{text: "&nbsp;Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 					this.get_refresh_buttons(),
 					"-",	
@@ -289,6 +291,26 @@ refresh_now: function(){
 
 on_open_url: function(butt){
 	window.open(butt.xUrl);
+},
+
+get_styles: function(){
+	var styles = ["xtheme-gray.css", "xtheme-blue.css", "xtheme-access.css"];
+	var arr = [];
+	for(var i=0; i < styles.length; i++){
+		arr.push(
+			new Ext.Action({
+				text: styles[i], 
+				checked: EXT_THEME == styles[i], 
+				ext_style: arr[i],
+				handler: this.on_set_style, scope: this
+			})
+		);
+	}
+	return arr;
+},
+on_set_style: function(butt){
+	location.href = "/?ext_theme=" + butt.text;
+	return
 }
 
 
