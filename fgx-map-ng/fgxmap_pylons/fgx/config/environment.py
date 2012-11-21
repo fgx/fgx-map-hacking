@@ -13,6 +13,7 @@ from fgx.model import init_model
 
 ## FGx add the bots
 from fgx.bots.mpstatus import MpStatusThread
+from fgx.bots.tracker import TrackerThread
 
 def load_environment(global_conf, app_conf, start_bots):
 	"""Configure the Pylons environment via the ``pylons.config``
@@ -69,5 +70,7 @@ def load_environment(global_conf, app_conf, start_bots):
 		#statusThread = MpStatusThread(config=config)
 		#statusThread.start()
 		
+		trackerThread = TrackerThread(config=config)
+		trackerThread.start()
 
 	return config

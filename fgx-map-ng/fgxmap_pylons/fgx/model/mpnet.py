@@ -8,7 +8,7 @@ from fgx.model.meta import Sess, Base
 ## Tracker
 ##=================================================================
 
-class Flights(Base.mpnet):
+class Flight(Base.mpnet):
 	
 	__tablename__ = "flights"
 
@@ -24,11 +24,15 @@ class Flights(Base.mpnet):
 	max_speed = Column(Integer(), nullable=True)
 	
 	
-class FlightWayPoints(Base.mpnet):
+class FlightWayPoint(Base.mpnet):
 	
 	__tablename__ = "waypoints"
 
-	flight_id = Column(Integer(), primary_key=True)
+	wp_id = Column(Integer(), primary_key=True)
+	flight_id = Column(Integer(), nullable=True)
+	
+	callsign = Column(String(20), nullable=True)
+	model = Column(String(20), nullable=True)
 	
 	time = Column(DateTime(timezone=False)) #ZULU?, default=datetime.datetime.now(tz=pytz.timezone('UTC'))
 	
@@ -38,7 +42,7 @@ class FlightWayPoints(Base.mpnet):
 	longitude = Column(Float())
 	speed = Column(Integer())
 	altitude = Column(Integer())
-	
+	heading = Column(Integer(), nullable=True)
 	
 	
 ##=================================================================

@@ -9,7 +9,7 @@ import json
 
 
 from fgx.model import meta
-from fgx.model.mpnet import FlightWayPointss
+from fgx.model.mpnet import FlightWayPoint
 
 class TrackerThread(threading.Thread):
 	
@@ -23,7 +23,7 @@ class TrackerThread(threading.Thread):
 		
 	def get_crossfeed(self, plain=False):
 
-		req = urllib2.Request(self.config.crossfeed_data_url)
+		req = urllib2.Request(self.config['crossfeed_ajax_url'])
 		response = urllib2.urlopen(req)
 		cf_data_str = response.read()
 		if plain:
@@ -50,19 +50,25 @@ class TrackerThread(threading.Thread):
 		while True:
 			
 			print "\t TrackerThread, awake then.. "
-			
-			#botInfo.last_dns_start = datetime.datetime.now()
-			#meta.Sess.mpnet.commit()
-			
-			#self.lookup_all()
-			
-			#botInfo.last_dns_end = datetime.datetime.now()
-			#meta.Sess.mpnet.commit()
-			
-			
+						
+			data = self.get_crossfeed()
+			print data
+			for f in data['flights']:
+				print f
+				wp = FlightWayPoint()
+				wp.time = datetime.datetime.utcnow()
+				wp.callsign = f['callsign']
+				wp.model = f['model']
+				wp.latitude = f['lat']
+				wp.longitude = f['lon']
+				wp.altitude = f['alt_ft']
+				wp.speed = f['spd_kts']
+				wp.heading = f['hdg']
+				meta.Sess.mpnet.add(wp)
+			meta.Sess.mpnet.commit()
 			
 			print "\t: Sleep. zzzzzzzzzzzzz a while"
-			time.sleep(300) 
+			time.sleep(10) 
 	
 	
 
