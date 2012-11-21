@@ -71,12 +71,11 @@ get_layers: function(){
 },
 	
 show_blip: function(obj){
+	
+	this.highLightMarkers.removeAllFeatures();
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	
-	
-	//this.get_map().zoomTo( 10 );
-	
+		
 	
 	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
 				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
@@ -88,7 +87,7 @@ show_blip: function(obj){
 	var style = {
 		strokeColor: "red",
 		strokeOpacity: 1,
-		strokeWidth: 3,
+		strokeWidth: 8,
 		fillColor: "yellow",
 		fillOpacity: 0.8 };
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
@@ -101,7 +100,7 @@ show_blip: function(obj){
 //== CONSTRUCT
 constructor: function(config) {
 	
-	console.log("constr", config.title, config.lat, config.lon);
+	//console.log("constr", config.title, config.lat, config.lon);
 	
 	var ll;
 	if(config.lat || config.lon){
@@ -117,10 +116,10 @@ constructor: function(config) {
 		
 		frame: false, plain: true,border: 0,	bodyBorder: false,
 		iconCls: "icoMap",
-				
+		hideHeader: true,		
 				map: this.get_map(),
 				center:  ll, 
-				zoom: 3,
+				zoom: 2,
 				layers: this.get_layers()
 		
 		

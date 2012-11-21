@@ -9,6 +9,15 @@ get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
 },
 
+get_mini_map: function(){
+	
+	if(!this.xMiniMap){
+		this.xMiniMap = new FGx.MiniMapPanel({region: "south", height: 300, collapsible: true});
+		
+	};
+	return this.xMiniMap;
+},
+
 get_map: function(){
 	if(!this.xMap){
 		this.xMap =  new OpenLayers.Map({
@@ -117,6 +126,7 @@ get_nav_widget: function(){
 		this.xNavWidget =  new FGx.NavWidget({});
 		this.xNavWidget.on("GOTO", function(obj){
 
+			this.get_mini_map().show_blip(obj);
 			
 			var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
@@ -504,7 +514,7 @@ constructor: function(config) {
 							
 						]
 					},
-					new FGx.MiniMapPanel({region: "south", height: 300, collapsible: true})
+					this.get_mini_map()
 				]
 			}
 		]
