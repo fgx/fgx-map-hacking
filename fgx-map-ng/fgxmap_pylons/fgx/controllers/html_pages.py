@@ -39,3 +39,8 @@ class HtmlPagesController(BaseController):
 		return render("admin_users.html")
 		
 		
+	def dynamic_ico_css(self):
+		
+		response.headers['Content-Type'] = "text/plain";
+		return "FOO"
+		
