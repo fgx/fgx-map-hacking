@@ -41,13 +41,7 @@ get_map: function(){
 			zoomLevels: 20
 		});
 		this.xMap.events.register("mousemove", this, function (e) {
-			var pos = this.get_map().getLonLatFromViewPortPx(e.xy		
-				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
-			// TODO make sense
-			//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
-			//	).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-			this.lbl_lat().setValue(pos.lat);
-			this.lbl_lon().setValue(pos.lon);
+			
 		});
 	}
 	return this.xMap;

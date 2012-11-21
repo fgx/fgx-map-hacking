@@ -46,8 +46,9 @@ constructor: function(config) {
 				}
 			},
 			{header: 'Name', dataIndex:'name', sortable: true, align: 'left', hidden: false},
-			{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
+			{header: 'Freq', dataIndex:'freq', sortable: true, align: 'left', hidden: false}
+			//{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
+			//{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
 		],
 		
 		/* Top Toolbar */
@@ -130,7 +131,8 @@ get_store: function(){
 				{name: "ident", type: 'string'},
 				{name: "name", type: 'string'},
 				{name: "lat", type: 'float'},
-				{name: "lon", type: 'float'}
+				{name: "lon", type: 'float'},
+				{name: "freq", type: 'string'}
 			],
 			proxy: new Ext.data.HttpProxy({
 				url: '/ajax/navaids',

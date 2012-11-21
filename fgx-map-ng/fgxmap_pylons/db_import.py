@@ -71,7 +71,7 @@ shell_config.configure(opts.ini)
 
 #from fgx.model import meta
 #from fgx.modes.mp.MpServer
-#from fgx.queries import database
+from fgx.queries import database
 #from fgx.lib import app_globals
 #from fgx.lib import helpers as h
 
@@ -122,7 +122,7 @@ if command == "import":
 
 	if x_file == "apt":
 		from fgx.imports.xplane import apt
-		database.empty_table("vor")
+		
 		file_path = config['temp_dir'] + "/unzipped/xplane/apt.dat"
 		apt.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
@@ -132,7 +132,7 @@ if command == "import":
 	
 		from fgx.imports.xplane import fix
 		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/earth_fix.dat"
-		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		fix.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose, clear="FIX")
 
 	#elif x_file == "nav":
 	#	from fgx.imports.xplane import nav
@@ -143,12 +143,12 @@ if command == "import":
 		from fgx.imports.xplane import nav
 		#database.empty_table("ndb")
 		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/nav_split/2.dat"
-		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose, clear="NDB")
 		
 	elif x_file == "vor":
 		from fgx.imports.xplane import nav
 		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
-		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
+		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose, clear="VOR")
 		
 	
 	

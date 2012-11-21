@@ -18,8 +18,9 @@ def drop_table(table):
 		
 	sql = "drop table if exists %s;" % table
 
-	meta.Session.execute(sql)
-	meta.Session.commit()
+	if table in ['navaid', 'airport']:
+		meta.Sess.data.execute(sql)
+		meta.Sess.data.commit()
 	
 	
 	

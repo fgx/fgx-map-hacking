@@ -91,8 +91,6 @@ def vor_2_db(parts, verbose=1, empty=False):
 	
 	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
 	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
-	#ob.lat = parts[1]
-	#ob.lon = parts[2]
 			
 	elev_ft = h.to_int(parts[3])
 	ob.elev_ft = elev_ft if elev_ft > 0 else None
@@ -108,7 +106,7 @@ def vor_2_db(parts, verbose=1, empty=False):
 	meta.Sess.data.commit()
 	
 ##===============================================================
-def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
+def import_dat(file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 	
 
 	#file_path = unzipped_dir + "/earth_nav.dat"
@@ -117,6 +115,11 @@ def import_dat(file_path, dev_mode=False, verbose=1, empty=False):
 		print "> Importing NAV: ", file_path
 	
 	started = datetime.datetime.now()
+	
+	if clear:
+		meta.Sess.data.query(NavAid).filter_by(nav_type=clear).delete()
+		meta.Sess.data.commit()
+	
 		
 	## Nuke existing entries
 	if empty:

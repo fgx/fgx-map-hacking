@@ -21,7 +21,6 @@ class Globals(object):
 
 		"""
 		self.root_path = os.path.abspath(os.path.dirname(__file__) + "/../"  )
-		print "root=", self.root_path
 		
 		self.cache = CacheManager(**parse_cache_config_options(config))
 
