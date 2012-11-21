@@ -43,6 +43,6 @@ class HtmlPagesController(BaseController):
 		
 	def dynamic_ico_css(self):
 		txt = style.get_icons_css()
-		response.headers['Content-Type'] = "text/plain";
+		response.headers['Content-Type'] = "text/css";
 		return txt
 		

@@ -10,39 +10,39 @@ icons = {}
 
 
 icons['icoFgx'] = "fgx-cap-16.png"
-icons['icoLogin'] = "http://ico.daffodil.uk.com/key.png"
+icons['icoLogin'] = "key.png"
 
-icons['icoRefresh'] = "http://ico.daffodil.uk.com/refresh.gif"
+icons['icoRefresh'] = "refresh.gif"
 
-icons['icoOn'] = "http://ico.daffodil.uk.com/bullet_pink.png"
-icons['icoOff'] = "http://ico.daffodil.uk.com/bullet_black.png"
-
-
-icons['icoBookMarkAdd'] = "http://ico.daffodil.uk.com/book_add.png"
-
-icons['icoSettings'] = "http://ico.daffodil.uk.com/cog.png"
-
-icons['icoCallSign'] = "http://ico.daffodil.uk.com/page_white_c.png"
+icons['icoOn'] = "bullet_pink.png"
+icons['icoOff'] = "bullet_black.png"
 
 
-icons['icoFlights'] = "http://ico.daffodil.uk.com/text_horizontalrule.png"
+icons['icoBookMarkAdd'] = "book_add.png"
 
-icons['icoMapCore'] = "http://ico.daffodil.uk.com/map.png"
-icons['icoMap'] = "http://ico.daffodil.uk.com/map.png"
-icons['icoMapAdd'] = "http://ico.daffodil.uk.com/map_add.png"
+icons['icoSettings'] = "cog.png"
 
-icons['icoMpServers'] = "http://ico.daffodil.uk.com/server_database.png"
+icons['icoCallSign'] = "page_white_c.png"
+
+
+icons['icoFlights'] = "text_horizontalrule.png"
+
+icons['icoMapCore'] = "map.png"
+icons['icoMap'] = "map.png"
+icons['icoMapAdd'] = "map_add.png"
+
+icons['icoMpServers'] = "server_database.png"
 
 
 """
-.icoCancel" = "http://ico.daffodil.uk.com/bullet_black.png"
-.icoSave" = "http://ico.daffodil.uk.com/accept.png"
+.icoCancel" = "bullet_black.png"
+.icoSave" = "accept.png"
 
-.icoClr" = "http://ico.daffodil.uk.com/go.gif"
+.icoClr" = "go.gif"
 
 
-.icoRefreshStop" = "http://ico.daffodil.uk.com/clock_stop.png"
-.icoRefreshRun" = "http://ico.daffodil.uk.com/clock_run.png"
+.icoRefreshStop" = "clock_stop.png"
+.icoRefreshRun" = "clock_run.png"
 
 
 .icoAirport"apt.png"
@@ -51,20 +51,20 @@ icons['icoMpServers'] = "http://ico.daffodil.uk.com/server_database.png"
 .icoVor"vor.png"
 
 
-.icoUsers" = "http://ico.daffodil.uk.com/group.png"
-.icoUser" = "http://ico.daffodil.uk.com/user.png"
-.icoUserAdd" = "http://ico.daffodil.uk.com/user_add.png"
-.icoUserEdit" = "http://ico.daffodil.uk.com/user_edit.png"
-.icoUserDelete" = "http://ico.daffodil.uk.com/user_delete.png"
+.icoUsers" = "group.png"
+.icoUser" = "user.png"
+.icoUserAdd" = "user_add.png"
+.icoUserEdit" = "user_edit.png"
+.icoUserDelete" = "user_delete.png"
 
 
-.icoBlue" = "http://ico.daffodil.uk.com/bullet_blue.png"
-.icoOrange" = "http://ico.daffodil.uk.com/bullet_orange.png"
-.icoPink" = "http://ico.daffodil.uk.com/bullet_pink.png"
-.icoGreen" = "http://ico.daffodil.uk.com/bullet_green.png"
-.icoRed" = "http://ico.daffodil.uk.com/bullet_red.png"
-.icoWhite" = "http://ico.daffodil.uk.com/bullet_white.png"
-.icoYellow" = "http://ico.daffodil.uk.com/bullet_yellow.png"
+.icoBlue" = "bullet_blue.png"
+.icoOrange" = "bullet_orange.png"
+.icoPink" = "bullet_pink.png"
+.icoGreen" = "bullet_green.png"
+.icoRed" = "bullet_red.png"
+.icoWhite" = "bullet_white.png"
+.icoYellow" = "bullet_yellow.png"
 
 
 icons['icoInvis'] = 'transparent.png';
@@ -424,7 +424,7 @@ def get_icons_css():
 	
 	s = ''
 	for k in sorted(icons.keys()):
-		s += ".%s{background-image: url('%s/%s') !important; background-repeat: no-repeat;}\n" %  (k, G.static_url, icons[k])
+		s += ".%s{background-image: url('%s/icons/famfam_silk/%s') !important; background-repeat: no-repeat;}\n" %  (k, G.static_url, icons[k])
 	s += "\n\n" # incase
 
 	return s
