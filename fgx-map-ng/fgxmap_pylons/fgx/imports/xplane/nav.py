@@ -68,7 +68,7 @@ def ndb_2_db(parts, verbose=1, empty=False):
 	ob.range_nm = r_nm if r_nm > 0 else None
 	ob.range_m = h.to_int(ob.range_nm) * 1852 if ob.range_nm else None
 	
-	ob.freq_khz = parts[4]  # TODO now come we have 4 didgit freq ??
+	ob.freq = parts[4]  # TODO now come we have 4 didgit freq ??
 	
 	meta.Sess.data.add(ob)
 	meta.Sess.data.commit()
@@ -84,39 +84,28 @@ def vor_2_db(parts, verbose=1, empty=False):
 	ident = parts[7]
 	
 	## Vor
-	ob = Vor()
+	ob = NavAid()
+	ob.nav_type = NavAid.NAV_TYPE.vor
 	ob.ident = ident
 	ob.name = " ".join(parts[8:])
 	
 	pnt = 'POINT(%s %s)' % (parts[1], parts[2])
 	ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)	
-	ob.lat = parts[1]
-	ob.lon = parts[2]
+	#ob.lat = parts[1]
+	#ob.lon = parts[2]
 			
 	elev_ft = h.to_int(parts[3])
-	ob.elevation_ft = elev_ft if elev_ft > 0 else None
-	ob.elevation_m = int( float(ob.elevation_ft) * 0.3048) if ob.elevation_ft else None
+	ob.elev_ft = elev_ft if elev_ft > 0 else None
+	ob.elev_m = int( float(ob.elev_ft) * 0.3048) if ob.elev_ft else None
 	
 	r_nm = h.to_int(parts[4])
 	ob.range_nm = r_nm if r_nm > 0 else None
 	ob.range_m = h.to_int(ob.range_nm) * 1852 if ob.range_nm else None
 	
-	ob.freq_mhz = parts[4]
+	ob.freq = parts[4]
 	
-	meta.Session.add(ob)
-	
-	
-	## Search
-	"""
-	obs = NavSearch()
-	obs.nav_type = "vor"
-	obs.ident = ident
-	obs.name = ob.name
-	obs.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
-	meta.Session.add(obs)
-	"""
-	
-	meta.Session.commit()
+	meta.Sess.data.add(ob)
+	meta.Sess.data.commit()
 	
 ##===============================================================
 def import_dat(file_path, dev_mode=False, verbose=1, empty=False):

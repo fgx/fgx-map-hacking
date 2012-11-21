@@ -8,7 +8,7 @@ def search(search=None, nav_type=None, bounds=None):
 	
 	
 	 ## The cols to return, this is a string with spces and split later
-	cols_str = "navaid_pk ident name nav_type"
+	cols_str = "navaid_pk ident name nav_type freq"
 	
 	#if lookup == False:
 	#	## lookup returns short data, this is long so add other cols as required

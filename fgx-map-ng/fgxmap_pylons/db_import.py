@@ -147,8 +147,7 @@ if command == "import":
 		
 	elif x_file == "vor":
 		from fgx.imports.xplane import nav
-		database.empty_table("vor")
-		file_path = config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
+		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
 		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose)
 		
 	
