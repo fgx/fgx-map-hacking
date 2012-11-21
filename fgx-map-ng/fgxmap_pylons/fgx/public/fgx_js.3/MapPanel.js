@@ -2,7 +2,7 @@
 
 Ext.namespace("FGx");
 
-FGx.MapPanel = Ext.extend(Ext.Panel, {
+FGx.MapPanel = Ext.extend(GeoExt.MapPanel, {
 
 
 get_display_projection: function(){
@@ -257,7 +257,7 @@ get_layers: function(){
 //== CONSTRUCT
 constructor: function(config) {
 	
-	console.log("constr", config.title, config.lat, config.lon);
+	//console.log("constr", config.title, config.lat, config.lon);
 	
 	var ll;
 	if(config.lat || config.lon){
@@ -271,144 +271,137 @@ constructor: function(config) {
 	//console.log(ll.xFlag, ll.x, ll.y);
 	config = Ext.apply({
 		
-		fgxType: "map_panel",
+		fgxType: "MapPanel",
 		iconCls: "icoMap",
 		frame: false, plain: true,border: 0,	bodyBorder: false,
 		
-		layout: "border",
-		items: [
-			{xtype: "gx_mappanel", region: "center",
-				frame: false, plain: true, border: 0,	bodyBorder: false,
-				map: this.get_map(),
-				center:  ll, 
-				zoom: config.zoom ? config.zoom : 5,
-				layers: this.get_layers(),
+		map: this.get_map(),
+		center:  ll, 
+		zoom: config.zoom ? config.zoom : 5,
+		layers: this.get_layers(),
+
+		tbar: [
 		
-				tbar: [
-				
-					//== Map Type  
-					{xtype: 'buttongroup', 
-						title: 'Base Layer',
-						columns: 1,
-						items: [
-							{text: "Light", iconCls: "icoYellow", width: 90, 
-								id: this.getId() + "map-base-button",
-								menu: [
-									{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
-										xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									},
-									{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
-										xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									},
-									{text: "Light", group: "map_core", checked: true,  xiconCls: "icoYellow",
-										xLayer: "Light", 
-										handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									}
-								]
+			//== Map Type  
+			{xtype: 'buttongroup', 
+				title: 'Base Layer',
+				columns: 1,
+				items: [
+					{text: "Light", iconCls: "icoYellow", width: 90, 
+						id: this.getId() + "map-base-button",
+						menu: [
+							{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
+								xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							},
+							{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
+								xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							},
+							{text: "Light", group: "map_core", checked: true,  xiconCls: "icoYellow",
+								xLayer: "Light", 
+								handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							}
-						]   
-					},
-					
-					{xtype: 'buttongroup',
-						title: 'Navigation Aids',
-						columns: 5,
-						items: [
-							{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
-								toggleHandler: this.on_nav_toggled, scope: this,
-								menu: {
-									items: [
-										{text: "Show range - TODO", checked: false, disabled: true}
-									]
-								}
-							},
-							{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
-								toggleHandler: this.on_nav_toggled,  scope: this,
-								menu: {
-									items: [
-										{text: "Show range - TODO", checked: false, disabled: true}
-									]
-								}
-							},
-							{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-								toggleHandler: this.on_nav_toggled, scope: this
-							},
-							{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
-								toggleHandler: this.on_nav_toggled, scope: this
-							}
-							//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-							//	toggleHandler: this.on_nav_toggled, scope: this,
-							//	hidden: true, id: "fgx-vortac"
-							//}
-						]   
-					},
-					{xtype: 'buttongroup', disabled: true,
-						title: 'Airports - TODO', 
-						columns: 6,
-						items: [
-							{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
-							{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
-							{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-							//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
-							//	hidden: true, id: "fgx-mil-airports"},
-							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
-							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
-						]   
-					},
-					{xtype: 'buttongroup', 
-						title: 'Utils', 
-						columns: 2,
-						items: [
-							this.get_bookmark_button()
 						]
 					}
-				],
-				
-				//== Bottom Toolbar
-				bbar: [
-
-					{text: "Zoom", tooltip: "Click for default zoom",
-						zoom: 4, handler: this.on_zoom_to, scope: this
-					},
-					new GeoExt.ZoomSlider({
-						map: this.get_map(),
-						aggressive: true,                                                                                                                                                   
-						width: 150,
-						plugins: new GeoExt.ZoomSliderTip({
-							template: "<div>Zoom Level: {zoom}</div>"
-						})
-					}),
-					{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
-					{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
-					{text: "10", zoom: 14, handler: this.on_zoom_to, scope: this},
-					{text: "&nbsp;5&nbsp;", zoom: 16, handler: this.on_zoom_to, scope: this},
-					{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
-					"-",
-					{text: "Opacity", tooltip: "Click for default opacity"},
-					new GeoExt.LayerOpacitySlider({
-						layer: this.get_osm_lite(),
-						aggressive: true, 
-						width: 150,
-						isFormField: true,
-						inverse: true,
-						fieldLabel: "opacity",
-						ssrenderTo: "slider",
-						plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
-					}),
-					"->",
-					{text: "TODO: Lat: "}, this.lbl_lat(), 
-					{text: "Lon: "},  this.lbl_lon(),
-					"-",
-					{text: "DEV", scope: this,
-						handler: function(){
-							console.log(this.get_map().getExtent())
+				]   
+			},
+			
+			{xtype: 'buttongroup',
+				title: 'Navigation Aids',
+				columns: 5,
+				items: [
+					{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
+						toggleHandler: this.on_nav_toggled, scope: this,
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
 						}
+					},
+					{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
+						toggleHandler: this.on_nav_toggled,  scope: this,
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
+						}
+					},
+					{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+						toggleHandler: this.on_nav_toggled, scope: this
+					},
+					{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
+						toggleHandler: this.on_nav_toggled, scope: this
 					}
-				
+					//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+					//	toggleHandler: this.on_nav_toggled, scope: this,
+					//	hidden: true, id: "fgx-vortac"
+					//}
+				]   
+			},
+			{xtype: 'buttongroup', disabled: true,
+				title: 'Airports - TODO', 
+				columns: 6,
+				items: [
+					{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
+					{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+					{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+					//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+					//	hidden: true, id: "fgx-mil-airports"},
+					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
+				]   
+			},
+			{xtype: 'buttongroup', 
+				title: 'Utils', 
+				columns: 2,
+				items: [
+					this.get_bookmark_button()
 				]
 			}
+		],
+		
+		//== Bottom Toolbar
+		bbar: [
+
+			{text: "Zoom", tooltip: "Click for default zoom",
+				zoom: 4, handler: this.on_zoom_to, scope: this
+			},
+			new GeoExt.ZoomSlider({
+				map: this.get_map(),
+				aggressive: true,                                                                                                                                                   
+				width: 150,
+				plugins: new GeoExt.ZoomSliderTip({
+					template: "<div>Zoom Level: {zoom}</div>"
+				})
+			}),
+			{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
+			{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
+			{text: "10", zoom: 14, handler: this.on_zoom_to, scope: this},
+			{text: "&nbsp;5&nbsp;", zoom: 16, handler: this.on_zoom_to, scope: this},
+			{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
+			"-",
+			{text: "Opacity", tooltip: "Click for default opacity"},
+			new GeoExt.LayerOpacitySlider({
+				layer: this.get_osm_lite(),
+				aggressive: true, 
+				width: 150,
+				isFormField: true,
+				inverse: true,
+				fieldLabel: "opacity",
+				ssrenderTo: "slider",
+				plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
+			}),
+			"->",
+			{text: "TODO: Lat: "}, this.lbl_lat(), 
+			{text: "Lon: "},  this.lbl_lon(),
+			"-",
+			{text: "DEV", scope: this,
+				handler: function(){
+					console.log(this.get_map().getExtent())
+				}
+			}
+		
 		]
-		
-		
+	
 	}, config);
 	FGx.MapPanel.superclass.constructor.call(this, config);
 

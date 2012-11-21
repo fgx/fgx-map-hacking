@@ -240,6 +240,11 @@ constructor: function(config) {
 						menu: this.get_styles()
 					},
 					"-",
+					{tooltip: "About FGx", iconCls: "icoHelp", text: "About",
+						handler: this.on_show_iframe, scope: this,
+						url: "/about_iframe"
+					},
+					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
 					//"-",
 					{xtype: 'tbspacer', width: 50},
