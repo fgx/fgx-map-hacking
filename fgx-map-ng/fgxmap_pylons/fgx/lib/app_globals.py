@@ -1,5 +1,7 @@
 """The application's Globals object"""
 
+import os
+import glob
 import random
 
 from beaker.cache import CacheManager
@@ -18,6 +20,9 @@ class Globals(object):
 		'app_globals' variable
 
 		"""
+		self.root_path = os.path.abspath(os.path.dirname(__file__) + "/../"  )
+		print "root=", self.root_path
+		
 		self.cache = CacheManager(**parse_cache_config_options(config))
 
 		self.crossfeed_data_url = config['crossfeed_ajax_url']
@@ -26,7 +31,10 @@ class Globals(object):
 		
 		## This is the version used on javascript=/fgx_js.X/* ,,
 		## Js is send cached, so new change means incrementing this number and directory rename
-		self.fgx_js_version = 1
+		## This searched for fgx_js.X/ and sets the fgx_js_versin to X
+		path =  glob.glob(self.root_path + '/public/fgx_js.[0-9]/')[0]
+		self.fgx_js_version =  path.split("/")[-2].replace("fgx_js.", "")
+		
 		
 		
 	@property
