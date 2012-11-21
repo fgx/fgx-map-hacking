@@ -103,7 +103,7 @@ constructor: function(config) {
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 
-				store: config.flightsStore,
+				store: Ext.StoreMgr.lookup("flights_store"),
 				displayInfo: false,
 				pageSize: 500,
 				prependButtons: false

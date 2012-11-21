@@ -6,9 +6,9 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
 	
 widgets: {
-	FlightsGrid: 0,	
-	mPStatusGrid: 0,
-	DbBrowser: 0
+	FlightsViewWidget: null,	
+	MpStatusGrid: null,
+	DbBrowser: null
 },
 
 
@@ -33,7 +33,7 @@ xFlightsStore: new Ext.data.JsonStore({
 		{name: "alt_ft", type: 'int'},
 		{name: "spd_kts", type: 'int'},
 		//{name: "alt_trend", type: 'string'},
-		{name: "heading", type: 'string'}
+		{name: "hdg", type: 'int'}
 	],
 	url: '/ajax/mpnet/flights/crossfeed',
 	root: 'flights',
@@ -76,18 +76,19 @@ on_refresh_toggled: function(butt, checked){
 
 
 
-on_flights_widget: function(butt, checked){
-	if(!this.widgets.FlightsGrid){
-		this.widgets.FlightsGrid = new FGx.FlightsGrid({
-			flightsStore: this.xFlightsStore,
-			refresh_rate: this.refresh_rate,
+on_flights_widget: function(butt){
+	if(!this.widgets.FlightsViewWidget){
+		this.widgets.FlightsViewWidget = new FGx.FlightsViewWidget({
+			//flightsStore: this.xFlightsStore,
+			//refresh_rate: this.refresh_rate,
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.FlightsGrid);
+		this.get_tab_panel().add(this.widgets.FlightsViewWidget);
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.FlightsGrid);
+	console.log(this.widgets);
+	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
 },
 
 on_mpstatus_widget: function(butt, checked){
@@ -152,7 +153,7 @@ get_tab_panel: function(){
 			
 			this.widgets[widget.fgxType] = 0;
 			return;
-			if(widget.fgxType == "FlightsGrid"){
+			if(widget.fgxType == "FlightsViewWidget"){
 				this.widgets.flightsGrid = 0;
 				
 			}else if(widget.fgxType == "mpStatusGrid"){
@@ -296,6 +297,7 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
+	//this.on_flights_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){

@@ -2,11 +2,20 @@
 
 Ext.namespace("FGx");
 
-FGx.MapPanel = Ext.extend(Ext.Panel, {
+FGx.MapViewWidget = Ext.extend(Ext.Panel, {
 
 
 get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
+},
+
+get_mini_map: function(){
+	
+	if(!this.xMiniMap){
+		this.xMiniMap = new FGx.MiniMapPanel({region: "south", height: 300, collapsible: true});
+		
+	};
+	return this.xMiniMap;
 },
 
 get_map: function(){
@@ -69,7 +78,95 @@ lbl_lon: function(){
 	return this.xLblLon;
 },
 
+//======================================================
+// Airports Grid
+get_airports_grid: function(){
+	if(!this.xAirportsGrid){
+		
+		this.xAirportsGrid =  new FGx.AirportsGrid({});
+		/*
+		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
 
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+		*/		
+	}
+	return this.xAirportsGrid;
+},
+
+//======================================================
+// Flights Grid
+get_flights_grid: function(sto){
+	if(!this.xFlightsGrid){
+		this.xFlightsGrid =  new FGx.FlightsGrid({
+			//flightsStore: Ext.StoreMgr.lookup("flights_store"), 
+			title: "Flights", xHidden: true
+		});
+		this.xFlightsGrid.getStore().on("load", function(store, recs, idx){
+			this.flightLabelsLayer.removeAllFeatures();
+			this.flightMarkersLayer.removeAllFeatures();
+			var recs_length = recs.length;
+			for(var i = 0; i < recs_length; i++){
+				var rec = recs[i];
+				this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
+			};
+		}, this);
+		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
+
+			var rec = grid.getStore().getAt(idx);
+			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().setCenter( lonLat );
+			this.get_map().zoomTo( 10 );
+		}, this);  
+				
+	}
+	return this.xFlightsGrid;
+},
+
+get_nav_widget: function(){
+	if(!this.xNavWidget){
+		
+		this.xNavWidget =  new FGx.NavWidget({});
+		this.xNavWidget.on("GOTO", function(obj){
+
+			this.get_mini_map().show_blip(obj);
+			
+			var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+			this.get_map().panTo( lonLat );
+			this.get_map().zoomTo( 10 );
+			
+			
+			var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+						).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+			var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+				pt,
+					0, // wtf. .I want a larger cicle
+					20
+				);
+			var style = {
+				strokeColor: "red",
+				strokeOpacity: 1,
+				strokeWidth: 3,
+				fillColor: "yellow",
+				fillOpacity: 0.8 };
+			var feature = new OpenLayers.Feature.Vector(circle, null, style);
+			this.highLightMarkers.addFeatures([feature]);
+			
+			//console.log("ADD", feature);
+		}, this);  
+			
+	}
+	return this.xNavWidget;
+},
 
 get_osm_lite: function(){
 	if(!this.xOsmLite){
@@ -404,12 +501,37 @@ constructor: function(config) {
 					}
 				
 				]
+			},
+			{region: 'east', width: 400, 
+				layout: "border",
+				items: [
+					{title: "FGx Map - Next Gen",
+						xtype: 'tabpanel', region: "center", 
+						frame: false,
+						plain: true,
+						border: 0,
+						collapsible: true,
+						collapsed: false,
+						activeItem: 2,
+						items: [
+							//this.mapLayersTree.tree,
+							//this.flightsGrid,
+							//this.flightsWidget.grid,
+							this.get_nav_widget(),
+							this.get_airports_grid(),
+							
+							this.get_flights_grid(config.flightsStore)
+							
+						]
+					},
+					this.get_mini_map()
+				]
 			}
 		]
 		
 		
 	}, config);
-	FGx.MapPanel.superclass.constructor.call(this, config);
+	FGx.MapViewWidget.superclass.constructor.call(this, config);
 
 	
 }, // Constructor	
@@ -455,6 +577,22 @@ on_zoom_to: function(butt){
 init: function(){
 
 	
+	//this.get_map().addLayer( this.highLightMarkers );
+	//this.get_map().addLayer( this.flightMarkersLayer );
+	//this.get_map().addLayer( this.flightLabelsLayer );
+	
+	//this.set_base_layer("Dark"); //??? WTF!!
+	
+	DEADthis.get_flights_grid().getStore().on("load", function(store, recs, idx){
+		console.log("YESSSSS");
+		this.flightLabelsLayer.removeAllFeatures();
+		this.flightMarkersLayer.removeAllFeatures();
+		var recs_length = recs.length;
+		for(var i = 0; i < recs_length; i++){
+			var rec = recs[i];
+			this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
+		};
+	}, this);
 },
 
 
