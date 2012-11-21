@@ -15,7 +15,7 @@ def setup_app(command, conf, vars):
     #Base.metadata.drop_all(bind=Session.bind)
     Base.data.metadata.create_all(bind=Sess.data.bind)
     Base.secure.metadata.create_all(bind=Sess.secure.bind)
-    Base.mp.metadata.create_all(bind=Sess.mp.bind)
-    #Base.tracker.metadata.create_all(bind=Sess.tracker.bind)
+    Base.mpnet.metadata.create_all(bind=Sess.mpnet.bind)
+
     
     

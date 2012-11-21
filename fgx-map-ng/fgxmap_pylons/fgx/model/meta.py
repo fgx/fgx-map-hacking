@@ -4,30 +4,27 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 __all__ = ['Base', 'Session']
 
-# SQLAlchemy session manager. Updated by model.init_model()
-## Need this is object
-class SessionHolder:
+
+class ConnectionsContainer():
 	def __init__(self):
 		self.data = None
 		self.secure = None
 		self.mpnet = None
-
-Sess = SessionHolder()
+		
+		
+# SQLAlchemy session manager. Updated by model.init_model()
+## Need this is object
+Sess = ConnectionsContainer()
 Sess.data = scoped_session(sessionmaker())
 Sess.secure = scoped_session(sessionmaker())
 Sess.mpnet = scoped_session(sessionmaker())
-#Sess.tracker = scoped_session(sessionmaker())
 
 
 # The declarative Base
-class BaseContainer(object):
-	pass
-Base = BaseContainer()
+Base = ConnectionsContainer()
 Base.data = declarative_base()
 Base.secure = declarative_base()
 Base.mpnet = declarative_base()
-#Base.tracker = declarative_base()
-#Base.contrib = declarative_base()
 
 
 

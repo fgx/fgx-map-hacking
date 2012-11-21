@@ -33,8 +33,10 @@ def fetch_data():
 	#return json.loads(cf_data_str)
 	return cf_data_str
 	
+string = '{"success": true, "source":"cf-client", "last_updated": "2012-11-21 14:57:24", "flights": []}'
+#string += '{callsign: "VAPID", lat: "44.405500", lon: "-72.613754", alt_ft: "3000", model: "737-300", server: "217.78.131.44", spd_kts: "223", heading: "345"}]}'
 	
-string =  fetch_data()
+#string =  fetch_data()
 print "---------------------- string --------------------------------"
 print string
 print "----------------------- json   ------------------------------"
