@@ -5,6 +5,7 @@ FGx.DbBrowser = Ext.extend(Ext.Panel, {
 	
 //======================================================
 // Stores
+/*
 sssstoreTables:  new Ext.data.JsonStore({
 	fields: [	
 		{name: "table", type:"string"}
@@ -35,7 +36,7 @@ sssstoreColumns: new Ext.data.JsonStore({
 	autoLoad: false
 	
 }),
-
+*/
 
 //======================================================
 // Tables Grid
@@ -45,18 +46,18 @@ grid_tables: function(){
 			region: 'center',
 			title: "Tables",
 			store:  new Ext.data.JsonStore({
-	fields: [	
-		{name: "table", type:"string"}
-	
-	],
-	idProperty: "table",
-	ssortInfo: {},
-	proxy: new Ext.data.HttpProxy({
-		url: "/ajax/database/tables",
-		method: 'GET'
-	}),
-	root: "tables"
-}),
+				fields: [	
+					{name: "table", type:"string"}
+				
+				],
+				idProperty: "table",
+				ssortInfo: {},
+				proxy: new Ext.data.HttpProxy({
+					url: "/ajax/database/data/tables",
+					method: 'GET'
+				}),
+				root: "tables"
+			}),
 			viewConfig:{
 				forceFit: true
 			},
@@ -98,21 +99,21 @@ grid_columns: function(){
 			title: "Columns",
 			width: 500,
 			store: new Ext.data.JsonStore({
-	fields: [	
-		{name: "column", type:"string"},
-		{name: "type", type:"string"},
-		{name: "max_char", type:"string"}
-	
-	],
-	idProperty: "column",
-	proxy: new Ext.data.HttpProxy({
-		url: "/ajax/database/table/_TABLE_NAME_/columns",
-		method: 'GET'
-	}),
-	root: "columns",
-	autoLoad: false
-	
-}),
+				fields: [	
+					{name: "column", type:"string"},
+					{name: "type", type:"string"},
+					{name: "max_char", type:"string"}
+				
+				],
+				idProperty: "column",
+				proxy: new Ext.data.HttpProxy({
+					url: "/ajax/database/table/_TABLE_NAME_/columns",
+					method: 'GET'
+				}),
+				root: "columns",
+				autoLoad: false
+				
+			}),
 			viewConfig:{
 				forceFit: true,
 				emptyText: "< Select a table",
@@ -159,7 +160,8 @@ constructor: function(config) {
 			this.grid_columns()
 		]
 	
-	});
+	}, config);
+	FGx.DbBrowser.superclass.constructor.call(this, config);
 	
 },
 
