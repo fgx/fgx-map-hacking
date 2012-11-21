@@ -574,7 +574,7 @@ init: function(){
 	//this.set_base_layer("Dark"); //??? WTF!!
 	
 	this.get_flights_grid().getStore().on("load", function(store, recs, idx){
-		//console.log("YESSSSS");
+		console.log("YESSSSS");
 		this.flightLabelsLayer.removeAllFeatures();
 		this.flightMarkersLayer.removeAllFeatures();
 		var recs_length = recs.length;
