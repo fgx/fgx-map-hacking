@@ -232,7 +232,7 @@ constructor: function(config) {
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{iconCls: "icoDatabase", text: "Database Browser", handler: this.on_db_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
 					"-",
@@ -240,7 +240,7 @@ constructor: function(config) {
 						menu: this.get_styles()
 					},
 					"-",
-					{tooltip: "About FGx", iconCls: "icoHelp", text: "About",
+					{tooltip: "About FGx", iconCls: "icoHelp", text: "About", disabled: true,
 						handler: this.on_show_iframe, scope: this,
 						url: "/about_iframe"
 					},

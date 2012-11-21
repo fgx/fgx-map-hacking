@@ -9,6 +9,20 @@ get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
 },
 
+get_graticule: function(){
+	if(!this.xGraticule){
+		this.xGraticule =	new OpenLayers.Control.Graticule({
+			numPoints: 1, 
+			autoActivate: false,
+			labelled: true,
+			lineSymbolizer:{strokeColor: "grey", strokeWidth: 1, strokeOpacity: 0.3},
+			// WTF below dont work !
+			labelSymbolizer:{strokeColor: "red", strokeWidth: 1, strokeOpacity: 0.5}
+		});
+	}
+	return this.xGraticule;
+},
+
 get_map: function(){
 	if(!this.xMap){
 		this.xMap =  new OpenLayers.Map({
@@ -40,6 +54,7 @@ get_map: function(){
 			// zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 20
 		});
+		this.xMap.addControl( this.get_graticule() );
 		this.xMap.events.register("mousemove", this, function (e) {
 			var pos = this.get_map().getLonLatFromViewPortPx(e.xy		
 				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
@@ -368,7 +383,7 @@ constructor: function(config) {
 			new GeoExt.ZoomSlider({
 				map: this.get_map(),
 				aggressive: true,                                                                                                                                                   
-				width: 150,
+				width: 100,
 				plugins: new GeoExt.ZoomSliderTip({
 					template: "<div>Zoom Level: {zoom}</div>"
 				})
@@ -383,13 +398,25 @@ constructor: function(config) {
 			new GeoExt.LayerOpacitySlider({
 				layer: this.get_osm_lite(),
 				aggressive: true, 
-				width: 150,
+				width: 80,
 				isFormField: true,
 				inverse: true,
 				fieldLabel: "opacity",
 				ssrenderTo: "slider",
 				plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
 			}),
+			"-",
+			{text: "Graticule", iconCls: "icoOff", enableToggle: true, pressed: false,
+				scope: this, 
+				toggleHandler: function(butt, checked){
+					if(checked){
+						this.get_graticule().activate();
+					}else{
+						this.get_graticule().deactivate();
+					}
+				}
+			},
+			"-",
 			"->",
 			{text: "TODO: Lat: "}, this.lbl_lat(), 
 			{text: "Lon: "},  this.lbl_lon(),

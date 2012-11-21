@@ -123,7 +123,7 @@ constructor: function(config) {
 	config = Ext.apply({
 		layout: 'border',
 		fgxType: "DbBrowser",
-		title: "Db Browser",
+		title: "DB Schema",
 		iconCls: "icoDatabase",
 		activeTab: 0,
 		tbar: [
