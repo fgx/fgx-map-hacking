@@ -547,12 +547,13 @@ load_tracker: function(tracks){
 	var style = { 
 		strokeColor: '#0000ff', 
 		strokeOpacity: 0.5,
-		strokeWidth: 5
+		strokeWidth: 2
 	};
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
 	this.trackLinesLayer.addFeatures([lineFeature]);
 	this.get_map().zoomToExtent(this.trackLinesLayer.getDataExtent()); 
+	this.get_map().zoomOut();
 	
 }
 
