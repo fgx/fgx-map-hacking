@@ -10,8 +10,7 @@
 {% block header %}
 
 
-
-{{ mac.ext_js() }}
+{{ mac.ext_js(ext_theme=c.ext_theme) }}
 {{ mac.openlayers_js() }}
 
 <script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/main.js"></script>

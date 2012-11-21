@@ -1,12 +1,18 @@
 
 
 {##  Ext js ##}
-{% macro ext_js(ver="3.4.0") %}
+{% macro ext_js(ver="3.4.0", ext_theme=None) %}
 	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
 	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/ext-all.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/ext-all.css" />
 
+	{% if ext_theme == "gray" %}
 	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/xtheme-gray.css" /> 
+	{% elif ext_theme == "access" %}
+	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/xtheme-access.css" /> 
+	{% endif %}
+
+
 {% endmacro %}
 
 
