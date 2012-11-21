@@ -13,7 +13,7 @@ local_icons = {}
 
 local_icons["icoAirport"] = "apt.png"
 local_icons["icoFix"] = "vfr_fix.png"
-local_icons["icoNdb"] = "ndb.png"
+local_icons["icoNdb"] = "ndb.16.png"
 local_icons["icoVor"] = "vor.png"
 local_icons["icoClr"] = "go.gif"
 

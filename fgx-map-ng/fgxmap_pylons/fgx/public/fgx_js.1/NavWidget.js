@@ -25,13 +25,14 @@ constructor: function(config) {
 			{header: '&nbsp;', dataIndex:'nav_type', width: 20,
 				renderer: function(v, meta, rec){
 					//meta.attr = 'style= "background-image: url(/images/vfr_fix.png) !important; background-repeat: no-repeat;"';
-					if(v == "fix"){
+					
+					if(v == "FIX"){
 						meta.css = "icoFix";
 						
-					}else if(v == "ndb"){
+					}else if(v == "NDB"){
 						meta.css = "icoNdb";
 							
-					}else if(v == "vor"){
+					}else if(v == "VOR"){
 						meta.css = "icoVor";
 					}
 					return " ";
