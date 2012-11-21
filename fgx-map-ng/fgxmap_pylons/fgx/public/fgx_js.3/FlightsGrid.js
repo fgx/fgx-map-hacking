@@ -65,41 +65,11 @@ constructor: function(config) {
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Server', dataIndex:'server', sortable: true, align: 'left', hidden: config.xHidden,
-				renderer: function(v, meta, rec, rowIdx, colIdx, store){
-					return v;
-				}
-			},
 			{header: 'Aircraft',  dataIndex:'model', sortable: true, 
 				width: 100
 			}
 
-		],
-		
-		//TODO make this a load
-		/*
-		tbar: [	//this.pilotsDataCountLabel
-			{xtype: 'buttongroup', hidden: config.xHidden,
-				title: 'Refresh Secs',
-				columns: 7,
-				items: [
-					{text: "Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
-					{text: "Off", iconCls: "icoOn",  enableToggle: true, scope: this,
-						toggleGroup: "ref_rate", ref_rate: 0, toggleHandler: this.on_refresh_toggled},
-					{text: "2", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 2, toggleHandler: this.on_refresh_toggled},
-					{text: "3", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 3, toggleHandler: this.on_refresh_toggled},
-					{text: "4", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 4, pressed: true, toggleHandler: this.on_refresh_toggled},
-					{text: "5", iconCls: "icoOff", enableToggle: true,  scope: this,  width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 5, toggleHandler: this.on_refresh_toggled},
-					{text: "10", iconCls: "icoOff", enableToggle: true,   scope: this, width: this.tbw,
-						toggleGroup: "ref_rate", ref_rate: 6, toggleHandler: this.on_refresh_toggled}
-				]   
-			}
-		],*/
-		
+		],		
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 

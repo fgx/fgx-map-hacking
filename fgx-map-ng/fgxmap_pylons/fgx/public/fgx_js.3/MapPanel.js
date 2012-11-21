@@ -100,7 +100,7 @@ get_bookmark_button: function(){
 // Create the Layers
 get_layers: function(){
 	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	
+	this.trackLinesLayer = new OpenLayers.Layer.Vector("Track Lines Layer");		
 
 	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 		"Radar Markers", 
@@ -244,6 +244,7 @@ get_layers: function(){
 				}, {  visibility: false}
 		),
 		this.highLightMarkers,
+		this.trackLinesLayer,
 		this.flightLabelsLayer,
 		this.flightMarkersLayer
 		
@@ -525,6 +526,34 @@ on_goto: function(butt){
 	//var lonLat = new OpenLayers.LonLat(butt.lon, butt.lat
 	//		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	this.fireEvent("OPEN_MAP", butt.text, true, butt.lon, butt.lat, butt.zoom);
+},
+
+load_tracker: function(tracks){
+	
+	this.trackLinesLayer.removeAllFeatures();
+	var trk_length = tracks.length;
+	var points = [];
+	//var points;
+	var p;
+	for(var i =0; i < trk_length; i++){
+		p = tracks[i];
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon, p.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+			  );
+	}
+	var line = new OpenLayers.Geometry.LineString(points);
+
+	var style = { 
+		strokeColor: '#0000ff', 
+		strokeOpacity: 0.5,
+		strokeWidth: 5
+	};
+
+	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+	this.trackLinesLayer.addFeatures([lineFeature]);
+	this.get_map().zoomToExtent(this.trackLinesLayer.getDataExtent()); 
+	
 }
 
 

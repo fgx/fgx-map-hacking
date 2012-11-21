@@ -297,7 +297,7 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	//this.on_flights_widget();
+	this.on_flights_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){

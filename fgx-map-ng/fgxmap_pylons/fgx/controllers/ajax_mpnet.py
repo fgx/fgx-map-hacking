@@ -10,7 +10,7 @@ from pylons import app_globals
 from fgx.lib.base import BaseController, render
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer
+from fgx.model.mpnet import MpServer, FlightWayPoint
 
 log = logging.getLogger(__name__)
 
@@ -57,4 +57,13 @@ class AjaxMpnetController(BaseController):
 		return payload
 
 		
+	@jsonify
+	def tracker(self, callsign=None):
+		payload = dict(success=True)
+		obs = meta.Sess.mpnet.query(FlightWayPoint).filter_by(callsign=callsign).limit(100).all()
+		payload['tracks'] = [ob.dic() for ob in obs]
 		
+		return payload	
+		
+		
+	

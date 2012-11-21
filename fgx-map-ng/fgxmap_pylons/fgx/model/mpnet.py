@@ -44,7 +44,13 @@ class FlightWayPoint(Base.mpnet):
 	altitude = Column(Integer())
 	heading = Column(Integer(), nullable=True)
 	
-	
+	def dic(self):
+		return {
+			"time": str(self.time),
+			"lat": self.latitude, "lon": self.longitude,
+			"alt_ft": self.altitude,
+			"spd_kts": self.speed
+			}
 ##=================================================================
 ## MpServer
 ##=================================================================

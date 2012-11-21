@@ -48,6 +48,7 @@ def make_map(config):
 	map.connect('/ajax/mpnet/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mpnet/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mpnet/flights', controller="ajax_mpnet", action="flights")
+	map.connect('/ajax/mpnet/tracker/{callsign}', controller="ajax_mpnet", action="tracker")
 	
 	
 	# Nav Aids
