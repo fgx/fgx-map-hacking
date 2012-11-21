@@ -25,7 +25,7 @@ def make_map(config):
 	map.connect('/error/{action}', controller='error')
 	map.connect('/error/{action}/{id}', controller='error')
 
-	map.connect('/www/dynamic.{fgx_ver}.css', controller='html_pages', action="dynamic_ico_css")
+	
 	
 	
 	##=======================================================================
@@ -72,13 +72,13 @@ def make_map(config):
 	##=======================================================================
 	## HTML Pages
 	##=======================================================================
-	map.connect('/database', controller="html_pages", action="database")
+	map.connect('/dynamic.{fgx_ver}.css', controller='html_pages', action="dynamic_icons_css")
 	
 	map.connect('/admin/users', controller="html_pages", action="admin_users")
 	
-	map.connect('/maptest', controller="html_pages", action="maptest")
-	map.connect('/index', controller="html_pages", action="index")
+	map.connect('/{page}', controller="html_pages", action="index")
 	map.connect('/', controller="html_pages", action="index")
+	
 	
 
 	return map

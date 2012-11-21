@@ -15,8 +15,9 @@ class HtmlPagesController(BaseController):
 	
 	
 	
-	def index(self):
+	def index(self, page=None):
 		
+		c.page = page if page else "map-ext"
 		c.ext_theme = None
 		ext_theme_to_set = h.v(request, 'ext_theme')
 		if ext_theme_to_set:
@@ -28,8 +29,9 @@ class HtmlPagesController(BaseController):
 			c.ext_theme = "xtheme-access.css"
 		
 		
-		return render("map-ext.html")
+		return render("%s.html" % c.page)
 	
+	"""
 	def maptest(self):
 		return render("map-test.html")
 		
@@ -40,8 +42,8 @@ class HtmlPagesController(BaseController):
 	def admin_users(self):
 		return render("admin_users.html")
 		
-		
-	def dynamic_ico_css(self):
+	"""	
+	def dynamic_icons_css(self):
 		txt = style.get_icons_css()
 		response.headers['Content-Type'] = "text/css";
 		return txt

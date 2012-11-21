@@ -23,7 +23,8 @@ grid_tables: function(){
 					url: "/ajax/database/data/tables",
 					method: 'GET'
 				}),
-				root: "tables"
+				root: "tables",
+				autoLoad: true
 			}),
 			viewConfig:{
 				forceFit: true
@@ -41,14 +42,11 @@ grid_tables: function(){
 				scope: this,
 				rowclick: function(grid, idx, e){
 					
-					console.log("yes");
-					//var r = this
-					var rec = self.storeTables.getAt(idx);
+					var rec = this.grid_tables().getStore().getAt(idx);
 					var table = rec.get("table");
 					var url = "/ajax/database/" + this.curr_database + "/table/" + table + "/columns";
-					console.log(url);
-					self.storeColumns.proxy.setUrl(url);
-					self.storeColumns.load();
+					this.grid_columns().getStore().proxy.setUrl(url);
+					this.grid_columns().getStore().load();
 				}
 			}
 		});
@@ -69,7 +67,8 @@ grid_columns: function(){
 				fields: [	
 					{name: "column", type:"string"},
 					{name: "type", type:"string"},
-					{name: "max_char", type:"string"}
+					{name: "max_char", type:"string"},
+					{name: "nullable", type:"boolean"},
 				
 				],
 				idProperty: "column",
@@ -93,29 +92,25 @@ grid_columns: function(){
 						return val;
 					}
 				},
-				{header: "Type", dataIndex: "type"}
-			],
-			listeners:{
-				rowclick: {
-					scope: this,
-					//##fn: this.on_table_row_click
+				{header: "Type", dataIndex: "type"},
+				{header: "Nullable", dataIndex: "nullable", width: 30,
+					renderer: function(v){
+						return v ? "Yes" : "-";
+					}
 				}
-			}
+			]
 		});
 	}
 	return this.gridColumns;
 },
 
 
-/*
-this.tablesGrid.on("TABLE", function(table){
-	this.columnsGrid.load_columns(table);	
-}, this);
-*/
 on_select_db: function(butt, checked){
-	console.log(butt, checked);
 	if(checked){
 		this.curr_database = butt.text;
+		
+		this.grid_columns().getStore().removeAll();
+		
 		this.grid_tables().getStore().proxy.setUrl("/ajax/database/" + this.curr_database + "/tables");
 		this.grid_tables().getStore().load();
 	}
@@ -127,7 +122,8 @@ constructor: function(config) {
 	
 	config = Ext.apply({
 		layout: 'border',
-		renderTo: "widget_div",
+		fgxType: "db_browser",
+		title: "Db Browser",
 		activeTab: 0,
 		tbar: [
 			{xtype: 'buttongroup', 

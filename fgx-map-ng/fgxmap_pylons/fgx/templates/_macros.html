@@ -1,7 +1,7 @@
 
 
 {##  Ext js ##}
-{% macro ext_js(ver="3.4.0", ext_theme=None) %}
+{% macro ext_js(ver="3.4.0", ext_theme="xtheme-blue.css") %}
 
 	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
 	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/ext-all.js"></script>
@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/ext-all.css" />
 
 	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/{{ext_theme}}" /> 
-	<link rel="stylesheet" type="text/css" href="/www/dynamic.{{app_globals.fgx_js_version}}.css" /> 
+	<link rel="stylesheet" type="text/css" href="/dynamic.{{app_globals.fgx_js_version}}.css" /> 
 
 {% endmacro %}
 

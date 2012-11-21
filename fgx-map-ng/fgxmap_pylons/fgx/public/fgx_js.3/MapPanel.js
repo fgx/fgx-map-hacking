@@ -357,7 +357,7 @@ constructor: function(config) {
 	//console.log(ll.xFlag, ll.x, ll.y);
 	config = Ext.apply({
 		
-		
+		fgxType: "map_panel",
 		iconCls: "icoMap",
 		frame: false, plain: true,border: 0,	bodyBorder: false,
 		

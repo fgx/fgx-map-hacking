@@ -32,16 +32,10 @@ def empty_table(table):
 		meta.Session.commit()
 	
 	
-def attribute_names(cls):
-	return [prop.key for prop in class_mapper(cls).iterate_properties
-		if isinstance(prop, sqlalchemy.orm.ColumnProperty)]
+
 	
 def columns(db_name, table_name):
-	
-	tbl = meta.Base.__dict__[db_name].metadata.tables[table_name]
-	
-
-	#print attribute_names(meta.Base.__dict__[db_name].metadata.tables[table_name])
+		
 	cols = meta.Base.__dict__[db_name].metadata.tables[table_name].columns
 	lst = []
 	for c in  cols:

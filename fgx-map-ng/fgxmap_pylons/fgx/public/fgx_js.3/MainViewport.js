@@ -3,7 +3,15 @@ Ext.namespace("FGx");
 
 FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
+
 	
+widgets: {
+	flightsGrid: 0,	
+	mpStatusGrid: 0,
+	dbBrowser: 0
+},
+
+
 //===========================================================
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
@@ -66,42 +74,49 @@ on_refresh_toggled: function(butt, checked){
 
 
 
-
-flightsGrid: 0,
 on_flights_widget: function(butt, checked){
-	if(!this.flightsGrid){
-		this.flightsGrid = new FGx.FlightsGrid({
+	if(!this.widgets.flightsGrid){
+		this.widgets.flightsGrid = new FGx.FlightsGrid({
 			flightsStore: this.xFlightsStore,
 			refresh_rate: this.refresh_rate,
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.flightsGrid);
+		this.get_tab_panel().add(this.widgets.flightsGrid);
 	}
-	this.get_tab_panel().setActiveTab(this.flightsGrid);
+	this.get_tab_panel().setActiveTab(this.widgets.flightsGrid);
 },
 
-mpStatusGrid: 0,
 on_mpstatus_widget: function(butt, checked){
-	if(!this.mpStatusGrid){
-		this.mpStatusGrid = new FGx.MpStatusGrid({
+	if(!this.widgets.mpStatusGrid){
+		this.widgets.mpStatusGrid = new FGx.MpStatusGrid({
 			title: "Network Status", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.mpStatusGrid);
+		this.get_tab_panel().add(this.widgets.mpStatusGrid);
 	}
-	this.get_tab_panel().setActiveTab(this.mpStatusGrid);
+	this.get_tab_panel().setActiveTab(this.widgets.mpStatusGrid);
 },
-
+on_db_browser_widget: function(butt, checked){
+	if(!this.widgets.DbBrowser){
+		this.widgets.DbBrowser = new FGx.DbBrowser({
+			ssstitle: "Network Status", 
+			sssclosable: true,
+			sssxHidden: false
+		});
+		this.get_tab_panel().add(this.widgets.DbBrowser);
+	}
+	this.get_tab_panel().setActiveTab(this.widgets.DbBrowser);
+},
 //=================================================================================
 // Map Panels
 //=================================================================================
 
 on_open_map:  function(title, lat, lon, zoom, closable){
-	console.log("-----------------------------------------");
-	console.log("on_open_map", title, lat, lon, zoom, closable);
+	//console.log("-----------------------------------------");
+	//console.log("on_open_map", title, lat, lon, zoom, closable);
 	var newMap = new FGx.MapPanel({
 		title: title, closable: closable, 
 		flightsStore: this.xFlightsStore,
@@ -132,10 +147,14 @@ get_tab_panel: function(){
 			//console.log("tabchanged");
 		}, this);
 		this.xTabPanel.on("remove", function(panel, widget){
-			if(widget.xType == "flights"){
-				this.flightsGrid = 0;
-			}else if(widget.xType == "mpstatus"){
-				this.mpStatusGrid = 0;
+			if(widget.fgxType == "flights"){
+				this.widgets.flightsGrid = 0;
+				
+			}else if(widget.fgxType == "mpstatus"){
+				this.widgets.mpStatusGrid = 0;
+				
+			}else if(widget.fgxType == "db_browser"){
+				this.widgets.dbBrowser = 0;
 			}
 		}, this);
 	}
@@ -167,7 +186,7 @@ constructor: function(config) {
 				hideHeader: true,
 				tbar: [
 					{xtype: 'tbspacer', width: 5},
-					"-",
+					//"-",
 					{text: "New Map", iconCls: "icoMapAdd", 				
 						menu: [
 							{text: "World", handler: this.on_goto, scope: this,
@@ -194,8 +213,8 @@ constructor: function(config) {
 						]
 					},
 					"-",
-					{xtype: 'tbspacer', width: 10},
-					"-",
+					//{xtype: 'tbspacer', width: 10},
+					///"-",
 					{text: "Flights", iconCls: "icoFlights", 
 						handler: this.on_flights_widget, scope: this
 					},
@@ -205,20 +224,34 @@ constructor: function(config) {
 						handler: this.on_mpstatus_widget, scope: this
 					},
 					"-",
+					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
+						menu: [
+							{text: "Database Definition", handler: this.on_db_browser_widget, scope: this}
+						]
+					},
+					{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
+						menu: this.get_styles()
+					},
+					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
 					//"-",
 					{xtype: 'tbspacer', width: 50},
 					"-",
-					{text: "Style", iconCls: "icoSettings", 
-						menu: this.get_styles()
-					},
+					{xtype: "tbtext", text: "MP Refresh > ", tooltip: "MultiPlayer refresh in seconds"},
+					
 					//{text: "&nbsp;Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 					this.get_refresh_buttons(),
-					"-",	
-					"->",	
-					"-",	
-					{text: "Login", iconCls: "icoLogin", disabled: true},
 					"-",
+					
+					"->",
+					//"-",
+		
+					//{xtype: 'tbspacer', width: 80},
+					{text: "FlightGear", iconCls: "icoFlightGear", 
+					
+					},
+					"-",	
+					
 					{text: "FGx", iconCls: "icoFgx", 
 						menu: [
 							{text: "Issues", xUrl: "http://fgx.ch/projects/fgx-map/issues",
@@ -239,6 +272,9 @@ constructor: function(config) {
 							
 						]
 					},
+					"-",
+					{text: "Login", iconCls: "icoLogin", disabled: true},
+					//"-",
 					{xtype: 'tbspacer', width: 10}
 						
 				]
