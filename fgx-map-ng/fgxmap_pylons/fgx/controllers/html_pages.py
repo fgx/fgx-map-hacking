@@ -6,6 +6,8 @@ from pylons.controllers.util import abort, redirect
 from fgx.lib.base import BaseController, render
 from fgx.lib import helpers as h
 
+from fgx.config import style
+
 log = logging.getLogger(__name__)
 
 class HtmlPagesController(BaseController):
@@ -40,7 +42,7 @@ class HtmlPagesController(BaseController):
 		
 		
 	def dynamic_ico_css(self):
-		
+		txt = style.get_icons_css()
 		response.headers['Content-Type'] = "text/plain";
-		return "FOO"
+		return txt
 		

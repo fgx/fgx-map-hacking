@@ -25,7 +25,7 @@ def make_map(config):
 	map.connect('/error/{action}', controller='error')
 	map.connect('/error/{action}/{id}', controller='error')
 
-	map.connect('/style/dynamic.css', controller='html_pages', action="dynamic_ico_css")
+	map.connect('/www/dynamic.{fgx_ver}.css', controller='html_pages', action="dynamic_ico_css")
 	
 	
 	##=======================================================================
