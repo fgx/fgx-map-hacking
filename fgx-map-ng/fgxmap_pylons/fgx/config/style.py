@@ -15,7 +15,7 @@ local_icons["icoAirport"] = "apt.png"
 local_icons["icoFix"] = "vfr_fix.png"
 local_icons["icoNdb"] = "ndb.png"
 local_icons["icoVor"] = "vor.png"
-
+local_icons["icoClr"] = "go.gif"
 
 
 ##===========================================================================
@@ -66,7 +66,7 @@ icons["icoUserDelete"] = "user_delete.png"
 icons["icoCancel"] = "bullet_black.png"
 icons["icoSave"] = "accept.png"
 
-icons["icoClr"] = "go.gif"
+
 
 
 icons["icoRefreshStop"] = "clock_stop.png"
