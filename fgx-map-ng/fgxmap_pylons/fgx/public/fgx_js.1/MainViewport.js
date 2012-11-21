@@ -1,28 +1,16 @@
 
 Ext.namespace("FGx");
 
-Ext.namespace("FGx");
-
 FGx.MainViewport = Ext.extend(Ext.Viewport, {
 
 	
 //===========================================================
 //== Flights data LIVE state
-// This this is location of the the "multiplyer stuff"..
-// The "Flights" are stored in an object and is passed around..
-/* flights: {
-	refresh_rate: 0,
-	runner: new Ext.util.TaskRunner(),
-	store: this.get_flights_store()						  
-}, NOT */
-
-
+// This this is location of the the "multiplayer stuff"..
 refresh_rate: 0,
 runner: new Ext.util.TaskRunner(),
 
 //= this store is passed around.. its global kinda
-//get_flights_store: function(){
-//	if(!this.xFlightsStore){
 xFlightsStore: new Ext.data.JsonStore({
 	idProperty: 'callsign',
 	fields: [ 	{name: 'flag', type: 'int'},
@@ -47,9 +35,6 @@ xFlightsStore: new Ext.data.JsonStore({
 	autoLoad: false,
 }),
 
-//	}
-//	return this.xFlightsStore;
-//},
 
 update_flights: function(){
 	this.xFlightsStore.load();

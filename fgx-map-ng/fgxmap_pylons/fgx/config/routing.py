@@ -32,14 +32,15 @@ def make_map(config):
 	# Ajax Routes
 	##=======================================================================
 	
-	# Database Browsing
+	# Airports
 	map.connect('/ajax/airports', controller="ajax_airport", action="airports")
 	map.connect('/ajax/airport/{apt_ident}', controller="ajax_airport", action="airport")
 	
 	# Database Browsing
-	map.connect('/ajax/database/tables', controller="ajax_db", action="tables")
-	map.connect('/ajax/database/table/{table}/columns', controller="ajax_db", action="columns")
-	map.connect('/ajax/database/table/{table}/drop', controller="ajax_db", action="drop_table")
+	map.connect('/ajax/databases', controller="ajax_db", action="databases")
+	map.connect('/ajax/database/{db}/tables', controller="ajax_db", action="tables")
+	map.connect('/ajax/database/{db}/table/{table}/columns', controller="ajax_db", action="columns")
+	map.connect('/ajax/database/{db}/table/{table}/drop', controller="ajax_db", action="drop_table")
 	
 	
 	# MultiPlayer
