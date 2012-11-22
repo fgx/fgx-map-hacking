@@ -8,8 +8,6 @@
 
 import sys, time, datetime, csv, os, re, psycopg2, yaml, warnings
 
- 
-
 # geographiclib 1.24 by (c) Charles Karney
 from geographiclib.geodesic import Geodesic
 
