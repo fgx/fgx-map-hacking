@@ -307,14 +307,14 @@ constructor: function(config) {
 					
 					{text: "FGx", iconCls: "icoFgx", 
 						menu: [
-							{text: "Issues", xUrl: "http://fgx.ch/projects/fgx-map/issues",
+							{text: "Issues", url: "http://fgx.ch/projects/fgx-map/issues",
 								handler: this.on_open_url, scope: this,
 							},
 							{text: "Git Source Code" ,
 								menu: [
-									{text: "cgit- recommended", xUrl: "http://git.fgx.ch/fgx-map/",
+									{text: "cgit- recommended", url: "http://git.fgx.ch/fgx-map/",
 										handler: this.on_open_url, scope: this },
-									{text: "Chili", xUrl: "http://fgx.ch/projects/fgx-map/",
+									{text: "Chili", url: "http://fgx.ch/projects/fgx-map/",
 										handler: this.on_open_url, scope: this }
 								]
 							}
@@ -375,7 +375,12 @@ refresh_now: function(){
 },
 
 on_open_url: function(butt){
-	window.open(butt.xUrl);
+	//window.open(butt.url);
+	var iFrame =  new FGx.IFramePanel({
+		url: butt.url, title: butt.text
+	});
+	this.get_tab_panel().add(iFrame);
+	this.get_tab_panel().setActiveTab(iFrame);
 },
 
 get_styles: function(){

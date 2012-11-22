@@ -3,13 +3,14 @@ Ext.namespace("FGx");
 
 FGx.AirportsGrid =  Ext.extend(Ext.Panel, {
 
-txt_width: 40,
+txt_width:60,
 //===========================================================
 //== Grid
 get_airports_grid: function(){
 	if(!this.xAirportsGrid){
 		this.xAirportsGrid = new Ext.grid.GridPanel({
 			region: "center",
+			frame: false, plain: true, border: false,
 			hideHeader: true,
 			autoScroll: true,
 			autoWidth: true,
@@ -25,14 +26,19 @@ get_airports_grid: function(){
 			loadMask: true,
 			sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 			columns: [ 
-				{header: 'Code',  dataIndex:'apt_ident', sortable: true, 
+				/* {header: 'Code',  dataIndex:'apt_ident', sortable: true, 
 					width: 60
 				},
 				
 				{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
 
-				}
+				}*/
+				{header: 'Airport', dataIndex:'apt_ident', sortable: true,
+					renderer: function(v, meta, rec){
+						return rec.get("apt_ident") + ": " + rec.get("apt_name_ascii");
+					}
 
+				}
 			]
 		});
 		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
@@ -75,6 +81,7 @@ get_runways_tree: function(){
 	if(!this.xRunwaysTree){
 		this.xRunwaysTree = new Ext.ux.tree.TreeGrid({
 			region: "east", 
+			frame: false, plain: true, border: false,
 			columns: [
 				{header: 'Item', dataIndex: 'task', 	width: 100	},
 				{header: 'Value', dataIndex: 'task', 	swidth: 230	}
@@ -101,6 +108,7 @@ constructor: function(config) {
 		iconCls: "icoAirport",
 		title: "Airports",
 		layout: "border",
+		frame: false, plain: true, border: false,
 		items: [
 			this.get_airports_grid(),
 			this.get_runways_tree()		   
@@ -136,11 +144,11 @@ constructor: function(config) {
 				title: 'Filter Types',
 				columns: 5,
 				items: [
-					{text: "Major"},
-					{text: "Minor"},
-					{text: "Small"},
-					{text: "Water"},
-					{text: "HeliPad"}
+					{text: "Major", pressed: true, enableToggle: true},
+					{text: "Minor", pressed: true, enableToggle: true},
+					{text: "Small", enableToggle: true},
+					{text: "Water", enableToggle: true},
+					{text: "HeliPad", enableToggle: true}
 				]
 			}
 		]
