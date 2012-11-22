@@ -58,18 +58,31 @@ get_flight_plan_grid: function(){
 			loadMask: true,
 			view: new Ext.grid.GroupingView({
 				forceFit:true,
+				emptyText: "No items to view",
+				deferEmptyText: false,
 				ssgroupTextTpl: '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})',
 				
 			}),
 			DDDviewConfig:{
 				forceFit: true,
-				emptyText: "No items to view",
-				deferEmptyText: false
+				
 			},
 		});
 		//this.xFlightPlanGrid.on("rowclick", function(grid, rowIdx, e){
 		//	var rec = grid.getStore().getAt(rowIdx);
+		this.xFlightPlanGrid.getStore().on("load", function(store, recs){
+			console.log(recs);
+			var recs_length = recs.length;
 			
+			var fpoints = [];
+			for(var i =0; i < recs_length; i++){
+				var r = recs[i].data;
+				if(r.lat && r.lon){
+					fpoints.push(r);
+				}
+			}
+			this.get_map_panel().load_flightplan(fpoints);
+		}, this);
 			
 	}
 	return this.xFlightPlanGrid;
