@@ -58,17 +58,23 @@ class AjaxAirportsController(BaseController):
 		apt_ident = apt_ident.upper()
 		payload = {'success': True}
 
-		dic = dict(apt_ident=apt_ident,
+		#dic = dict(apt_ident=apt_ident,
 					
 		
 		
 		payload['airport'] = airports.airport(apt_ident)
-		payload['airport']['runways'] = []
+		#payload['airport']['runways'] = []
 		
 		#payload['airport'] = airports.airport(apt_ident)
 		#payload['runways'] = airports.runways(apt_ident)
 			
 		return payload
 		
-		
+	@jsonify
+	def airport_metar(self, apt_ident):
+	
+		apt_ident = apt_ident.upper()
+		payload = {'success': True}
 
+		return payload
+		

@@ -35,6 +35,7 @@ def make_map(config):
 	# Airports
 	map.connect('/ajax/airports', controller="ajax_airports", action="airports")
 	map.connect('/ajax/airport/{apt_ident}', controller="ajax_airports", action="airport")
+	map.connect('/ajax/airport/{apt_ident}/metar', controller="ajax_airports", action="airport_metar")
 	map.connect('/ajax/airport/{apt_ident}/tree', controller="ajax_airports", action="airport_tree")
 	
 	# Airway

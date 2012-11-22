@@ -48,3 +48,15 @@ class HtmlPagesController(BaseController):
 		response.headers['Content-Type'] = "text/css";
 		return txt
 		
+	"""	
+	def fg_server_xml_cgi(self):
+		
+		s = '<?xml version="1.0" encoding="UTF-8" ?>'
+		s += '<fg_server pilot_cnt="%s">' % len(flights)
+		for f in flights:
+			
+		<marker callsign="jvmr" server_ip="LOCAL" model="747-400" lat="25.433817" lng="-64.117113" alt="20418.908292" heading="334.428619384766" pitch="-0.287139564752579" roll="-0.0248698983341455" />
+    <m
+		
+		return "FOoooooooooooooooooo"
+	"""

@@ -206,7 +206,17 @@ get_tab_panel: function(){
 },
 
 on_url_action: function(butt, foo){
-	console.log("on)urlaction", butt, foo);
+	//console.log("on)urlaction", butt, butt.xMode);
+	var xm = butt.xMode;
+	if(xm == "window"){
+		window.open(butt.url);
+	}else{
+		var newTab = new FGx.IFramePanel({
+			url: butt.url, title: butt.text
+		});
+		this.get_tab_panel().add(newTab);
+		this.get_tab_panel().setActiveTab(newTab);
+	}
 },
 
 
@@ -268,7 +278,7 @@ constructor: function(config) {
 					{text: "Flight Plans", iconCls: "icoFlightPlans", xtype: "splitbutton",
 						handler: this.on_flight_plans_widget, scope: this,
 						menu:[
-							new FGx.UrlAction({text: "RouteFinder", url: "http://rfinder.asalink.net/free/", M: this}),
+							new FGx.UrlAction({text: "RouteFinder - rfinder.asalink.net/free/", url: "http://rfinder.asalink.net/free/", M: this}),
 						]
 					},
 					"-",
