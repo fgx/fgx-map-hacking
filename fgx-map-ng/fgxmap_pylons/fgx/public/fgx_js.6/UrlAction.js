@@ -10,8 +10,8 @@ constructor: function(config) {
 		iconCls: config.icoCls ? config.icoCls : "icoHtml",
 		
 		menu: [
-			{text: "with Desktop Browser"},
-			{text: "Open In Tab"}
+			{text: "Open in desktop"},
+			{text: "Open in embedded iframe tab"}
 		]
 			
 		
