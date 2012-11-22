@@ -29,6 +29,7 @@ icons["icoFlightPlans"] = "page_white_actionscript.png"
 
 icons['icoHelp'] = "help.png"
 icons['icoExecute'] = "accept.png"
+icons['icoHtml'] = "html.png"
 
 icons['icoDev'] = "shape_align_bottom.png"
 icons['icoDatabase'] = "database.png"

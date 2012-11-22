@@ -115,7 +115,7 @@ constructor: function(config) {
 		],
 		tbar: [	
 			{xtype: 'buttongroup', 
-				title: 'Search Code',
+				title: 'Find Code',
 				columns: 2,
 				items: [
 					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
@@ -128,7 +128,7 @@ constructor: function(config) {
 				]
 			},
 			{xtype: 'buttongroup', 
-				title: 'Search Name',
+				title: 'Find Name',
 				columns: 2,
 				items: [
 					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
@@ -141,7 +141,7 @@ constructor: function(config) {
 				]
 			},
 			{xtype: 'buttongroup', 
-				title: 'Filter Types',
+				title: 'Show Selected - TODO',
 				columns: 5,
 				items: [
 					{text: "Major", pressed: true, enableToggle: true},

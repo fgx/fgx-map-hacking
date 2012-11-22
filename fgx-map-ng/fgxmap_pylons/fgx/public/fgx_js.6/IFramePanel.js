@@ -14,10 +14,10 @@ constructor: function(config) {
 		deferredRender : false,
 		items : [
 			{
-			xtype : "component", autoWidth: true,
-			autoEl : {
-				tag : "iframe",
-				src : "http://fgx.ch"
+			xtype : "component",  deferredRender : false, constrain: true,
+			autoEl:{
+				tag:'iframe', width: "100%", height: "100%",
+				src : config.url
 			}
 		}
 			

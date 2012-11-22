@@ -273,7 +273,21 @@ constructor: function(config) {
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
+							"-",
+							new FGx.UrlAction({
+								text: "Issues", url: "http://fgx.ch/projects/fgx-map/issues", iconCls: "icoBlue",
+								handler: this.on_url_action, scope: this
+							}),
+							{text: "Git Source Code" ,
+								menu: [
+									{text: "cgit- recommended", url: "http://git.fgx.ch/fgx-map/",
+										handler: this.on_open_url, scope: this },
+									{text: "Chili", url: "http://fgx.ch/projects/fgx-map/",
+										handler: this.on_open_url, scope: this }
+								]
+							}
+							
 						]
 					},
 					"-",
