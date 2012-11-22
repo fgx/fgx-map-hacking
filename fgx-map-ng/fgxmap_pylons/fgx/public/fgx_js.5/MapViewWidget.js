@@ -12,7 +12,10 @@ W: {
 get_mini_map: function(){
 	
 	if(!this.xMiniMap){
-		this.xMiniMap = new FGx.MiniMapPanel({region: "south", height: 250, collapsible: true});
+		this.xMiniMap = new FGx.MiniMapPanel({
+			region: "south", height: 250, collapsible: true,
+			ddflex: 1,
+		});
 		
 	};
 	return this.xMiniMap;
@@ -151,11 +154,11 @@ constructor: function(config) {
 				layout: "border",
 				items: [
 					{title: "FGx Map - Next Gen",
-						xtype: 'tabpanel', region: "center", 
+						xtype: 'tabpanel', region: "center",
 						frame: false,
 						plain: true,
 						border: 0,
-						
+						flex: 2,
 						activeItem: 2,
 						items: [
 							this.get_airports_grid(),
@@ -164,6 +167,7 @@ constructor: function(config) {
 							this.get_flights_grid()
 						]
 					},
+		
 					this.get_mini_map()
 				]
 			}
