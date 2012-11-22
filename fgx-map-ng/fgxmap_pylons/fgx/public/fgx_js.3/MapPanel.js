@@ -267,6 +267,23 @@ get_layers: function(){
 	return LAYERS;
 },
 
+get_store: function(){
+	
+	if(!this.xFlightsStore){
+		this.xFlightsStore = Ext.StoreMgr.lookup("flights_store");
+		this.xFlightsStore.on("load", function(sto, recs){
+			//console.log("YES");
+			this.flightLabelsLayer.removeAllFeatures();
+			this.flightMarkersLayer.removeAllFeatures();
+			var rec_len = recs.length;
+			for(var i=0; i< recs.length; i++){
+				var r = recs[i].data;
+				this.show_radar(r.callsign, r.lat, r.lon, r.hdg, r.altitude);
+			}
+		}, this);
+	}
+	return this.xFlightsStore;
+},
 	
 //===========================================================
 //== CONSTRUCT
@@ -294,7 +311,7 @@ constructor: function(config) {
 		center:  ll, 
 		zoom: config.zoom ? config.zoom : 5,
 		layers: this.get_layers(),
-
+		xxxFlightsStore: this.get_store(),
 		tbar: [
 		
 			//== Map Type  

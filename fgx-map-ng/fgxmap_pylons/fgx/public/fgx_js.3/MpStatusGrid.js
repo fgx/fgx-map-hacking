@@ -61,7 +61,7 @@ constructor: function(config) {
 			forceFit: true
 		}, 
 		stripeRows: true,
-		store: this.get_store(),
+		store: Ext.StoreMgr.lookup("mpstatus_store"),
 		loadMask: false,
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
@@ -97,7 +97,7 @@ constructor: function(config) {
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 
-				store: this.get_store(),
+				store: Ext.StoreMgr.lookup("mpstatus_store"),
 				displayInfo: true,
 				pageSize: 500,
 				prependButtons: true	
@@ -107,7 +107,7 @@ constructor: function(config) {
 	FGx.MpStatusGrid.superclass.constructor.call(this, config);
 }, // Constructor	
 
-
+/*
 get_store: function(){
 	if(!this.xStore){
 		this.xStore = new Ext.data.JsonStore({
@@ -121,7 +121,7 @@ get_store: function(){
 				{name: "lag", type: 'int'},
 				'country', 'time_zone', 'lat', 'lon'
 			],
-			url: '/ajax/mp/status',
+			url: '/ajax/mpnet/status',
 			root: 'mpservers',
 			remoteSort: false,
 			sortInfo: {
@@ -133,7 +133,7 @@ get_store: function(){
 	}
 	return this.xStore;
 }
-
+*/
 
 });
 

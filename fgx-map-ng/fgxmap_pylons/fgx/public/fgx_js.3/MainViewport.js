@@ -44,7 +44,27 @@ xFlightsStore: new Ext.data.JsonStore({
 	},
 	autoLoad: false,
 }),
-
+xMpStatusStore: new Ext.data.JsonStore({
+	idProperty: 'no',
+	storeId: "mpstatus_store",
+	fields: [ 	
+		{name: 'no', type: 'int'},
+		{name: 'fqdn', type: 'string'},
+		{name: "ip", type: 'string'},
+		{name: "last_checked", type: 'string'},
+		{name: "last_seen", type: 'string'},
+		{name: "lag", type: 'int'},
+		'country', 'time_zone', 'lat', 'lon'
+	],
+	url: '/ajax/mpnet/status',
+	root: 'mpstatus',
+	remoteSort: false,
+	sortInfo: {
+		field: "no", 
+		direction: 'ASC'
+	},
+	autoLoad: true,
+}),
 
 update_flights: function(){
 	this.xFlightsStore.load();

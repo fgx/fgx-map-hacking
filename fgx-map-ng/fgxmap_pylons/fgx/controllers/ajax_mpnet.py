@@ -52,7 +52,7 @@ class AjaxMpnetController(BaseController):
 	def mpstatus(self):
 		payload = dict(success=True)
 		obs = meta.Sess.mpnet.query(MpServer).all()
-		payload['mpservers'] = [ob.dic() for ob in obs]
+		payload['mpstatus'] = [ob.dic() for ob in obs]
 		
 		return payload
 
