@@ -14,18 +14,22 @@ from fgx.queries import airports
 
 log = logging.getLogger(__name__)
 
-class AjaxAirportController(BaseController):
+class AjaxAirportsController(BaseController):
 
 	@jsonify
 	def airports(self):
 	
 		payload = {'success': True}
 
-		search = h.v(request, "search")
+		apt_ident = h.v(request, "apt_ident")
+		apt_name_ascii = h.v(request, "apt_name_ascii")
 		bounds = h.v(request, "bounds")
 		
-		if search or bounds:
-			payload['airports'] = airports.airports(search=search, bounds=bounds)
+		if apt_ident or apt_name_ascii or bounds:
+			payload['airports'] = airports.airports(
+											apt_ident=apt_ident, 
+											apt_name_ascii=apt_name_ascii, 
+											bounds=bounds)
 		
 		else:
 			payload['error'] = "Need a ?search  or ?bounds "

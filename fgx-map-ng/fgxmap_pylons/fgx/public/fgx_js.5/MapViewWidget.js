@@ -161,10 +161,10 @@ constructor: function(config) {
 						
 						activeItem: 0,
 						items: [
-							this.get_flights_grid(),
+							this.get_airports_grid(),
 							this.get_nav_widget(),
 							this.get_awy_widget(),
-							this.get_airports_grid()
+							this.get_flights_grid()
 						]
 					},
 					this.get_mini_map()

@@ -26,32 +26,45 @@ constructor: function(config) {
 				 width: 100
 			},
 			
-			{header: 'Name', dataIndex:'apt_name', sortable: true,
+			{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
 
 			},
-			{header: 'Foo', dataIndex:'email', sortable: true,
-
+			
+			{header: 'Authority', dataIndex:'apt_authority', sortable: true, align: 'right'
 			},
-			{header: 'Level', dataIndex:'level', sortable: true, align: 'right'
+			{header: 'Size', dataIndex:'apt_size', sortable: true, align: 'right'
 			}
 		],
 
 		tbar: [	
 			{xtype: 'buttongroup', hidden: config.xHidden,
-				title: 'Search',
-				columns: 3,
+				title: 'Search Code',
+				columns: 2,
 				items: [
 					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
 						handler: function(){
-							this.get_apt_search_text().setValue("");
-							this.get_apt_search_text().focus();
+							this.get_apt_code_search_text().setValue("");
+							this.get_apt_code_search_text().focus();
 						}
 					},
-					this.get_apt_search_text()
+					this.get_apt_code_search_text()
+				]
+			},
+			{xtype: 'buttongroup', hidden: config.xHidden,
+				title: 'Search Name',
+				columns: 2,
+				items: [
+					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
+						handler: function(){
+							this.get_apt_name_search_text().setValue("");
+							this.get_apt_name_search_text().focus();
+						}
+					},
+					this.get_apt_name_search_text()
 				]
 			}
-		],
-		
+		]
+		/*
 		bbar: [
 			new Ext.PagingToolbar({
 				store: this.get_store(),
@@ -59,7 +72,7 @@ constructor: function(config) {
 				pageSize: 500,
 				prependButtons: false
 			})
-		]
+		] */
 		
 	}, config);
 	FGx.AirportsGrid.superclass.constructor.call(this, config);
@@ -73,10 +86,11 @@ get_store: function(){
 			fields: [ 	
 				{name: "apt_pk", type: 'string'},
 				{name: "apt_ident", type: 'string'},
-				{name: "apt_name", type: 'string'},
-				{name: "apt_country", type: 'string'},
+				{name: "apt_name_ascii", type: 'string'},
+				{name: "apt_size", type: 'string'},
 				{name: "apt_center_lat", type: 'string'},
 				{name: "apt_center_lon", type: 'string'},
+				{name: "apt_authority", type: 'string'},
 			],
 			proxy: new Ext.data.HttpProxy({
 				url: '/ajax/airports',
@@ -93,25 +107,49 @@ get_store: function(){
 	return this.xStore;
 },
 
-get_apt_search_text: function(){
-	if(!this.txtSearchApt){
-		this.txtSearchApt = new Ext.form.TextField({
+get_apt_code_search_text: function(){
+	if(!this.txtSearchAptCode){
+		this.txtSearchAptCode = new Ext.form.TextField({
 			width: 80,
 			enableKeyEvents: true
 		});
-		this.txtSearchApt.on("keypress", function(txtFld, e){
-			if( e.getKey() == e.ENTER ){
-				var t = this.get_apt_search_text();
-				t.setValue( t.getValue().trim() );
-				var txt = t.getValue();
-				if(txt.length < 2){
-					return;
+		this.txtSearchAptCode.on("keyup", function(txtFld, e){
+			
+				var t = this.get_apt_code_search_text().getValue().trim();
+				//t.setValue( t.getValue().trim() );
+				//var txt = t.getValue();
+				//console.log(t, t.length);
+				if(t.length > 1){
+					
+					this.get_store().load({params: {apt_ident: t}});
 				}
-				this.get_store().load({params: {q: txt, type: "airport"}});
-			}
+				
+			
 		}, this);
 	}
-	return this.txtSearchApt;
+	return this.txtSearchAptCode;
+},
+get_apt_name_search_text: function(){
+	if(!this.txtSearchAptName){
+		this.txtSearchAptName = new Ext.form.TextField({
+			width: 80,
+			enableKeyEvents: true
+		});
+		this.txtSearchAptName.on("keyup", function(txtFld, e){
+			
+				var t = this.get_apt_name_search_text().getValue().trim();
+				//t.setValue( t.getValue().trim() );
+				//var txt = t.getValue();
+				//console.log(t, t.length);
+				if(t.length > 2){
+					
+					this.get_store().load({params: {apt_name_ascii: t}});
+				}
+				
+			
+		}, this);
+	}
+	return this.txtSearchAptName;
 }
 
 
