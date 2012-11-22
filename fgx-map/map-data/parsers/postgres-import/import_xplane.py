@@ -26,6 +26,8 @@ inputfile = sys.argv[1]
 
 log = open("import_xplane.log", 'w')
 
+temp_sql = open("temp_sql.txt", 'w')
+
 starttime = time.asctime()
 log.write("Import started: "+starttime+"\n")
 
@@ -131,7 +133,25 @@ def get_freqline(line):
 	frq_range_km = "92.6"
 	
 	return frq_xplane_code,frq_freq,frq_freq_nice,frq_description,frq_range_nm,frq_range_km
-		
+	
+def drawcircle(rangerad,lon,lat):
+    # We need 0 and 360 to close the polygon
+	#global circlelist
+	azi_list = range(0,360,1)
+	circlelist = "LINESTRING("
+	for i in azi_list:
+		result = Geodesic.WGS84.Direct(float(lat),float(lon),i,float(rangerad))
+		#return str(result["lat2"])+" "+str(result["lon2"])+","
+		#return str(result["lat2"])+" "+str(result["lon2"])+","
+		circlelist += str(result["lon2"])+" "+str(result["lat2"])+","
+	
+	# End point
+	endpoint = str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lon2"])+" "+str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lat2"])
+	
+	circlelist += endpoint+")"
+	print circlelist
+	return circlelist
+			
 def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
 	lastcoma = len(pointscollected)-1
@@ -146,15 +166,19 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 		INSERT INTO airport (apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
 		
+	#ST_Y(ST_Transform(apt_center,3857)),ST_X(ST_Transform(apt_center,3857)),ST_Y(ST_Transform(apt_center,4326)),ST_X(ST_Transform(apt_center,4326))
 	#print sql
 	
 	params = [apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
 	
-	# Now this second query gives lon/lat (postgis x/y) as text for the center point
+	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
 	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+apt_ident+"';"
 	cur.execute(sql2)
 	
+	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
+	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(sql3)
 	
 def insert_runway(apt_ident,\
 				rwy_ident,\
@@ -685,6 +709,7 @@ def readxplane():
 			apt_local_code = ""
 			bcn_type = ""
 			
+			
 
 readxplane()
 
@@ -701,8 +726,69 @@ conn.commit()
 cur.close()
 conn.close()
 
+
+	
+conn2 = psycopg2.connect(connectstring)
+cur2 = conn2.cursor()
+
+latsql = "SELECT * FROM airport;"
+
+cur2.execute(latsql)
+rows = cur2.fetchall()
+
+
+for row in rows:
+	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_pk="+str(row[0])+";"
+	#print latsql
+	cur2.execute(latsql)
+	
+	
+	
+	conn2.commit()
+	
+	latlon = cur2.fetchall()[0]
+	lat84 = latlon[0]
+	lon84 = latlon[1]
+	
+	print lon84, lat84
+	
+	circles = drawcircle(18570,lon84,lat84)
+	
+	thiscirclenow = circles[:-2]+")"
+	
+	#print thiscirclenow
+
+	# Wrapper function by Mike Toews from PostGIS forums, to NULL case projection failure
+	# ... implemented, but not very useful
+	#
+	# CREATE OR REPLACE FUNCTION st_transform_null(geometry, integer)
+	# RETURNS geometry AS
+    # $BODY$BEGIN
+    # RETURN st_transform($1, $2);
+    # EXCEPTION WHEN internal_error THEN
+    # RETURN NULL;
+    # END;$BODY$
+	# LANGUAGE 'plpgsql' IMMUTABLE STRICT
+    # COST 100;
+    #
+	
+	# 22.4823 114.204
+	
+	#testsql = "SELECT ST_GeometryFromText('"+thiscirclenow+"', 4326);"
+	#outputsd = cur2.execute(testsql)
+	
+	#print str(outputsd)
+	
+	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscirclenow+"', 4326),3857) WHERE apt_pk="+str(row[0])+";"
+	print rangesql
+	cur2.execute(rangesql)
+	conn2.commit()
+
+conn2.close()
+
 endtime = time.asctime()
 log.write("Finished: "+endtime+"\n")
 
 log.close()
+temp_sql.close()
 
