@@ -105,7 +105,7 @@ on_flight_plans_widget: function(butt){
 		});
 		this.get_tab_panel().add(this.widgets.FlightPlansWidget);
 	}
-	console.log(this.widgets);
+	//console.log(this.widgets);
 	this.get_tab_panel().setActiveTab(this.widgets.FlightPlansWidget);
 },
 

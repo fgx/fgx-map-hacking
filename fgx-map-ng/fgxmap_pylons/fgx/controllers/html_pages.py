@@ -26,7 +26,7 @@ class HtmlPagesController(BaseController):
 		else:
 			c.ext_theme = request.cookies.get("ext_theme")
 		if c.ext_theme == None:
-			c.ext_theme = "xtheme-access.css"
+			c.ext_theme = "xtheme-gray.css"
 		
 		
 		return render("%s.html" % c.page)

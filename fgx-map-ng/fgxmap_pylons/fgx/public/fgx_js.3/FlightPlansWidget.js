@@ -4,7 +4,7 @@ Ext.namespace("FGx");
 FGx.FlightPlansWidget = Ext.extend(Ext.Panel, {
 
 group_renderer: function(v,u,r,rowIdx,colIdx, ds){
-	console.log(v, u, r, rowIdx, colIdx, ds);
+	//console.log(v, u, r, rowIdx, colIdx, ds);
 	return r.get('idx') + ": " + r.get('ident');
 },
 	

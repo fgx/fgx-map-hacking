@@ -827,8 +827,8 @@ load_airway: function(recs){
 		this.L.awyline.addFeatures([lineFeature]);
 	}
 	
-	this.get_map().zoomToExtent(this.L.awyline.getDataExtent()); 
-	this.get_map().zoomOut();
+	this.get_map().zoomToExtent(this.L.awylbl.getDataExtent()); 
+	//this.get_map().zoomOut();
 	
 	
 	

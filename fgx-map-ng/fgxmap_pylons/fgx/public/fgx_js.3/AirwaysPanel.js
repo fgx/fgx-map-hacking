@@ -20,14 +20,16 @@ grid_airways: function(){
 				ssortInfo: {},
 				proxy: new Ext.data.HttpProxy({
 					url: "/ajax/airways",
-					method: 'GET',
-					params: {search: 77}
+					method: 'GET'
 				}),
 				root: "airways",
-				autoLoad: true
+				autoLoad: false
 			}),
+			loadMask: true,
 			viewConfig:{
-				forceFit: true
+				forceFit: true,
+				emptyText: "No airways",
+				deferEmptyText: true
 			},
 			columns: [ 
 				{header: "Airway", dataIndex: "airway", sortable: true,
@@ -116,14 +118,19 @@ get_all_search_text: function(){
 			width: 60,
 			enableKeyEvents: true
 		});
-		this.txtSearchAll.on("keypress", function(txtFld, e){
-			console.log("yes");
-			//var t = this.get_all_search_text().getValue().trim();
-			//if(t.length > 1){
-			//	var sto = this.grid_airways().getStore()
-			//	sto.load({params: {search: t}});
-			//}
-			
+		this.txtSearchAll.on("keyup", function(txtFld, e){
+			//console.log("yes");
+			var txt = this.get_all_search_text().getValue();
+			//console.log(txt, txt.length);
+			if(txt.length > 1){
+				var sto = this.grid_airways().getStore()
+				//#sto.load({params: {search: t}});
+				this.grid_airways().getStore().load({params: {search: txt}});
+			}else{
+				this.grid_airways().getStore().removeAll();
+			}
+			/*
+			return;
 			if( e.getKey() == e.ENTER ){
 				var t = this.get_all_search_text();
 				t.setValue( t.getValue().trim() );
@@ -132,7 +139,7 @@ get_all_search_text: function(){
 					return;
 				}
 				this.grid_airways().getStore().load({params: {search: txt}});
-			}
+			}*/
 		}, this);
 	}
 	return this.txtSearchAll;

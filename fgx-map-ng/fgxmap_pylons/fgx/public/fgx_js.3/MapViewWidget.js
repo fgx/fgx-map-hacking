@@ -12,7 +12,7 @@ W: {
 get_mini_map: function(){
 	
 	if(!this.xMiniMap){
-		this.xMiniMap = new FGx.MiniMapPanel({region: "south", height: 300, collapsible: true});
+		this.xMiniMap = new FGx.MiniMapPanel({region: "south", height: 250, collapsible: true});
 		
 	};
 	return this.xMiniMap;
