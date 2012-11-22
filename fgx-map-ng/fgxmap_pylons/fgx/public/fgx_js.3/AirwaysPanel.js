@@ -16,7 +16,7 @@ grid_airways: function(){
 				fields: [	
 					{name: "airway", type:"string"}
 				],
-				idProperty: "table",
+				idProperty: "airway",
 				ssortInfo: {},
 				proxy: new Ext.data.HttpProxy({
 					url: "/ajax/airways",
@@ -29,7 +29,7 @@ grid_airways: function(){
 				forceFit: true
 			},
 			columns: [ 
-				{header: "Airway", dataIndex: "table", sortable: true,
+				{header: "Airway", dataIndex: "airway", sortable: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
@@ -42,7 +42,7 @@ grid_airways: function(){
 				rowclick: function(grid, idx, e){
 					
 					var rec = this.grid_airways().getStore().getAt(idx);
-					var table = rec.get("table");
+					//var table = rec.get("airwayy");
 					var url = "/ajax/airway/" + rec.get("airway");
 					this.grid_segments().getStore().proxy.setUrl(url);
 					this.grid_segments().getStore().load();
@@ -67,6 +67,8 @@ grid_segments: function(){
 				fields: [	
 					{name: "ident_entry", type:"string"},
 					{name: "ident_exit", type:"string"},
+					{name: "fl_top", type:"string"},
+					{name: "fl_base", type:"string"},
 					//{name: "max_char", type:"string"},
 					//{name: "nullable", type:"boolean"},
 				
@@ -86,13 +88,13 @@ grid_segments: function(){
 				deferEmptyText: false
 			},
 			columns: [ 
-				{header: "Entry", dataIndex: "column",
+				{header: "Entry", dataIndex: "ident_entry",
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
 				},
-				{header: "Exit", dataIndex: "type"},
+				{header: "Exit", dataIndex: "ident_exit"},
 				{header: "Nullable", dataIndex: "nullable", width: 30,
 					renderer: function(v){
 						return v ? "Yes" : "-";
@@ -111,6 +113,13 @@ get_all_search_text: function(){
 			enableKeyEvents: true
 		});
 		this.txtSearchAll.on("keypress", function(txtFld, e){
+			console.log("yes");
+			//var t = this.get_all_search_text().getValue().trim();
+			//if(t.length > 1){
+			//	var sto = this.grid_airways().getStore()
+			//	sto.load({params: {search: t}});
+			//}
+			
 			if( e.getKey() == e.ENTER ){
 				var t = this.get_all_search_text();
 				t.setValue( t.getValue().trim() );
@@ -118,7 +127,7 @@ get_all_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().load({params: {search: txt, nav_type: ""}});
+				this.grid_airways().getStore().load({params: {search: txt}});
 			}
 		}, this);
 	}

@@ -135,7 +135,7 @@ class AjaxNavaidsController(BaseController):
 		if search:
 			search = search.upper()
 		
-		payload["airway"] = navaids.airways(search=search)
+		payload["airways"] = navaids.airways(search=search)
 		
 		
 		return payload	
@@ -145,7 +145,7 @@ class AjaxNavaidsController(BaseController):
 	def airway(self, awy):
 		payload = {'success': True}
 		
-		payload["airway"] = navaids.airway(awy)
+		payload["segments"] = navaids.segments(awy)
 		
 		
 		return payload
