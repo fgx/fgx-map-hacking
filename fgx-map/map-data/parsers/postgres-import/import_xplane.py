@@ -136,23 +136,23 @@ def get_freqline(line):
 	
 def drawcircle(rangerad,lon,lat):
     # We need 0 and 360 to close the polygon
-	#global circlelist
 	azi_list = range(0,360,1)
-	circlelist = "LINESTRING("
+	circlelist = "POLYGON(("
 	for i in azi_list:
 		result = Geodesic.WGS84.Direct(float(lat),float(lon),i,float(rangerad))
-		#return str(result["lat2"])+" "+str(result["lon2"])+","
-		#return str(result["lat2"])+" "+str(result["lon2"])+","
 		circlelist += str(result["lon2"])+" "+str(result["lat2"])+","
 	
 	# End point
 	endpoint = str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lon2"])+" "+str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lat2"])
 	
-	circlelist += endpoint+")"
-	print circlelist
+	circlelist += endpoint+"))"
 	return circlelist
-			
+	
+count = 0
+
 def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
+
+	global count
 
 	lastcoma = len(pointscollected)-1
 	pointscollected2 = pointscollected[0:lastcoma] 
@@ -179,6 +179,46 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
 	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+apt_ident+"';"
 	cur.execute(sql3)
+	
+	conn.commit()
+	
+	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(latsql)
+	
+	#print latsql
+	
+	latlon = cur.fetchall()[0]
+	lat84 = latlon[0]
+	lon84 = latlon[1]
+	
+	#print lat84, lon84
+	
+	circles100 = drawcircle(185200,lon84,lat84) # 100 nm
+	circles050 = drawcircle(92600,lon84,lat84)  #  50 nm
+	circles030 = drawcircle(55560,lon84,lat84)  #  30 nm
+	circles010 = drawcircle(18520,lon84,lat84)  #  10 nm
+	
+	
+	thiscircles100 = circles100[:-2]+"))"
+	thiscircles050 = circles050[:-2]+"))"
+	thiscircles030 = circles030[:-2]+"))"
+	thiscircles010 = circles010[:-2]+"))"
+	
+	rangesql100 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles100+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql100)
+	rangesql050 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles050+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql050)
+	rangesql030 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles030+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql030)
+	rangesql010 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles010+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql010)
+	
+	conn.commit()
+	
+	count += 1
+	
+	print count
+
 	
 def insert_runway(apt_ident,\
 				rwy_ident,\
@@ -725,66 +765,6 @@ conn.commit()
 
 cur.close()
 conn.close()
-
-
-	
-conn2 = psycopg2.connect(connectstring)
-cur2 = conn2.cursor()
-
-latsql = "SELECT * FROM airport;"
-
-cur2.execute(latsql)
-rows = cur2.fetchall()
-
-
-for row in rows:
-	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_pk="+str(row[0])+";"
-	#print latsql
-	cur2.execute(latsql)
-	
-	
-	
-	conn2.commit()
-	
-	latlon = cur2.fetchall()[0]
-	lat84 = latlon[0]
-	lon84 = latlon[1]
-	
-	print lon84, lat84
-	
-	circles = drawcircle(18570,lon84,lat84)
-	
-	thiscirclenow = circles[:-2]+")"
-	
-	#print thiscirclenow
-
-	# Wrapper function by Mike Toews from PostGIS forums, to NULL case projection failure
-	# ... implemented, but not very useful
-	#
-	# CREATE OR REPLACE FUNCTION st_transform_null(geometry, integer)
-	# RETURNS geometry AS
-    # $BODY$BEGIN
-    # RETURN st_transform($1, $2);
-    # EXCEPTION WHEN internal_error THEN
-    # RETURN NULL;
-    # END;$BODY$
-	# LANGUAGE 'plpgsql' IMMUTABLE STRICT
-    # COST 100;
-    #
-	
-	# 22.4823 114.204
-	
-	#testsql = "SELECT ST_GeometryFromText('"+thiscirclenow+"', 4326);"
-	#outputsd = cur2.execute(testsql)
-	
-	#print str(outputsd)
-	
-	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscirclenow+"', 4326),3857) WHERE apt_pk="+str(row[0])+";"
-	print rangesql
-	cur2.execute(rangesql)
-	conn2.commit()
-
-conn2.close()
 
 endtime = time.asctime()
 log.write("Finished: "+endtime+"\n")
