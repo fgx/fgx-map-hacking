@@ -3,6 +3,7 @@ Ext.namespace("FGx");
 
 FGx.MiniMapPanel = Ext.extend(GeoExt.MapPanel, {
 
+L:{},
 	
 //var self = this;
 get_display_projection: function(){
@@ -56,10 +57,11 @@ get_display_projection: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
-	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	
+	this.L.blip = new OpenLayers.Layer.Vector("Blip");
+	this.L.line = new OpenLayers.Layer.Vector("Line");
 	var arr = [];
-	arr.push(this.highLightMarkers);
+	arr.push(this.L.blip);
+	arr.push(this.L.line);
 	arr.push( 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ) );
 	return arr;
 },
@@ -81,15 +83,39 @@ show_blip: function(obj){
 	var style = {
 		strokeColor: "red",
 		strokeOpacity: 1,
-		strokeWidth: 8,
+		strokeWidth: 4,
 		fillColor: "yellow",
 		fillOpacity: 0.8 };
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	this.highLightMarkers.addFeatures([feature]);
+	this.L.blip.addFeatures([feature]);
 	
 	this.get_map().panTo( lonLat );
 },
-
+show_line: function(obj){
+	
+	this.highLightMarkers.removeAllFeatures();
+	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+		
+	
+	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+		pt,
+			0, // wtf. .I want a larger cicle
+			20
+		);
+	var style = {
+		strokeColor: "red",
+		strokeOpacity: 1,
+		strokeWidth: 4,
+		fillColor: "yellow",
+		fillOpacity: 0.8 };
+	var feature = new OpenLayers.Feature.Vector(circle, null, style);
+	this.L.blip.addFeatures([feature]);
+	
+	this.get_map().panTo( lonLat );
+},
 //===========================================================
 //== CONSTRUCT
 constructor: function(config) {

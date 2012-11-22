@@ -67,9 +67,11 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 			pnt =  'LINESTRING(%s %s, %s %s)' % (parts[1], parts[2], parts[4], parts[5])
 			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
 			
-			#air_parts = parts[9].split("-")
-			#print air_parts
 			ob.airway = parts[9]
+			air_parts = parts[9].split("-")
+			
+			ob.search = "|".join( ["#%s#" % p for p in air_parts] )
+			#print air_parts, ob.search
 			
 			meta.Sess.data.add(ob)			
 			meta.Sess.data.commit()

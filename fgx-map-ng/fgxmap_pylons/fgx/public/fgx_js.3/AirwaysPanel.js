@@ -70,11 +70,12 @@ grid_segments: function(){
 					{name: "ident_exit", type:"string"},
 					{name: "fl_top", type:"string"},
 					{name: "fl_base", type:"string"},
-					{name: "lat1", type:"string"},
-					{name: "lon1", type:"string"},
-					{name: "lat2", type:"string"},
-					{name: "lon2", type:"string"},
-					//{name: "max_char", type:"string"},
+					{name: "level", type:"int"},
+					//{name: "lat1", type:"string"},
+					//{name: "lon1", type:"string"},
+					//{name: "lat2", type:"string"},
+					//{name: "lon2", type:"string"},
+					{name: "airway", type:"string"},
 					//{name: "nullable", type:"boolean"},
 				
 				],
@@ -94,19 +95,15 @@ grid_segments: function(){
 			},
 			columns: [ 
 				{header: "Entry", dataIndex: "ident_entry",
-					renderer: function(val, meta, record, idx){
+					ssrenderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
 				},
 				{header: "Exit", dataIndex: "ident_exit"},
-				{header: "Nullable", dataIndex: "nullable", width: 30,
-					renderer: function(v){
-						return v ? "Yes" : "-";
-					}
-				},
-				{header: "la", dataIndex: "lat1"},
-				{header: "lo", dataIndex: "lon1"}
+				
+				{header: "airway", dataIndex: "airway"}
+				//{header: "lo", dataIndex: "lon1"}
 			]
 		});
 	}

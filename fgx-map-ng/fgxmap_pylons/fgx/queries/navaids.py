@@ -74,17 +74,24 @@ def airways(search=None, awy=None):
 	
 	if search:
 		sql += " and  airway ilike '%s' " % ("%" + search + "%") 
-	
-	if awy:
-		sql += " airway = ANY(array['%s'])" % awy
+		##sql += " and  airway  not like '%-%' " # % ("%" + search + "%") 
+	#if awy:
+	#	sql += " airway = ANY(array['%s'])" % awy
 		
 	sql += " order by airway asc "
-	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	lst = []
+	for r in meta.Sess.data.execute(sql).fetchall():
+		if r['airway'].find("-") == -1:
+			lst.append({"airway": r['airway']})
+		#sselse:
+			
+			
+	return lst
 	
 	
 def segments(awy):
 	 ## The cols to return, this is a string with spces and split later
-	cols_str = "airway ident_entry ident_exit "
+	cols_str = "airway ident_entry ident_exit fl_base fl_top level "
 	
 	## now we make the select.. parts
 	sql, cols = meta.select_sql(cols_str)
@@ -109,7 +116,7 @@ def segments(awy):
 	#	sql += " and  airway ilike '%s' " % ("%" + search + "%") 
 	
 
-	sql += " where airway = '%s' " % awy
+	sql += " where  search ilike '%s' " % ("%" + "#" +  awy + "#" + "%") 
 		
 	#sql += " order by airway asc "
 	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)

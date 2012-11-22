@@ -125,7 +125,7 @@ get_awy_widget: function(){
 //== CONSTRUCT
 constructor: function(config) {
 	
-	console.log("constr", config.title, config.lat, config.lon);
+	//console.log("constr", config.title, config.lat, config.lon);
 	
 
 	config = Ext.apply({
