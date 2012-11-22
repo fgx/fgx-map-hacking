@@ -58,11 +58,15 @@ class AjaxAirportsController(BaseController):
 		apt_ident = apt_ident.upper()
 		payload = {'success': True}
 
+		dic = dict(apt_ident=apt_ident,
+					
 		
 		
 		payload['airport'] = airports.airport(apt_ident)
+		payload['airport']['runways'] = []
+		
 		#payload['airport'] = airports.airport(apt_ident)
-		payload['runways'] = airports.runways(apt_ident)
+		#payload['runways'] = airports.runways(apt_ident)
 			
 		return payload
 		

@@ -205,7 +205,9 @@ get_tab_panel: function(){
 	return this.xTabPanel;
 },
 
-
+on_url_action: function(butt, foo){
+	console.log("on)urlaction", butt, foo);
+},
 
 
 //=======================================
@@ -263,8 +265,11 @@ constructor: function(config) {
 						handler: this.on_flights_widget, scope: this
 					},
 					"-",
-					{text: "Flight Plans", iconCls: "icoFlightPlans", 
-						handler: this.on_flight_plans_widget, scope: this
+					{text: "Flight Plans", iconCls: "icoFlightPlans", xtype: "splitbutton",
+						handler: this.on_flight_plans_widget, scope: this,
+						menu:[
+							new FGx.UrlAction({text: "RouteFinder", url: "http://rfinder.asalink.net/free/", M: this}),
+						]
 					},
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
@@ -275,19 +280,8 @@ constructor: function(config) {
 						menu: [
 							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
 							"-",
-							new FGx.UrlAction({
-								text: "Issues", url: "http://fgx.ch/projects/fgx-map/issues", iconCls: "icoBlue",
-								handler: this.on_url_action, scope: this
-							}),
-							{text: "Git Source Code" ,
-								menu: [
-									{text: "cgit- recommended", url: "http://git.fgx.ch/fgx-map/",
-										handler: this.on_open_url, scope: this },
-									{text: "Chili", url: "http://fgx.ch/projects/fgx-map/",
-										handler: this.on_open_url, scope: this }
-								]
-							}
-							
+							new FGx.UrlAction({text: "Map Issues", url: "http://fgx.ch/projects/fgx-map/issues", M: this}),
+							new FGx.UrlAction({text: "Map Source", url: "http://git.fgx.ch/fgx-map/", M: this})
 						]
 					},
 					"-",
