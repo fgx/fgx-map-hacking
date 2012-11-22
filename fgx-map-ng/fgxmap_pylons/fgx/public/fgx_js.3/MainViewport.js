@@ -8,7 +8,8 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 widgets: {
 	FlightsViewWidget: null,	
 	MpStatusGrid: null,
-	DbBrowser: null
+	DbBrowser: null,
+	FlightPlansWidget: null
 },
 
 
@@ -93,7 +94,20 @@ on_refresh_toggled: function(butt, checked){
 
 
 
-
+on_flight_plans_widget: function(butt){
+	if(!this.widgets.FlightPlansWidget){
+		this.widgets.FlightPlansWidget = new FGx.FlightPlansWidget({
+			//flightsStore: this.xFlightsStore,
+			//refresh_rate: this.refresh_rate,
+			title: "Flight Plans", 
+			closable: true,
+			xHidden: false
+		});
+		this.get_tab_panel().add(this.widgets.FlightPlansWidget);
+	}
+	console.log(this.widgets);
+	this.get_tab_panel().setActiveTab(this.widgets.FlightPlansWidget);
+},
 
 
 on_flights_widget: function(butt){
@@ -176,11 +190,15 @@ get_tab_panel: function(){
 			if(widget.fgxType == "FlightsViewWidget"){
 				this.widgets.flightsGrid = 0;
 				
-			}else if(widget.fgxType == "mpStatusGrid"){
-				this.widgets.mpStatusGrid = 0;
+			}else if(widget.fgxType == "MpStatusGrid"){
+				this.widgets.MpStatusGrid = 0;
 				
 			}else if(widget.fgxType == "DbBrowser"){
 				this.widgets.DbBrowser = 0;
+				
+			}else if(widget.fgxType == "FlightPlansWidget"){
+				this.widgets.FlightPlansWidget = 0;
+						
 			}
 		}, this);
 	}
@@ -244,7 +262,10 @@ constructor: function(config) {
 					{text: "Flights", iconCls: "icoFlights", 
 						handler: this.on_flights_widget, scope: this
 					},
-					
+					"-",
+					{text: "Flight Plans", iconCls: "icoFlightPlans", 
+						handler: this.on_flight_plans_widget, scope: this
+					},
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
 						handler: this.on_mpstatus_widget, scope: this
@@ -317,12 +338,12 @@ constructor: function(config) {
 initialize:  function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );
 //	: new OpenLayers.LonLat(939262.20344,5938898.34882),
-	this.on_open_map("Main Map", null, null, null, false)
+	//this.on_open_map("Main Map", null, null, null, false)
 	
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	//this.on_flights_widget();
+	this.on_flight_plans_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){

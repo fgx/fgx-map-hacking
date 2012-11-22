@@ -4,7 +4,7 @@ from fgx.model import meta
 
 
 
-def search(search=None, nav_type=None, bounds=None):
+def search(ident=None, search=None, nav_type=None, bounds=None):
 	
 	
 	 ## The cols to return, this is a string with spces and split later
@@ -33,6 +33,9 @@ def search(search=None, nav_type=None, bounds=None):
 		
 	if nav_type:
 		sql += " and nav_type = '%s' " % nav_type.upper()
+		
+	if ident:
+		sql += " and ident =  '%s' " % ident.upper()
 		
 	sql += "limit 100"
 	

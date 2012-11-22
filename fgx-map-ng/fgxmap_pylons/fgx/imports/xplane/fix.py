@@ -12,7 +12,7 @@ from fgx.lib import helpers as h
 
 
 
-def import_dat( file_path, dev_mode=False, verbose=1, empty=False):
+def import_dat( file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 	
 	##file_path = UN_ZIP_DIR + "/earth_fix.dat"
 	

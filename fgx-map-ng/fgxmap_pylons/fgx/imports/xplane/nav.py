@@ -120,12 +120,6 @@ def import_dat(file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 		meta.Sess.data.query(NavAid).filter_by(nav_type=clear).delete()
 		meta.Sess.data.commit()
 	
-		
-	## Nuke existing entries
-	if empty:
-		if sssverbose > 0:
-			print "  > Emptied fix table"
-		Fix.objects.all().delete()
 	
 	c = 0
 	for raw_line in fileinput.input(file_path):
