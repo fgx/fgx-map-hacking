@@ -6,28 +6,53 @@ FGx.FlightPlansWidget = Ext.extend(Ext.Panel, {
 get_flight_plan_grid: function(){
 	if(!this.xFlightPlanGrid){
 		this.xFlightPlanGrid = new Ext.grid.GridPanel({
-			region: "center",
-			frame: false, plain: true, border: false
-		});
-		this.xFlightPlanGrid.on("rowclick", function(grid, rowIdx, e){
-			var rec = grid.getStore().getAt(rowIdx);
-			
-			Ext.Ajax.request({
-				url: "/ajax/mpnet/tracker/" + rec.get("callsign"),
-				method: "GET",
-				scope: this,
-				success: function(response, opts) {
-					var obj = Ext.decode(response.responseText);
-					this.get_map_panel().load_tracker(obj.tracks);
-					
+			region: "east",
+			width: 300,
+			frame: false, plain: true, border: false,
+			columns: [
+				{header: 'Idx', dataIndex:'idx', sortable: false, align: 'right',
 				},
-				failure: function(response, opts) {
-					console.log('server-side failure with status code ' + response.status);
-				}
+				{header: 'Ident', dataIndex:'ident', sortable: false, align: 'right',
+				},
+				{header: 'Lat', dataIndex:'lat', sortable: false, align: 'right',
+				},
+				{header: 'Lon', dataIndex:'lon', sortable: false, align: 'right',
 				
-			});
+				},
+				{header: 'Type', dataIndex:'nav_type', sortable: false, align: 'right',
+				},
+				{header: 'Freq', dataIndex:'freq', sortable: false, align: 'right',
+				},
+			],
+			store: new Ext.data.JsonStore({
+				fields: [	
+					{name: "ident", type:"string"},
+					{name: "idx", type:"int"},
+					{name: "lat", type:"string"},
+					{name: "lon", type:"string"},
+					{name: "freq", type:"string"},
+					{name: "nav_type", type:"string"}
+				],
+				idProperty: "",
+				ssortInfo: {},
+				proxy: new Ext.data.HttpProxy({
+					url: "/ajax/database/data/tables",
+					method: 'GET'
+				}),
+				root: "flight_plan",
+				autoLoad: false
+			}),
+			loadMask: true,
+			viewConfig:{
+				forceFit: true,
+				emptyText: "No items to view",
+				deferEmptyText: false
+			},
+		});
+		//this.xFlightPlanGrid.on("rowclick", function(grid, rowIdx, e){
+		//	var rec = grid.getStore().getAt(rowIdx);
 			
-		}, this);
+			
 	}
 	return this.xFlightPlanGrid;
 },
@@ -60,8 +85,10 @@ constructor: function(config) {
 								params: {raw_text: Ext.getCmp(this.getId() + "flight_plan_paste").getValue()},
 								scope: this,
 								success: function(response, opts) {
-									var obj = Ext.decode(response.responseText);
+									var data = Ext.decode(response.responseText);
 									//this.get_map_panel().load_tracker(obj.tracks);
+									console.log(data);
+									this.get_flight_plan_grid().getStore().loadData(data)
 									
 								},
 								failure: function(response, opts) {
@@ -72,7 +99,8 @@ constructor: function(config) {
 					}
 				]
 			},
-			new FGx.MapPanel({region: "center"})
+			new FGx.MapPanel({region: "center"}),
+			this.get_flight_plan_grid()
 		
 		]
 		

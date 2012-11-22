@@ -102,10 +102,19 @@ class AjaxNavaidsController(BaseController):
 		waypoints = raw.split()
 		
 		flight_plan = []
+		idx = 0
 		for w in waypoints:
 			##obs = meta.Sess.data.query(NavAid).filter_by(ident=w).all()
-			dic = {"wp": w, "points": navaids.search(ident=w) }
-			flight_plan.append(dic)
+			points = navaids.search(ident=w)
+			idx += 1
+			if len(points) == 0:
+				flight_plan.append( {"wp": w, "idx": idx, "ident": w} )
+			else:
+				for p  in points:
+					dic = {"wp": w, "idx": idx}
+					dic.update(p)
+					flight_plan.append(dic)
+			
 			
 		
 		
