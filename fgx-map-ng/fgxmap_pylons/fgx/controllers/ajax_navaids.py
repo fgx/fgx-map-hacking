@@ -125,5 +125,16 @@ class AjaxNavaidsController(BaseController):
 	
 	
 		return payload	
+		
+		
+		
 	
+	@jsonify	
+	def airway(self, awy):
+		payload = {'success': True}
+		
+		payload["airway"] = navaids.airway(awy)
+		
+		
+		return payload
 	

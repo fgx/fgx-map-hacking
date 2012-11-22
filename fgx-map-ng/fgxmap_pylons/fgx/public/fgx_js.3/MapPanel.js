@@ -630,6 +630,7 @@ load_flight_plan: function(recs){
 	var lenny = recs.length;
 	var fpoints = [];
 	var idx_dic = {};
+	var navLabels = [];
 	for(var i = 0; i < lenny; i++){
 		var r = recs[i].data;
 		if(r.lat && r.lon){
@@ -637,7 +638,8 @@ load_flight_plan: function(recs){
 					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 			var lbl = new OpenLayers.Feature.Vector(navPt);
 			lbl.attributes = r;
-			this.fpLabelsLayer.addFeatures( [lbl] );
+			navLabels.push(lbl);
+			//this.fpLabelsLayer.addFeatures( [lbl] );
 			var ki =  r.idx;
 			if(!idx_dic[ki]){
 				idx_dic[ki] = {count: 0, points: []}
@@ -646,7 +648,7 @@ load_flight_plan: function(recs){
 			idx_dic[ki].points.push(r);
 		}
 	}
-	console.log(idx_dic);
+	//console.log(idx_dic);
 	
 	//var lines
 	var line_points = [];
@@ -673,14 +675,16 @@ load_flight_plan: function(recs){
 
 	var style = { 
 		strokeColor: '#0000ff', 
-		strokeOpacity: 0.5,
-		strokeWidth: 2
+		strokeOpacity: 0.3,
+		strokeWidth: 1
 	};
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
 	this.fpLineLayer.addFeatures([lineFeature]);
 	this.get_map().zoomToExtent(this.fpLineLayer.getDataExtent()); 
 	//this.get_map().zoomOut();
+	
+	this.fpLabelsLayer.addFeatures( navLabels );
 	
 }
 

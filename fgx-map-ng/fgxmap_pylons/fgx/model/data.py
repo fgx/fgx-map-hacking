@@ -12,6 +12,7 @@ from fgx.model.meta import Sess, Base
 FGX_SRID = 3857
 
 ##=======================================================
+"""
 class Airway(Base.data):
 	
 	__tablename__ = "airway"
@@ -23,7 +24,7 @@ class Airway(Base.data):
 	apt_name = Column(String(40), index=True, nullable=True)
 	apt_country = Column(String(2), nullable=True)
 	apt_type = Column(String(4), nullable=True)
-	
+"""	
 ##=======================================================
 class AirwaySegment(Base.data):
 	
@@ -46,7 +47,7 @@ class AirwaySegment(Base.data):
 	
 
 	
-	airway = Column(ARRAY(String(10))) #, index=True)
+	airway = Column(String(50)) #, index=True)
 	
 GeometryDDL(AirwaySegment.__table__)	
 	

@@ -35,7 +35,7 @@ Base.mpnet = declarative_base()
 ## pete's data helpers
 #########################################################
 def select_sql(cmap):
-	lst = cmap.replace("\t", "").replace("\n", "").split(" ")
+	lst = cmap.replace("\t", "").strip().replace("\n", "").split(" ")
 	arrc = [ s.strip() for s in lst]
 	cols = []
 	sqls = []

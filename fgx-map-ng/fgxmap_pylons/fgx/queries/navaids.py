@@ -46,3 +46,29 @@ def search(ident=None, search=None, nav_type=None, bounds=None, ifr=False):
 	
 	
 	
+def airway(awy):
+	 ## The cols to return, this is a string with spces and split later
+	cols_str = "airway ident_entry ident_exit "
+	
+	## now we make the select.. parts
+	sql, cols = meta.select_sql(cols_str)
+
+	sql += ", ST_X(ST_PointN(wkb_geometry, 1)) as lat1,  ST_Y(ST_PointN(wkb_geometry, 1)) as lon1 "
+	cols.append("lat1")
+	cols.append("lon1")
+	
+	sql += ", ST_X(ST_PointN(wkb_geometry, 2)) as lat2,  ST_Y(ST_PointN(wkb_geometry, 2)) as lon2 "
+	cols.append("lat2")
+	cols.append("lon2")
+	
+	## now the tables and joins
+	sql += " from airway_segment  "
+	
+	
+	##  add the filters, we where 1 = 1 to make queries esier with and's
+	sql += " where  "
+	
+	sql += " airway = ANY(array['%s'])" % awy
+		
+	
+	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
