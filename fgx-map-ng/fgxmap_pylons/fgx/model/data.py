@@ -47,7 +47,7 @@ class AirwaySegment(Base.data):
 	
 
 	
-	airway = Column(String(50)) #, index=True)
+	airway = Column(String(255)) #, index=True)
 	
 GeometryDDL(AirwaySegment.__table__)	
 	

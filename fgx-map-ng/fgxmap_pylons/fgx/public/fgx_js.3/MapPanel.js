@@ -144,8 +144,34 @@ get_layers: function(){
                 //renderers: renderer
             }
 	);
-	
-	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+	this.L.awyline = new OpenLayers.Layer.Vector("Airway Line");
+	this.L.awylbl = new OpenLayers.Layer.Vector("Airway Labels", 
+			{
+                styleMap: new OpenLayers.StyleMap({'default':{
+                    strokeColor: "black",
+                    strokeOpacity: 1,
+                    strokeWidth: 3,
+                    fillColor: "red",
+                    fillOpacity: 0.5,
+                    pointRadius: 3,
+                    pointerEvents: "visiblePainted",
+                    // label with \n linebreaks
+                    label : "${ident}",
+                    
+                    fontColor: "white",
+                    fontSize: "12px",
+                    fontFamily: "Courier New, monospace",
+                    fontWeight: "bold",
+                    //labelAlign: "${align}",
+                    labelXOffset: "10",
+                    labelYOffset: "10",
+                    labelOutlineColor: "black",
+                    labelOutlineWidth: 1
+                }})
+                //renderers: renderer
+            }
+	);
+	this.L.radarBlip = new OpenLayers.Layer.Vector(
 		"Radar Markers", 
 		{styleMap: new OpenLayers.StyleMap({
 				"default": {
@@ -176,7 +202,7 @@ get_layers: function(){
 		}, {  visibility: true}
 	)
 
-	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+	this.L.radarLabel =  new OpenLayers.Layer.Vector(
 		"Radar Label", 
 		{
 			styleMap:  new OpenLayers.StyleMap({
@@ -289,6 +315,8 @@ get_layers: function(){
 		this.L.blip,
 		this.L.track,
 		//this.flightPlanLayer,
+		this.L.awyline,
+		this.L.awylbl,
 		this.L.fplbl,
 		this.L.fpline
 		
@@ -625,8 +653,8 @@ load_tracker: function(tracks){
 
 load_flight_plan: function(recs){
 	//console.log("FP", recs);
-	this.fpLineLayer.removeAllFeatures();
-	this.fpLabelsLayer.removeAllFeatures();
+	this.L.fpline.removeAllFeatures();
+	this.L.fplbl.removeAllFeatures();
 	
 	var lenny = recs.length;
 	var fpoints = [];
@@ -681,11 +709,11 @@ load_flight_plan: function(recs){
 	};
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-	this.fpLineLayer.addFeatures([lineFeature]);
-	this.get_map().zoomToExtent(this.fpLineLayer.getDataExtent()); 
+	this.L.fpline.addFeatures([lineFeature]);
+	this.get_map().zoomToExtent(this.L.fpline.getDataExtent()); 
 	//this.get_map().zoomOut();
 	
-	this.fpLabelsLayer.addFeatures( navLabels );
+	this.L.fplbl.addFeatures( navLabels );
 	
 },
 show_blip: function(obj){
@@ -713,6 +741,96 @@ show_blip: function(obj){
 		fillOpacity: 0.8 };
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
 	this.L.blip.addFeatures([feature]);
-}
+},
+
+load_airway: function(recs){
+	console.log("LOADAIRWAY", recs);
+	this.L.awyline.removeAllFeatures();
+	this.L.awylbl.removeAllFeatures();
+	
+	var lenny = recs.length;
+	var fpoints = [];
+	var idx_dic = {};
+	
+	var used = {};
+	for(var i = 0; i < lenny; i++){
+		var r = recs[i].data;
+			
+		
+			if( !used[r.ident_entry] ){
+				console.log("exists entry", r.ident_entry);
+				used[r.ident_entry] = {lat: r.lat1, lon: r.lon1, ident: r.ident_entry}
+			}
+			if( !used[r.ident_exit] ){
+				console.log("exists exit", r.ident_exit);
+				used[r.ident_exit] = {lat: r.lat2, lon: r.lon2, ident: r.ident_exit}
+			}
+			
+			
+		//if(r.lat && r.lon){
+			
+			//#navLabels.push(lbl);
+			//this.l.awylbl.addFeatures( [lbl] );
+			//var ki =  r.idx;
+			//if(!idx_dic[ki]){
+			//	idx_dic[ki] = {count: 0, points: []}
+			//}
+			//idx_dic[ki].count =  idx_dic[ki].count + 1;
+			//idx_dic[ki].points.push(r);
+		//}
+	}
+	console.log("used=", used)
+	//var lblPoints = [];
+	var navLabels = [];
+	var r;
+	for(var ki in used){
+			r = used[ki]
+			console.log(r.ident, r);
+			var navPt = new OpenLayers.Geometry.Point(r.lon, r.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+			var lbl = new OpenLayers.Feature.Vector(navPt);
+			lbl.attributes = r;
+			//navLabels.push(lbl);
+			this.L.awylbl.addFeatures( [lbl] );
+	}
+	
+	//console.log("navLabels=", navLabels)		
+	//var trk_length = line_points.length;
+	
+	//var points;
+	
+	
+	var style = { 
+		strokeColor: 'red', 
+		strokeOpacity: 0.4,
+		strokeWidth: 2
+	};
+	
+	var points = [];
+	var p;
+	//console.log(line_points);
+	for(var i =0; i < lenny; i++){
+		p = recs[i].data;
+		points = [];
+		//console.log(p.lat1, p.lon1, p.lat2, p.lon2);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon1, p.lat1
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon2, p.lat2
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		var line = new OpenLayers.Geometry.LineString(points);
+		var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+		this.L.awyline.addFeatures([lineFeature]);
+	}
+	
+	this.get_map().zoomToExtent(this.L.awyline.getDataExtent()); 
+	//this.get_map().zoomOut();
+	
+	
+	
+},
 
 });

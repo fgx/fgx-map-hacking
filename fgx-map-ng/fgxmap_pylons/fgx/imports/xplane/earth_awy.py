@@ -50,7 +50,7 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 				print "  > line %s >>" % c, parts
 			
 			#ident = parts[2]
-			print parts
+			#print parts
 			
 			
 

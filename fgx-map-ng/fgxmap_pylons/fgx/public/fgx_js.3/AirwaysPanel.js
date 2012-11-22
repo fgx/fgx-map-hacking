@@ -20,10 +20,11 @@ grid_airways: function(){
 				ssortInfo: {},
 				proxy: new Ext.data.HttpProxy({
 					url: "/ajax/airways",
-					method: 'GET'
+					method: 'GET',
+					params: {search: 77}
 				}),
 				root: "airways",
-				autoLoad: false
+				autoLoad: true
 			}),
 			viewConfig:{
 				forceFit: true
@@ -69,6 +70,10 @@ grid_segments: function(){
 					{name: "ident_exit", type:"string"},
 					{name: "fl_top", type:"string"},
 					{name: "fl_base", type:"string"},
+					{name: "lat1", type:"string"},
+					{name: "lon1", type:"string"},
+					{name: "lat2", type:"string"},
+					{name: "lon2", type:"string"},
 					//{name: "max_char", type:"string"},
 					//{name: "nullable", type:"boolean"},
 				
@@ -99,7 +104,9 @@ grid_segments: function(){
 					renderer: function(v){
 						return v ? "Yes" : "-";
 					}
-				}
+				},
+				{header: "la", dataIndex: "lat1"},
+				{header: "lo", dataIndex: "lon1"}
 			]
 		});
 	}
