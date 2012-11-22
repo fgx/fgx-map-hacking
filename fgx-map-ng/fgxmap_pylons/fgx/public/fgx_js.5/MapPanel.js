@@ -525,7 +525,7 @@ constructor: function(config) {
 }, // Constructor	
 
 on_base_layer: function(butt, checked){
-	console.log(butt.xLayer);
+	//console.log(butt.xLayer);
 	var bbButton = Ext.getCmp( this.getId() + "map-base-button");
 	//if(checked){
 	this.set_base_layer(butt.xLayer);
