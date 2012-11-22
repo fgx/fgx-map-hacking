@@ -152,7 +152,7 @@ on_db_browser_widget: function(butt, checked){
 on_open_map:  function(title, lat, lon, zoom, closable){
 	//console.log("-----------------------------------------");
 	//console.log("on_open_map", title, lat, lon, zoom, closable);
-	var newMap = new FGx.MapPanel({
+	var newMap = new FGx.MapViewWidget({
 		title: title, closable: closable, 
 		flightsStore: this.xFlightsStore,
 		lat: lat, lon: lon, zoom: zoom
@@ -338,12 +338,12 @@ constructor: function(config) {
 initialize:  function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );
 //	: new OpenLayers.LonLat(939262.20344,5938898.34882),
-	//this.on_open_map("Main Map", null, null, null, false)
+	this.on_open_map("Main Map", null, null, null, false)
 	
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	this.on_flight_plans_widget();
+	//this.on_flight_plans_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){

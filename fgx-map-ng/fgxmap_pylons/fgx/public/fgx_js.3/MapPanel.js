@@ -686,7 +686,31 @@ load_flight_plan: function(recs){
 	
 	this.fpLabelsLayer.addFeatures( navLabels );
 	
-}
+},
+show_blip: function(obj){
+	
+	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 
+	this.get_map().panTo( lonLat );
+	this.get_map().zoomTo( 10 );
+	
+	
+	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+		pt,
+			0, // wtf. .I want a larger cicle
+			20
+		);
+	var style = {
+		strokeColor: "red",
+		strokeOpacity: 1,
+		strokeWidth: 3,
+		fillColor: "yellow",
+		fillOpacity: 0.8 };
+	var feature = new OpenLayers.Feature.Vector(circle, null, style);
+	this.highLightMarkers.addFeatures([feature]);
+}
 
 });
