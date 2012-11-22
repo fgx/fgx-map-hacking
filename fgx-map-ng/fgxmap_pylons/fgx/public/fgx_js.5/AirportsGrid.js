@@ -23,7 +23,7 @@ constructor: function(config) {
 		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
 			{header: 'Code',  dataIndex:'apt_ident', sortable: true, 
-				 width: 100
+				 width: 50
 			},
 			
 			{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,

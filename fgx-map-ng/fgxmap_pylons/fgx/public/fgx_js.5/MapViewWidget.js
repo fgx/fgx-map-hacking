@@ -35,17 +35,22 @@ get_airports_grid: function(){
 	if(!this.xAirportsGrid){
 		
 		this.xAirportsGrid =  new FGx.AirportsGrid({});
-		/*
-		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
-
+		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
 			var rec = grid.getStore().getAt(idx);
-			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
-				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	
-			this.get_map().setCenter( lonLat );
-			this.get_map().zoomTo( 10 );
+			var r = rec.data
+			r.lat = r.apt_center_lat;
+			r.lon = r.apt_center_lon;
+			console.log(r);
+			this.get_mini_map().show_blip(r);
+		}, this); 
+		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
+			var rec = grid.getStore().getAt(idx);
+			var r = rec.data
+			r.lat = r.apt_center_lat;
+			r.lon = r.apt_center_lon;
+			this.get_map_panel().pan_to( r, 10 );
+			//this.get_map().zoomTo( 10 );
 		}, this);  
-		*/		
 	}
 	return this.xAirportsGrid;
 },
@@ -62,19 +67,11 @@ get_flights_grid: function(sto){
 			this.get_map_panel().update_radar(recs);
 		}, this);
 		this.xFlightsGrid.on("rowclick", function(grid, idx, e){
-			//console.log("rowclick");
-			var rec = grid.getStore().getAt(idx);
-			//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
-			//	).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-	
+			var rec = grid.getStore().getAt(idx);	
 			this.get_mini_map().show_blip(rec.data);
-			//this.get_map().zoomTo( 10 );
 		}, this); 
 		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
-			//console.log("rowdblclick");
-			var rec = grid.getStore().getAt(idx);
-			//var rec = grid.getStore().getAt(idx);
-			
+			var rec = grid.getStore().getAt(idx);			
 			this.get_map_panel().pan_to( rec.data, 10 );
 			//this.get_map().zoomTo( 10 );
 		}, this);  

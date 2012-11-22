@@ -724,7 +724,7 @@ load_flight_plan: function(recs){
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
 	this.L.fpLine.addFeatures([lineFeature]);
-	this.get_map().zoomToExtent(this.L.fpline.getDataExtent()); 
+	this.get_map().zoomToExtent(this.L.fpLbl.getDataExtent()); 
 	//this.get_map().zoomOut();
 	
 	this.L.fpLbl.addFeatures( navLabels );
