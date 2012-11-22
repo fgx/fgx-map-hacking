@@ -9,7 +9,7 @@ from fgx.model import meta
 def airports(search=None, bounds=None, apt_type=None, lookup=True):
  
     ## The cols to return, this is a string with spces and split later
-	cols_str = "apt_ident apt_name apt_center_lon apt_center_lat"
+	cols_str = "apt_ident apt_name_ascii apt_center_lon apt_center_lat"
 	
 	if lookup == False:
 		## lookup returns short data, this is long so add other cols as required

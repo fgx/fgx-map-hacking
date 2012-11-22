@@ -68,9 +68,9 @@ def load_environment(global_conf, app_conf, start_bots):
 	if start_bots:
 		#pass
 		statusThread = MpStatusThread(config=config)
-		statusThread.start()
+		#statusThread.start()
 		
 		trackerThread = TrackerThread(config=config)
-		trackerThread.start()
+		#trackerThread.start()
 
 	return config

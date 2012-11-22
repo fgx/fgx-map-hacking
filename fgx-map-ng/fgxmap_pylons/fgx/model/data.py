@@ -57,22 +57,22 @@ GeometryDDL(AirwaySegment.__table__)
 ##=======================================================
 class Airport(Base.data):
 	
-	__tablename__ = "airports"
+	__tablename__ = "airport"
 	
 	apt_pk = Column(Integer(), primary_key=True)
 	apt_ident = Column(String(8), index=True)
 	apt_local_code = Column(String(8), index=True, nullable=True)
 	
-	apt_ascii = Column(String(40), index=True, nullable=True)
-	apt_utf8 = Column(String(40), index=True, nullable=True)
+	apt_ascii = Column(String(255), index=True, nullable=True)
+	apt_utf8 = Column(String(255), index=True, nullable=True)
 	
 	apt_country = Column(String(8), nullable=True)
 	apt_type = Column(String(50), nullable=True)
 	
-	apt_elev_ft = Column(String(20), nullable=True)
-	apt_elev_m = Column(String(20), nullable=True)
-	apt_authority = Column(String(4), nullable=True)
-	apt_services = Column(String(10), nullable=True)
+	apt_elev_ft = Column(String(32), nullable=True)
+	apt_elev_m = Column(String(32), nullable=True)
+	apt_authority = Column(String(32), nullable=True)
+	apt_services = Column(String(1), nullable=True)
 	apt_ifr = Column(String(1), nullable=True)
 	apt_size = Column(String(32), nullable=True)
 	
@@ -236,16 +236,16 @@ class Runway(Base.data):
 	
 	rwy_width = Column(String(32), nullable=True)
 	
-	rwy_lat = Column(String(20), nullable=True)
-	rwy_lon = Column(String(20), nullable=True)
-	rwy_lat_end = Column(String(20), nullable=True)
-	rwy_lon_end = Column(String(20), nullable=True)
+	rwy_lat = Column(String(32), nullable=True)
+	rwy_lon = Column(String(32), nullable=True)
+	rwy_lat_end = Column(String(32), nullable=True)
+	rwy_lon_end = Column(String(32), nullable=True)
 
-	rwy_len_meters = Column(String(20), nullable=True)
-	rwy_len_feet = Column(String(20), nullable=True)
+	rwy_len_meters = Column(String(32), nullable=True)
+	rwy_len_feet = Column(String(32), nullable=True)
 	
-	rwy_hdg = Column(String(20), nullable=True)
-	rwy_hdg_end = Column(String(20), nullable=True)
+	rwy_hdg = Column(String(32), nullable=True)
+	rwy_hdg_end = Column(String(32), nullable=True)
 	
 	rwy_shoulder = Column(String(8), nullable=True)
 	rwy_smoothness = Column(String(8), nullable=True)

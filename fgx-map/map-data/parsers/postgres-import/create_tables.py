@@ -85,7 +85,8 @@ exe = sqlstring.replace(",);",");")
 print sqlstring
 
 connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
-
+if "host" in confMap:
+	connectstring += " host=%s" % confMap['host']
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
 			
