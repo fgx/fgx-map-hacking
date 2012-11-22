@@ -57,31 +57,33 @@ GeometryDDL(AirwaySegment.__table__)
 ##=======================================================
 class Airport(Base.data):
 	
-	__tablename__ = "airport"
+	__tablename__ = "airports"
 	
 	apt_pk = Column(Integer(), primary_key=True)
-	apt_ident = Column(String(4), index=True)
-	apt_iata = Column(String(8), index=True, nullable=True)
-	apt_name = Column(String(40), index=True, nullable=True)
-	apt_country = Column(String(2), nullable=True)
-	apt_type = Column(String(4), nullable=True)
+	apt_ident = Column(String(8), index=True)
+	apt_local_code = Column(String(8), index=True, nullable=True)
 	
-	apt_elev_ft = Column(Integer(), nullable=True)
-	apt_elev_m = Column(Integer(), nullable=True)
+	apt_ascii = Column(String(40), index=True, nullable=True)
+	apt_utf8 = Column(String(40), index=True, nullable=True)
+	
+	apt_country = Column(String(8), nullable=True)
+	apt_type = Column(String(50), nullable=True)
+	
+	apt_elev_ft = Column(String(20), nullable=True)
+	apt_elev_m = Column(String(20), nullable=True)
 	apt_authority = Column(String(4), nullable=True)
 	apt_services = Column(String(10), nullable=True)
-	apt_ifr = Column(String(10), nullable=True)
-	apt_size = Column(String(10), nullable=True)
+	apt_ifr = Column(String(1), nullable=True)
+	apt_size = Column(String(32), nullable=True)
 	
-	apt_center = GeometryColumn(MultiPoint(srid=FGX_SRID), comparator=PGComparator, nullable=True)
+	apt_center = GeometryColumn(Point(srid=FGX_SRID), comparator=PGComparator, nullable=True)
 	apt_center_lat = Column(String(20), nullable=True)
 	apt_center_lon = Column(String(20), nullable=True)
 	
-	apt_rwy_count = Column(Integer(), nullable=True)
-	apt_min_rwy_len_ft = Column(Integer(), nullable=True)
-	apt_max_rwy_len_ft = Column(Integer(), nullable=True)
-	apt_xplane_code = Column(Integer(), nullable=True)
-	#wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	apt_rwy_count = Column(String(20), nullable=True)
+	apt_min_rwy_len_ft = Column(String(20), nullable=True)
+	apt_max_rwy_len_ft = Column(String(20), nullable=True)
+	apt_xplane_code = Column(String(20), nullable=True)
 
 	def dic(self):
 		return dict(apt_pk=self.apt_pk, apt_ident=self.apt_ident)
@@ -228,11 +230,49 @@ class Runway(Base.data):
 	__tablename__ = "runway"
 	
 	rwy_pk = Column(Integer(), primary_key=True)
-	apt_ident = Column(String(10), index=True)
-	rwy = Column(String(10), index=True)
-	length_ft = Column(Integer())
-	length_m = Column(Integer())
-	geom = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
+	apt_ident = Column(String(8), index=True)
+	rwy_ident = Column(String(8), index=True)
+	rwy_ident_end = Column(String(8), index=True)
+	
+	rwy_width = Column(String(32), nullable=True)
+	
+	rwy_lat = Column(String(20), nullable=True)
+	rwy_lon = Column(String(20), nullable=True)
+	rwy_lat_end = Column(String(20), nullable=True)
+	rwy_lon_end = Column(String(20), nullable=True)
+
+	rwy_len_meters = Column(String(20), nullable=True)
+	rwy_len_feet = Column(String(20), nullable=True)
+	
+	rwy_hdg = Column(String(20), nullable=True)
+	rwy_hdg_end = Column(String(20), nullable=True)
+	
+	rwy_shoulder = Column(String(8), nullable=True)
+	rwy_smoothness = Column(String(8), nullable=True)
+	rwy_surface = Column(String(32), nullable=True)
+	
+	rwy_centerline_lights = Column(String(8), nullable=True)
+	rwy_edge_lighting = Column(String(8), nullable=True)
+	rwy_auto_dist_signs = Column(String(8), nullable=True)
+	
+	
+	rwy_threshold = Column(String(32), nullable=True)
+	rwy_overrun = Column(String(32), nullable=True)
+	rwy_marking = Column(String(8), nullable=True)
+	rwy_app_lighting = Column(String(8), nullable=True)
+	rwy_tdz_lighting = Column(String(8), nullable=True)
+	rwy_reil = Column(String(8), nullable=True)
+	
+	rwy_threshold_end = Column(String(32), nullable=True)
+	rwy_overrun_end = Column(String(32), nullable=True)
+	rwy_marking_end = Column(String(8), nullable=True)
+	rwy_app_lighting_end = Column(String(8), nullable=True)
+	rwy_tdz_lighting_end = Column(String(8), nullable=True)
+	rwy_reil_end = Column(String(8), nullable=True)	
+	
+	rwy_xplane_code = Column(String(8), nullable=True)	
+	
+	rwy_poly = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
@@ -240,9 +280,10 @@ class Runway(Base.data):
 GeometryDDL(Runway.__table__)	
 
 ##=======================================================
+
 class Threshold(Base.data):
 	
-	__tablename__ = "threshold"
+	__tablename__ = "thresholds"
 
 	threshold_pk = Column(Integer(), primary_key=True)
 	rwy_id = Column(String(5), index=True)
