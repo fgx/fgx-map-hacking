@@ -2,6 +2,10 @@
 Ext.namespace("FGx");
 
 FGx.FlightPlansWidget = Ext.extend(Ext.Panel, {
+
+group_renderer: function(v,u,r,rowIndex,colIndex,js){
+	return "@" + r.get('ident');
+},
 	
 get_flight_plan_grid: function(){
 	if(!this.xFlightPlanGrid){
@@ -10,9 +14,11 @@ get_flight_plan_grid: function(){
 			width: 300,
 			frame: false, plain: true, border: false,
 			columns: [
-				{header: 'Idx', dataIndex:'idx', sortable: false, align: 'right',
+				{header: '#', dataIndex:'idx', sortable: false, align: 'right',
+						groupRenderer: this.group_renderer
 				},
 				{header: 'Ident', dataIndex:'ident', sortable: false, align: 'right',
+					groupRenderer: this.group_renderer
 				},
 				{header: 'Lat', dataIndex:'lat', sortable: false, align: 'right',
 				},
@@ -24,26 +30,38 @@ get_flight_plan_grid: function(){
 				{header: 'Freq', dataIndex:'freq', sortable: false, align: 'right',
 				},
 			],
-			store: new Ext.data.JsonStore({
-				fields: [	
-					{name: "ident", type:"string"},
-					{name: "idx", type:"int"},
-					{name: "lat", type:"string"},
-					{name: "lon", type:"string"},
-					{name: "freq", type:"string"},
-					{name: "nav_type", type:"string"}
-				],
-				idProperty: "",
-				ssortInfo: {},
+			store: new Ext.data.GroupingStore({
+				
+				//sortInfo: {field: 'idx', direction: "ASC"},
+				
+				groupField:'idx',
 				proxy: new Ext.data.HttpProxy({
 					url: "/ajax/database/data/tables",
 					method: 'GET'
 				}),
-				root: "flight_plan",
+				reader: new Ext.data.JsonReader({
+					root: "flight_plan",
+					fields: [	
+						{name: "uid", type:"int"},
+						{name: "ident", type:"string"},
+						{name: "idx", type:"int"},
+						{name: "lat", type:"string"},
+						{name: "lon", type:"string"},
+						{name: "freq", type:"string"},
+						{name: "nav_type", type:"string"}
+					],
+					idProperty: "uid"
+				}),
+				
 				autoLoad: false
 			}),
 			loadMask: true,
-			viewConfig:{
+			view: new Ext.grid.GroupingView({
+				forceFit:true,
+				ssgroupTextTpl: '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})',
+				
+			}),
+			DDDviewConfig:{
 				forceFit: true,
 				emptyText: "No items to view",
 				deferEmptyText: false
