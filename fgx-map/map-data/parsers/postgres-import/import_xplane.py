@@ -261,8 +261,8 @@ def insert_waterway(apt_ident,\
 				wwy_lat,\
 				wwy_lon_end,\
 				wwy_lat_end,\
-				wwy_len_feet,\
-				wwy_len_meters,\
+				wwy_len_ft,\
+				wwy_len_m,\
 				wwy_hdg,\
 				wwy_hdg_end, \
 				wwy_buoys,\
@@ -276,9 +276,9 @@ def insert_waterway(apt_ident,\
 	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
-		INSERT INTO waterway (apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_feet, wwy_len_meters, wwy_hdg, wwy_hdg_end, wwy_buoys, wwy_xplane_code, wwy_poly)
+		INSERT INTO waterway (apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_ft, wwy_len_m, wwy_hdg, wwy_hdg_end, wwy_buoys, wwy_xplane_code, wwy_poly)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
-	params = [apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_feet, wwy_len_meters, wwy_hdg, wwy_hdg_end, wwy_buoys,wwy_xplane_code, wwy_poly]
+	params = [apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_ft, wwy_len_m, wwy_hdg, wwy_hdg_end, wwy_buoys,wwy_xplane_code, wwy_poly]
 	cur.execute(sql, params)
 	
 	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","			
@@ -517,11 +517,11 @@ def readxplane():
 			# Now some additional data, not in apt.dat
 			
 			wwy_len = Geodesic.WGS84.Inverse(float(wwy_lat), float(wwy_lon), float(wwy_lat_end), float(wwy_lon_end))
-			wwy_len_meters = str(wwy_len.get("s12"))
+			wwy_len_m = str(wwy_len.get("s12"))
 			
-			#print "Meters: "+wwy_len_meters
+			#print "Meters: "+wwy_len_m
 			
-			wwy_len_feet = wwy_len.get("s12")*3.048
+			wwy_len_ft = wwy_len.get("s12")*3.048
 			
 			wwy_hdg = wwy_len.get("azi2")
 			
@@ -547,9 +547,9 @@ def readxplane():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, wwy_len_meters, wwy_app_lighting)
+			collecting(points, wwy_len_m, wwy_app_lighting)
 			
-			insert_waterway(apt_ident,wwy_ident,wwy_ident_end,wwy_width,wwy_lon,wwy_lat,wwy_lon_end,wwy_lat_end,wwy_len_meters,wwy_len_feet,wwy_hdg,wwy_hdg_end,wwy_buoys,wwy_xplane_code,\
+			insert_waterway(apt_ident,wwy_ident,wwy_ident_end,wwy_width,wwy_lon,wwy_lat,wwy_lon_end,wwy_lat_end,wwy_len_m,wwy_len_ft,wwy_hdg,wwy_hdg_end,wwy_buoys,wwy_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 		# HELIPADS, we need it for heliport calculation, i.e. centerpoint
