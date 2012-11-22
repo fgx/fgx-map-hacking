@@ -7,7 +7,7 @@ from geoalchemy import WKTSpatialElement
 from sqlalchemy.sql.expression import func 
 
 from fgx.model import meta
-from fgx.model.data import Aairway, FGX_SRID
+from fgx.model.data import Airway, AirwaySegment, FGX_SRID
 from fgx.lib import helpers as h
 
 
@@ -21,7 +21,7 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 	
 	started = datetime.datetime.now()
 		
-	meta.Sess.data.query(AirWay).delete()
+	meta.Sess.data.query(AirwaySegment).delete()
 	meta.Sess.data.commit()
 	
 
@@ -49,15 +49,27 @@ def import_dat( file_path, dev_mode=False, verbose=1, empty=False, clear=None):
 			if verbose > 1:
 				print "  > line %s >>" % c, parts
 			
-			ident = parts[2]
+			#ident = parts[2]
+			print parts
+			
+			
 
 			## Create DB object
-			ob = NavAid()
-			ob.nav_type = NavAid.NAV_TYPE.fix
-			ob.ident = ident
+			ob = AirwaySegment()
 			
-			pnt =  'POINT(%s %s)' % (parts[0], parts[1])
+			ob.ident_entry = parts[0]
+			ob.ident_exit = parts[3]
+			
+			ob.level = int(parts[6])
+			ob.fl_base = int(parts[7])
+			ob.fl_top = int(parts[8])
+			
+			pnt =  'LINESTRING(%s %s, %s %s)' % (parts[1], parts[2], parts[4], parts[5])
 			ob.wkb_geometry = func.ST_GeomFromText(pnt, FGX_SRID)
+			
+			air_parts = parts[9].split("-")
+			print air_parts
+			ob.airway = air_parts
 			
 			meta.Sess.data.add(ob)			
 			meta.Sess.data.commit()

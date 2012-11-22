@@ -1,11 +1,11 @@
 
 from sqlalchemy import  Integer, String, Date, DateTime
-from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
+from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint, LineString
 from geoalchemy.postgis import PGComparator
 from shapely import wkb
 
 from sqlalchemy import  Integer, String, Date, DateTime, Column
-
+from sqlalchemy.dialects.postgresql import ARRAY
 from fgx.model.meta import Sess, Base
 
 
@@ -33,16 +33,20 @@ class AirwaySegment(Base.data):
 	__tablename__ = "airway_segment"
 	
 	awy_seg_pk = Column(Integer(), primary_key=True)
-	name = Column(String(4), index=True)
+	name = Column(String(30), index=True)
 	
-	ident_entry = Column(String(4), index=True)
-	ident_exit = Column(String(4), index=True)
+	ident_entry = Column(String(10), index=True)
+	ident_exit = Column(String(10), index=True)
 	
-	wkb_geometry = GeometryColumn(MultiPoint(srid=FGX_SRID), comparator=PGComparator, nullable=True)
+	wkb_geometry = GeometryColumn(LineString(srid=FGX_SRID), comparator=PGComparator, nullable=True)
 	
 	level = Column(Integer()) #, index=True)
 	fl_base = Column(Integer()) #, index=True)
 	fl_top = Column(Integer()) #, index=True)
+	
+
+	
+	airway = Column(ARRAY(String(10))) #, index=True)
 	
 GeometryDDL(AirwaySegment.__table__)	
 	
