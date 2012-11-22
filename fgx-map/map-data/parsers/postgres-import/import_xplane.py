@@ -210,8 +210,8 @@ def insert_runway(apt_ident,\
 				rwy_lat,\
 				rwy_lon_end,\
 				rwy_lat_end,\
-				rwy_len_feet,\
-				rwy_len_meters,\
+				rwy_len_ft,\
+				rwy_len_m,\
 				rwy_hdg,\
 				rwy_hdg_end, \
 				rwy_surface,\
@@ -242,9 +242,9 @@ def insert_runway(apt_ident,\
 	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
-		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_feet, rwy_len_meters, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly)
+		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
-	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_feet, rwy_len_meters, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly]
+	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly]
 	
 	#print  cur.mogrify(sql, params) 
 	
@@ -460,9 +460,9 @@ def readxplane():
 					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
 			
 			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
-			rwy_len_meters = str(rwy_length.get("s12"))
+			rwy_len_m = str(rwy_length.get("s12"))
 			
-			rwy_len_feet = rwy_length.get("s12")*3.048
+			rwy_len_ft = rwy_length.get("s12")*3.048
 			
 			rwy_hdg = rwy_length.get("azi2")
 			
@@ -492,9 +492,9 @@ def readxplane():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, rwy_len_meters, rwy_app_lighting)
+			collecting(points, rwy_len_m, rwy_app_lighting)
 			
-			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon,rwy_lat,rwy_lon_end,rwy_lat_end,rwy_len_meters,rwy_len_feet,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
+			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon,rwy_lat,rwy_lon_end,rwy_lat_end,rwy_len_m,rwy_len_ft,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 			
