@@ -4,6 +4,7 @@ Ext.namespace("FGx");
 
 FGx.MapPanel = Ext.extend(GeoExt.MapPanel, {
 
+L: {},
 
 get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
@@ -87,11 +88,11 @@ lbl_lon: function(){
 
 
 get_osm_lite: function(){
-	if(!this.xOsmLite){
-		this.xOsmLite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
-		this.xOsmLite.setOpacity(0.4);	
+	if(!this.L.lite){
+		this.L.lite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
+		this.L.lite.setOpacity(0.4);	
 	}
-	return this.xOsmLite;
+	return this.L.lite;
 },
 
 get_bookmark_button: function(){
@@ -114,10 +115,10 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
-	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	this.trackLinesLayer = new OpenLayers.Layer.Vector("Track Lines Layer");	
-	this.fpLineLayer = new OpenLayers.Layer.Vector("Flight Plan Line");
-	this.fpLabelsLayer = new OpenLayers.Layer.Vector("Flight Plan Labels", 
+	this.L.blip = new OpenLayers.Layer.Vector("HighLight Markers");
+	this.L.track = new OpenLayers.Layer.Vector("Track Lines Layer");	
+	this.L.fpline = new OpenLayers.Layer.Vector("Flight Plan Line");
+	this.L.fplbl = new OpenLayers.Layer.Vector("Flight Plan Labels", 
 			{
                 styleMap: new OpenLayers.StyleMap({'default':{
                     strokeColor: "black",
@@ -285,11 +286,11 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		this.highLightMarkers,
-		this.trackLinesLayer,
+		this.L.blip,
+		this.L.track,
 		//this.flightPlanLayer,
-		this.fpLabelsLayer,
-		this.fpLineLayer
+		this.L.fplbl,
+		this.L.fpline
 		
 	];
 	return LAYERS;
@@ -688,7 +689,8 @@ load_flight_plan: function(recs){
 	
 },
 show_blip: function(obj){
-	
+	console.log("L=", this.L);
+	this.L.blip.removeAllFeatures();
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 
@@ -706,11 +708,11 @@ show_blip: function(obj){
 	var style = {
 		strokeColor: "red",
 		strokeOpacity: 1,
-		strokeWidth: 3,
+		strokeWidth: 4,
 		fillColor: "yellow",
 		fillOpacity: 0.8 };
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	this.highLightMarkers.addFeatures([feature]);
+	this.L.blip.addFeatures([feature]);
 }
 
 });
