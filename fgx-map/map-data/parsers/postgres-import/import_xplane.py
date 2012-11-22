@@ -26,8 +26,6 @@ inputfile = sys.argv[1]
 
 log = open("import_xplane.log", 'w')
 
-temp_sql = open("temp_sql.txt", 'w')
-
 starttime = time.asctime()
 log.write("Import started: "+starttime+"\n")
 
@@ -770,5 +768,4 @@ endtime = time.asctime()
 log.write("Finished: "+endtime+"\n")
 
 log.close()
-temp_sql.close()
 
