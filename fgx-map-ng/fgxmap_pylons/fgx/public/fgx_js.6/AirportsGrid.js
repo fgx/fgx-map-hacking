@@ -3,6 +3,7 @@ Ext.namespace("FGx");
 
 FGx.AirportsGrid =  Ext.extend(Ext.Panel, {
 
+txt_width: 40,
 //===========================================================
 //== Grid
 get_airports_grid: function(){
@@ -130,6 +131,17 @@ constructor: function(config) {
 					},
 					this.get_apt_name_search_text()
 				]
+			},
+			{xtype: 'buttongroup', 
+				title: 'Filter Types',
+				columns: 5,
+				items: [
+					{text: "Major"},
+					{text: "Minor"},
+					{text: "Small"},
+					{text: "Water"},
+					{text: "HeliPad"}
+				]
 			}
 		]
 		
@@ -171,7 +183,7 @@ get_store: function(){
 get_apt_code_search_text: function(){
 	if(!this.txtSearchAptCode){
 		this.txtSearchAptCode = new Ext.form.TextField({
-			width: 80,
+			width: this.txt_width,
 			enableKeyEvents: true
 		});
 		this.txtSearchAptCode.on("keyup", function(txtFld, e){
@@ -193,7 +205,7 @@ get_apt_code_search_text: function(){
 get_apt_name_search_text: function(){
 	if(!this.txtSearchAptName){
 		this.txtSearchAptName = new Ext.form.TextField({
-			width: 80,
+			width: this.txt_width,
 			enableKeyEvents: true
 		});
 		this.txtSearchAptName.on("keyup", function(txtFld, e){
