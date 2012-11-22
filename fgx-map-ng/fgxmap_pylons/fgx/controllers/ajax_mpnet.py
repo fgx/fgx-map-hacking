@@ -60,7 +60,10 @@ class AjaxMpnetController(BaseController):
 	@jsonify
 	def tracker(self, callsign=None):
 		payload = dict(success=True)
-		obs = meta.Sess.mpnet.query(FlightWayPoint).filter_by(callsign=callsign).limit(100).all()
+		obs = meta.Sess.mpnet.query(FlightWayPoint
+				).filter_by(callsign=callsign
+				).order_by(FlightWayPoint.wp_id.desc()
+				).limit(50).all()
 		payload['tracks'] = [ob.dic() for ob in obs]
 		
 		return payload	

@@ -503,6 +503,7 @@ constructor: function(config) {
 					}else{
 						this.get_graticule().deactivate();
 					}
+					butt.setIconClass( checked ? "icoGreen" : "icoOff" );
 				}
 			},
 			"-",
