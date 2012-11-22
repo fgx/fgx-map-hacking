@@ -137,11 +137,14 @@ def drawcircle(rangerad,lon,lat):
 	azi_list = range(0,360,1)
 	circlelist = "POLYGON(("
 	for i in azi_list:
+		# Now be aware of this, geographiclib has lat/lon ordering, and not lon/lat
 		result = Geodesic.WGS84.Direct(float(lat),float(lon),i,float(rangerad))
+		# get it back in the right order
 		circlelist += str(result["lon2"])+" "+str(result["lat2"])+","
 	
 	# End point
-	endpoint = str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lon2"])+" "+str(Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))["lat2"])
+	closepoly = Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))
+	endpoint = str(closepoly["lon2"])+" "+str(closepoly["lat2"])
 	
 	circlelist += endpoint+"))"
 	return circlelist
@@ -163,9 +166,6 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	sql = '''
 		INSERT INTO airport (apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
-		
-	#ST_Y(ST_Transform(apt_center,3857)),ST_X(ST_Transform(apt_center,3857)),ST_Y(ST_Transform(apt_center,4326)),ST_X(ST_Transform(apt_center,4326))
-	#print sql
 	
 	params = [apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
@@ -183,38 +183,23 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_ident='"+apt_ident+"';"
 	cur.execute(latsql)
 	
-	#print latsql
-	
 	latlon = cur.fetchall()[0]
 	lat84 = latlon[0]
 	lon84 = latlon[1]
 	
-	#print lat84, lon84
+	# Drawing the range polygons
 	
-	circles100 = drawcircle(185200,lon84,lat84) # 100 nm
-	circles050 = drawcircle(92600,lon84,lat84)  #  50 nm
-	circles030 = drawcircle(55560,lon84,lat84)  #  30 nm
-	circles010 = drawcircle(18520,lon84,lat84)  #  10 nm
+	listcircles = [185200,92600,55560,18520] # 100/50/30/10 nautic miles
 	
-	
-	thiscircles100 = circles100[:-2]+"))"
-	thiscircles050 = circles050[:-2]+"))"
-	thiscircles030 = circles030[:-2]+"))"
-	thiscircles010 = circles010[:-2]+"))"
-	
-	rangesql100 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles100+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql100)
-	rangesql050 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles050+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql050)
-	rangesql030 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles030+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql030)
-	rangesql010 = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles010+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql010)
+	for i in listcircles:
+		circles = drawcircle(i,lon84,lat84)
+		thiscircles = circles[:-2]+"))"
+		rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+		cur.execute(rangesql)
 	
 	conn.commit()
 	
 	count += 1
-	
 	print count
 
 	
@@ -697,7 +682,7 @@ def readxplane():
 		else:
 			apt_services = "0"
 			
-			
+		# the really bad design, said gral
 		global pointscollected
 		global runwaycount
 		global rwy_len_collect
