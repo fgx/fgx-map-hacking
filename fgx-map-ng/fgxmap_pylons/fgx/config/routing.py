@@ -36,6 +36,10 @@ def make_map(config):
 	map.connect('/ajax/airports', controller="ajax_airport", action="airports")
 	map.connect('/ajax/airport/{apt_ident}', controller="ajax_airport", action="airport")
 	
+	# Airway
+	map.connect('/ajax/airways', controller="ajax_navaids", action="airways")
+	map.connect('/ajax/airway/{awy}', controller="ajax_navaids", action="airway")
+	
 	# Database Browsing
 	map.connect('/ajax/databases', controller="ajax_db", action="databases")
 	map.connect('/ajax/database/{db_name}/tables', controller="ajax_db", action="tables")
@@ -63,8 +67,10 @@ def make_map(config):
 	map.connect('/ajax/vor/{ident}', controller="ajax_navaids", action="vor")
 	map.connect('/ajax/vor', controller="ajax_navaids", action="vor")
 	
+	map.connect('/ajax/flightplan/process', controller="ajax_navaids", action="process_flightplan")
 	
-
+	
+	### Secure
 	map.connect('/ajax/users', controller="ajax_users", action="users")
 	map.connect('/ajax/user/{user_id}', controller="ajax_users", action="user")
 	

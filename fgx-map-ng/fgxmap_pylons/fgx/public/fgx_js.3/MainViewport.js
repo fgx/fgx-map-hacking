@@ -8,7 +8,8 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 widgets: {
 	FlightsViewWidget: null,	
 	MpStatusGrid: null,
-	DbBrowser: null
+	DbBrowser: null,
+	FlightPlansWidget: null
 },
 
 
@@ -44,7 +45,27 @@ xFlightsStore: new Ext.data.JsonStore({
 	},
 	autoLoad: false,
 }),
-
+xMpStatusStore: new Ext.data.JsonStore({
+	idProperty: 'no',
+	storeId: "mpstatus_store",
+	fields: [ 	
+		{name: 'no', type: 'int'},
+		{name: 'fqdn', type: 'string'},
+		{name: "ip", type: 'string'},
+		{name: "last_checked", type: 'string'},
+		{name: "last_seen", type: 'string'},
+		{name: "lag", type: 'int'},
+		'country', 'time_zone', 'lat', 'lon'
+	],
+	url: '/ajax/mpnet/status',
+	root: 'mpstatus',
+	remoteSort: false,
+	sortInfo: {
+		field: "no", 
+		direction: 'ASC'
+	},
+	autoLoad: true,
+}),
 
 update_flights: function(){
 	this.xFlightsStore.load();
@@ -73,7 +94,20 @@ on_refresh_toggled: function(butt, checked){
 
 
 
-
+on_flight_plans_widget: function(butt){
+	if(!this.widgets.FlightPlansWidget){
+		this.widgets.FlightPlansWidget = new FGx.FlightPlansWidget({
+			//flightsStore: this.xFlightsStore,
+			//refresh_rate: this.refresh_rate,
+			title: "Flight Plans", 
+			closable: true,
+			xHidden: false
+		});
+		this.get_tab_panel().add(this.widgets.FlightPlansWidget);
+	}
+	console.log(this.widgets);
+	this.get_tab_panel().setActiveTab(this.widgets.FlightPlansWidget);
+},
 
 
 on_flights_widget: function(butt){
@@ -118,7 +152,7 @@ on_db_browser_widget: function(butt, checked){
 on_open_map:  function(title, lat, lon, zoom, closable){
 	//console.log("-----------------------------------------");
 	//console.log("on_open_map", title, lat, lon, zoom, closable);
-	var newMap = new FGx.MapPanel({
+	var newMap = new FGx.MapViewWidget({
 		title: title, closable: closable, 
 		flightsStore: this.xFlightsStore,
 		lat: lat, lon: lon, zoom: zoom
@@ -156,11 +190,15 @@ get_tab_panel: function(){
 			if(widget.fgxType == "FlightsViewWidget"){
 				this.widgets.flightsGrid = 0;
 				
-			}else if(widget.fgxType == "mpStatusGrid"){
-				this.widgets.mpStatusGrid = 0;
+			}else if(widget.fgxType == "MpStatusGrid"){
+				this.widgets.MpStatusGrid = 0;
 				
 			}else if(widget.fgxType == "DbBrowser"){
 				this.widgets.DbBrowser = 0;
+				
+			}else if(widget.fgxType == "FlightPlansWidget"){
+				this.widgets.FlightPlansWidget = 0;
+						
 			}
 		}, this);
 	}
@@ -224,7 +262,10 @@ constructor: function(config) {
 					{text: "Flights", iconCls: "icoFlights", 
 						handler: this.on_flights_widget, scope: this
 					},
-					
+					"-",
+					{text: "Flight Plans", iconCls: "icoFlightPlans", 
+						handler: this.on_flight_plans_widget, scope: this
+					},
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
 						handler: this.on_mpstatus_widget, scope: this
@@ -232,12 +273,17 @@ constructor: function(config) {
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{iconCls: "icoDatabase", text: "Database Browser", handler: this.on_db_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
 					"-",
 					{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
 						menu: this.get_styles()
+					},
+					"-",
+					{tooltip: "About FGx", iconCls: "icoHelp", text: "About", disabled: true,
+						handler: this.on_show_iframe, scope: this,
+						url: "/about_iframe"
 					},
 					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
@@ -297,7 +343,7 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	//this.on_flights_widget();
+	//this.on_flight_plans_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){

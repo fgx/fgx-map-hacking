@@ -2,11 +2,26 @@
 
 Ext.namespace("FGx");
 
-FGx.MapPanel = Ext.extend(Ext.Panel, {
+FGx.MapPanel = Ext.extend(GeoExt.MapPanel, {
 
+L: {},
 
 get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
+},
+
+get_graticule: function(){
+	if(!this.xGraticule){
+		this.xGraticule =	new OpenLayers.Control.Graticule({
+			numPoints: 1, 
+			autoActivate: false,
+			labelled: true,
+			lineSymbolizer:{strokeColor: "grey", strokeWidth: 1, strokeOpacity: 0.3},
+			// WTF below dont work !
+			labelSymbolizer:{strokeColor: "red", strokeWidth: 1, strokeOpacity: 0.5}
+		});
+	}
+	return this.xGraticule;
 },
 
 get_map: function(){
@@ -40,6 +55,7 @@ get_map: function(){
 			// zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 20
 		});
+		this.xMap.addControl( this.get_graticule() );
 		this.xMap.events.register("mousemove", this, function (e) {
 			var pos = this.get_map().getLonLatFromViewPortPx(e.xy		
 				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
@@ -72,11 +88,11 @@ lbl_lon: function(){
 
 
 get_osm_lite: function(){
-	if(!this.xOsmLite){
-		this.xOsmLite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
-		this.xOsmLite.setOpacity(0.4);	
+	if(!this.L.lite){
+		this.L.lite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
+		this.L.lite.setOpacity(0.4);	
 	}
-	return this.xOsmLite;
+	return this.L.lite;
 },
 
 get_bookmark_button: function(){
@@ -99,10 +115,63 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
-	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	this.trackLinesLayer = new OpenLayers.Layer.Vector("Track Lines Layer");		
-
-	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
+	this.L.blip = new OpenLayers.Layer.Vector("HighLight Markers");
+	this.L.track = new OpenLayers.Layer.Vector("Track Lines Layer");	
+	this.L.fpline = new OpenLayers.Layer.Vector("Flight Plan Line");
+	this.L.fplbl = new OpenLayers.Layer.Vector("Flight Plan Labels", 
+			{
+                styleMap: new OpenLayers.StyleMap({'default':{
+                    strokeColor: "black",
+                    strokeOpacity: 1,
+                    strokeWidth: 3,
+                    fillColor: "#FF5500",
+                    fillOpacity: 0.5,
+                    pointRadius: 6,
+                    pointerEvents: "visiblePainted",
+                    // label with \n linebreaks
+                    label : "${ident}",
+                    
+                    fontColor: "red",
+                    fontSize: "12px",
+                    fontFamily: "Courier New, monospace",
+                    fontWeight: "bold",
+                    labelAlign: "${align}",
+                    labelXOffset: "${xOffset}",
+                    labelYOffset: "${yOffset}",
+                    labelOutlineColor: "white",
+                    labelOutlineWidth: 3
+                }})
+                //renderers: renderer
+            }
+	);
+	this.L.awyline = new OpenLayers.Layer.Vector("Airway Line");
+	this.L.awylbl = new OpenLayers.Layer.Vector("Airway Labels", 
+			{
+                styleMap: new OpenLayers.StyleMap({'default':{
+                    strokeColor: "black",
+                    strokeOpacity: 1,
+                    strokeWidth: 3,
+                    fillColor: "red",
+                    fillOpacity: 0.5,
+                    pointRadius: 3,
+                    pointerEvents: "visiblePainted",
+                    // label with \n linebreaks
+                    label : "${ident}",
+                    
+                    fontColor: "white",
+                    fontSize: "12px",
+                    fontFamily: "Courier New, monospace",
+                    fontWeight: "bold",
+                    //labelAlign: "${align}",
+                    labelXOffset: "10",
+                    labelYOffset: "10",
+                    labelOutlineColor: "black",
+                    labelOutlineWidth: 1
+                }})
+                //renderers: renderer
+            }
+	);
+	this.L.radarBlip = new OpenLayers.Layer.Vector(
 		"Radar Markers", 
 		{styleMap: new OpenLayers.StyleMap({
 				"default": {
@@ -133,7 +202,7 @@ get_layers: function(){
 		}, {  visibility: true}
 	)
 
-	this.flightLabelsLayer =  new OpenLayers.Layer.Vector(
+	this.L.radarLabel =  new OpenLayers.Layer.Vector(
 		"Radar Label", 
 		{
 			styleMap:  new OpenLayers.StyleMap({
@@ -243,21 +312,41 @@ get_layers: function(){
 				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
-		this.highLightMarkers,
-		this.trackLinesLayer,
-		this.flightLabelsLayer,
-		this.flightMarkersLayer
+		this.L.blip,
+		this.L.track,
+		//this.flightPlanLayer,
+		this.L.awyline,
+		this.L.awylbl,
+		this.L.fplbl,
+		this.L.fpline
 		
 	];
 	return LAYERS;
 },
 
+get_store: function(){
+	
+	if(!this.xFlightsStore){
+		this.xFlightsStore = Ext.StoreMgr.lookup("flights_store");
+		this.xFlightsStore.on("load", function(sto, recs){
+			//console.log("YES");
+			this.flightLabelsLayer.removeAllFeatures();
+			this.flightMarkersLayer.removeAllFeatures();
+			var rec_len = recs.length;
+			for(var i=0; i< recs.length; i++){
+				var r = recs[i].data;
+				this.show_radar(r.callsign, r.lat, r.lon, r.hdg, r.altitude);
+			}
+		}, this);
+	}
+	return this.xFlightsStore;
+},
 	
 //===========================================================
 //== CONSTRUCT
 constructor: function(config) {
 	
-	console.log("constr", config.title, config.lat, config.lon);
+	//console.log("constr", config.title, config.lat, config.lon);
 	
 	var ll;
 	if(config.lat || config.lon){
@@ -271,144 +360,149 @@ constructor: function(config) {
 	//console.log(ll.xFlag, ll.x, ll.y);
 	config = Ext.apply({
 		
-		fgxType: "map_panel",
+		fgxType: "MapPanel",
 		iconCls: "icoMap",
 		frame: false, plain: true,border: 0,	bodyBorder: false,
 		
-		layout: "border",
-		items: [
-			{xtype: "gx_mappanel", region: "center",
-				frame: false, plain: true, border: 0,	bodyBorder: false,
-				map: this.get_map(),
-				center:  ll, 
-				zoom: config.zoom ? config.zoom : 5,
-				layers: this.get_layers(),
+		map: this.get_map(),
+		center:  ll, 
+		zoom: config.zoom ? config.zoom : 5,
+		layers: this.get_layers(),
+		xxxFlightsStore: this.get_store(),
+		tbar: [
 		
-				tbar: [
-				
-					//== Map Type  
-					{xtype: 'buttongroup', 
-						title: 'Base Layer',
-						columns: 1,
-						items: [
-							{text: "Light", iconCls: "icoYellow", width: 90, 
-								id: this.getId() + "map-base-button",
-								menu: [
-									{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
-										xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									},
-									{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
-										xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									},
-									{text: "Light", group: "map_core", checked: true,  xiconCls: "icoYellow",
-										xLayer: "Light", 
-										handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-									}
-								]
+			//== Map Type  
+			{xtype: 'buttongroup', 
+				title: 'Base Layer',
+				columns: 1,
+				items: [
+					{text: "Light", iconCls: "icoYellow", width: 90, 
+						id: this.getId() + "map-base-button",
+						menu: [
+							{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
+								xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							},
+							{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
+								xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							},
+							{text: "Light", group: "map_core", checked: true,  xiconCls: "icoYellow",
+								xLayer: "Light", 
+								handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							}
-						]   
-					},
-					
-					{xtype: 'buttongroup',
-						title: 'Navigation Aids',
-						columns: 5,
-						items: [
-							{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
-								toggleHandler: this.on_nav_toggled, scope: this,
-								menu: {
-									items: [
-										{text: "Show range - TODO", checked: false, disabled: true}
-									]
-								}
-							},
-							{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
-								toggleHandler: this.on_nav_toggled,  scope: this,
-								menu: {
-									items: [
-										{text: "Show range - TODO", checked: false, disabled: true}
-									]
-								}
-							},
-							{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-								toggleHandler: this.on_nav_toggled, scope: this
-							},
-							{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
-								toggleHandler: this.on_nav_toggled, scope: this
-							}
-							//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
-							//	toggleHandler: this.on_nav_toggled, scope: this,
-							//	hidden: true, id: "fgx-vortac"
-							//}
-						]   
-					},
-					{xtype: 'buttongroup', disabled: true,
-						title: 'Airports - TODO', 
-						columns: 6,
-						items: [
-							{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
-							{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
-							{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
-							//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
-							//	hidden: true, id: "fgx-mil-airports"},
-							{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
-							{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
-						]   
-					},
-					{xtype: 'buttongroup', 
-						title: 'Utils', 
-						columns: 2,
-						items: [
-							this.get_bookmark_button()
 						]
 					}
-				],
-				
-				//== Bottom Toolbar
-				bbar: [
-
-					{text: "Zoom", tooltip: "Click for default zoom",
-						zoom: 4, handler: this.on_zoom_to, scope: this
-					},
-					new GeoExt.ZoomSlider({
-						map: this.get_map(),
-						aggressive: true,                                                                                                                                                   
-						width: 150,
-						plugins: new GeoExt.ZoomSliderTip({
-							template: "<div>Zoom Level: {zoom}</div>"
-						})
-					}),
-					{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
-					{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
-					{text: "10", zoom: 14, handler: this.on_zoom_to, scope: this},
-					{text: "&nbsp;5&nbsp;", zoom: 16, handler: this.on_zoom_to, scope: this},
-					{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
-					"-",
-					{text: "Opacity", tooltip: "Click for default opacity"},
-					new GeoExt.LayerOpacitySlider({
-						layer: this.get_osm_lite(),
-						aggressive: true, 
-						width: 150,
-						isFormField: true,
-						inverse: true,
-						fieldLabel: "opacity",
-						ssrenderTo: "slider",
-						plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
-					}),
-					"->",
-					{text: "TODO: Lat: "}, this.lbl_lat(), 
-					{text: "Lon: "},  this.lbl_lon(),
-					"-",
-					{text: "DEV", scope: this,
-						handler: function(){
-							console.log(this.get_map().getExtent())
+				]   
+			},
+			
+			{xtype: 'buttongroup',
+				title: 'Navigation Aids',
+				columns: 5,
+				items: [
+					{xtype: "splitbutton", text: "VOR", pressed: false, enableToggle: true,  iconCls: "icoOff", navaid: "VOR", 
+						toggleHandler: this.on_nav_toggled, scope: this,
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
 						}
+					},
+					{xtype: "splitbutton", text: "DME", enableToggle: true,  iconCls: "icoOff", navaid: "DME", 
+						toggleHandler: this.on_nav_toggled,  scope: this,
+						menu: {
+							items: [
+								{text: "Show range - TODO", checked: false, disabled: true}
+							]
+						}
+					},
+					{text: "NDB&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+						toggleHandler: this.on_nav_toggled, scope: this
+					},
+					{text: "Fix&nbsp;&nbsp;&nbsp;", enableToggle: true, iconCls: "icoOff", navaid: "FIX", 
+						toggleHandler: this.on_nav_toggled, scope: this
 					}
-				
+					//{text: "VORTAC", enableToggle: true, iconCls: "icoOff", navaid: "NDB", 
+					//	toggleHandler: this.on_nav_toggled, scope: this,
+					//	hidden: true, id: "fgx-vortac"
+					//}
+				]   
+			},
+			{xtype: 'buttongroup', disabled: true,
+				title: 'Airports - TODO', 
+				columns: 6,
+				items: [
+					{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
+					{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+					{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+					//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
+					//	hidden: true, id: "fgx-mil-airports"},
+					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
+				]   
+			},
+			{xtype: 'buttongroup', 
+				title: 'Utils', 
+				columns: 2,
+				items: [
+					this.get_bookmark_button()
 				]
 			}
+		],
+		
+		//== Bottom Toolbar
+		bbar: [
+
+			{text: "Zoom", tooltip: "Click for default zoom",
+				zoom: 4, handler: this.on_zoom_to, scope: this
+			},
+			new GeoExt.ZoomSlider({
+				map: this.get_map(),
+				aggressive: true,                                                                                                                                                   
+				width: 100,
+				plugins: new GeoExt.ZoomSliderTip({
+					template: "<div>Zoom Level: {zoom}</div>"
+				})
+			}),
+			{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
+			{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
+			{text: "10", zoom: 14, handler: this.on_zoom_to, scope: this},
+			{text: "&nbsp;5&nbsp;", zoom: 16, handler: this.on_zoom_to, scope: this},
+			{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
+			"-",
+			{text: "Opacity", tooltip: "Click for default opacity"},
+			new GeoExt.LayerOpacitySlider({
+				layer: this.get_osm_lite(),
+				aggressive: true, 
+				width: 80,
+				isFormField: true,
+				inverse: true,
+				fieldLabel: "opacity",
+				ssrenderTo: "slider",
+				plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
+			}),
+			"-",
+			{text: "Graticule", iconCls: "icoOff", enableToggle: true, pressed: false,
+				scope: this, 
+				toggleHandler: function(butt, checked){
+					if(checked){
+						this.get_graticule().activate();
+					}else{
+						this.get_graticule().deactivate();
+					}
+				}
+			},
+			"-",
+			"->",
+			{text: "TODO: Lat: "}, this.lbl_lat(), 
+			{text: "Lon: "},  this.lbl_lon(),
+			"-",
+			{text: "DEV", scope: this,
+				handler: function(){
+					console.log(this.get_map().getExtent())
+				}
+			}
+		
 		]
-		
-		
+	
 	}, config);
 	FGx.MapPanel.superclass.constructor.call(this, config);
 
@@ -550,12 +644,194 @@ load_tracker: function(tracks){
 		strokeWidth: 2
 	};
 
-	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-	this.trackLinesLayer.addFeatures([lineFeature]);
+	//var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+	this.trackLinesLayer.addFeatures([ new OpenLayers.Feature.Vector(line, null, style) ]);
 	this.get_map().zoomToExtent(this.trackLinesLayer.getDataExtent()); 
 	this.get_map().zoomOut();
 	
-}
+},
 
+load_flight_plan: function(recs){
+	//console.log("FP", recs);
+	this.L.fpline.removeAllFeatures();
+	this.L.fplbl.removeAllFeatures();
+	
+	var lenny = recs.length;
+	var fpoints = [];
+	var idx_dic = {};
+	var navLabels = [];
+	for(var i = 0; i < lenny; i++){
+		var r = recs[i].data;
+		if(r.lat && r.lon){
+			var navPt = new OpenLayers.Geometry.Point(r.lon, r.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+			var lbl = new OpenLayers.Feature.Vector(navPt);
+			lbl.attributes = r;
+			navLabels.push(lbl);
+			//this.fpLabelsLayer.addFeatures( [lbl] );
+			var ki =  r.idx;
+			if(!idx_dic[ki]){
+				idx_dic[ki] = {count: 0, points: []}
+			}
+			idx_dic[ki].count =  idx_dic[ki].count + 1;
+			idx_dic[ki].points.push(r);
+		}
+	}
+	//console.log(idx_dic);
+	
+	//var lines
+	var line_points = [];
+	for(var r in idx_dic){
+		//console.log(r, idx_dic[r]);
+		if(idx_dic[r].count == 1){
+			line_points.push(idx_dic[r].points[0]);
+		}
+	}
+	
+	var trk_length = line_points.length;
+	var points = [];
+	//var points;
+	var p;
+	//console.log(line_points);
+	for(var i = 0; i < trk_length; i++){
+		p = line_points[i];
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon, p.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+			  );
+	}
+	var line = new OpenLayers.Geometry.LineString(points);
+
+	var style = { 
+		strokeColor: '#0000ff', 
+		strokeOpacity: 0.3,
+		strokeWidth: 1
+	};
+
+	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+	this.L.fpline.addFeatures([lineFeature]);
+	this.get_map().zoomToExtent(this.L.fpline.getDataExtent()); 
+	//this.get_map().zoomOut();
+	
+	this.L.fplbl.addFeatures( navLabels );
+	return line_points;
+	
+},
+show_blip: function(obj){
+	console.log("L=", this.L);
+	this.L.blip.removeAllFeatures();
+	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+
+	this.get_map().panTo( lonLat );
+	this.get_map().zoomTo( 10 );
+	
+	
+	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
+	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+		pt,
+			0, // wtf. .I want a larger cicle
+			20
+		);
+	var style = {
+		strokeColor: "red",
+		strokeOpacity: 1,
+		strokeWidth: 4,
+		fillColor: "yellow",
+		fillOpacity: 0.8 };
+	var feature = new OpenLayers.Feature.Vector(circle, null, style);
+	this.L.blip.addFeatures([feature]);
+},
+
+load_airway: function(recs){
+	//console.log("LOADAIRWAY", recs);
+	this.L.awyline.removeAllFeatures();
+	this.L.awylbl.removeAllFeatures();
+	
+	var lenny = recs.length;
+	var fpoints = [];
+	var idx_dic = {};
+	
+	var used = {};
+	for(var i = 0; i < lenny; i++){
+		var r = recs[i].data;
+			
+		
+			if( !used[r.ident_entry] ){
+				//console.log("not exists entry", r.ident_entry);
+				used[r.ident_entry] = {lat: r.lat1, lon: r.lon1, ident: r.ident_entry}
+			}
+			if( !used[r.ident_exit] ){
+				//console.log("not exists exit", r.ident_exit);
+				used[r.ident_exit] = {lat: r.lat2, lon: r.lon2, ident: r.ident_exit}
+			}
+			
+			
+		//if(r.lat && r.lon){
+			
+			//#navLabels.push(lbl);
+			//this.l.awylbl.addFeatures( [lbl] );
+			//var ki =  r.idx;
+			//if(!idx_dic[ki]){
+			//	idx_dic[ki] = {count: 0, points: []}
+			//}
+			//idx_dic[ki].count =  idx_dic[ki].count + 1;
+			//idx_dic[ki].points.push(r);
+		//}
+	}
+	//console.log("used=", used)
+	//var lblPoints = [];
+	var navLabels = [];
+	var r;
+	for(var ki in used){
+			r = used[ki]
+			//console.log(r.ident, r);
+			var navPt = new OpenLayers.Geometry.Point(r.lon, r.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+			var lbl = new OpenLayers.Feature.Vector(navPt);
+			lbl.attributes = r;
+			//navLabels.push(lbl);
+			this.L.awylbl.addFeatures( [lbl] );
+	}
+	
+	//console.log("navLabels=", navLabels)		
+	//var trk_length = line_points.length;
+	
+	//var points;
+	
+	
+	var style = { 
+		strokeColor: 'red', 
+		strokeOpacity: 0.4,
+		strokeWidth: 2
+	};
+	
+	var points = [];
+	var p;
+	//console.log(line_points);
+	for(var i =0; i < lenny; i++){
+		p = recs[i].data;
+		points = [];
+		//console.log(p.lat1, p.lon1, p.lat2, p.lon2);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon1, p.lat1
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon2, p.lat2
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		var line = new OpenLayers.Geometry.LineString(points);
+		var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+		this.L.awyline.addFeatures([lineFeature]);
+	}
+	
+	this.get_map().zoomToExtent(this.L.awyline.getDataExtent()); 
+	this.get_map().zoomOut();
+	
+	
+	
+},
 
 });

@@ -1,16 +1,59 @@
 
 from sqlalchemy import  Integer, String, Date, DateTime
-from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint
+from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint, LineString
 from geoalchemy.postgis import PGComparator
 from shapely import wkb
 
 from sqlalchemy import  Integer, String, Date, DateTime, Column
-
+from sqlalchemy.dialects.postgresql import ARRAY
 from fgx.model.meta import Sess, Base
 
 
 FGX_SRID = 3857
 
+##=======================================================
+"""
+class Airway(Base.data):
+	
+	__tablename__ = "airway"
+	
+	awy_pk = Column(Integer(), primary_key=True)
+	ident_entry = Column(String(4), index=True)
+	ident_exit = Column(String(4), index=True)
+	apt_iata = Column(String(8), index=True, nullable=True)
+	apt_name = Column(String(40), index=True, nullable=True)
+	apt_country = Column(String(2), nullable=True)
+	apt_type = Column(String(4), nullable=True)
+"""	
+##=======================================================
+class AirwaySegment(Base.data):
+	
+	LOW = 1
+	HIGHT = 2
+	
+	__tablename__ = "airway_segment"
+	
+	awy_seg_pk = Column(Integer(), primary_key=True)
+	name = Column(String(30), index=True)
+	
+	ident_entry = Column(String(10), index=True)
+	ident_exit = Column(String(10), index=True)
+	
+	wkb_geometry = GeometryColumn(LineString(srid=FGX_SRID), comparator=PGComparator, nullable=True)
+	
+	level = Column(Integer()) #, index=True)
+	fl_base = Column(Integer()) #, index=True)
+	fl_top = Column(Integer()) #, index=True)
+	
+
+	
+	airway = Column(String(255)) #, index=True)
+	search = Column(String(255)) #, index=True)
+	
+GeometryDDL(AirwaySegment.__table__)	
+	
+	
+	
 ##=======================================================
 class Airport(Base.data):
 	

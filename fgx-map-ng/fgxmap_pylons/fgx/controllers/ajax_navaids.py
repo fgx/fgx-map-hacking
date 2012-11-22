@@ -93,3 +93,60 @@ class AjaxNavaidsController(BaseController):
 		
 		return payload	
 		
+	@jsonify	
+	def process_flightplan(self):
+		payload = {'success': True}
+		
+		raw = h.v(request, "raw_text")
+		
+		waypoints = raw.split()
+		
+		flight_plan = []
+		idx = 0
+		uid = 0
+		for w in waypoints:
+			##obs = meta.Sess.data.query(NavAid).filter_by(ident=w).all()
+			points = navaids.search(ident=w, ifr=True)
+			idx += 1
+			if len(points) == 0:
+				flight_plan.append( {"wp": w, "idx": idx, "ident": w, "uid": uid, 'nav_type': None, 'lat': None, 'lon': None, 'freq': None} )
+				uid += 1
+			else:
+				for p  in points:
+					dic = {"wp": w, "idx": idx, "uid": uid}
+					dic.update(p)
+					flight_plan.append(dic)
+					uid += 1
+			
+		
+		
+		payload['waypoints'] = waypoints
+		payload['flight_plan'] = flight_plan
+	
+	
+		return payload	
+		
+	@jsonify	
+	def airways(self):
+		payload = {'success': True}
+		
+		search = h.v(request, "search")
+		
+		if search:
+			search = search.upper()
+		
+		payload["airways"] = navaids.airways(search=search)
+		
+		
+		return payload	
+		
+	
+	@jsonify	
+	def airway(self, awy):
+		payload = {'success': True}
+		
+		payload["segments"] = navaids.segments(awy)
+		
+		
+		return payload
+	

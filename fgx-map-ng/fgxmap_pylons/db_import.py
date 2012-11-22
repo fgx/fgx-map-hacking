@@ -15,7 +15,7 @@ from optparse import OptionParser
 
 
 
-x_files = ['fix', 'nav', 'ndb', 'vor', "apt"]
+x_files = ['fix', 'nav', 'ndb', 'vor', "apt", "awy"]
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
@@ -48,6 +48,11 @@ parser.add_option("-v", nargs=1,
 
 
 ############################################################
+
+if not opts.ini:
+	print "FATAL: Need -i foo.ini"
+	parser.print_help()
+	sys.exit(1)
 
 
 ## Check we have command
@@ -149,6 +154,11 @@ if command == "import":
 		from fgx.imports.xplane import nav
 		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/nav_split/3.dat"
 		nav.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose, clear="VOR")
+
+	elif x_file == "awy":
+		from fgx.imports.xplane import earth_awy
+		file_path = shell_config.config['temp_dir'] + "/unzipped/xplane/earth_awy.dat"
+		earth_awy.import_dat(file_path, dev_mode=opts.dev_mode, empty=opts.empty, verbose=opts.verbose, clear="VOR")
 		
 	
 	

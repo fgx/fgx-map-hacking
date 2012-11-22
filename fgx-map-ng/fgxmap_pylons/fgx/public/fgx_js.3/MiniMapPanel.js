@@ -3,6 +3,7 @@ Ext.namespace("FGx");
 
 FGx.MiniMapPanel = Ext.extend(GeoExt.MapPanel, {
 
+L:{},
 	
 //var self = this;
 get_display_projection: function(){
@@ -56,10 +57,11 @@ get_display_projection: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
-	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	
+	this.L.blip = new OpenLayers.Layer.Vector("Blip");
+	this.L.line = new OpenLayers.Layer.Vector("Line");
 	var arr = [];
-	arr.push(this.highLightMarkers);
+	arr.push(this.L.blip);
+	arr.push(this.L.line);
 	arr.push( 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ) );
 	return arr;
 },
@@ -81,15 +83,44 @@ show_blip: function(obj){
 	var style = {
 		strokeColor: "red",
 		strokeOpacity: 1,
-		strokeWidth: 8,
+		strokeWidth: 4,
 		fillColor: "yellow",
 		fillOpacity: 0.8 };
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	this.highLightMarkers.addFeatures([feature]);
+	this.L.blip.addFeatures([feature]);
 	
 	this.get_map().panTo( lonLat );
 },
-
+show_line: function(recs){
+	
+	this.L.line.removeAllFeatures();
+	var style = { 
+		strokeColor: 'red', 
+		strokeOpacity: 0.9,
+		strokeWidth: 2
+	};
+	var lenny = recs.length;
+	for(var i =0; i < lenny; i++){
+		p = recs[i].data;
+		points = [];
+		//console.log(p.lat1, p.lon1, p.lat2, p.lon2);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon1, p.lat1
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon2, p.lat2
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		var line = new OpenLayers.Geometry.LineString(points);
+		var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+		this.L.line.addFeatures([lineFeature]);
+	}
+	
+	this.get_map().panTo(this.L.line.getDataExtent().getCenterLonLat()); 
+	
+	//this.get_map().panTo( lonLat );
+},
 //===========================================================
 //== CONSTRUCT
 constructor: function(config) {
