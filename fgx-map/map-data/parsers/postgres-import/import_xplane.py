@@ -4,6 +4,7 @@
 # GPLv2 or later
 # Do not change or remove this copyright notice.
 #
+# Better remove the bad design with the globals instead. Thanks.
 
 import sys, time, datetime, csv, os, re, psycopg2, yaml, warnings
 
