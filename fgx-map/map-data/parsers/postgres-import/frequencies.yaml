@@ -1,0 +1,60 @@
+# frequencies
+frq_pk:
+    field: frq_pk
+    type: serial PRIMARY KEY
+    size: 
+
+apt_ident:
+    field: apt_ident
+    type: varchar
+    size: 8
+
+frq_type:
+    field: frq_type
+    type: varchar
+    size: 255
+
+frq_freq:
+    field: frq_freq
+    type: varchar
+    size: 32
+
+frq_freq_nice:
+    field: frq_freq_nice
+    type: varchar
+    size: 32
+
+frq_description:
+    field: frq_description
+    type: varchar
+    size: 255
+
+frq_range_km:
+    field: frq_range_km
+    type: varchar
+    size: 32
+
+frq_range_nm:
+    field: frq_range_nm
+    type: varchar
+    size: 32
+
+frq_center:
+    field: frq_center
+    type: geometry(Point,3857)
+    size:
+
+frq_center_lon:
+    field: frq_center_lon
+    type: varchar
+    size: 32
+
+frq_center_lat:
+    field: frq_center_lat
+    type: varchar
+    size: 32
+
+frq_xplane_code:
+    field: frq_xplane_code
+    type: varchar
+    size: 8

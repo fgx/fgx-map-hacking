@@ -33,10 +33,6 @@ conf = open('database.yaml')
 confMap = yaml.load(conf)
 conf.close()
 
-fields = open('airport.yaml')
-airportMap = yaml.load(fields)
-fields.close()
-
 connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
 
 conn = psycopg2.connect(connectstring)
@@ -122,6 +118,18 @@ def get_authority(bcn_type):
 			apt_authority = "clo"
 		else:
 			apt_authority = "civ"
+
+def get_freqline(line):
+	global frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code
+	frq_xplane_code = line[0:2]
+	frq_freq = line[3:8]
+	frq_freq_nice = str(round(float(frq_freq)/100, 3))
+	frq_description_end = len(line)
+	frq_description = line[9:frq_description_end-2]
+	frq_range_nm = "50"
+	frq_range_km = "92.6"
+	
+	return frq_xplane_code,frq_freq,frq_freq_nice,frq_description,frq_range_nm,frq_range_km
 		
 def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
@@ -258,6 +266,22 @@ def insert_helipad(apt_ident,\
 	cur.execute(sql, params)
 	
 	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","	
+
+def insert_freq(apt_ident,\
+				frq_type,\
+				frq_freq,\
+				frq_freq_nice,\
+				frq_description,\
+				frq_range_km,\
+				frq_range_nm,\
+				frq_xplane_code):
+	
+	sql = '''
+		INSERT INTO frequencies (apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'''
+	params = [apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code]
+	
+	cur.execute(sql, params)
 
 def readxplane():
 	reader = open(inputfile, 'r')
@@ -481,7 +505,7 @@ def readxplane():
 		# HELIPADS, we need it for heliport calculation, i.e. centerpoint
 		# but we dont want to take this points into account for regular airports
 		# so we look out for (H)
-		if line.startswith("102 ") and apt_name_ascii.startswith("[H]"):
+		if line.startswith("102 "):
 		
 			pad_xplane_code = line[0:3]
 			pad_ident = str(line[4:6])
@@ -542,10 +566,54 @@ def readxplane():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, pad_len_m, pad_app_lighting)
+			
+			# We only collect for the heliports, there we need the points for the center, NOT for the airports
+			if apt_name_ascii.startswith("[H]"):
+				collecting(points, pad_len_m, pad_app_lighting)
 			
 			insert_helipad(apt_ident, pad_ident, pad_lon, pad_lat, pad_lon_end, pad_lat_end, pad_hdg, pad_hdg_end, pad_len_m, pad_len_ft, pad_width_m, pad_width_ft, pad_surface, pad_marking, pad_shoulder, pad_edge_lighting, pad_app_lighting, pad_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
+			
+		
+		# ATC frequencies
+		# Calculating range later ?
+		# NM factor = 1.852
+		# Standard range = 50 nm = 92,6 km
+		
+		if line.startswith("50 "):
+			frq_type = "AWOS, ASOS or ATIS"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("51 "):
+			frq_type = "Unicom (US), CTAF (US), Radio (UK)"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("52 "):
+			frq_type = "Clearance Delivery"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("53 "):
+			frq_type = "Ground"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("54 "):
+			frq_type = "Tower"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("55 "):
+			frq_type = "Approach"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
+			
+		if line.startswith("56 "):
+			frq_type = "Departure"
+			get_freqline(line)
+			insert_freq(apt_ident, frq_type, frq_freq, frq_freq_nice, frq_description, frq_range_km, frq_range_nm, frq_xplane_code)
 			
 		# One green and two white flashes means military airport - no civil aircraft allowed.
 		# xplane data beacon type code 4: military
