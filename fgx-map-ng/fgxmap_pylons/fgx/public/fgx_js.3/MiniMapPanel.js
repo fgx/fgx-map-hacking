@@ -91,30 +91,35 @@ show_blip: function(obj){
 	
 	this.get_map().panTo( lonLat );
 },
-show_line: function(obj){
+show_line: function(recs){
 	
-	this.highLightMarkers.removeAllFeatures();
-	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
-				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-		
-	
-	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
-				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
-	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
-		pt,
-			0, // wtf. .I want a larger cicle
-			20
+	this.L.line.removeAllFeatures();
+	var style = { 
+		strokeColor: 'red', 
+		strokeOpacity: 0.9,
+		strokeWidth: 2
+	};
+	var lenny = recs.length;
+	for(var i =0; i < lenny; i++){
+		p = recs[i].data;
+		points = [];
+		//console.log(p.lat1, p.lon1, p.lat2, p.lon2);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon1, p.lat1
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
 		);
-	var style = {
-		strokeColor: "red",
-		strokeOpacity: 1,
-		strokeWidth: 4,
-		fillColor: "yellow",
-		fillOpacity: 0.8 };
-	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	this.L.blip.addFeatures([feature]);
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon2, p.lat2
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+		);
+		var line = new OpenLayers.Geometry.LineString(points);
+		var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+		this.L.line.addFeatures([lineFeature]);
+	}
 	
-	this.get_map().panTo( lonLat );
+	this.get_map().panTo(this.L.line.getDataExtent().getCenterLonLat()); 
+	
+	//this.get_map().panTo( lonLat );
 },
 //===========================================================
 //== CONSTRUCT

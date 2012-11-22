@@ -693,7 +693,7 @@ load_flight_plan: function(recs){
 	//var points;
 	var p;
 	//console.log(line_points);
-	for(var i =0; i < trk_length; i++){
+	for(var i = 0; i < trk_length; i++){
 		p = line_points[i];
 		points.push(
 				new OpenLayers.Geometry.Point(p.lon, p.lat
@@ -714,6 +714,7 @@ load_flight_plan: function(recs){
 	//this.get_map().zoomOut();
 	
 	this.L.fplbl.addFeatures( navLabels );
+	return line_points;
 	
 },
 show_blip: function(obj){
@@ -744,7 +745,7 @@ show_blip: function(obj){
 },
 
 load_airway: function(recs){
-	console.log("LOADAIRWAY", recs);
+	//console.log("LOADAIRWAY", recs);
 	this.L.awyline.removeAllFeatures();
 	this.L.awylbl.removeAllFeatures();
 	
@@ -758,11 +759,11 @@ load_airway: function(recs){
 			
 		
 			if( !used[r.ident_entry] ){
-				console.log("exists entry", r.ident_entry);
+				//console.log("not exists entry", r.ident_entry);
 				used[r.ident_entry] = {lat: r.lat1, lon: r.lon1, ident: r.ident_entry}
 			}
 			if( !used[r.ident_exit] ){
-				console.log("exists exit", r.ident_exit);
+				//console.log("not exists exit", r.ident_exit);
 				used[r.ident_exit] = {lat: r.lat2, lon: r.lon2, ident: r.ident_exit}
 			}
 			
@@ -779,13 +780,13 @@ load_airway: function(recs){
 			//idx_dic[ki].points.push(r);
 		//}
 	}
-	console.log("used=", used)
+	//console.log("used=", used)
 	//var lblPoints = [];
 	var navLabels = [];
 	var r;
 	for(var ki in used){
 			r = used[ki]
-			console.log(r.ident, r);
+			//console.log(r.ident, r);
 			var navPt = new OpenLayers.Geometry.Point(r.lon, r.lat
 					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 			var lbl = new OpenLayers.Feature.Vector(navPt);
@@ -827,7 +828,7 @@ load_airway: function(recs){
 	}
 	
 	this.get_map().zoomToExtent(this.L.awyline.getDataExtent()); 
-	//this.get_map().zoomOut();
+	this.get_map().zoomOut();
 	
 	
 	

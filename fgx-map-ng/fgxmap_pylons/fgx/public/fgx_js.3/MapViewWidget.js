@@ -108,7 +108,10 @@ get_awy_widget: function(){
 			//	var rec = recs[i];
 			//	this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), //rec.get("alt_ft") );
 			//};
+			
 			this.get_map_panel().load_airway(recs);
+			//console.log("line_pots", line_points);
+			this.get_mini_map().show_line(recs);
 		}, this);
 				
 		this.xAwyWidget.on("GOTO", function(obj){
