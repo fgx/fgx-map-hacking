@@ -372,7 +372,7 @@ constructor: function(config) {
 		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
 		ll.xFlag = "Default"
 	}
-	//console.log(ll.xFlag, ll.x, ll.y);
+	console.log(ll.xFlag, ll.x, ll.y, config);
 	config = Ext.apply({
 		
 		fgxType: "MapPanel",
@@ -741,10 +741,11 @@ load_flight_plan: function(recs){
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
 	this.L.fpLine.addFeatures([lineFeature]);
+	this.L.fpLbl.addFeatures( navLabels );
 	this.get_map().zoomToExtent(this.L.fpLbl.getDataExtent()); 
 	//this.get_map().zoomOut();
 	
-	this.L.fpLbl.addFeatures( navLabels );
+	
 	return line_points;
 	
 },

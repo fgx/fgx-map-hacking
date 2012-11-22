@@ -157,7 +157,7 @@ constructor: function(config) {
 		],
 		items: [
 			this.grid_airways(),
-			this.grid_segments(),
+			this.grid_segments()
 		]
 	}, config);
 	

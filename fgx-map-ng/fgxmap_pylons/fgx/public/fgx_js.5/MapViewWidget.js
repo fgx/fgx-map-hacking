@@ -156,7 +156,7 @@ constructor: function(config) {
 						plain: true,
 						border: 0,
 						
-						activeItem: 0,
+						activeItem: 2,
 						items: [
 							this.get_airports_grid(),
 							this.get_nav_widget(),
