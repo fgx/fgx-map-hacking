@@ -71,8 +71,8 @@ get_flight_plan_grid: function(){
 		//this.xFlightPlanGrid.on("rowclick", function(grid, rowIdx, e){
 		//	var rec = grid.getStore().getAt(rowIdx);
 		this.xFlightPlanGrid.getStore().on("load", function(store, recs){
-			console.log(recs);
-			var recs_length = recs.length;
+			//console.log(recs);
+			/* var recs_length = recs.length;
 			
 			var fpoints = [];
 			for(var i =0; i < recs_length; i++){
@@ -80,12 +80,21 @@ get_flight_plan_grid: function(){
 				if(r.lat && r.lon){
 					fpoints.push(r);
 				}
-			}
-			this.get_map_panel().load_flightplan(fpoints);
+			}*/
+			this.get_map_panel().load_flight_plan(recs);
 		}, this);
 			
 	}
 	return this.xFlightPlanGrid;
+},
+
+get_map_panel: function(){
+	if(!this.xMapPanel){
+		this.xMapPanel = new FGx.MapPanel({
+			region: "center",
+		});
+	}
+	return this.xMapPanel;
 },
 
 //===========================================================
@@ -118,7 +127,7 @@ constructor: function(config) {
 								success: function(response, opts) {
 									var data = Ext.decode(response.responseText);
 									//this.get_map_panel().load_tracker(obj.tracks);
-									console.log(data);
+									//console.log(data);
 									this.get_flight_plan_grid().getStore().loadData(data)
 									
 								},
@@ -130,7 +139,7 @@ constructor: function(config) {
 					}
 				]
 			},
-			new FGx.MapPanel({region: "center"}),
+			this.get_map_panel(),
 			this.get_flight_plan_grid()
 		
 		]

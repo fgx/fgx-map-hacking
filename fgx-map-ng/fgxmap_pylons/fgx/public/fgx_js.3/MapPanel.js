@@ -115,8 +115,35 @@ get_bookmark_button: function(){
 // Create the Layers
 get_layers: function(){
 	this.highLightMarkers = new OpenLayers.Layer.Vector("HighLight Markers");
-	this.trackLinesLayer = new OpenLayers.Layer.Vector("Track Lines Layer");		
-
+	this.trackLinesLayer = new OpenLayers.Layer.Vector("Track Lines Layer");	
+	this.fpLineLayer = new OpenLayers.Layer.Vector("Flight Plan Line");
+	this.fpLabelsLayer = new OpenLayers.Layer.Vector("Flight Plan Labels", 
+			{
+                styleMap: new OpenLayers.StyleMap({'default':{
+                    strokeColor: "black",
+                    strokeOpacity: 1,
+                    strokeWidth: 3,
+                    fillColor: "#FF5500",
+                    fillOpacity: 0.5,
+                    pointRadius: 6,
+                    pointerEvents: "visiblePainted",
+                    // label with \n linebreaks
+                    label : "${ident}",
+                    
+                    fontColor: "red",
+                    fontSize: "12px",
+                    fontFamily: "Courier New, monospace",
+                    fontWeight: "bold",
+                    labelAlign: "${align}",
+                    labelXOffset: "${xOffset}",
+                    labelYOffset: "${yOffset}",
+                    labelOutlineColor: "white",
+                    labelOutlineWidth: 3
+                }})
+                //renderers: renderer
+            }
+	);
+	
 	this.flightMarkersLayer = new OpenLayers.Layer.Vector(
 		"Radar Markers", 
 		{styleMap: new OpenLayers.StyleMap({
@@ -260,8 +287,9 @@ get_layers: function(){
 		),
 		this.highLightMarkers,
 		this.trackLinesLayer,
-		this.flightLabelsLayer,
-		this.flightMarkersLayer
+		//this.flightPlanLayer,
+		this.fpLabelsLayer,
+		this.fpLineLayer
 		
 	];
 	return LAYERS;
@@ -587,9 +615,53 @@ load_tracker: function(tracks){
 		strokeWidth: 2
 	};
 
-	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-	this.trackLinesLayer.addFeatures([lineFeature]);
+	//var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+	this.trackLinesLayer.addFeatures([ new OpenLayers.Feature.Vector(line, null, style) ]);
 	this.get_map().zoomToExtent(this.trackLinesLayer.getDataExtent()); 
+	this.get_map().zoomOut();
+	
+},
+
+load_flight_plan: function(recs){
+	console.log("FP", recs);
+	this.fpLineLayer.removeAllFeatures();
+	this.fpLabelsLayer.removeAllFeatures();
+	
+	var lenny = recs.length;
+	var fpoints = [];
+	for(var i = 0; i < lenny; i++){
+		var r = recs[i].data;
+		if(r.lat && r.lon){
+			var navPt = new OpenLayers.Geometry.Point(r.lon, r.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+			var lbl = new OpenLayers.Feature.Vector(navPt);
+			lbl.attributes = r;
+			this.fpLabelsLayer.addFeatures( [lbl] );
+		}
+	}
+	
+	var trk_length = fp.length;
+	var points = [];
+	//var points;
+	var p;
+	for(var i =0; i < trk_length; i++){
+		p = fp[i];
+		points.push(
+				new OpenLayers.Geometry.Point(p.lon, p.lat
+					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
+			  );
+	}
+	var line = new OpenLayers.Geometry.LineString(points);
+
+	var style = { 
+		strokeColor: '#0000ff', 
+		strokeOpacity: 0.5,
+		strokeWidth: 2
+	};
+
+	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
+	this.fpLineLayer.addFeatures([lineFeature]);
+	this.get_map().zoomToExtent(this.fpLineLayer.getDataExtent()); 
 	this.get_map().zoomOut();
 	
 }
