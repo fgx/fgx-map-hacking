@@ -623,12 +623,13 @@ load_tracker: function(tracks){
 },
 
 load_flight_plan: function(recs){
-	console.log("FP", recs);
+	//console.log("FP", recs);
 	this.fpLineLayer.removeAllFeatures();
 	this.fpLabelsLayer.removeAllFeatures();
 	
 	var lenny = recs.length;
 	var fpoints = [];
+	var idx_dic = {};
 	for(var i = 0; i < lenny; i++){
 		var r = recs[i].data;
 		if(r.lat && r.lon){
@@ -637,15 +638,32 @@ load_flight_plan: function(recs){
 			var lbl = new OpenLayers.Feature.Vector(navPt);
 			lbl.attributes = r;
 			this.fpLabelsLayer.addFeatures( [lbl] );
+			var ki =  r.idx;
+			if(!idx_dic[ki]){
+				idx_dic[ki] = {count: 0, points: []}
+			}
+			idx_dic[ki].count =  idx_dic[ki].count + 1;
+			idx_dic[ki].points.push(r);
+		}
+	}
+	console.log(idx_dic);
+	
+	//var lines
+	var line_points = [];
+	for(var r in idx_dic){
+		//console.log(r, idx_dic[r]);
+		if(idx_dic[r].count == 1){
+			line_points.push(idx_dic[r].points[0]);
 		}
 	}
 	
-	var trk_length = fp.length;
+	var trk_length = line_points.length;
 	var points = [];
 	//var points;
 	var p;
+	//console.log(line_points);
 	for(var i =0; i < trk_length; i++){
-		p = fp[i];
+		p = line_points[i];
 		points.push(
 				new OpenLayers.Geometry.Point(p.lon, p.lat
 					).transform(this.get_display_projection(),  this.get_map().getProjectionObject() )
@@ -662,7 +680,7 @@ load_flight_plan: function(recs){
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
 	this.fpLineLayer.addFeatures([lineFeature]);
 	this.get_map().zoomToExtent(this.fpLineLayer.getDataExtent()); 
-	this.get_map().zoomOut();
+	//this.get_map().zoomOut();
 	
 }
 
