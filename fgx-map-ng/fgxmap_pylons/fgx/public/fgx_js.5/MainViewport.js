@@ -154,7 +154,7 @@ on_open_map:  function(title, lat, lon, zoom, closable){
 	//console.log("on_open_map", title, lat, lon, zoom, closable);
 	var newMap = new FGx.MapViewWidget({
 		title: title, closable: closable, 
-		flightsStore: this.xFlightsStore,
+		//sflightsStore: this.xFlightsStore,
 		lat: lat, lon: lon, zoom: zoom
 	});
 	this.get_tab_panel().add(newMap);

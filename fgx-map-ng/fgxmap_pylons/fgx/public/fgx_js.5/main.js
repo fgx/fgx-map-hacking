@@ -3,7 +3,7 @@ Ext.QuickTips.init();
 Ext.Ajax.disableCaching = false;
 
 
-var RESOLUTIONS = [
+var DEADRESOLUTIONS = [
     156543.03390625, 
     78271.516953125, 
     39135.7584765625, 

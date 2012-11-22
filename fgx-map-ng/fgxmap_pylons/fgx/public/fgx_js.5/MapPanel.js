@@ -41,7 +41,28 @@ get_map: function(){
 			// by http://yoururltothemap.org/tilecache.py/1.0.0/layername/ etc.
 			// (This would not be necessary for 4326/900913 because this values are widely spread in
 			// openlayer/osm/google threads, you will find the resolutions there)
-			resolutions: RESOLUTIONS,
+			resolutions: [
+				156543.03390625, 
+				78271.516953125, 
+				39135.7584765625, 
+				19567.87923828125, 
+				9783.939619140625, 
+				4891.9698095703125, 
+				2445.9849047851562, 
+				1222.9924523925781, 
+				611.4962261962891, 
+				305.74811309814453, 
+				152.87405654907226, 
+				76.43702827453613, 
+				38.218514137268066, 
+				19.109257068634033, 
+				9.554628534317017, 
+				4.777314267158508, 
+				2.388657133579254, 
+				1.194328566789627, 
+				0.5971642833948135, 
+				0.29858214169740677
+			],
 			
 			// I set a max and min resolution, means setting available zoomlevels by default
 			maxResolution: 156543.03390624999883584678,
@@ -87,14 +108,6 @@ lbl_lon: function(){
 
 
 
-get_osm_lite: function(){
-	if(!this.L.lite){
-		this.L.lite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
-		this.L.lite.setOpacity(0.4);	
-	}
-	return this.L.lite;
-},
-
 get_bookmark_button: function(){
 		if(!this.xBookMarkButton){
 		this.xBookMarkButton = new Ext.Button({
@@ -115,6 +128,10 @@ get_bookmark_button: function(){
 //======================================================
 // Create the Layers
 get_layers: function(){
+	this.L = {};
+	this.L.lite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
+	this.L.lite.setOpacity(0.4);	
+		
 	this.L.blip = new OpenLayers.Layer.Vector("HighLight Markers");
 	this.L.track = new OpenLayers.Layer.Vector("Track Lines Layer");	
 	this.L.fpLine = new OpenLayers.Layer.Vector("Flight Plan Line");
@@ -303,7 +320,7 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		/// Underlays
-		this.get_osm_lite(),
+		this.L.lite,
 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
 		
 		new OpenLayers.Layer.WMS(
@@ -366,7 +383,7 @@ constructor: function(config) {
 		center:  ll, 
 		zoom: config.zoom ? config.zoom : 5,
 		layers: this.get_layers(),
-		xxxFlightsStore: this.get_store(),
+		xFlightsStore: this.get_store(),
 		tbar: [
 		
 			//== Map Type  
@@ -468,7 +485,7 @@ constructor: function(config) {
 			"-",
 			{text: "Opacity", tooltip: "Click for default opacity"},
 			new GeoExt.LayerOpacitySlider({
-				layer: this.get_osm_lite(),
+				//l//ayer: this.L.lite(),
 				aggressive: true, 
 				width: 80,
 				isFormField: true,

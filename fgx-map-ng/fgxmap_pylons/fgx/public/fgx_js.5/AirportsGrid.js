@@ -1,43 +1,89 @@
 
 Ext.namespace("FGx");
 
-FGx.AirportsGrid =  Ext.extend(Ext.grid.GridPanel, {
+FGx.AirportsGrid =  Ext.extend(Ext.Panel, {
 
 //===========================================================
 //== Grid
+get_airports_grid: function(){
+	if(!this.xAirportsGrid){
+		this.xAirportsGrid = new Ext.grid.GridPanel({
+			region: "center",
+			hideHeader: true,
+			autoScroll: true,
+			autoWidth: true,
+			enableHdMenu: false,
+			viewConfig: {
+				emptyText: 'No airports in view', 
+				deferEmptyText: false,
+				forceFit: true
+			}, 
+			
+			stripeRows: true,
+			store: this.get_store(),
+			loadMask: true,
+			sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+			columns: [ 
+				{header: 'Code',  dataIndex:'apt_ident', sortable: true, 
+					width: 60
+				},
+				
+				{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
+
+				}
+				
+				//{header: 'Authority', dataIndex:'apt_authority', sortable: true, align: 'right'
+				//},
+				//{header: 'Size', dataIndex:'apt_size', sortable: true, align: 'right'
+				//}
+			],
+
+			
+			/*
+			bbar: [
+				new Ext.PagingToolbar({
+					store: this.get_store(),
+					displayInfo: false,
+					pageSize: 500,
+					prependButtons: false
+				})
+			] */
+			
+		});
+	}
+	return this.xAirportsGrid;
+
+},
+
+get_runways_tree: function(){
+	if(!this.xRunwaysTree){
+		this.xRunwaysTree = new Ext.tree.TreePanel({
+			region: "east",
+			width: 200,
+			  text: 'Ext JS', 
+                draggable:false, // disable root node dragging
+				root: {
+					nodeType: 'async',
+					text: 'Ext JS',
+					draggable: false,
+					id: 'source'	
+				}
+		});
+	}
+	return this.xRunwaysTree;
+},
+
 constructor: function(config) {
 	config = Ext.apply({
-		title: 'Airports',
-		iconCls: 'icoAirport',
-		autoScroll: true,
-		autoWidth: true,
-		enableHdMenu: false,
-		viewConfig: {
-			emptyText: 'No airports in view', 
-			deferEmptyText: false,
-			forceFit: true
-		}, 
-		stripeRows: true,
-		store: this.get_store(),
-		loadMask: true,
-		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
-		columns: [ 
-			{header: 'Code',  dataIndex:'apt_ident', sortable: true, 
-				 width: 50
-			},
-			
-			{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
-
-			},
-			
-			{header: 'Authority', dataIndex:'apt_authority', sortable: true, align: 'right'
-			},
-			{header: 'Size', dataIndex:'apt_size', sortable: true, align: 'right'
-			}
+		iconCls: "icoAirport",
+		title: "Airports",
+		layout: "border",
+		items: [
+			this.get_airports_grid(),
+			this.get_runways_tree()		   
 		],
-
 		tbar: [	
-			{xtype: 'buttongroup', hidden: config.xHidden,
+			{xtype: 'buttongroup', 
 				title: 'Search Code',
 				columns: 2,
 				items: [
@@ -50,7 +96,7 @@ constructor: function(config) {
 					this.get_apt_code_search_text()
 				]
 			},
-			{xtype: 'buttongroup', hidden: config.xHidden,
+			{xtype: 'buttongroup', 
 				title: 'Search Name',
 				columns: 2,
 				items: [
@@ -64,15 +110,6 @@ constructor: function(config) {
 				]
 			}
 		]
-		/*
-		bbar: [
-			new Ext.PagingToolbar({
-				store: this.get_store(),
-				displayInfo: false,
-				pageSize: 500,
-				prependButtons: false
-			})
-		] */
 		
 	}, config);
 	FGx.AirportsGrid.superclass.constructor.call(this, config);
