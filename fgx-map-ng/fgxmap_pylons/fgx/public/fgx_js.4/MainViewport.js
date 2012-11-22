@@ -121,7 +121,7 @@ on_flights_widget: function(butt){
 		});
 		this.get_tab_panel().add(this.widgets.FlightsViewWidget);
 	}
-	console.log(this.widgets);
+	
 	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
 },
 

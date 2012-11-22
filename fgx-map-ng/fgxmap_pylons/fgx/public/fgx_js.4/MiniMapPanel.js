@@ -68,7 +68,7 @@ get_layers: function(){
 	
 show_blip: function(obj){
 	
-	this.highLightMarkers.removeAllFeatures();
+	this.L.blip.removeAllFeatures();
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 		

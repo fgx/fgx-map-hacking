@@ -45,7 +45,7 @@ constructor: function(config) {
 			},
 			//{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
 			//	renderer: this.render_altitude_trend},
-			{header: 'Hdg', dataIndex:'heading', sortable: true, align: 'right', width: 50,
+			{header: 'Hdg', dataIndex:'hdg', sortable: true, align: 'right', width: 50,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return v; //Ext.util.Format.number(v, '0');
 				}
@@ -72,7 +72,7 @@ constructor: function(config) {
 		],		
 		bbar: [
 			new Ext.PagingToolbar({
-				//frame: false, plain: true, 
+				hidden: config.xHidden,
 				store: Ext.StoreMgr.lookup("flights_store"),
 				displayInfo: false,
 				pageSize: 500,

@@ -55,26 +55,28 @@ get_airports_grid: function(){
 get_flights_grid: function(sto){
 	if(!this.xFlightsGrid){
 		this.xFlightsGrid =  new FGx.FlightsGrid({
-			//flightsStore: Ext.StoreMgr.lookup("flights_store"), 
+			flightsStore: Ext.StoreMgr.lookup("flights_store"), 
 			title: "Flights", xHidden: true
 		});
 		this.xFlightsGrid.getStore().on("load", function(store, recs, idx){
-			this.flightLabelsLayer.removeAllFeatures();
-			this.flightMarkersLayer.removeAllFeatures();
-			var recs_length = recs.length;
-			for(var i = 0; i < recs_length; i++){
-				var rec = recs[i];
-				this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
-			};
+			this.get_map_panel().update_radar(recs);
 		}, this);
-		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
-
+		this.xFlightsGrid.on("rowclick", function(grid, idx, e){
+			//console.log("rowclick");
 			var rec = grid.getStore().getAt(idx);
-			var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
-				).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+			//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
+			//	).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	
-			this.get_map().setCenter( lonLat );
-			this.get_map().zoomTo( 10 );
+			this.get_mini_map().show_blip(rec.data);
+			//this.get_map().zoomTo( 10 );
+		}, this); 
+		this.xFlightsGrid.on("rowdblclick", function(grid, idx, e){
+			//console.log("rowdblclick");
+			var rec = grid.getStore().getAt(idx);
+			//var rec = grid.getStore().getAt(idx);
+			
+			this.get_map_panel().pan_to( rec.data, 10 );
+			//this.get_map().zoomTo( 10 );
 		}, this);  
 				
 	}
@@ -144,6 +146,11 @@ constructor: function(config) {
 			this.get_map_panel(),	
 				
 			{region: 'east', width: 400, 
+				collapsible: true,
+				collapsed: false,
+				frame: false,
+				plain: true,
+				border: 0,
 				layout: "border",
 				items: [
 					{title: "FGx Map - Next Gen",
@@ -151,16 +158,13 @@ constructor: function(config) {
 						frame: false,
 						plain: true,
 						border: 0,
-						collapsible: true,
-						collapsed: false,
+						
 						activeItem: 0,
 						items: [
-							this.get_awy_widget(),
+							this.get_flights_grid(),
 							this.get_nav_widget(),
-							this.get_airports_grid(),
-							
-							this.get_flights_grid()
-							
+							this.get_awy_widget(),
+							this.get_airports_grid()
 						]
 					},
 					this.get_mini_map()
@@ -177,7 +181,7 @@ constructor: function(config) {
 
 
 
-init: function(){
+DEADinit: function(){
 
 	
 	//this.get_map().addLayer( this.highLightMarkers );

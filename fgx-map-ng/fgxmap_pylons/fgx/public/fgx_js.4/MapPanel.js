@@ -117,8 +117,8 @@ get_bookmark_button: function(){
 get_layers: function(){
 	this.L.blip = new OpenLayers.Layer.Vector("HighLight Markers");
 	this.L.track = new OpenLayers.Layer.Vector("Track Lines Layer");	
-	this.L.fpline = new OpenLayers.Layer.Vector("Flight Plan Line");
-	this.L.fplbl = new OpenLayers.Layer.Vector("Flight Plan Labels", 
+	this.L.fpLine = new OpenLayers.Layer.Vector("Flight Plan Line");
+	this.L.fpLbl = new OpenLayers.Layer.Vector("Flight Plan Labels", 
 			{
                 styleMap: new OpenLayers.StyleMap({'default':{
                     strokeColor: "black",
@@ -144,8 +144,8 @@ get_layers: function(){
                 //renderers: renderer
             }
 	);
-	this.L.awyline = new OpenLayers.Layer.Vector("Airway Line");
-	this.L.awylbl = new OpenLayers.Layer.Vector("Airway Labels", 
+	this.L.awyLine = new OpenLayers.Layer.Vector("Airway Line");
+	this.L.awyLbl = new OpenLayers.Layer.Vector("Airway Labels", 
 			{
                 styleMap: new OpenLayers.StyleMap({'default':{
                     strokeColor: "black",
@@ -190,7 +190,7 @@ get_layers: function(){
 					fontSize: "12px",
 					fontFamily: "Helvetica, Arial, sans-serif",
 					fontWeight: "bold",
-					rotation : "${planerotation}",
+					rotation : "${hdg}",
 				},
 				"select": {
 					fillColor: "black",
@@ -202,7 +202,7 @@ get_layers: function(){
 		}, {  visibility: true}
 	)
 
-	this.L.radarLabel =  new OpenLayers.Layer.Vector(
+	this.L.radarLbl =  new OpenLayers.Layer.Vector(
 		"Radar Label", 
 		{
 			styleMap:  new OpenLayers.StyleMap({
@@ -314,11 +314,9 @@ get_layers: function(){
 		),
 		this.L.blip,
 		this.L.track,
-		//this.flightPlanLayer,
-		this.L.awyline,
-		this.L.awylbl,
-		this.L.fplbl,
-		this.L.fpline
+		this.L.radarLbl, this.L.radarBlip, 
+		this.L.awyLbl, this.L.awyLine, 
+		this.L.fpLbl, this.L.fpLine
 		
 	];
 	return LAYERS;
@@ -330,10 +328,10 @@ get_store: function(){
 		this.xFlightsStore = Ext.StoreMgr.lookup("flights_store");
 		this.xFlightsStore.on("load", function(sto, recs){
 			//console.log("YES");
-			this.flightLabelsLayer.removeAllFeatures();
-			this.flightMarkersLayer.removeAllFeatures();
+			this.L.radarBlip.removeAllFeatures();
+			this.L.radarLbl.removeAllFeatures();
 			var rec_len = recs.length;
-			for(var i=0; i< recs.length; i++){
+			for(var i=0; i < rec_len; i++){
 				var r = recs[i].data;
 				this.show_radar(r.callsign, r.lat, r.lon, r.hdg, r.altitude);
 			}
@@ -547,12 +545,28 @@ on_zoom_to: function(butt){
 	this.get_map().zoomTo( butt.zoom );
 },
 
-init: function(){
+DEADinit: function(){
 
 	
 },
 
+pan_to: function(obj, zoom){
+	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
+	
+	this.get_map().setCenter(lonLat, zoom);
+	
+},
 
+update_radar: function(recs){
+	this.L.radarBlip.removeAllFeatures();
+	this.L.radarLbl.removeAllFeatures();
+	var recs_length = recs.length;
+	for(var i = 0; i < recs_length; i++){
+		var rec = recs[i];
+		this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("hdg"), rec.get("alt_ft") );
+	};
+},
 
 //==========================================================
 // Shows aircraft on the RADAR map, with callsign (two features, poor openlayer)
@@ -578,10 +592,10 @@ show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 
 	// Add Image
 	var imgFeat = new OpenLayers.Feature.Vector(pointImg, {
-				planerotation: mheading
+				hdg: mheading
 				}); 
 	imgFeat._callsign = mcallsign;
-	this.flightMarkersLayer.addFeatures([imgFeat]);	
+	this.L.radarBlip.addFeatures([imgFeat]);	
 	//console.log(mcallsign, mlat, mlon, mheading, maltitude);
 	
 	var gxOff = 4;
@@ -612,7 +626,7 @@ show_radar: function show_radar(mcallsign, mlat, mlon, mheading, maltitude){
 				gxOff: gxOff, gyOff: gyOff
 				});
 	lblFeat._callsign = mcallsign;
-	this.flightLabelsLayer.addFeatures([lblFeat]);	
+	this.L.radarLbl.addFeatures([lblFeat]);	
 	
 },
 
@@ -624,7 +638,7 @@ on_goto: function(butt){
 
 load_tracker: function(tracks){
 	
-	this.trackLinesLayer.removeAllFeatures();
+	this.L.track.removeAllFeatures();
 	var trk_length = tracks.length;
 	var points = [];
 	//var points;
@@ -645,16 +659,16 @@ load_tracker: function(tracks){
 	};
 
 	//var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-	this.trackLinesLayer.addFeatures([ new OpenLayers.Feature.Vector(line, null, style) ]);
-	this.get_map().zoomToExtent(this.trackLinesLayer.getDataExtent()); 
+	this.L.track.addFeatures([ new OpenLayers.Feature.Vector(line, null, style) ]);
+	this.get_map().zoomToExtent(this.L.track.getDataExtent()); 
 	this.get_map().zoomOut();
 	
 },
 
 load_flight_plan: function(recs){
 	//console.log("FP", recs);
-	this.L.fpline.removeAllFeatures();
-	this.L.fplbl.removeAllFeatures();
+	this.L.fpLine.removeAllFeatures();
+	this.L.fpLbl.removeAllFeatures();
 	
 	var lenny = recs.length;
 	var fpoints = [];
@@ -709,16 +723,16 @@ load_flight_plan: function(recs){
 	};
 
 	var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-	this.L.fpline.addFeatures([lineFeature]);
+	this.L.fpLine.addFeatures([lineFeature]);
 	this.get_map().zoomToExtent(this.L.fpline.getDataExtent()); 
 	//this.get_map().zoomOut();
 	
-	this.L.fplbl.addFeatures( navLabels );
+	this.L.fpLbl.addFeatures( navLabels );
 	return line_points;
 	
 },
 show_blip: function(obj){
-	console.log("L=", this.L);
+	//console.log("L=", this.L);
 	this.L.blip.removeAllFeatures();
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
@@ -746,8 +760,8 @@ show_blip: function(obj){
 
 load_airway: function(recs){
 	//console.log("LOADAIRWAY", recs);
-	this.L.awyline.removeAllFeatures();
-	this.L.awylbl.removeAllFeatures();
+	this.L.awyLine.removeAllFeatures();
+	this.L.awyLbl.removeAllFeatures();
 	
 	var lenny = recs.length;
 	var fpoints = [];
@@ -792,7 +806,7 @@ load_airway: function(recs){
 			var lbl = new OpenLayers.Feature.Vector(navPt);
 			lbl.attributes = r;
 			//navLabels.push(lbl);
-			this.L.awylbl.addFeatures( [lbl] );
+			this.L.awyLbl.addFeatures( [lbl] );
 	}
 	
 	//console.log("navLabels=", navLabels)		
@@ -824,10 +838,10 @@ load_airway: function(recs){
 		);
 		var line = new OpenLayers.Geometry.LineString(points);
 		var lineFeature = new OpenLayers.Feature.Vector(line, null, style);
-		this.L.awyline.addFeatures([lineFeature]);
+		this.L.awyLine.addFeatures([lineFeature]);
 	}
 	
-	this.get_map().zoomToExtent(this.L.awylbl.getDataExtent()); 
+	this.get_map().zoomToExtent(this.L.awyLbl.getDataExtent()); 
 	//this.get_map().zoomOut();
 	
 	
