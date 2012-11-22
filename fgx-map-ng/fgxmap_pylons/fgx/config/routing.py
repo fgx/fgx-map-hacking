@@ -37,7 +37,7 @@ def make_map(config):
 	map.connect('/ajax/airport/{apt_ident}', controller="ajax_airport", action="airport")
 	
 	# Airway
-	#map.connect('/ajax/airports', controller="ajax_airport", action="airports")
+	map.connect('/ajax/airways', controller="ajax_navaids", action="airways")
 	map.connect('/ajax/airway/{awy}', controller="ajax_navaids", action="airway")
 	
 	# Database Browsing

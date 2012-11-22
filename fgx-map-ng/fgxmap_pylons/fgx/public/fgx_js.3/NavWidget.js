@@ -3,7 +3,7 @@ Ext.namespace("FGx");
 
 FGx.NavWidget = Ext.extend(Ext.grid.GridPanel, {
 
-tbw: 80,
+tbw: 50,
 
 constructor: function(config) {
 	
@@ -92,7 +92,19 @@ constructor: function(config) {
 						}
 					},
 					this.get_ndb_search_text()
-					//{text: "Nearby"}
+				]
+			},
+			{xtype: 'buttongroup',
+				title: "All",
+				columns: 3,
+				items: [
+					{iconCls: "icoClr",	scope: this, tooltip: "Clear text box",
+						handler: function(){
+							this.get_all_search_text().setValue("");
+							this.get_all_search_text().focus();
+						}
+					},
+					this.get_all_search_text()
 				]
 			}
 		],
@@ -213,6 +225,27 @@ get_ndb_search_text: function(){
 		}, this);
 	}
 	return this.txtSearchNdb;
+},
+
+get_all_search_text: function(){
+	if(!this.txtSearchAll){
+		this.txtSearchAll = new Ext.form.TextField({
+			width: this.tbw,
+			enableKeyEvents: true
+		});
+		this.txtSearchAll.on("keypress", function(txtFld, e){
+			if( e.getKey() == e.ENTER ){
+				var t = this.get_all_search_text();
+				t.setValue( t.getValue().trim() );
+				var txt = t.getValue();
+				if(txt.length < 2){
+					return;
+				}
+				this.get_store().load({params: {search: txt, nav_type: ""}});
+			}
+		}, this);
+	}
+	return this.txtSearchAll;
 }
 
 

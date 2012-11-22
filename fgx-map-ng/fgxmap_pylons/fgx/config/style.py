@@ -24,6 +24,7 @@ local_icons["icoClr"] = "go.gif"
 ## icons is the fam fam from http://fgx-static/icons/famfam_silk/*
 icons = {}
 
+icons["icoAirways"] = "chart_line.png"
 icons["icoFlightPlans"] = "page_white_actionscript.png"
 
 icons['icoHelp'] = "help.png"

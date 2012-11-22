@@ -1,0 +1,148 @@
+Ext.namespace("FGx");
+
+FGx.AirwaysPanel = Ext.extend(Ext.Panel, {
+
+	//======================================================
+// Tables Grid
+grid_airways: function(){
+	if(!this.gridAirways){
+		this.gridAirways = new Ext.grid.GridPanel({
+			region: 'center',
+			//title: "Airway",
+			width: 200,
+			enableHdMenu: false,
+			frame: false, plain: true, border: false,
+			store:  new Ext.data.JsonStore({
+				fields: [	
+					{name: "airway", type:"string"}
+				],
+				idProperty: "table",
+				ssortInfo: {},
+				proxy: new Ext.data.HttpProxy({
+					url: "/ajax/airways",
+					method: 'GET'
+				}),
+				root: "airways",
+				autoLoad: false
+			}),
+			viewConfig:{
+				forceFit: true
+			},
+			columns: [ 
+				{header: "Airway", dataIndex: "table", sortable: true,
+					renderer: function(val, meta, record, idx){
+						meta.style = "font-weight: bold;"
+						return val;
+					}
+				}
+				//{header: "rows", dataIndex: "rows"}
+			],
+			listeners:{
+				scope: this,
+				rowclick: function(grid, idx, e){
+					
+					var rec = this.grid_airways().getStore().getAt(idx);
+					var table = rec.get("table");
+					var url = "/ajax/airway/" + rec.get("airway");
+					this.grid_segments().getStore().proxy.setUrl(url);
+					this.grid_segments().getStore().load();
+				}
+			}
+		});
+	}
+	return this.gridAirways;
+},
+
+
+//=================================================================
+//== Columns
+grid_segments: function(){
+	if(!this.gridSegments){
+		this.gridSegments = new Ext.grid.GridPanel({
+			region: 'east', 
+			//title: "Segments",
+			width: "70%",
+			
+			store: new Ext.data.JsonStore({
+				fields: [	
+					{name: "ident_entry", type:"string"},
+					{name: "ident_exit", type:"string"},
+					//{name: "max_char", type:"string"},
+					//{name: "nullable", type:"boolean"},
+				
+				],
+				idProperty: "column",
+				proxy: new Ext.data.HttpProxy({
+					url: "/ajax/airway/_AIRWAY_NAME_",
+					method: 'GET'
+				}),
+				root: "segments",
+				autoLoad: false
+				
+			}),
+			viewConfig:{
+				forceFit: true,
+				emptyText: "< Select a table",
+				deferEmptyText: false
+			},
+			columns: [ 
+				{header: "Entry", dataIndex: "column",
+					renderer: function(val, meta, record, idx){
+						meta.style = "font-weight: bold;"
+						return val;
+					}
+				},
+				{header: "Exit", dataIndex: "type"},
+				{header: "Nullable", dataIndex: "nullable", width: 30,
+					renderer: function(v){
+						return v ? "Yes" : "-";
+					}
+				}
+			]
+		});
+	}
+	return this.gridSegments;
+},
+
+get_all_search_text: function(){
+	if(!this.txtSearchAll){
+		this.txtSearchAll = new Ext.form.TextField({
+			width: 60,
+			enableKeyEvents: true
+		});
+		this.txtSearchAll.on("keypress", function(txtFld, e){
+			if( e.getKey() == e.ENTER ){
+				var t = this.get_all_search_text();
+				t.setValue( t.getValue().trim() );
+				var txt = t.getValue();
+				if(txt.length < 2){
+					return;
+				}
+				this.get_store().load({params: {search: txt, nav_type: ""}});
+			}
+		}, this);
+	}
+	return this.txtSearchAll;
+},
+
+constructor: function(config) {
+	
+	config = Ext.apply({
+		title: 'Airways',
+		layout: "border",
+		iconCls: "icoAirways",
+		tbar: [
+			{iconCls: "icoClr"},
+			this.get_all_search_text()
+		],
+		items: [
+			this.grid_airways(),
+			this.grid_segments(),
+		]
+	}, config);
+	
+	FGx.AirwaysPanel.superclass.constructor.call(this, config);
+}, // Constructor	
+
+
+});

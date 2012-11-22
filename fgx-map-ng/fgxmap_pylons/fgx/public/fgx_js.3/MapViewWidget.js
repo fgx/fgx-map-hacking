@@ -5,7 +5,9 @@ Ext.namespace("FGx");
 FGx.MapViewWidget = Ext.extend(Ext.Panel, {
 
 
-
+W: {
+	
+},
 
 get_mini_map: function(){
 	
@@ -93,7 +95,19 @@ get_nav_widget: function(){
 	return this.xNavWidget;
 },
 
+get_awy_widget: function(){
+	if(!this.xAwyWidget){
+		
+		this.xAwyWidget =  new FGx.AirwaysPanel({});
+		this.xAwyWidget.on("GOTO", function(obj){
 
+			this.get_mini_map().show_blip(obj);
+			this.get_map_panel().show_blip(obj);
+		}, this);  
+			
+	}
+	return this.xAwyWidget;
+},
 	
 //===========================================================
 //== CONSTRUCT
@@ -126,13 +140,11 @@ constructor: function(config) {
 						collapsed: false,
 						activeItem: 0,
 						items: [
-							//this.mapLayersTree.tree,
-							//this.flightsGrid,
-							//this.flightsWidget.grid,
+							this.get_awy_widget(),
 							this.get_nav_widget(),
 							this.get_airports_grid(),
 							
-							this.get_flights_grid(config.flightsStore)
+							this.get_flights_grid()
 							
 						]
 					},

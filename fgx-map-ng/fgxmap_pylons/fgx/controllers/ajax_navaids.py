@@ -126,7 +126,19 @@ class AjaxNavaidsController(BaseController):
 	
 		return payload	
 		
+	@jsonify	
+	def airways(self):
+		payload = {'success': True}
 		
+		search = h.v(request, "search")
+		
+		if search:
+			search = search.upper()
+		
+		payload["airway"] = navaids.airways(search=search)
+		
+		
+		return payload	
 		
 	
 	@jsonify	
