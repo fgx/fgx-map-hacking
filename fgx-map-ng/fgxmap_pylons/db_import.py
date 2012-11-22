@@ -15,7 +15,7 @@ from optparse import OptionParser
 
 
 
-x_files = ['fix', 'nav', 'ndb', 'vor', "apt"]
+x_files = ['fix', 'nav', 'ndb', 'vor', "apt", "awy"]
 
 ## Handle Command Args
 usage = "usage: %prog [options] command args"
@@ -48,6 +48,11 @@ parser.add_option("-v", nargs=1,
 
 
 ############################################################
+
+if opts.ini:
+	print "FATAL: Need -i foo.ini"
+	parser.print_help()
+	sys.exit(1)
 
 
 ## Check we have command
