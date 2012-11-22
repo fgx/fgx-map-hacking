@@ -372,7 +372,7 @@ constructor: function(config) {
 		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
 		ll.xFlag = "Default"
 	}
-	console.log(ll.xFlag, ll.x, ll.y, config);
+	//console.log(ll.xFlag, ll.x, ll.y, config);
 	config = Ext.apply({
 		
 		fgxType: "MapPanel",

@@ -31,25 +31,40 @@ get_airports_grid: function(){
 				{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
 
 				}
-				
-				//{header: 'Authority', dataIndex:'apt_authority', sortable: true, align: 'right'
-				//},
-				//{header: 'Size', dataIndex:'apt_size', sortable: true, align: 'right'
-				//}
-			],
 
-			
-			/*
-			bbar: [
-				new Ext.PagingToolbar({
-					store: this.get_store(),
-					displayInfo: false,
-					pageSize: 500,
-					prependButtons: false
-				})
-			] */
-			
+			]
 		});
+		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
+			var r = grid.getStore().getAt(idx).data;
+			Ext.Ajax.request({
+				url: "/ajax/airport/" + r.apt_ident ,
+				method: "GET",
+				scope: this,
+				success: function(response, opts) {
+					var data = Ext.decode(response.responseText);
+					console.log(data);
+					var root = this.get_runways_tree().getRootNode();
+					root.removeAll();
+					var rwysNode = new Ext.tree.TreeNode({
+							text: "Runways", expanded: true
+							
+					});
+					root.appendChild(rwysNode);
+					for(var i=0; i < data.runways.length; i++){
+						var rn = new Ext.tree.TreeNode({
+							text: data.runways[0].threshold
+						})
+						rwysNode.appendChild(rn);
+					}
+					//this.get_map_panel().load_tracker(obj.tracks);
+					
+				},
+				failure: function(response, opts) {
+					console.log('server-side failure with status code ' + response.status);
+				}
+				
+			});
+		}, this);
 	}
 	return this.xAirportsGrid;
 
@@ -57,17 +72,24 @@ get_airports_grid: function(){
 
 get_runways_tree: function(){
 	if(!this.xRunwaysTree){
-		this.xRunwaysTree = new Ext.tree.TreePanel({
-			region: "east",
+		this.xRunwaysTree = new Ext.ux.tree.TreeGrid({
+			region: "east", 
+			columns: [
+				{header: 'Item', dataIndex: 'task', 	width: 100	},
+				{header: 'Value', dataIndex: 'task', 	swidth: 230	}
+			],
 			width: 200,
-			  text: 'Ext JS', 
-                draggable:false, // disable root node dragging
-				ssroot: {
-					nodeType: 'async',
-					text: 'Ext JS',
-					draggable: false,
-					id: 'source'	
-				}
+			text: 'Ext JS', 
+			draggable: false,
+			dataUrl: "/ajax/airport/EGLL",
+			ssroot: {
+				nodeType: 'async',
+				text: 'NA', expandable: true,
+				
+				draggable: false,
+				id: 'rootsss'
+				
+			}
 		});
 	}
 	return this.xRunwaysTree;
@@ -119,7 +141,7 @@ constructor: function(config) {
 get_store: function(){
 	if(!this.xStore){
 		this.xStore = new Ext.data.JsonStore({
-			idProperty: 'callsign',
+			idProperty: 'apt_pk',
 			fields: [ 	
 				{name: "apt_pk", type: 'string'},
 				{name: "apt_ident", type: 'string'},
@@ -131,8 +153,10 @@ get_store: function(){
 			],
 			proxy: new Ext.data.HttpProxy({
 				url: '/ajax/airports',
-				method: "GET"
+				method: "GET",
+				params: {apt_ident: "egl"},
 			}),
+			autoLoad: true,
 			root: 'airports',
 			remoteSort: false,
 			sortInfo: {
