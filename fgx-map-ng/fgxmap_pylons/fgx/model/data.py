@@ -63,8 +63,8 @@ class Airport(Base.data):
 	apt_ident = Column(String(8), index=True)
 	apt_local_code = Column(String(8), index=True, nullable=True)
 	
-	apt_ascii = Column(String(255), index=True, nullable=True)
-	apt_utf8 = Column(String(255), index=True, nullable=True)
+	apt_name_ascii = Column(String(255), index=True, nullable=True)
+	apt_name_utf8 = Column(String(255), index=True, nullable=True)
 	
 	apt_country = Column(String(8), nullable=True)
 	apt_type = Column(String(50), nullable=True)
@@ -86,7 +86,21 @@ class Airport(Base.data):
 	apt_xplane_code = Column(String(20), nullable=True)
 
 	def dic(self):
-		return dict(apt_pk=self.apt_pk, apt_ident=self.apt_ident)
+		return dict(
+			apt_pk=self.apt_pk, apt_ident=self.apt_ident, apt_local_code=self.apt_local_code,
+			apt_name_ascii=self.apt_name_ascii, apt_type=self.apt_type,
+			apt_elev_ft=self.apt_elev_ft,
+			apt_elev_m=self.apt_elev_m,
+			apt_authority=self.apt_authority,
+			apt_services=self.apt_services,
+			apt_ifr=self.apt_ifr,
+			apt_size=self.apt_size,
+			apt_center_lat=self.apt_center_lat,
+			apt_center_lon=self.apt_center_lon,
+			apt_min_rwy_len_ft=self.apt_min_rwy_len_ft,
+			apt_max_rwy_len_ft=self.apt_max_rwy_len_ft,
+			apt_xplane_code=self.apt_xplane_code
+		)
 	
 	def __repr__(self):
 		return "<Airport: %s>" % (self.apt_ident)
@@ -232,50 +246,66 @@ class Runway(Base.data):
 	rwy_pk = Column(Integer(), primary_key=True)
 	apt_ident = Column(String(8), index=True)
 	rwy_ident = Column(String(8), index=True)
-	rwy_ident_end = Column(String(8), index=True)
+	rwy_ident_end = Column(String(8))
 	
-	rwy_width = Column(String(32), nullable=True)
+	rwy_width = Column(String(32))
 	
-	rwy_lat = Column(String(32), nullable=True)
-	rwy_lon = Column(String(32), nullable=True)
-	rwy_lat_end = Column(String(32), nullable=True)
-	rwy_lon_end = Column(String(32), nullable=True)
+	rwy_lat = Column(String(32))
+	rwy_lon = Column(String(32))
+	rwy_lat_end = Column(String(32))
+	rwy_lon_end = Column(String(32))
 
-	rwy_len_meters = Column(String(32), nullable=True)
-	rwy_len_feet = Column(String(32), nullable=True)
+	rwy_len_meters = Column(String(32))
+	rwy_len_feet = Column(String(32))
 	
-	rwy_hdg = Column(String(32), nullable=True)
-	rwy_hdg_end = Column(String(32), nullable=True)
+	rwy_hdg = Column(String(32))
+	rwy_hdg_end = Column(String(32))
 	
-	rwy_shoulder = Column(String(8), nullable=True)
-	rwy_smoothness = Column(String(8), nullable=True)
-	rwy_surface = Column(String(32), nullable=True)
+	rwy_shoulder = Column(String(8))
+	rwy_smoothness = Column(String(8))
+	rwy_surface = Column(String(32))
 	
-	rwy_centerline_lights = Column(String(8), nullable=True)
-	rwy_edge_lighting = Column(String(8), nullable=True)
-	rwy_auto_dist_signs = Column(String(8), nullable=True)
+	rwy_centerline_lights = Column(String(8))
+	rwy_edge_lighting = Column(String(8))
+	rwy_auto_dist_signs = Column(String(8))
 	
 	
-	rwy_threshold = Column(String(32), nullable=True)
-	rwy_overrun = Column(String(32), nullable=True)
-	rwy_marking = Column(String(8), nullable=True)
-	rwy_app_lighting = Column(String(8), nullable=True)
-	rwy_tdz_lighting = Column(String(8), nullable=True)
-	rwy_reil = Column(String(8), nullable=True)
+	rwy_threshold = Column(String(32))
+	rwy_overrun = Column(String(32))
+	rwy_marking = Column(String(8))
+	rwy_app_lighting = Column(String(8))
+	rwy_tdz_lighting = Column(String(8))
+	rwy_reil = Column(String(8))
 	
-	rwy_threshold_end = Column(String(32), nullable=True)
-	rwy_overrun_end = Column(String(32), nullable=True)
-	rwy_marking_end = Column(String(8), nullable=True)
-	rwy_app_lighting_end = Column(String(8), nullable=True)
-	rwy_tdz_lighting_end = Column(String(8), nullable=True)
-	rwy_reil_end = Column(String(8), nullable=True)	
+	rwy_threshold_end = Column(String(32))
+	rwy_overrun_end = Column(String(32))
+	rwy_marking_end = Column(String(8))
+	rwy_app_lighting_end = Column(String(8))
+	rwy_tdz_lighting_end = Column(String(8))
+	rwy_reil_end = Column(String(8))	
 	
-	rwy_xplane_code = Column(String(8), nullable=True)	
+	rwy_xplane_code = Column(String(8))	
 	
 	rwy_poly = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
 
 	def __repr__(self):
 		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
+		
+	def dic(self):
+		return dict(
+			apt_ident = self.apt_ident,
+			rwy_ident = self.rwy_ident,
+			rwy_width = self.rwy_width,
+			rwy_lat = self.rwy_lat,	rwy_lon = self.rwy_lon,
+			rwy_lat_end = self.rwy_lat_end,	rwy_lon_end = self.rwy_lon_end,
+			rwy_len_meters = self.rwy_len_meters,
+			rwy_len_feet = self.rwy_len_feet,
+			
+			rwy_hdg = self.rwy_hdg,
+			rwy_hdg_end = self.rwy_hdg_end,
+			rwy_threshold = self.rwy_threshold,
+			rwy_threshold_end = self.rwy_threshold_end
+		)
 	
 GeometryDDL(Runway.__table__)	
 

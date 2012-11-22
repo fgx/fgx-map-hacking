@@ -62,7 +62,7 @@ get_runways_tree: function(){
 			width: 200,
 			  text: 'Ext JS', 
                 draggable:false, // disable root node dragging
-				root: {
+				ssroot: {
 					nodeType: 'async',
 					text: 'Ext JS',
 					draggable: false,

@@ -36,3 +36,19 @@ class AjaxAirportsController(BaseController):
 			payload['aiports'] = []
 			
 		return payload
+		
+		
+		
+	@jsonify
+	def airport(self, apt_ident):
+	
+		payload = {'success': True}
+
+		
+		
+		payload['airport'] = airports.airport(apt_ident)
+		#payload['airport'] = airports.airport(apt_ident)
+		payload['runways'] = airports.runways(apt_ident)
+			
+		return payload
+

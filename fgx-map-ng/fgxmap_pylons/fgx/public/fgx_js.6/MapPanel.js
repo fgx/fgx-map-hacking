@@ -671,9 +671,9 @@ load_tracker: function(tracks){
 	var line = new OpenLayers.Geometry.LineString(points);
 
 	var style = { 
-		strokeColor: '#0000ff', 
+		strokeColor: '#000066', 
 		strokeOpacity: 0.5,
-		strokeWidth: 2
+		strokeWidth: 1
 	};
 
 	//var lineFeature = new OpenLayers.Feature.Vector(line, null, style);

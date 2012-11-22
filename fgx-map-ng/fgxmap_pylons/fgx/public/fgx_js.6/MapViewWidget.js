@@ -159,7 +159,7 @@ constructor: function(config) {
 						plain: true,
 						border: 0,
 						flex: 2,
-						activeItem: 2,
+						activeItem: 0,
 						items: [
 							this.get_airports_grid(),
 							this.get_nav_widget(),
@@ -180,28 +180,6 @@ constructor: function(config) {
 	
 }, // Constructor	
 
-
-
-DEADinit: function(){
-
-	
-	//this.get_map().addLayer( this.highLightMarkers );
-	//this.get_map().addLayer( this.flightMarkersLayer );
-	//this.get_map().addLayer( this.flightLabelsLayer );
-	
-	//this.set_base_layer("Dark"); //??? WTF!!
-	
-	DEADthis.get_flights_grid().getStore().on("load", function(store, recs, idx){
-		console.log("YESSSSS");
-		this.flightLabelsLayer.removeAllFeatures();
-		this.flightMarkersLayer.removeAllFeatures();
-		var recs_length = recs.length;
-		for(var i = 0; i < recs_length; i++){
-			var rec = recs[i];
-			this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), rec.get("alt_ft") );
-		};
-	}, this);
-},
 
 
 on_goto: function(butt){
