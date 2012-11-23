@@ -3,9 +3,7 @@
 {##  Ext js ##}
 {% macro ext_js(ver="3.4.0", ext_theme="xtheme-gray.css") %}
 
-<script>
-var EXT_CHART_SWF = "{{app_globals.static_url}}/js/ext-{{ver}}/resources/charts.swf";
-</script>
+
 
 <script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
 <script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/ext-all.js"></script>
@@ -22,6 +20,11 @@ var EXT_CHART_SWF = "{{app_globals.static_url}}/js/ext-{{ver}}/resources/charts.
 
 <link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/{{ext_theme}}" /> 
 <link rel="stylesheet" type="text/css" href="/dynamic.{{app_globals.fgx_js_version}}.css" /> 
+
+<script>
+var EXT_CHART_SWF = "{{app_globals.static_url}}/js/ext-{{ver}}/resources/charts.swf";
+</script>
+
 
 {% endmacro %}
 
