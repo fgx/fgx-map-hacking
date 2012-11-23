@@ -75,7 +75,7 @@ get_airports_grid: function(){
 				scope: this,
 				success: function(response, opts) {
 					var data = Ext.decode(response.responseText);
-					console.log(data);
+					//console.log(data);
 					var root = this.get_runways_tree().getRootNode();
 					root.removeAll();
 					
@@ -83,13 +83,15 @@ get_airports_grid: function(){
 					for(var ir = 0; ir < runs.length; ir++){
 						var r = runs[ir];
 						var rwyNode = new Ext.tree.TreeNode({
-								x_key: r.rwy, expanded: true, x_val: r.rwy_length
+								x_key: r.rwy, x_val: r.rwy_length,
+								expanded: false,  expandable: true
 						});
 						root.appendChild(rwyNode);
 						for(var it = 0; it < r.thresholds.length; it++){
 							var t = r.thresholds[it];
 							var tn = new Ext.tree.TreeNode({
-								x_key: t.rwy_ident, x_val: "", expanded: false, expandable: true
+								x_key: t.rwy_ident, x_val: "", 
+								expanded: false, expandable: true
 							})
 							rwyNode.appendChild(tn);
 							var props = ["rwy_threshold", "rwy_ident", "rwy_reil", "rwy_marking", "rwy_overrun", "rwy_app_lighting"];
@@ -98,7 +100,8 @@ get_airports_grid: function(){
 								var lbl =  pk.replace("rwy_", "");
 								lbl = lbl.replace("_", " ");
 								var pn = new Ext.tree.TreeNode({
-								x_key: lbl, x_val: t[pk], leaf: true,
+								x_key: lbl, x_val: t[pk], 
+								leaf: true
 							})
 							tn.appendChild(pn);
 							}
