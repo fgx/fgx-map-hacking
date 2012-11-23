@@ -23,10 +23,11 @@ if not os.path.exists(sys.argv[1]):
 	
 inputfile = sys.argv[1]
 
-log = open("import_xplane_navaid.log", 'w')
-
 starttime = time.asctime()
-log.write("Import started: "+starttime+"\n")
+
+with open("import_xplane_navaid.log", "a") as log:
+	log.write("Import started: "+starttime+"\n")
+	log.close()
 
 conf = open('database.yaml')
 confMap = yaml.load(conf)
@@ -39,6 +40,8 @@ conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
 
 readnav = open(inputfile)
+
+entrycount = 0
 
 def insert_navaid(nav_ident,\
 				apt_ident,\
@@ -61,13 +64,21 @@ def insert_navaid(nav_ident,\
 	'''nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code'''
 	'''separated: nav_center,nav_center_lon,nav_center_lat,nav_range_poly'''
 	
+	#print nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code
+	
 	nav_center = "POINT("+nav_center_lon84+" "+nav_center_lat84+")"
 	
-	sql = '''
-		INSERT INTO navaid (nav_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code, nav_center)
-		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
+	sql = '''INSERT INTO navaid (nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code,nav_center)
+		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
 	
-	params = [nav_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code, nav_center]
+	#print sql
+	
+	params = [nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code,nav_center]
+	
+	#print params
+	
+	print "Inserted: "+nav_ident
+	
 	try:
 		cur.execute(sql, params)
 	except:
@@ -108,6 +119,9 @@ for line in readnav:
 	list = spaceremoved.split(" ")
 	listlen = len(list)
 	
+	nav_standalone = "0"
+	nav_no_freq = "1"
+	
 	try:
 		nav_xplane_code = str(list[0])
 		nav_center_lat84 = str(list[1])
@@ -124,7 +138,7 @@ for line in readnav:
 			# specifier is not separated in xplane data, we need the last one
 			nav_suffix = str(list[listlen-1])
 			insert_navaid(nav_ident, None, None, nav_elev_ft, nav_freq_khz, None, None, None, nav_name, nav_suffix, nav_center_lon84,nav_center_lat84, nav_range_nm, None, None, None, nav_xplane_code)
-		
+					
 		# VOR, includes VOR-DMEs and VORTACs
 		if line.startswith("3 "):
 			nav_freq_mhz = str(list[4])
@@ -151,6 +165,7 @@ for line in readnav:
 				nav_standalone = "0"
 			else:
 				nav_standalone = "1"
+			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,nav_standalone,None,nav_xplane_code)
 				
 		# GS, Glideslope associated with an ILS 
 		if line.startswith("6 "):
@@ -166,6 +181,7 @@ for line in readnav:
 			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 			# specifier is not separated in xplane data, we need the last one
 			nav_suffix = str(list[listlen-1])
+			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,None,None,nav_xplane_code)
 			
 		# Marker Beacon, Outer (OM), Middle (MM) and Inner (IM) Markers 
 		if line.startswith("7 ") or line.startswith("8 ") or line.startswith("9 "):
@@ -177,17 +193,17 @@ for line in readnav:
 			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 			# specifier is not separated in xplane data, we need the last one
 			nav_suffix = str(list[listlen-1])
+			insert_navaid(None,apt_ident,rwy_ident,nav_elev_ft,None,None,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,None,None,None,None,nav_xplane_code)
 			
 		# DME, Distance Measuring Equipment 
 		if line.startswith("12 ") or line.startswith("13 "):
 			nav_freq_mhz = str(list[4])
 			nav_range_nm = str(list[5])
-			nav_bearing_true = str(list[6])
-			nav_bias_nm = str(list[7])
-			nav_ident = str(list[8])
-			apt_ident = str(list[9])
-			rwy_ident = str(list[10])
-			nav_name = str(list[11:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+			nav_bias_nm = str(list[6])
+			nav_ident = str(list[7])
+			#apt_ident = str(list[8])
+			#rwy_ident = str(list[9])
+			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 			# specifier is not separated in xplane data, we need the last one
 			nav_suffix = str(list[listlen-1])
 			# 12 = Suppress frequency = 1, 13 = display frequency = 0
@@ -196,10 +212,27 @@ for line in readnav:
 			else:
 				nav_no_freq = "0"
 			
+			# When DME-ILS there is apt identifier and runway number, but no name
+			if nav_suffix == "DME-ILS":
+				apt_ident = str(list[8])
+				rwy_ident = str(list[9])
+				nav_name = None
+				
+			else:
+				apt_ident = None
+				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,None,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,None,nav_no_freq,nav_xplane_code)
+			
 	except:
 		pass
 		
 conn.close()
 readnav.close()
-log.close()
+
+endtime = time.asctime()
+
+with open("import_xplane_navaid.log", "a") as log:
+	log.write("Import finished: "+endtime+"\n")
+	log.close()
+
 	
