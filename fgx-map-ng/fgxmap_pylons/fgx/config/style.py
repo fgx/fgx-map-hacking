@@ -56,6 +56,7 @@ icons['icoFlights'] = "text_horizontalrule.png"
 icons['icoMapCore'] = "map.png"
 icons['icoMap'] = "map.png"
 icons['icoMapAdd'] = "map_add.png"
+icons['icoMapGo'] = "map_go.png"
 
 icons['icoMpServers'] = "server_database.png"
 

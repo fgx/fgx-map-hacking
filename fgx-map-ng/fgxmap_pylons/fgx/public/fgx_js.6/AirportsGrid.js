@@ -4,6 +4,26 @@ Ext.namespace("FGx");
 FGx.AirportsGrid =  Ext.extend(Ext.Panel, {
 
 txt_width:60,
+
+action_new_tab: function(){
+	if(!this.actionNewTab){
+		this.actionNewTab = new Ext.Button({
+			text: "New Tab", 
+			iconCls: "icoMapGo",
+			disabled: true,
+			scope: this,
+			handler: function(){
+				var r = this.get_airports_grid().getSelectionModel().getSelected().data;	
+				console.log("OPEN", r);
+				this.fireEvent("OPEN_AIRPORT", r);
+			}
+		});
+	
+	}
+	return this.actionNewTab;
+	
+},
+
 //===========================================================
 //== Grid
 get_airports_grid: function(){
@@ -25,14 +45,10 @@ get_airports_grid: function(){
 			store: this.get_store(),
 			loadMask: true,
 			sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+			tbar: [
+				this.action_new_tab()
+			],
 			columns: [ 
-				/* {header: 'Code',  dataIndex:'apt_ident', sortable: true, 
-					width: 60
-				},
-				
-				{header: 'Name', dataIndex:'apt_name_ascii', sortable: true,
-
-				}*/
 				{header: 'Airport', dataIndex:'apt_ident', sortable: true,
 					renderer: function(v, meta, rec){
 						return rec.get("apt_ident") + ": " + rec.get("apt_name_ascii");
@@ -41,6 +57,16 @@ get_airports_grid: function(){
 				}
 			]
 		});
+		this.xAirportsGrid.getSelectionModel().on("selectionchange", function(grid, idx, e){
+			console.log("selchan");
+			var sm = this.get_airports_grid().getSelectionModel();
+			if( !sm.hasSelection()){
+				this.action_new_tab().setDisabled(true);
+				return;
+			}
+			
+			this.action_new_tab().setDisabled(false);			
+		}, this);
 		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
 			var r = grid.getStore().getAt(idx).data;
 			Ext.Ajax.request({
@@ -62,9 +88,7 @@ get_airports_grid: function(){
 							text: data.runways[0].threshold
 						})
 						rwysNode.appendChild(rn);
-					}
-					//this.get_map_panel().load_tracker(obj.tracks);
-					
+					}					
 				},
 				failure: function(response, opts) {
 					console.log('server-side failure with status code ' + response.status);
@@ -72,6 +96,9 @@ get_airports_grid: function(){
 				
 			});
 		}, this);
+		//this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
+		//	this.fireEvent("OPEN_AIRPORT", grid.getStore().getAt(idx).data);
+		//},, this)
 	}
 	return this.xAirportsGrid;
 

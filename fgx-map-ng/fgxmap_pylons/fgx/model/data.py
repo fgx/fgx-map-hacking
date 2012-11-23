@@ -313,7 +313,7 @@ GeometryDDL(Runway.__table__)
 
 class Threshold(Base.data):
 	
-	__tablename__ = "thresholds"
+	__tablename__ = "threshold"
 
 	threshold_pk = Column(Integer(), primary_key=True)
 	rwy_id = Column(String(5), index=True)

@@ -1,27 +1,14 @@
 FGx Map
 
-This is the app you all been waiting for ;-) hopefully...
 
-Just presents a map, and a list of all the stuff u want..
-Mas distribution is what we have later, but this is the start..
-
-This Project is a self contained fgxmap server and intended replacment for mpmap
-postgis upstream and full on
-cached data downstream and simple play for region
-
-Note: we can even frop a php folder i here, is we use ajax, memcached, or file cached..
-It also send websockets.. and before u get exited, stop using IE,, lets start with webkit...
-
-
-
-Required:
-pylons, jinja2, sqlalchemy, geoalchemy
-
+Required python
 
 sudo easy_install Pylons
 sudo easy_install SQLAlchemy
 sudo easy_install GeoAlchemy
 sudo easy_install pyGeoIP
+sudo easy_install shapley
+
 
 --------------------------------------
 maxmind
@@ -36,32 +23,21 @@ Installation and Setup
 
 copy the skel_dev.ini to for your local setup 
 
-> cp skel_dev.ini local.ini
+> cp skel_dev.ini mysetup.ini
 
-ammend the local.ini to local enviroment 
-* important are
-  sql_aclhemy_url
-  temp_dir # if importing
-  
+ammend the mysetup.ini to local enviroment. 
+important are:
 
+- temp_dir = the local temporary directory for unpacking etc (eg /tmp/fgxmap)
+- sql_aclhemy_url's, 
+  There are three URL for the databases for data, secure and mpnet
+  (But all these could point to the same db)
 
-setup the database with
+setup the database(s) with
 
-> paster setup-app local.ini
-
-
-Run the app
-
-> paster serve --reload local.ini
+> paster setup-app mysetup.ini
 
 
-## For production
-Use the skel_prod.ini which switches off debuging and debug logginng (error logs only)
-
-and start without reload
-> paster serve local.ini
-
-
-read HACKING.txt for more
+read HACKING.txt for more (TODO)
 
 
