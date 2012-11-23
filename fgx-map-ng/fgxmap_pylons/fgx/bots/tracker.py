@@ -9,7 +9,7 @@ import json
 
 
 from fgx.model import meta
-from fgx.model.mpnet import FlightWayPoint
+from fgx.model.mpnet import FlightWayPoint, BotControl, TrafficLog
 
 class TrackerThread(threading.Thread):
 	
@@ -35,7 +35,7 @@ class TrackerThread(threading.Thread):
 		print 'T> TrackerThread: TrackerThread thread is started'
 				
 		## tracker startd after 10 seconds to allow catchup
-		time.sleep(10)
+		time.sleep(5)
 				
 		while True:
 			
@@ -45,9 +45,9 @@ class TrackerThread(threading.Thread):
 			if botControl.tracker_enabled:
 						
 				data = self.get_crossfeed()
-				print data
+				#print data
 				for f in data['flights']:
-					print f
+					#print f
 					wp = FlightWayPoint()
 					wp.time = datetime.datetime.utcnow()
 					wp.callsign = f['callsign']
@@ -58,12 +58,20 @@ class TrackerThread(threading.Thread):
 					wp.speed = f['spd_kts']
 					wp.heading = f['hdg']
 					meta.Sess.mpnet.add(wp)
-				meta.Sess.mpnet.commit()
+					
+				#meta.Sess.mpnet.commit()
 			
+				
+
+				oblog = TrafficLog()
+				oblog.flights = len(data['flights'])
+				meta.Sess.mpnet.add(oblog)
+				
 				botControl.tracker_last = datetime.datetime.utcnow()
-				meta.Session.commit()
+				meta.Sess.mpnet.commit()	
+				
 				print "\t\t tracker done"
-			print "\t: Sleep. zzzzzzzzzzzzz a while"
+
 			time.sleep(10) 
 	
 	

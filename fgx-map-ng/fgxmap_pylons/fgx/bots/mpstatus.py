@@ -8,7 +8,7 @@ import telnetlib
 import pygeoip
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer, MpStatusLog, BotControl
+from fgx.model.mpnet import MpServer, BotControl
 
 
 class MpStatusThread(threading.Thread):
@@ -80,6 +80,8 @@ class MpStatusThread(threading.Thread):
 				ob.status = "unknown"
 				meta.Sess.mpnet.commit()
 				
+				
+
 				lag, flights = self.fetch_telnet(server_no, True)
 				if lag > 0:
 					ob.lag = lag
@@ -179,10 +181,9 @@ class MpStatusThread(threading.Thread):
 			meta.Sess.mpnet.add(botControl)		
 			meta.Sess.mpnet.commit()
 		
-		time.sleep(2)
+		time.sleep(1)
 				
 		while True:
-			
 			
 			botControl = meta.Sess.mpnet.query(BotControl).get(1)
 			print "\t MpStatusThread: Status ", botControl.mpstatus_enabled
@@ -191,11 +192,11 @@ class MpStatusThread(threading.Thread):
 				self.lookup_all()
 				print "\t\t MSPTATUS done"
 				botControl.mpstatus_last = datetime.datetime.utcnow()
-				meta.Session.commit()
+				meta.Sess.mpnet.commit()
 			
 			
-			print "\t: Sleep. zzzzzzzzzzzzz a while"
-			time.sleep(100) 
+			#print "\t: Sleep. zzzzzzzzzzzzz a while"
+			time.sleep(300) 
 	
 	
 	

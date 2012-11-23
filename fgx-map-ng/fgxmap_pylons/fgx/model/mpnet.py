@@ -115,14 +115,13 @@ class MpServer(Base.mpnet):
 ##=================================================================
 
 ## Records when the bot last did a DNS check
-class MpStatusLog(Base.mpnet):
+class TrafficLog(Base.mpnet):
 	
-	__tablename__ = "mp_status_log"
+	__tablename__ = "traffic_log"
 
 	id = Column(Integer(), primary_key=True)
 	
 	flights = Column(Integer())
-	lag = Column(Integer())
 	ts = Column(DateTime(), default=datetime.datetime.utcnow())
 	
 	
@@ -149,13 +148,13 @@ class BotControl(Base.mpnet):
 	def dic(self):
 		return dict(
 			mpstatus_enabled = self.mpstatus_enabled,
-			mpstatus_last = self.mpstatus_last,
+			mpstatus_last = str(self.mpstatus_last),
 			
 			tracker_enabled = self.tracker_enabled,
-			tracker_last = self.tracker_last,
+			tracker_last = str(self.tracker_last),
 			
 			crossfeed_enabled = self.crossfeed_enabled,
-			crossfeed_last = self.crossfeed_last
+			crossfeed_last = str(self.crossfeed_last)
 		)
 		
 		
