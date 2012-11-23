@@ -83,15 +83,25 @@ get_airports_grid: function(){
 					for(var ir = 0; ir < runs.length; ir++){
 						var r = runs[ir];
 						var rwyNode = new Ext.tree.TreeNode({
-								text: r.rwy, expanded: true
+								x_key: r.rwy, expanded: true, x_val: r.rwy_length
 						});
 						root.appendChild(rwyNode);
 						for(var it = 0; it < r.thresholds.length; it++){
 							var t = r.thresholds[it];
 							var tn = new Ext.tree.TreeNode({
-								text: t.rwy_ident
+								x_key: t.rwy_ident, x_val: "", expanded: false, expandable: true
 							})
 							rwyNode.appendChild(tn);
+							var props = ["rwy_threshold", "rwy_ident", "rwy_reil", "rwy_marking", "rwy_overrun", "rwy_app_lighting"];
+							for(var pi =0; pi < props.length; pi++){
+								var pk = props[pi];
+								var lbl =  pk.replace("rwy_", "");
+								lbl = lbl.replace("_", " ");
+								var pn = new Ext.tree.TreeNode({
+								x_key: lbl, x_val: t[pk], leaf: true,
+							})
+							tn.appendChild(pn);
+							}
 						}					
 					}
 				},
@@ -112,13 +122,16 @@ get_airports_grid: function(){
 get_runways_tree: function(){
 	if(!this.xRunwaysTree){
 		this.xRunwaysTree = new Ext.ux.tree.TreeGrid({
-			region: "east", 
+			region: "east", autoScroll: true,
 			frame: false, plain: true, border: false,
 			columns: [
-				{header: 'Item', dataIndex: 'task', 	width: 100	},
-				{header: 'Value', dataIndex: 'task', 	swidth: 230	}
+				{header: 'Item', dataIndex: 'x_key', 	width: 150},
+				{header: 'Value', dataIndex: 'x_val', 	width: 60}
 			],
-			width: 200,
+			viewConfig: {
+				forceFit: true
+			},
+			width: 250,
 			text: 'Ext JS', 
 			draggable: false,
 			dataUrl: "/ajax/airport/EGLL",

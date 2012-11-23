@@ -306,7 +306,7 @@ class Runway(Base.data):
 	
 	##@property
 	def threshold(self, end=False):
-		props = ["rwy_threshold", "rwy_ident", "rwy_reil"]
+		props = ["rwy_threshold", "rwy_ident", "rwy_reil", "rwy_marking", "rwy_overrun", "rwy_app_lighting"]
 		postfix = "_end" if end else ""
 		dic = {}
 		for p in props:
