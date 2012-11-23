@@ -33,40 +33,36 @@ class TrackerThread(threading.Thread):
 
 	def run(self):
 		print 'T> TrackerThread: TrackerThread thread is started'
-		
-		"""
-		botInfo = meta.Sess.mpnet.query(MpBotInfo).get(1)
-		if botInfo == None:
-			## This should only run on the first setup, 
-			botInfo = MpBotInfo()
-			meta.Sess.mpnet.add(botInfo)
-			
-		
-		meta.Sess.mpnet.commit()
-		"""
-		
-		time.sleep(2)
+				
+		## tracker startd after 10 seconds to allow catchup
+		time.sleep(10)
 				
 		while True:
 			
-			print "\t TrackerThread, awake then.. "
-						
-			data = self.get_crossfeed()
-			print data
-			for f in data['flights']:
-				print f
-				wp = FlightWayPoint()
-				wp.time = datetime.datetime.utcnow()
-				wp.callsign = f['callsign']
-				wp.model = f['model']
-				wp.latitude = f['lat']
-				wp.longitude = f['lon']
-				wp.altitude = f['alt_ft']
-				wp.speed = f['spd_kts']
-				wp.heading = f['hdg']
-				meta.Sess.mpnet.add(wp)
-			meta.Sess.mpnet.commit()
 			
+			botControl = meta.Sess.mpnet.query(BotControl).get(1)
+			print "\t Tracker: Status ", botControl.tracker_enabled
+			if botControl.tracker_enabled:
+						
+				data = self.get_crossfeed()
+				print data
+				for f in data['flights']:
+					print f
+					wp = FlightWayPoint()
+					wp.time = datetime.datetime.utcnow()
+					wp.callsign = f['callsign']
+					wp.model = f['model']
+					wp.latitude = f['lat']
+					wp.longitude = f['lon']
+					wp.altitude = f['alt_ft']
+					wp.speed = f['spd_kts']
+					wp.heading = f['hdg']
+					meta.Sess.mpnet.add(wp)
+				meta.Sess.mpnet.commit()
+			
+				botControl.tracker_last = datetime.datetime.utcnow()
+				meta.Session.commit()
+				print "\t\t tracker done"
 			print "\t: Sleep. zzzzzzzzzzzzz a while"
 			time.sleep(10) 
 	

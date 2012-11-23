@@ -29,7 +29,7 @@ def make_map(config):
 	
 	
 	##=======================================================================
-	# Ajax Routes
+	# Ajax Airports
 	##=======================================================================
 	
 	# Airports
@@ -41,22 +41,34 @@ def make_map(config):
 	# Airway
 	map.connect('/ajax/airways', controller="ajax_navaids", action="airways")
 	map.connect('/ajax/airway/{awy}', controller="ajax_navaids", action="airway")
+
 	
-	# Database Browsing
+		
+	##=======================================================================
+	# Ajax Database
+	##=======================================================================
 	map.connect('/ajax/databases', controller="ajax_db", action="databases")
 	map.connect('/ajax/database/{db_name}/tables', controller="ajax_db", action="tables")
 	map.connect('/ajax/database/{db_name}/table/{table_name}/columns', controller="ajax_db", action="columns")
 	map.connect('/ajax/database/{db_name}/table/{table_name}/drop', controller="ajax_db", action="drop_table")
 	
-	
+
+	##=======================================================================
+	# Ajax MultiPlayer
+	##=======================================================================
 	# MultiPlayer
 	map.connect('/ajax/mpnet/status', controller="ajax_mpnet", action="mpstatus")
+	map.connect('/ajax/bots', controller="ajax_mpnet", action="bots")
+	map.connect('/ajax/bot/{bot_name}/{bot_action}', controller="ajax_mpnet", action="bot")
 	map.connect('/ajax/mpnet/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mpnet/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mpnet/flights', controller="ajax_mpnet", action="flights")
 	map.connect('/ajax/mpnet/tracker/{callsign}', controller="ajax_mpnet", action="tracker")
 	
 	
+	##=======================================================================
+	# Ajax Navaids
+	##=======================================================================
 	# Nav Aids
 	map.connect('/ajax/navaids', controller="ajax_navaids", action="navaids")
 	
@@ -71,12 +83,16 @@ def make_map(config):
 	
 	map.connect('/ajax/flightplan/process', controller="ajax_navaids", action="process_flightplan")
 	
-	
+	##=======================================================================
+	# Ajax Users
+	##=======================================================================
 	### Secure
 	map.connect('/ajax/users', controller="ajax_users", action="users")
 	map.connect('/ajax/user/{user_id}', controller="ajax_users", action="user")
 	
 	#map.connect('/ajax/*', controller="ajax_db", action="scolumns")
+	
+	
 	
 	##=======================================================================
 	## HTML Pages

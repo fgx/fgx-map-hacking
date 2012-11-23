@@ -10,7 +10,7 @@ from pylons import app_globals
 from fgx.lib.base import BaseController, render
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer, FlightWayPoint
+from fgx.model.mpnet import MpServer, FlightWayPoint, BotControl
 
 log = logging.getLogger(__name__)
 
@@ -69,4 +69,40 @@ class AjaxMpnetController(BaseController):
 		return payload	
 		
 		
+		
+		
+	@jsonify
+	def bots(self):
+		payload = dict(success=True)
+		
+		obj = meta.Sess.mpnet.query(BotControl).first()
+		payload['bot_status'] = obj.dic()
+		payload['bots'] = BotControl.BOTS
+		
+		return payload
 	
+
+			
+	@jsonify
+	def bot(self, bot_name, bot_action):
+		
+		payload = dict(success=True)
+		
+		running = True if bot_action == "start" else False
+		
+		ob = meta.Sess.mpnet.query(BotControl).first()
+		
+		if bot_name == "tracker":
+			ob.tracker_enabled = running
+			
+		elif bot_name == "mpstatus":
+			ob.mpstatus_enabled = running
+		
+		elif bot_name == "crossfeed":
+			ob.crossfeed_enabled = running
+		
+		meta.Sess.mpnet.commit()
+		
+		payload['bots'] = ob.dic()
+		
+		return payload

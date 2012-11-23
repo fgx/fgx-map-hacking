@@ -93,6 +93,9 @@ class AjaxNavaidsController(BaseController):
 		
 		return payload	
 		
+		
+		
+		
 	@jsonify	
 	def process_flightplan(self):
 		payload = {'success': True}
@@ -126,6 +129,9 @@ class AjaxNavaidsController(BaseController):
 	
 		return payload	
 		
+		
+		
+		
 	@jsonify	
 	def airways(self):
 		payload = {'success': True}
@@ -139,6 +145,8 @@ class AjaxNavaidsController(BaseController):
 		
 		
 		return payload	
+		
+		
 		
 	
 	@jsonify	

@@ -5,25 +5,16 @@ import time
 import datetime
 import telnetlib
 
-
 import pygeoip
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer, MpBotInfo
-
-
-#print config
-
-"""
-{'city': '', 'region_name': '', 'area_code': 0, 'time_zone': 'Europe/Paris', 'dma_code': 0, 'metro_code': '', 'country_code3': 'FRA', 'latitude': 46.0, 'postal_code': '', 'longitude': 2.0, 'country_code': 'FR', 'country_name': 'France'}
-"""
+from fgx.model.mpnet import MpServer, MpStatusLog, BotControl
 
 
 class MpStatusThread(threading.Thread):
 	
-	#def zulu():
-	#	return datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%Sz")
-	DEBUG = True
+
+	DEBUG = False
 	
 	def __init__(self, config):
 		threading.Thread.__init__(self)
@@ -175,37 +166,36 @@ class MpStatusThread(threading.Thread):
 			return None, None
 
 
-
+	##=====================================================
 	def run(self):
 		print 'T> MpStatusThread: Status thread is started'
 		
-		botInfo = meta.Sess.mpnet.query(MpBotInfo).get(1)
-		if botInfo == None:
+		botControl = meta.Sess.mpnet.query(BotControl).get(1)
+		if botControl == None:
 			## This should only run on the first setup, 
-			botInfo = MpBotInfo()
-			meta.Sess.mpnet.add(botInfo)
-			
-		
-		meta.Sess.mpnet.commit()
+			botControl = BotControl()
+			botControl.mpstatus_active = True
+			botControl.tracker_active = False
+			meta.Sess.mpnet.add(botControl)		
+			meta.Sess.mpnet.commit()
 		
 		time.sleep(2)
 				
 		while True:
 			
-			print "\t MpStatusThread, awake then.. "
 			
-			botInfo.last_dns_start = datetime.datetime.now()
-			meta.Sess.mpnet.commit()
-			
-			self.lookup_all()
-			
-			botInfo.last_dns_end = datetime.datetime.now()
-			meta.Sess.mpnet.commit()
-			
+			botControl = meta.Sess.mpnet.query(BotControl).get(1)
+			print "\t MpStatusThread: Status ", botControl.mpstatus_enabled
+			if botControl.mpstatus_enabled:
+								
+				self.lookup_all()
+				print "\t\t MSPTATUS done"
+				botControl.mpstatus_last = datetime.datetime.utcnow()
+				meta.Session.commit()
 			
 			
 			print "\t: Sleep. zzzzzzzzzzzzz a while"
-			time.sleep(300) 
+			time.sleep(100) 
 	
 	
 	

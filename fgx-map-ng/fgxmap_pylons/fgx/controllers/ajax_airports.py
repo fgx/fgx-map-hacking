@@ -16,6 +16,8 @@ log = logging.getLogger(__name__)
 
 class AjaxAirportsController(BaseController):
 
+
+
 	@jsonify
 	def airports(self):
 	
@@ -42,15 +44,18 @@ class AjaxAirportsController(BaseController):
 	@jsonify
 	def airport(self, apt_ident):
 	
+		apt_ident = apt_ident.upper()
 		payload = {'success': True}
-
 		
 		
-		payload['airport'] = airports.airport(apt_ident)
+		
+		#payload['airport'] = airports.airport(apt_ident)
 		#payload['airport'] = airports.airport(apt_ident)
 		payload['runways'] = airports.runways(apt_ident)
 			
 		return payload
+		
+		
 		
 	@jsonify
 	def airport_tree(self, apt_ident):

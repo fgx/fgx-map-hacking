@@ -78,6 +78,12 @@ def runways(apt_ident):
     ## The cols to return, this is a string with spces and split later
 	#cols_str = "apt_ident apt_name_ascii apt_authority apt_size "
 	
+	cols = ['rwy_ident', 'runway']
+	
+	sql = "select apt_ident "
+	sql += " array_to_string(array(rwy_ident, '-' , rwy_ident_end)) as rwy "
+	sql += " from runway "
+	 
 
 		
 	## now we make the select.. parts
@@ -92,7 +98,7 @@ def runways(apt_ident):
 	
 	
 	##  add the filters, we where 1 = 1 to make queries esier with and's
-	#sql += " where apt_ident  = '%s' " % apt_ident
+	sql += " where apt_ident  = '%s' " % apt_ident
 	
 	return [ob.dic() for ob in meta.Sess.data.query(Runway).filter_by(apt_ident=apt_ident).order_by(Runway.rwy_ident).all() ]
 	

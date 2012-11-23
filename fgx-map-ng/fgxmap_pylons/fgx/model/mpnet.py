@@ -1,6 +1,7 @@
 
+import datetime
 
-from sqlalchemy import  Integer, Float, String, Date, DateTime, Column
+from sqlalchemy import  Boolean, Integer, Float, String, Date, DateTime, Column
 
 from fgx.model.meta import Sess, Base
 
@@ -110,24 +111,53 @@ class MpServer(Base.mpnet):
 		
 		
 ##=================================================================
-## Bot Info
+## Bot Control and state
 ##=================================================================
 
 ## Records when the bot last did a DNS check
-class MpBotInfo(Base.mpnet):
+class MpStatusLog(Base.mpnet):
 	
-	__tablename__ = "mp_bot_info"
+	__tablename__ = "mp_status_log"
 
 	id = Column(Integer(), primary_key=True)
 	
-	last_dns_start = Column(DateTime())
-	last_dns_end = Column(DateTime())
+	flights = Column(Integer())
+	lag = Column(Integer())
+	ts = Column(DateTime(), default=datetime.datetime.utcnow())
 	
-	last_check_start = Column(DateTime())
-	last_check_end = Column(DateTime())
+	
+	
+## Records when the bot last did a DNS check
+class BotControl(Base.mpnet):
+	
+	BOTS = ["mpstatus", "crossfeed", "tracker"]
+	
+	__tablename__ = "bot_control"
 
+	id = Column(Integer(), primary_key=True)
 	
 
+	mpstatus_enabled = Column(Boolean(), nullable=True)
+	mpstatus_last  = Column(DateTime(), nullable=True)
 	
+	tracker_enabled = Column(Boolean(), nullable=True)
+	tracker_last  = Column(DateTime(), nullable=True)
 	
+	crossfeed_enabled = Column(Boolean(), nullable=True)
+	crossfeed_last  = Column(DateTime(), nullable=True)
 	
+	def dic(self):
+		return dict(
+			mpstatus_enabled = self.mpstatus_enabled,
+			mpstatus_last = self.mpstatus_last,
+			
+			tracker_enabled = self.tracker_enabled,
+			tracker_last = self.tracker_last,
+			
+			crossfeed_enabled = self.crossfeed_enabled,
+			crossfeed_last = self.crossfeed_last
+		)
+		
+		
+		
+
