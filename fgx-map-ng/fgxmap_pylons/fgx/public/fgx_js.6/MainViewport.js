@@ -198,7 +198,6 @@ get_tab_panel: function(){
 				
 			}else if(widget.fgxType == "FlightPlansWidget"){
 				this.widgets.FlightPlansWidget = 0;
-						
 			}
 		}, this);
 	}
@@ -288,10 +287,7 @@ constructor: function(config) {
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
-							"-",
-							new FGx.UrlAction({text: "Map Issues", url: "http://fgx.ch/projects/fgx-map/issues", M: this}),
-							new FGx.UrlAction({text: "Map Source", url: "http://git.fgx.ch/fgx-map/", M: this})
+							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
 					"-",
@@ -328,14 +324,13 @@ constructor: function(config) {
 							{text: "Issues", url: "http://fgx.ch/projects/fgx-map/issues",
 								handler: this.on_open_url, scope: this,
 							},
-							{text: "Git Source Code" ,
-								menu: [
-									{text: "cgit- recommended", url: "http://git.fgx.ch/fgx-map/",
-										handler: this.on_open_url, scope: this },
-									{text: "Chili", url: "http://fgx.ch/projects/fgx-map/",
-										handler: this.on_open_url, scope: this }
-								]
+							{text: "Git View", url: "http://git.fgx.ch/fgx-map/",
+								handler: this.on_open_url, scope: this 
+							},
+							{text: "Chili", url: "http://fgx.ch/projects/fgx-map/",
+								handler: this.on_open_url, scope: this 
 							}
+										
 						]
 					},
 					"-",
@@ -393,7 +388,8 @@ refresh_now: function(){
 },
 
 on_open_url: function(butt){
-	//window.open(butt.url);
+	window.open(butt.url);
+	return
 	var iFrame =  new FGx.IFramePanel({
 		url: butt.url, title: butt.text
 	});
