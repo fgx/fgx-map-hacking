@@ -4,10 +4,9 @@
 # GPLv2 or later
 # Do not change or remove this copyright notice.
 #
+# Better remove the bad design with the globals instead. Thanks.
 
 import sys, time, datetime, csv, os, re, psycopg2, yaml, warnings
-
- 
 
 # geographiclib 1.24 by (c) Charles Karney
 from geographiclib.geodesic import Geodesic
@@ -131,8 +130,30 @@ def get_freqline(line):
 	frq_range_km = "92.6"
 	
 	return frq_xplane_code,frq_freq,frq_freq_nice,frq_description,frq_range_nm,frq_range_km
-		
+	
+def drawcircle(rangerad,lon,lat):
+    # We need 0 and 360 to close the polygon, see closepoly
+	# What's a 'cricle' ? Should be sufficient to draw arc with 36 points.
+	azi_list = range(0,360,10)
+	circlelist = "POLYGON(("
+	for i in azi_list:
+		# Now be aware of this, geographiclib has lat/lon ordering, and not lon/lat
+		result = Geodesic.WGS84.Direct(float(lat),float(lon),i,float(rangerad))
+		# get it back in the right order
+		circlelist += str(result["lon2"])+" "+str(result["lat2"])+","
+	
+	# End point
+	closepoly = Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))
+	endpoint = str(closepoly["lon2"])+" "+str(closepoly["lat2"])
+	
+	circlelist += endpoint+"))"
+	return circlelist
+	
+count = 0
+
 def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
+
+	global count
 
 	lastcoma = len(pointscollected)-1
 	pointscollected2 = pointscollected[0:lastcoma] 
@@ -145,16 +166,55 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	sql = '''
 		INSERT INTO airport (apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Centroid(ST_Transform(ST_GeomFromText(%s, 4326),3857)))'''
-		
-	#print sql
 	
 	params = [apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
 	
-	# Now this second query gives lon/lat (postgis x/y) as text for the center point
+	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
 	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+apt_ident+"';"
 	cur.execute(sql2)
 	
+	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
+	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(sql3)
+	
+	conn.commit()
+	
+	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(latsql)
+	
+	latlon = cur.fetchall()[0]
+	lat84 = latlon[0]
+	lon84 = latlon[1]
+	
+	# Drawing the range polygons
+	
+	# For more ranges once could use this iter below, for two it's ok to have it 
+	# without I guess, like below-below
+	
+	#listcircles = [55560,18520] # 30/10 nautic miles
+	
+	#for i in listcircles:
+	#	circles = drawcircle(i,lon84,lat84)
+	#	thiscircles = circles[:-2]+"))"
+	#	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	#	cur.execute(rangesql)
+	
+	circles30 = drawcircle(55560,lon84,lat84)
+	circles10 = drawcircle(18520,lon84,lat84)
+	thiscircles30 = circles30[:-2]+"))"
+	thiscircles10 = circles10[:-2]+"))"
+	rangesql30 = "UPDATE airport SET apt_range_30nm=ST_Transform(ST_GeometryFromText('"+thiscircles30+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql30)
+	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql10)
+	
+	
+	conn.commit()
+	
+	count += 1
+	print count
+
 	
 def insert_runway(apt_ident,\
 				rwy_ident,\
@@ -164,8 +224,8 @@ def insert_runway(apt_ident,\
 				rwy_lat,\
 				rwy_lon_end,\
 				rwy_lat_end,\
-				rwy_len_feet,\
-				rwy_len_meters,\
+				rwy_len_ft,\
+				rwy_len_m,\
 				rwy_hdg,\
 				rwy_hdg_end, \
 				rwy_surface,\
@@ -196,9 +256,9 @@ def insert_runway(apt_ident,\
 	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
-		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_feet, rwy_len_meters, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly)
+		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
-	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_feet, rwy_len_meters, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly]
+	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly]
 	
 	#print  cur.mogrify(sql, params) 
 	
@@ -215,8 +275,8 @@ def insert_waterway(apt_ident,\
 				wwy_lat,\
 				wwy_lon_end,\
 				wwy_lat_end,\
-				wwy_len_feet,\
-				wwy_len_meters,\
+				wwy_len_ft,\
+				wwy_len_m,\
 				wwy_hdg,\
 				wwy_hdg_end, \
 				wwy_buoys,\
@@ -230,9 +290,9 @@ def insert_waterway(apt_ident,\
 	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
-		INSERT INTO waterway (apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_feet, wwy_len_meters, wwy_hdg, wwy_hdg_end, wwy_buoys, wwy_xplane_code, wwy_poly)
+		INSERT INTO waterway (apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_ft, wwy_len_m, wwy_hdg, wwy_hdg_end, wwy_buoys, wwy_xplane_code, wwy_poly)
 		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
-	params = [apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_feet, wwy_len_meters, wwy_hdg, wwy_hdg_end, wwy_buoys,wwy_xplane_code, wwy_poly]
+	params = [apt_ident, wwy_ident, wwy_ident_end, wwy_width, wwy_lon, wwy_lat, wwy_lon_end, wwy_lat_end, wwy_len_ft, wwy_len_m, wwy_hdg, wwy_hdg_end, wwy_buoys,wwy_xplane_code, wwy_poly]
 	cur.execute(sql, params)
 	
 	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","			
@@ -414,9 +474,9 @@ def readxplane():
 					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
 			
 			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
-			rwy_len_meters = str(rwy_length.get("s12"))
+			rwy_len_m = str(rwy_length.get("s12"))
 			
-			rwy_len_feet = rwy_length.get("s12")*3.048
+			rwy_len_ft = rwy_length.get("s12")*3.048
 			
 			rwy_hdg = rwy_length.get("azi2")
 			
@@ -446,9 +506,9 @@ def readxplane():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, rwy_len_meters, rwy_app_lighting)
+			collecting(points, rwy_len_m, rwy_app_lighting)
 			
-			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon,rwy_lat,rwy_lon_end,rwy_lat_end,rwy_len_meters,rwy_len_feet,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
+			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon,rwy_lat,rwy_lon_end,rwy_lat_end,rwy_len_m,rwy_len_ft,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 			
@@ -471,11 +531,11 @@ def readxplane():
 			# Now some additional data, not in apt.dat
 			
 			wwy_len = Geodesic.WGS84.Inverse(float(wwy_lat), float(wwy_lon), float(wwy_lat_end), float(wwy_lon_end))
-			wwy_len_meters = str(wwy_len.get("s12"))
+			wwy_len_m = str(wwy_len.get("s12"))
 			
-			#print "Meters: "+wwy_len_meters
+			#print "Meters: "+wwy_len_m
 			
-			wwy_len_feet = wwy_len.get("s12")*3.048
+			wwy_len_ft = wwy_len.get("s12")*3.048
 			
 			wwy_hdg = wwy_len.get("azi2")
 			
@@ -501,9 +561,9 @@ def readxplane():
 			
 			# Collecting runway points
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
-			collecting(points, wwy_len_meters, wwy_app_lighting)
+			collecting(points, wwy_len_m, wwy_app_lighting)
 			
-			insert_waterway(apt_ident,wwy_ident,wwy_ident_end,wwy_width,wwy_lon,wwy_lat,wwy_lon_end,wwy_lat_end,wwy_len_meters,wwy_len_feet,wwy_hdg,wwy_hdg_end,wwy_buoys,wwy_xplane_code,\
+			insert_waterway(apt_ident,wwy_ident,wwy_ident_end,wwy_width,wwy_lon,wwy_lat,wwy_lon_end,wwy_lat_end,wwy_len_m,wwy_len_ft,wwy_hdg,wwy_hdg_end,wwy_buoys,wwy_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 		# HELIPADS, we need it for heliport calculation, i.e. centerpoint
@@ -635,7 +695,7 @@ def readxplane():
 		else:
 			apt_services = "0"
 			
-			
+		# the really bad design, said gral
 		global pointscollected
 		global runwaycount
 		global rwy_len_collect
@@ -684,6 +744,7 @@ def readxplane():
 			apt_name_utf8 = ""
 			apt_local_code = ""
 			bcn_type = ""
+			
 			
 
 readxplane()

@@ -79,6 +79,26 @@ apt_center_lat:
     type: varchar
     size: 32
 
+apt_center_lon84:
+    field: apt_center_lon84
+    type: varchar
+    size: 32
+
+apt_center_lat84:
+    field: apt_center_lat84
+    type: varchar
+    size: 32
+
+apt_range_30nm:
+    field: apt_range_30nm
+    type: geometry(Polygon,3857)
+    size:
+
+apt_range_10nm:
+    field: apt_range_10nm
+    type: geometry(Polygon,3857)
+    size:
+
 apt_rwy_count:
     field: apt_rwy_count
     type: varchar
