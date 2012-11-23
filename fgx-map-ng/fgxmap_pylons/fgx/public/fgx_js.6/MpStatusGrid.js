@@ -3,11 +3,6 @@ Ext.namespace("FGx");
 
 FGx.MpStatusGrid = Ext.extend(Ext.grid.GridPanel, {
 
-//var self = this,
-
-//this.refresh_rate = 0,
-//this.runner = new Ext.util.TaskRunner(),
-
 tbw: 35,
 
 //= Triggered when a refresh toolbar button is clicked
@@ -45,7 +40,7 @@ render_altitude: function(v, meta, rec){
 	return Ext.util.Format.number(v, '00,000');	
 },
 
-//===========================================================
+
 //== Grid
 constructor: function(config) {
 	

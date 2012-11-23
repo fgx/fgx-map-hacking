@@ -3,26 +3,51 @@ Ext.namespace("FGx");
 
 FGx.NetworkStatusWidget = Ext.extend(Ext.Panel, {
 
+bots: ["tracker", "crossfeed", "mpstatus"],
+botActions: null,
+
+get_bot_actions: function(){
+	if(!this.botActions){
+		this.botActions = {};
+		var arr = []
+		for(var i = 0; i < this.bots.length; i++){
+			console.log(i, this.bots[i]);
+			this.botActions[this.bots[i]] = new Ext.Toolbar.TextItem({text: this.bots[i]});
+			arr.push( this.bots[i] );
+		}
+		console.log(this.botActions);
+		
+	}
+	return this.botActions;
+},
+	
 //===========================================================
 //== Grid
 constructor: function(config) {
 	
 	
-	var sto = 
+	var tbw = 100;
 	
 	config = Ext.apply({
 		iconCls: 'icoMpServers',
 		fgxType: "NetworkStatusWidget",
 		title: "Network Status",
-		layout : 'vbox',
+		layout : 'border',
 		closable: true,
-		sssdeferredRender : false,
+		deferredRender : false,
+		tbar: [
+			{xtype: "buttongroup", columns: 3, title: "Bot Status",
+				items: this.get_bot_actions()
+			}
+		],
 		items : [
+			new FGx.MpStatusGrid({region: "center", ssflex: 3,
 			
-			{ xtype: 'linechart', title: "Flights", 
-			region: "north",  flex: 1,
-           
-            store: new Ext.data.JsonStore({
+		})
+		/*	 {xtype: 'linechart',  height: 200,
+			sssregion: "center",  sflex: 1,
+			
+            store: {xtype:"jsonstore",
 				fields:[
 					{name: 'flights', type: "int"},
 					{name: 'id', type: "int"},
@@ -32,7 +57,7 @@ constructor: function(config) {
 				url: "/ajax/mpnet/traffic_log",
 				idProperty: "ts",
 				root: "traffic_log",
-				autoLoad: true,
+				autoLoad: false,
 				ssdata: [
 					{name:'Jul 07', visits: 245000, views: 3000000},
 					{name:'Aug 07', visits: 240000, views: 3500000},
@@ -43,7 +68,7 @@ constructor: function(config) {
 					{name:'Jan 08', visits: 520000, views: 6000000},
 					{name:'Feb 08', visits: 620000, views: 7500000}
 				]
-			}),
+			},
             url: EXT_CHART_SWF,
 			
 			
@@ -98,14 +123,15 @@ constructor: function(config) {
                 }
             },
 			
-        },
-		new FGx.MpStatusGrid({region: "center", flex: 3})
+        } 
+		*/
 			
 		]
 		
 	}, config);
 	FGx.NetworkStatusWidget.superclass.constructor.call(this, config);
-}, // Constructor	
+} // Constructor	
+
 
 
 });

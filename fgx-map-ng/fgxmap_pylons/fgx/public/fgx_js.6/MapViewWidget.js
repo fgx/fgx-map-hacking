@@ -103,13 +103,6 @@ get_awy_widget: function(){
 		this.xAwyWidget =  new FGx.AirwaysPanel({});
 		
 		this.xAwyWidget.grid_segments().getStore().on("load", function(store, recs, idx){
-			//this.flightLabelsLayer.removeAllFeatures();
-			//this.flightMarkersLayer.removeAllFeatures();
-			//var recs_length = recs.length;
-			//for(var i = 0; i < recs_length; i++){
-			//	var rec = recs[i];
-			//	this.show_radar (rec.get("callsign"), rec.get("lat"), rec.get("lon"), rec.get("heading"), //rec.get("alt_ft") );
-			//};
 			
 			this.get_map_panel().load_airway(recs);
 			//console.log("line_pots", line_points);

@@ -288,8 +288,30 @@ class Runway(Base.data):
 	
 	rwy_poly = GeometryColumn(Polygon(srid=FGX_SRID), comparator=PGComparator)
 
+	@property
+	def rwy(self):
+		return "%s-%s" % (self.rwy_ident.strip(), self.rwy_ident_end.strip())
+	
 	def __repr__(self):
-		return "<Runway: %s-%s>" % (self.icao, self.rwy_id)
+		return "<Runway: [%s] %s-%s>" % (self.apt_ident, self.rwy_ident, self.rwy_ident_end)
+		
+	def tree(self):
+		
+		return  dict(
+			apt_ident=self.apt_ident,
+			rwy=self.rwy,
+			rwy_len_meters=self.rwy_len_meters,
+			thresholds= [ self.threshold(0), self.threshold(1) ]		
+		)
+	
+	##@property
+	def threshold(self, end=False):
+		props = ["rwy_threshold", "rwy_ident", "rwy_reil", "rwy_marking", "rwy_overrun", "rwy_app_lighting"]
+		postfix = "_end" if end else ""
+		dic = {}
+		for p in props:
+			dic[p] = getattr(self, p + postfix)
+		return dic
 		
 	def dic(self):
 		return dict(

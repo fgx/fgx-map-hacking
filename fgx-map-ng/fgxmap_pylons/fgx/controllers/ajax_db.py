@@ -45,4 +45,17 @@ class AjaxDbController(BaseController):
 		return payload
 	"""
 	
+	def create_views(self):
+		
+		views = []
+		
+		sql = "create or replace view v_runway as "
+		sql += "select apt_ident, rwy_ident, rwy_ident_end, "
+		sql += " rwy_ident || '-' || rwy_ident_end as rwy,"
+		sql += " from airport "
+		
+		
+		
+		
+	
 	

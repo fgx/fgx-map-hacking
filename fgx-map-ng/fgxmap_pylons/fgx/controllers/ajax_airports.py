@@ -9,7 +9,7 @@ from sqlalchemy import or_
 from fgx.lib.base import BaseController, render
 
 from fgx.lib import helpers as h
-from fgx.model import meta, Airport
+from fgx.model import meta, Airport, Runway
 from fgx.queries import airports
 
 log = logging.getLogger(__name__)
@@ -27,6 +27,7 @@ class AjaxAirportsController(BaseController):
 		apt_name_ascii = h.v(request, "apt_name_ascii")
 		bounds = h.v(request, "bounds")
 		
+		apt_ident = "EHA"
 		if apt_ident or apt_name_ascii or bounds:
 			payload['airports'] = airports.airports(
 											apt_ident=apt_ident, 
@@ -49,9 +50,13 @@ class AjaxAirportsController(BaseController):
 		
 		
 		
+		payload['airport'] = airports.airport(apt_ident)
 		#payload['airport'] = airports.airport(apt_ident)
-		#payload['airport'] = airports.airport(apt_ident)
-		payload['runways'] = airports.runways(apt_ident)
+		runways = meta.Sess.data.query(Runway
+					).filter_by(apt_ident=apt_ident
+					).order_by(Runway.rwy_ident).all()
+		payload['runways'] = [ r.tree() for r in runways]
+		
 			
 		return payload
 		
@@ -60,6 +65,7 @@ class AjaxAirportsController(BaseController):
 	@jsonify
 	def airport_tree(self, apt_ident):
 	
+		apt_ident = "EHAM"
 		apt_ident = apt_ident.upper()
 		payload = {'success': True}
 
