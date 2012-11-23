@@ -124,7 +124,9 @@ class TrafficLog(Base.mpnet):
 	flights = Column(Integer())
 	ts = Column(DateTime(), default=datetime.datetime.utcnow())
 	
-	
+	def dic(self):
+		
+		return {'ts': str(self.ts), 'flights': self.flights}
 	
 ## Records when the bot last did a DNS check
 class BotControl(Base.mpnet):

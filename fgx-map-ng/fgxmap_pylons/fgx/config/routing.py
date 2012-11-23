@@ -58,11 +58,15 @@ def make_map(config):
 	##=======================================================================
 	# MultiPlayer
 	map.connect('/ajax/mpnet/status', controller="ajax_mpnet", action="mpstatus")
+	
 	map.connect('/ajax/bots', controller="ajax_mpnet", action="bots")
 	map.connect('/ajax/bot/{bot_name}/{bot_action}', controller="ajax_mpnet", action="bot")
+	
 	map.connect('/ajax/mpnet/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mpnet/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mpnet/flights', controller="ajax_mpnet", action="flights")
+	
+	map.connect('/ajax/mpnet/traffic_log', controller="ajax_mpnet", action="traffic_log")
 	map.connect('/ajax/mpnet/tracker/{callsign}', controller="ajax_mpnet", action="tracker")
 	
 	

@@ -10,7 +10,7 @@ from pylons import app_globals
 from fgx.lib.base import BaseController, render
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer, FlightWayPoint, BotControl
+from fgx.model.mpnet import MpServer, FlightWayPoint, BotControl, TrafficLog
 
 log = logging.getLogger(__name__)
 
@@ -104,5 +104,15 @@ class AjaxMpnetController(BaseController):
 		meta.Sess.mpnet.commit()
 		
 		payload['bots'] = ob.dic()
+		
+		return payload#
+		
+		
+	@jsonify	
+	def traffic_log(self):
+		
+		payload = dict(success=True)
+		
+		payload['traffic_log'] = [ob.dic() for ob in meta.Sess.mpnet.query(TrafficLog).order_by(TrafficLog.ts.desc()).limit(100).all()]
 		
 		return payload
