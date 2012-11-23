@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
 #
 # (c) 2012, Yves Sablonier, Zurich
 # GPLv2 or later
