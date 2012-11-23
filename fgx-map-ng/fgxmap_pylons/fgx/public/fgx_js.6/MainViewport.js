@@ -125,7 +125,7 @@ on_flights_widget: function(butt){
 	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
 },
 
-on_mpstatus_widget: function(butt, checked){
+on_network_status_widget: function(butt, checked){
 	if(!this.widgets.NetworkStatusWidget){
 		this.widgets.NetworkStatusWidget = new FGx.NetworkStatusWidget({
 			title: "Network Status", 
@@ -133,6 +133,7 @@ on_mpstatus_widget: function(butt, checked){
 			xHidden: false
 		});
 		this.get_tab_panel().add(this.widgets.NetworkStatusWidget);
+		
 	}
 	this.get_tab_panel().setActiveTab(this.widgets.NetworkStatusWidget);
 },
@@ -282,7 +283,7 @@ constructor: function(config) {
 					},
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
-						handler: this.on_mpstatus_widget, scope: this
+						handler: this.on_network_status_widget, scope: this
 					},
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",

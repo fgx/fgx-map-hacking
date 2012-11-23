@@ -80,8 +80,8 @@ def runways(apt_ident):
 	
 	cols = ['rwy_ident', 'runway']
 	
-	sql = "select apt_ident "
-	sql += " array_to_string(array(rwy_ident, '-' , rwy_ident_end)) as rwy "
+	sql = "select apt_ident, "
+	sql += " rwy_ident || '-' || rwy_ident_end as rwy "
 	sql += " from runway "
 	 
 
@@ -100,8 +100,8 @@ def runways(apt_ident):
 	##  add the filters, we where 1 = 1 to make queries esier with and's
 	sql += " where apt_ident  = '%s' " % apt_ident
 	
-	return [ob.dic() for ob in meta.Sess.data.query(Runway).filter_by(apt_ident=apt_ident).order_by(Runway.rwy_ident).all() ]
+	#return [ob.dic() for ob in #meta.Sess.data.query(Runway).filter_by(apt_ident=apt_ident).order_by(Runway.rwy_ident).all() ]
 	
 	
-	#return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
 	

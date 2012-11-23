@@ -9,7 +9,7 @@ from sqlalchemy import or_
 from fgx.lib.base import BaseController, render
 
 from fgx.lib import helpers as h
-from fgx.model import meta, Airport
+from fgx.model import meta, Airport, Runway
 from fgx.queries import airports
 
 log = logging.getLogger(__name__)
@@ -51,7 +51,10 @@ class AjaxAirportsController(BaseController):
 		
 		#payload['airport'] = airports.airport(apt_ident)
 		#payload['airport'] = airports.airport(apt_ident)
-		payload['runways'] = airports.runways(apt_ident)
+		runways = meta.Sess.data.query(Runway
+					).filter_by(apt_ident=apt_ident
+					).order_by(Runway.rwy_ident).all()
+		print runways
 			
 		return payload
 		
