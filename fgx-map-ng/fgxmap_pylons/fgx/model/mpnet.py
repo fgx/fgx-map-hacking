@@ -126,7 +126,7 @@ class TrafficLog(Base.mpnet):
 	
 	def dic(self):
 		
-		return {'ts': str(self.ts), 'flights': self.flights}
+		return {'ts': str(self.ts), 'flights': self.flights, "id": self.id}
 	
 ## Records when the bot last did a DNS check
 class BotControl(Base.mpnet):

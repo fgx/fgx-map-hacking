@@ -7,7 +7,7 @@ FGx.MainViewport = Ext.extend(Ext.Viewport, {
 	
 widgets: {
 	FlightsViewWidget: null,	
-	MpStatusGrid: null,
+	NetworkStatusWidget: null,
 	DbBrowser: null,
 	FlightPlansWidget: null
 },
@@ -126,15 +126,15 @@ on_flights_widget: function(butt){
 },
 
 on_mpstatus_widget: function(butt, checked){
-	if(!this.widgets.MpStatusGrid){
-		this.widgets.MpStatusGrid = new FGx.MpStatusGrid({
+	if(!this.widgets.NetworkStatusWidget){
+		this.widgets.NetworkStatusWidget = new FGx.NetworkStatusWidget({
 			title: "Network Status", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.MpStatusGrid);
+		this.get_tab_panel().add(this.widgets.NetworkStatusWidget);
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.MpStatusGrid);
+	this.get_tab_panel().setActiveTab(this.widgets.NetworkStatusWidget);
 },
 on_db_browser_widget: function(butt, checked){
 	if(!this.widgets.DbBrowser){
@@ -190,8 +190,8 @@ get_tab_panel: function(){
 			if(widget.fgxType == "FlightsViewWidget"){
 				this.widgets.flightsGrid = 0;
 				
-			}else if(widget.fgxType == "MpStatusGrid"){
-				this.widgets.MpStatusGrid = 0;
+			}else if(widget.fgxType == "NetworkStatusWidget"){
+				this.widgets.NetworkStatusWidget = 0;
 				
 			}else if(widget.fgxType == "DbBrowser"){
 				this.widgets.DbBrowser = 0;

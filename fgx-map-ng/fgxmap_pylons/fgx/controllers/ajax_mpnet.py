@@ -113,6 +113,6 @@ class AjaxMpnetController(BaseController):
 		
 		payload = dict(success=True)
 		
-		payload['traffic_log'] = [ob.dic() for ob in meta.Sess.mpnet.query(TrafficLog).order_by(TrafficLog.ts.desc()).limit(100).all()]
+		payload['traffic_log'] = [ob.dic() for ob in meta.Sess.mpnet.query(TrafficLog).order_by(TrafficLog.id.desc()).limit(500).all()]
 		
 		return payload

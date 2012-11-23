@@ -107,33 +107,5 @@ constructor: function(config) {
 	FGx.MpStatusGrid.superclass.constructor.call(this, config);
 }, // Constructor	
 
-/*
-get_store: function(){
-	if(!this.xStore){
-		this.xStore = new Ext.data.JsonStore({
-			idProperty: 'callsign',
-			fields: [ 	
-				{name: 'no', type: 'int'},
-				{name: 'fqdn', type: 'string'},
-				{name: "ip", type: 'string'},
-				{name: "last_checked", type: 'string'},
-				{name: "last_seen", type: 'string'},
-				{name: "lag", type: 'int'},
-				'country', 'time_zone', 'lat', 'lon'
-			],
-			url: '/ajax/mpnet/status',
-			root: 'mpservers',
-			remoteSort: false,
-			sortInfo: {
-				field: "no", 
-				direction: 'ASC'
-			},
-			autoLoad: true,
-		});	
-	}
-	return this.xStore;
-}
-*/
-
 });
 

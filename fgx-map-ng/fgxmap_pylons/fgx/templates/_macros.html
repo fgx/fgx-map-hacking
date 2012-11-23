@@ -1,32 +1,32 @@
 
-
+{#------------------------------------------------------------------------------------#}
 {##  Ext js ##}
 {% macro ext_js(ver="3.4.0", ext_theme="xtheme-gray.css") %}
 
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/ext-all.js"></script>
+<script>
+var EXT_CHART_SWF = "{{app_globals.static_url}}/js/ext-{{ver}}/resources/charts.swf";
+</script>
 
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridSorter.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridColumnResizer.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridNodeUI.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridLoader.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridColumns.js"></script>
-	<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGrid.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/ext-all.js"></script>
+
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridSorter.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridColumnResizer.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridNodeUI.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridLoader.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGridColumns.js"></script>
+<script type="text/javascript" src="{{app_globals.static_url}}/js/ext-{{ver}}/examples/ux/treegrid/TreeGrid.js"></script>
 
 
+<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/ext-all.css" />
 
-
-
-
-	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/ext-all.css" />
-
-	<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/{{ext_theme}}" /> 
-	<link rel="stylesheet" type="text/css" href="/dynamic.{{app_globals.fgx_js_version}}.css" /> 
+<link rel="stylesheet" type="text/css" href="{{app_globals.static_url}}/js/ext-{{ver}}/resources/css/{{ext_theme}}" /> 
+<link rel="stylesheet" type="text/css" href="/dynamic.{{app_globals.fgx_js_version}}.css" /> 
 
 {% endmacro %}
 
 
-{#--------------------------------#}
+{#------------------------------------------------------------------------------------#}
 {# OpenLayers and assoc #}
 {% macro openlayers_js() %}
 
