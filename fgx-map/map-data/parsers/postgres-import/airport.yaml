@@ -89,8 +89,13 @@ apt_center_lat84:
     type: varchar
     size: 32
 
-apt_range:
-    field: apt_range
+apt_range_30nm:
+    field: apt_range_30nm
+    type: geometry(Polygon,3857)
+    size:
+
+apt_range_10nm:
+    field: apt_range_10nm
     type: geometry(Polygon,3857)
     size:
 

@@ -132,8 +132,9 @@ def get_freqline(line):
 	return frq_xplane_code,frq_freq,frq_freq_nice,frq_description,frq_range_nm,frq_range_km
 	
 def drawcircle(rangerad,lon,lat):
-    # We need 0 and 360 to close the polygon
-	azi_list = range(0,360,1)
+    # We need 0 and 360 to close the polygon, see closepoly
+	# What's a 'cricle' ? Should be sufficient to draw arc with 36 points.
+	azi_list = range(0,360,10)
 	circlelist = "POLYGON(("
 	for i in azi_list:
 		# Now be aware of this, geographiclib has lat/lon ordering, and not lon/lat
@@ -188,13 +189,26 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	
 	# Drawing the range polygons
 	
-	listcircles = [185200,92600,55560,18520] # 100/50/30/10 nautic miles
+	# For more ranges once could use this iter below, for two it's ok to have it 
+	# without I guess, like below-below
 	
-	for i in listcircles:
-		circles = drawcircle(i,lon84,lat84)
-		thiscircles = circles[:-2]+"))"
-		rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-		cur.execute(rangesql)
+	#listcircles = [55560,18520] # 30/10 nautic miles
+	
+	#for i in listcircles:
+	#	circles = drawcircle(i,lon84,lat84)
+	#	thiscircles = circles[:-2]+"))"
+	#	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	#	cur.execute(rangesql)
+	
+	circles30 = drawcircle(55560,lon84,lat84)
+	circles10 = drawcircle(18520,lon84,lat84)
+	thiscircles30 = circles30[:-2]+"))"
+	thiscircles10 = circles10[:-2]+"))"
+	rangesql30 = "UPDATE airport SET apt_range_30nm=ST_Transform(ST_GeometryFromText('"+thiscircles30+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql30)
+	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	cur.execute(rangesql10)
+	
 	
 	conn.commit()
 	
