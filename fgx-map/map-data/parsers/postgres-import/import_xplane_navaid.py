@@ -134,6 +134,7 @@ for line in readnav:
 			nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 			# specifier is not separated in xplane data, we need the last one
 			nav_suffix = str(list[listlen-1])
+			insert_navaid(nav_ident,None,None,nav_elev_ft,None,nav_freq_mhz,None,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None, None, None, nav_xplane_code)
 		
 		# LOC, includes localisers (inc. LOC-only), LDAs and SDFs 
 		if line.startswith("4 ") or line.startswith("5 "):
