@@ -78,17 +78,22 @@ get_airports_grid: function(){
 					console.log(data);
 					var root = this.get_runways_tree().getRootNode();
 					root.removeAll();
-					var rwysNode = new Ext.tree.TreeNode({
-							text: "Runways", expanded: true
-							
-					});
-					root.appendChild(rwysNode);
-					for(var i=0; i < data.runways.length; i++){
-						var rn = new Ext.tree.TreeNode({
-							text: data.runways[0].threshold
-						})
-						rwysNode.appendChild(rn);
-					}					
+					
+					var runs = data.runways;
+					for(var ir = 0; ir < runs.length; ir++){
+						var r = runs[ir];
+						var rwyNode = new Ext.tree.TreeNode({
+								text: r.rwy, expanded: true
+						});
+						root.appendChild(rwyNode);
+						for(var it = 0; it < r.thresholds.length; it++){
+							var t = r.thresholds[it];
+							var tn = new Ext.tree.TreeNode({
+								text: t.rwy_ident
+							})
+							rwyNode.appendChild(tn);
+						}					
+					}
 				},
 				failure: function(response, opts) {
 					console.log('server-side failure with status code ' + response.status);
