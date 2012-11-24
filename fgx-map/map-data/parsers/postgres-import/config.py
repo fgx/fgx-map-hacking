@@ -13,27 +13,41 @@ HERE = os.path.dirname(__file__)
 class FGxOO:
 
 	def __init__(self, dic):
-		print "FGxOO Construct", dic.keys()
+		print "FGxOO INIT>>", dic.keys()
 		
 		for k in dic:
-			print k, dic.keys()
-			WhatAmIm = self.__dict__[k]
-			if isinstance(WhatAmIm, str):
-				self.__dict__[k] = WhatAmIm
-				print "your a plain olde str", k, WhatAmIm
-			
-			elif isinstance(WhatAmIm, unicode):
-				self.__dict__[k] = WhatAmIm
-				print "tour unicide r", k, WhatAmIm
-			"""
-			if dic[k] == None:
-				self.__dict__[k] = '' 
-				print "set none=", k
-			else:
-				self.__dict__[k] = dic[k] #QtCore.QString( dic[k] )
-				print "set=", k, dic[k]
-				#self.__dict__[k] = dic[k] 
-			"""
+			WhatAmIm = dic[k]
+			#print "READ=", k, dic[k]
+			if WhatAmIm == None:
+				print "SET WHAT??"
+				self.__dict__[k] = None
+			else:	
+				WhatAmIm = dic[k]
+				if isinstance(WhatAmIm, str):
+					self.__dict__[k] = WhatAmIm
+					print "\tSET = str", k #, WhatAmIm
+				
+				elif isinstance(WhatAmIm, unicode):
+					self.__dict__[k] = WhatAmIm
+					print "\tSET = uni", k #, WhatAmIm
+				
+				elif isinstance(WhatAmIm, dict):
+					self.__dict__[k] = FGxOO(WhatAmIm)
+					print "\tSET = FGx_OO!", k #, WhatAmIm
+				
+				else:
+					print "\tSET = WTF", k, WhatAmIm
+					self.__dict__[k] = WhatAmIm
+					
+				"""
+				if dic[k] == None:
+					self.__dict__[k] = '' 
+					print "set none=", k
+				else:
+					self.__dict__[k] = dic[k] #QtCore.QString( dic[k] )
+					print "set=", k, dic[k]
+					#self.__dict__[k] = dic[k] 
+				"""
 
 def init_db(db_yaml_path):
 	
