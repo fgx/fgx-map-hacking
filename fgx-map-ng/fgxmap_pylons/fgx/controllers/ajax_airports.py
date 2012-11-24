@@ -40,7 +40,14 @@ class AjaxAirportsController(BaseController):
 			
 		return payload
 		
+	@jsonify	
+	def airports_icao(self, al=None, a2=None, a3=None, a4=None):
 		
+		payload = {'success': True}
+		
+		
+	
+		return payload
 		
 	@jsonify
 	def airport(self, apt_ident):

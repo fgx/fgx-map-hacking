@@ -33,6 +33,14 @@ def make_map(config):
 	##=======================================================================
 	
 	# Airports
+	map.connect('/ajax/airports/icao/{a1}/{a2}/{a3}/{a4}', controller="ajax_airports", action="airports_icao")
+	map.connect('/ajax/airports/icao/{a1}/{a2}/{a3}', controller="ajax_airports", action="airports_icao")
+	map.connect('/ajax/airports/icao/{a1}/{a2}', controller="ajax_airports", action="airports_icao")
+	map.connect('/ajax/airports/icao/{a1}', controller="ajax_airports", action="airports_icao")
+	map.connect('/ajax/airports', controller="ajax_airports", action="airports")
+	map.connect('/ajax/airports', controller="ajax_airports", action="airports")
+	map.connect('/ajax/airports', controller="ajax_airports", action="airports")
+	
 	map.connect('/ajax/airports', controller="ajax_airports", action="airports")
 	map.connect('/ajax/airport/{apt_ident}', controller="ajax_airports", action="airport")
 	map.connect('/ajax/airport/{apt_ident}/metar', controller="ajax_airports", action="airport_metar")
