@@ -58,12 +58,14 @@ def init_db(db_yaml_path):
 	
 	cred = ob.databases.aip
 	print cred
-	#conn_str = "dbname=%s user=%s password=%s dbname=%ss" % (ob.dat
+	conn_str = "dbname=%s user=%s password=%s dbname=%ss" % (
+			cred.database, cred.user, cred.password, cred.database )
+	print "conn str", conn_str
 	#connectstring = "dbname=" + conf['database'] + " user=" + conf['user'] + " password=" + conf['password']
-	#if "host" in confMap:
-	#	connectstring += " host=%s" % conf['host']
+	if cred.host :
+		conn_strg += " host=%s" % cred.host
 	
-	conn = psycopg2.connect(connectstring)
+	conn = psycopg2.connect(conn_str)
 	global DB
 	DB = conn.cursor()
 
