@@ -45,6 +45,9 @@ class AjaxAirportsController(BaseController):
 		
 		payload = {'success': True}
 		
+		for i in [1,2,3,4]:
+			pass
+		
 		
 	
 		return payload
