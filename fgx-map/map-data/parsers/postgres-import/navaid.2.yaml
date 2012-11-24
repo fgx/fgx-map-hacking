@@ -1,0 +1,111 @@
+# navaid
+fields:
+    -
+        field: nav_pk
+        type: serial PRIMARY KEY
+        size: 
+
+    -
+        field: nav_ident
+        type: varchar
+        size: 32
+
+    -
+        field: apt_ident
+        type: varchar
+        size: 8
+
+    -
+        field: rwy_ident
+        type: varchar
+        size: 8
+
+    -
+        field: nav_elev_ft
+        type: varchar
+        size: 32
+
+    -
+        field: nav_freq_khz
+        type: varchar
+        size: 32
+
+    -
+        field: nav_freq_mhz
+        type: varchar
+        size: 32
+
+    -
+        field: nav_bearing_true
+        type: varchar
+        size: 32
+
+    -
+        field: nav_var_deg
+        type: varchar
+        size: 32
+
+    -
+        field: nav_name
+        type: varchar
+        size: 255
+
+    -:
+        field: nav_suffix
+        type: varchar
+        size: 32
+
+    -
+        field: nav_center
+        type: geometry(Point,3857)
+        size:
+
+    -
+        field: nav_center_lon
+        type: varchar
+        size: 32
+
+    -
+        field: nav_center_lat
+        type: varchar
+        size: 32
+
+    -
+        field: nav_center_lon84
+        type: varchar
+        size: 32
+
+    -
+        field: nav_center_lat84
+        type: varchar
+        size: 32
+
+    -
+        field: nav_range_nm
+        type: varchar
+        size: 32
+
+    -
+        field: nav_range_poly
+        type: geometry(Polygon,3857)
+        size:
+
+    -
+        field: nav_bias_nm
+        type: varchar
+        size: 32
+
+    -
+        field: nav_standalone
+        type: varchar
+        size: 8
+
+    -
+        field: nav_no_freq
+        type: varchar
+        size: 8
+
+    -
+        field: nav_xplane_code
+        type: varchar
+        size: 8
