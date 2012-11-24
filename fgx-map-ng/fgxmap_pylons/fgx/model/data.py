@@ -180,33 +180,65 @@ GeometryDDL(Airport.__table__)
 ##=======================================================
 class NavAid(Base.data):
 	
-	class NAV_TYPE:
+	class TYPE:
 		
 		fix = "FIX"
+		
+		lda_gs = "LDA-GS"
+		tacan = "TACAN"
+		vortac = "VORTAC"
+		lom = "LOM"
+		
 		ndb = "NDB"
+		ndb_dme = "NDB-DME"
 		
 		dme = "DME"
+		
 		vor = "VOR"
 		vor_dme = "VOR-DME"
-		vortac = "VORTAC"
+		
+		
 		
 	
 	__tablename__ = "navaid"
 	
-	navaid_pk = Column(Integer(), primary_key=True)
+	nav_pk = Column(Integer(), primary_key=True)
+	
 	
 	nav_type = Column(String(10), index=True)
 	
-	ident = Column(String(10), index=True)
-	name = Column(String(50), index=True)
-	freq = Column(String(10), index=True, nullable=True)
+	nav_ident = Column(String(32), index=True)
+	apt_ident = Column(String(8), index=True)
+	rwy_ident = Column(String(8), index=True)
 	
-	elev_ft = Column(String(10), nullable=True)
-	elev_m = Column(String(10), nullable=True)
-	range_nm = Column(String(10), nullable=True)
-	range_m = Column(String(10), nullable=True)
+	nav_name = Column(String(255), index=True)
+	nav_suffix =  Column(String(32), index=True)
 	
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	nav_bearing_true = Column(String(32))
+	nav_var_deg = Column(String(32))
+	
+	nav_freq_khz = Column(String(32))
+	nav_freq_mhz = Column(String(32))
+	
+	nav_elev_ft = Column(String(10))
+	#nav_elev_m = Column(String(10))
+	
+	
+	#range_m = Column(String(10))
+	
+	nav_center = GeometryColumn(Point(2, srid=3857), comparator=PGComparator)
+	nav_center_lon = Column(String(32))
+	nav_center_lat = Column(String(32))
+	nav_center_lon84 = Column(String(32))
+	nav_center_lat84 = Column(String(32))
+	
+	nav_range_nm = Column(String(10))
+	nav_range_poly = GeometryColumn(Polygon(srid=3857), comparator=PGComparator)
+	
+	nav_bias_nm = Column(String(32))
+	nav_standalone = Column(String(8))
+	nav_no_freq = Column(String(8))
+	nav_xplane_code = Column(String(8))
 	
 	
 	## MAYBE these props need to return strings ?
@@ -332,7 +364,7 @@ class Runway(Base.data):
 GeometryDDL(Runway.__table__)	
 
 ##=======================================================
-
+"""
 class Threshold(Base.data):
 	
 	__tablename__ = "threshold"
@@ -354,7 +386,7 @@ class Threshold(Base.data):
 	
 
 GeometryDDL(Threshold.__table__)	
-	
+"""
 
 
 

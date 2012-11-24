@@ -45,8 +45,8 @@ constructor: function(config) {
 					return "<b>" + v + "</b>";
 				}
 			},
-			{header: 'Name', dataIndex:'name', sortable: true, align: 'left', hidden: false},
-			{header: 'Freq', dataIndex:'freq', sortable: true, align: 'left', hidden: false}
+			{header: 'Name', dataIndex:'nav_name', sortable: true, align: 'left', hidden: false},
+			{header: 'Freq', dataIndex:'nav_freq_khz', sortable: true, align: 'left', hidden: false}
 			//{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
 			//{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
 		],

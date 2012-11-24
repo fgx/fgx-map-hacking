@@ -48,6 +48,7 @@ def make_map(config):
 	# Ajax Database
 	##=======================================================================
 	map.connect('/ajax/databases', controller="ajax_db", action="databases")
+	map.connect('/ajax/database/create_views', controller="ajax_db", action="create_views")
 	map.connect('/ajax/database/{db_name}/tables', controller="ajax_db", action="tables")
 	map.connect('/ajax/database/{db_name}/table/{table_name}/columns', controller="ajax_db", action="columns")
 	map.connect('/ajax/database/{db_name}/table/{table_name}/drop', controller="ajax_db", action="drop_table")

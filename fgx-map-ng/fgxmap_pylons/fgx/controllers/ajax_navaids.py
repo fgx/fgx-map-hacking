@@ -26,8 +26,15 @@ class AjaxNavaidsController(BaseController):
 		search = h.v(request, "search")
 		nav_type = h.v(request, "nav_type")
 		
+		nav_suffix = None
+		if nav_type:
+			nav_type = nav_type.upper()
+			if nav_type == "NDB":
+				nav_suffix = [NavAid.TYPE.ndb, NavAid.TYPE.ndb_dme] 
+		
+		print "SUFFIX", nav_suffix
 		if search:
-			payload['navaids'] = navaids.search(search=search, nav_type=nav_type)
+			payload['navaids'] = navaids.navaids(search=search, nav_suffix=nav_suffix)
 		
 		else:
 			payload['rows'] = []

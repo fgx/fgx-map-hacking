@@ -4,18 +4,19 @@ from fgx.model import meta
 
 
 
-def search(ident=None, search=None, nav_type=None, bounds=None, ifr=False):
+def navaids(ident=None, search=None, nav_suffix=None, bounds=None, ifr=False):
 	
 	
 	 ## The cols to return, this is a string with spces and split later
-	cols_str = "navaid_pk ident name nav_type freq"
+	cols_str = "nav_pk nav_ident nav_name nav_suffix nav_center_lat84 nav_center_lon84 "
+	cols_str += "nav_freq_khz nav_freq_mhz nav_range_nm"
 	
 	## now we make the select.. parts
 	sql, cols = meta.select_sql(cols_str)
 
-	sql += ", ST_X(wkb_geometry) as lat,  ST_Y(wkb_geometry) as lon "
-	cols.append("lat")
-	cols.append("lon")
+	#sql += ", ST_X(wkb_geometry) as lat,  ST_Y(wkb_geometry) as lon "
+	#cols.append("lat")
+	#cols.append("lon")
 	
 	## now the tables and joins
 	sql += " from navaid  "
@@ -28,17 +29,23 @@ def search(ident=None, search=None, nav_type=None, bounds=None, ifr=False):
 		sql += " and '((POINT(%s %s),(POINT(%s %s))'" % ()
 		
 	if search:
-		sql += " and( ident ilike '%s' " % ("%" + search + "%")
-		sql += " or name ilike '%s' " % ("%" + search + "%") + ")"
+		sql += " and( nav_ident ilike '%s' " % ("%" + search + "%")
+		sql += " or nav_name ilike '%s' " % ("%" + search + "%") + ")"
 		
-	if nav_type:
-		sql += " and nav_type = '%s' " % nav_type.upper()
+	if nav_suffix:
+		likes = []
+		for r in nav_suffix:
+			likes.append( " nav_suffix = '%s' " % r )
+		sql += " and (" 
+		sql += " or ".join(likes)
+		sql += ")"
+		#nav_suffix = '%s' " % nav_suffix.upper()
 		
 	if ident:
-		sql += " and ident =  '%s' " % ident.upper()
+		sql += " and nav_ident =  '%s' " % ident.upper()
 		
-	if ifr:
-		sql += " and (nav_type='FIX' or nav_type='VOR') "
+	#if ifr:
+	#	sql += " and (nav_type='FIX' or nav_type='VOR') "
 		
 	sql += "limit 100"
 	

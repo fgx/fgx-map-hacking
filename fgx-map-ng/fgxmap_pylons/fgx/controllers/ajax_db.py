@@ -44,15 +44,27 @@ class AjaxDbController(BaseController):
 		database.drop_table(table)
 		return payload
 	"""
-	
+	@jsonify	
 	def create_views(self):
 		
-		views = []
+		payload = dict(success=True)
+		views_sql = []
 		
+		## v_runway
 		sql = "create or replace view v_runway as "
 		sql += "select apt_ident, rwy_ident, rwy_ident_end, "
-		sql += " rwy_ident || '-' || rwy_ident_end as rwy,"
-		sql += " from airport "
+		sql += " rwy_ident || '-' || rwy_ident_end as rwy "
+		sql += " from runway "
+		views_sql.append(sql)
+		
+		
+		## Create views
+		for s in views_sql:
+			meta.Sess.data.execute(s)
+		
+		payload['views'] = views_sql
+		
+		return payload
 		
 		
 		
