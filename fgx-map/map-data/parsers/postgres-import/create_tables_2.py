@@ -46,7 +46,7 @@ if len(args) == 0:
 	
 ## Shell config will validate dome things
 import config
-config.init(opts.connect_yaml)
+config.init_db(opts.connect_yaml)
 
 
 table_def_yaml = args[0]
