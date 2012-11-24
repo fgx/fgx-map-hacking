@@ -220,10 +220,10 @@ def insert_runway(apt_ident,\
 				rwy_ident,\
 				rwy_ident_end,\
 				rwy_width,\
-				rwy_lon,\
-				rwy_lat,\
-				rwy_lon_end,\
-				rwy_lat_end,\
+				rwy_lon84,\
+				rwy_lat84,\
+				rwy_lon84_end,\
+				rwy_lat84_end,\
 				rwy_len_ft,\
 				rwy_len_m,\
 				rwy_hdg,\
@@ -235,12 +235,16 @@ def insert_runway(apt_ident,\
 				rwy_edge_lighting,\
 				rwy_auto_dist_signs,\
 				rwy_threshold,\
+				rwy_threshold_lon,\
+				rwy_threshold_lat,\
 				rwy_overrun,\
 				rwy_marking,\
 				rwy_app_lighting,\
 				rwy_tdz_lighting,\
 				rwy_reil,\
 				rwy_threshold_end,\
+				rwy_threshold_lon_end,\
+				rwy_threshold_lat_end,\
 				rwy_overrun_end,\
 				rwy_marking_end,\
 				rwy_app_lighting_end,\
@@ -254,17 +258,25 @@ def insert_runway(apt_ident,\
 	rwy_poly = "POLYGON (( " + str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + "," + str(A_lon) + " " + str(A_lat) + " ))"
 	#print rwy_polygon
 	
+	rwy_center = "POINT("+rwy_lon84+" "+rwy_lat84+")"
+	rwy_center_end = "POINT("+rwy_lon84_end+" "+rwy_lat84_end+")"
+	
+	rwy_threshold_center = "POINT("+rwy_threshold_lon+" "+rwy_threshold_lat+")"
+	rwy_threshold_center_end = "POINT("+rwy_threshold_lon_end+" "+rwy_threshold_lat_end+")"
+	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
-		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly)
-		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
-	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon, rwy_lat, rwy_lon_end, rwy_lat_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly]
-	
-	#print  cur.mogrify(sql, params) 
+		INSERT INTO runway (apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon84, rwy_lat84, rwy_lon84_end, rwy_lat84_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end, rwy_xplane_code, rwy_poly, rwy_center, rwy_center_end, rwy_threshold_center, rwy_threshold_center_end)
+		VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ST_Transform(ST_GeomFromText(%s, 4326),3857),ST_Transform(ST_GeomFromText(%s, 4326),3857),ST_Transform(ST_GeomFromText(%s, 4326),3857),ST_Transform(ST_GeomFromText(%s, 4326),3857),ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
+	params = [apt_ident, rwy_ident, rwy_ident_end, rwy_width, rwy_lon84, rwy_lat84, rwy_lon84_end, rwy_lat84_end, rwy_len_ft, rwy_len_m, rwy_hdg, rwy_hdg_end, rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code, rwy_poly, rwy_center, rwy_center_end,rwy_threshold_center, rwy_threshold_center_end]
 	
 	cur.execute(sql, params)
 	
 	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
+	
+	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
+	sql2 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center), rwy_center_lat=ST_Y(rwy_center),rwy_center_lon_end=ST_X(rwy_center), rwy_center_lat_end=ST_Y(rwy_center),rwy_threshold_lon=ST_X(rwy_threshold_center), rwy_threshold_lat=ST_Y(rwy_threshold_center),rwy_threshold_lon_end=ST_X(rwy_threshold_center_end), rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rwy_ident+"';"
+	cur.execute(sql2)
 	
 	
 def insert_waterway(apt_ident,\
@@ -432,8 +444,8 @@ def readxplane():
 		# flag and much more
 		if line.startswith("100 "):
 		
-			rwy_ident = str(line[31:34])
-			rwy_ident_end = str(line[87:90])
+			rwy_ident = str(line[31:34]).strip(" ")
+			rwy_ident_end = str(line[87:90]).strip(" ")
 		
 			rwy_xplane_code = line[0:3]
 			rwy_width =  line[5:13]
@@ -444,8 +456,8 @@ def readxplane():
 			rwy_edge_lighting = line[27]
 			rwy_auto_dist_signs = line[29]
 			rwy_number = str(line[31:34])
-			rwy_lat = line[34:47]
-			rwy_lon = line[48:61]
+			rwy_lat84 = line[34:47]
+			rwy_lon84 = line[48:61]
 			rwy_threshold = line[62:69]
 			rwy_overrun = line[70:77]
 			rwy_marking = line[78:79]
@@ -453,8 +465,8 @@ def readxplane():
 			rwy_tdz_lighting = line[83]
 			rwy_reil = line[85]
 			rwy_number_end = str(line[87:90])
-			rwy_lat_end = line[90:103]
-			rwy_lon_end = line[104:117]
+			rwy_lat84_end = line[90:103]
+			rwy_lon84_end = line[104:117]
 			rwy_threshold_end = line[119:125]
 			rwy_overrun_end = line[126:133]
 			rwy_marking_end = line[134:135]
@@ -466,14 +478,14 @@ def readxplane():
 			
 			# The NZSP problem
 			if apt_ident == "NZSP":
-				if rwy_lat_end > -90.0:
-					rwy_lat_end = ( float(rwy_lat_end) + 90.0 )*-1.0
+				if rwy_lat84_end > -90.0:
+					rwy_lat84_end = ( float(rwy_lat84_end) + 90.0 )*-1.0
 					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
-				if rwy_lat > -90.0:
-					rwy_lat = ( float(rwy_lat) + 90.0 )*-1.0
+				if rwy_lon84 > -180.0:
+					rwy_lon84 = ( float(rwy_lon84) + 180.0 )*-1.0
 					log.write("NZSP problem solved in airport "+apt_ident+", runway "+rwy_number+"\n")
 			
-			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat), float(rwy_lon), float(rwy_lat_end), float(rwy_lon_end))
+			rwy_length = Geodesic.WGS84.Inverse(float(rwy_lat84), float(rwy_lon84), float(rwy_lat84_end), float(rwy_lon84_end))
 			rwy_len_m = str(rwy_length.get("s12"))
 			
 			rwy_len_ft = rwy_length.get("s12")*3.048
@@ -481,26 +493,34 @@ def readxplane():
 			rwy_hdg = rwy_length.get("azi2")
 			
 		
-			rwy_length_end = Geodesic.WGS84.Inverse(float(rwy_lat_end), float(rwy_lon_end), float(rwy_lat), float(rwy_lon))
+			rwy_length_end = Geodesic.WGS84.Inverse(float(rwy_lat84_end), float(rwy_lon84_end), float(rwy_lat84), float(rwy_lon84))
 			rwy_hdg_end = str(360.0 + rwy_length_end.get("azi2"))
 			
-			rwy_threshold_direct = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_hdg),float(rwy_threshold))
-			rwy_threshold_direct_end = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),rwy_length_end.get("azi2"),float(rwy_threshold_end))
+			rwy_threshold_direct = Geodesic.WGS84.Direct(float(rwy_lat84),float(rwy_lon84),float(rwy_hdg),float(rwy_threshold))
+			rwy_threshold_direct_end = Geodesic.WGS84.Direct(float(rwy_lat84_end),float(rwy_lon84_end),rwy_length_end.get("azi2"),float(rwy_threshold_end))
+			
+			rwy_threshold_lon = str(rwy_threshold_direct["lon2"])
+			rwy_threshold_lat = str(rwy_threshold_direct["lat2"])
+			
+			rwy_threshold_lon_end = str(rwy_threshold_direct_end["lon2"])
+			rwy_threshold_lat_end = str(rwy_threshold_direct_end["lat2"])
+			
+			
 
 			# Calculating runway points
-			rwy_direct_A = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_hdg-90.0),(float(rwy_width))/2)
+			rwy_direct_A = Geodesic.WGS84.Direct(float(rwy_lat84),float(rwy_lon84),float(rwy_hdg-90.0),(float(rwy_width))/2)
 			A_lat = rwy_direct_A.get("lat2")
 			A_lon = rwy_direct_A.get("lon2")
 			
-			rwy_direct_B = Geodesic.WGS84.Direct(float(rwy_lat),float(rwy_lon),float(rwy_hdg+90.0),(float(rwy_width))/2)
+			rwy_direct_B = Geodesic.WGS84.Direct(float(rwy_lat84),float(rwy_lon84),float(rwy_hdg+90.0),(float(rwy_width))/2)
 			B_lat = rwy_direct_B.get("lat2")
 			B_lon = rwy_direct_B.get("lon2")
 			
-			rwy_direct_C = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),-360.0 + float(rwy_hdg_end)-90.0,(float(rwy_width))/2)
+			rwy_direct_C = Geodesic.WGS84.Direct(float(rwy_lat84_end),float(rwy_lon84_end),-360.0 + float(rwy_hdg_end)-90.0,(float(rwy_width))/2)
 			C_lat = rwy_direct_C.get("lat2")
 			C_lon = rwy_direct_C.get("lon2")
 			
-			rwy_direct_D = Geodesic.WGS84.Direct(float(rwy_lat_end),float(rwy_lon_end),-360.0 + float(rwy_hdg_end)+90.0,(float(rwy_width))/2)
+			rwy_direct_D = Geodesic.WGS84.Direct(float(rwy_lat84_end),float(rwy_lon84_end),-360.0 + float(rwy_hdg_end)+90.0,(float(rwy_width))/2)
 			D_lat = rwy_direct_D.get("lat2")
 			D_lon = rwy_direct_D.get("lon2")
 			
@@ -508,7 +528,7 @@ def readxplane():
 			points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
 			collecting(points, rwy_len_m, rwy_app_lighting)
 			
-			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon,rwy_lat,rwy_lon_end,rwy_lat_end,rwy_len_m,rwy_len_ft,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
+			insert_runway(apt_ident,rwy_ident,rwy_ident_end,rwy_width,rwy_lon84,rwy_lat84,rwy_lon84_end,rwy_lat84_end,rwy_len_m,rwy_len_ft,rwy_hdg,rwy_hdg_end,rwy_surface,rwy_shoulder,rwy_smoothness,rwy_centerline_lights,rwy_edge_lighting,rwy_auto_dist_signs,rwy_threshold,rwy_threshold_lon,rwy_threshold_lat,rwy_overrun,rwy_marking,rwy_app_lighting,rwy_tdz_lighting,rwy_reil,rwy_threshold_end,rwy_threshold_lon_end,rwy_threshold_lat_end,rwy_overrun_end,rwy_marking_end,rwy_app_lighting_end,rwy_tdz_lighting_end,rwy_reil_end,rwy_xplane_code,\
 			A_lat,A_lon,B_lat,B_lon,C_lat,C_lon,D_lat,D_lon)
 			
 			

@@ -24,25 +24,55 @@ rwy_width:
     type: varchar
     size: 32
 
-rwy_lon:
-    field: rwy_lon
+rwy_lon84:
+    field: rwy_lon84
     type: varchar
     size: 32
 
-rwy_lat:
-    field: rwy_lat
+rwy_lat84:
+    field: rwy_lat84
     type: varchar
     size: 32
 
-rwy_lon_end:
-    field: rwy_lon_end
+rwy_center_lon:
+    field: rwy_center_lon
     type: varchar
     size: 32
 
-rwy_lat_end:
-    field: rwy_lat_end
+rwy_center_lat:
+    field: rwy_center_lat
     type: varchar
     size: 32
+
+rwy_center:
+    field: rwy_center
+    type: geometry(Point,3857)
+    size:
+
+rwy_lon84_end:
+    field: rwy_lon84_end
+    type: varchar
+    size: 32
+
+rwy_lat84_end:
+    field: rwy_lat84_end
+    type: varchar
+    size: 32
+
+rwy_center_lon_end:
+    field: rwy_center_lon_end
+    type: varchar
+    size: 32
+
+rwy_center_lat_end:
+    field: rwy_center_lat_end
+    type: varchar
+    size: 32
+
+rwy_center_end:
+    field: rwy_center_end
+    type: geometry(Point,3857)
+    size:
 
 rwy_len_ft:
     field: rwy_len_ft
@@ -99,6 +129,21 @@ rwy_threshold:
     type: varchar
     size: 32
 
+rwy_threshold_lon:
+    field: rwy_threshold_lon
+    type: varchar
+    size: 32
+
+rwy_threshold_lat:
+    field: rwy_threshold_lat
+    type: varchar
+    size: 32
+
+rwy_threshold_center:
+    field: rwy_threshold_center
+    type: geometry(Point,3857)
+    size:
+
 rwy_overrun:
     field: rwy_overrun
     type: varchar
@@ -128,6 +173,21 @@ rwy_threshold_end:
     field: rwy_threshold_end
     type: varchar
     size: 32
+
+rwy_threshold_lon_end:
+    field: rwy_threshold_lon_end
+    type: varchar
+    size: 32
+
+rwy_threshold_lat_end:
+    field: rwy_threshold_lat_end
+    type: varchar
+    size: 32
+
+rwy_threshold_center_end:
+    field: rwy_threshold_center_end
+    type: geometry(Point,3857)
+    size:
 
 rwy_overrun_end:
     field: rwy_overrun_end
