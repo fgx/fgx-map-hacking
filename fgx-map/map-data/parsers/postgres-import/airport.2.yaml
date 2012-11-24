@@ -1,0 +1,24 @@
+description: "airport table"
+table: "airport"
+label: "Airports"
+
+sources: "Foo bar was here"
+
+author: "Gral"
+
+cols:
+    -   name: apt_pk
+        type: serial PRIMARY KEY
+        size: 
+        comment: "Primary key"
+
+    -   name: apt_ident
+        type: varchar
+        size: 8
+        index: true
+
+    -   name: apt_xplane_code
+        field: apt_xplane_code
+        type: varchar
+        size: 8
+
