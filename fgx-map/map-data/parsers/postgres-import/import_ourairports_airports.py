@@ -44,6 +44,23 @@ def readourairports():
 		sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
 		cur.execute(sql3)
 		conn.commit()
+		
+		sql4 = "SELECT apt_ident,apt_name_ascii FROM airport WHERE apt_ident='"+row[1]+"';"
+		cur.execute(sql4)
+		
+		fetchy = cur.fetchall()
+		
+		print fetchy
+		
+		if fetchy != []:
+		
+			ident_search = fetchy[0][0]
+			name_search = fetchy[0][1]
+		
+			sql5 = "UPDATE airport SET apt_search='"+ident_search+"' || '"+name_search+"' || '"+apt_local_code+"' || '"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
+			cur.execute(sql5)
+			conn.commit()
+		
 		print "--- Updated '"+apt_name_utf8+"' with ourairports data."
 
 	cur.close()

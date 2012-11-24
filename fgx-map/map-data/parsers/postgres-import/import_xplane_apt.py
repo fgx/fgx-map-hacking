@@ -444,8 +444,8 @@ def readxplane():
 		# flag and much more
 		if line.startswith("100 "):
 		
-			rwy_ident = str(line[31:34])
-			rwy_ident_end = str(line[87:90])
+			rwy_ident = str(line[31:34]).strip(" ")
+			rwy_ident_end = str(line[87:90]).strip(" ")
 		
 			rwy_xplane_code = line[0:3]
 			rwy_width =  line[5:13]
