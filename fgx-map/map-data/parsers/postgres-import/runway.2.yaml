@@ -1,0 +1,234 @@
+
+table: runway
+
+prefix: rwy_
+
+fields:
+    -
+        name: rwy_pk
+        type: serial PRIMARY KEY
+        size: 
+
+    -
+        name: apt_ident
+        type: varchar
+        size: 8
+        index: 1
+
+    -
+        name: rwy_ident
+        type: varchar
+        size: 8
+        index: 1
+
+    -
+        name: rwy_ident_end
+        type: varchar
+        size: 8
+        index: 1
+
+    -
+        name: rwy_width
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_lon84
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_lat84
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center_lon
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center_lat
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center
+        type: geometry(Point,3857)
+        size:
+
+    -
+        name: rwy_lon84_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_lat84_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center_lon_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center_lat_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_center_end
+        type: geometry(Point,3857)
+        size:
+
+    -
+        name: rwy_len_ft
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_len_m
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_hdg
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_hdg_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_surface
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_shoulder
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_smoothness
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_centerline_lights
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_edge_lighting
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_auto_dist_signs
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_threshold
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_lon
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_lat
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_center
+        type: geometry(Point,3857)
+        size:
+
+    -
+        name: rwy_overrun
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_marking
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_app_lighting
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_tdz_lighting
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_reil
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_threshold_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_lon_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_lat_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_threshold_center_end
+        type: geometry(Point,3857)
+        size:
+
+    -
+        name: rwy_overrun_end
+        type: varchar
+        size: 32
+
+    -
+        name: rwy_marking_end
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_app_lighting_end
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_tdz_lighting_end
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_reil_end
+        type: varchar
+        size: 8
+
+    -
+        name: rwy_poly
+        type: geometry(Polygon,3857)
+        size:
+
+    -
+        name: rwy_xplane_code
+        type: varchar
+        size: 8
+        index: 1

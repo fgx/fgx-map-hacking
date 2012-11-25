@@ -20,31 +20,37 @@ fields:
         name: apt_ident
         type: varchar
         size: 8
+        index: 1
 
     -
         name: apt_local_code
         type: varchar
         size: 8
+        index: 1
 
     -
         name: apt_name_ascii
         type: varchar
         size: 255
+        index: 1
 
     -
         name: apt_name_utf8
         type: varchar
         size: 255
+        index: 1
 
     -
         name: apt_country
         type: varchar
         size: 8
+        index: 1
 
     -
         name: apt_type
         type: varchar
         size: 255
+        index: 1
 
     -
         name: apt_elev_ft
@@ -137,9 +143,10 @@ fields:
         name: apt_search
         type: varchar
         size: 255
+        index: 1
 
     -
         name: apt_xplane_code
         type: varchar
         size: 8
-
+        index: 1

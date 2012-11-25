@@ -10,11 +10,12 @@ import sys, yaml
 
 from optparse import OptionParser
 
+TABLES = ['ALL', 'airport', 'runway', 'waterway']
 
 ##======================================================================
 ## Parse Options
 ##======================================================================
-usage = "usage: %prog -d db_connection.yaml [options] table_definition.yaml "
+usage = "usage: %prog -d db_connection.yaml [options] % " % " ".join(TABLES)
 #usage += " commands: \n"
 #usage += "    drop [tables] - eg drop fix ndb vor\n"
 
@@ -56,7 +57,7 @@ def get_create_table_sql(tableDef, drop=True):
 
 	sqlstring = ""
 	if drop:
-		sqlstring = "DROP TABLE IF EXISTS "+ tob.table+";\n"
+		sqlstring = "DROP TABLE IF EXISTS "+ tob.table+" CASCADE;\n"
 	
 	sqlstring += "create table %s (" % tableDef.table 
 	sqlstring += ", ".join(cols)

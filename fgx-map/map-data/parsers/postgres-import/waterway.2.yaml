@@ -1,0 +1,88 @@
+# waterway
+
+table: waterway
+prefix: wwy_
+
+fields:
+
+    -
+        name: wwy_pk
+        type: serial PRIMARY KEY
+        size: 
+
+    -
+        name: apt_ident
+        type: varchar
+        size: 8
+        index: 1
+
+    -
+        name: wwy_ident
+        type: varchar
+        size: 8
+        index: 1
+    -
+        name: wwy_ident_end
+        type: varchar
+        size: 8
+        index: 1
+    -
+        name: wwy_width
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_lon
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_lat
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_lon_end
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_lat_end
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_len_ft
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_len_m
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_hdg
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_hdg_end
+        type: varchar
+        size: 32
+
+    -
+        name: wwy_buoys
+        type: varchar
+        size: 8
+
+    -
+        name: wwy_poly
+        type: geometry(Polygon,3857)
+        size:
+
+    -
+        name: wwy_xplane_code
+        type: varchar
+        size: 8
+        index: 1
