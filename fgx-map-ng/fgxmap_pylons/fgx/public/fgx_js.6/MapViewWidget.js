@@ -21,11 +21,10 @@ get_mini_map: function(){
 	return this.xMiniMap;
 },
 
-get_map_panel: function(){
+get_map_panel: function(conf){
 	if(!this.xMapPanel){
-		this.xMapPanel =  new FGx.MapPanel({
-			region: "center"
-		});
+		conf.region = "center";
+		this.xMapPanel =  new FGx.MapPanel(conf);
 	}
 	return this.xMapPanel;
 },
@@ -136,7 +135,7 @@ constructor: function(config) {
 		items: [
 			
 
-			this.get_map_panel(),	
+			this.get_map_panel(config),	
 				
 			{region: 'east', width: 400, 
 				collapsible: true,

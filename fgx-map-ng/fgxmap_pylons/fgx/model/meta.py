@@ -39,18 +39,20 @@ def select_sql(cmap):
 	arrc = [ s.strip() for s in lst]
 	cols = []
 	sqls = []
-	for col in arrc:
-		if col.find(" as ") > -1:
-			p = col.split(" ")
-			pp = []
-			for pl in p:
-				if len(pl) > 0:
-					pp.append(pl)
-			cols.append(pp[2])
-			sqls.append(col)
-		else:
-			cols.append(col)
-			sqls.append(col)
+	for colr in arrc:
+		col = colr.strip()
+		if len(col) > 0:
+			if col.find(" as ") > -1:
+				p = col.split(" ")
+				pp = []
+				for pl in p:
+					if len(pl) > 0:
+						pp.append(pl)
+				cols.append(pp[2])
+				sqls.append(col)
+			else:
+				cols.append(col)
+				sqls.append(col)
 	sql = 'select ' + ", ".join(sqls)
 	sql += " " # ta
 	return sql, cols

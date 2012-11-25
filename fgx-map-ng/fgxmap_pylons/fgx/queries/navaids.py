@@ -4,7 +4,7 @@ from fgx.model import meta
 
 
 
-def navaids(ident=None, search=None, nav_suffix=None, bounds=None, ifr=False):
+def search(ident=None, search=None, nav_suffix=None, bounds=None, ifr=False):
 	
 	
 	 ## The cols to return, this is a string with spces and split later

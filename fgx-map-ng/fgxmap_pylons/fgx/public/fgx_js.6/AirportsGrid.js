@@ -14,9 +14,14 @@ action_new_tab: function(){
 			scope: this,
 			handler: function(){
 				var r = this.get_airports_grid().getSelectionModel().getSelected().data;	
-				//console.log("OPEN", r);
+				console.log("OPEN", r);
 				//this.fireEvent("OPEN_AIRPORT", r);
-				VP.open_airport(r);
+				r.lat = r.apt_center_lat;
+				r.lon = r.apt_center_lon;
+				r.iconCls = "icoAirport";
+				r.title = r.apt_ident;
+				r.closable = true;
+				VP.open_map(r);
 			}
 		});
 	

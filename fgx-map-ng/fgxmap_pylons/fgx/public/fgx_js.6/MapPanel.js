@@ -361,22 +361,22 @@ get_store: function(){
 //== CONSTRUCT
 constructor: function(config) {
 	
-	//console.log("constr", config.title, config.lat, config.lon);
+	console.log(">> MapPanel.constructor", config);
 	
 	var ll;
-	if(config.lat || config.lon){
+	if(config.lat && config.lon){
 		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat
 			).transform(this.get_display_projection(), this.get_map().getProjectionObject() ); 
-		ll.xFlag = "New";
+		ll.xFlag = "  SET:";
 	}else{
 		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
-		ll.xFlag = "Default"
+		ll.xFlag = "DEAFAUT: "
 	}
-	//console.log(ll.xFlag, ll.x, ll.y, config);
+	console.log(ll.xFlag, ll.x, ll.y, config);
 	config = Ext.apply({
 		
 		fgxType: "MapPanel",
-		iconCls: "icoMap",
+		ssiconCls: "icoMap",
 		frame: false, plain: true,border: 0,	bodyBorder: false,
 		
 		map: this.get_map(),

@@ -4,23 +4,20 @@
 # GPLv2 or later
 # Do not change or remove this copyright notice.
 #
+# Modified by Pete Morgan, Wales UK
 
 import sys, psycopg2, yaml, yaml.constructor
 
 from optparse import OptionParser
 
 
-# getting a ordered dict for yaml, you will  need ordereddict backport
-# for python < 2.7
-#
-# ............................................................................
-# The yaml ordered dict code is adapted from code gisted by Eric Naeseth, 2011
-
+##======================================================================
+## Parse Options
+##======================================================================
 usage = "usage: %prog -d db_connection.yaml [options] table_definition.yaml "
 #usage += " commands: \n"
 #usage += "    drop [tables] - eg drop fix ndb vor\n"
-#usage += "    dropall - Drops ALL database tables\n"
-#usage += "    import [fix|ndb|vor|nav|apt|all] eg ./%prog import fix apt vor\n"
+
 
 parser = OptionParser(usage=usage)
 
@@ -35,7 +32,7 @@ parser.add_option("-v", nargs=1,
                   )
 (opts, args) = parser.parse_args()
 
-## Parse will crash out above first <<<
+## Parse will crash out above first is some args missing <<<
 
 ## Check we got an arg for data def yaml file
 if len(args) == 0:
@@ -43,74 +40,54 @@ if len(args) == 0:
 	parser.print_help()
 	sys.exit(1)
 	
+
+##======================================================================
+## Helper Functions
+##======================================================================
+def get_create_table_sql(tableDef, drop=True):
+
+
+	cols = []
+	for f in tableDef.fields:
+		if f.size == None:
+			cols.append( f.name + " " + f.type )
+		else:
+			cols.append( f.name + " " + f.type + "(" + str(f.size) + ")" )
+
+	sqlstring = ""
+	if drop:
+		sqlstring = "DROP TABLE IF EXISTS "+ tob.table+";\n"
 	
-## Shell config will validate dome things
+	sqlstring += "create table %s (" % tableDef.table 
+	sqlstring += ", ".join(cols)
+	sqlstring = sqlstring + ");\n"
+	return sqlstring
+
+
+	
+##======================================================================
+## Lets GO!
+##======================================================================
+
+## import config and connect db
 import config
 config.init_db(opts.connect_yaml)
 
-
+## Load yaml with table def
 table_def_yaml = args[0]
+tob = config.load_yaml(table_def_yaml, as_object=True)
+#print tob, tob.table
 
+## Create the table
+sql =  get_create_table_sql(tob, drop=True)
+config.DB.execute(sql)
+config.CONN.commit()
 
-table_def = config.load_yaml(table_def_yaml)
+# All done
+config.CONN.close()
 
-
-"""
-print "COLS="
-for c  in data['cols']:
-	print c
-
-sys.exit(0)
-
-
-
-conf = open('database.yaml')
-confMap = yaml.load(conf)
-conf.close()
-
-fields = open(table+".yaml")
-tableMap = yaml.load(fields, OrderedDictYAMLLoader)
-fields.close()
-"""
-
-class Table:
-
-	def __init__(self, data):
-		
-		self.D = data
-		print "TABLE", data
-		
-	def create_sql(self):
-		
-		sqlstring = "CREATE TABLE "+table+" ("
-
-		for i in tableMap.keys():
-			if tableMap[i]['size'] == None:
-				sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + ","# \\\n"
-			else:
-				sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + "(" + str(tableMap[i]['size']) + ")" + ","# \\\n"
-			
-		sqlstring = sqlstring + ");"
-		exe = sqlstring.replace(",);",");")
-
-		print sqlstring
-
-connectstring = "dbname=" + confMap['database'] + " user=" + confMap['user'] + " password=" + confMap['password']
-if "host" in confMap:
-	connectstring += " host=%s" % confMap['host']
-conn = psycopg2.connect(connectstring)
-cur = conn.cursor()
-			
-cur.execute("DROP TABLE IF EXISTS "+table+";")
-
-cur.execute(exe)
-
-conn.commit()
-cur.close()
-conn.close()
-
-print "--- CREATED TABLE: "+table+" ---"
-
+print "--- CREATED TABLE: %s ---" % tob.table
+print sql
 
 
 

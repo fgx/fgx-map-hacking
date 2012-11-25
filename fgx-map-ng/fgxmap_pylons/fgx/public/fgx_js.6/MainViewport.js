@@ -149,21 +149,17 @@ on_db_browser_widget: function(butt, checked){
 // Map Panels
 //=================================================================================
 
-on_open_map:  function(title, lat, lon, zoom, closable){
+open_map:  function(obj){
 	//console.log("-----------------------------------------");
-	//console.log("on_open_map", title, lat, lon, zoom, closable);
-	var newMap = new FGx.MapViewWidget({
-		title: title, closable: closable, 
-		//sflightsStore: this.xFlightsStore,
-		lat: lat, lon: lon, zoom: zoom
-	});
+	console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
+	var newMap = new FGx.MapViewWidget(obj);
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
 	
 },
 
 on_goto: function(butt){
-	this.on_open_map( butt.text, butt.lat, butt.lon, butt.zoom, true);
+	this.open_map( butt.text, butt.lat, butt.lon, butt.zoom, true);
 },
 
 
@@ -347,15 +343,10 @@ constructor: function(config) {
 }, // Constructor	
 
 
-open_airport: function(obj){
-	//console.log("yes", obj);
-	this.on_open_map(obj.apt_ident, null, null, null, false);
-},
-
 initialize:  function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );
 //	: new OpenLayers.LonLat(939262.20344,5938898.34882),
-	this.on_open_map("Main Map", null, null, null, false)
+	this.open_map({title: "Main Map", closable:false})
 	
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });

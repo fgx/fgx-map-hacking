@@ -9,16 +9,16 @@ from fgx.model.data import Airport, Runway
 def airports(apt_ident=None, apt_name_ascii=None, bounds=None, apt_type=None, lookup=True):
  
     ## The cols to return, this is a string with spces and split later
-	cols_str = "apt_ident apt_name_ascii apt_authority apt_size"
-	
-
+	cols_str = "apt_ident apt_name_ascii apt_authority apt_size "
+	cols_str += " apt_center_lat apt_center_lon "
+	#cols_str += " apt_center_lat84 apt_center_lon84 "
 		
 	## now we make the select.. parts
 	sql, cols = meta.select_sql(cols_str)
 
-	sql += ", ST_X(apt_center) as apt_center_lat,  ST_Y(apt_center) as apt_center_lon "
-	cols.append("apt_center_lat")
-	cols.append("apt_center_lon")
+	#sql += ", ST_X(apt_center) as apt_center_lat,  ST_Y(apt_center) as apt_center_lon "
+	#cols.append("apt_center_lat")
+	#cols.append("apt_center_lon")
 	## now the tables and joins
 	sql += " from airport "
 	#sql += " inner join another_table on airport.apt_ident = another_table.apt_ident "

@@ -1,24 +1,138 @@
+NOTE_FROM_PETE: "we can include filly keys.. " 
+
 description: "airport table"
-table: "airport"
+
 label: "Airports"
 
 sources: "Foo bar was here"
 
 author: "Gral"
 
-cols:
-    -   name: apt_pk
+table: "airport"
+prefix: "apt_"
+fields:
+    -
+        name: apt_pk
         type: serial PRIMARY KEY
         size: 
-        comment: "Primary key"
 
-    -   name: apt_ident
+    -
+        name: apt_ident
         type: varchar
         size: 8
-        index: true
 
-    -   name: apt_xplane_code
-        field: apt_xplane_code
+    -
+        name: apt_local_code
+        type: varchar
+        size: 8
+
+    -
+        name: apt_name_ascii
+        type: varchar
+        size: 255
+
+    -
+        name: apt_name_utf8
+        type: varchar
+        size: 255
+
+    -
+        name: apt_country
+        type: varchar
+        size: 8
+
+    -
+        name: apt_type
+        type: varchar
+        size: 255
+
+    -
+        name: apt_elev_ft
+        type: varchar
+        size: 32
+
+    -
+        name: apt_elev_m
+        type: varchar
+        size: 32
+
+    -
+        name: apt_authority
+        type: varchar
+        size: 32
+
+    -
+        name: apt_services
+        type: varchar
+        size: 1
+
+    -
+        name: apt_ifr
+        type: varchar
+        size: 1
+
+    -
+        name: apt_size
+        type: varchar
+        size: 32
+
+    -
+        name: apt_center
+        type: geometry(Point,3857)
+        size:
+
+    -
+        name: apt_center_lon
+        type: varchar
+        size: 32
+
+    -
+        name: apt_center_lat
+        type: varchar
+        size: 32
+
+    -
+        name: apt_center_lon84
+        type: varchar
+        size: 32
+
+    -
+        name: apt_center_lat84
+        type: varchar
+        size: 32
+
+    -
+        name: apt_range_30nm
+        type: geometry(Polygon,3857)
+        size:
+
+    -
+        name: apt_range_10nm
+        type: geometry(Polygon,3857)
+        size:
+
+    -
+        name: apt_rwy_count
+        type: varchar
+        size: 2
+
+    -
+        name: apt_min_rwy_len_ft
+        type: varchar
+        size: 32
+
+    -
+        name: apt_max_rwy_len_ft
+        type: varchar
+        size: 32
+
+    -
+        name: apt_search
+        type: varchar
+        size: 255
+
+    -
+        name: apt_xplane_code
         type: varchar
         size: 8
 
