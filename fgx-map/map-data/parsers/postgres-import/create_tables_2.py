@@ -6,7 +6,7 @@
 #
 # Modified by Pete Morgan, Wales UK
 
-import sys, psycopg2, yaml, yaml.constructor
+import sys, yaml
 
 from optparse import OptionParser
 
