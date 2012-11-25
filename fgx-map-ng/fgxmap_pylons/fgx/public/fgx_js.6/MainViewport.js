@@ -12,7 +12,6 @@ widgets: {
 	FlightPlansWidget: null
 },
 
-
 //===========================================================
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
@@ -348,6 +347,10 @@ constructor: function(config) {
 }, // Constructor	
 
 
+open_airport: function(obj){
+	//console.log("yes", obj);
+	this.on_open_map(obj.apt_ident, null, null, null, false);
+},
 
 initialize:  function(){
 	//self.map.setBaseLayer( BASE_LAYERS.osm_light );

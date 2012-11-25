@@ -9,6 +9,10 @@
 {#=======================================================#}
 {% block header %}
 
+<script>
+//** GLOBAL gral.. this one is ok I hopeee
+var VP = null;
+</script>
 
 {{ mac.ext_js(ext_theme=c.ext_theme) }}
 {{ mac.openlayers_js() }}
@@ -47,7 +51,7 @@
 
 <script>
 Ext.onReady(function(){
-	var VP = new FGx.MainViewport();
+	VP = new FGx.MainViewport();
 	VP.initialize();
 
 });

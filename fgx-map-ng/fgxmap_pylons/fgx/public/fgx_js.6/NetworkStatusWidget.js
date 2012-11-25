@@ -6,23 +6,23 @@ FGx.NetworkStatusWidget = Ext.extend(Ext.Panel, {
 bots: ["tracker", "crossfeed", "mpstatus"],
 botActions: null,
 
-get_bot_actions: function(){
-	if(!this.botActions){
+make_bot_actions: function(){
+	//if(!this.botActions){
 		this.botActions = {};
 		var arr = []
 		for(var i = 0; i < this.bots.length; i++){
 			console.log(i, this.bots[i]);
-			this.botActions[this.bots[i]] = new Ext.Toolbar.TextItem({text: this.bots[i]});
+			this.botActions[this.bots[i]] = {text: this.bots[i]};
 			arr.push( this.bots[i] );
 		}
 		console.log(this.botActions);
 		
-	}
-	return this.botActions;
+	//}
+	return arr;
 },
 	
 //===========================================================
-//== Grid
+//== Gridnew Ext.Toolbar.TextItem(
 constructor: function(config) {
 	
 	
@@ -37,7 +37,7 @@ constructor: function(config) {
 		deferredRender : false,
 		tbar: [
 			{xtype: "buttongroup", columns: 3, title: "Bot Status",
-				items: this.get_bot_actions()
+				//items: this.make_bot_actions()
 			}
 		],
 		items : [

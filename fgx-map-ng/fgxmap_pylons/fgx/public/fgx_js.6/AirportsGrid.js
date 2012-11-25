@@ -14,8 +14,9 @@ action_new_tab: function(){
 			scope: this,
 			handler: function(){
 				var r = this.get_airports_grid().getSelectionModel().getSelected().data;	
-				console.log("OPEN", r);
-				this.fireEvent("OPEN_AIRPORT", r);
+				//console.log("OPEN", r);
+				//this.fireEvent("OPEN_AIRPORT", r);
+				VP.open_airport(r);
 			}
 		});
 	
@@ -58,7 +59,7 @@ get_airports_grid: function(){
 			]
 		});
 		this.xAirportsGrid.getSelectionModel().on("selectionchange", function(grid, idx, e){
-			console.log("selchan");
+			//console.log("selchan");
 			var sm = this.get_airports_grid().getSelectionModel();
 			if( !sm.hasSelection()){
 				this.action_new_tab().setDisabled(true);
