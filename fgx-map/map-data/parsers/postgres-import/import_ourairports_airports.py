@@ -50,8 +50,6 @@ def readourairports():
 		
 		fetchy = cur.fetchall()
 		
-		print fetchy
-		
 		if fetchy != []:
 		
 			ident_search = fetchy[0][0]

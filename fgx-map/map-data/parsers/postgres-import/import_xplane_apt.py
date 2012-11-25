@@ -38,6 +38,8 @@ if "host" in confMap:
 conn = psycopg2.connect(connectstring)
 cur = conn.cursor()
 
+count = 0
+
 pointscollected = ""
 runwaycount = 0
 rwy_len_collect = []
@@ -148,8 +150,6 @@ def drawcircle(rangerad,lon,lat):
 	
 	circlelist += endpoint+"))"
 	return circlelist
-	
-count = 0
 
 def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type):
 
@@ -179,41 +179,6 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	cur.execute(sql3)
 	
 	conn.commit()
-	
-	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(latsql)
-	
-	latlon = cur.fetchall()[0]
-	lat84 = latlon[0]
-	lon84 = latlon[1]
-	
-	# Drawing the range polygons
-	
-	# For more ranges once could use this iter below, for two it's ok to have it 
-	# without I guess, like below-below
-	
-	#listcircles = [55560,18520] # 30/10 nautic miles
-	
-	#for i in listcircles:
-	#	circles = drawcircle(i,lon84,lat84)
-	#	thiscircles = circles[:-2]+"))"
-	#	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	#	cur.execute(rangesql)
-	
-	circles30 = drawcircle(55560,lon84,lat84)
-	circles10 = drawcircle(18520,lon84,lat84)
-	thiscircles30 = circles30[:-2]+"))"
-	thiscircles10 = circles10[:-2]+"))"
-	rangesql30 = "UPDATE airport SET apt_range_30nm=ST_Transform(ST_GeometryFromText('"+thiscircles30+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql30)
-	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(rangesql10)
-	
-	
-	conn.commit()
-	
-	count += 1
-	print count
 
 	
 def insert_runway(apt_ident,\
@@ -275,8 +240,8 @@ def insert_runway(apt_ident,\
 	points = str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + ","
 	
 	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
-	sql2 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center), rwy_center_lat=ST_Y(rwy_center),rwy_center_lon_end=ST_X(rwy_center), rwy_center_lat_end=ST_Y(rwy_center),rwy_threshold_lon=ST_X(rwy_threshold_center), rwy_threshold_lat=ST_Y(rwy_threshold_center),rwy_threshold_lon_end=ST_X(rwy_threshold_center_end), rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rwy_ident+"';"
-	cur.execute(sql2)
+	#sql2 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center), rwy_center_lat=ST_Y(rwy_center),rwy_center_lon_end=ST_X(rwy_center), rwy_center_lat_end=ST_Y(rwy_center),rwy_threshold_lon=ST_X(rwy_threshold_center), rwy_threshold_lat=ST_Y(rwy_threshold_center),rwy_threshold_lon_end=ST_X(rwy_threshold_center_end), rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rwy_ident+"';"
+	#cur.execute(sql2)
 	
 	
 def insert_waterway(apt_ident,\
@@ -730,18 +695,19 @@ def readxplane():
 		global apt_country
 		global apt_name_utf8
 		global apt_local_code
+		
+		global count
 			
 		if line.startswith("\r\n"):
 			# Now this is a new line, means a new airport
 			
-			#warnings.filterwarnings("ignore", category=SyntaxWarning)
+			
 			
 			try:
 				get_rwy_min_max(rwy_len_collect)
 				get_ifr(lightingcollected)
 				get_authority(bcn_type)
 				insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
-				conn.commit()
 				
 			except:
 				log.write("There is a suspicious line in apt.dat (probably wrong newline):\n")
@@ -765,6 +731,10 @@ def readxplane():
 			apt_local_code = ""
 			bcn_type = ""
 			
+			count += 1
+		
+			print count
+			
 			
 
 readxplane()
@@ -775,9 +745,69 @@ readxplane()
 # be unique anyway ...
 
 cur.execute("DELETE FROM airport WHERE apt_pk NOT IN (SELECT MAX(dup.apt_pk) FROM airport As dup GROUP BY dup.apt_ident);")
-print "Removing duplicates ...\n"
+print "Removing duplicates in airports table ..."
 log.write("Duplicates removed.\n")
 conn.commit()
+
+# Doing geometry updates in airports
+sqlapt = "SELECT * from airport"
+cur.execute(sqlapt)
+allapt = cur.fetchall()
+conn.commit()
+
+countapt = 0
+
+print "Drawing range circle airports ..."
+
+for rowapt in allapt: 
+	
+	latsql = "SELECT apt_center_lat84,apt_center_lon84 FROM airport WHERE apt_ident='"+rowapt[1]+"';"
+	cur.execute(latsql)
+	
+	latlon = cur.fetchall()[0]
+	lat84 = latlon[0]
+	lon84 = latlon[1]
+	
+	# Drawing the range polygons
+	
+	# For more ranges once could use this iter below, for two it's ok to have it 
+	# without I guess, like below-below
+	
+	#listcircles = [55560,18520] # 30/10 nautic miles
+	
+	#for i in listcircles:
+	#	circles = drawcircle(i,lon84,lat84)
+	#	thiscircles = circles[:-2]+"))"
+	#	rangesql = "UPDATE airport SET apt_range=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE apt_ident='"+apt_ident+"';"
+	#	cur.execute(rangesql)
+	
+	circles30 = drawcircle(55560,lon84,lat84)
+	circles10 = drawcircle(18520,lon84,lat84)
+	thiscircles30 = circles30[:-2]+"))"
+	thiscircles10 = circles10[:-2]+"))"
+	rangesql30 = "UPDATE airport SET apt_range_30nm=ST_Transform(ST_GeometryFromText('"+thiscircles30+"', 4326),3857) WHERE apt_ident='"+rowapt[1]+"';"
+	cur.execute(rangesql30)
+	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+rowapt[1]+"';"
+	cur.execute(rangesql10)
+	
+	conn.commit()
+
+print "Updating runways with coords ..."
+
+# Doing geometry updates in runways
+sqlrwy = "SELECT * from runway"
+cur.execute(sqlrwy)
+allrwy = cur.fetchall()
+conn.commit()
+
+countrwy = 0
+
+for rowrwy in allrwy: 
+	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
+	sqlrwy2 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center),rwy_center_lat=ST_Y(rwy_center),rwy_center_lon_end=ST_X(rwy_center),rwy_center_lat_end=ST_Y(rwy_center),rwy_threshold_lon=ST_X(rwy_threshold_center),rwy_threshold_lat=ST_Y(rwy_threshold_center),rwy_threshold_lon_end=ST_X(rwy_threshold_center_end),rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rowrwy[2]+"';"
+	cur.execute(sqlrwy2)
+	conn.commit()
+
 
 cur.close()
 conn.close()
