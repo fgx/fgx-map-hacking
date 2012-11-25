@@ -170,14 +170,6 @@ def insert_airport(apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type)
 	params = [apt_ident, apt_name_ascii, apt_elev_ft, apt_elev_m, apt_type, apt_rwy_count, apt_min_rwy_len_ft, apt_max_rwy_len_ft, apt_size, apt_xplane_code, apt_ifr, apt_authority, apt_services, apt_center]
 	cur.execute(sql, params)
 	
-	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
-	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(sql2)
-	
-	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
-	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+apt_ident+"';"
-	cur.execute(sql3)
-	
 	conn.commit()
 
 	
@@ -223,11 +215,11 @@ def insert_runway(apt_ident,\
 	rwy_poly = "POLYGON (( " + str(A_lon) + " " + str(A_lat) + "," + str(B_lon) + " " + str(B_lat) + "," + str(C_lon) + " " + str(C_lat) + "," + str(D_lon) + " " + str(D_lat) + "," + str(A_lon) + " " + str(A_lat) + " ))"
 	#print rwy_polygon
 	
-	rwy_center = "POINT("+rwy_lon84+" "+rwy_lat84+")"
-	rwy_center_end = "POINT("+rwy_lon84_end+" "+rwy_lat84_end+")"
+	rwy_center = "POINT("+str(rwy_lon84)+" "+str(rwy_lat84)+")"
+	rwy_center_end = "POINT("+str(rwy_lon84_end)+" "+str(rwy_lat84_end)+")"
 	
-	rwy_threshold_center = "POINT("+rwy_threshold_lon+" "+rwy_threshold_lat+")"
-	rwy_threshold_center_end = "POINT("+rwy_threshold_lon_end+" "+rwy_threshold_lat_end+")"
+	rwy_threshold_center = "POINT("+str(rwy_threshold_lon)+" "+str(rwy_threshold_lat)+")"
+	rwy_threshold_center_end = "POINT("+str(rwy_threshold_lon_end)+" "+str(rwy_threshold_lat_end)+")"
 	
 	# Geometry is reprojected to EPSG:3857
 	sql = '''
@@ -757,6 +749,20 @@ conn.commit()
 
 countapt = 0
 
+print "Updating coords in airport ..."
+
+for rowapt1 in allapt: 
+
+	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
+	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+rowapt1[1]+"';"
+	cur.execute(sql2)
+	
+	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
+	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+rowapt1[1]+"';"
+	cur.execute(sql3)
+	
+	conn.commit()
+
 print "Drawing range circle airports ..."
 
 for rowapt in allapt: 
@@ -787,9 +793,9 @@ for rowapt in allapt:
 	thiscircles10 = circles10[:-2]+"))"
 	rangesql30 = "UPDATE airport SET apt_range_30nm=ST_Transform(ST_GeometryFromText('"+thiscircles30+"', 4326),3857) WHERE apt_ident='"+rowapt[1]+"';"
 	cur.execute(rangesql30)
+	conn.commit()
 	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+rowapt[1]+"';"
 	cur.execute(rangesql10)
-	
 	conn.commit()
 
 print "Updating runways with coords ..."
