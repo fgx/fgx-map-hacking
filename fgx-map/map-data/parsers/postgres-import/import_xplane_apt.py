@@ -748,6 +748,7 @@ allapt = cur.fetchall()
 conn.commit()
 
 countapt = 0
+countcircle = 0
 
 print "Updating coords in airport ..."
 
@@ -756,12 +757,15 @@ for rowapt1 in allapt:
 	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
 	sql2 = "UPDATE airport SET apt_center_lon=ST_X(apt_center), apt_center_lat=ST_Y(apt_center) WHERE apt_ident='"+rowapt1[1]+"';"
 	cur.execute(sql2)
+	conn.commit()
 	
 	# query gives lon/lat (postgis x/y) as text for the center point in WGS84 format
 	sql3 = "UPDATE airport SET apt_center_lon84=ST_X(ST_Transform(apt_center,4326)), apt_center_lat84=ST_Y(ST_Transform(apt_center,4326)) WHERE apt_ident='"+rowapt1[1]+"';"
 	cur.execute(sql3)
-	
 	conn.commit()
+	
+	countapt += 1
+	print "Update airport: "+rowapt1[1]+" "+str(countapt)
 
 print "Drawing range circle airports ..."
 
@@ -797,6 +801,9 @@ for rowapt in allapt:
 	rangesql10 = "UPDATE airport SET apt_range_10nm=ST_Transform(ST_GeometryFromText('"+thiscircles10+"', 4326),3857) WHERE apt_ident='"+rowapt[1]+"';"
 	cur.execute(rangesql10)
 	conn.commit()
+	
+	countcircle += 1
+	print "Drawing circles: "+str(rowapt[1])+" "+str(countcircle)
 
 print "Updating runways with coords ..."
 
@@ -814,6 +821,8 @@ for rowrwy in allrwy:
 	cur.execute(sqlrwy2)
 	conn.commit()
 
+	countrwy += 1
+	print "Update runway: "+str(rowrwy[1])+" "+str(countrwy)
 
 cur.close()
 conn.close()
