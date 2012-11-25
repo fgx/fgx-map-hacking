@@ -1,4 +1,4 @@
-NOTE_FROM_PETE: "we can include filly keys.. " 
+NOTE_FROM_PETE: "we can include add hock keys like this one keys.. "
 
 description: "airport table"
 
@@ -105,6 +105,12 @@ fields:
         name: apt_range_30nm
         type: geometry(Polygon,3857)
         size:
+        mapnick:
+            style: "FOO"
+            srs: "xx tyttfd foo=123 re "
+        openlayer:
+            name: "Apt Range 30"
+            
 
     -
         name: apt_range_10nm
