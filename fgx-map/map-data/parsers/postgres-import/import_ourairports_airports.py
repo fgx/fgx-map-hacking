@@ -53,7 +53,7 @@ def readourairports():
 		if fetchy != []:
 		
 			ident_search = fetchy[0][0]
-			name_search = fetchy[0][1]
+			name_search = fetchy[0][1].replace("'","’")
 		
 			sql5 = "UPDATE airport SET apt_search='"+ident_search+"' || '"+name_search+"' || '"+apt_local_code+"' || '"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
 			cur.execute(sql5)
