@@ -77,7 +77,7 @@ for i in tableMap.keys():
 	if tableMap[i]['size'] == None:
 		sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + ","# \\\n"
 	else:
-		sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + "(" + str(tableMap[i]['size']) + ")" + ","# \\\n"
+		sqlstring += tableMap[i]['field'] + " " + tableMap[i]['type'] + "(" + str(tableMap[i]['size']) + ") DEFAULT ''" + ","# \\\n"
 	
 sqlstring = sqlstring + ");"
 exe = sqlstring.replace(",);",");")

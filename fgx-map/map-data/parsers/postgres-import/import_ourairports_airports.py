@@ -27,39 +27,43 @@ def readourairports():
 	
 	conn = psycopg2.connect(connectstring)
 	cur = conn.cursor()
+	
+	countupdate = 0
 
 	for row in csvreader:
-		global apt_local_code
 		apt_local_code = row[13]
-		#print apt_local_code
-		global apt_country
 		apt_country = row[8]
-		#print apt_country
-		global apt_name_utf8
 		apt_name_utf8_read = row[3]
 		apt_name_utf8 = apt_name_utf8_read.replace("'", "’")
-		#print apt_name_utf8
 		
-			
-		sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
+		sql3 = "UPDATE airport SET apt_country='"+apt_country+"', apt_local_code='"+apt_local_code+"', apt_name_utf8='"+apt_name_utf8+"' WHERE apt_ident LIKE '"+row[1]+"';"
 		cur.execute(sql3)
 		conn.commit()
 		
-		sql4 = "SELECT apt_ident,apt_name_ascii FROM airport WHERE apt_ident='"+row[1]+"';"
+		
+	#for row1 in csvreader:
+		
+		what_ident = row[1]
+		sql4 = "SELECT apt_ident,apt_name_ascii FROM airport WHERE apt_ident LIKE '"+what_ident+"';"
 		cur.execute(sql4)
+		conn.commit()
 		
-		fetchy = cur.fetchall()
+		fetchy = cur.fetchone()
 		
-		if fetchy != []:
+		if fetchy != None:
+			countupdate += 1
 		
-			ident_search = fetchy[0][0]
-			name_search = fetchy[0][1].replace("'","’")
-		
+			ident_search = fetchy[0]
+			name_search = fetchy[1].replace("'","’")
+			
+			#print ident_search, name_search
 			sql5 = "UPDATE airport SET apt_search='"+ident_search+"' || '"+name_search+"' || '"+apt_local_code+"' || '"+apt_name_utf8+"' WHERE apt_ident='"+row[1]+"';"
 			cur.execute(sql5)
 			conn.commit()
 		
-		print "--- Updated '"+apt_name_utf8+"' with ourairports data."
+		countupdate += 1
+		print countupdate
+		#print "--- Updated '"+apt_name_utf8+"' from ourairports data."
 
 	cur.close()
 	conn.close()
