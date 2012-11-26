@@ -765,7 +765,7 @@ for rowapt1 in allapt:
 	conn.commit()
 	
 	countapt += 1
-	print "Update airport: "+rowapt1[1]+" "+str(countapt)
+	print "Updated airport with human readable coords: "+rowapt1[1]+" "+str(countapt)
 
 print "Drawing range circle airports ..."
 
@@ -803,9 +803,9 @@ for rowapt in allapt:
 	conn.commit()
 	
 	countcircle += 1
-	print "Drawing circles: "+str(rowapt[1])+" "+str(countcircle)
+	print "Drawing circles for airport range: "+str(rowapt[1])+" "+str(countcircle)
 
-print "Updating runways with coords ..."
+print "Updated runways with coords ..."
 
 # Doing geometry updates in runways
 sqlrwy = "SELECT * from runway"
@@ -817,12 +817,25 @@ countrwy = 0
 
 for rowrwy in allrwy: 
 	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
-	sqlrwy2 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center),rwy_center_lat=ST_Y(rwy_center),rwy_center_lon_end=ST_X(rwy_center),rwy_center_lat_end=ST_Y(rwy_center),rwy_threshold_lon=ST_X(rwy_threshold_center),rwy_threshold_lat=ST_Y(rwy_threshold_center),rwy_threshold_lon_end=ST_X(rwy_threshold_center_end),rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rowrwy[2]+"';"
+	sqlrwy1 = "UPDATE runway SET rwy_center_lon=ST_X(rwy_center),rwy_center_lat=ST_Y(rwy_center) WHERE rwy_ident='"+rowrwy[2]+"';"
+	sqlrwy2 = "UPDATE runway SET rwy_center_lon_end=ST_X(rwy_center_end),rwy_center_lat_end=ST_Y(rwy_center_end) WHERE rwy_ident='"+rowrwy[2]+"';"
+	sqlrwy3 = "UPDATE runway SET rwy_threshold_lon=ST_X(rwy_threshold_center),rwy_threshold_lat=ST_Y(rwy_threshold_center) WHERE rwy_ident='"+rowrwy[2]+"';"
+	sqlrwy4 = "UPDATE runway SET rwy_threshold_lon_end=ST_X(rwy_threshold_center_end),rwy_threshold_lat_end=ST_Y(rwy_threshold_center_end) WHERE rwy_ident='"+rowrwy[2]+"';"
+	
+	cur.execute(sqlrwy1)
+	conn.commit()
+	
 	cur.execute(sqlrwy2)
 	conn.commit()
-
+	
+	cur.execute(sqlrwy3)
+	conn.commit()
+	
+	cur.execute(sqlrwy4)
+	conn.commit()
+	
 	countrwy += 1
-	print "Update runway: "+str(rowrwy[1])+" "+str(countrwy)
+	print "Updated runway of airport: "+str(rowrwy[1])+" "+str(countrwy)
 
 cur.close()
 conn.close()
