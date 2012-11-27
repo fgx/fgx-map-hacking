@@ -44,6 +44,24 @@ readnav = open(inputfile)
 
 entrycount = 0
 
+def drawcircle(rangerad,lon,lat):
+    # We need 0 and 360 to close the polygon, see closepoly
+	# What's a 'cricle' ? Should be sufficient to draw arc with 36 points.
+	azi_list = range(0,360,10)
+	circlelist = "POLYGON(("
+	for i in azi_list:
+		# Now be aware of this, geographiclib has lat/lon ordering, and not lon/lat
+		result = Geodesic.WGS84.Direct(float(lat),float(lon),i,float(rangerad))
+		# get it back in the right order
+		circlelist += str(result["lon2"])+" "+str(result["lat2"])+","
+	
+	# End point
+	closepoly = Geodesic.WGS84.Direct(float(lat),float(lon),0,float(rangerad))
+	endpoint = str(closepoly["lon2"])+" "+str(closepoly["lat2"])
+	
+	circlelist += endpoint+"))"
+	return circlelist
+
 def insert_navaid(nav_ident,\
 				apt_ident,\
 				rwy_ident,\
@@ -112,123 +130,165 @@ def insert_navaid(nav_ident,\
 #    of an NDB-DME        
 ##############################################################################################################
 
-for line in readnav:
+def fillthenav():
+
+	for line in readnav:
 	
-	#print line
+		#print line
 	
-	spaceremoved = " ".join(line.split())
-	list = spaceremoved.split(" ")
-	listlen = len(list)
+		spaceremoved = " ".join(line.split())
+		list = spaceremoved.split(" ")
+		listlen = len(list)
 	
-	nav_standalone = "0"
-	nav_no_freq = "1"
-	
-	try:
-		nav_xplane_code = str(list[0])
-		nav_center_lat84 = str(list[1])
-		nav_center_lon84 = str(list[2])
-		nav_elev_ft = str(list[3])
-	
-		# NDB Non-directional beacon
-		if line.startswith("2 "):
-			nav_freq_khz = str(list[4])
-			nav_range_nm = str(list[5])
-			# [6] not used for NDB
-			nav_ident = str(list[7])
-			nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			insert_navaid(nav_ident, None, None, nav_elev_ft, nav_freq_khz, None, None, None, nav_name, nav_suffix, nav_center_lon84,nav_center_lat84, nav_range_nm, None, None, None, nav_xplane_code)
-					
-		# VOR, includes VOR-DMEs and VORTACs
-		if line.startswith("3 "):
-			nav_freq_mhz = str(list[4])
-			nav_range_nm = str(list[5])
-			nav_var_deg = str(list[6])
-			nav_ident = str(list[7])
-			nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			insert_navaid(nav_ident,None,None,nav_elev_ft,None,nav_freq_mhz,None,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None, None, None, nav_xplane_code)
+		nav_standalone = "0"
+		nav_no_freq = "1"
 		
-		# LOC, includes localisers (inc. LOC-only), LDAs and SDFs 
-		if line.startswith("4 ") or line.startswith("5 "):
-			nav_freq_mhz = str(list[4])
-			nav_range_nm = str(list[5])
-			nav_bearing_true = str(list[6])
-			nav_ident = str(list[7])
-			apt_ident = str(list[8])
-			rwy_ident = str(list[9])
-			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			if line.startswith("4 "):
-				nav_standalone = "0"
-			else:
-				nav_standalone = "1"
-			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,nav_standalone,None,nav_xplane_code)
-				
-		# GS, Glideslope associated with an ILS 
-		if line.startswith("6 "):
-			nav_freq_mhz = str(list[4])
-			nav_range_nm = str(list[5])
-			# Glideslope angle multiplied by 100,000 and added (eg.
-			# Glideslope of 3.25 degrees on heading of 123.456 becomes
-			# 325123.456)
-			nav_bearing_true = str(list[6])
-			nav_ident = str(list[7])
-			apt_ident = str(list[8])
-			rwy_ident = str(list[9])
-			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,None,None,nav_xplane_code)
-			
-		# Marker Beacon, Outer (OM), Middle (MM) and Inner (IM) Markers 
-		if line.startswith("7 ") or line.startswith("8 ") or line.startswith("9 "):
-			# [4] and [5] not used
-			nav_bearing_true = str(list[6])
-			# [7] not used
-			apt_ident = str(list[8])
-			rwy_ident = str(list[9])
-			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			insert_navaid(None,apt_ident,rwy_ident,nav_elev_ft,None,None,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,None,None,None,None,nav_xplane_code)
-			
-		# DME, Distance Measuring Equipment 
-		if line.startswith("12 ") or line.startswith("13 "):
-			nav_freq_mhz = str(list[4])
-			nav_range_nm = str(list[5])
-			nav_bias_nm = str(list[6])
-			nav_ident = str(list[7])
-			#apt_ident = str(list[8])
-			#rwy_ident = str(list[9])
-			nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			# specifier is not separated in xplane data, we need the last one
-			nav_suffix = str(list[listlen-1])
-			# 12 = Suppress frequency = 1, 13 = display frequency = 0
-			if line.startswith("12 "):
-				nav_no_freq = "1"
-			else:
-				nav_no_freq = "0"
-			
-			# When DME-ILS there is apt identifier and runway number, but no name
-			if nav_suffix == "DME-ILS":
+		try:
+			nav_xplane_code = str(list[0])
+			nav_center_lat84 = str(list[1])
+			nav_center_lon84 = str(list[2])
+			nav_elev_ft = str(list[3])
+	
+			# NDB Non-directional beacon
+			if line.startswith("2 "):
+				nav_freq_khz = str(list[4])
+				nav_range_nm = str(list[5])
+				# [6] not used for NDB
+				nav_ident = str(list[7])
+				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				insert_navaid(nav_ident, None, None, nav_elev_ft, nav_freq_khz, None, None, None, nav_name, nav_suffix, nav_center_lon84,nav_center_lat84, nav_range_nm, None, None, None, nav_xplane_code)
+					
+			# VOR, includes VOR-DMEs and VORTACs
+			if line.startswith("3 "):
+				nav_freq_mhz = str(list[4])
+				nav_range_nm = str(list[5])
+				nav_var_deg = str(list[6])
+				nav_ident = str(list[7])
+				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				insert_navaid(nav_ident,None,None,nav_elev_ft,None,nav_freq_mhz,None,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None, None, None, nav_xplane_code)
+		
+			# LOC, includes localisers (inc. LOC-only), LDAs and SDFs 
+			if line.startswith("4 ") or line.startswith("5 "):
+				nav_freq_mhz = str(list[4])
+				nav_range_nm = str(list[5])
+				nav_bearing_true = str(list[6])
+				nav_ident = str(list[7])
 				apt_ident = str(list[8])
 				rwy_ident = str(list[9])
-				nav_name = None
+				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				if line.startswith("4 "):
+					nav_standalone = "0"
+				else:
+					nav_standalone = "1"
+				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,nav_standalone,None,nav_xplane_code)
 				
-			else:
-				apt_ident = None
-				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-			insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,None,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,None,nav_no_freq,nav_xplane_code)
+			# GS, Glideslope associated with an ILS 
+			if line.startswith("6 "):
+				nav_freq_mhz = str(list[4])
+				nav_range_nm = str(list[5])
+				# Glideslope angle multiplied by 100,000 and added (eg.
+				# Glideslope of 3.25 degrees on heading of 123.456 becomes
+				# 325123.456)
+				nav_bearing_true = str(list[6])
+				nav_ident = str(list[7])
+				apt_ident = str(list[8])
+				rwy_ident = str(list[9])
+				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,None,None,nav_xplane_code)
 			
-	except:
-		pass
+			# Marker Beacon, Outer (OM), Middle (MM) and Inner (IM) Markers 
+			if line.startswith("7 ") or line.startswith("8 ") or line.startswith("9 "):
+				# [4] and [5] not used
+				nav_bearing_true = str(list[6])
+				# [7] not used
+				apt_ident = str(list[8])
+				rwy_ident = str(list[9])
+				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				insert_navaid(None,apt_ident,rwy_ident,nav_elev_ft,None,None,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,None,None,None,None,nav_xplane_code)
+			
+			# DME, Distance Measuring Equipment 
+			if line.startswith("12 ") or line.startswith("13 "):
+				nav_freq_mhz = str(list[4])
+				nav_range_nm = str(list[5])
+				nav_bias_nm = str(list[6])
+				nav_ident = str(list[7])
+				#apt_ident = str(list[8])
+				#rwy_ident = str(list[9])
+				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				# specifier is not separated in xplane data, we need the last one
+				nav_suffix = str(list[listlen-1])
+				# 12 = Suppress frequency = 1, 13 = display frequency = 0
+				if line.startswith("12 "):
+					nav_no_freq = "1"
+				else:
+					nav_no_freq = "0"
+			
+				# When DME-ILS there is apt identifier and runway number, but no name
+				if nav_suffix == "DME-ILS":
+					apt_ident = str(list[8])
+					rwy_ident = str(list[9])
+					nav_name = None
+					
+				else:
+					apt_ident = None
+					nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,None,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,None,nav_no_freq,nav_xplane_code)
+			
+		except:
+			pass
+
+	readnav.close()
+	
+fillthenav()
+
+def postprocesscircles():
+	# Doing geometry updates in navaid
+	sqlnav = "SELECT * from navaid"
+	cur.execute(sqlnav)
+	allnav = cur.fetchall()
+	conn.commit()
+
+	countcircle = 0
+
+	for rownav in allnav: 
+	
+		latsql = "SELECT nav_center_lat84,nav_center_lon84,nav_range_nm FROM navaid WHERE nav_ident='"+rownav[1]+"' AND nav_range_nm IS NOT NULL;"
+		cur.execute(latsql)
+		conn.commit()
+	
+		latlon = cur.fetchone()
 		
+		lat84 = latlon[0]
+		lon84 = latlon[1]
+		navrange = int(latlon[2])*1852 # getting the range in meter
+	
+		# Drawing the range polygons
+	
+		circlerange = drawcircle(navrange,lon84,lat84)
+		thiscircles = circlerange[:-2]+"))"
+		
+		rangesql = "UPDATE navaid SET nav_range_poly=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE nav_ident='"+rownav[1]+"';"
+		cur.execute(rangesql)
+		conn.commit()
+	
+		countcircle += 1
+		print "Drawing circles for navaid range: "+str(rownav[1])+" "+str(countcircle)
+
+postprocesscircles()
+
 conn.close()
-readnav.close()
+
+
 
 endtime = time.asctime()
 
