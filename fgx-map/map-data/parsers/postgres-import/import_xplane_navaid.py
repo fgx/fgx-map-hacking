@@ -97,12 +97,6 @@ def insert_navaid(nav_ident,\
 		cur.execute(sql, params)
 	except:
 		print "Database Error, check sql and parameters."
-		
-	# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
-	sql2 = "UPDATE navaid SET nav_center_lon=ST_X(nav_center), nav_center_lat=ST_Y(nav_center) WHERE nav_ident='"+nav_ident+"';"
-	cur.execute(sql2)
-	
-	conn.commit()
 
 
 
@@ -262,13 +256,17 @@ def postprocesscircles():
 
 	for rownav in allnav: 
 	
-		latsql = "SELECT nav_center_lat84,nav_center_lon84,nav_range_nm FROM navaid WHERE nav_ident='"+rownav[1]+"';"
+		# query gives lon/lat (postgis x/y) as text for the center point in reprojected format
+		sql2 = "UPDATE navaid SET nav_center_lon=ST_X(nav_center), nav_center_lat=ST_Y(nav_center) WHERE nav_pk="+str(rownav[0])+";"
+		cur.execute(sql2)
+	
+		conn.commit()
+	
+		latsql = "SELECT nav_center_lat84,nav_center_lon84,nav_range_nm FROM navaid WHERE nav_pk="+str(rownav[0])+";"
 		cur.execute(latsql)
 		conn.commit()
 	
 		latlon = cur.fetchone()
-		
-		print latlon[0]
 		
 		# Do not draw circles where you can't find a range, you
 		if latlon[2] != None:
@@ -282,7 +280,7 @@ def postprocesscircles():
 			circlerange = drawcircle(navrange,lon84,lat84)
 			thiscircles = circlerange[:-2]+"))"
 		
-			rangesql = "UPDATE navaid SET nav_range_poly=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE nav_ident='"+rownav[1]+"';"
+			rangesql = "UPDATE navaid SET nav_range_poly=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE nav_pk="+str(rownav[0])+";"
 			cur.execute(rangesql)
 			conn.commit()
 	
