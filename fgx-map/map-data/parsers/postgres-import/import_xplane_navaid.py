@@ -83,18 +83,13 @@ def insert_navaid(nav_ident,\
 	'''nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code'''
 	'''separated: nav_center,nav_center_lon,nav_center_lat,nav_range_poly'''
 	
-	#print nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code
-	
 	nav_center = "POINT("+nav_center_lon84+" "+nav_center_lat84+")"
 	
 	sql = '''INSERT INTO navaid (nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code,nav_center)
 		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,ST_Transform(ST_GeomFromText(%s, 4326),3857))'''
 	
-	#print sql
 	
 	params = [nav_ident,apt_ident,rwy_ident,nav_elev_ft,nav_freq_khz,nav_freq_mhz,nav_bearing_true,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,nav_standalone,nav_no_freq,nav_xplane_code,nav_center]
-	
-	#print params
 	
 	print "Inserted: "+nav_ident
 	
@@ -132,6 +127,8 @@ def insert_navaid(nav_ident,\
 
 def fillthenav():
 
+	marker_count = 1000
+
 	for line in readnav:
 	
 		#print line
@@ -158,7 +155,7 @@ def fillthenav():
 				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 				# specifier is not separated in xplane data, we need the last one
 				nav_suffix = str(list[listlen-1])
-				insert_navaid(nav_ident, None, None, nav_elev_ft, nav_freq_khz, None, None, None, nav_name, nav_suffix, nav_center_lon84,nav_center_lat84, nav_range_nm, None, None, None, nav_xplane_code)
+				#insert_navaid(nav_ident, None, None, nav_elev_ft, nav_freq_khz, None, None, None, nav_name, nav_suffix, nav_center_lon84,nav_center_lat84, nav_range_nm, None, None, None, nav_xplane_code)
 					
 			# VOR, includes VOR-DMEs and VORTACs
 			if line.startswith("3 "):
@@ -169,7 +166,7 @@ def fillthenav():
 				nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 				# specifier is not separated in xplane data, we need the last one
 				nav_suffix = str(list[listlen-1])
-				insert_navaid(nav_ident,None,None,nav_elev_ft,None,nav_freq_mhz,None,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None, None, None, nav_xplane_code)
+				#insert_navaid(nav_ident,None,None,nav_elev_ft,None,nav_freq_mhz,None,nav_var_deg,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None, None, None, nav_xplane_code)
 		
 			# LOC, includes localisers (inc. LOC-only), LDAs and SDFs 
 			if line.startswith("4 ") or line.startswith("5 "):
@@ -186,7 +183,7 @@ def fillthenav():
 					nav_standalone = "0"
 				else:
 					nav_standalone = "1"
-				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,nav_standalone,None,nav_xplane_code)
+				#insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,nav_standalone,None,nav_xplane_code)
 				
 			# GS, Glideslope associated with an ILS 
 			if line.startswith("6 "):
@@ -202,7 +199,7 @@ def fillthenav():
 				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
 				# specifier is not separated in xplane data, we need the last one
 				nav_suffix = str(list[listlen-1])
-				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,None,None,nav_xplane_code)
+				#insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,None,None,None,nav_xplane_code)
 			
 			# Marker Beacon, Outer (OM), Middle (MM) and Inner (IM) Markers 
 			if line.startswith("7 ") or line.startswith("8 ") or line.startswith("9 "):
@@ -211,11 +208,14 @@ def fillthenav():
 				# [7] not used
 				apt_ident = str(list[8])
 				rwy_ident = str(list[9])
-				nav_name = str(list[10:listlen]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
+				nav_name = None
 				# specifier is not separated in xplane data, we need the last one
 				nav_suffix = str(list[listlen-1])
-				insert_navaid(None,apt_ident,rwy_ident,nav_elev_ft,None,None,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,None,None,None,None,nav_xplane_code)
-			
+				# Sorry, markers need an identifier, for database reasons
+				marker_count += 1
+				nav_ident = nav_suffix+str(marker_count)
+				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,None,nav_bearing_true,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,None,None,None,None,nav_xplane_code)
+				
 			# DME, Distance Measuring Equipment 
 			if line.startswith("12 ") or line.startswith("13 "):
 				nav_freq_mhz = str(list[4])
@@ -242,7 +242,7 @@ def fillthenav():
 				else:
 					apt_ident = None
 					nav_name = str(list[8:listlen-1]).replace("', '", " ").replace("['","").replace("']","").replace("[]","")
-				insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,None,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,None,nav_no_freq,nav_xplane_code)
+				#insert_navaid(nav_ident,apt_ident,rwy_ident,nav_elev_ft,None,nav_freq_mhz,None,None,nav_name,nav_suffix,nav_center_lon84,nav_center_lat84,nav_range_nm,nav_bias_nm,None,nav_no_freq,nav_xplane_code)
 			
 		except:
 			pass
@@ -284,7 +284,7 @@ def postprocesscircles():
 		countcircle += 1
 		print "Drawing circles for navaid range: "+str(rownav[1])+" "+str(countcircle)
 
-postprocesscircles()
+#postprocesscircles()
 
 conn.close()
 
