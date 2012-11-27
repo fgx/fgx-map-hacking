@@ -262,27 +262,32 @@ def postprocesscircles():
 
 	for rownav in allnav: 
 	
-		latsql = "SELECT nav_center_lat84,nav_center_lon84,nav_range_nm FROM navaid WHERE nav_ident='"+rownav[1]+"' AND nav_range_nm IS NOT NULL;"
+		latsql = "SELECT nav_center_lat84,nav_center_lon84,nav_range_nm FROM navaid WHERE nav_ident='"+rownav[1]+"';"
 		cur.execute(latsql)
 		conn.commit()
 	
 		latlon = cur.fetchone()
 		
-		lat84 = latlon[0]
-		lon84 = latlon[1]
-		navrange = int(latlon[2])*1852 # getting the range in meter
-	
-		# Drawing the range polygons
-	
-		circlerange = drawcircle(navrange,lon84,lat84)
-		thiscircles = circlerange[:-2]+"))"
+		print latlon[0]
 		
-		rangesql = "UPDATE navaid SET nav_range_poly=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE nav_ident='"+rownav[1]+"';"
-		cur.execute(rangesql)
-		conn.commit()
+		# Do not draw circles where you can't find a range, you
+		if latlon[2] != None:
+		
+			lat84 = latlon[0]
+			lon84 = latlon[1]
+			navrange = int(latlon[2])*1852 # getting the range in meter
 	
-		countcircle += 1
-		print "Drawing circles for navaid range: "+str(rownav[1])+" "+str(countcircle)
+			# Drawing the range polygons
+			
+			circlerange = drawcircle(navrange,lon84,lat84)
+			thiscircles = circlerange[:-2]+"))"
+		
+			rangesql = "UPDATE navaid SET nav_range_poly=ST_Transform(ST_GeometryFromText('"+thiscircles+"', 4326),3857) WHERE nav_ident='"+rownav[1]+"';"
+			cur.execute(rangesql)
+			conn.commit()
+	
+			countcircle += 1
+			print "Drawing circles for navaid range: "+str(rownav[1])+" "+str(countcircle)
 
 postprocesscircles()
 
