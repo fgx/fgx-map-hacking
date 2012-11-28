@@ -55,20 +55,6 @@ class AjaxMpnetController(BaseController):
 		payload['mpstatus'] = [ob.dic() for ob in obs]
 		
 		return payload
-
-		
-	@jsonify
-	def tracker(self, callsign=None):
-		payload = dict(success=True)
-		obs = meta.Sess.mpnet.query(FlightWayPoint
-				).filter_by(callsign=callsign
-				).order_by(FlightWayPoint.wp_id.desc()
-				).limit(50).all()
-		payload['tracks'] = [ob.dic() for ob in obs]
-		
-		return payload	
-		
-		
 		
 		
 	@jsonify
@@ -108,11 +94,3 @@ class AjaxMpnetController(BaseController):
 		return payload#
 		
 		
-	@jsonify	
-	def traffic_log(self):
-		
-		payload = dict(success=True)
-		
-		payload['traffic_log'] = [ob.dic() for ob in meta.Sess.mpnet.query(TrafficLog).order_by(TrafficLog.id.desc()).limit(500).all()]
-		
-		return payload
