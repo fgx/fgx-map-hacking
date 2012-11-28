@@ -3,7 +3,6 @@ import os
 
 from jinja2 import ChoiceLoader, Environment, FileSystemLoader
 from pylons.configuration import PylonsConfig
-#from pylons.error import handle_mako_error
 from sqlalchemy import engine_from_config
 
 import fgx.lib.app_globals as app_globals
@@ -47,7 +46,7 @@ def load_environment(global_conf, app_conf, start_bots):
 							)
 	)
 	
-	# Setup the SQLAlchemy database engine
+	# Setup the SQLAlchemy database engines
 	class Engines(object):
 		pass
 	engines = Engines()
@@ -65,7 +64,6 @@ def load_environment(global_conf, app_conf, start_bots):
 	##====================================================
 	## Start the background processes
 	if start_bots:
-		#pass
 		statusThread = MpStatusThread(config=config)
 		statusThread.start()
 		

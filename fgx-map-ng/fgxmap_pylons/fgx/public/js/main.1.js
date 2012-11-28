@@ -1,3 +1,0 @@
-
-
-Ext.namespace("FGx");

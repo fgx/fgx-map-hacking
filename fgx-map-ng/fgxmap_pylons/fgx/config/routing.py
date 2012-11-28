@@ -74,10 +74,7 @@ def make_map(config):
 	map.connect('/ajax/mpnet/flights/crossfeed', controller="ajax_mpnet", action="crossfeed")
 	map.connect('/ajax/mpnet/flights/telnet/{server}', controller="ajax_mpnet", action="telnet")
 	map.connect('/ajax/mpnet/flights', controller="ajax_mpnet", action="flights")
-	
-	map.connect('/ajax/mpnet/traffic_log', controller="ajax_mpnet", action="traffic_log")
-	map.connect('/ajax/mpnet/tracker/{callsign}', controller="ajax_mpnet", action="tracker")
-	
+		
 	
 	##=======================================================================
 	# Ajax Navaids
@@ -103,15 +100,15 @@ def make_map(config):
 	map.connect('/ajax/users', controller="ajax_users", action="users")
 	map.connect('/ajax/user/{user_id}', controller="ajax_users", action="user")
 	
-	#map.connect('/ajax/*', controller="ajax_db", action="scolumns")
-	
 	
 	
 	##=======================================================================
 	## HTML Pages
 	##=======================================================================
+	## The css for icons
 	map.connect('/dynamic.{fgx_ver}.css', controller='html_pages', action="dynamic_icons_css")
 	
+	# TODO
 	map.connect('/admin/users', controller="html_pages", action="admin_users")
 	
 	map.connect('/{page}', controller="html_pages", action="index")

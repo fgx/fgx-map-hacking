@@ -66,47 +66,4 @@ def query_to_dic(resultsObj, cols):
 		return_list.append(dic)
 	return return_list	
 
-def UMM_results_to_dic(arr, results):
-	ret = []
-	for r in results:
-		d = {}
-		for idx in range(0, len(arr) ):
-			
-			ki = arr[idx].split(".")[1] if arr[idx].find(".") > 1 else arr[idx]
-			vari = r[idx]
-			
-			if isinstance(vari, datetime.datetime):
-				d[ki] = vari.strftime("%Y-%m-%d %H:%M:%S")
-				
-			elif isinstance(vari, datetime.date):
-				d[ki] = vari.strftime("%Y-%m-%d")# %H:%M:%S")
-			
-			elif isinstance(vari, float) or isinstance(vari, int) or isinstance(vari, long):
-				d[ki] = vari
-				#print "float, int", vari
-			
-			elif vari == None:
-				d[ki] = None
-				
-			#elif isinstance(vari, str):
-			#	d[ki] = vari
-				#d[ki] = "#%s" % r[idx]
-				#print "XX", type(vari), vari
-			else:
-				try:
-					sss = vari.decode("ascii")
-				except UnicodeDecodeError:
-					safeS = ""
-					for cIdx in  range(0, len(vari)):
-						singleS = vari[cIdx]
-						if ord(singleS) < 128:
-							safeS += singleS
-						else:
-							safeS += "#@~"
-					sss = safeS
-					#print "FUCKER=", vari, type(vari)
-				#else:
-				#	print "WTF=", vari, type(vari)
-				d[ki] = sss
-		ret.append(d)
-	return ret
+	

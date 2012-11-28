@@ -5,7 +5,7 @@
 
 from fgx.model.meta import Sess, Base
 
-## Load all the models
+## Load all the models here, so 'paster setup-app foo.ini' can create tables
 from fgx.model.data import *
 from fgx.model.secure import *
 from fgx.model.mpnet import *
