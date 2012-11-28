@@ -3,49 +3,12 @@
 =================================================
 
 This wsgi application is built with Pylons.
-Whilst this is an older architecture, it is more fitting for
-use with fgxmap, mainly because it is easy to create threads as background
-processes easily. 
-It also used native libs, instead of plugins as in other frameworks = less external dependancy nightmare..
-
-
-http://www.scribd.com/doc/74070949/Extjs-English-Step-by-step-phonebook-application
-
-
-
-## Programmers Guidelines: 
-* Please use tabs for spacing if possible
-
-This application consists of many parts, as follows
-* all server install that runs a python pylons wsgi server
-* the html page
-** Which loads a whole heap of javascript images etc from various places
-* The ajax service
-* The on demand database queries
-* The map tilecache urls 
-* the configuration..
-
-Goals..
-Make it stateless on server, ie we try not to use sessions.. on server..
-However we can plant these as cookies on machine..
-Make it as fast as possible..
-Ensure errors are reported.. so we can make it bug free
-Make is a nice clean structure, even though its a bit all over the place with pylons..
-Make it easy to josin in.. the dev process
-
-Future..
-Make it easy to install, and aqquire data from upstream instead of having to do all the hassle..
-
-
 
 
 -------------------------
 Content Delivey network
 -------------------------
-Libraies, icons etc are loaded from external servers. as part of the CDN,
-eg
-the famfam icons are at http://ico.freeflightsim.org
-the static lits from fgx-static are at http://fgx-static.freeflightsim.org
+Libraies, icons etc are loaded from static.fgx.ch
 
 
 
@@ -111,20 +74,3 @@ def fix(self, fix=None):
 					flights=mylib.get_flights_function() )
 	return payload 
 
-
---------------------------
-Database
---------------------------
-
-The database models are contained in
-models/__init__.py
-Yes, a lot of models in one file, but this makes it easier to import..
-This is where native sqlalchemy, geoalchemy objects exist.
-@property is cool
-
-
-
-The http://www.geoalchemy.org/ is also included for geometry types
-
-
-MORE TO DO

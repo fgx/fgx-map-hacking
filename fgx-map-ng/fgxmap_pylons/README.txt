@@ -6,15 +6,7 @@ Required python
 sudo easy_install Pylons
 sudo easy_install SQLAlchemy
 sudo easy_install GeoAlchemy
-sudo easy_install pyGeoIP
 sudo easy_install shapley
-
-
---------------------------------------
-maxmind
---------------------------------------
-http://www.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
-http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 
 
 --------------------------------------

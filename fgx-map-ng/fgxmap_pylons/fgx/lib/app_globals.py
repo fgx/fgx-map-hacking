@@ -38,11 +38,6 @@ class Globals(object):
 		
 	@property
 	def static_url(self):
-		#foo = random.sample( ["http://static.fgx.ch", "http://static.freeflightsim.org"], 1)[0]
-		#print foo
-		#return foo
-		# Later this will be a selection of servers of random(x, y, x) if busy
 		return "http://static.fgx.ch"
-		return "http://fgx-static.freeflightsim.org" 
 		
 	
