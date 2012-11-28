@@ -112,8 +112,6 @@ on_flight_plans_widget: function(butt){
 on_flights_widget: function(butt){
 	if(!this.widgets.FlightsViewWidget){
 		this.widgets.FlightsViewWidget = new FGx.FlightsViewWidget({
-			//flightsStore: this.xFlightsStore,
-			//refresh_rate: this.refresh_rate,
 			title: "Flights", 
 			closable: true,
 			xHidden: false
@@ -179,7 +177,7 @@ get_tab_panel: function(){
 		}, this);
 		this.xTabPanel.on("remove", function(panel, widget){
 			
-			console.log("remove", widget.fgxType);
+			//console.log("remove", widget.fgxType);
 			
 			this.widgets[widget.fgxType] = 0;
 			return;
@@ -286,11 +284,6 @@ constructor: function(config) {
 							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
-					// Commented out by gral, we need ONE good theme, and the space in the menubar anyway
-					//"-",
-					//{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
-					//	menu: this.get_styles()
-					//},
 					"-",
 					{tooltip: "About FGx", iconCls: "icoHelp", text: "About", disabled: true,
 						handler: this.on_show_iframe, scope: this,
@@ -299,23 +292,25 @@ constructor: function(config) {
 					"-",
 					//{text: "Settings", iconCls: "icoSettings"},
 					//"-",
+					
+					//== Refresh MP
 					{xtype: 'tbspacer', width: 50},
 					"-",
 					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
-					
-					//{text: "&nbsp;Now", iconCls: "icoRefresh",  handler: this.on_refresh_now, scope: this},
 					this.get_refresh_buttons(),
 					"-",
 					
 					"->",
 					//"-",
 		
+					//== FlightGear Menu
 					"-",
 					{text: "FlightGear", iconCls: "icoFlightGear", disabled: true
 					
 					},
 					"-",	
 					
+					//== FGx Menu
 					{text: "FGx", iconCls: "icoFgx", 
 						menu: [
 							{text: "Issues", url: "http://fgx.ch/projects/fgx-map/issues",
@@ -345,14 +340,14 @@ constructor: function(config) {
 
 
 initialize:  function(){
-	//self.map.setBaseLayer( BASE_LAYERS.osm_light );
-//	: new OpenLayers.LonLat(939262.20344,5938898.34882),
+	
+	//= Add default main map
 	this.open_map({title: "Main Map", closable:false})
 	
+	//= Start MP Refresh 
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	//this.on_flight_plans_widget();
 },
 
 get_refresh_buttons: function(refresh_rate){
@@ -376,7 +371,7 @@ get_refresh_buttons: function(refresh_rate){
 	return items;
 },
 
-//= Riggered for reshresh now
+//= TODO: Tiggered for reshresh now
 refresh_now: function(){
 	console.log("refresh_now");
 	
@@ -391,26 +386,6 @@ on_open_url: function(butt){
 	});
 	this.get_tab_panel().add(iFrame);
 	this.get_tab_panel().setActiveTab(iFrame);
-},
-
-get_styles: function(){
-	var styles = ["xtheme-gray.css", "xtheme-blue.css", "xtheme-access.css"];
-	var arr = [];
-	for(var i=0; i < styles.length; i++){
-		arr.push(
-			new Ext.Action({
-				text: styles[i], 
-				checked: EXT_THEME == styles[i], 
-				ext_style: arr[i],
-				handler: this.on_set_style, scope: this
-			})
-		);
-	}
-	return arr;
-},
-on_set_style: function(butt){
-	location.href = "/?ext_theme=" + butt.text;
-	return
 }
 
 

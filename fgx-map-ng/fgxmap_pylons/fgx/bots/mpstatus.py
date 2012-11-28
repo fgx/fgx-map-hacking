@@ -5,7 +5,6 @@ import time
 import datetime
 import telnetlib
 
-import pygeoip
 
 from fgx.model import meta
 from fgx.model.mpnet import MpServer, BotControl
@@ -18,7 +17,7 @@ class MpStatusThread(threading.Thread):
 	
 	def __init__(self, config):
 		threading.Thread.__init__(self)
-		self.geoCity = pygeoip.GeoIP(config['temp_dir'] + '/maxmind/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+		
 
 	
 	
@@ -33,16 +32,10 @@ class MpStatusThread(threading.Thread):
 		try:
 			socket.setdefaulttimeout(10)
 			ip_address = socket.gethostbyname(domain_name)
-			geo_data = self.geoCity.record_by_addr(ip_address)
-			print socket.getaddrinfo(domain_name, 5000)
+			#print socket.getaddrinfo(domain_name, 5000)
 			if self.DEBUG:
 				print "  > Found ADDR: %s = %s " % (domain_name, ip_address)
-			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address,
-							'lat': geo_data['latitude'] if geo_data else None,
-							'lon': geo_data['longitude'] if geo_data else None,
-							'country': geo_data['country_name'] if geo_data else None,
-							'time_zone': geo_data['time_zone'] if geo_data else None
-						}
+			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address}
 			
 		except socket.gaierror, e:
 			if self.DEBUG:

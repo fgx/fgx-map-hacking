@@ -17,17 +17,7 @@ class HtmlPagesController(BaseController):
 	
 	def index(self, page=None):
 		
-		c.page = page if page else "map-ext"
-		c.ext_theme = None
-		ext_theme_to_set = h.v(request, 'ext_theme')
-		if ext_theme_to_set:
-			response.set_cookie( "ext_theme" , ext_theme_to_set, max_age=180*24*3600 )
-			c.ext_theme = ext_theme_to_set
-		else:
-			c.ext_theme = request.cookies.get("ext_theme")
-		if c.ext_theme == None:
-			c.ext_theme = "xtheme-gray.css"
-		
+		c.page = page if page else "map-ext"	
 		
 		return render("%s.html" % c.page)
 	
