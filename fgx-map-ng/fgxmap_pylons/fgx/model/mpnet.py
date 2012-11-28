@@ -5,53 +5,10 @@ from sqlalchemy import  Boolean, Integer, Float, String, Date, DateTime, Column
 
 from fgx.model.meta import Sess, Base
 
-##=================================================================
-## Tracker
-##=================================================================
 
-class Flight(Base.mpnet):
 	
-	__tablename__ = "flights"
+	
 
-	id = Column(Integer(), primary_key=True)
-	callsign = Column(String(10), index=True)
-	model = Column(String(20), index=True)
-	
-	start_time = time = Column(DateTime())
-	end_time = time = Column(DateTime(), nullable=True)
-	distance = Column(Integer(), nullable=True)
-	
-	max_altimeter = Column(Integer(), nullable=True)
-	max_speed = Column(Integer(), nullable=True)
-	
-	
-class FlightWayPoint(Base.mpnet):
-	
-	__tablename__ = "waypoints"
-
-	wp_id = Column(Integer(), primary_key=True)
-	flight_id = Column(Integer(), nullable=True)
-	
-	callsign = Column(String(20), nullable=True)
-	model = Column(String(20), nullable=True)
-	
-	time = Column(DateTime(timezone=False)) #ZULU?, default=datetime.datetime.now(tz=pytz.timezone('UTC'))
-	
-	## We dont want geometry columns ie no GIS database
-	## also lat/lon is float for calculation ... asks pete ?? 
-	latitude = Column(Float())
-	longitude = Column(Float())
-	speed = Column(Integer())
-	altitude = Column(Integer())
-	heading = Column(Integer(), nullable=True)
-	
-	def dic(self):
-		return {
-			"time": str(self.time),
-			"lat": self.latitude, "lon": self.longitude,
-			"alt_ft": self.altitude,
-			"spd_kts": self.speed
-			}
 ##=================================================================
 ## MpServer
 ##=================================================================
@@ -114,19 +71,7 @@ class MpServer(Base.mpnet):
 ## Bot Control and state
 ##=================================================================
 
-## Records when the bot last did a DNS check
-class TrafficLog(Base.mpnet):
-	
-	__tablename__ = "traffic_log"
 
-	id = Column(Integer(), primary_key=True)
-	
-	flights = Column(Integer())
-	ts = Column(DateTime(), default=datetime.datetime.utcnow())
-	
-	def dic(self):
-		
-		return {'ts': str(self.ts), 'flights': self.flights, "id": self.id}
 	
 ## Records when the bot last did a DNS check
 class BotControl(Base.mpnet):
