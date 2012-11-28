@@ -325,8 +325,8 @@ get_layers: function(){
 		
 		new OpenLayers.Layer.WMS(
 			"Landmass",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
-				{layers: "natural_earth_landmass" , isBaselayer: "True", format: "image/png" 
+			"http://mapnik.fgx.ch:81/tilecache.py?",
+				{layers: "osm_coastline" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
 		this.L.blip,
