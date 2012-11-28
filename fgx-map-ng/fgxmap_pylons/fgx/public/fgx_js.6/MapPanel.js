@@ -42,9 +42,9 @@ get_map: function(){
 			// (This would not be necessary for 4326/900913 because this values are widely spread in
 			// openlayer/osm/google threads, you will find the resolutions there)
 			resolutions: [
-				156543.03390625, 
-				78271.516953125, 
-				39135.7584765625, 
+				//156543.03390625, 
+				//78271.516953125, 
+				//39135.7584765625, 
 				19567.87923828125, 
 				9783.939619140625, 
 				4891.9698095703125, 
@@ -65,7 +65,7 @@ get_map: function(){
 			],
 			
 			// I set a max and min resolution, means setting available zoomlevels by default
-			maxResolution: 156543.03390624999883584678,
+			maxResolution: 19567.87923828125, //156543.03390624999883584678,
 			minResolution: 0.29858214169740676658,
 			
 			// i.e. maxExtent for EPSG 3572 is derived by browsing the very useful map at
@@ -74,7 +74,7 @@ get_map: function(){
 			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
 			
 			// zoomlevels 0-13 = 14 levels ?
-			zoomLevels: 20
+			zoomLevels: 17
 		});
 		this.xMap.addControl( this.get_graticule() );
 		this.xMap.events.register("mousemove", this, function (e) {
