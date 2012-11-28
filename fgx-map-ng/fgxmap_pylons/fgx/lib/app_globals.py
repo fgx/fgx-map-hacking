@@ -43,6 +43,6 @@ class Globals(object):
 		#return foo
 		# Later this will be a selection of servers of random(x, y, x) if busy
 		return "http://static.fgx.ch"
-		return "http://fgx-static.freeflightsim.org"
+		return "http://fgx-static.freeflightsim.org" 
 		
 	

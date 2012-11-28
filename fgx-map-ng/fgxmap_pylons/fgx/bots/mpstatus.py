@@ -34,7 +34,7 @@ class MpStatusThread(threading.Thread):
 			socket.setdefaulttimeout(10)
 			ip_address = socket.gethostbyname(domain_name)
 			geo_data = self.geoCity.record_by_addr(ip_address)
-			#print socket.getaddrinfo(domain_name, 5000)
+			print socket.getaddrinfo(domain_name, 5000)
 			if self.DEBUG:
 				print "  > Found ADDR: %s = %s " % (domain_name, ip_address)
 			return True, {'host': domain_name, 'no': server_no, 'ip': ip_address,
