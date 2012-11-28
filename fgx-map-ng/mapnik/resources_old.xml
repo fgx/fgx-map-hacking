@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+
+<!-- (c) 2011 Yves Sablonier, Zurich, Licence: GNU GPLv2 -->
+<!-- Do not remove this copyright notice -->
+<!-- Code based on core and examples by Artem Pavlenko, Dane Springmeyer & Co. -->
+<!-- Please visit "Mapnik2" and "mapnik-utils" -->
+
+<!-- Projection: 900913 == 900913, 900913 is out -->
+
+
+<Map srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs">
+
+
+  <!-- ********** NATURAL EARTH : LANDMASS ********** -->
+
+  <Style name="FGX_NE_LANDMASS">
+    <Rule>
+      <PolygonSymbolizer fill="#fbf8ef" />
+    </Rule>
+  </Style>
+  
+  <Layer name="natural_earth_landmass" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>FGX_NE_LANDMASS</StyleName>
+    <Datasource>
+      <Parameter name="type">shape</Parameter>
+      <Parameter name="file">/home/map/fgx-map/fgx-map/htdocs/data/ne_layers/3857/landmass</Parameter>
+    </Datasource>
+  </Layer>
+  
+    <!-- ********** XPLANE 1000: RWY (rwy) ********** -->
+  
+  <Style name="RWY">
+    <Rule>
+	 <PolygonSymbolizer fill="#999999" fill-opacity="0.7" />
+	</Rule>
+  </Style>
+  
+  <Layer name="Runway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>RWY</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">runways</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: AIRPORTS (apt) ********** -->
+  
+  <Style name="APT">
+    <!--<Rule>
+	 <Filter>[has_tower] > 0</Filter>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/apt-tower.png" width="16" height="16" type="png" opacity="0.7"/>
+	  <TextSymbolizer name="[apt_icao]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="10" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[apt_name]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="8" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>-->
+   <Rule>
+    <!--<ElseFilter/>-->
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/apt.png" width="14" height="14" type="png" opacity="0.75"/>
+	 <TextSymbolizer name="[icao]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+     <TextSymbolizer name="[name]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+   </Rule>
+  </Style>
+
+  
+  <Layer name="Airfield" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>APT</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">airports</Parameter>
+    </Datasource>
+  </Layer>
+  
+  
+  <!-- ********** XPLANE 1000: VOR (vor) ********** -->
+  
+  <Style name="VOR">
+    <Rule>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/vor.png" width="16" height="16" type="png" opacity="0.7"/>
+	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="false"/>
+      <TextSymbolizer name="[freq_mhz]" dy="9" dx="15" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[navaid_name]" dy="0" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="false"/>
+	  <TextSymbolizer name="[elevation_m]" dy="10" dx="66" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[slaved_variation_deg]" dy="22" dx="15" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+  </Style>
+  
+  <Layer name="VOR" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>VOR</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">vor</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: DME (dme) ********** -->
+  
+  <Style name="DME">
+    <Rule>
+	<PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/dme.png" width="16" height="16" type="png" opacity="0.7"/>
+	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[navaid_name]" dy="0" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[freq_mhz]" dy="9" dx="15" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[elevation_m]" dy="10" dx="66" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[range_km]" dy="22" dx="15" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+  </Style>
+  
+  <Layer name="DME" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>DME</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">dme</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: NDB (ndb) ********** -->
+  
+  <Style name="NDB">
+    <Rule>
+	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ndb.png" width="35" height="35" type="png" opacity="0.7"/>
+	  <TextSymbolizer name="[navaid_id]" dy="-10" dx="23" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="red" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[navaid_name]" dy="0" dx="23" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+ 	  <TextSymbolizer name="[freq_khz]" dy="9" dx="23" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[elevation_m]" dy="10" dx="74" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[range_km]" dy="22" dx="23" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+  </Style>
+  
+  <Layer name="NDB" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>NDB</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">ndb</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: ILS (ils) ********** -->
+  
+  <Style name="ILS">
+    <Rule>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ils_localizer.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <TextSymbolizer name="[navaid_id]" dy="-12" dx="14" face-name="Asap Regular" character-spacing="2" size="11" fill="#ff0000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
+	</Rule>
+  </Style>
+  
+  <Layer name="ILS" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>ILS</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">ils</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: ILS INFO (ils) ********** -->
+  
+  <Style name="ILS_INFO">
+    <Rule>
+	  <ShieldSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/bg_666666_20x13.png" name="[rwy_num]" dy="0" dx="0" shield-dy="0" shield-dx="23" face-name="Asap Bold" character-spacing="1" size="11" fill="#ffffff" type="png" width="20" height="13" />
+	  <TextSymbolizer name="[subtype]" dy="0" dx="38" face-name="Asap Regular" character-spacing="1" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[freq_mhz]" dy="9" dx="14" face-name="Asap Bold" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[elevation_m]" dy="10" dx="66" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	  <TextSymbolizer name="[true_heading_deg]" dy="22" dx="14" face-name="Asap Regular" character-spacing="2" size="11" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	 </Rule>
+  </Style>
+  
+  <Layer name="ILS_Info" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>ILS_INFO</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">ils</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: ILS MARKER (marker) ********** -->
+  
+  <Style name="ILS_MARKER">
+    <Rule>
+	 <Filter>[subtype] != 'IM'</Filter>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/ils_marker.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <TextSymbolizer name="[subtype]" dy="-5" dx="7" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
+	 </Rule>
+  </Style>
+  
+  <Layer name="ILS_Marker" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>ILS_MARKER</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">marker</Parameter>
+    </Datasource>
+  </Layer>
+  
+  <!-- ********** XPLANE 1000: FIX (fix) ********** -->
+  
+  <Style name="FIX">
+    <Rule>
+	 <Filter>[fix_name].match('[A-Z][A-Z][A-Z][A-Z][A-Z]')</Filter>
+	 <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/vfr_fix.png" width="16" height="16" type="png" opacity="0.9"/>
+	 <TextSymbolizer name="[fix_name]" dy="-5" dx="7" face-name="Asap Regular" character-spacing="2" size="9" fill="#000000" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="true" avoid-edges="true"/>
+	 </Rule>
+  </Style>
+  
+  <Layer name="FIX" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
+    <StyleName>FIX</StyleName>
+	<Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+	  <Parameter name="port">5432</Parameter>
+      <Parameter name="dbname">xplanedata1000</Parameter>
+      <Parameter name="user">webuser</Parameter>      
+      <Parameter name="password">password</Parameter>
+      <Parameter name="table">fix</Parameter>
+    </Datasource>
+  </Layer>
+  
+  
+</Map>

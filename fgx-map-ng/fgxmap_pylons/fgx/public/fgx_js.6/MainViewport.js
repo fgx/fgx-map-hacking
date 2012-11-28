@@ -286,10 +286,11 @@ constructor: function(config) {
 							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
 						]
 					},
-					"-",
-					{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
-						menu: this.get_styles()
-					},
+					// Commented out by gral, we need ONE good theme, and the space in the menubar anyway
+					//"-",
+					//{tooltip: "Select Style", iconCls: "icoSelectStyle", text: "Theme", 
+					//	menu: this.get_styles()
+					//},
 					"-",
 					{tooltip: "About FGx", iconCls: "icoHelp", text: "About", disabled: true,
 						handler: this.on_show_iframe, scope: this,
