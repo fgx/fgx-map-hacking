@@ -319,6 +319,9 @@ get_layers: function(){
 			{layers: "FIX" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
+				  
+				  
+		
 		/// Underlays
 		this.L.lite,
 		new OpenLayers.Layer.OSM.Mapnik( "OSM" ),
@@ -329,6 +332,20 @@ get_layers: function(){
 				{layers: "osm_coastline" , isBaselayer: "True", format: "image/png" 
 				}, {  visibility: false}
 		),
+				  
+		new OpenLayers.Layer.WMS( 
+			"Relief", 
+			//"http://maptest.fgx.ch:81/mapnik/tilecache.py?",
+			"http://mapnik.fgx.ch:81/wms.py?", 
+			{ layers: 'N40E010', format: "image/png",
+			  isBaselayer: "True", visibility: false},
+			{
+			  maxResolution: 19567.87923828125,   /* start zoom level 0 */
+			  minResolution: 305.74811309814453     /* stop zoom level 6 */
+			}
+			),
+				  
+		
 		this.L.blip,
 		this.L.track,
 		this.L.radarLbl, this.L.radarBlip, 
