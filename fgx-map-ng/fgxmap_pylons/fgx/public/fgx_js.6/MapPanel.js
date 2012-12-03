@@ -337,8 +337,7 @@ get_layers: function(){
 			"Relief", 
 			//"http://maptest.fgx.ch:81/mapnik/tilecache.py?",
 			"http://mapnik.fgx.ch:81/wms.py?", 
-			{ layers: 'N40E010', format: "image/png",
-			  isBaselayer: "True", visibility: false},
+			{ layers: 'N40E010', format: "image/png"},
 			{
 			  maxResolution: 19567.87923828125,   /* start zoom level 0 */
 			  minResolution: 305.74811309814453     /* stop zoom level 6 */
