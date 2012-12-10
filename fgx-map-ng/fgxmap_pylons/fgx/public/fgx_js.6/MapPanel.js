@@ -333,16 +333,18 @@ get_layers: function(){
 				}, {  visibility: false}
 		),
 				  
-		new OpenLayers.Layer.WMS( 
-			"Relief", 
-			//"http://maptest.fgx.ch:81/mapnik/tilecache.py?",
-			"http://mapnik.fgx.ch:81/wms.py?", 
-			{ layers: 'N40E010', format: "image/png"},
+		/* This works for a relief when it is 3857 projection, mapnik itself can do reprojection directly,
+		   but communication between tilecache and openlayers not. Has to be the same resolution. */
+				  
+		/*new OpenLayers.Layer.WMS( 
+			"Landmass", 
+			"http://mapnik.fgx.ch:81/tilecache.py?", 
+								 { layers: 'N40E010', format: "image/png", transparent: "True"},
 			{
-			  maxResolution: 19567.87923828125,   /* start zoom level 0 */
-			  minResolution: 305.74811309814453     /* stop zoom level 6 */
-			}
-			),
+			  maxResolution: 19567.87923828125, */   /* start zoom level 0 */
+			  /*minResolution: 305.74811309814453 */    /* stop zoom level 6 */
+			/*}
+			),*/
 				  
 		
 		this.L.blip,
