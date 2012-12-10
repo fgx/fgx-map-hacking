@@ -65,8 +65,8 @@ get_map: function(){
 			],
 			
 			// I set a max and min resolution, means setting available zoomlevels by default
-			maxResolution: 19567.87923828125, //156543.03390624999883584678,
-			minResolution: 0.29858214169740676658,
+			//maxResolution: 19567.87923828125, //156543.03390624999883584678,
+			//minResolution: 0.29858214169740676658,
 			
 			// i.e. maxExtent for EPSG 3572 is derived by browsing the very useful map at
 			// http://nsidc.org/data/atlas/epsg_3572.html. I tried to get this values with mapnik2 and
@@ -76,16 +76,14 @@ get_map: function(){
 			// zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 17
 		});
-		this.xMap.addControl( this.get_graticule() );
+
 		this.xMap.events.register("mousemove", this, function (e) {
-			var pos = this.get_map().getLonLatFromViewPortPx(e.xy		
-				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );
-			// TODO make sense
-			//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")
-			//	).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-			this.lbl_lat().setValue(pos.lat);
-			this.lbl_lon().setValue(pos.lon);
+				var pos = this.xMap.getLonLatFromPixel(e.xy);
+				pos.transform(new OpenLayers.Projection("EPSG:3857"), new OpenLayers.Projection("EPSG:4326"));
+				this.lbl_lat().setValue(pos.lat);
+				this.lbl_lon().setValue(pos.lon);
 		});
+		
 	}
 	return this.xMap;
 },
@@ -265,6 +263,8 @@ get_layers: function(){
 		//=================================================
 		// Overlay
 		//=================================================
+				  
+		
 		new OpenLayers.Layer.WMS(
 			"DME",
 			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
@@ -320,6 +320,27 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 				  
+		/* This works for a relief when it is 3857 projection, mapnik itself can do reprojection directly,
+		but communication between tilecache and openlayers not. Has to be the same resolution. */
+				  
+		new OpenLayers.Layer.WMS( 
+			"Reliefs", 
+			"http://mapnik.fgx.ch:81/tilecache.py?",
+			{layers: ['N55W010','N55W005','N55E000','N55E005','N55E010','N55E015','N55E020','N55E025','N55E030',
+					  'N50W010','N50W005','N50E000','N50E005','N50E010','N50E015','N50E020','N50E025','N50E030',
+					  'N45W010','N45W005','N45E000','N45E005','N45E010','N45E015','N45E020','N45E025','N45E030',
+					  'N40W010','N40W005','N40E000','N40E005','N40E010','N40E015','N40E020','N40E025','N40E030',
+					  'N35W010','N35W005','N35E000','N35E005','N35E010','N35E015','N35E020','N35E025','N35E030'],
+			format: 'image/png', 
+			transparent: true,
+			visibility: false
+			},
+			{
+			maxResolution: 19567.87923828125,    /* start zoom level 0 */
+			minResolution: 305.74811309814453     /* stop zoom level 6 */
+			}
+			),	
+				  
 				  
 		
 		/// Underlays
@@ -333,18 +354,9 @@ get_layers: function(){
 				}, {  visibility: false}
 		),
 				  
-		/* This works for a relief when it is 3857 projection, mapnik itself can do reprojection directly,
-		   but communication between tilecache and openlayers not. Has to be the same resolution. */
+
 				  
-		/*new OpenLayers.Layer.WMS( 
-			"Landmass", 
-			"http://mapnik.fgx.ch:81/tilecache.py?", 
-								 { layers: 'N40E010', format: "image/png", transparent: "True"},
-			{
-			  maxResolution: 19567.87923828125, */   /* start zoom level 0 */
-			  /*minResolution: 305.74811309814453 */    /* stop zoom level 6 */
-			/*}
-			),*/
+		
 				  
 		
 		this.L.blip,
@@ -412,9 +424,12 @@ constructor: function(config) {
 					{text: "Light", iconCls: "icoYellow", width: 90, 
 						id: this.getId() + "map-base-button",
 						menu: [
-							{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
-								xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							{text: "Relief", group: "map_core", checked: false, xiconCls: "icoBlue",
+							   xLayer: "Reliefs", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							},
+							//{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
+							//	xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							//},
 							{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
 								xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							},
@@ -526,7 +541,7 @@ constructor: function(config) {
 			},
 			"-",
 			"->",
-			{text: "TODO: Lat: "}, this.lbl_lat(), 
+			{text: "Lat: "}, this.lbl_lat(), 
 			{text: "Lon: "},  this.lbl_lon(),
 			"-",
 			{text: "DEV", scope: this,
