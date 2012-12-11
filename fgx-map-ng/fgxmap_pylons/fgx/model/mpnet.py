@@ -13,37 +13,41 @@ class Flight(Base.mpnet):
 	
 	__tablename__ = "flights"
 
-	id = Column(Integer(), primary_key=True)
-	callsign = Column(String(10), index=True)
-	model = Column(String(20), index=True)
+	f_pk = Column(Integer(), primary_key=True)
+	fid = Column(String(24), index=True, nullable=False, unique=True)
+	callsign = Column(String(16), index=True, nullable=False)
+	model = Column(String(20), index=True, nullable=True)
 	
-	start_time = time = Column(DateTime())
-	end_time = time = Column(DateTime(), nullable=True)
-	distance = Column(Integer(), nullable=True)
+	status = Column(String(20), index=True, nullable=True)
 	
-	max_altimeter = Column(Integer(), nullable=True)
-	max_speed = Column(Integer(), nullable=True)
+	#start_time = time = Column(DateTime())
+	#end_time = time = Column(DateTime(), nullable=True)
+	#distance = Column(Integer(), nullable=True)
+	
+	#max_altimeter = Column(Integer(), nullable=True)
+	#max_speed = Column(Integer(), nullable=True)
 	
 	
 class FlightWayPoint(Base.mpnet):
 	
-	__tablename__ = "waypoints"
+	__tablename__ = "positions"
 
-	wp_id = Column(Integer(), primary_key=True)
-	flight_id = Column(Integer(), nullable=True)
+	p_pk = Column(Integer(), primary_key=True)
+	fid = Column(String(24), nullable=False, index=True)
+	ts = Column(DateTime(), nullable=False, index=True)
 	
-	callsign = Column(String(20), nullable=True)
-	model = Column(String(20), nullable=True)
+	#model = Column(String(20), nullable=True)
 	
-	time = Column(DateTime(timezone=False)) #ZULU?, default=datetime.datetime.now(tz=pytz.timezone('UTC'))
+	#time = Column(DateTime(timezone=False)) #ZULU?, default=datetime.datetime.now(tz=pytz.timezone('UTC'))
 	
 	## We dont want geometry columns ie no GIS database
 	## also lat/lon is float for calculation ... asks pete ?? 
-	latitude = Column(Float())
-	longitude = Column(Float())
-	speed = Column(Integer())
-	altitude = Column(Integer())
-	heading = Column(Integer(), nullable=True)
+	lat= Column(String(16), nullable=False)
+	lon = Column(String(16), nullable=False)
+	spd_kts = Column(Integer(), nullable=True)
+	alt_ft = Column(Integer(), nullable=True)
+	hdg = Column(Integer(), nullable=True)
+	
 	
 	def dic(self):
 		return {
