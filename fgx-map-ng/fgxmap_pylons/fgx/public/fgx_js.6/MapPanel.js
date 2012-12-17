@@ -263,7 +263,7 @@ get_layers: function(){
 		//=================================================
 		// Overlay
 		//=================================================
-		new OpenLayers.Layer.WMS( 
+		/*new OpenLayers.Layer.WMS( 
 			"Reliefs", 
 			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: ['N55W010','N55W005','N55E000','N55E005','N55E010','N55E015','N55E020','N55E025','N55E030',
@@ -276,62 +276,62 @@ get_layers: function(){
 			visibility: false
 			},
 			{
-			maxResolution: 19567.87923828125,    /* start zoom level 0 */
-			minResolution: 305.74811309814453     /* stop zoom level 6 */
-			}
-			),	
+			maxResolution: 19567.87923828125, */   /* start zoom level 0 */
+			/*minResolution: 152.87405654907226 */    /* stop zoom level 7 */
+			/*}
+			),	*/
 		
 		new OpenLayers.Layer.WMS(
 			"DME",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "DME" , transparent: "True" , format: "image/png"}, 
 			{ visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"ILS Info",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "ILS_Info" , transparent: "True" , format: "image/png"}, 
 			{visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 		"Runway",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 				{layers: "Runway" , transparent: "True" , format: "image/png" 
 				}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"NDB",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "NDB" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"ILS Marker",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "ILS_Marker" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"Airfield",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "Airfield" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"ILS",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "ILS" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"VOR",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "VOR" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
 			"FIX",
-			"http://map.fgx.ch:81/mapnik/fgxcache.py?",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
 			{layers: "FIX" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
@@ -424,12 +424,12 @@ constructor: function(config) {
 					{text: "Light", iconCls: "icoYellow", width: 90, 
 						id: this.getId() + "map-base-button",
 						menu: [
-							{text: "Relief", group: "map_core", checked: false, xiconCls: "icoBlue",
-							   xLayer: "Reliefs", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
-							},
-							//{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
-							//	xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							//{text: "Relief", group: "map_core", checked: false, xiconCls: "icoBlue",
+							//   xLayer: "Reliefs", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							//},
+							{text: "Outline", group: "map_core", checked: false, xiconCls: "icoBlue",
+								xLayer: "Landmass", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
+							},
 							{text: "Normal", group: "map_core", checked: false, xiconCls: "icoGreen",
 								xLayer: "OSM", handler: this.on_base_layer, scope: this, group: "xBaseLayer"
 							},
