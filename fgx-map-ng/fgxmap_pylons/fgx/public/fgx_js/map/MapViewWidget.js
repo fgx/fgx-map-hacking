@@ -1,10 +1,8 @@
 
 
-Ext.namespace("FGx");
+Ext.define("FGx.map.MapViewWidget",{
 
-FGx.MapViewWidget = Ext.extend(Ext.Panel, {
-
-
+extend: "Ext.Panel", 
 W: {
 	
 },
@@ -21,10 +19,10 @@ get_mini_map: function(){
 	return this.xMiniMap;
 },
 
-get_map_panel: function(conf){
+get_map_panel: function(){
 	if(!this.xMapPanel){
-		conf.region = "center";
-		this.xMapPanel =  new FGx.MapPanel(conf);
+		this.xConfig.region = "center";
+		this.xMapPanel =  Ext.create("FGx.map.MapCore", {xConfig: this.xConfig});
 	}
 	return this.xMapPanel;
 },
@@ -36,7 +34,7 @@ get_map_panel: function(conf){
 get_airports_grid: function(){
 	if(!this.xAirportsGrid){
 		
-		this.xAirportsGrid =  new FGx.AirportsGrid({});
+		this.xAirportsGrid =  Ext.create("FGx.airport.AirportsGrid", {});
 		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
 			var rec = grid.getStore().getAt(idx);
 			var r = rec.data
@@ -120,12 +118,12 @@ get_awy_widget: function(){
 	
 //===========================================================
 //== CONSTRUCT
-constructor: function(config) {
+initComponent: function() {
 	
 	//console.log("constr", config.title, config.lat, config.lon);
 	
 
-	config = Ext.apply({
+	Ext.apply(this, {
 		
 		fgxType: "map_panel",
 		iconCls: "icoMap",
@@ -135,7 +133,7 @@ constructor: function(config) {
 		items: [
 			
 
-			this.get_map_panel(config),	
+			this.get_map_panel(),	
 				
 			{region: 'east', width: 400, 
 				collapsible: true,
@@ -166,11 +164,10 @@ constructor: function(config) {
 		]
 		
 		
-	}, config);
-	FGx.MapViewWidget.superclass.constructor.call(this, config);
-
+	});
+	this.callParent();
 	
-}, // Constructor	
+}, 
 
 
 

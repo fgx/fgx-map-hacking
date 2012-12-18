@@ -1,9 +1,9 @@
 
-Ext.namespace("FGx");
 
-FGx.FlightsGrid = Ext.extend(Ext.grid.GridPanel, {
+Ext.define("FGx.mpnet.FlightsGrid" ,  {
 
-
+extend: "Ext.grid.Panel",
+xHidden: false,
 	
 //===========================================================
 //== Renderers 
@@ -18,8 +18,8 @@ render_altitude: function(v, meta, rec){
 
 //===========================================================
 //== Grid
-constructor: function(config) {
-	config = Ext.apply({
+initComponent: function() {
+	Ext.apply(this, {
 		sstitle: 'Flights',
 		iconCls: 'icoFlights',
 		fgxType: "FlightsGrid",
@@ -34,7 +34,7 @@ constructor: function(config) {
 		stripeRows: true,
 		store: Ext.StoreMgr.lookup("flights_store"),
 		loadMask: false,
-		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+		//sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
 				renderer: this.render_callsign, width: 100
@@ -55,12 +55,12 @@ constructor: function(config) {
 					return Ext.util.Format.number(v, '0');
 				}
 			},
-			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: config.xHidden,
+			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: this.xHidden,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: config.xHidden,
+			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: this.xHidden,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
@@ -72,7 +72,7 @@ constructor: function(config) {
 		],		
 		bbar: [
 			new Ext.PagingToolbar({
-				hidden: config.xHidden,
+				hidden: this.xHidden,
 				store: Ext.StoreMgr.lookup("flights_store"),
 				displayInfo: false,
 				pageSize: 500,
@@ -80,8 +80,8 @@ constructor: function(config) {
 			})
 		]
 		
-	}, config);
-	FGx.FlightsGrid.superclass.constructor.call(this, config);
+	});
+	this.callParent();
 }, // Constructor	
 
 

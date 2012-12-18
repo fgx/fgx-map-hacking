@@ -1,13 +1,14 @@
 
 Ext.namespace("FGx");
+Ext.define("FGx.airport.AirportsGrid", {
 
-FGx.AirportsGrid =  Ext.extend(Ext.Panel, {
-
+extend: "Ext.Panel",
+				   
 txt_width:60,
 
 action_new_tab: function(){
 	if(!this.actionNewTab){
-		this.actionNewTab = new Ext.Button({
+		this.actionNewTab = Ext.create("Ext.Button", {
 			text: "New Tab", 
 			iconCls: "icoMapGo",
 			disabled: true,
@@ -34,7 +35,7 @@ action_new_tab: function(){
 //== Grid
 get_airports_grid: function(){
 	if(!this.xAirportsGrid){
-		this.xAirportsGrid = new Ext.grid.GridPanel({
+		this.xAirportsGrid = Ext.create("Ext.grid.GridPanel", {
 			region: "center",
 			frame: false, plain: true, border: false,
 			hideHeader: true,
@@ -50,7 +51,6 @@ get_airports_grid: function(){
 			stripeRows: true,
 			store: this.get_store(),
 			loadMask: true,
-			sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 			tbar: [
 				this.action_new_tab()
 			],
@@ -130,7 +130,7 @@ get_airports_grid: function(){
 
 get_runways_tree: function(){
 	if(!this.xRunwaysTree){
-		this.xRunwaysTree = new Ext.ux.tree.TreeGrid({
+		this.xRunwaysTree = Ext.create("Ext.tree.Panel", {
 			region: "east", autoScroll: true,
 			frame: false, plain: true, border: false,
 			columns: [
@@ -157,8 +157,8 @@ get_runways_tree: function(){
 	return this.xRunwaysTree;
 },
 
-constructor: function(config) {
-	config = Ext.apply({
+initComponent: function() {
+	Ext.apply(this, {
 		iconCls: "icoAirport",
 		title: "Airports",
 		layout: "border",
@@ -207,9 +207,9 @@ constructor: function(config) {
 			}
 		]
 		
-	}, config);
-	FGx.AirportsGrid.superclass.constructor.call(this, config);
-}, // Constructor	
+	});
+	this.callParent();
+}, // initComponent
 
 //== Store
 get_store: function(){

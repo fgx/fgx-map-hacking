@@ -1,12 +1,12 @@
 
-Ext.namespace("FGx");
 
-FGx.FlightsViewWidget = Ext.extend(Ext.Panel, {
+Ext.define("FGx.mpnet.FlightsViewWidget" ,  {
 
+extend: "Ext.Panel",
 	
 get_flights_grid: function(){
 	if(!this.xFlightsGrid){
-		this.xFlightsGrid = new FGx.FlightsGrid({
+		this.xFlightsGrid = Ext.create("FGx.mpnet.FlightsGrid", {
 			region: "center",
 			frame: false, plain: true, border: false
 		});
@@ -44,8 +44,8 @@ get_map_panel: function(){
 	
 //===========================================================
 //== Grid
-constructor: function(config) {
-	config = Ext.apply({
+initComponent: function() {
+	Ext.apply(this, {
 		layout: "border",
 		iconCls: "icoFlights",
 		items: [
@@ -53,7 +53,7 @@ constructor: function(config) {
 			//{xtype: "panel", region: "east", layout: "vbox",
 			//	width: 400,
 			//	items: [
-					this.get_map_panel()
+					//this.get_map_panel()
 			//	]
 			//}
 			
@@ -61,9 +61,9 @@ constructor: function(config) {
 		
 		]
 
-	}, config);
-	FGx.FlightsViewWidget.superclass.constructor.call(this, config);
-}, // Constructor	
+	});
+	this.callParent();
+}, // initComponent	
 
 
 

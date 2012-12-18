@@ -1,13 +1,13 @@
 
 Ext.namespace("FGx");
+Ext.define("FGx.nav.NavWidget", {
 
-FGx.NavWidget = Ext.extend(Ext.grid.GridPanel, {
-
+extend: "Ext.grid.GridPanel",
 tbw: 50,
 
-constructor: function(config) {
+initComponent: function() {
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		title: 'NavAids',
 		iconCls: 'icoFix',
 		autoScroll: true,
@@ -20,7 +20,7 @@ constructor: function(config) {
 		}, 
 		store: this.get_store(),
 		loadMask: true,
-		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+		
 		columns: [ 
 			{header: '&nbsp;', dataIndex:'nav_type', width: 20,
 				renderer: function(v, meta, rec){
@@ -123,9 +123,8 @@ constructor: function(config) {
 			}
 		}
 		
-	}, config);
-	
-	FGx.NavWidget.superclass.constructor.call(this, config);
+	});
+	this.callParent();
 }, // Constructor	
 
 

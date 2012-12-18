@@ -50,3 +50,16 @@ FGx.msg = function(title, body, tim){
 	m.slideIn('t', {duration: 500}).pause(Timmy * 1000).ghost("t", {remove:true});
 }
 
+
+
+Ext.define('Task', {
+	extend: 'Ext.data.Model',
+	fields: [
+		{name: 'task',     type: 'string'},
+		{name: 'user',     type: 'string'},
+		{name: 'duration', type: 'string'},
+		{name: 'done',     type: 'boolean'}
+	]
+});
+
+

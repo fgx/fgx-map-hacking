@@ -18,8 +18,8 @@ refresh_rate: 0,
 //runner: new Ext.util.TaskRunner(),
 
 //= this store is passed around.. its global kinda
-		   /*
-xFlightsStore: new Ext.data.JsonStore({
+
+xFlightsStore: Ext.create("Ext.data.JsonStore", {
 	idProperty: 'callsign',
 	storeId: "flights_store",
 	fields: [ 	
@@ -44,7 +44,7 @@ xFlightsStore: new Ext.data.JsonStore({
 	},
 	autoLoad: false,
 }),
-xMpStatusStore: new Ext.data.JsonStore({
+xMpStatusStore: Ext.create("Ext.data.JsonStore", {
 	idProperty: 'no',
 	storeId: "mpstatus_store",
 	fields: [ 	
@@ -63,9 +63,9 @@ xMpStatusStore: new Ext.data.JsonStore({
 		field: "no", 
 		direction: 'ASC'
 	},
-	autoLoad: true,
+	autoLoad: false,
 }),
-*/
+
 update_flights: function(){
 	this.xFlightsStore.load();
 },
@@ -111,14 +111,15 @@ on_flight_plans_widget: function(butt){
 
 on_flights_widget: function(butt){
 	if(!this.widgets.FlightsViewWidget){
-		this.widgets.FlightsViewWidget = new FGx.FlightsViewWidget({
+		
+		this.widgets.FlightsViewWidget = Ext.create("FGx.mpnet.FlightsViewWidget", {
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
 		this.get_tab_panel().add(this.widgets.FlightsViewWidget);
+		console.log("created");
 	}
-	
 	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
 },
 
@@ -151,10 +152,10 @@ open_map:  function(obj){
 	//console.log("-----------------------------------------");
 	console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
 	//return;
-	var newMap = Ext.create("FGx.map.MapCore", {xConfig: obj});
+	var newMap = Ext.create("FGx.map.MapViewWidget", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
-	
+	console.log("adddtab");
 },
 
 on_goto: function(butt){
@@ -169,9 +170,11 @@ get_tab_panel: function(){
 	if(!this.xTabPanel){
 		this.xTabPanel = Ext.create("Ext.tab.Panel", {
 			region: "center",
+			layout: "fit",
 			tabPosition: "top",
 			frame: false,  border: false, bodyBorder: false,
-			activeItem: 0
+			activeTab: 0,
+			ssheight: 500
 		});
 		this.xTabPanel.on("tabchange", function(foo, bar){
 			//console.log("tabchanged");

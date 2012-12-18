@@ -74,17 +74,20 @@ get_map: function(){
 			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
 			
 			// zoomlevels 0-13 = 14 levels ?
-			zoomLevels: 17
+			zoomLevels: 17, 
+			layers: this.get_layers()
 		});
-
+		//this.xMap.addLayers( this.get_layers() );
 		this.xMap.events.register("mousemove", this, function (e) {
+			console.log("ere");
 				var pos = this.xMap.getLonLatFromPixel(e.xy);
 				pos.transform(new OpenLayers.Projection("EPSG:3857"), new OpenLayers.Projection("EPSG:4326"));
 				this.lbl_lat().setValue(pos.lat);
 				this.lbl_lon().setValue(pos.lon);
 		});
-		
+		console.log("construct map");
 	}
+	console.log( "get map");
 	return this.xMap;
 },
 
@@ -93,13 +96,13 @@ get_map: function(){
 //=== LatLon Labels
 lbl_lat: function(){
 	if(!this.xLblLat){
-		this.xLblLat =  new Ext.form.DisplayField({width: 100, value: "-"});
+		this.xLblLat =  Ext.create("Ext.form.DisplayField", {width: 100, value: "-"});
 	}
 	return this.xLblLat;
 },
 lbl_lon: function(){
 	if(!this.xLblLon){
-		this.xLblLon =  new Ext.form.DisplayField({width: 100, value: "-"});
+		this.xLblLon =  Ext.create("Ext.form.DisplayField", {width: 100, value: "-"});
 	}
 	return this.xLblLon;
 },
@@ -366,6 +369,7 @@ get_layers: function(){
 		this.L.fpLbl, this.L.fpLine
 		
 	];
+	console.log("get_LAyers");
 	return LAYERS;
 },
 
@@ -374,7 +378,7 @@ get_store: function(){
 	if(!this.xFlightsStore){
 		this.xFlightsStore = Ext.StoreMgr.lookup("flights_store");
 		this.xFlightsStore.on("load", function(sto, recs){
-			//console.log("YES");
+			console.log("xFlightsStore.load");
 			this.L.radarBlip.removeAllFeatures();
 			this.L.radarLbl.removeAllFeatures();
 			var i, r;
@@ -406,17 +410,17 @@ initComponent: function() {
 		ll.xFlag = "DEAFAUT: "
 	}
 	console.log(ll.xFlag, ll.x, ll.y, config);
-	Ext.apply({
+	Ext.apply(this, {
 		
 		fgxType: "MapPanel",
 		ssiconCls: "icoMap",
 		frame: false, plain: true,border: 0,	bodyBorder: false,
-		
+		height: 500,
 		map: this.get_map(),
 		center:  ll, 
-		zoom: config.zoom ? config.zoom : 5,
-		layers: this.get_layers(),
-		xFlightsStore: this.get_store(),
+		zoom:  5,
+		//layers: this.get_layers(),
+		//xFlightsStore: this.get_store(),
 		tbar: [
 		
 			//== Map Type  
@@ -505,13 +509,13 @@ initComponent: function() {
 			{text: "Zoom", tooltip: "Click for default zoom",
 				zoom: 4, handler: this.on_zoom_to, scope: this
 			},
-			new sGeoExt.ZoomSlider({
+			Ext.create("GeoExt.slider.Zoom", {
 				map: this.get_map(),
 				aggressive: true,                                                                                                                                                   
 				width: 100,
-				plugins: new GeoExt.ZoomSliderTip({
-					template: "<div>Zoom Level: {zoom}</div>"
-				})
+				//plugins: Ext.create("GeoExt.slider.Tip", {
+				//	TODOtemplate: "<div>Zoom Level: {zoom}</div>"
+				//})
 			}),
 			{text: "100", zoom: 6, handler: this.on_zoom_to, scope: this},
 			{text: "30", zoom: 10, handler: this.on_zoom_to, scope: this},
@@ -520,7 +524,7 @@ initComponent: function() {
 			{text: "&nbsp;2&nbsp;",  zoom: 17, handler: this.on_zoom_to, scope: this},
 			"-",
 			{text: "Opacity", tooltip: "Click for default opacity"},
-			new sGeoExt.LayerOpacitySlider({
+			Ext.create("GeoExt.slider.LayerOpacity", {
 				//l//ayer: this.L.lite(),
 				aggressive: true, 
 				width: 80,
@@ -528,7 +532,7 @@ initComponent: function() {
 				inverse: true,
 				fieldLabel: "opacity",
 				ssrenderTo: "slider",
-				plugins: new GeoExt.LayerOpacitySliderTip({template: '<div>Transparency: {opacity}%</div>'})
+				//plugins: Ext.create("GeoExt.slider.Tip", {TODOtemplate: '<div>Transparency: {opacity}%</div>'})
 			}),
 			"-",
 			{text: "Graticule", iconCls: "icoOff", enableToggle: true, pressed: false,
@@ -556,8 +560,9 @@ initComponent: function() {
 		]
 	
 	});
+
 	this.callParent();
-	
+		console.log("YESSSSSSSSSS");
 }, // initComponent	
 
 on_base_layer: function(butt, checked){
