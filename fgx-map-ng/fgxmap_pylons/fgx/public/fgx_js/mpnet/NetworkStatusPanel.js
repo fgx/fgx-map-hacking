@@ -35,15 +35,15 @@ initComponent: function() {
 		layout : 'border',
 		closable: true,
 		deferredRender : false,
-		tbar: [
-			{xtype: "buttongroup", columns: 3, title: "Bot Status",
-				//items: this.make_bot_actions()
-			}
-		],
+		//tbar: [
+		//	{xtype: "buttongroup", columns: 3, title: "Bot Status",
+		//		//items: this.make_bot_actions()
+		//	}
+		//],
 		items : [
-			new FGx.MpStatusGrid({region: "center", ssflex: 3,
-			
-		})
+			Ext.create("FGx.mpnet.MpStatusGrid", {
+				region: "center", ssflex: 3
+			})
 		/*	 {xtype: 'linechart',  height: 200,
 			sssregion: "center",  sflex: 1,
 			
@@ -106,7 +106,7 @@ initComponent: function() {
                         name: 'Tahoma',
                         color: 0x15428B,
                         size: 10,
-                        bold: true
+                        bold: truenew
                     }
                 },
                 xAxis: {

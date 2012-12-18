@@ -1,13 +1,14 @@
 
-Ext.namespace("FGx");
 
-FGx.MpStatusGrid = Ext.extend(Ext.grid.GridPanel, {
 
+Ext.define("FGx.mpnet.MpStatusGrid", {
+
+extend: "Ext.grid.Panel",
 tbw: 35,
 
 //= Triggered when a refresh toolbar button is clicked
 on_refresh_toggled: function(butt, checked){
-	butt.setIconClass( checked ? "icoOn" : "icoOff");
+	butt.setIconCls( checked ? "icoOn" : "icoOff");
 	if(checked){
 		this.runner.stopAll(); // stop if already ruinning
 		this.refresh_rate = parseInt(butt.ref_rate, 10);
@@ -42,9 +43,9 @@ render_altitude: function(v, meta, rec){
 
 
 //== Grid
-constructor: function(config) {
+initComponent: function() {
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		iconCls: 'icoMpServers',
 		fgxType: "MpStatusGrid",
 		autoScroll: true,
@@ -56,9 +57,9 @@ constructor: function(config) {
 			forceFit: true
 		}, 
 		stripeRows: true,
-		store: Ext.StoreMgr.lookup("mpstatus_store"),
+		store: Ext.getStore("mpstatus_store"),
 		loadMask: false,
-		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+		
 		columns: [ 
 			{header: 'No',  dataIndex:'no', sortable: true, width: 40},
 			{header: 'Domain',  dataIndex:'fqdn', sortable: true
@@ -92,15 +93,15 @@ constructor: function(config) {
 		bbar: [
 			new Ext.PagingToolbar({
 				//frame: false, plain: true, 
-				store: Ext.StoreMgr.lookup("mpstatus_store"),
+				store: Ext.getStore("mpstatus_store"),
 				displayInfo: true,
 				pageSize: 500,
 				prependButtons: true	
 			})
 		]
-	}, config);
-	FGx.MpStatusGrid.superclass.constructor.call(this, config);
-}, // Constructor	
+	});
+	this.callParent();
+}, // initComponent
 
 });
 

@@ -132,7 +132,7 @@ on_network_status_panel: function(butt, checked){
 },
 on_db_browser_widget: function(butt, checked){
 	if(!this.widgets.DbBrowser){
-		this.widgets.DbBrowser = new FGx.DbBrowser({
+		this.widgets.DbBrowser = Ext.create("FGx.db.DbBrowser", {
 			closable: true
 		});
 		this.get_tab_panel().add(this.widgets.DbBrowser);

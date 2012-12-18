@@ -1,15 +1,16 @@
 
-Ext.namespace("FGx");
-//================================================================
-FGx.DbBrowser = Ext.extend(Ext.Panel, {
 
+//================================================================
+Ext.define("FGx.db.DbBrowser",  {
+
+extend: "Ext.Panel",
 curr_database : "data",
 
 //======================================================
 // Tables Grid
 grid_tables: function(){
 	if(!this.gridTables){
-		this.gridTables = new Ext.grid.GridPanel({
+		this.gridTables = Ext.create("Ext.grid.Panel", {
 			region: 'center',
 			title: "Tables",
 			width: 200,
@@ -18,12 +19,16 @@ grid_tables: function(){
 					{name: "table", type:"string"}
 				],
 				idProperty: "table",
-				ssortInfo: {},
-				proxy: new Ext.data.HttpProxy({
+				
+				proxy: {
+					type: "ajax",
 					url: "/ajax/database/data/tables",
-					method: 'GET'
-				}),
-				root: "tables",
+					method: 'GET',
+					reader: {
+						type: "json",
+						root: "tables"
+					}
+				},
 				autoLoad: true
 			}),
 			viewConfig:{
@@ -40,7 +45,7 @@ grid_tables: function(){
 			],
 			listeners:{
 				scope: this,
-				rowclick: function(grid, idx, e){
+				itemclick: function(grid, idx, e){
 					
 					var rec = this.grid_tables().getStore().getAt(idx);
 					var table = rec.get("table");
@@ -59,11 +64,11 @@ grid_tables: function(){
 //== Columns
 grid_columns: function(){
 	if(!this.gridColumns){
-		this.gridColumns = new Ext.grid.GridPanel({
+		this.gridColumns = Ext.create("Ext.grid.Panel", {
 			region: 'east', 
 			title: "Columns",
 			width: "70%",
-			store: new Ext.data.JsonStore({
+			store: Ext.create("Ext.data.JsonStore", {
 				fields: [	
 					{name: "column", type:"string"},
 					{name: "type", type:"string"},
@@ -72,11 +77,16 @@ grid_columns: function(){
 				
 				],
 				idProperty: "column",
-				proxy: new Ext.data.HttpProxy({
+				proxy: {
+					type: "ajax",
 					url: "/ajax/database/table/_TABLE_NAME_/columns",
-					method: 'GET'
-				}),
-				root: "columns",
+					method: 'GET',
+					reader: {
+						type: "json",
+						root: "columns"
+					}
+				},
+				
 				autoLoad: false
 				
 			}),
@@ -118,9 +128,9 @@ on_select_db: function(butt, checked){
 },
 
 
-constructor: function(config) {
+initComponent: function() {
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		layout: 'border',
 		fgxType: "DbBrowser",
 		title: "DB Schema",
@@ -141,14 +151,14 @@ constructor: function(config) {
 			}
 		],
 		plain: true,
-		height: window.innerHeight - 5,
+		//height: window.innerHeight - 5,
 		items: [
 			this.grid_tables(),
 			this.grid_columns()
 		]
 	
-	}, config);
-	FGx.DbBrowser.superclass.constructor.call(this, config);
+	});
+	this.callParent();
 	
 },
 
