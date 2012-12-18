@@ -6,7 +6,7 @@ import sqlalchemy.orm
 def tables(db_name):
 
 	sel_db = meta.Base.__dict__[db_name].metadata.tables.keys()
-	return [{"table": t} for t in sel_db]
+	return [{"table": t} for t in sorted(sel_db)]
 
 
 def drop_table(table):
@@ -38,13 +38,11 @@ def columns(db_name, table_name):
 		
 	cols = meta.Base.__dict__[db_name].metadata.tables[table_name].columns
 	lst = []
-	for c in  cols:
-		print c, c.type
-		
+	for c in cols:		
 		lst.append( dict(column=c.name, type=str(c.type), nullable=c.nullable) )
 	return lst
 		
-	## IS this an injectin attack
+	## TODO integrate Olde flavour  below
 	#sql = "SELECT column_name, data_type, character_maximum_length, numeric_precision, is_nullable "
 	#sql += " FROM information_schema.columns WHERE table_name = '%s' " % table
 	"""

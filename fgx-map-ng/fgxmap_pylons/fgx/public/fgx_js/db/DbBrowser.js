@@ -123,10 +123,10 @@ on_select_db: function(butt, checked){
 		
 		this.grid_columns().getStore().removeAll();
 		
-		this.grid_tables().getStore().proxy.setUrl("/ajax/database/" + this.curr_database + "/tables");
+		this.grid_tables().getStore().getProxy().url = "/ajax/database/" + this.curr_database + "/tables";
 		this.grid_tables().getStore().load();
 	}
-	butt.setIconClass( checked ? "icoOn" : "icoOff");
+	butt.setIconCls( checked ? "icoOn" : "icoOff");
 },
 
 
@@ -143,11 +143,11 @@ initComponent: function() {
 				title: 'Select Database',
 				columns: 3,
 				items: [
-					{text: "data", pressed: true, enableToggle: true, toggleGroup: "sel_db", 
+					{text: "data", pressed: true, enableToggle: true, toggleGroup: "sel_db", allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOn"},
-					{text: "secure", enableToggle: true, toggleGroup: "sel_db", 
+					{text: "secure", enableToggle: true, toggleGroup: "sel_db",  allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},
-					{text: "mpnet",  enableToggle: true,  toggleGroup: "sel_db", 
+					{text: "mpnet",  enableToggle: true,  toggleGroup: "sel_db",  allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},
 				]
 			}
