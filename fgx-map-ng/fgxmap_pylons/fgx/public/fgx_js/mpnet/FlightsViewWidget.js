@@ -34,8 +34,9 @@ get_flights_grid: function(){
 },
 get_map_panel: function(){
 	if(!this.xMapPanel){
-		this.xMapPanel = new FGx.MapPanel({
+		this.xMapPanel = Ext.create("FGx.map.MapCore", {
 			region: "east", width: "50%",
+			xConfig: {},
 		});
 	}
 	return this.xMapPanel;
@@ -53,7 +54,7 @@ initComponent: function() {
 			//{xtype: "panel", region: "east", layout: "vbox",
 			//	width: 400,
 			//	items: [
-					//this.get_map_panel()
+					this.get_map_panel()
 			//	]
 			//}
 			

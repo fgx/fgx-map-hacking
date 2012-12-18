@@ -1,7 +1,7 @@
 
-Ext.namespace("FGx");
+Ext.define("FGx.mpnet.NetworkStatusPanel",  {
 
-FGx.NetworkStatusWidget = Ext.extend(Ext.Panel, {
+extend: "Ext.Panel",
 
 bots: ["tracker", "crossfeed", "mpstatus"],
 botActions: null,
@@ -15,7 +15,7 @@ make_bot_actions: function(){
 			this.botActions[this.bots[i]] = {text: this.bots[i]};
 			arr.push( this.bots[i] );
 		}
-		console.log(this.botActions);
+		//console.log(this.botActions);
 		
 	//}
 	return arr;
@@ -23,12 +23,12 @@ make_bot_actions: function(){
 	
 //===========================================================
 //== Gridnew Ext.Toolbar.TextItem(
-constructor: function(config) {
+initComponent: function() {
 	
 	
 	var tbw = 100;
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		iconCls: 'icoMpServers',
 		fgxType: "NetworkStatusWidget",
 		title: "Network Status",
@@ -128,9 +128,9 @@ constructor: function(config) {
 			
 		]
 		
-	}, config);
-	FGx.NetworkStatusWidget.superclass.constructor.call(this, config);
-} // Constructor	
+	});
+	this.callParent();
+} // initComponent	
 
 
 

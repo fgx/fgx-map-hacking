@@ -10,7 +10,7 @@ from pylons import app_globals
 from fgx.lib.base import BaseController, render
 
 from fgx.model import meta
-from fgx.model.mpnet import MpServer, FlightWayPoint, BotControl, TrafficLog
+#from fgx.model.mpnet import MpServer, FlightWayPoint, BotControl, TrafficLog
 
 log = logging.getLogger(__name__)
 

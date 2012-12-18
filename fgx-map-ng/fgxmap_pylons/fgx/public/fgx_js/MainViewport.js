@@ -6,7 +6,7 @@ extend:  "Ext.container.Viewport",
 	
 widgets: {
 	FlightsViewWidget: null,	
-	NetworkStatusWidget: null,
+	NetworkStatusPanel: null,
 	DbBrowser: null,
 	FlightPlansWidget: null
 },
@@ -15,15 +15,21 @@ widgets: {
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
 refresh_rate: 0,
-//runner: new Ext.util.TaskRunner(),
+runner: Ext.create("Ext.util.TaskRunner", {}),
 
 //= this store is passed around.. its global kinda
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {
 	model: "mFlight",
 	storeId: "flights_store",
-	url: '/ajax/mpnet/flights/crossfeed',
-	root: 'flights',
+	proxy: {
+		type: "ajax",
+		url: '/ajax/mpnet/flights/crossfeed',
+		reader :{
+			type: "json",
+			root: 'flights'
+		}
+	},
 	remoteSort: false,
 	sortInfo: {
 		field: "callsign", 
@@ -54,11 +60,12 @@ xMpStatusStore: Ext.create("Ext.data.JsonStore", {
 }),
 
 update_flights: function(){
-	this.xFlightsStore.load();
+	Ext.getStore("flights_store").load();
+	console.log("foo");
 },
 
 on_refresh_toggled: function(butt, checked){
-	console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
+	console.log("on_refresh_toggled", butt.refresh_rate, checked);
 	
 	butt.setIconCls( checked ? "icoOn" : "icoOff" );
 	
@@ -70,6 +77,7 @@ on_refresh_toggled: function(butt, checked){
 	
 	//= start again with new rate..
 	if(this.refresh_rate > 0){
+		console.log("RUN");
 		this.runner.start({
 			interval: this.refresh_rate * 1000,
 			run: this.update_flights, 
@@ -110,17 +118,17 @@ on_flights_widget: function(butt){
 	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
 },
 
-on_network_status_widget: function(butt, checked){
-	if(!this.widgets.NetworkStatusWidget){
-		this.widgets.NetworkStatusWidget = new FGx.NetworkStatusWidget({
+on_network_status_panel: function(butt, checked){
+	if(!this.widgets.NetworkStatusPanel){
+		this.widgets.NetworkStatusPanel = Ext.create("FGx.mpnet.NetworkStatusPanel", {
 			title: "Network Status", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.NetworkStatusWidget);
+		this.get_tab_panel().add(this.widgets.NetworkStatusPanel);
 		
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.NetworkStatusWidget);
+	this.get_tab_panel().setActiveTab(this.widgets.NetworkStatusPanel);
 },
 on_db_browser_widget: function(butt, checked){
 	if(!this.widgets.DbBrowser){
@@ -176,8 +184,8 @@ get_tab_panel: function(){
 			if(widget.fgxType == "FlightsViewWidget"){
 				this.widgets.flightsGrid = 0;
 				
-			}else if(widget.fgxType == "NetworkStatusWidget"){
-				this.widgets.NetworkStatusWidget = 0;
+			}else if(widget.fgxType == "NetworkStatusPanel"){
+				this.widgets.NetworkStatusPanel = 0;
 				
 			}else if(widget.fgxType == "DbBrowser"){
 				this.widgets.DbBrowser = 0;
@@ -267,7 +275,7 @@ initComponent: function(){
 					},
 					"-",
 					{text: "Network Status", iconCls: "icoMpServers", 
-						handler: this.on_network_status_widget, scope: this
+						handler: this.on_network_status_panel, scope: this
 					},
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
@@ -289,13 +297,28 @@ initComponent: function(){
 					"-",
 					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
 					{text:  "Off" , iconCls: "icoOn", enableToggle: true,   
-						width: this.tbw, pressed: true,
+						width: this.tbw, pressed: true,allowDepress: false,
 						toggleGroup: "ref_rate",  refresh_rate: 0, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   			{text:  "2" , iconCls: "icoOff", enableToggle: true,   
-						width: this.tbw, 
-						toggleGroup: "ref_rate",  refresh_rate: 0, 
+		   		   	{text:  "2" , iconCls: "icoOff", enableToggle: true,    
+						width: this.tbw, allowDepress: false,
+						toggleGroup: "ref_rate",  refresh_rate: 2, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
+		   			{text:  "3" , iconCls: "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false,
+						toggleGroup: "ref_rate",  refresh_rate: 3, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
+		   			{text:  "5" , iconCls: "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false,
+						toggleGroup: "ref_rate",  refresh_rate: 5, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
+		   			{text:  "10" , iconCls: "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false,
+						toggleGroup: "ref_rate",  refresh_rate: 10, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 					"-",
@@ -343,34 +366,14 @@ initialize:  function(){
 	//return;
 	//= Add default main map
 	this.open_map({title: "Main Map", closable:false})
-	return;
+	//return;
 	//= Start MP Refresh 
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
 },
 
-get_refresh_buttons: function(refresh_rate){
-	var items = [];
-	var arr = [0, 2, 3, 4, 5, 10, 20];
-	for(var i = 0; i < arr.length; i++){
-		var x = arr[i];
-		items.push(Ext.create("Ext.Action", {
-			text: x == 0 ? "Off" : x < 10 ? x + "&nbsp;" : x, 
-			//width: 50,
-			iconCls: this.refresh_rate == x ? "icoOn" : "icoOff", 
-			enableToggle: true,   
-			width: this.tbw,
-			pressed: this.refresh_rate == x,
-			toggleGroup: "ref_rate", 
-			refresh_rate: x, 
-			toggleHandler: this.on_refresh_toggled,
-			scope: this
-		}))
-	}
-	console.log("get refresh", items);
-	return items;
-},
+
 
 //= TODO: Tiggered for reshresh now
 refresh_now: function(){
