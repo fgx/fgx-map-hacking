@@ -1,3 +1,4 @@
+/*global Ext: false, console: false, FGx: false */
 
 Ext.define("FGx.MainViewport", {
 
@@ -376,6 +377,7 @@ refresh_now: function(){
 on_open_url: function(butt){
 	window.open(butt.url);
 	return
+	// TODO
 	var iFrame =  new FGx.IFramePanel({
 		url: butt.url, title: butt.text
 	});
@@ -384,4 +386,4 @@ on_open_url: function(butt){
 }
 
 
-}) //< FGx.MainViewport
+});  //< FGx.MainViewport
