@@ -150,7 +150,8 @@ on_db_browser_widget: function(butt, checked){
 open_map:  function(obj){
 	//console.log("-----------------------------------------");
 	console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
-	var newMap = new FGx.MapViewWidget(obj);
+	//return;
+	var newMap = Ext.create("FGx.map.MapCore", {xConfig: obj});
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
 	
@@ -166,10 +167,10 @@ on_goto: function(butt){
 get_tab_panel: function(){
 	
 	if(!this.xTabPanel){
-		this.xTabPanel = new Ext.TabPanel({
+		this.xTabPanel = Ext.create("Ext.tab.Panel", {
 			region: "center",
 			tabPosition: "top",
-			frame: false, plain: true, border: false, bodyBorder: false,
+			frame: false,  border: false, bodyBorder: false,
 			activeItem: 0
 		});
 		this.xTabPanel.on("tabchange", function(foo, bar){
@@ -224,7 +225,7 @@ initComponent: function(){
 		items: [
 		
 			// TabBar in Center
-			//this.get_tab_panel(),
+			this.get_tab_panel(),
 		
 			//= Top Toolbar = North
 			{xtype: "panel",
@@ -339,10 +340,10 @@ initComponent: function(){
 
 
 initialize:  function(){
-	return;
+	//return;
 	//= Add default main map
 	this.open_map({title: "Main Map", closable:false})
-	
+	return;
 	//= Start MP Refresh 
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });

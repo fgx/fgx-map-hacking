@@ -38,6 +38,7 @@ class Globals(object):
 		
 	@property
 	def static_url(self):
+		#return "http://127.0.00.1/~fgxx/fgx-static/"
 		return "http://static.fgx.ch"
 		
 	
