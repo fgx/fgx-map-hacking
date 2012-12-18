@@ -50,7 +50,28 @@ FGx.msg = function(title, body, tim){
 	m.slideIn('t', {duration: 500}).pause(Timmy * 1000).ghost("t", {remove:true});
 }
 
+Ext.define('mTree', {
+	extend: 'Ext.data.Model',
+	idProperty: 'x_key',
+	fields: [
+		{name: "x_key", type: "string"},
+		{name: "x_val", type: "string"}
+	]
+});
 
+Ext.define('mAirport', {
+	extend: 'Ext.data.Model',
+	idProperty: 'apt_ident',
+	fields: [ 	
+		{name: "apt_pk", type: 'string'},
+		{name: "apt_ident", type: 'string'},
+		{name: "apt_name_ascii", type: 'string'},
+		{name: "apt_size", type: 'string'},
+		{name: "apt_center_lat", type: 'string'},
+		{name: "apt_center_lon", type: 'string'},
+		{name: "apt_authority", type: 'string'},
+	]
+});
 
 Ext.define('mFlight', {
 	extend: 'Ext.data.Model',

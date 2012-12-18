@@ -25,7 +25,10 @@ class AjaxAirportsController(BaseController):
 
 		apt_ident = h.v(request, "apt_ident")
 		apt_name_ascii = h.v(request, "apt_name_ascii")
-		bounds = h.v(request, "bounds")
+		
+		# TODO
+		#bounds = h.v(request, "bounds")
+		bounds = None
 		
 		if apt_ident or apt_name_ascii or bounds:
 			payload['airports'] = airports.airports(

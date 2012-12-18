@@ -282,13 +282,14 @@ class Runway(Base.data):
 	
 	rwy_width = Column(String(32))
 	
-	rwy_lat = Column(String(32))
-	rwy_lon = Column(String(32))
-	rwy_lat_end = Column(String(32))
-	rwy_lon_end = Column(String(32))
+	rwy_lat84 = Column(String(32))
+	rwy_lon84 = Column(String(32))
+	
+	rwy_lat84_end = Column(String(32))
+	rwy_lon84_end = Column(String(32))
 
-	rwy_len_meters = Column(String(32))
-	rwy_len_feet = Column(String(32))
+	rwy_len_m = Column(String(32))
+	rwy_len_ft = Column(String(32))
 	
 	rwy_hdg = Column(String(32))
 	rwy_hdg_end = Column(String(32))
@@ -332,7 +333,7 @@ class Runway(Base.data):
 		return  dict(
 			apt_ident=self.apt_ident,
 			rwy=self.rwy,
-			rwy_len_meters=self.rwy_len_meters,
+			rwy_len_m = self.rwy_len_m,
 			thresholds= [ self.threshold(0), self.threshold(1) ]		
 		)
 	

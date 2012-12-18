@@ -73,21 +73,18 @@ get_map: function(){
 			// proj4, but the values I get back with box2d are not very useful at the moment
 			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
 			
-			// zoomlevels 0-13 = 14 levels ?
+			//TODO make a config zoomlevels 0-13 = 14 levels ?
 			zoomLevels: 17, 
 			layers: this.get_layers()
 		});
-		//this.xMap.addLayers( this.get_layers() );
+
 		this.xMap.events.register("mousemove", this, function (e) {
-			console.log("ere");
-				var pos = this.xMap.getLonLatFromPixel(e.xy);
-				pos.transform(new OpenLayers.Projection("EPSG:3857"), new OpenLayers.Projection("EPSG:4326"));
-				this.lbl_lat().setValue(pos.lat);
-				this.lbl_lon().setValue(pos.lon);
+			var pos = this.xMap.getLonLatFromPixel(e.xy);
+			pos.transform(new OpenLayers.Projection("EPSG:3857"), new OpenLayers.Projection("EPSG:4326"));
+			this.lbl_lat().setValue(pos.lat);
+			this.lbl_lon().setValue(pos.lon);
 		});
-		console.log("construct map");
 	}
-	console.log( "get map");
 	return this.xMap;
 },
 
@@ -369,7 +366,7 @@ get_layers: function(){
 		this.L.fpLbl, this.L.fpLine
 		
 	];
-	console.log("get_LAyers");
+	//console.log("get_LAyers");
 	return LAYERS;
 },
 
@@ -396,7 +393,7 @@ get_store: function(){
 //== CONSTRUCT
 initComponent: function() {
 	
-	console.log(">> MapPanel.constructor", this.xConfig);
+	//console.log(">> MapPanel.constructor", this.xConfig);
 	//return;
 	var config = this.xConfig;
 	
@@ -409,7 +406,7 @@ initComponent: function() {
 		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
 		ll.xFlag = "DEAFAUT: "
 	}
-	console.log(ll.xFlag, ll.x, ll.y, config);
+	//console.log(ll.xFlag, ll.x, ll.y, config);
 	Ext.apply(this, {
 		
 		fgxType: "MapPanel",
@@ -562,7 +559,6 @@ initComponent: function() {
 	});
 
 	this.callParent();
-		console.log("YESSSSSSSSSS");
 }, // initComponent	
 
 on_base_layer: function(butt, checked){
@@ -571,7 +567,7 @@ on_base_layer: function(butt, checked){
 	//if(checked){
 	this.set_base_layer(butt.xLayer);
 	//}
-	bbButton.setIconClass(butt.xiconCls);
+	bbButton.setIconCls(butt.xiconCls);
 	bbButton.setText(butt.text);
 },
 
@@ -582,13 +578,13 @@ set_base_layer: function(layer_name){
 },
 
 on_nav_toggled: function(butt, checked){
-	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+	butt.setIconCls( checked ? "icoOn" : "icoOff" );
 	this.xMap.getLayersByName(butt.navaid)[0].setVisibility(checked);
 },
 
 on_apt_toggled: function(butt, checked){
  // TODO
- 	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+ 	butt.setIconCls( checked ? "icoOn" : "icoOff" );
 },
 on_civmil_mode: function(butt, checked){
  // TODO

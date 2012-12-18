@@ -39,14 +39,14 @@ initComponent: function() {
 					//return "<img src='/images/vfr_fix.png'>";
 				}
 			},
-			{header: 'Ident', dataIndex:'ident', sortable: true, align: 'left', hidden: false,
+			{header: 'Ident', dataIndex:'ident', sortable: true, align: 'left', hidden: false, width: 80,
 				renderer: function(v, meta, rec){
 					// @TODO Make this a css class
 					return "<b>" + v + "</b>";
 				}
 			},
-			{header: 'Name', dataIndex:'nav_name', sortable: true, align: 'left', hidden: false},
-			{header: 'Freq', dataIndex:'nav_freq_khz', sortable: true, align: 'left', hidden: false}
+			{header: 'Name', dataIndex:'nav_name', sortable: true, align: 'left', hidden: false, flex: 1},
+			{header: 'Freq', dataIndex:'nav_freq_khz', sortable: true, align: 'left', hidden: false, flex: 1}
 			//{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
 			//{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
 		],
@@ -136,7 +136,7 @@ initComponent: function() {
 get_store: function(){
 	if(!this.xStore){
 		this.xStore = new Ext.data.JsonStore({
-			idProperty: 'callsign',
+			TODOidProperty: 'callsign',
 			fields: [ 	
 				{name: "nav_type", type: 'string'},
 				{name: "ident", type: 'string'},
@@ -145,11 +145,16 @@ get_store: function(){
 				{name: "lon", type: 'float'},
 				{name: "freq", type: 'string'}
 			],
-			proxy: new Ext.data.HttpProxy({
+			reader: {
+				type: "ajax",
 				url: '/ajax/navaids',
-				method: "GET"
-			}),
-			root: 'navaids',
+				method: "GET",
+				reader: {
+					type: "json",
+					root: 'navaids'
+				}
+			},
+			
 			remoteSort: false,
 			sortInfo: {
 				field: "ident", 
