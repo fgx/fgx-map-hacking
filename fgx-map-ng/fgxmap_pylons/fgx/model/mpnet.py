@@ -7,9 +7,7 @@ from fgx.model.meta import Sess, Base
 
 
 
-	
 
-=======
 class Flight(Base.mpnet):
 	
 	__tablename__ = "flights"
