@@ -1,5 +1,5 @@
+/*global Ext: false, console: false, FGx: false */
 
-Ext.namespace("FGx");
 Ext.define("FGx.airport.AirportsPanel", {
 
 extend: "Ext.Panel",
@@ -63,19 +63,15 @@ get_airports_grid: function(){
 			]
 		});
 		this.xAirportsGrid.on("selectionchange", function(selModel, selected, eOpts){
-			console.log("selchan");
-			//var sm = this.get_airports_grid().getSelectionModel();
-			if( selected.length == 0){
+			if( selected.length === 0){
 				this.action_new_tab().setDisabled(true);
+				this.fireEvent("AIRPORT", null );
 				return;
 			}
 			this.action_new_tab().setDisabled(false);			
 			this.fetch_airport( selected[0].get("apt_ident") );
+			this.fireEvent("AIRPORT", selected[0].getData() );
 		}, this);
-		
-		//this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
-		//	this.fireEvent("OPEN_AIRPORT", grid.getStore().getAt(idx).data);
-		//},, this)
 	}
 	return this.xAirportsGrid;
 
@@ -83,26 +79,33 @@ get_airports_grid: function(){
 
 fetch_airport: function(apt_ident){
 	Ext.Ajax.request({
-		url: "/ajax/airport/" + apt_ident ,
+		url: "/ajax/airport/" + apt_ident,
 		method: "GET",
 		scope: this,
 		success: function(response, opts) {
 			var data = Ext.decode(response.responseText);
-			console.log(data);
-			var root = this.get_runways_store().getRootNode();
-			root.removeAll();
+			//console.log(data);
+
+			var sto = this.get_runways_store();
+			//sto.removeAll();
 			
+			var root = Ext.create("mTree", {
+				x_key: "FOO", x_val: "FOO",
+				expanded: false,  expandable: true
+			});
+			sto.setRootNode(root);
 			var runs = data.runways;
 			for(var ir = 0; ir < runs.length; ir++){
 				var r = runs[ir];
 				var rwyNode = Ext.create("mTree", {
 						x_key: r.rwy, x_val: r.rwy_length,
-						expanded: false,  expandable: true
+						expanded: true,  expandable: true
 				});
 				root.appendChild(rwyNode);
+				
 				for(var it = 0; it < r.thresholds.length; it++){
 					var t = r.thresholds[it];
-					var tn = new Ext.tree.TreeNode({
+					var tn =  Ext.create("mTree", {
 						x_key: t.rwy_ident, x_val: "", 
 						expanded: false, expandable: true
 					})
@@ -112,14 +115,15 @@ fetch_airport: function(apt_ident){
 						var pk = props[pi];
 						var lbl =  pk.replace("rwy_", "");
 						lbl = lbl.replace("_", " ");
-						var pn = new Ext.tree.TreeNode({
-						x_key: lbl, x_val: t[pk], 
-						leaf: true
-					})
-					tn.appendChild(pn);
+						var pn =  Ext.create("mTree",{
+							x_key: lbl, x_val: t[pk], 
+							leaf: true
+						});
+						tn.appendChild(pn);
 					}
 				}					
 			}
+			root.expand();
 		},
 		failure: function(response, opts) {
 			console.log('server-side failure with status code ' + response.status);
@@ -128,13 +132,15 @@ fetch_airport: function(apt_ident){
 	});
 },
 
+//=================================================================
 get_runways_store: function(){
 	if(!this.xRunwaysStore){
 		this.xRunwaysStore = Ext.create("Ext.data.TreeStore", {
-			//model: "mTree",
+			model: "mTree",
 			root: {
-				expanded: true,
-				text: "My Root"
+				expanded: false,
+				text: "My Root",
+				id: "root"
 			}
 		});
 	}
@@ -145,9 +151,9 @@ get_runways_tree: function(){
 	if(!this.xRunwaysTree){
 		this.xRunwaysTree = Ext.create("Ext.tree.Panel", {
 			region: "east", autoScroll: true,
-			frame: false, plain: true, border: false,
-			 useArrows: true,
-			 rootVisible: true,
+			frame: false,  border: false,
+			useArrows: true,
+			rootVisible: true,
 			columns: [
 				{xtype: 'treecolumn', header: 'Item', dataIndex: 'x_key', 	flex: 1},
 				{header: 'Value', dataIndex: 'x_val', 	flex: 1}
@@ -156,11 +162,7 @@ get_runways_tree: function(){
 				forceFit: true
 			},
 			width: 250,
-			text: 'Ext JS', 
 			store: this.get_runways_store()
-			//draggable: false,
-			//dataUrl: "/ajax/airport/EGLL",
-			
 		});
 	}
 	return this.xRunwaysTree;
