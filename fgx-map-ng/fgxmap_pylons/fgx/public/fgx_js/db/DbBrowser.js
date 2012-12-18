@@ -35,7 +35,7 @@ grid_tables: function(){
 				forceFit: true
 			},
 			columns: [ 
-				{header: "Table", dataIndex: "table",
+				{header: "Table", dataIndex: "table", flex:1, menuDisabled: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
@@ -45,12 +45,15 @@ grid_tables: function(){
 			],
 			listeners:{
 				scope: this,
-				itemclick: function(grid, idx, e){
+				selectionchange: function(grid, selection, e){
 					
-					var rec = this.grid_tables().getStore().getAt(idx);
+					if(selection.length == 0){
+						return;
+					}
+					var rec = selection[0];
 					var table = rec.get("table");
 					var url = "/ajax/database/" + this.curr_database + "/table/" + table + "/columns";
-					this.grid_columns().getStore().proxy.setUrl(url);
+					this.grid_columns().getStore().getProxy().url = url;
 					this.grid_columns().getStore().load();
 				}
 			}
@@ -67,14 +70,13 @@ grid_columns: function(){
 		this.gridColumns = Ext.create("Ext.grid.Panel", {
 			region: 'east', 
 			title: "Columns",
-			width: "70%",
+			flex: 1,
 			store: Ext.create("Ext.data.JsonStore", {
 				fields: [	
 					{name: "column", type:"string"},
 					{name: "type", type:"string"},
 					{name: "max_char", type:"string"},
-					{name: "nullable", type:"boolean"},
-				
+					{name: "nullable", type:"boolean"}
 				],
 				idProperty: "column",
 				proxy: {
@@ -96,14 +98,14 @@ grid_columns: function(){
 				deferEmptyText: false
 			},
 			columns: [ 
-				{header: "Column", dataIndex: "column",
+				{header: "Column", dataIndex: "column", flex: 1, menuDisabled: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
 				},
-				{header: "Type", dataIndex: "type"},
-				{header: "Nullable", dataIndex: "nullable", width: 30,
+				{header: "Type", dataIndex: "type", flex: 1, menuDisabled: true},
+				{header: "Nullable", dataIndex: "nullable", width: 50,
 					renderer: function(v){
 						return v ? "Yes" : "-";
 					}

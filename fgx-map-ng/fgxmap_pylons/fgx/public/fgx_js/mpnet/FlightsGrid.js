@@ -13,6 +13,9 @@ render_callsign: function(v, meta, rec){
 },
 
 render_altitude: function(v, meta, rec){
+	
+	//meta.style = "background-color: XXX";
+	
 	return Ext.util.Format.number(v, '00,000');	
 },
 
@@ -29,44 +32,42 @@ initComponent: function() {
 		viewConfig: {
 			emptyText: 'No flights in view', 
 			deferEmptyText: false,
-			forceFit: true
+			loadMask: false
 		}, 
 		stripeRows: true,
 		store: Ext.StoreMgr.lookup("flights_store"),
-		loadMask: false,
-		//sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
 		columns: [ 
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
-				renderer: this.render_callsign, width: 100
+				renderer: this.render_callsign, width: 100, menuDisabled: true
 			},
 			
 			{header: 'Alt', dataIndex:'alt_ft', sortable: true, align: 'right', width: 80,
-				renderer: this.render_altitude
+				renderer: this.render_altitude, menuDisabled: true
 			},
 			//{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
 			//	renderer: this.render_altitude_trend},
-			{header: 'Hdg', dataIndex:'hdg', sortable: true, align: 'right', width: 50,
+			{header: 'Hdg', dataIndex:'hdg', sortable: true, align: 'right', width: 50, menuDisabled: true,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return v; //Ext.util.Format.number(v, '0');
 				}
 			},
-			{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right',  
+			{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right', width: 50, menuDisabled: true,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0');
 				}
 			},
-			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: this.xHidden,
+			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: this.xHidden, menuDisabled: true,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: this.xHidden,
+			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: this.xHidden, menuDisabled: true,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Aircraft',  dataIndex:'model', sortable: true, 
-				width: 100
+			{header: 'Aircraft',  dataIndex:'model', sortable: true, menuDisabled: true,
+				flex: 1
 			}
 
 		],		

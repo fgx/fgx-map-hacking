@@ -5,7 +5,7 @@ extend:  "Ext.container.Viewport",
 
 	
 widgets: {
-	FlightsViewWidget: null,	
+	FlightsViewPanel: null,	
 	NetworkStatusPanel: null,
 	DbBrowser: null,
 	FlightPlansWidget: null
@@ -16,8 +16,6 @@ widgets: {
 // This this is location of the the "multiplayer stuff"..
 refresh_rate: 0,
 runner: Ext.create("Ext.util.TaskRunner", {}),
-
-//= this store is passed around.. its global kinda
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {
 	model: "mFlight",
@@ -61,11 +59,9 @@ xMpStatusStore: Ext.create("Ext.data.JsonStore", {
 
 update_flights: function(){
 	Ext.getStore("flights_store").load();
-	console.log("foo");
 },
 
 on_refresh_toggled: function(butt, checked){
-	console.log("on_refresh_toggled", butt.refresh_rate, checked);
 	
 	butt.setIconCls( checked ? "icoOn" : "icoOff" );
 	
@@ -77,7 +73,6 @@ on_refresh_toggled: function(butt, checked){
 	
 	//= start again with new rate..
 	if(this.refresh_rate > 0){
-		console.log("RUN");
 		this.runner.start({
 			interval: this.refresh_rate * 1000,
 			run: this.update_flights, 
@@ -105,17 +100,17 @@ on_flight_plans_widget: function(butt){
 
 
 on_flights_widget: function(butt){
-	if(!this.widgets.FlightsViewWidget){
+	if(!this.widgets.FlightsViewPanel){
 		
-		this.widgets.FlightsViewWidget = Ext.create("FGx.mpnet.FlightsViewWidget", {
+		this.widgets.FlightsViewPanel = Ext.create("FGx.mpnet.FlightsViewPanel", {
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
-		this.get_tab_panel().add(this.widgets.FlightsViewWidget);
+		this.get_tab_panel().add(this.widgets.FlightsViewPanel);
 		console.log("created");
 	}
-	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewWidget);
+	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewPanel);
 },
 
 on_network_status_panel: function(butt, checked){
@@ -144,14 +139,10 @@ on_db_browser_widget: function(butt, checked){
 //=================================================================================
 
 open_map:  function(obj){
-	//console.log("-----------------------------------------");
-	console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
-	//return;
-	//mapConf: 
+	//console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
 	var newMap = Ext.create("FGx.map.MapViewWidget", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
-	console.log("adddtab");
 },
 
 on_goto: function(butt){
@@ -181,7 +172,7 @@ get_tab_panel: function(){
 			
 			this.widgets[widget.fgxType] = 0;
 			return;
-			if(widget.fgxType == "FlightsViewWidget"){
+			if(widget.fgxType == "FlightsViewPanel"){
 				this.widgets.flightsGrid = 0;
 				
 			}else if(widget.fgxType == "NetworkStatusPanel"){

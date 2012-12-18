@@ -1,6 +1,6 @@
 
 
-Ext.define("FGx.mpnet.FlightsViewWidget" ,  {
+Ext.define("FGx.mpnet.FlightsViewPanel" ,  {
 
 extend: "Ext.Panel",
 	
