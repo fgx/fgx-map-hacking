@@ -31,7 +31,7 @@ class Globals(object):
 		## This is the version used on javascript=/fgx_js.X/* ,,
 		## Js is send cached, so new change means incrementing this number and directory rename
 		## This searched for fgx_js.X/ and sets the fgx_js_versin to X
-		path =  glob.glob(self.root_path + '/public/fgx_js.[0-9]/')[0]
+		path =  glob.glob(self.root_path + '/public/fgx_js.[0-9].[0-9]/')[0]
 		self.fgx_js_version =  path.split("/")[-2].replace("fgx_js.", "")
 		
 		

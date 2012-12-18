@@ -14,32 +14,14 @@
 var VP = null;
 </script>
 
-{{ mac.ext_js(ext_theme=c.ext_theme) }}
-{{ mac.openlayers_js() }}
+{{ mac.ext_js4(ext_theme=c.ext_theme) }}
+{# { mac.openlayers_js() } #}
 
 <script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/main.js"></script>
 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MapPanel.js"></script>
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MiniMapPanel.js"></script>
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MapViewWidget.js"></script>
 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/AirwaysPanel.js"></script>	
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/AirportsGrid.js"></script>	
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/FlightsGrid.js"></script>	
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/FlightsViewWidget.js"></script>	
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/FlightPlansWidget.js"></script> 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/NavWidget.js"></script> 
 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MpStatusGrid.js"></script>
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/NetworkStatusWidget.js"></script> 
-
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/BookMarkDialog.js"></script>
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/SettingsWidget.js"></script>
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/DbBrowser.js"></script> 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/IFramePanel.js"></script> 
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/UrlAction.js"></script> 
-
-<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MainViewport.js"></script>	
+{# <script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MainViewport.js"></script>	#}
 
 {% endblock header %}
 
@@ -51,9 +33,9 @@ var VP = null;
 
 <script>
 Ext.onReady(function(){
-	VP = new FGx.MainViewport();
+	VP = Ext.create("FGx.MainViewport", {});
 	VP.initialize();
-
+	//alert("ere");
 });
 </script>
 

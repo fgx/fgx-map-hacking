@@ -1,8 +1,7 @@
 
-Ext.namespace("FGx");
+Ext.define("FGx.MainViewport", {
 
-FGx.MainViewport = Ext.extend(Ext.Viewport, {
-
+extend:  "Ext.container.Viewport", 
 
 	
 widgets: {
@@ -16,9 +15,10 @@ widgets: {
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
 refresh_rate: 0,
-runner: new Ext.util.TaskRunner(),
+//runner: new Ext.util.TaskRunner(),
 
 //= this store is passed around.. its global kinda
+		   /*
 xFlightsStore: new Ext.data.JsonStore({
 	idProperty: 'callsign',
 	storeId: "flights_store",
@@ -65,7 +65,7 @@ xMpStatusStore: new Ext.data.JsonStore({
 	},
 	autoLoad: true,
 }),
-
+*/
 update_flights: function(){
 	this.xFlightsStore.load();
 },
@@ -213,11 +213,10 @@ on_url_action: function(butt, foo){
 },
 
 
-//=======================================
-//== Contructor
-constructor: function(config) {
+initComponent: function(){
 	
-	config = Ext.apply({
+	
+	Ext.apply(this, {
 		layout: "border",
 		frame: false,
 		plain: true,
@@ -225,7 +224,7 @@ constructor: function(config) {
 		items: [
 		
 			// TabBar in Center
-			this.get_tab_panel(),
+			//this.get_tab_panel(),
 		
 			//= Top Toolbar = North
 			{xtype: "panel",
@@ -271,7 +270,7 @@ constructor: function(config) {
 					{text: "Flight Plans", iconCls: "icoFlightPlans", xtype: "splitbutton",
 						handler: this.on_flight_plans_widget, scope: this,
 						menu:[
-							new FGx.UrlAction({text: "RouteFinder - rfinder.asalink.net/free/", url: "http://rfinder.asalink.net/free/", M: this}),
+							//TODO: new FGx.UrlAction({text: "RouteFinder - rfinder.asalink.net/free/", url: //"http://rfinder.asalink.net/free/", M: this}),
 						]
 					},
 					"-",
@@ -333,14 +332,14 @@ constructor: function(config) {
 				]
 			}			
 		]
-	}, config);
+	});
+	this.callParent();
 	
-	FGx.MainViewport.superclass.constructor.call(this, config);
-}, // Constructor	
+}, // initComponent	
 
 
 initialize:  function(){
-	
+	return;
 	//= Add default main map
 	this.open_map({title: "Main Map", closable:false})
 	
