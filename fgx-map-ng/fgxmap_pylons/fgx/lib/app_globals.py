@@ -28,6 +28,7 @@ class Globals(object):
 		
 		self.temp_dir = config['temp_dir']
 		
+		### TODO make this jsmin automatically
 		## This is the version used on javascript=/fgx_js.X/* ,,
 		## Js is send cached, so new change means incrementing this number and directory rename
 		## This searched for fgx_js.X/ and sets the fgx_js_versin to X
@@ -38,7 +39,7 @@ class Globals(object):
 		
 	@property
 	def static_url(self):
-		#TODO Below needs to be in ini
+		#TODO Below needs to be in ini config
 		return "http://static.fgx.ch"
 		
 	

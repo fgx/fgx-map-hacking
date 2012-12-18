@@ -61,6 +61,13 @@ def make_map(config):
 	map.connect('/ajax/database/{db_name}/table/{table_name}/columns', controller="ajax_db", action="columns")
 	map.connect('/ajax/database/{db_name}/table/{table_name}/drop', controller="ajax_db", action="drop_table")
 	
+	##=======================================================================
+	# Layers
+	##=======================================================================
+	map.connect('/ajax/layers/tilecache.cfg', controller="ajax_layers", action="tilecache_cfg")
+	map.connect('/ajax/layers/resources.xml', controller="ajax_layers", action="resources_xml")
+	
+	
 
 	##=======================================================================
 	# Ajax MultiPlayer
