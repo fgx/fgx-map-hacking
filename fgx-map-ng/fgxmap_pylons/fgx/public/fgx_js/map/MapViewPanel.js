@@ -1,6 +1,6 @@
 
 
-Ext.define("FGx.map.MapViewWidget",{
+Ext.define("FGx.map.MapViewPanel",{
 
 extend: "Ext.Panel", 
 W: {
@@ -145,11 +145,9 @@ initComponent: function() {
 				border: 0,
 				layout: "border",
 				items: [
-					{title: "FGx Map - Next Gen",
-						xtype: 'tabpanel', region: "center",
+					{xtype: 'tabpanel', region: "center",
 						frame: false,
-						plain: true,
-						border: 0,
+						border: false,
 						flex: 2,
 						activeItem: 0,
 						items: [
@@ -159,7 +157,6 @@ initComponent: function() {
 							this.get_flights_grid()
 						]
 					},
-		
 					this.get_mini_map()
 				]
 			}

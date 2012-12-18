@@ -108,17 +108,16 @@ lbl_lon: function(){
 
 get_bookmark_button: function(){
 		if(!this.xBookMarkButton){
-		this.xBookMarkButton = new Ext.Button({
+		this.xBookMarkButton = Ext.create("Ext.Button", {
 			text: "Bookmark",
 			iconCls: "icoBookMarkAdd",
 			scope: this,
 			handler: function(){
-				var d = new FGx.BookMarkDialog({bookmark_pk: 0});
+				var d = Ext.create("FGx.bookmark.BookMarkDialog", {bookmark_pk: 0});
 				d.run_show();
 				
 			}
 		});
-		//this.xOsmDark.setOpacity(0.5);	
 	}
 	return this.xBookMarkButton;
 },

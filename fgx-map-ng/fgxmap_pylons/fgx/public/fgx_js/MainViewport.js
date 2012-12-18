@@ -1,3 +1,4 @@
+/*global Ext: false, console: false, FGx: false */
 
 Ext.define("FGx.MainViewport", {
 
@@ -140,7 +141,7 @@ on_db_browser_widget: function(butt, checked){
 
 open_map:  function(obj){
 	//console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
-	var newMap = Ext.create("FGx.map.MapViewWidget", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
+	var newMap = Ext.create("FGx.map.MapViewPanel", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
 },
@@ -376,6 +377,7 @@ refresh_now: function(){
 on_open_url: function(butt){
 	window.open(butt.url);
 	return
+	// TODO
 	var iFrame =  new FGx.IFramePanel({
 		url: butt.url, title: butt.text
 	});
@@ -384,4 +386,4 @@ on_open_url: function(butt){
 }
 
 
-}) //< FGx.MainViewport
+});  //< FGx.MainViewport

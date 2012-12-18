@@ -1,35 +1,36 @@
-Ext.namespace("FGx");
-
-FGx.BookMarkDialog = Ext.extend(Ext.Window, {
 
 
-constructor: function(config) {
+Ext.define("FGx.bookmark.BookMarkDialog", {
+
+extend: "Ext.Window",
+
+initComponent: function() {
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		title: 'BookMark',
 		width: 500,
 		items: [
 			this.get_form()
 		]
-	}, config);
+	});
 	
-	FGx.BookMarkDialog.superclass.constructor.call(this, config);
-}, // Constructor	
+	this.callParent();
+}, // initComponent	
 
 get_form: function(){
 	if(!this.xForm){
-		this.xForm = new Ext.form.FormPanel({
-			frame: true, border: 0,
+		this.xForm = Ext.create("Ext.form.Panel", {
+			frame: true, border: false,
 			defaults: {
-				
+				labelAlign: "right",
 				labelWidth: 100
 			},
 			bodyStyle: "padding: 50px",
 			items: [
-				{fieldLabel: "Name", xtype: "textfield", width: 200, name: "name"},
-				{fieldLabel: "Lat", xtype: "textfield", width: 50, name: "lat"},
-				{fieldLabel: "Lon", xtype: "textfield", width: 50, name: "lon"},
-				{fieldLabel: "Zoom", xtype: "numberfield", width: 30, name: "zoom"}
+				{fieldLabel: "Name", xtype: "textfield", anchor: "90%", name: "name"},
+				{fieldLabel: "Lat", xtype: "textfield", anchor: "50%", name: "lat"},
+				{fieldLabel: "Lon", xtype: "textfield", anchor: "50%", name: "lon"},
+				{fieldLabel: "Zoom", xtype: "numberfield", anchor: "50%", name: "zoom"}
 			],
 			
 			buttons: [
@@ -53,7 +54,6 @@ get_form: function(){
 
 run_show: function(){
 	this.show();
-	
 }
 
 });
