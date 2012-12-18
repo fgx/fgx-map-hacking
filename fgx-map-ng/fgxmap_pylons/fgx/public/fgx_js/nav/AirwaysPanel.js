@@ -1,12 +1,15 @@
-Ext.namespace("FGx");
 
-FGx.AirwaysPanel = Ext.extend(Ext.Panel, {
+Ext.define("FGx.nav.AirwaysPanel", {
+
+extend: "Ext.Panel",
+tbw: 50,
+
 
 	//======================================================
 // Tables Grid
 grid_airways: function(){
 	if(!this.gridAirways){
-		this.gridAirways = new Ext.grid.GridPanel({
+		this.gridAirways = Ext.create("Ext.grid.GridPanel", {
 			region: 'center',
 			//title: "Airway",
 			width: 200,
@@ -61,7 +64,7 @@ grid_airways: function(){
 //== Columns
 grid_segments: function(){
 	if(!this.gridSegments){
-		this.gridSegments = new Ext.grid.GridPanel({
+		this.gridSegments = Ext.create("Ext.grid.GridPanel", {
 			region: 'east', 
 			//title: "Segments",
 			width: "70%",
@@ -114,7 +117,7 @@ grid_segments: function(){
 
 get_all_search_text: function(){
 	if(!this.txtSearchAll){
-		this.txtSearchAll = new Ext.form.TextField({
+		this.txtSearchAll = Ext.create("Ext.form.TextField", {
 			width: 60,
 			enableKeyEvents: true
 		});
@@ -145,9 +148,9 @@ get_all_search_text: function(){
 	return this.txtSearchAll;
 },
 
-constructor: function(config) {
+initComponent: function() {
 	
-	config = Ext.apply({
+	Ext.apply(this, {
 		title: 'Airways',
 		layout: "border",
 		iconCls: "icoAirways",
@@ -160,10 +163,9 @@ constructor: function(config) {
 			this.grid_segments()
         
 		]
-	}, config);
-	
-	FGx.AirwaysPanel.superclass.constructor.call(this, config);
-}, // Constructor	
+	});
+	this.callParent();
+}, // initComponent	
 
 
 });

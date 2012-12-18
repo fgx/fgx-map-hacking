@@ -10,9 +10,9 @@ W: {
 get_mini_map: function(){
 	
 	if(!this.xMiniMap){
-		this.xMiniMap = new FGx.MiniMapPanel({
+		this.xMiniMap = Ext.create("FGx.map.MiniMapPanel", {
 			region: "south", height: 250, collapsible: true,
-			ddflex: 1,
+			ddflex: 1, xConfig: this.xConfig
 		});
 		
 	};
@@ -21,8 +21,10 @@ get_mini_map: function(){
 
 get_map_panel: function(){
 	if(!this.xMapPanel){
-		this.xConfig.region = "center";
-		this.xMapPanel =  Ext.create("FGx.map.MapCore", {xConfig: this.xConfig});
+		//this.xConfig.region = "center";
+		this.xMapPanel =  Ext.create("FGx.map.MapCore", {
+			xConfig: this.xConfig, flex: 1, region: "center"
+		});
 	}
 	return this.xMapPanel;
 },
@@ -31,11 +33,11 @@ get_map_panel: function(){
 
 //======================================================
 // Airports Grid
-get_airports_grid: function(){
-	if(!this.xAirportsGrid){
+get_airports_panel: function(){
+	if(!this.xAirportsPanel){
 		
-		this.xAirportsGrid =  Ext.create("FGx.airport.AirportsGrid", {});
-		this.xAirportsGrid.on("rowclick", function(grid, idx, e){
+		this.xAirportsPanel =  Ext.create("FGx.airport.AirportsPanel", {});
+		this.xAirportsPanel.on("rowclick", function(grid, idx, e){
 			var rec = grid.getStore().getAt(idx);
 			var r = rec.data
 			r.lat = r.apt_center_lat;
@@ -43,7 +45,7 @@ get_airports_grid: function(){
 			console.log(r);
 			this.get_mini_map().show_blip(r);
 		}, this); 
-		this.xAirportsGrid.on("rowdblclick", function(grid, idx, e){
+		this.xAirportsPanel.on("rowdblclick", function(grid, idx, e){
 			var rec = grid.getStore().getAt(idx);
 			var r = rec.data
 			r.lat = r.apt_center_lat;
@@ -52,14 +54,14 @@ get_airports_grid: function(){
 			//this.get_map().zoomTo( 10 );
 		}, this);  
 	}
-	return this.xAirportsGrid;
+	return this.xAirportsPanel;
 },
 
 //======================================================
 // Flights Grid
 get_flights_grid: function(sto){
 	if(!this.xFlightsGrid){
-		this.xFlightsGrid =  new FGx.FlightsGrid({
+		this.xFlightsGrid =  Ext.create("FGx.mpnet.FlightsGrid", {
 			flightsStore: Ext.StoreMgr.lookup("flights_store"), 
 			title: "Flights", xHidden: true
 		});
@@ -83,7 +85,7 @@ get_flights_grid: function(sto){
 get_nav_widget: function(){
 	if(!this.xNavWidget){
 		
-		this.xNavWidget =  new FGx.NavWidget({});
+		this.xNavWidget =  Ext.create("FGx.nav.NavWidget", {});
 		this.xNavWidget.on("GOTO", function(obj){
 
 			this.get_mini_map().show_blip(obj);
@@ -97,7 +99,7 @@ get_nav_widget: function(){
 get_awy_widget: function(){
 	if(!this.xAwyWidget){
 		
-		this.xAwyWidget =  new FGx.AirwaysPanel({});
+		this.xAwyWidget =  Ext.create("FGx.nav.AirwaysPanel", {});
 		
 		this.xAwyWidget.grid_segments().getStore().on("load", function(store, recs, idx){
 			
@@ -127,7 +129,7 @@ initComponent: function() {
 		
 		fgxType: "map_panel",
 		iconCls: "icoMap",
-		frame: false, plain: true,border: 0,	bodyBorder: false,
+		frame: false, border: false,	bodyBorder: false,
 		
 		layout: "border",
 		items: [
@@ -151,7 +153,7 @@ initComponent: function() {
 						flex: 2,
 						activeItem: 0,
 						items: [
-							this.get_airports_grid(),
+							this.get_airports_panel(),
 							this.get_nav_widget(),
 							this.get_awy_widget(),
 							this.get_flights_grid()

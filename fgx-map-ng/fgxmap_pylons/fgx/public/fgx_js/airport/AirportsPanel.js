@@ -1,6 +1,6 @@
 
 Ext.namespace("FGx");
-Ext.define("FGx.airport.AirportsGrid", {
+Ext.define("FGx.airport.AirportsPanel", {
 
 extend: "Ext.Panel",
 				   

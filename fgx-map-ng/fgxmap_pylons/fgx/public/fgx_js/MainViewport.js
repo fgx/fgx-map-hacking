@@ -20,21 +20,8 @@ refresh_rate: 0,
 //= this store is passed around.. its global kinda
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {
-	idProperty: 'callsign',
+	model: "mFlight",
 	storeId: "flights_store",
-	fields: [ 	
-		{name: 'flag', type: 'int'},
-		{name: 'check', type: 'int'},
-		{name: "callsign", type: 'string'},
-		{name: "server", type: 'string'},
-		{name: "model", type: 'string'},
-		{name: "lat", type: 'float'},
-		{name: "lon", type: 'float'},
-		{name: "alt_ft", type: 'int'},
-		{name: "spd_kts", type: 'int'},
-		//{name: "alt_trend", type: 'string'},
-		{name: "hdg", type: 'int'}
-	],
 	url: '/ajax/mpnet/flights/crossfeed',
 	root: 'flights',
 	remoteSort: false,
@@ -71,9 +58,9 @@ update_flights: function(){
 },
 
 on_refresh_toggled: function(butt, checked){
-	//console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
+	console.log("on_refresh_toggled", butt.refresh_rate, butt.checked);
 	
-	butt.setIconClass( checked ? "icoOn" : "icoOff" );
+	butt.setIconCls( checked ? "icoOn" : "icoOff" );
 	
 	//= set new refresh var
 	this.refresh_rate = butt.refresh_rate;
@@ -152,6 +139,7 @@ open_map:  function(obj){
 	//console.log("-----------------------------------------");
 	console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
 	//return;
+	//mapConf: 
 	var newMap = Ext.create("FGx.map.MapViewWidget", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
 	this.get_tab_panel().add(newMap);
 	this.get_tab_panel().setActiveTab(newMap);
@@ -300,7 +288,16 @@ initComponent: function(){
 					{xtype: 'tbspacer', width: 50},
 					"-",
 					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
-					this.get_refresh_buttons(),
+					{text:  "Off" , iconCls: "icoOn", enableToggle: true,   
+						width: this.tbw, pressed: true,
+						toggleGroup: "ref_rate",  refresh_rate: 0, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
+		   			{text:  "2" , iconCls: "icoOff", enableToggle: true,   
+						width: this.tbw, 
+						toggleGroup: "ref_rate",  refresh_rate: 0, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
 					"-",
 					
 					"->",
@@ -358,7 +355,7 @@ get_refresh_buttons: function(refresh_rate){
 	var arr = [0, 2, 3, 4, 5, 10, 20];
 	for(var i = 0; i < arr.length; i++){
 		var x = arr[i];
-		items.push({
+		items.push(Ext.create("Ext.Action", {
 			text: x == 0 ? "Off" : x < 10 ? x + "&nbsp;" : x, 
 			//width: 50,
 			iconCls: this.refresh_rate == x ? "icoOn" : "icoOff", 
@@ -369,8 +366,9 @@ get_refresh_buttons: function(refresh_rate){
 			refresh_rate: x, 
 			toggleHandler: this.on_refresh_toggled,
 			scope: this
-		})
+		}))
 	}
+	console.log("get refresh", items);
 	return items;
 },
 

@@ -1,8 +1,7 @@
 
-Ext.namespace("FGx");
+Ext.define("FGx.map.MiniMapPanel", {
 
-FGx.MiniMapPanel = Ext.extend(GeoExt.MapPanel, {
-
+extend: "GeoExt.panel.Map",
 L:{},
 	
 //var self = this;
@@ -60,7 +59,8 @@ get_map: function(){
 			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
 			
 			// zoomlevels 0-13 = 14 levels ?
-			zoomLevels: 20
+			zoomLevels: 20,
+			layers: this.get_layers()
 		});
 		this.xMap.events.register("mousemove", this, function (e) {
 			
@@ -144,10 +144,10 @@ show_line: function(recs){
 },
 //===========================================================
 //== CONSTRUCT
-constructor: function(config) {
+initComponent: function() {
 	
 	//console.log("constr", config.title, config.lat, config.lon);
-	
+	var config = this.xConfig;
 	var ll;
 	if(config.lat || config.lon){
 		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat
@@ -158,19 +158,19 @@ constructor: function(config) {
 		ll.xFlag = "Default"
 	}
 	//console.log(ll.xFlag, ll.x, ll.y);
-	config = Ext.apply({
+	Ext.apply(this, {
 		
 		frame: false, plain: true, border: 0,	bodyBorder: false,
 		iconCls: "icoMap",
 		hideHeader: true,		
 				map: this.get_map(),
 				center:  ll, 
-				zoom: 2,
-				layers: this.get_layers()
+				zoom: 2
+				
 		
 		
-	}, config);
-	FGx.MiniMapPanel.superclass.constructor.call(this, config);
+	});
+	this.callParent();
 
 	
 }, // Constructor	

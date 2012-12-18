@@ -1,5 +1,5 @@
 
-Ext.namespace("FGx");
+
 Ext.define("FGx.nav.NavWidget", {
 
 extend: "Ext.grid.GridPanel",

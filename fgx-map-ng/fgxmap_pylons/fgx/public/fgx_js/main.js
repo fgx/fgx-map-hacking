@@ -52,14 +52,22 @@ FGx.msg = function(title, body, tim){
 
 
 
-Ext.define('Task', {
+Ext.define('mFlight', {
 	extend: 'Ext.data.Model',
-	fields: [
-		{name: 'task',     type: 'string'},
-		{name: 'user',     type: 'string'},
-		{name: 'duration', type: 'string'},
-		{name: 'done',     type: 'boolean'}
-	]
+	idProperty: 'callsign',
+	fields: [ 	
+		{name: 'flag', type: 'int'},
+		{name: 'check', type: 'int'},
+		{name: "callsign", type: 'string'},
+		{name: "server", type: 'string'},
+		{name: "model", type: 'string'},
+		{name: "lat", type: 'float'},
+		{name: "lon", type: 'float'},
+		{name: "alt_ft", type: 'int'},
+		{name: "spd_kts", type: 'int'},
+		//{name: "alt_trend", type: 'string'},
+		{name: "hdg", type: 'int'}
+	],
 });
 
 
