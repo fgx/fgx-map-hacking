@@ -2,13 +2,22 @@
 ## Hacking
 =================================================
 
-This wsgi application is built with Pylons.
+This Web Server Gateway Interface (wsgi) application is currently
+using the good olde Pylons framework.
+http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/
+
+A WSGI application is cgi like when the whole request is handed over,
+and then dealt with in python with some exceptions.
 
 
 -------------------------
 Content Delivey network
 -------------------------
-Libraies, icons etc are loaded from static.fgx.ch
+JS Libraies, icons etc are loaded from http://static.fgx.ch
+This is a checkout of fgx-static repos which contains the 
+content. 
+Note: content is served directly by nginx and is CACHED FOREVER.
+      so please be careful.
 
 
 

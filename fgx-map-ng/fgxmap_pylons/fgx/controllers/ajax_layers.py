@@ -12,6 +12,8 @@ from fgx.lib import helpers as h
 
 log = logging.getLogger(__name__)
 
+
+
 ## http://stackoverflow.com/questions/3220670/read-all-the-contents-in-ini-file-into-dictionary-with-python/3220891#3220891
 class FGxConfigParser(ConfigParser.ConfigParser):
 
@@ -23,24 +25,40 @@ class FGxConfigParser(ConfigParser.ConfigParser):
         return d
 
         
-class AjaxLayersController(BaseController):
-
-	@jsonify
-	def tilecache_cfg(self):
-
+def load_tilecache_cfg():
 		cfg_file_path = h.G().root_path + "/../../tilecache/tilecache.cfg" 
 		
 		raw = h.read_file( cfg_file_path )
 		
 		parser = FGxConfigParser()
 		parser.read(cfg_file_path)
+		
+		return raw, parser.as_dict() 
+
+		
+##================================================================
+class AjaxLayersController(BaseController):
+
+	@jsonify
+	def layers_index(self):
+	
+		source_string, dic = load_tilecache_cfg()
+	
+		payload = dict(success=True, layers = sorted(dic.keys()) )
+	
+	
+		return payload
+
+	@jsonify
+	def tilecache_cfg(self):
+
+		source_string, dic = load_tilecache_cfg()
 	
 		payload = dict(
 					success=True,
-					raw = raw,
-					config = parser.as_dict()
+					source_string = source_string,
+					config = dic
 				)
-		
+				
 		return payload
-		
-	
+
