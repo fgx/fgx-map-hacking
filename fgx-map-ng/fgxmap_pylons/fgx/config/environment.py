@@ -50,8 +50,8 @@ def load_environment(global_conf, app_conf, start_bots):
 	class Engines(object):
 		pass
 	engines = Engines()
-	engines.data = engine_from_config(config, 'sql_data.')
-	engines.secure = engine_from_config(config, 'sql_secure.')
+	engines.navdata = engine_from_config(config, 'sql_navdata.')
+	engines.users = engine_from_config(config, 'sql_users.')
 	engines.mpnet = engine_from_config(config, 'sql_mpnet.')
 	
 	init_model(engines)

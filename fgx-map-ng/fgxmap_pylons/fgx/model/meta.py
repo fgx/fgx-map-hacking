@@ -7,23 +7,23 @@ __all__ = ['Base', 'Session']
 
 class ConnectionsContainer():
 	def __init__(self):
-		self.data = None
-		self.secure = None
+		self.navdata = None
+		self.users = None
 		self.mpnet = None
 		
 		
 # SQLAlchemy session manager. Updated by model.init_model()
 ## Need this is object
 Sess = ConnectionsContainer()
-Sess.data = scoped_session(sessionmaker())
-Sess.secure = scoped_session(sessionmaker())
+Sess.navdata = scoped_session(sessionmaker())
+Sess.users = scoped_session(sessionmaker())
 Sess.mpnet = scoped_session(sessionmaker())
 
 
 # The declarative Base
 Base = ConnectionsContainer()
-Base.data = declarative_base()
-Base.secure = declarative_base()
+Base.navdata = declarative_base()
+Base.users = declarative_base()
 Base.mpnet = declarative_base()
 
 

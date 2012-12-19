@@ -14,8 +14,8 @@ error_email_from = paste@localhost
 
 
 ## Set the MpServer
-# The multiplayer server to connect via telnet 
-telnet_server = 217.150.241.103  # fgx.ch 's .ip 
+# The multiplayer server to connect via telnet
+telnet_server = 217.150.241.103
 telnet_admin_port = 5001
 
 temp_dir = /home/map/_TEMP
@@ -26,12 +26,10 @@ temp_dir = /home/map/_TEMP
 ## This is the ajax corrected with heading etc 
 ## and snapshot from current state/postion from fgms.0.x
 
-# Wished for
-#crossfeed_ajax = http://127.0.0.1:3335/ 
 
 # Current - This return the raw data
-#crossfeed_ajax_url = http://cf.fgx.ch:80/data 
-crossfeed_ajax_url = http://127.0.0.1:3335/data
+crossfeed_ajax_url = http://cf.fgx.ch:80/data 
+# crossfeed_ajax_url = http://127.0.0.1:3335/data
 
 ## The maximum no of mpserverNN to lookup for now, this might be dynamic later
 max_dns_no = 50
@@ -57,7 +55,7 @@ beaker.session.secret = somesecret
 # If you'd like to fine-tune the individual locations of the cache data dirs
 # for the Cache data, or the Session saves, un-comment the desired settings
 # here:
-#beaker.cache.data_dir = %(here)s/data/cache
+#beaker.cache.datsa_dir = %(here)s/data/cache
 #beaker.session.data_dir = %(here)s/data/sessions
 
 ##=======================================
@@ -65,10 +63,10 @@ beaker.session.secret = somesecret
 # These are the three database connection', but could be the same user/pass and database
 
 ## Data - Postgis required for geomoetry
-sql_data.url = postgresql+psycopg2://USER:PASSWORD@localhost/DATABASE
+sql_navdata.url = postgresql+psycopg2://USER:PASSWORD@localhost/DATABASE
 
 ## Users and Profiles, settings storage etc
-sql_secure.url =  postgresql+psycopg2://USER:PASSWORD@localhost/DATABASE
+sql_users.url =  postgresql+psycopg2://USER:PASSWORD@localhost/DATABASE
 
 
 ## Multiplayer and tracker
@@ -78,10 +76,11 @@ sql_mpnet.url =  postgresql+psycopg2://USER:PASSWORD@localhost/DATABASE
 ##=======================================
 
 
+
 # WARNING: *THE LINE BELOW MUST BE UNCOMMENTED ON A PRODUCTION ENVIRONMENT*
 # Debug mode will enable the interactive debugging tool, allowing ANYONE to
 # execute malicious code after an exception is raised.
-set debug = false
+#set debug = false
 
 
 # Logging configuration
@@ -95,22 +94,22 @@ keys = console
 keys = generic
 
 [logger_root]
-level = WARN
+level = INFO
 handlers = console
 
 [logger_routes]
-level = WARN
+level = INFO
 handlers =
 qualname = routes.middleware
 # "level = DEBUG" logs the route matched and routing variables.
 
 [logger_fgx]
-level = WARN
+level = DEBUG
 handlers =
 qualname = fgx
 
 [logger_sqlalchemy]
-level = WARN
+level = INFO
 handlers =
 qualname = sqlalchemy.engine
 # "level = INFO" logs SQL queries.

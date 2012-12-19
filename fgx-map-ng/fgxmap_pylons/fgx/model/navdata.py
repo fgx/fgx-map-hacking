@@ -13,7 +13,7 @@ FGX_SRID = 3857
 
 ##=======================================================
 """
-class Airway(Base.data):
+class Airway(Base.navdata):
 	
 	__tablename__ = "airway"
 	
@@ -26,7 +26,8 @@ class Airway(Base.data):
 	apt_type = Column(String(4), nullable=True)
 """	
 ##=======================================================
-class AirwaySegment(Base.data):
+"""
+class AirwaySegment(Base.navdata):
 	
 	LOW = 1
 	HIGHT = 2
@@ -51,11 +52,11 @@ class AirwaySegment(Base.data):
 	search = Column(String(255)) #, index=True)
 	
 GeometryDDL(AirwaySegment.__table__)	
-	
+"""	
 	
 	
 ##=======================================================
-class Airport(Base.data):
+class Airport(Base.navdata):
 	
 	__tablename__ = "airport"
 	
@@ -110,7 +111,7 @@ GeometryDDL(Airport.__table__)
 
 	
 ##=======================================================
-class Aero(Base.data):
+class Aero(Base.navdata):
 	
 	__tablename__ = "aircraft"
 	
@@ -134,7 +135,7 @@ class Aero(Base.data):
 	
 	
 ##=======================================================
-class Country(Base.data):
+class Country(Base.navdata):
 	
 	__tablename__ = "country"
 	
@@ -144,7 +145,7 @@ class Country(Base.data):
 	
 
 ##=======================================================
-class Ils(Base.data):
+class Ils(Base.navdata):
 	
 	__tablename__ = "ils"
 	
@@ -178,7 +179,7 @@ GeometryDDL(Airport.__table__)
 
 
 ##=======================================================
-class NavAid(Base.data):
+class NavAid(Base.navdata):
 	
 	class TYPE:
 		
@@ -271,7 +272,7 @@ GeometryDDL(NavAid.__table__)
 
 
 ##=======================================================
-class Runway(Base.data):
+class Runway(Base.navdata):
 	
 	__tablename__ = "runway"
 	
@@ -366,7 +367,7 @@ GeometryDDL(Runway.__table__)
 
 ##=======================================================
 """
-class Threshold(Base.data):
+class Threshold(Base.navdata):
 	
 	__tablename__ = "threshold"
 

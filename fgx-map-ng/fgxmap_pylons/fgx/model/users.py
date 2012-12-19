@@ -4,7 +4,7 @@ from sqlalchemy import  Integer, String, Date, DateTime, Column
 from fgx.model.meta import Sess, Base
 
 ##=======================================================
-class BookMark(Base.secure):
+class BookMark(Base.users):
 	
 	__tablename__ = "bookmark"
 	
@@ -19,7 +19,7 @@ class BookMark(Base.secure):
 
 
 ##=======================================================
-class User(Base.secure):
+class User(Base.users):
 	
 	__tablename__ = "user"
 	
@@ -37,7 +37,7 @@ class User(Base.secure):
 	
 	
 ##=======================================================
-class UserLog(Base.secure):
+class UserLog(Base.users):
 	
 	__tablename__ = "user_log"
 	

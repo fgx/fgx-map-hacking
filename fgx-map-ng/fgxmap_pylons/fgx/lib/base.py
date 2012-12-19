@@ -17,6 +17,6 @@ class BaseController(WSGIController):
         try:
             return WSGIController.__call__(self, environ, start_response)
         finally:
-            Sess.data.remove()
-            Sess.secure.remove()
+            Sess.navdata.remove()
+            Sess.users.remove()
             Sess.mpnet.remove()
