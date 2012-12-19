@@ -37,6 +37,7 @@ class AjaxLayersController(BaseController):
 	
 		payload = dict(
 					success=True,
+					raw = raw,
 					config = parser.as_dict()
 				)
 		
