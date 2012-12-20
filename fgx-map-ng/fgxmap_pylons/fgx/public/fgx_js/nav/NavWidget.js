@@ -127,9 +127,9 @@ initComponent: function() {
 		],
 		listeners: {
 			scope: this,
-			rowclick:  function(grid, rowIdx, e){
-				var rec = this.get_store().getAt(rowIdx);
-				//console.log("lat/lon", rec, rec.get("lon"), rec.get("lat"));
+			selectionchange:  function(store, selected, e){
+				//var rec = this.get_store().getAt(rowIdx);
+				console.log("lat/lon", selected);
 				obj = {};
 				obj.lat = rec.get("lat");
 				obj.lon = rec.get("lon");

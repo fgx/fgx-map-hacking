@@ -340,7 +340,7 @@ initComponent: function(){
 					//== Refresh MP
 					{xtype: 'tbspacer', width: 50},
 					"-",
-					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "Refresh now now",
+					{text: "MP Refresh >&nbsp;", tooltip: "Refresh now now",
 						handler: function(){
 							
 						}
@@ -348,6 +348,11 @@ initComponent: function(){
 					{text:  "Off" , iconCls: "icoOff", enableToggle: true,   
 						width: this.tbw,   allowDepress: false,
 						toggleGroup: "ref_rate",  refresh_rate: 0, 
+						toggleHandler: this.on_refresh_toggled,	scope: this
+					},
+		   		   	{text:  "1" , iconCls: "icoOff", enableToggle: true,    
+						width: this.tbw, allowDepress: false, 
+						toggleGroup: "ref_rate",  refresh_rate: 1, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 		   		   	{text:  "2" , iconCls: "icoOff", enableToggle: true,    
@@ -360,7 +365,7 @@ initComponent: function(){
 						toggleGroup: "ref_rate",  refresh_rate: 3, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   			{text:  "5" , iconCls: "icoOff", enableToggle: true,   
+		   			{text:  "6" , iconCls: "icoOff", enableToggle: true,   
 						width: this.tbw, allowDepress: false,
 						toggleGroup: "ref_rate",  refresh_rate: 5,
 						toggleHandler: this.on_refresh_toggled,	scope: this
