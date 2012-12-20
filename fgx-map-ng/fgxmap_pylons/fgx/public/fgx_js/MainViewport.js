@@ -89,7 +89,7 @@ on_refresh_toggled: function(butt, checked){
 
 on_flight_plans_widget: function(butt){
 	if(!this.widgets.FlightPlansWidget){
-		this.widgets.FlightPlansWidget = new FGx.FlightPlansWidget({
+		this.widgets.FlightPlansWidget =  Ext.create("FGx.flightplans.FlightPlansWidget", {
 			//flightsStore: this.xFlightsStore,
 			//refresh_rate: this.refresh_rate,
 			title: "Flight Plans", 
@@ -387,7 +387,7 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	
+	this.on_flight_plans_widget();
 	//this.on_layers_browser_widget();
 },
 

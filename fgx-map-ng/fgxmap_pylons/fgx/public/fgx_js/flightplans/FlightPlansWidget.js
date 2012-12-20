@@ -1,7 +1,9 @@
+/*global Ext: false, console: false, FGx: false */
 
-Ext.namespace("FGx");
 
-FGx.FlightPlansWidget = Ext.extend(Ext.Panel, {
+Ext.define("FGx.flightplans.FlightPlansWidget", {
+
+extend: "Ext.Panel", 
 
 group_renderer: function(v,u,r,rowIdx,colIdx, ds){
 	//console.log(v, u, r, rowIdx, colIdx, ds);
@@ -10,79 +12,63 @@ group_renderer: function(v,u,r,rowIdx,colIdx, ds){
 	
 get_flight_plan_grid: function(){
 	if(!this.xFlightPlanGrid){
-		this.xFlightPlanGrid = new Ext.grid.GridPanel({
+		this.xFlightPlanGrid = Ext.create("Ext.grid.GridPanel", {
 			region: "east",
-			width: 300,
-			frame: false, plain: true, border: false,
+			sswidth: 400,
+			ssheight: 100,
+			flex: 1,
+			frame: false, border: false,
 			columns: [
-				{header: '', dataIndex:'idx', sortable: false, align: 'right',
-						groupRenderer: this.group_renderer, hidden: true
+				{header: 'idx', dataIndex:'idx', sortable: false, align: 'right',flex: 1,
+						ssgroupRenderer: this.group_renderer, sshidden: true
 				},
-				{header: 'Ident', dataIndex:'ident', sortable: false, align: 'right',
-					ssgroupRenderer: this.group_renderer
+				{header: 'Ident', dataIndex:'ident', sortable: false, align: 'right',flex: 1,
+					ssssgroupRenderer: this.group_renderer
 				},
-				{header: 'Lat', dataIndex:'lat', sortable: false, align: 'right',
+				{header: 'Lat', dataIndex:'lat', sortable: false, align: 'right', flex: 1
 				},
-				{header: 'Lon', dataIndex:'lon', sortable: false, align: 'right',
+				{header: 'Lon', dataIndex:'lon', sortable: false, align: 'right',flex: 1
 				
 				},
-				{header: 'Type', dataIndex:'nav_type', sortable: false, align: 'right',
+				{header: 'Type', dataIndex:'nav_type', sortable: false, align: 'right',flex: 1
 				},
-				{header: 'Freq', dataIndex:'freq', sortable: false, align: 'right',
+				{header: 'Freq', dataIndex:'freq', sortable: false, align: 'right',flex: 1
 				},
 			],
-			enableHdMenu: false,
-			store: new Ext.data.GroupingStore({
-				
-				//sortInfo: {field: 'idx', direction: "ASC"},
-				
+			features: [{ftype:'grouping'}],
+			store: Ext.create("Ext.data.JsonStore", {
+				sortInfo: {field: 'idx', direction: "ASC"},
+				fields: [	
+					{name: "uid", type:"int"},
+					{name: "ident", type:"string"},
+					{name: "idx", type:"int"},
+					{name: "lat", type:"string"},
+					{name: "lon", type:"string"},
+					{name: "freq", type:"string"},
+					{name: "nav_type", type:"string"}
+				],
+				idProperty: "uid",
 				groupField:'idx',
-				proxy: new Ext.data.HttpProxy({
-					url: "/ajax/database/data/tables",
-					method: 'GET'
-				}),
-				reader: new Ext.data.JsonReader({
-					root: "flight_plan",
-					fields: [	
-						{name: "uid", type:"int"},
-						{name: "ident", type:"string"},
-						{name: "idx", type:"int"},
-						{name: "lat", type:"string"},
-						{name: "lon", type:"string"},
-						{name: "freq", type:"string"},
-						{name: "nav_type", type:"string"}
-					],
-					idProperty: "uid"
-				}),
+				proxy: {
+					type: "ajax",
+					url: "/ajax/flightplan/__TODO__",
+					method: 'GET',
+					reader: {
+						type: "json",
+						root: "flight_plan"
+					}	
+				},
 				
 				autoLoad: false
 			}),
-			loadMask: true,
-			view: new Ext.grid.GroupingView({
-				forceFit:true,
-				emptyText: "No items to view",
-				deferEmptyText: false,
-				ssgroupTextTpl: '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})',
-				
-			}),
-			DDDviewConfig:{
-				forceFit: true,
-				
-			},
+			bbar: [
+				{text: "Foo"}
+			]			
 		});
 		//this.xFlightPlanGrid.on("rowclick", function(grid, rowIdx, e){
 		//	var rec = grid.getStore().getAt(rowIdx);
 		this.xFlightPlanGrid.getStore().on("load", function(store, recs){
-			//console.log(recs);
-			/* var recs_length = recs.length;
-			
-			var fpoints = [];
-			for(var i =0; i < recs_length; i++){
-				var r = recs[i].data;
-				if(r.lat && r.lon){
-					fpoints.push(r);
-				}
-			}*/
+
 			this.get_map_panel().load_flight_plan(recs);
 		}, this);
 			
@@ -92,8 +78,8 @@ get_flight_plan_grid: function(){
 
 get_map_panel: function(){
 	if(!this.xMapPanel){
-		this.xMapPanel = new FGx.MapPanel({
-			region: "center",
+		this.xMapPanel = Ext.create("FGx.map.MapCore", {
+			region: "center", xConfig: {}, title: "MAp", flex: 2
 		});
 	}
 	return this.xMapPanel;
@@ -101,9 +87,9 @@ get_map_panel: function(){
 
 //===========================================================
 //== Grid
-constructor: function(config) {
-	config = Ext.apply({
-		sstitle: 'Flights',
+initComponent: function() {
+	Ext.apply(this, {
+		DEADsstitle: 'Flights',
 		iconCls: 'icoFlightPlans',
 		fgxType: "FlightPlansWidget",
 		layout: "border",
@@ -115,7 +101,7 @@ constructor: function(config) {
 				tbar: [
 					//{xtype: "fieldset", title: "Paste Flight Plan", autoHeight: true,
 						//items:[
-							{xtype: "textarea", width: "90%", id: this.getId() + "flight_plan_paste",
+							{xtype: "textarea", width: "90%", name: "flight_plan_paste",
 							hideLabel: true, width: window.innerWidth - 100, height: 50,
 						ssvalue: "EGLL SID BPK UN866 LEDBO UM604 INBOB M604 SVA Z101 GUBAV Z156 AMIMO P80 LATEN B483 PETAG B954 GIKSI G7 LURET R351 KUMOG G902 FRENK B244 OTZ J502 FAI J515 HRDNG J502 RDFLG J515 ORT J502 YZT J523 TOU J501 OED J1 RBL STAR KSFO",
 						ssvalue: "EGLL SID DVR UL9 KONAN UL607 KOK UM150 DIK UN852 GTQ UT3 BLM DCT LSZO",
@@ -128,13 +114,13 @@ constructor: function(config) {
 							Ext.Ajax.request({
 								url: "/ajax/flightplan/process",
 								method: "POST",
-								params: {raw_text: Ext.getCmp(this.getId() + "flight_plan_paste").getValue()},
+								params: {raw_text: this.down("textarea[name=flight_plan_paste]").getValue()},
 								scope: this,
 								success: function(response, opts) {
 									var data = Ext.decode(response.responseText);
 									//this.get_map_panel().load_tracker(obj.tracks);
-									//console.log(data);
-									this.get_flight_plan_grid().getStore().loadData(data)
+									console.log(data);
+									this.get_flight_plan_grid().getStore().loadRawData(data)
 									
 								},
 								failure: function(response, opts) {
@@ -153,9 +139,9 @@ constructor: function(config) {
 		
 		
 		
-	}, config);
-	FGx.FlightPlansWidget.superclass.constructor.call(this, config);
-}, // Constructor	
+	});
+	this.callParent();
+}
 	
 });
 

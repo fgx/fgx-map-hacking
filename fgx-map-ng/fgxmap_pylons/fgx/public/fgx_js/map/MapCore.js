@@ -397,7 +397,7 @@ initComponent: function() {
 	var config = this.xConfig;
 	
 	var ll;
-	if(config.lat && config.lon){
+	if( config.lat && config.lon){
 		ll =  new OpenLayers.Geometry.Point(config.lon, config.lat
 			).transform(this.get_display_projection(), this.get_map().getProjectionObject() ); 
 		ll.xFlag = "  SET:";

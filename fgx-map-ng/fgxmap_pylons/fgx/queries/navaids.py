@@ -49,7 +49,7 @@ def navaids(ident=None, search=None, nav_suffix=None, bounds=None, ifr=False):
 		
 	sql += "limit 100"
 	
-	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.navdata.execute(sql).fetchall(), cols)
 	
 	
 	
@@ -87,7 +87,7 @@ def airways(search=None, awy=None):
 		
 	sql += " order by airway asc "
 	lst = []
-	for r in meta.Sess.data.execute(sql).fetchall():
+	for r in meta.Sess.navdata.execute(sql).fetchall():
 		if r['airway'].find("-") == -1:
 			lst.append({"airway": r['airway']})
 		#sselse:
@@ -126,5 +126,5 @@ def segments(awy):
 	sql += " where  search ilike '%s' " % ("%" + "#" +  awy + "#" + "%") 
 		
 	#sql += " order by airway asc "
-	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.navdata.execute(sql).fetchall(), cols)
 	

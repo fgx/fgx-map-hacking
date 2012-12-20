@@ -10,7 +10,7 @@ from fgx.lib.base import BaseController, render
 from fgx.lib import helpers as h
 
 from fgx.model import meta
-from fgx.model.data import NavAid
+from fgx.model.navdata import NavAid
 from fgx.queries import navaids
 
 log = logging.getLogger(__name__)
@@ -116,7 +116,7 @@ class AjaxNavaidsController(BaseController):
 		uid = 0
 		for w in waypoints:
 			##obs = meta.Sess.data.query(NavAid).filter_by(ident=w).all()
-			points = navaids.search(ident=w, ifr=True)
+			points = navaids.navaids(ident=w, ifr=True)
 			idx += 1
 			if len(points) == 0:
 				flight_plan.append( {"wp": w, "idx": idx, "ident": w, "uid": uid, 'nav_type': None, 'lat': None, 'lon': None, 'freq': None} )
