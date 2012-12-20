@@ -117,7 +117,9 @@ get_tree_store: function(){
 layer_tree: function(){
 	if(!this.xLayerTree){
 		this.xLayerTree = Ext.create("Ext.tree.Panel", {
-			region: "east", autoScroll: true, 
+			autoScroll: true,
+			width: "100%",
+			flex: 1,
 			frame: false,  border: false,
 			useArrows: true,
 			rootVisible: true,
@@ -128,7 +130,7 @@ layer_tree: function(){
 			viewConfig: {
 				forceFit: true
 			},
-			width: 500,
+			
 			store: this.get_tree_store()
 		});
 	}
@@ -145,6 +147,7 @@ fetch_layer: function(layer){
 			var data = payload.data;
 			
 			console.log(data);
+			this.down("textarea[name=style_xml_text]").setRawValue(data.stylexml );
 			
 			var sto = this.get_tree_store();
 			//sto.removeAll();
@@ -211,7 +214,19 @@ initComponent: function() {
 			{xtype: "panel", title: "Layers", layout: "border", border: false, frame: false, 
 				items: [
 					this.grid_layers(),
-					this.layer_tree()
+					{xtype: "panel", region: "east", title: "Layer Details", 
+						layout: "vbox", width: 500, 
+						items: [
+							
+							{xtype: "fieldset", title: "Style XML", width: "100%",
+								items: [
+									{xtype: "textarea", name: "style_xml_text", height: 200, width: "100%"}
+								]
+		   
+							},
+						this.layer_tree(),
+						]
+					}
 				]
 			},
 			//this.view_tilecache(),
