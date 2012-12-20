@@ -15,7 +15,7 @@ from fgx.model.meta import Sess, Base
 
 FGX_SRID = 3857
 
-##=======================================================
+##################################################
 """
 class Airway(Base.navdata):
 	
@@ -29,7 +29,7 @@ class Airway(Base.navdata):
 	apt_country = Column(String(2), nullable=True)
 	apt_type = Column(String(4), nullable=True)
 """	
-##=======================================================
+##################################################
 """
 class AirwaySegment(Base.navdata):
 	
@@ -59,7 +59,7 @@ GeometryDDL(AirwaySegment.__table__)
 """	
 	
 	
-##=======================================================
+##################################################
 class Airport(Base.navdata):
 	
 	__tablename__ = "airport"
@@ -114,7 +114,7 @@ GeometryDDL(Airport.__table__)
 
 
 	
-##=======================================================
+##################################################
 class Aero(Base.navdata):
 	
 	__tablename__ = "aircraft"
@@ -138,7 +138,7 @@ class Aero(Base.navdata):
 	
 	
 	
-##=======================================================
+##################################################
 class Country(Base.navdata):
 	
 	__tablename__ = "country"
@@ -147,8 +147,35 @@ class Country(Base.navdata):
 	country_name = Column(String(100), index=True)
 
 	
-
-##=======================================================
+##################################################	
+class Fix(Base):
+	
+	__tablename__ = 'fix'
+	
+	fix_pk = Column(Integer(), primary_key=True)
+	fix = Column(String(10), index=True, nullable=False)
+	lat = Column(String(15), index=True, nullable=False)
+	lon = Column(String(15), index=True, nullable=False)
+	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	
+	@property
+	def latp(self):
+		#print self.wkb_geometry.geometry_type
+		#dump(self.wkb_geometry)
+		#return self.wkb_geometry.coords[0]
+		#return self.wkb_geometry.x
+		return  "lat" #Session.scalar(self.wkb_geometry.geometry_type)
+		
+	@property
+	def lonp(self):
+		return "lon" #str(self.wkb_geometry.coords[1])
+	
+	def dic(self):
+		
+		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+		
+		
+##################################################
 class Ils(Base.navdata):
 	
 	__tablename__ = "ils"
@@ -182,7 +209,7 @@ GeometryDDL(Airport.__table__)
 
 
 
-##=======================================================
+##################################################
 class NavAid(Base.navdata):
 	
 	class TYPE:
@@ -275,7 +302,7 @@ GeometryDDL(NavAid.__table__)
 	
 
 
-##=======================================================
+##################################################
 class Runway(Base.navdata):
 	
 	__tablename__ = "runway"
@@ -369,7 +396,7 @@ class Runway(Base.navdata):
 	
 GeometryDDL(Runway.__table__)	
 
-##=======================================================
+##################################################
 """
 class Threshold(Base.navdata):
 	
