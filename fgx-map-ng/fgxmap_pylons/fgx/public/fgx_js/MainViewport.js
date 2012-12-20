@@ -294,6 +294,8 @@ initComponent: function(){
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
+							{iconCls: "icoDocs", text: "Dev Docs", url: "/dev_docs", handler: this.on_open_url, scope: this},
+							"-",
 							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
 							{iconCls: "icoDatabase", text: "URL Mapping", handler: this.on_routes_browser_widget, scope: this},
 							{iconCls: "icoDatabase", text: "Layers Browser", handler: this.on_layers_browser_widget, scope: this}
@@ -387,7 +389,7 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
-	this.on_flight_plans_widget();
+	//this.on_flight_plans_widget();
 	//this.on_layers_browser_widget();
 },
 

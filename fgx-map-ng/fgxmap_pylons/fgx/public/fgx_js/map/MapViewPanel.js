@@ -149,7 +149,7 @@ initComponent: function() {
 						frame: false,
 						border: false,
 						flex: 2,
-						activeItem: 0,
+						activeTab: 1,
 						items: [
 							this.get_airports_panel(),
 							this.get_nav_widget(),

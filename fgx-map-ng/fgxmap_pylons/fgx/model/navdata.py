@@ -153,26 +153,21 @@ class Fix(Base.navdata):
 	__tablename__ = 'fix'
 	
 	fix_pk = Column(Integer(), primary_key=True)
-	fix = Column(String(10), index=True, nullable=False)
-	lat = Column(String(15), index=True, nullable=False)
-	lon = Column(String(15), index=True, nullable=False)
-	wkb_geometry = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	fix_ident = Column(String(10), index=True, nullable=False)
+	fix_center = GeometryColumn(Point(2, srid=FGX_SRID), comparator=PGComparator)
+	fix_center_lat = Column(String(32), nullable=False)
+	fix_center_lon = Column(String(32), nullable=False)
+	fix_center_lat84 = Column(String(32), nullable=False)
+	fix_center_lon84 = Column(String(32), nullable=False)
 	
-	@property
-	def latp(self):
-		#print self.wkb_geometry.geometry_type
-		#dump(self.wkb_geometry)
-		#return self.wkb_geometry.coords[0]
-		#return self.wkb_geometry.x
-		return  "lat" #Session.scalar(self.wkb_geometry.geometry_type)
-		
-	@property
-	def lonp(self):
-		return "lon" #str(self.wkb_geometry.coords[1])
 	
 	def dic(self):
 		
-		return dict(fix=self.fix, lat=self.lat, lon=self.lon)
+		return dict(
+			fix_ident=self.fix_ident, 
+			fix_center_lat=self.fix_center_lat, fix_center_lon=self.fix_center_lon,
+			fix_center_lat84=self.fix_center_lat84, fix_center_lon84=self.fix_center_lon84
+		)
 		
 		
 ##################################################

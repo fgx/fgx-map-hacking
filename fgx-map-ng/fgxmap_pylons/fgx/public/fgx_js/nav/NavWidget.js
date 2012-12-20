@@ -145,7 +145,7 @@ get_store: function(){
 				{name: "lon", type: 'float'},
 				{name: "freq", type: 'string'}
 			],
-			reader: {
+			proxy: {
 				type: "ajax",
 				url: '/ajax/navaids',
 				method: "GET",
@@ -154,7 +154,6 @@ get_store: function(){
 					root: 'navaids'
 				}
 			},
-			
 			remoteSort: false,
 			sortInfo: {
 				field: "ident", 
@@ -172,7 +171,7 @@ get_store: function(){
 //=======================================================
 get_fix_search_text: function(){
 	if(!this.txtSearchFix){
-		this.txtSearchFix = new Ext.form.TextField({
+		this.txtSearchFix = Ext.create("Ext.form.TextField",{
 			width: this.tbw,
 			enableKeyEvents: true
 		});
@@ -192,7 +191,7 @@ get_fix_search_text: function(){
 },
 get_vor_search_text: function(){
 	if(!this.txtSearchVor){
-		this.txtSearchVor = new Ext.form.TextField({
+		this.txtSearchVor = Ext.create("Ext.form.TextField", {
 			width: this.tbw,
 			enableKeyEvents: true
 		});
@@ -212,7 +211,7 @@ get_vor_search_text: function(){
 },
 get_ndb_search_text: function(){
 	if(!this.txtSearchNdb){
-		this.txtSearchNdb = new Ext.form.TextField({
+		this.txtSearchNdb = Ext.create("Ext.form.TextField", {
 			width: this.tbw,
 			enableKeyEvents: true
 		});
@@ -233,7 +232,7 @@ get_ndb_search_text: function(){
 
 get_all_search_text: function(){
 	if(!this.txtSearchAll){
-		this.txtSearchAll = new Ext.form.TextField({
+		this.txtSearchAll = Ext.create("Ext.form.TextField", {
 			width: this.tbw,
 			enableKeyEvents: true
 		});
