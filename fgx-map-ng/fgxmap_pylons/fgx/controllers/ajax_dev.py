@@ -92,7 +92,7 @@ class AjaxDevController(BaseController):
 		
 		
 		
-	## @brief Returns a list raw routes defined in fgx.config.routing
+	## @brief Returns a list raw routes defined in fgx.config.routing, url: /ajax/dev/routes
 	# @return list with dic 
 	@jsonify
 	def routes(self):
@@ -100,12 +100,11 @@ class AjaxDevController(BaseController):
 		lst = []
 		for r in config['routes.map']._routematches:
 			#print dir(r)
-			#print "#########", r.routepath
-			lst.append( {'url': r.routepath} )
-		payload = dict(
-			success=True,
-			routes = sorted(lst)
-			)
+			lst.append( {	'url': r.routepath, 
+							"controller": r._kargs['controller'] if 'controller' in r._kargs else None,
+							"action": r._kargs['action'] if 'action' in r._kargs else None
+							} )
+		payload = dict(	success=True, routes = sorted(lst) )
 
 		return payload
 	

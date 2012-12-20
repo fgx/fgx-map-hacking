@@ -14,7 +14,9 @@ grid_routes: function(){
 			width: 200,
 			store:  new Ext.data.JsonStore({
 				fields: [	
-					{name: "url", type:"string"}
+					{name: "url", type:"string"},
+					{name: "controller", type:"string"},
+					{name: "action", type:"string"}
 				],
 				idProperty: "url",
 				
@@ -38,8 +40,9 @@ grid_routes: function(){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
-				}
-				//{header: "rows", dataIndex: "rows"}
+				},
+				{header: "Controller", dataIndex: "controller"},
+				{header: "Action", dataIndex: "action"}
 			],
 			listeners:{
 				scope: this,
