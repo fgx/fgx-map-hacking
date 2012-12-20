@@ -32,11 +32,15 @@ initComponent: function() {
 		viewConfig: {
 			emptyText: 'No flights in view', 
 			deferEmptyText: false,
-			loadMask: false
+			loadMask: false,
+			markDirty: false
 		}, 
 		stripeRows: true,
 		store: Ext.StoreMgr.lookup("flights_store"),
 		columns: [ 
+			{header: 'Flight ID',  dataIndex:'fid', sortable: true, 
+				ssrenderer: this.render_callsign, width: 100, menuDisabled: true
+			},
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
 				renderer: this.render_callsign, width: 100, menuDisabled: true
 			},

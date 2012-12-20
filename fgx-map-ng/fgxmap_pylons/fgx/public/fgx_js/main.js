@@ -50,6 +50,7 @@ FGx.msg = function(title, body, tim){
 	m.slideIn('t', {duration: 500}).pause(Timmy * 1000).ghost("t", {remove:true});
 }
 
+//====================================================================================
 Ext.define('mTree', {
 	extend: 'Ext.data.Model',
 	idProperty: 'x_key',
@@ -75,10 +76,9 @@ Ext.define('mAirport', {
 
 Ext.define('mFlight', {
 	extend: 'Ext.data.Model',
-	idProperty: 'callsign',
+	idProperty: 'fid',
 	fields: [ 	
-		{name: 'flag', type: 'int'},
-		{name: 'check', type: 'int'},
+		{name: "fid", type: 'string'},
 		{name: "callsign", type: 'string'},
 		{name: "server", type: 'string'},
 		{name: "model", type: 'string'},
@@ -87,7 +87,9 @@ Ext.define('mFlight', {
 		{name: "alt_ft", type: 'int'},
 		{name: "spd_kts", type: 'int'},
 		//{name: "alt_trend", type: 'string'},
-		{name: "hdg", type: 'int'}
+		{name: "hdg", type: 'int'},
+		{name: 'flag', type: 'int'},
+		{name: 'check', type: 'int'}
 	],
 });
 

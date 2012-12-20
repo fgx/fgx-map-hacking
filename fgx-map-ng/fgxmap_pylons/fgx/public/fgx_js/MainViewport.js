@@ -18,7 +18,7 @@ widgets: {
 //===========================================================
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
-refresh_rate: 0,
+refresh_rate: 5,
 runner: Ext.create("Ext.util.TaskRunner", {}),
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {
@@ -39,6 +39,38 @@ xFlightsStore: Ext.create("Ext.data.JsonStore", {
 	},
 	autoLoad: false,
 }),
+update_flights: function(){
+	//Ext.getStore("flights_store").load();
+	Ext.Ajax.request({
+		url: "/ajax/mpnet/flights/crossfeed",
+		method: "GET",
+		scope: this,
+		success: function(response, opts) {
+			var data = Ext.decode(response.responseText);
+			console.log(data);
+			var sto = Ext.getStore("flights_store");
+			var flights = data.flights;
+			for(var i =0; i < flights.length; i++){
+				var fly = flights[i];
+				var r = sto.getById(fly.fid);
+				if(r){
+					for(var ki in fly){
+						r.set(ki, fly[ki]);
+					}
+				}else{
+					sto.add(fly);
+				}
+			}
+		},
+		failure: function(response, opts) {
+			console.log("FAIL");
+		},
+		
+	})
+},
+
+
+
 xMpStatusStore: Ext.create("Ext.data.JsonStore", {
 	idProperty: 'no',
 	storeId: "mpstatus_store",
@@ -61,9 +93,6 @@ xMpStatusStore: Ext.create("Ext.data.JsonStore", {
 	autoLoad: false,
 }),
 
-update_flights: function(){
-	Ext.getStore("flights_store").load();
-},
 
 on_refresh_toggled: function(butt, checked){
 	
@@ -90,8 +119,6 @@ on_refresh_toggled: function(butt, checked){
 on_flight_plans_widget: function(butt){
 	if(!this.widgets.FlightPlansWidget){
 		this.widgets.FlightPlansWidget =  Ext.create("FGx.flightplans.FlightPlansWidget", {
-			//flightsStore: this.xFlightsStore,
-			//refresh_rate: this.refresh_rate,
 			title: "Flight Plans", 
 			closable: true,
 			xHidden: false
@@ -315,7 +342,7 @@ initComponent: function(){
 					"-",
 					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
 					{text:  "Off" , iconCls: "icoOn", enableToggle: true,   
-						width: this.tbw, pressed: true,allowDepress: false,
+						width: this.tbw, pressed: true,  allowDepress: false,
 						toggleGroup: "ref_rate",  refresh_rate: 0, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
