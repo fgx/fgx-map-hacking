@@ -31,15 +31,15 @@ class FGxConfigParser(ConfigParser.ConfigParser):
 ## Reads and returns the ``tilecache.cfg`` in this project
 # @retval str raw contents as string
 # @retval dict contents as section/values
- def load_tilecache_cfg():
-		cfg_file_path = h.G().root_path + "/../../tilecache/tilecache.cfg" 
-		
-		raw = h.read_file( cfg_file_path )
-		
-		parser = FGxConfigParser()
-		parser.read(cfg_file_path)
-		
-		return raw, parser.as_dict() 
+def load_tilecache_cfg():
+	cfg_file_path = h.G().root_path + "/../../tilecache/tilecache.cfg" 
+	
+	raw = h.read_file( cfg_file_path )
+	
+	parser = FGxConfigParser()
+	parser.read(cfg_file_path)
+	
+	return raw, parser.as_dict() 
 
 		
 ############################################
@@ -50,8 +50,10 @@ class AjaxMapController(BaseController):
 	def layers_index(self):
 	
 		source_string, dic = load_tilecache_cfg()
-	
-		payload = dict(success=True, layers = sorted(dic.keys()) )
+			
+		payload = dict(	success=True, 
+						layers = [ {"layer": l} for l in sorted(dic.keys())]
+						)
 	
 	
 		return payload

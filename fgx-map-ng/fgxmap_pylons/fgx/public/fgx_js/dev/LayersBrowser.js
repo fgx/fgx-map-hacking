@@ -1,30 +1,30 @@
 
 
 //================================================================
-Ext.define("FGx.dev.RoutesBrowser",  {
+Ext.define("FGx.dev.LayersBrowser",  {
 
 extend: "Ext.Panel",
 
 //======================================================
-grid_routes: function(){
-	if(!this.gridRoutes){
-		this.gridRoutes = Ext.create("Ext.grid.Panel", {
+grid_layers: function(){
+	if(!this.gridLayers){
+		this.gridLayers = Ext.create("Ext.grid.Panel", {
 			region: 'center',
-			title: "Urls",
+			title: "Layers",
 			width: 200,
 			store:  new Ext.data.JsonStore({
 				fields: [	
-					{name: "url", type:"string"}
+					{name: "layer", type:"string"}
 				],
-				idProperty: "url",
+				idProperty: "layer",
 				
 				proxy: {
 					type: "ajax",
-					url: "/ajax/dev/routes",
+					url: "/ajax/map/layers",
 					method: 'GET',
 					reader: {
 						type: "json",
-						root: "routes"
+						root: "layers"
 					}
 				},
 				autoLoad: true
@@ -33,7 +33,7 @@ grid_routes: function(){
 				forceFit: true
 			},
 			columns: [ 
-				{header: "Url", dataIndex: "url", flex:1, menuDisabled: true,
+				{header: "Layer", dataIndex: "layer", flex:1, menuDisabled: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
@@ -44,13 +44,17 @@ grid_routes: function(){
 			listeners:{
 				scope: this,
 				selectionchange: function(grid, selection, e){
+					return
 					
 				}
 			}
 		});
 	}
-	return this.gridRoutes;
+	return this.gridLayers;
 },
+
+
+
 
 
 initComponent: function() {
@@ -61,8 +65,13 @@ initComponent: function() {
 		title: "DB Schema",
 		iconCls: "icoDatabase",
 		activeTab: 0,
+		tbar: [
+			
+		],
+		//height: window.innerHeight - 5,
 		items: [
-			this.grid_routes(),
+			this.grid_layers(),
+			
 		]
 	
 	});
@@ -70,9 +79,9 @@ initComponent: function() {
 	
 },
 
+//this.tablesGrid.load_tables();
 load:  function(){
-	this.grid_routes().getStore().load();
+	this.grid_tables().getStore().load();
 }
 
-
-});  //end class
+});  // end function cinstructor

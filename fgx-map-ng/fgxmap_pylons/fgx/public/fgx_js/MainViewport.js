@@ -10,6 +10,7 @@ widgets: {
 	NetworkStatusPanel: null,
 	DbBrowser: null,
 	RoutesBrowser: null,
+	LayersBrowser: null,
 	FlightPlansWidget: null,
 	
 },
@@ -146,7 +147,15 @@ on_routes_browser_widget: function(butt, checked){
 	}
 	this.get_tab_panel().setActiveTab(this.widgets.RoutesBrowser);
 },
-
+on_layers_browser_widget: function(butt, checked){
+	if(!this.widgets.LayersBrowser){
+		this.widgets.LayersBrowser = Ext.create("FGx.dev.LayersBrowser", {
+			closable: true
+		});
+		this.get_tab_panel().add(this.widgets.LayersBrowser);
+	}
+	this.get_tab_panel().setActiveTab(this.widgets.LayersBrowser);
+},
 
 //=================================================================================
 // Map Panels
@@ -286,7 +295,8 @@ initComponent: function(){
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
 							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
-							{iconCls: "icoDatabase", text: "URL Mapping", handler: this.on_routes_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "URL Mapping", handler: this.on_routes_browser_widget, scope: this},
+							{iconCls: "icoDatabase", text: "Layers Browser", handler: this.on_layers_browser_widget, scope: this}
 						]
 					},
 					"-",
