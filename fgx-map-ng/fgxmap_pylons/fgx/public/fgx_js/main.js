@@ -88,7 +88,7 @@ Ext.define('mFlight', {
 		{name: "spd_kts", type: 'int'},
 		//{name: "alt_trend", type: 'string'},
 		{name: "hdg", type: 'int'},
-		{name: 'flag', type: 'int'},
+		{name: 'flag', type: 'int', defaultValue: null},
 		{name: 'check', type: 'int'}
 	],
 });

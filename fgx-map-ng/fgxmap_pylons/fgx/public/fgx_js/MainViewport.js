@@ -47,8 +47,12 @@ update_flights: function(){
 		scope: this,
 		success: function(response, opts) {
 			var data = Ext.decode(response.responseText);
-			console.log(data);
+			//console.log(data);
 			var sto = Ext.getStore("flights_store");
+			sto.each( function(rec){
+				rec.set("flag", 1);
+			}, this);
+			
 			var flights = data.flights;
 			for(var i =0; i < flights.length; i++){
 				var fly = flights[i];
@@ -57,6 +61,7 @@ update_flights: function(){
 					for(var ki in fly){
 						r.set(ki, fly[ki]);
 					}
+					r.set("flag", null);
 				}else{
 					sto.add(fly);
 				}

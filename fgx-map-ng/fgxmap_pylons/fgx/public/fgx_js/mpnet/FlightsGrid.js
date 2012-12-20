@@ -13,9 +13,7 @@ render_callsign: function(v, meta, rec){
 },
 
 render_altitude: function(v, meta, rec){
-	
-	//meta.style = "background-color: XXX";
-	
+		
 	return Ext.util.Format.number(v, '00,000');	
 },
 
@@ -45,7 +43,7 @@ initComponent: function() {
 				renderer: this.render_callsign, width: 100, menuDisabled: true
 			},
 			
-			{header: 'Alt', dataIndex:'alt_ft', sortable: true, align: 'right', width: 80,
+			{header: 'Alt ft', dataIndex:'alt_ft', sortable: true, align: 'right', width: 80,
 				renderer: this.render_altitude, menuDisabled: true
 			},
 			//{header: '', dataIndex:'alt_trend', sortable: true, align: 'center', width: 20,	hidden: true,
@@ -55,25 +53,29 @@ initComponent: function() {
 					return v; //Ext.util.Format.number(v, '0');
 				}
 			},
-			{header: 'Spd', dataIndex:'spd_kts', sortable: true, align: 'right', width: 50, menuDisabled: true,
+			{header: 'Spd kt', dataIndex:'spd_kts', sortable: true, align: 'right', width: 50, menuDisabled: true,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0');
 				}
 			},
-			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', hidden: this.xHidden, menuDisabled: true,
+			 {header: 'Lat', dataIndex:'lat', sortable: true, align: 'right', 
+				hidden: this.xHidden, menuDisabled: true, flex: 1,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
-			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', hidden: this.xHidden, menuDisabled: true,
+			{header: 'Lon', dataIndex:'lon', sortable: true, align: 'right', 
+				hidden: this.xHidden, menuDisabled: true, flex: 1,
 				renderer: function(v, meta, rec, rowIdx, colIdx, store){
 					return Ext.util.Format.number(v, '0.00000');
 				}
 			},
 			{header: 'Aircraft',  dataIndex:'model', sortable: true, menuDisabled: true,
 				flex: 1
+			},
+			{header: 'Flag',  dataIndex: 'flag', sortable: true, menuDisabled: true,
+				flex: 1
 			}
-
 		],		
 		bbar: [
 			new Ext.PagingToolbar({
