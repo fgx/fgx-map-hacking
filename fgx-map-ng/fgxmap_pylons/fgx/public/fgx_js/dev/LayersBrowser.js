@@ -146,7 +146,7 @@ fetch_layer: function(layer){
 			var payload = Ext.decode(response.responseText);
 			var data = payload.data;
 			
-			console.log(data);
+			//console.log(data);
 			this.down("textarea[name=style_xml_text]").setRawValue(data.stylexml );
 			
 			var sto = this.get_tree_store();
