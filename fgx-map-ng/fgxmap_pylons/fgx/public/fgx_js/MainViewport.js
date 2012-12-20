@@ -388,14 +388,14 @@ initialize:  function(){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
 	
-	this.on_layers_browser_widget();
+	//this.on_layers_browser_widget();
 },
 
 
 
 //= TODO: Tiggered for reshresh now
 refresh_now: function(){
-	console.log("refresh_now");
+	//console.log("refresh_now");
 	
 	this.get_flights_store().load();
 },

@@ -58,14 +58,20 @@ Ext.Ajax.disableCaching = true;
 {# OpenLayers and assoc #}
 {% macro openlayers_js() %}
 
-	{# Openlayers #}
-	<script src="{{app_globals.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
+{#
+{% for f in ["panel/Map", "data/LayerStore", "data/LayerModel"] %}
+<script type="text/javascript" src="{{app_globals.static_url}}/js/GeoExt-2.0/src/GeoExt/{{f}}.js"></script>
+{% endfor %}
+#} 
 
-	{# Proj4js #}
-	<script src="{{app_globals.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
-	
+{# Openlayers #}
+<script src="{{app_globals.static_url}}/js/OpenLayers-2.12/OpenLayers.js"></script>
 
-	{# OSM stuff #} 
-	<script src="{{app_globals.static_url}}/js/osm/OpenStreetMap.js"></script>
+{# Proj4js #}
+<script src="{{app_globals.static_url}}/js/proj4js-1.1.0/lib/proj4js-combined.js"></script>
+
+
+{# OSM stuff #} 
+<script src="{{app_globals.static_url}}/js/osm/OpenStreetMap.js"></script>
 
 {% endmacro %}
