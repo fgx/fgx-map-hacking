@@ -29,22 +29,24 @@ class FGxConfigParser(ConfigParser.ConfigParser):
             d[k].pop('__name__', None)
         return d
 
+		
+        
 ## Reads and returns the ``tilecache.cfg`` in this project
 # @retval str raw contents as string
 # @retval dict contents as section/values
 def load_tilecache_cfg():
 	file_path = h.G().root_path + "/../../tilecache/tilecache.cfg" 
-	
+		
 	raw = h.read_file( file_path )
 	
 	parser = FGxConfigParser()
 	parser.read(file_path)
-	
-	return raw, parser.as_dict() 
+
+	return {'raw': raw, 'layers': parser.as_dict() }
 
 ## Reads and returns the ``tilecache.cfg`` in this project
-# @retval str raw contents as string
-# @retval dict contents as section/values
+# @retval raw String with contents as string
+# @retval layers Dictionary with keys as layers containing data
 def load_resources_xml():
 	
 	file_path = h.G().root_path + "/../../mapnik/resources.xml" 
@@ -53,6 +55,7 @@ def load_resources_xml():
 	
 	soup = BeautifulSoup(raw)
 	layer_tags = soup.find_all("layer")
+	style_tags = soup.find_all("style")
 	#print layer_tags
 	layers = {}
 	for l in layer_tags:
@@ -61,15 +64,29 @@ def load_resources_xml():
 		#print "--------"
 		#print l.datasource
 		p_tags = l.datasource.find_all("parameter")
-		typ = None
+		#typ = None
+		shape_file = None
+		param_tags = {'type': None}
 		for p in p_tags:
-			if p['name'] == "type":
-				typ = p.contents[0]
+			if not p['name'] in ["host", "port", "dbname", "user", "password"]:
+				param_tags[ p['name'] ] = p.contents[0]
+		
+			#if p['name'] == "type":
+		typ = param_tags['type']
+				
+				
+		stylename = l.stylename.contents[0]
+		stylexml = None
+		for s in style_tags:
+			if s['name'] == stylename:
+				stylexml = str(s)
 		#print "---"
 		#print p_tags
 		#print "############"
-		layers[ l['name'] ] = {"name": l['name'], "type": typ}
-	return raw, layers
+		layers[ l['name'] ] = {"name": l['name'], "type": typ, "mapnik_params": param_tags,
+								"stylename": stylename, 'stylexml': None
+								}
+	return {"raw": raw, "layers": layers}
 
 	
 	
@@ -78,19 +95,20 @@ class AjaxMapController(BaseController):
 
 	## Returns a list of layers (the sections from tilecache.cfg)
 	@jsonify
-	def layers_all(self):
+	def layers_index(self):
 	
-		payload = {"success": True}
-		#source_string, dic = load_tilecache_cfg()
-		payload['tilecache_cfg'], tile_dic = load_tilecache_cfg()
-		payload['resources_xml'], xml_dic = load_resources_xml()
+		tilecache = load_tilecache_cfg()
+		mapnik = load_resources_xml()
 		
 		layers = {}
+		tile_dic = tilecache['layers']
 		for l in tile_dic:
 			if l != "cache":
 				lu = l.upper()
-				print tile_dic[l]
-				layers[lu] = {'layer': lu, 'tilecache': l, 'mapnik': None, "type": None, 
+				#Note: keys and forced lowercase, eg 'metaBuffer' becomes 'metabuffer'
+				layers[lu] = {'layer': lu, 'tilecache': l, 'mapnik': None, 
+								"type": None, "mapnik_params": None, 
+								"stylename": None, 'stylexml': None,
 								'levels': tile_dic[l]['levels'] if 'levels' in tile_dic[l] else None,
 								'metabuffer': tile_dic[l]['metabuffer'] if 'metabuffer' in tile_dic[l] else None
 								}
@@ -102,11 +120,11 @@ class AjaxMapController(BaseController):
 			else:
 				layers[lu]['mapnik'] = l
 			layers[lu]['type'] = xml_dic[l]['type']
+			layers[lu]['stylename'] = xml_dic[l]['stylename']
+			layers[lu]['stylexml'] = xml_dic[l]['stylexml']
+			layers[lu]['mapnik_params'] = xml_dic[l]['mapnik_params']
 				
-		
-						
-		payload['layers'] = layers.values()
-			
+		payload = dict(	success=True, layers = layers.values()	)
 	
 		return payload
 

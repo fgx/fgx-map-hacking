@@ -387,6 +387,8 @@ initialize:  function(){
 	if(this.refresh_rate > 0){
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
+	
+	this.on_layers_browser_widget();
 },
 
 

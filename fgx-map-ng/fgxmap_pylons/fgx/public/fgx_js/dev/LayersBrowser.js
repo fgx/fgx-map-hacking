@@ -20,41 +20,71 @@ grid_layers: function(){
 					{name: "type", type:"string", defaultValue: null},
 					{name: "levels", type:"int", defaultValue: null},
 					{name: "metabuffer", type:"int", defaultValue: null},
-					{name: "openlayers", type:"string"},
+					{name: "openlayers", type:"string", defaultValue: null},
+					{name: "stylename", type:"string", defaultValue: null}
 				],
 				idProperty: "layer",
 				proxy: {
 					type: "ajax",
-					url: "/ajax/map/layers/all",
+					url: "/ajax/map/layers",
 					method: 'GET',
 					reader: {
 						type: "json",
 						root: "layers"
 					}
 				},
-				autoLoad: true
+				autoLoad: true,
+				listeners: {
+					scope: this,
+					load: function(store, records, success){
+						
+						return;
+						
+						// Concept to add resolutaions columns abandoned for now
+						var data = store.getProxy().getReader().rawData;
+						//console.log(store.getProxy().getReader().rawData);
+						var grid = this.grid_layers();
+						
+						//Ext.getCmp("resources_xml_text").setRawValue(data.tilecache_cfg);
+						for(var i = 0; i < 20; i++){
+							var col = Ext.create("Ext.grid.column.Column", {
+								text: i, flex: 1
+							});
+							grid.headerCt.insert(grid.columns.length, col);
+						}
+						grid.getView().refresh();
+					}
+				}
 			}),
 			viewConfig:{
 				forceFit: true
 			},
 			columns: [ 
-				{header: "Unique", dataIndex: "layer", flex:1, menuDisabled: true,
+				{header: "Unique", dataIndex: "layer", width:100, menuDisabled: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
 				},
-				{header: "OpenLayer", dataIndex: "openlayers", flex:1, menuDisabled: true},
-				{header: "Tileache", dataIndex: "tilecache", flex:1, menuDisabled: true},
-				{header: "Mapnik", dataIndex: "mapnik", flex:1, menuDisabled: true},
-				{header: "Type", dataIndex: "type", flex:1, menuDisabled: true},
-				{header: "Levels", dataIndex: "levels", flex:1, menuDisabled: true},
-				{header: "metabuffer", dataIndex: "metabuffer", flex:1, menuDisabled: true}
+				{header: "OpenLayer", dataIndex: "openlayers", width:150, menuDisabled: true},
+				{text: "Tilecache", menuDisabled: true, columns: [
+						{header: "Layer", dataIndex: "tilecache", menuDisabled: true, sortable: true},
+						{header: "Levels", dataIndex: "levels", menuDisabled: true, sortable: true},
+						{header: "metabuffer", dataIndex: "metabuffer", sflex:1, menuDisabled: true, sortable: true}
+					]
+				},
+				{text: "Mapnik", menuDisabled: true, columns: [
+						{header: "Layer", dataIndex: "mapnik", menuDisabled: true, sortable: true},
+						{header: "Type", dataIndex: "type", menuDisabled: true, sortable: true},
+						{header: "Style", dataIndex: "stylename", menuDisabled: true, sortable: true}
+					]
+				}
+
 				
 			],
 			listeners:{
 				scope: this,
-				selectionchange: function(grid, selection, e){
+				TODOselectionchange: function(grid, selection, e){
 					return
 					
 				}
@@ -85,11 +115,11 @@ initComponent: function() {
 			//this.view_tilecache(),
 			  {xtype: "panel", title: "Mapnik Config", layout: "fit",
 				items: [
-					{type: "textfield", name: "resources_xml"}
+					{xtype: "textarea", name: "resources_xml", id: "resources_xml_text"}
 				]
-		   
 			  }
 		]
+		
 	
 	});
 	this.callParent();
