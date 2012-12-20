@@ -42,7 +42,10 @@ def load_tilecache_cfg():
 	parser = FGxConfigParser()
 	parser.read(file_path)
 
-	return {'raw': raw, 'layers': parser.as_dict() }
+	dic =  parser.as_dict()
+	del dic['cache']
+		
+	return {'raw': raw, 'layers': dic }
 
 ## Reads and returns the ``tilecache.cfg`` in this project
 # @retval raw String with contents as string
@@ -97,32 +100,49 @@ class AjaxMapController(BaseController):
 	@jsonify
 	def layers_index(self):
 	
-		tilecache = load_tilecache_cfg()
-		mapnik = load_resources_xml()
+		tile_dic = load_tilecache_cfg()['layers']
+		xml_dic = load_resources_xml()['layers']
 		
+		
+		## First make up the layers dict with blank record
+		blank = {	'layer': None, 
+					'tilecache': None, 'tilecache_params': None, 'levels': None, "metabuffer": None, 'resolutions': None,
+					'mapnik': None, "stylename": None, 'stylexml': None, 'mapnik_params': None
+					}
 		layers = {}
-		tile_dic = tilecache['layers']
+		
+		for dk in tile_dic.keys():
+			k = dk.upper()
+			layers[k] = blank.copy()
+			layers[k]['layer'] = k
+		
+		for dk in xml_dic.keys():
+			k = dk.upper()
+			layers[k] = blank.copy()
+			layers[k]['layer'] = k
+		
+		
 		for l in tile_dic:
-			if l != "cache":
-				lu = l.upper()
-				#Note: keys and forced lowercase, eg 'metaBuffer' becomes 'metabuffer'
-				layers[lu] = {'layer': lu, 'tilecache': l, 'mapnik': None, 
-								"type": None, "mapnik_params": None, 
-								"stylename": None, 'stylexml': None,
-								'levels': tile_dic[l]['levels'] if 'levels' in tile_dic[l] else None,
-								'metabuffer': tile_dic[l]['metabuffer'] if 'metabuffer' in tile_dic[l] else None
-								}
+			
+			lu = l.upper()
+			#Note: keys and forced lowercase, eg 'metaBuffer' becomes 'metabuffer'
+			layers[lu]['tilecache'] = l
+			for ki in ["levels", "metabuffer"]:
+				layers[lu][ki] = tile_dic[l][ki] if ki in tile_dic[l] else None
+			params = {}
+			for ki in tile_dic[l].keys():
+				params[ki] = tile_dic[l][ki]
+			layers[lu]['tilecache_params'] = params
 			
 		for l in xml_dic:
 			lu = l.upper()
-			if not lu in layers:
-				layers[lu] = {'layer': l, 'tilecache': None, 'mapnik': l, "type": None, 'levels': None, "metabuffer": None}
-			else:
-				layers[lu]['mapnik'] = l
-			layers[lu]['type'] = xml_dic[l]['type']
-			layers[lu]['stylename'] = xml_dic[l]['stylename']
-			layers[lu]['stylexml'] = xml_dic[l]['stylexml']
-			layers[lu]['mapnik_params'] = xml_dic[l]['mapnik_params']
+			layers[lu]['mapnik'] = l
+			for ki in ["type", "stylename", "stylexml", "mapnik_params"]:
+				layers[lu][ki] = tile_dic[l][ki] if ki in tile_dic[l] else None
+			#layers[lu]['type'] = xml_dic[l]['type']
+			#layers[lu]['stylename'] = xml_dic[l]['stylename']
+			#layers[lu]['stylexml'] = xml_dic[l]['stylexml']
+			#layers[lu]['mapnik_params'] = xml_dic[l]['mapnik_params']
 				
 		payload = dict(	success=True, layers = layers.values()	)
 	
