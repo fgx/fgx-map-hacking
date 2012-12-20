@@ -13,7 +13,20 @@ render_callsign: function(v, meta, rec){
 },
 
 render_altitude: function(v, meta, rec){
-		
+	
+	var color = "white";
+	if(v > 30000){
+		color = "#C9F7F7";
+	}else if( v > 20000 ){
+		color = "#C5F5A4";
+	}else if( v > 10000 ){
+		color = "#F5D2A4";
+	}else if( v > 5000) {
+		color = "pink"
+	}else{
+		color = "red";
+	}
+	meta.style = "background-color: " + color + "; ";
 	return Ext.util.Format.number(v, '00,000');	
 },
 
