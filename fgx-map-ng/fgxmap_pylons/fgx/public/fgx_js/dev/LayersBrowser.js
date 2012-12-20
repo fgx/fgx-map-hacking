@@ -3,24 +3,29 @@
 //================================================================
 Ext.define("FGx.dev.LayersBrowser",  {
 
-extend: "Ext.Panel",
+extend: "Ext.tab.Panel",
 
 //======================================================
 grid_layers: function(){
 	if(!this.gridLayers){
 		this.gridLayers = Ext.create("Ext.grid.Panel", {
 			region: 'center',
-			title: "Layers",
+			title: "Layer Defs",
 			width: 200,
-			store:  new Ext.data.JsonStore({
+			store:  Ext.create("Ext.data.JsonStore", {
 				fields: [	
-					{name: "layer", type:"string"}
+					{name: "layer", type:"string"},
+					{name: "tilecache", type:"string", defaultValue: null},
+					{name: "mapnik", type:"string", defaultValue: null},
+					{name: "type", type:"string", defaultValue: null},
+					{name: "levels", type:"int", defaultValue: null},
+					{name: "metabuffer", type:"int", defaultValue: null},
+					{name: "openlayers", type:"string"},
 				],
 				idProperty: "layer",
-				
 				proxy: {
 					type: "ajax",
-					url: "/ajax/map/layers",
+					url: "/ajax/map/layers/all",
 					method: 'GET',
 					reader: {
 						type: "json",
@@ -33,13 +38,19 @@ grid_layers: function(){
 				forceFit: true
 			},
 			columns: [ 
-				{header: "Layer", dataIndex: "layer", flex:1, menuDisabled: true,
+				{header: "Unique", dataIndex: "layer", flex:1, menuDisabled: true,
 					renderer: function(val, meta, record, idx){
 						meta.style = "font-weight: bold;"
 						return val;
 					}
-				}
-				//{header: "rows", dataIndex: "rows"}
+				},
+				{header: "OpenLayer", dataIndex: "openlayers", flex:1, menuDisabled: true},
+				{header: "Tileache", dataIndex: "tilecache", flex:1, menuDisabled: true},
+				{header: "Mapnik", dataIndex: "mapnik", flex:1, menuDisabled: true},
+				{header: "Type", dataIndex: "type", flex:1, menuDisabled: true},
+				{header: "Levels", dataIndex: "levels", flex:1, menuDisabled: true},
+				{header: "metabuffer", dataIndex: "metabuffer", flex:1, menuDisabled: true}
+				
 			],
 			listeners:{
 				scope: this,
@@ -61,8 +72,8 @@ initComponent: function() {
 	
 	Ext.apply(this, {
 		layout: 'border',
-		fgxType: "DbBrowser",
-		title: "DB Schema",
+		fgxType: "LayersBrowsers",
+		title: "Layers",
 		iconCls: "icoDatabase",
 		activeTab: 0,
 		tbar: [
@@ -71,7 +82,13 @@ initComponent: function() {
 		//height: window.innerHeight - 5,
 		items: [
 			this.grid_layers(),
-			
+			//this.view_tilecache(),
+			  {xtype: "panel", title: "Mapnik Config", layout: "fit",
+				items: [
+					{type: "textfield", name: "resources_xml"}
+				]
+		   
+			  }
 		]
 	
 	});
@@ -79,9 +96,9 @@ initComponent: function() {
 	
 },
 
-//this.tablesGrid.load_tables();
+
 load:  function(){
-	this.grid_tables().getStore().load();
+	this.grid_layers().getStore().load();
 }
 
-});  // end function cinstructor
+});  // end  constructor

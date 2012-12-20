@@ -60,8 +60,8 @@ initComponent: function() {
 	
 	Ext.apply(this, {
 		layout: 'border',
-		fgxType: "DbBrowser",
-		title: "DB Schema",
+		fgxType: "RoutesBrowser",
+		title: "Routes",
 		iconCls: "icoDatabase",
 		activeTab: 0,
 		items: [

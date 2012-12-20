@@ -38,11 +38,11 @@ def read_file(path):
 # @param ret_none False to return <b>None</b> instead of zero length string
 # @return <b>zero</b> or <b>None</b>
 # \ingroup helpers_shortcuts
-def v(dic, ki, ret_none=True):
+def v(request, ki, ret_none=True):
 	"""Return the value from request.params or None if key not exist"""
-	if not ki in dic.params:
+	if not ki in request.params:
 		return None
-	va =  dic.params[ki]
+	va =  request.params[ki]
 	if isinstance(va, str) or isinstance(va, unicode):
 		vs = va.strip()
 		if ret_none:
@@ -57,8 +57,8 @@ def v(dic, ki, ret_none=True):
 # @param null_zeros True to return None instead of zero
 # @return <b>zero</b> or <b>None</b>
 # \ingroup helpers_shortcuts
-def i(dic, ki, null_zeros=False):
-	vv = v(dic, ki)
+def i(request, ki, null_zeros=False):
+	vv = v(request, ki)
 	if vv == None:
 		return None
 	ival =  to_int(vv)

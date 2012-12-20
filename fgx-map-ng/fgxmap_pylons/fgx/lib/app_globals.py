@@ -32,6 +32,8 @@ class Globals(object):
 		## Location of temp directory
 		self.temp_dir = config['temp_dir']
 		
+		## URL Location of the static server, defined in the ini as <b>static_server_url</b>
+		self.static_url = config['static_server_url']
 		
 		path =  glob.glob(self.root_path + '/public/fgx_js.[0-9].[0-9]/')[0]
 		
@@ -39,11 +41,5 @@ class Globals(object):
 		self.fgx_js_version =  path.split("/")[-2].replace("fgx_js.", "")
 		
 		
-	## Returns the location of the static server
-	# @todo make this an ini setting - pete
-	@property
-	def static_url(self):
-		#TODO Below needs to be in ini config
-		return "http://static.fgx.ch"
 		
 	

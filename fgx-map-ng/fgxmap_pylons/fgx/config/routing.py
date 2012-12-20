@@ -71,6 +71,7 @@ def make_map(config):
 	# Map Layers
 	##=======================================================================
 	
+	map.connect('/ajax/map/layers/all', controller="ajax_map", action="layers_all")
 	map.connect('/ajax/map/layers', controller="ajax_map", action="layers_index")
 	map.connect('/ajax/map/layer/{layer}', controller="ajax_map", action="layer_details")
 	map.connect('/ajax/map/layers/tilecache.cfg', controller="ajax_map", action="tilecache_cfg")
