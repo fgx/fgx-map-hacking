@@ -52,46 +52,86 @@ def load_tilecache_cfg():
 # @retval layers Dictionary with keys as layers containing data
 def load_resources_xml():
 	
+	## get the raw source contents
 	file_path = h.G().root_path + "/../../mapnik/resources.xml" 
-	
 	raw = h.read_file( file_path )
 	
+	## create Beautiful soup object
 	soup = BeautifulSoup(raw)
+	
+	## Find <layer> and <Style> tags (note lower case)
 	layer_tags = soup.find_all("layer")
 	style_tags = soup.find_all("style")
-	#print layer_tags
+	
+	## Return list of layers
 	layers = {}
 	for l in layer_tags:
-		#print "---------------------"
-		#print l
-		#print "--------"
-		#print l.datasource
+		
+		## Get the paramater tags and loop them
 		p_tags = l.datasource.find_all("parameter")
-		#typ = None
-		shape_file = None
 		param_tags = {'type': None}
 		for p in p_tags:
+			## Ignore the database connections
 			if not p['name'] in ["host", "port", "dbname", "user", "password"]:
 				param_tags[ p['name'] ] = p.contents[0]
+		## update the type
+		typ = param_tags['type']				
 		
-			#if p['name'] == "type":
-		typ = param_tags['type']
-				
-				
+		## Get stylename and load style_xml
 		stylename = l.stylename.contents[0]
 		stylexml = None
 		for s in style_tags:
 			if s['name'] == stylename:
 				stylexml = str(s)
-		#print "---"
-		#print p_tags
-		#print "############"
+		
 		layers[ l['name'] ] = {"name": l['name'], "type": typ, "mapnik_params": param_tags,
-								"stylename": stylename, 'stylexml': None
+								"stylename": stylename, 'stylexml': stylexml
 								}
 	return {"raw": raw, "layers": layers}
 
+def layers_data():
 	
+	tile_dic = load_tilecache_cfg()['layers']
+	mapnik_dic = load_resources_xml()['layers']
+	
+	
+	## First make up the layers dict with blank record
+	blank = {	'layer': None, "type": None,
+				'tilecache': None, 'tilecache_params': None, 'levels': None, "metabuffer": None, 'resolutions': None,
+				'mapnik': None, "stylename": None, 'stylexml': None, 'mapnik_params': None
+				}
+	layers = {}
+	
+	for dk in tile_dic.keys():
+		k = dk.upper()
+		layers[k] = blank.copy()
+		layers[k]['layer'] = k
+	
+	for dk in mapnik_dic.keys():
+		k = dk.upper()
+		layers[k] = blank.copy()
+		layers[k]['layer'] = k
+	
+	
+	for l in tile_dic:
+		
+		lu = l.upper()
+		#Note: keys and forced lowercase, eg 'metaBuffer' becomes 'metabuffer'
+		layers[lu]['tilecache'] = l
+		for ki in ["levels", "metabuffer"]:
+			layers[lu][ki] = tile_dic[l][ki] if ki in tile_dic[l] else None
+		params = {}
+		for ki in sorted(tile_dic[l].keys()):
+			params[ki] = tile_dic[l][ki]
+		layers[lu]['tilecache_params'] = params
+		
+	for l in mapnik_dic:
+		lu = l.upper()
+		layers[lu]['mapnik'] = l
+		for ki in ["type", "stylename", "stylexml", "mapnik_params"]:
+			layers[lu][ki] = mapnik_dic[l][ki] if ki in mapnik_dic[l] else None
+	
+	return layers
 	
 ############################################
 class AjaxMapController(BaseController):
@@ -100,51 +140,8 @@ class AjaxMapController(BaseController):
 	@jsonify
 	def layers_index(self):
 	
-		tile_dic = load_tilecache_cfg()['layers']
-		xml_dic = load_resources_xml()['layers']
 		
-		
-		## First make up the layers dict with blank record
-		blank = {	'layer': None, 
-					'tilecache': None, 'tilecache_params': None, 'levels': None, "metabuffer": None, 'resolutions': None,
-					'mapnik': None, "stylename": None, 'stylexml': None, 'mapnik_params': None
-					}
-		layers = {}
-		
-		for dk in tile_dic.keys():
-			k = dk.upper()
-			layers[k] = blank.copy()
-			layers[k]['layer'] = k
-		
-		for dk in xml_dic.keys():
-			k = dk.upper()
-			layers[k] = blank.copy()
-			layers[k]['layer'] = k
-		
-		
-		for l in tile_dic:
-			
-			lu = l.upper()
-			#Note: keys and forced lowercase, eg 'metaBuffer' becomes 'metabuffer'
-			layers[lu]['tilecache'] = l
-			for ki in ["levels", "metabuffer"]:
-				layers[lu][ki] = tile_dic[l][ki] if ki in tile_dic[l] else None
-			params = {}
-			for ki in tile_dic[l].keys():
-				params[ki] = tile_dic[l][ki]
-			layers[lu]['tilecache_params'] = params
-			
-		for l in xml_dic:
-			lu = l.upper()
-			layers[lu]['mapnik'] = l
-			for ki in ["type", "stylename", "stylexml", "mapnik_params"]:
-				layers[lu][ki] = tile_dic[l][ki] if ki in tile_dic[l] else None
-			#layers[lu]['type'] = xml_dic[l]['type']
-			#layers[lu]['stylename'] = xml_dic[l]['stylename']
-			#layers[lu]['stylexml'] = xml_dic[l]['stylexml']
-			#layers[lu]['mapnik_params'] = xml_dic[l]['mapnik_params']
-				
-		payload = dict(	success=True, layers = layers.values()	)
+		payload = dict(	success=True, layers = layers_data().values()	)
 	
 		return payload
 
@@ -155,10 +152,7 @@ class AjaxMapController(BaseController):
 		tile_str, tile_dic = load_tilecache_cfg()
 		xml_str, xml_dic = load_resources_xml()
 		
-		lay_data  =  {}
-		lay_data['layer'] = layer
-		lay_data['tilecache'] = tile_dic[layer]
-		lay_data['mapnik'] = xml_dic[layer]
+		lay_data  =  layers_data()[layer]
 			
 		payload = dict(	success=True, 
 						data = lay_data
