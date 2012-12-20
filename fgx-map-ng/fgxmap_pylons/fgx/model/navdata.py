@@ -148,7 +148,7 @@ class Country(Base.navdata):
 
 	
 ##################################################	
-class Fix(Base):
+class Fix(Base.navdata):
 	
 	__tablename__ = 'fix'
 	
