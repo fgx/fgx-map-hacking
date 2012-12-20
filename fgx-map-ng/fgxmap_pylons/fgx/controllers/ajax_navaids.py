@@ -24,17 +24,27 @@ class AjaxNavaidsController(BaseController):
 		payload = {'success': True}
 		
 		search = h.v(request, "search")
-		nav_type = h.v(request, "nav_type")
+		nav_suffix_req = h.v(request, "nav_suffix")
 		
 		nav_suffix = None
-		if nav_type:
-			nav_type = nav_type.upper()
-			if nav_type == "NDB":
-				nav_suffix = [NavAid.TYPE.ndb, NavAid.TYPE.ndb_dme] 
-		
-		print "SUFFIX", nav_suffix
-		if search:
-			payload['navaids'] = navaids.navaids(search=search, nav_suffix=nav_suffix)
+		if nav_suffix_req:
+			
+			nav_suffix_req = nav_suffix_req.upper()
+			
+			if nav_suffix_req == "FIX":
+				payload['navaids'] = navaids.fix(search=search)
+			else:
+			
+			
+				if nav_suffix_req == "NDB":
+					nav_suffix = [NavAid.TYPE.ndb, NavAid.TYPE.ndb_dme] 
+				elif nav_suffix_req == "VOR":
+					nav_suffix = [NavAid.TYPE.vor, NavAid.TYPE.vor_dme, NavAid.TYPE.dme] 
+				
+				
+				print "SUFFIX", nav_suffix
+				#if search:
+				payload['navaids'] = navaids.navaids(search=search, nav_suffix=nav_suffix)
 		
 		else:
 			payload['rows'] = []

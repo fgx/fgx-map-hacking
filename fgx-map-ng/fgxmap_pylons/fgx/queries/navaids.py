@@ -2,7 +2,17 @@
 #from fgx import db
 from fgx.model import meta
 
-
+def fix(search=None):
+	
+	cols = ["nav_ident","nav_suffix","nav_center_lat84","nav_center_lon84"] 
+	sql = "select fix_ident as nav_ident, 'FIX' as nav_suffix, "
+	sql += ' fix_center_lat84 as nav_center_lat84, '
+	sql += ' fix_center_lon84 as nav_center_lon84 '
+	sql += "  from fix "
+	sql += " where 1 = 1 "
+	sql += " and( fix_ident ilike '%s' " % ("%" + search + "%")
+	sql += " or fix_ident ilike '%s' " % ("%" + search + "%") + ")"
+	return meta.query_to_dic(meta.Sess.navdata.execute(sql).fetchall(), cols)
 
 def navaids(ident=None, search=None, nav_suffix=None, bounds=None, ifr=False):
 	

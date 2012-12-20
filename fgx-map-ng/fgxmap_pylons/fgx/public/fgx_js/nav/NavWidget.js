@@ -22,33 +22,50 @@ initComponent: function() {
 		loadMask: true,
 		
 		columns: [ 
-			{header: '&nbsp;', dataIndex:'nav_type', width: 20,
+			{header: '&nbsp;', dataIndex:'nav_suffix', width: 20, menuDisabled: true, sortable: true,
 				renderer: function(v, meta, rec){
 					//meta.attr = 'style= "background-image: url(/images/vfr_fix.png) !important; background-repeat: no-repeat;"';
-					
+					var oops = "";
 					if(v == "FIX"){
-						meta.css = "icoFix";
+						meta.tdCls = "icoFix";
 						
-					}else if(v == "NDB"){
-						meta.css = "icoNdb";
+					}else if(v == "NDB" || v == "NDB-DME"){
+						meta.tdCls = "icoNdb";
 							
-					}else if(v == "VOR"){
-						meta.css = "icoVor";
+					}else if(v == "VOR" || v == "VOR-DME" || v == "DME"){
+						meta.tdCls = "icoVor";
+					}else{
+						oops = v;
 					}
-					return " ";
+					return oops;
 					//return "<img src='/images/vfr_fix.png'>";
 				}
 			},
-			{header: 'Ident', dataIndex:'ident', sortable: true, align: 'left', hidden: false, width: 80,
+			{header: 'Ident', dataIndex:'nav_ident', sortable: true, align: 'left', 
+				hidden: false, width: 70, menuDisabled: true,
 				renderer: function(v, meta, rec){
 					// @TODO Make this a css class
 					return "<b>" + v + "</b>";
 				}
 			},
-			{header: 'Name', dataIndex:'nav_name', sortable: true, align: 'left', hidden: false, flex: 1},
-			{header: 'Freq', dataIndex:'nav_freq_khz', sortable: true, align: 'left', hidden: false, flex: 1}
-			//{header: 'Lat', dataIndex:'lat', sortable: true, align: 'left', hidden: false},
-			//{header: 'Lon', dataIndex:'lon', sortable: true, align: 'left', hidden: false}
+			{header: 'Name', dataIndex:'nav_name', menuDisabled: true,
+				sortable: true, align: 'left', hidden: false, flex: 1},
+			{header: 'Freq', dataIndex:'nav_freq', menuDisabled: true,
+				sortable: true, align: 'left', hidden: false, flex: 1,
+				renderer: function(v, meta, rec){
+					if( rec.get("nav_freq_khz") ){
+						return rec.get("nav_freq_khz") + " khz";
+						
+					}else if( rec.get("nav_freq_mhz") ){
+						return rec.get("nav_freq_mhz") + " mhz";
+						
+					}else{
+						return "-";
+					}
+				}
+			},
+			{header: 'Lat', dataIndex:'nav_center_lat84', sortable: true, align: 'left', hidden: false, flex: 1},
+			{header: 'Lon', dataIndex:'nav_center_lon84', sortable: true, align: 'left', hidden: false, flex: 1}
 		],
 		
 		/* Top Toolbar */
@@ -138,12 +155,13 @@ get_store: function(){
 		this.xStore = new Ext.data.JsonStore({
 			TODOidProperty: 'callsign',
 			fields: [ 	
-				{name: "nav_type", type: 'string'},
-				{name: "ident", type: 'string'},
-				{name: "name", type: 'string'},
-				{name: "lat", type: 'float'},
-				{name: "lon", type: 'float'},
-				{name: "freq", type: 'string'}
+				{name: "nav_suffix", type: 'string'},
+				{name: "nav_ident", type: 'string'},
+				{name: "nav_name", type: 'string'},
+				{name: "nav_center_lat84", type: 'float'},
+				{name: "nav_center_lon84", type: 'float'},
+				{name: "nav_freq_mhz", type: 'string'},
+				{name: "nav_freq_khz", type: 'string'}
 			],
 			proxy: {
 				type: "ajax",
@@ -183,7 +201,7 @@ get_fix_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().load({params: {search: txt, nav_type: "fix"}});
+				this.get_store().load({params: {search: txt, nav_suffix: "fix"}});
 			}
 		}, this);
 	}
@@ -203,7 +221,7 @@ get_vor_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().load({params: {search: txt, nav_type: "vor"}});
+				this.get_store().load({params: {search: txt, nav_suffix: "vor"}});
 			}
 		}, this);
 	}
@@ -223,7 +241,7 @@ get_ndb_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().load({params: {search: txt, nav_type: "ndb"}});
+				this.get_store().load({params: {search: txt, nav_suffix: "ndb"}});
 			}
 		}, this);
 	}
@@ -244,7 +262,7 @@ get_all_search_text: function(){
 				if(txt.length < 2){
 					return;
 				}
-				this.get_store().load({params: {search: txt, nav_type: ""}});
+				this.get_store().load({params: {search: txt, nav_suffix: "__ALL__"}});
 			}
 		}, this);
 	}
