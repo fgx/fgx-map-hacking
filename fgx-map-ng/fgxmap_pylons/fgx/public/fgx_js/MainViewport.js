@@ -345,34 +345,34 @@ initComponent: function(){
 							
 						}
 					},
-					{text:  "Off" , iconCls: "icoOff", enableToggle: true,   
+					{text:  "Off", iconCls: "icoOff", enableToggle: true,   
 						width: this.tbw,   allowDepress: false,
-						toggleGroup: "ref_rate",  refresh_rate: 0, 
+						toggleGroup: "refresh_rate",  refresh_rate: 0,  pressed: this.refresh_rate == 0,
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   		   	{text:  "1" , iconCls: "icoOff", enableToggle: true,    
-						width: this.tbw, allowDepress: false, 
-						toggleGroup: "ref_rate",  refresh_rate: 1, 
+		   		   	{text:  "1" ,  iconCls: this.refresh_rate == 1 ? "icoOn" : "icoOff", enableToggle: true,    
+						width: this.tbw, allowDepress: false, pressed: this.refresh_rate == 1,
+						toggleGroup: "refresh_rate",  refresh_rate: 1, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   		   	{text:  "2" , iconCls: "icoOff", enableToggle: true,    
-						width: this.tbw, allowDepress: false, 
-						toggleGroup: "ref_rate",  refresh_rate: 2, 
+		   		   	{text:  "2", iconCls: this.refresh_rate == 2 ? "icoOn" : "icoOff", enableToggle: true,    
+						width: this.tbw, allowDepress: false, pressed: this.refresh_rate == 2,
+						toggleGroup: "refresh_rate",  refresh_rate: 2, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   			{text:  "3" , iconCls: "icoOff", enableToggle: true,   
-						width: this.tbw, allowDepress: false, 
-						toggleGroup: "ref_rate",  refresh_rate: 3, 
+		   			{text:  "3", iconCls: this.refresh_rate == 3 ? "icoOn" : "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false,  pressed: this.refresh_rate == 3,
+						toggleGroup: "refresh_rate",  refresh_rate: 3, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   			{text:  "6" , iconCls: "icoOff", enableToggle: true,   
-						width: this.tbw, allowDepress: false,
-						toggleGroup: "ref_rate",  refresh_rate: 5,
+		   			{text:  "6", iconCls: this.refresh_rate == 6 ? "icoOn" : "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false, pressed: this.refresh_rate == 6,
+						toggleGroup: "refresh_rate",  refresh_rate: 6,
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
-		   			{text:  "10" , iconCls: "icoOff", enableToggle: true,   
-						width: this.tbw, allowDepress: false,
-						toggleGroup: "ref_rate",  refresh_rate: 10, 
+		   			{text:  "10", iconCls: this.refresh_rate == 10 ? "icoOn" : "icoOff", enableToggle: true,   
+						width: this.tbw, allowDepress: false, pressed: this.refresh_rate == 10,
+						toggleGroup: "refresh_rate",  refresh_rate: 10, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 					"-",
@@ -423,6 +423,8 @@ initialize:  function(){
 	//return;
 	//= Start MP Refresh 
 	if(this.refresh_rate > 0){
+		var butts = this.down("[toggleGroup=refresh_rate]");
+		console.log(butts);
 		this.runner.start( { run: this.update_flights, interval: this.refresh_rate * 1000 });
 	}
 	//this.on_flight_plans_widget();
