@@ -1,3 +1,6 @@
+##@package fgx.model.navdata 
+# @brief Users data and profile models
+#
 
 
 from sqlalchemy import  Integer, String, Date, DateTime, Column

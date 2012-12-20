@@ -1,4 +1,6 @@
-
+##@package fgx.controllers.ajax_map
+# @brief Map related controllers and functions
+#
 import logging
 import ConfigParser
 
@@ -11,12 +13,14 @@ from fgx.model import meta
 from fgx.lib import helpers as h
 
 log = logging.getLogger(__name__)
-
-
-
-## http://stackoverflow.com/questions/3220670/read-all-the-contents-in-ini-file-into-dictionary-with-python/3220891#3220891
+ 
+## Hack that returns ini files as a dictionary. Why this is not in py ?
+#
+# http://stackoverflow.com/questions/3220670/read-all-the-contents-in-ini-file-into-dictionary-with-python/3220891#3220891
 class FGxConfigParser(ConfigParser.ConfigParser):
 
+	## Retrieve ini file as dictionary
+	# @retval dict with the contents as section/values
     def as_dict(self):
         d = dict(self._sections)
         for k in d:
@@ -24,8 +28,10 @@ class FGxConfigParser(ConfigParser.ConfigParser):
             d[k].pop('__name__', None)
         return d
 
-        
-def load_tilecache_cfg():
+## Reads and returns the ``tilecache.cfg`` in this project
+# @retval str raw contents as string
+# @retval dict contents as section/values
+ def load_tilecache_cfg():
 		cfg_file_path = h.G().root_path + "/../../tilecache/tilecache.cfg" 
 		
 		raw = h.read_file( cfg_file_path )
@@ -36,9 +42,10 @@ def load_tilecache_cfg():
 		return raw, parser.as_dict() 
 
 		
-##================================================================
+############################################
 class AjaxMapController(BaseController):
 
+	## Returns a list of layers (the sections from tilecache.cfg)
 	@jsonify
 	def layers_index(self):
 	
@@ -49,6 +56,7 @@ class AjaxMapController(BaseController):
 	
 		return payload
 
+	## Returns tilecache_cfg as string and object
 	@jsonify
 	def tilecache_cfg(self):
 

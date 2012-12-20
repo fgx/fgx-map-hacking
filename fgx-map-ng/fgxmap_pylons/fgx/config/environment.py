@@ -1,4 +1,6 @@
-"""Pylons environment configuration"""
+## 
+# @brief Pylons environment configuration 
+
 import os
 
 from jinja2 import ChoiceLoader, Environment, FileSystemLoader
@@ -9,14 +11,17 @@ import fgx.lib.app_globals as app_globals
 import fgx.lib.helpers
 from fgx.config.routing import make_map
 from fgx.model import init_model
+from fgx.model.meta import DbConnectionsContainer
 
 ## FGx add the bots
 from fgx.bots.mpstatus import MpStatusThread
 
+## @brief Configure the Pylons environment via the ``pylons.config`` object
+# @param global_conf
+# @param app_conf
+# @param start_bots Start the background fgx.bots
 def load_environment(global_conf, app_conf, start_bots):
-	"""Configure the Pylons environment via the ``pylons.config``
-	object
-	"""
+
 	config = PylonsConfig()
 	
 	# Pylons paths
@@ -47,9 +52,9 @@ def load_environment(global_conf, app_conf, start_bots):
 	)
 	
 	# Setup the SQLAlchemy database engines
-	class Engines(object):
-		pass
-	engines = Engines()
+	#class DbConnectionsContainer(object):
+	#	pass
+	engines = DbConnectionsContainer()
 	engines.navdata = engine_from_config(config, 'sql_navdata.')
 	engines.users = engine_from_config(config, 'sql_users.')
 	engines.mpnet = engine_from_config(config, 'sql_mpnet.')

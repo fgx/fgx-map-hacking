@@ -1,3 +1,6 @@
+##@package fgx.controllers.ajax_mpnet
+# @brief Controllers and functions for the MultiPlayer network
+#
 
 import urllib2
 import logging

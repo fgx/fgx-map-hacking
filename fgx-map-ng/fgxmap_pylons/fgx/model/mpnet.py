@@ -1,3 +1,6 @@
+##@package fgx.model.mpnet 
+# @brief Access to the tracker and multiplayer network
+#
 
 import datetime
 

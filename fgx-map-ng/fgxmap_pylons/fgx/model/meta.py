@@ -1,29 +1,48 @@
-"""SQLAlchemy Metadata and Session object"""
+##@package fgx.model.meta 
+# @brief SQLAlchemy Metadata and Session objects
+#
+# The meta is the typical way to access sqlAlchemy sessions and the isntances within.
+# @example from fgx.model import meta
+#         
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-__all__ = ['Base', 'Session']
 
+__all__ = ['Base', 'Sess']
 
-class ConnectionsContainer():
+##@brief A class to hold the database connections, sessions and metadata; currently three.....
+class DbConnectionsContainer():
+	
+	## Constructor
 	def __init__(self):
+		
+		## postgis database with navigation data
 		self.navdata = None
+		
+		## users info and profile, shared data etc
 		self.users = None
+		
+		## tracker and multiplayer
 		self.mpnet = None
 		
 		
-# SQLAlchemy session manager. Updated by model.init_model()
-## Need this is object
-Sess = ConnectionsContainer()
+		
+##@brief The sqlalchemy database Sessions/connecctions
+#
+# @see fgx.model.init_model()
+Sess = DbConnectionsContainer()
 Sess.navdata = scoped_session(sessionmaker())
 Sess.users = scoped_session(sessionmaker())
 Sess.mpnet = scoped_session(sessionmaker())
 
 
-# The declarative Base
-Base = ConnectionsContainer()
+## The declarative Base for ORM access
+Base = DbConnectionsContainer()
 Base.navdata = declarative_base()
 Base.users = declarative_base()
+
+
 Base.mpnet = declarative_base()
 
 

@@ -1,3 +1,6 @@
+##@package fgx.controllers.ajax_airports
+# @brief Airports, runways and other airport related controllers
+#
 import logging
 
 from pylons import request, response, session, tmpl_context as c, url

@@ -1,3 +1,6 @@
+##@package fgx.controllers.html_pages
+# @brief Html pages and other non ajax stuff
+#
 import logging
 
 from pylons import request, response, session, tmpl_context as c, url

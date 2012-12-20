@@ -1,3 +1,7 @@
+##@package fgx.controllers.ajax_dev
+# @brief Developer utils controllers and helpers
+#
+
 import logging
 
 from pylons import request, response, session, tmpl_context as c, url
@@ -16,7 +20,7 @@ log = logging.getLogger(__name__)
 class AjaxDevController(BaseController):
 
 	@jsonify
-	def tables(self, db_name):
+	def db_tables(self, db_name):
 
 		payload = dict(
 					success=True,
@@ -24,9 +28,16 @@ class AjaxDevController(BaseController):
 				)
 		
 		return payload
-		
+
+	####
+	## @brief Returns a list of column definitions in a table in json
+	#
+	# @see queries.database.columns()
+	# 
+	# @param db_name database connection
+	# @param table_name The table to query columns for
 	@jsonify	
-	def columns(self, db_name, table_name):
+	def db_columns(self, db_name, table_name):
 		payload = dict(
 					success=True,
 					columns=database.columns(db_name, table_name)
@@ -75,8 +86,8 @@ class AjaxDevController(BaseController):
 		
 		
 		
-	####
-	## @brief Returns a list of raw routes defined in config/routing.py
+	## @brief Returns a list raw routes defined in fgx.config.routing
+	# @return list of strings
 	@jsonify
 	def routes(self):
 		

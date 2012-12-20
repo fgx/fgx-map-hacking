@@ -33,7 +33,10 @@ def empty_table(table):
 	
 	
 
-	
+##@brief Returns a list of dict with the columns defininitions
+#
+# @param db_name database connection
+# @param table_name The table to query columns for
 def columns(db_name, table_name):
 		
 	cols = meta.Base.__dict__[db_name].metadata.tables[table_name].columns

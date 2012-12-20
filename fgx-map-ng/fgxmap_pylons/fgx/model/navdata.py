@@ -1,3 +1,7 @@
+##@package fgx.model.navdata 
+# @brief Navigation, airport data and postgis database models
+#
+# @warning Required postgis
 
 from sqlalchemy import  Integer, String, Date, DateTime
 from geoalchemy import  Column, GeometryColumn, GeometryDDL, Point, Polygon, MultiPoint, LineString
