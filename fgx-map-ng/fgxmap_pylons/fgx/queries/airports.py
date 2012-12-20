@@ -1,8 +1,7 @@
 
 
 from fgx.model import meta
-from fgx.model.data import Airport, Runway
-#SELECT st_y(wkb_geometry) as lat, st_x(wkb_geometry) as lon, ident FROM fix limit 10;
+from fgx.model.navdata import Airport, Runway
 
 
 ## Does an sql query and return a list of dict
@@ -40,7 +39,7 @@ def airports(apt_ident=None, apt_name_ascii=None, bounds=None, apt_type=None, lo
 		sql += " and apt_type l= %s" % apt_type
 		
 	
-	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.navdata.execute(sql).fetchall(), cols)
 	
 	
 	
@@ -49,7 +48,7 @@ def airport(apt_ident):
  
 	## TODO
 	
-	return [ob.dic() for ob in meta.Sess.data.query(Airport).filter_by(apt_ident=apt_ident).order_by(Airport.apt_ident).all() ]
+	return [ob.dic() for ob in meta.Sess.navdata.query(Airport).filter_by(apt_ident=apt_ident).order_by(Airport.apt_ident).all() ]
 	
 	
 ## Does an sql query and return a list of dict
@@ -70,5 +69,5 @@ def runways(apt_ident):
 	sql += " where apt_ident  = '%s' " % apt_ident
 	
 	
-	return meta.query_to_dic(meta.Sess.data.execute(sql).fetchall(), cols)
+	return meta.query_to_dic(meta.Sess.navdata.execute(sql).fetchall(), cols)
 	

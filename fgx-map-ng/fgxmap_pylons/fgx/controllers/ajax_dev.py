@@ -3,6 +3,7 @@ import logging
 from pylons import request, response, session, tmpl_context as c, url
 from pylons.controllers.util import abort, redirect
 from pylons.decorators import jsonify
+from pylons import config
 
 from fgx.lib.base import BaseController, render
 from fgx.model import meta
@@ -12,7 +13,7 @@ log = logging.getLogger(__name__)
 
 
 
-class AjaxDbController(BaseController):
+class AjaxDevController(BaseController):
 
 	@jsonify
 	def tables(self, db_name):
@@ -44,6 +45,12 @@ class AjaxDbController(BaseController):
 		database.drop_table(table)
 		return payload
 	"""
+	
+	####
+	## @brief Update and create database views
+	# @todo This needs to be implemented - pete
+	#
+	# The idea is to create the views here, so updates are easy. Requires create view permission.
 	@jsonify	
 	def create_views(self):
 		
@@ -51,7 +58,7 @@ class AjaxDbController(BaseController):
 		views_sql = []
 		
 		## v_runway
-		sql = "create or replace view v_runway as "
+		sql = "TODOcreate or replace view v_runway as "
 		sql += "select apt_ident, rwy_ident, rwy_ident_end, "
 		sql += " rwy_ident || '-' || rwy_ident_end as rwy "
 		sql += " from runway "
@@ -68,6 +75,22 @@ class AjaxDbController(BaseController):
 		
 		
 		
+	####
+	## @brief Returns a list of raw routes defined in config/routing.py
+	@jsonify
+	def routes(self):
 		
+		lst = []
+		for r in config['routes.map']._routematches:
+			#print dir(r)
+			#print "#########", r.routepath
+			lst.append( r.routepath )
+		payload = dict(
+			success=True,
+			routes_list = sorted(lst)
+			)
+
+		return payload
+	
 	
 	

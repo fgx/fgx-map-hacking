@@ -37,7 +37,7 @@ def load_tilecache_cfg():
 
 		
 ##================================================================
-class AjaxLayersController(BaseController):
+class AjaxMapController(BaseController):
 
 	@jsonify
 	def layers_index(self):

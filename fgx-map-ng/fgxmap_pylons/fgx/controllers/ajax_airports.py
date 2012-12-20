@@ -64,7 +64,7 @@ class AjaxAirportsController(BaseController):
 		
 		payload['airport'] = airports.airport(apt_ident)
 		#payload['airport'] = airports.airport(apt_ident)
-		runways = meta.Sess.data.query(Runway
+		runways = meta.Sess.navdata.query(Runway
 					).filter_by(apt_ident=apt_ident
 					).order_by(Runway.rwy_ident).all()
 		payload['runways'] = [ r.tree() for r in runways]

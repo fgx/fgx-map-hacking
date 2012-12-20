@@ -52,19 +52,21 @@ def make_map(config):
 	##=======================================================================
 	# Ajax Database
 	##=======================================================================
-	map.connect('/ajax/databases', controller="ajax_db", action="databases")
-	map.connect('/ajax/database/create_views', controller="ajax_db", action="create_views")
-	map.connect('/ajax/database/{db_name}/tables', controller="ajax_db", action="tables")
-	map.connect('/ajax/database/{db_name}/table/{table_name}/columns', controller="ajax_db", action="columns")
-	map.connect('/ajax/database/{db_name}/table/{table_name}/drop', controller="ajax_db", action="drop_table")
+	map.connect('/ajax/dev/databases', controller="ajax_dev", action="databases")
+	
+	map.connect('/ajax/dev/database/{db_name}/tables', controller="ajax_dev", action="tables")
+	map.connect('/ajax/dev/database/{db_name}/table/{table_name}/columns', controller="ajax_dev", action="columns")
+	map.connect('/ajax/dev/database/{db_name}/table/{table_name}/drop', controller="ajax_dev", action="drop_table")
+	
+	map.connect('/ajax/dev/routes', controller="ajax_dev", action="routes")
 	
 	##=======================================================================
 	# Layers
 	##=======================================================================
 	
-	map.connect('/ajax/layers', controller="ajax_layers", action="layers_index")
-	map.connect('/ajax/layers/tilecache.cfg', controller="ajax_layers", action="tilecache_cfg")
-	map.connect('/ajax/layers/resources.xml', controller="ajax_layers", action="resources_xml")
+	map.connect('/ajax/map/layers', controller="ajax_layers", action="layers_index")
+	map.connect('/ajax/map/layers/tilecache.cfg', controller="ajax_layers", action="tilecache_cfg")
+	map.connect('/ajax/map/layers/resources.xml', controller="ajax_layers", action="resources_xml")
 	
 	
 
@@ -120,6 +122,4 @@ def make_map(config):
 	map.connect('/{page}', controller="html_pages", action="index")
 	map.connect('/', controller="html_pages", action="index")
 	
-	
-
 	return map
