@@ -18,7 +18,7 @@ widgets: {
 //===========================================================
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
-refresh_rate: 0,
+refresh_rate: 10,
 runner: Ext.create("Ext.util.TaskRunner", {}),
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {
@@ -130,21 +130,18 @@ on_flight_plans_widget: function(butt){
 		});
 		this.get_tab_panel().add(this.widgets.FlightPlansWidget);
 	}
-	//console.log(this.widgets);
 	this.get_tab_panel().setActiveTab(this.widgets.FlightPlansWidget);
 },
 
 
 on_flights_widget: function(butt){
 	if(!this.widgets.FlightsViewPanel){
-		
 		this.widgets.FlightsViewPanel = Ext.create("FGx.mpnet.FlightsViewPanel", {
 			title: "Flights", 
 			closable: true,
 			xHidden: false
 		});
 		this.get_tab_panel().add(this.widgets.FlightsViewPanel);
-		console.log("created");
 	}
 	this.get_tab_panel().setActiveTab(this.widgets.FlightsViewPanel);
 },
@@ -157,7 +154,6 @@ on_network_status_panel: function(butt, checked){
 			xHidden: false
 		});
 		this.get_tab_panel().add(this.widgets.NetworkStatusPanel);
-		
 	}
 	this.get_tab_panel().setActiveTab(this.widgets.NetworkStatusPanel);
 },
@@ -192,7 +188,6 @@ on_layers_browser_widget: function(butt, checked){
 //=================================================================================
 // Map Panels
 //=================================================================================
-
 open_map:  function(obj){
 	//console.log(">> MainViewort.open_map", obj.title, obj.iconCls, obj.lat, obj.lon, obj.zoom, obj.closable);
 	var newMap = Ext.create("FGx.map.MapViewPanel", {xConfig: obj, title: obj.title, iconCls: obj.iconCls});
@@ -345,25 +340,29 @@ initComponent: function(){
 					//== Refresh MP
 					{xtype: 'tbspacer', width: 50},
 					"-",
-					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "MultiPlayer refresh in seconds"},
-					{text:  "Off" , iconCls: "icoOn", enableToggle: true,   
-						width: this.tbw, pressed: true,  allowDepress: false,
+					{xtype: "tbtext", text: "MP Refresh >&nbsp;", tooltip: "Refresh now now",
+						handler: function(){
+							
+						}
+					},
+					{text:  "Off" , iconCls: "icoOff", enableToggle: true,   
+						width: this.tbw,   allowDepress: false,
 						toggleGroup: "ref_rate",  refresh_rate: 0, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 		   		   	{text:  "2" , iconCls: "icoOff", enableToggle: true,    
-						width: this.tbw, allowDepress: false,
+						width: this.tbw, allowDepress: false, 
 						toggleGroup: "ref_rate",  refresh_rate: 2, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 		   			{text:  "3" , iconCls: "icoOff", enableToggle: true,   
-						width: this.tbw, allowDepress: false,
+						width: this.tbw, allowDepress: false, 
 						toggleGroup: "ref_rate",  refresh_rate: 3, 
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 		   			{text:  "5" , iconCls: "icoOff", enableToggle: true,   
 						width: this.tbw, allowDepress: false,
-						toggleGroup: "ref_rate",  refresh_rate: 5, 
+						toggleGroup: "ref_rate",  refresh_rate: 5,
 						toggleHandler: this.on_refresh_toggled,	scope: this
 					},
 		   			{text:  "10" , iconCls: "icoOff", enableToggle: true,   

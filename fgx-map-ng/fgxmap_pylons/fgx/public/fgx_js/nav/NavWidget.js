@@ -24,7 +24,7 @@ initComponent: function() {
 		columns: [ 
 			{header: '&nbsp;', dataIndex:'nav_suffix', width: 20, menuDisabled: true, sortable: true,
 				renderer: function(v, meta, rec){
-					//meta.attr = 'style= "background-image: url(/images/vfr_fix.png) !important; background-repeat: no-repeat;"';
+					// classes blow are teh icons
 					var oops = "";
 					if(v == "FIX"){
 						meta.tdCls = "icoFix";

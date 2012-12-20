@@ -10,9 +10,9 @@ get_flights_grid: function(){
 			region: "center",
 			frame: false, plain: true, border: false
 		});
-		this.xFlightsGrid.on("rowclick", function(grid, rowIdx, e){
+		this.xFlightsGrid.on("itemclick", function(grid, rowIdx, e){
 			var rec = grid.getStore().getAt(rowIdx);
-			
+			/*
 			Ext.Ajax.request({
 				url: "/ajax/mpnet/tracker/" + rec.get("callsign"),
 				method: "GET",
@@ -27,6 +27,7 @@ get_flights_grid: function(){
 				}
 				
 			});
+			*/
 			
 		}, this);
 	}

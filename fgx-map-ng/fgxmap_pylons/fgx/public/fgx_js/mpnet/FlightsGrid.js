@@ -37,7 +37,13 @@ initComponent: function() {
 		store: Ext.StoreMgr.lookup("flights_store"),
 		columns: [ 
 			{header: 'Flight ID',  dataIndex:'fid', sortable: true, 
-				ssrenderer: this.render_callsign, width: 100, menuDisabled: true
+				width: 100, menuDisabled: true,
+				renderer: function(v, meta, rec){
+					if(rec.get("flag") > 0){
+						meta.style = "background-color: pink;";
+					}
+					return v;
+				}
 			},
 			{header: 'CallSign',  dataIndex:'callsign', sortable: true, 
 				renderer: this.render_callsign, width: 100, menuDisabled: true
