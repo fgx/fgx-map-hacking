@@ -9,7 +9,9 @@ widgets: {
 	FlightsViewPanel: null,	
 	NetworkStatusPanel: null,
 	DbBrowser: null,
-	FlightPlansWidget: null
+	RoutesBrowser: null,
+	FlightPlansWidget: null,
+	
 },
 
 //===========================================================
@@ -128,13 +130,24 @@ on_network_status_panel: function(butt, checked){
 },
 on_db_browser_widget: function(butt, checked){
 	if(!this.widgets.DbBrowser){
-		this.widgets.DbBrowser = Ext.create("FGx.db.DbBrowser", {
+		this.widgets.DbBrowser = Ext.create("FGx.dev.DbBrowser", {
 			closable: true
 		});
 		this.get_tab_panel().add(this.widgets.DbBrowser);
 	}
 	this.get_tab_panel().setActiveTab(this.widgets.DbBrowser);
 },
+on_routes_browser_widget: function(butt, checked){
+	if(!this.widgets.RoutesBrowser){
+		this.widgets.RoutesBrowser = Ext.create("FGx.dev.RoutesBrowser", {
+			closable: true
+		});
+		this.get_tab_panel().add(this.widgets.RoutesBrowser);
+	}
+	this.get_tab_panel().setActiveTab(this.widgets.RoutesBrowser);
+},
+
+
 //=================================================================================
 // Map Panels
 //=================================================================================
@@ -272,7 +285,8 @@ initComponent: function(){
 					"-",
 					{iconCls: "icoDev", tooltip: "Developer", text: "Developer",
 						menu: [
-							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this}
+							{iconCls: "icoDatabase", text: "Database Schema", handler: this.on_db_browser_widget, scope: this},
+							{iconCls: "icoDatabase", text: "URL Mapping", handler: this.on_routes_browser_widget, scope: this}
 						]
 					},
 					"-",

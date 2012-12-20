@@ -91,6 +91,7 @@ static_icons["icoRefreshRun"] = "clock_run.png"
 # \code 
 # .icoFoo{background-image: url('/images/my_foo.png') !important; background-repeat: no-repeat;}
 # \endcode
+# @see controllers.html_pages.HtmlPagesController.dynamic_icons_css()
 # @retval str with the css
 def get_icons_css():
 	

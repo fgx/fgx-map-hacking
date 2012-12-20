@@ -1,10 +1,10 @@
 
 
 //================================================================
-Ext.define("FGx.db.DbBrowser",  {
+Ext.define("FGx.dev.DbBrowser",  {
 
 extend: "Ext.Panel",
-curr_database : "data",
+curr_database : "navdata",
 
 //======================================================
 // Tables Grid
@@ -22,7 +22,7 @@ grid_tables: function(){
 				
 				proxy: {
 					type: "ajax",
-					url: "/ajax/database/data/tables",
+					url: "/ajax/dev/database/navdata/tables",
 					method: 'GET',
 					reader: {
 						type: "json",
@@ -52,7 +52,7 @@ grid_tables: function(){
 					}
 					var rec = selection[0];
 					var table = rec.get("table");
-					var url = "/ajax/database/" + this.curr_database + "/table/" + table + "/columns";
+					var url = "/ajax/dev/database/" + this.curr_database + "/table/" + table + "/columns";
 					this.grid_columns().getStore().getProxy().url = url;
 					this.grid_columns().getStore().load();
 				}
@@ -81,7 +81,7 @@ grid_columns: function(){
 				idProperty: "column",
 				proxy: {
 					type: "ajax",
-					url: "/ajax/database/table/_TABLE_NAME_/columns",
+					url: "/ajax/dev/database/table/_TABLE_NAME_/columns",
 					method: 'GET',
 					reader: {
 						type: "json",
@@ -123,7 +123,7 @@ on_select_db: function(butt, checked){
 		
 		this.grid_columns().getStore().removeAll();
 		
-		this.grid_tables().getStore().getProxy().url = "/ajax/database/" + this.curr_database + "/tables";
+		this.grid_tables().getStore().getProxy().url = "/ajax/dev/database/" + this.curr_database + "/tables";
 		this.grid_tables().getStore().load();
 	}
 	butt.setIconCls( checked ? "icoOn" : "icoOff");
@@ -143,9 +143,9 @@ initComponent: function() {
 				title: 'Select Database',
 				columns: 3,
 				items: [
-					{text: "data", pressed: true, enableToggle: true, toggleGroup: "sel_db", allowDepress: false,
+					{text: "navdata", pressed: true, enableToggle: true, toggleGroup: "sel_db", allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOn"},
-					{text: "secure", enableToggle: true, toggleGroup: "sel_db",  allowDepress: false,
+					{text: "users", enableToggle: true, toggleGroup: "sel_db",  allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},
 					{text: "mpnet",  enableToggle: true,  toggleGroup: "sel_db",  allowDepress: false,
 						toggleHandler: this.on_select_db, scope: this, iconCls: "icoOff"},

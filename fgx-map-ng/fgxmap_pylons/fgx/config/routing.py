@@ -62,7 +62,7 @@ def make_map(config):
 	## Database
 	map.connect('/ajax/dev/databases', controller="ajax_dev", action="db_databases")
 	map.connect('/ajax/dev/database/{db_name}/tables', controller="ajax_dev", action="db_tables")
-	map.connect('/ajax/dev/database/{db_name}/table/{table_name}/columns', controller="ajax_dev", action="columns")
+	map.connect('/ajax/dev/database/{db_name}/table/{table_name}/columns', controller="ajax_dev", action="db_columns")
 	map.connect('/ajax/dev/database/{db_name}/table/{table_name}/drop', controller="ajax_dev", action="drop_table")
 	
 	map.connect('/ajax/dev/routes', controller="ajax_dev", action="routes")

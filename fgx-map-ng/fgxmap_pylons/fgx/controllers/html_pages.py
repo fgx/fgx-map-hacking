@@ -16,8 +16,6 @@ log = logging.getLogger(__name__)
 class HtmlPagesController(BaseController):
 
 	
-	
-	
 	def index(self, page=None):
 		
 		c.page = page if page else "map-ext"	
@@ -36,6 +34,12 @@ class HtmlPagesController(BaseController):
 		return render("admin_users.html")
 		
 	"""	
+	
+	## Serves the css for the Ext4 icons, these are defined in config.style
+	# 
+	# This appears at the url  <b>/dynamic.{fgx_js_version}.css</b>
+	# @see lib.app_globals.Globals.fgx_js_version
+	# @see config.style.get_icons_css()
 	def dynamic_icons_css(self):
 		txt = style.get_icons_css()
 		response.headers['Content-Type'] = "text/css";

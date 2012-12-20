@@ -1,4 +1,6 @@
-"""The application's Globals object"""
+##@package fgx.lib.app_globals
+# @brief The application's globals object
+#
 
 import os
 import glob
@@ -7,36 +9,38 @@ import random
 from beaker.cache import CacheManager
 from beaker.util import parse_cache_config_options
 
-
+## Acts as a container for objects available throughout the life of the application
 class Globals(object):
-	"""Globals acts as a container for objects available throughout the
-	life of the application
-
-	"""
-
+	
+	## One instance of Globals is created during application
+	# 	initialization and is available during requests via the
+	# 	'app_globals' variable
+	# Some of this stuff is copy of config of ease of use
 	def __init__(self, config):
-		"""One instance of Globals is created during application
-		initialization and is available during requests via the
-		'app_globals' variable
+		"""
 
 		"""
+		## The root path the the wsgi root, ie where the ini file is
 		self.root_path = os.path.abspath(os.path.dirname(__file__) + "/../"  )
 		
+		## Cache manager object
 		self.cache = CacheManager(**parse_cache_config_options(config))
 
+		## The URL for the crossfeed server
 		self.crossfeed_data_url = config['crossfeed_ajax_url']
 		
+		## Location of temp directory
 		self.temp_dir = config['temp_dir']
 		
-		### TODO make this jsmin automatically
-		## This is the version used on javascript=/fgx_js.X/* ,,
-		## Js is send cached, so new change means incrementing this number and directory rename
-		## This searched for fgx_js.X/ and sets the fgx_js_versin to X
+		
 		path =  glob.glob(self.root_path + '/public/fgx_js.[0-9].[0-9]/')[0]
+		
+		## FGx symlink vervion
 		self.fgx_js_version =  path.split("/")[-2].replace("fgx_js.", "")
 		
 		
-		
+	## Returns the location of the static server
+	# @todo make this an ini setting - pete
 	@property
 	def static_url(self):
 		#TODO Below needs to be in ini config

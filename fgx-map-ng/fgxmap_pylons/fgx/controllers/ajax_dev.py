@@ -19,6 +19,12 @@ log = logging.getLogger(__name__)
 
 class AjaxDevController(BaseController):
 
+	####
+	## @brief Returns a list of tables
+	#
+	# @see queries.database.tables()
+	# 
+	# @param db_name database connection
 	@jsonify
 	def db_tables(self, db_name):
 
@@ -87,7 +93,7 @@ class AjaxDevController(BaseController):
 		
 		
 	## @brief Returns a list raw routes defined in fgx.config.routing
-	# @return list of strings
+	# @return list with dic 
 	@jsonify
 	def routes(self):
 		
@@ -95,10 +101,10 @@ class AjaxDevController(BaseController):
 		for r in config['routes.map']._routematches:
 			#print dir(r)
 			#print "#########", r.routepath
-			lst.append( r.routepath )
+			lst.append( {'url': r.routepath} )
 		payload = dict(
 			success=True,
-			routes_list = sorted(lst)
+			routes = sorted(lst)
 			)
 
 		return payload
