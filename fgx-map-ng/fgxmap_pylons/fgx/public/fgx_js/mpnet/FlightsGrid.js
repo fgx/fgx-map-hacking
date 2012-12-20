@@ -74,7 +74,14 @@ initComponent: function() {
 				flex: 1
 			},
 			{header: 'Flag',  dataIndex: 'flag', sortable: true, menuDisabled: true,
-				flex: 1
+				flex: 1,
+				renderer: function(v, meta, rec){
+					if(v > 0){
+						meta.style = "background-color: pink;";
+						return v
+					}
+					return "-";
+				}
 			}
 		],		
 		bbar: [
