@@ -116,7 +116,11 @@ def make_map(config):
 	map.connect('/ajax/users', controller="ajax_users", action="users")
 	map.connect('/ajax/user/{user_id}', controller="ajax_users", action="user")
 	
-	
+	##=======================================================================
+	# Mobile
+	##=======================================================================
+	map.connect('/m', controller="html_pages", action="mobile")
+	map.connect('/mobile', controller="html_pages", action="mobile")
 	
 	##=======================================================================
 	## HTML Pages
