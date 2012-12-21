@@ -316,6 +316,21 @@ get_layers: function(){
 			{layers: "Airport" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
+				  
+		new OpenLayers.Layer.WMS(
+			"Seaport",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
+			{layers: "Seaport" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		),
+				  
+		new OpenLayers.Layer.WMS(
+		"Heliport",
+		"http://mapnik.fgx.ch:81/tilecache.py?",
+		{layers: "Heliport" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+		),
+				  
 		new OpenLayers.Layer.WMS(
 			"ILS",
 			"http://mapnik.fgx.ch:81/tilecache.py?",
@@ -482,6 +497,10 @@ initComponent: function() {
 				columns: 6,
 				items: [
 					{text: "Airports", enableToggle: true, iconCls: "icoOff", apt: "Airport", 
+						toggleHandler: this.on_apt_toggled, scope: this},
+					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "Seaport", 
+						toggleHandler: this.on_apt_toggled, scope: this},
+					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "Heliport", 
 						toggleHandler: this.on_apt_toggled, scope: this},
 					//{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
 					//{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
