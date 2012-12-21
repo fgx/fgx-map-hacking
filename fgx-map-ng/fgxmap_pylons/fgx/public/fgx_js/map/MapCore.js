@@ -389,7 +389,7 @@ get_store: function(){
 	if(!this.xFlightsStore){
 		this.xFlightsStore = Ext.StoreMgr.lookup("flights_store");
 		this.xFlightsStore.on("load", function(sto, recs){
-			console.log("xFlightsStore.load");
+			//console.log("xFlightsStore.load");
 			this.L.radarBlip.removeAllFeatures();
 			this.L.radarLbl.removeAllFeatures();
 			var i, r;
@@ -404,7 +404,6 @@ get_store: function(){
 },
 	
 //===========================================================
-//== CONSTRUCT
 initComponent: function() {
 	
 	//console.log(">> MapPanel.constructor", this.xConfig);
