@@ -491,13 +491,13 @@ initComponent: function() {
 					//{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
 				]   
 			},
-			{xtype: 'buttongroup', 
+			/*{xtype: 'buttongroup', 
 				title: 'Utils', 
 				columns: 2,
 				items: [
 					this.get_bookmark_button()
 				]
-			}
+			}*/
 		],
 		
 		//== Bottom Toolbar
