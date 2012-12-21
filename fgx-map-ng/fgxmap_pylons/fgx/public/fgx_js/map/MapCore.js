@@ -293,7 +293,7 @@ get_layers: function(){
 			{visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
-		"Runway",
+			"Runway",
 			"http://mapnik.fgx.ch:81/tilecache.py?",
 				{layers: "Runway" , transparent: "True" , format: "image/png" 
 				}, {  visibility: false}
@@ -311,11 +311,26 @@ get_layers: function(){
 			}, {  visibility: false}
 		),
 		new OpenLayers.Layer.WMS(
-			"Airfield",
+			"Airport",
 			"http://mapnik.fgx.ch:81/tilecache.py?",
-			{layers: "Airfield" , transparent: "True" , format: "image/png" 
+			{layers: "Airport" , transparent: "True" , format: "image/png" 
 			}, {  visibility: false}
 		),
+				  
+		new OpenLayers.Layer.WMS(
+			"Seaport",
+			"http://mapnik.fgx.ch:81/tilecache.py?",
+			{layers: "Seaport" , transparent: "True" , format: "image/png" 
+			}, {  visibility: false}
+		),
+				  
+		new OpenLayers.Layer.WMS(
+		"Heliport",
+		"http://mapnik.fgx.ch:81/tilecache.py?",
+		{layers: "Heliport" , transparent: "True" , format: "image/png" 
+		}, {  visibility: false}
+		),
+				  
 		new OpenLayers.Layer.WMS(
 			"ILS",
 			"http://mapnik.fgx.ch:81/tilecache.py?",
@@ -477,26 +492,31 @@ initComponent: function() {
 					//}
 				]   
 			},
-			{xtype: 'buttongroup', disabled: true,
-				title: 'Airports - TODO', 
+			{xtype: 'buttongroup', disabled: false,
+				title: 'Airports', 
 				columns: 6,
 				items: [
-					{text: "Major", enableToggle: true, pressed: true, iconCls: "icoOn", apt: "major", toggleHandler: this.on_apt_toggled},
-					{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
-					{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
+					{text: "Airports", enableToggle: true, iconCls: "icoOff", apt: "Airport", 
+						toggleHandler: this.on_apt_toggled, scope: this},
+					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "Seaport", 
+						toggleHandler: this.on_apt_toggled, scope: this},
+					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "Heliport", 
+						toggleHandler: this.on_apt_toggled, scope: this},
+					//{text: "Minor", enableToggle: true, iconCls: "icoOff", apt: "minor", toggleHandler: this.on_apt_toggled},
+					//{text: "Small", enableToggle: true, iconCls: "icoOff", apt: "small", toggleHandler: this.on_apt_toggled},
 					//{text: "Military", enableToggle: true, iconCls: "icoOff", apt: "military", toggleHandler: this.on_apt_toggled,
 					//	hidden: true, id: "fgx-mil-airports"},
-					{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
-					{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
+					//{text: "Seaports", enableToggle: true, iconCls: "icoOff", apt: "seaports", toggleHandler: this.on_apt_toggled},
+					//{text: "Heliports", enableToggle: true, iconCls: "icoOff", apt: "heliports", toggleHandler: this.on_apt_toggled},
 				]   
 			},
-			{xtype: 'buttongroup', 
+			/*{xtype: 'buttongroup', 
 				title: 'Utils', 
 				columns: 2,
 				items: [
 					this.get_bookmark_button()
 				]
-			}
+			}*/
 		],
 		
 		//== Bottom Toolbar
@@ -582,9 +602,10 @@ on_nav_toggled: function(butt, checked){
 },
 
 on_apt_toggled: function(butt, checked){
- // TODO
  	butt.setIconCls( checked ? "icoOn" : "icoOff" );
+	this.xMap.getLayersByName(butt.apt)[0].setVisibility(checked);
 },
+		   
 on_civmil_mode: function(butt, checked){
  // TODO
 	console.log(butt.xCivMilMode);
