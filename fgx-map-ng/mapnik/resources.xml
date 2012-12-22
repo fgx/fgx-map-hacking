@@ -68,20 +68,53 @@
   <!-- ********** XPLANE: airport ********** -->
   
   <Style name="APT">
-    <!--<Rule>
-	 <Filter>[has_tower] > 0</Filter>
-	  <PointSymbolizer file="/home/map/fgx-map/fgx-map/htdocs/images/apt-tower.png" width="16" height="16" type="png" opacity="0.7"/>
-	  <TextSymbolizer name="[apt_icao]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="10" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
-      <TextSymbolizer name="[apt_name]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="8" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
-	</Rule>-->
-   <Rule>
-    <!--<ElseFilter/>-->
-	 <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_15.svg" width="12" height="12" type="svg" opacity="0.75"/>
-	 <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
-     <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+    <Rule>
+	 <Filter>[apt_size] = 'large'</Filter>
+	  <MinScaleDenominator>10000000</MinScaleDenominator>
+	  <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_15.svg" transform="scale(1.2)" type="svg" opacity="0.75"/>
+	  <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+    </Rule>
+	<Rule>
+	 <Filter>[apt_size] = 'large'</Filter>
+	  <MaxScaleDenominator>10000000</MaxScaleDenominator>
+	  <MinScaleDenominator>100</MinScaleDenominator>
+	  <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_25.svg" transform="scale(1.2)" type="svg" opacity="0.75"/>
+	  <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+    </Rule>
+	<Rule> 
+	 <Filter>[apt_size] = 'medium'</Filter>
+	  <MaxScaleDenominator>10000000</MaxScaleDenominator>
+	  <MinScaleDenominator>3000000</MinScaleDenominator>
+	  <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_15.svg" transform="scale(1.2)" type="svg" opacity="0.75"/>
+	  <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+	<Rule> 
+	 <Filter>[apt_size] = 'medium'</Filter>
+	  <MaxScaleDenominator>3000000</MaxScaleDenominator>
+	  <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_15.svg" transform="scale(1.2)" type="svg" opacity="0.75"/>
+	  <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="11" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+      <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+	<Rule>
+	 <Filter>[apt_size] = 'small'</Filter>
+	  <MaxScaleDenominator>5000000</MaxScaleDenominator>
+	  <MinScaleDenominator>3000000</MinScaleDenominator>
+	  <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_25.svg" transform="scale(0.4)" type="svg" opacity="0.75"/>
+	  <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="blue" opacity="0.5" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	</Rule>
+    <Rule>
+	 <Filter>[apt_size] = 'small'</Filter>
+	 <MaxScaleDenominator>3000000</MaxScaleDenominator>
+	 <!--<MinScaleDenominator>100000</MinScaleDenominator>-->
+	 <PointSymbolizer file="/home/www_site/fgx-static/icons/fgxmap_svg/apt_000000_15.svg" transform="scale(0.8)" type="svg" opacity="0.75"/>
+	 <TextSymbolizer name="[apt_ident]" dy="-11" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="blue" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
+	 <TextSymbolizer name="[apt_name_ascii]" dy="-1" dx="15" face-name="Asap Regular" character-spacing="2" horizontal-alignment="right" size="9" fill="black" halo-fill= "#DDDDDD" halo-radius="1" allow-overlap="false" avoid-edges="true"/>
    </Rule>
-  </Style>
-  
+   </Style>
+   
   <Layer name="Airport" status="on" clear-label-cache="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs">
     <StyleName>APT</StyleName>
 	<Datasource>
