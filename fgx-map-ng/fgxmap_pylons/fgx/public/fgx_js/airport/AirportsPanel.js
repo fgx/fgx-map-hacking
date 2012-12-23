@@ -14,11 +14,11 @@ action_new_tab: function(){
 			disabled: true,
 			scope: this,
 			handler: function(){
-				var r = this.get_airports_grid().getSelectionModel().getSelected().data;	
+				var r = this.get_airports_grid().getSelectionModel().getSelection().data;	
 				console.log("OPEN", r);
 				//this.fireEvent("OPEN_AIRPORT", r);
-				r.lat = r.apt_center_lat;
-				r.lon = r.apt_center_lon;
+				r.lat = r.apt_center_lat84;
+				r.lon = r.apt_center_lon84;
 				r.iconCls = "icoAirport";
 				r.title = r.apt_ident;
 				r.closable = true;
@@ -55,7 +55,8 @@ get_airports_grid: function(){
 				this.action_new_tab()
 			],
 			columns: [ 
-				{header: 'Airport', dataIndex:'apt_ident', sortable: true, flex: 1,
+				{header: 'Airport', dataIndex:'apt_ident', 
+					sortable: true, flex: 1, menuDisabled: true,
 					renderer: function(v, meta, rec){
 						return rec.get("apt_ident") + ": " + rec.get("apt_name_ascii");
 					}

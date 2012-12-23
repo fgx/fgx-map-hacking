@@ -83,10 +83,10 @@ class Airport(Base.navdata):
 	
 	#if POSTGIS: #INTERESTING said pete
 	apt_center = GeometryColumn(Point(srid=FGX_SRID), comparator=PGComparator, nullable=True)
-	apt_center_lat = Column(String(20), nullable=True)
-	apt_center_lon = Column(String(20), nullable=True)
-	apt_center_lat84 = Column(String(20), nullable=True)
-	apt_center_lon84 = Column(String(20), nullable=True)
+	apt_center_lat = Column(String(32), nullable=True)
+	apt_center_lon = Column(String(32), nullable=True)
+	apt_center_lat84 = Column(String(32), nullable=True)
+	apt_center_lon84 = Column(String(32), nullable=True)
 	
 	apt_rwy_count = Column(String(20), nullable=True)
 	apt_min_rwy_len_ft = Column(String(20), nullable=True)
@@ -105,6 +105,8 @@ class Airport(Base.navdata):
 			apt_size=self.apt_size,
 			apt_center_lat=self.apt_center_lat,
 			apt_center_lon=self.apt_center_lon,
+			apt_center_lat84=self.apt_center_lat84,
+			apt_center_lon84=self.apt_center_lon84,
 			apt_min_rwy_len_ft=self.apt_min_rwy_len_ft,
 			apt_max_rwy_len_ft=self.apt_max_rwy_len_ft,
 			apt_xplane_code=self.apt_xplane_code

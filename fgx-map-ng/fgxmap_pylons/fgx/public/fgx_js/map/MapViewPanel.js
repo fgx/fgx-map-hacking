@@ -43,6 +43,7 @@ get_airports_panel: function(){
 			var r = {title: apt.apt_ident, lat: apt.apt_center_lat84, lon: apt.apt_center_lon84}
 			this.get_mini_map().show_blip(r);
 			this.get_main_map().show_blip(r);
+			console.log(r);
 		}, this); 
 	}
 	return this.xAirportsPanel;
