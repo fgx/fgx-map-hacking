@@ -128,15 +128,18 @@ initComponent: function() {
 		listeners: {
 			scope: this,
 			selectionchange:  function(store, selected, e){
+				if(selected.length == 0){
+					this.fireEvent("GOTO", null);
+					return;
+				}
+					
 				var rec = selected[0];
-				console.log("lat/lon", selected);
+				//console.log("lat/lon", selected);
 				obj = {};
-				obj.lat = rec.get("lat");
-				obj.lon = rec.get("lon");
-				obj.title = rec.get("ident");
-				//var lonLat = new OpenLayers.LonLat(rec.get("lon"), rec.get("lat") );
+				obj.lat = rec.get("nav_center_lat84");
+				obj.lon = rec.get("nav_center_lon84");
+				obj.title = rec.get("nav_ident");
 				this.fireEvent("GOTO", obj);
-				//self.conf.mapPanel.map.setCenter( new OpenLayers.LonLat(rec.get("lon"), rec.get("lat")) );
 			}
 		}
 		

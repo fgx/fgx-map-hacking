@@ -4,7 +4,8 @@
 Ext.define("FGx.map.MapCore", {
 
 extend: "GeoExt.panel.Map", 
-L: {},
+
+L: {blip: null, line: null},
 
 get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
@@ -30,7 +31,7 @@ get_map: function(){
 
 //======================================================
 // Create the Layers
-get_layers: function(){
+DEADget_layers: function(){
 	this.L = {};
 	this.L.lite = new OpenLayers.Layer.OSM.Mapnik( "Light" );
 	this.L.lite.setOpacity(0.4);	
@@ -389,6 +390,14 @@ initComponent: function() {
 	
 	});
 	this.callParent();
+
+	this.L.blip = new OpenLayers.Layer.Vector("Blip");
+	this.map.addLayer(  this.L.blip );
+	
+	this.L.line = new OpenLayers.Layer.Vector("Line");	
+	this.map.addLayer( this.L.line );
+	console.log("HEre");
+	
 }, // initComponent	
 
 on_base_layer: function(butt, checked){
@@ -408,27 +417,58 @@ set_base_layer: function(layer_name){
 
 
 
-on_zoom_to: function(butt){
+DEADon_zoom_to: function(butt){
 	this.map.zoomTo( butt.zoom );
 },
 
 
-pan_to: function(obj, zoom){
+pan_to: function(obj){
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 			).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
 	this.map.setCenter(lonLat, zoom);
 	
 },
 
+show_blip: function(obj){
+	var lay = this.map.getLayersByName("Blip");
+	//console.log("show_blip", obj);
+	this.L.line.removeAllFeatures();
+	if(!obj){
+		return;
+	}
+	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
+		).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857"));
+	//console.log(lonLat);
+	this.map.panTo( lonLat );
+	//this.map.zoomTo( 10 );
+	
+	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
+				).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857") );	
+	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
+		pt,
+			0, // wtf. .I want a larger cicle
+			20
+		);
+	var style = {
+		strokeColor: "red",
+		strokeOpacity: 1,
+		strokeWidth: 4,
+		fillColor: "yellow",
+		fillOpacity: 0.8 };
+	var feature = new OpenLayers.Feature.Vector(circle, null, style);
+	lay[0].addFeatures([feature]);
+	//console.log("YES");
+},
 
-on_goto: function(butt){
+
+DEADon_goto: function(butt){
 	this.fireEvent("OPEN_MAP", {
 		title: butt.text, closable: true, lon: butt.lon, lat: butt.lat, zoom: butt.zoom
 	});
 },
 
 
-show_blip: function(obj){
+ssshow_blip: function(obj){
 	this.L.blip.removeAllFeatures();
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );

@@ -87,7 +87,6 @@ get_nav_widget: function(){
 		
 		this.xNavWidget =  Ext.create("FGx.nav.NavWidget", {});
 		this.xNavWidget.on("GOTO", function(obj){
-
 			this.get_mini_map().show_blip(obj);
 			this.get_map_panel().show_blip(obj);
 		}, this);  
