@@ -9,7 +9,7 @@ def airports(apt_ident=None, apt_name_ascii=None, bounds=None, apt_type=None, lo
  
     ## The cols to return, this is a string with spces and split later
 	cols_str = "apt_ident apt_name_ascii apt_authority apt_size "
-	cols_str += " apt_center_lat apt_center_lon "
+	cols_str += " apt_center_lat84 apt_center_lon84 "
 	#cols_str += " apt_center_lat84 apt_center_lon84 "
 		
 	## now we make the select.. parts
@@ -48,7 +48,10 @@ def airport(apt_ident):
  
 	## TODO
 	
-	return [ob.dic() for ob in meta.Sess.navdata.query(Airport).filter_by(apt_ident=apt_ident).order_by(Airport.apt_ident).all() ]
+	apts =  [ob.dic() for ob in meta.Sess.navdata.query(Airport).filter_by(apt_ident=apt_ident).order_by(Airport.apt_ident).all() ]
+	if len(apts) == 0:
+		return None
+	return apts[0]
 	
 	
 ## Does an sql query and return a list of dict

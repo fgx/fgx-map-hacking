@@ -34,21 +34,16 @@ get_main_map: function(){
 get_airports_panel: function(){
 	if(!this.xAirportsPanel){
 		this.xAirportsPanel =  Ext.create("FGx.airport.AirportsPanel", {});
-		this.xAirportsPanel.on("rowclick", function(grid, idx, e){
-			var rec = grid.getStore().getAt(idx);
-			var r = rec.data
-			r.lat = r.apt_center_lat;
-			r.lon = r.apt_center_lon;
-			//console.log(r);
+		this.xAirportsPanel.on("AIRPORT", function(apt){
+			if(!apt){
+				this.get_mini_map().show_blip(null);
+				this.get_main_map().show_blip(null);
+				return;
+			}
+			var r = {title: apt.apt_ident, lat: apt.apt_center_lat84, lon: apt.apt_center_lon84}
 			this.get_mini_map().show_blip(r);
+			this.get_main_map().show_blip(r);
 		}, this); 
-		this.xAirportsPanel.on("rowdblclick", function(grid, idx, e){
-			var rec = grid.getStore().getAt(idx);
-			var r = rec.data
-			r.lat = r.apt_center_lat;
-			r.lon = r.apt_center_lon;
-			this.get_main_map().pan_to( r, 10 );
-		}, this);  
 	}
 	return this.xAirportsPanel;
 },
@@ -130,7 +125,7 @@ initComponent: function() {
 		items: [
 			
 
-			this.get_map_panel(),	
+			this.get_main_map(),	
 				
 			{region: 'east', width: 400, 
 				collapsible: true,
@@ -156,8 +151,6 @@ initComponent: function() {
 				]
 			}
 		]
-		
-		
 	});
 	this.callParent();
 	

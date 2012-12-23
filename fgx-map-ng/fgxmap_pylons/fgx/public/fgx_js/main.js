@@ -70,7 +70,9 @@ Ext.define('mAirport', {
 		{name: "apt_size", type: 'string'},
 		{name: "apt_center_lat", type: 'string'},
 		{name: "apt_center_lon", type: 'string'},
-		{name: "apt_authority", type: 'string'},
+		{name: "apt_center_lat84", type: 'string'},
+		{name: "apt_center_lon84", type: 'string'},
+		{name: "apt_authority", type: 'string'}
 	]
 });
 

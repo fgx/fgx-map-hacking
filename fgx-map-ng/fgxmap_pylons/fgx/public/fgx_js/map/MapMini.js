@@ -1,5 +1,5 @@
 
-Ext.define("FGx.map.MiniMapPanel", {
+Ext.define("FGx.map.MapMini", {
 
 extend: "FGx.map.MapCore",
 

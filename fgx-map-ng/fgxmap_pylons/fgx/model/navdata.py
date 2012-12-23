@@ -81,9 +81,12 @@ class Airport(Base.navdata):
 	apt_ifr = Column(String(1), nullable=True)
 	apt_size = Column(String(32), nullable=True)
 	
+	#if POSTGIS: #INTERESTING said pete
 	apt_center = GeometryColumn(Point(srid=FGX_SRID), comparator=PGComparator, nullable=True)
 	apt_center_lat = Column(String(20), nullable=True)
 	apt_center_lon = Column(String(20), nullable=True)
+	apt_center_lat84 = Column(String(20), nullable=True)
+	apt_center_lon84 = Column(String(20), nullable=True)
 	
 	apt_rwy_count = Column(String(20), nullable=True)
 	apt_min_rwy_len_ft = Column(String(20), nullable=True)
@@ -109,7 +112,8 @@ class Airport(Base.navdata):
 	
 	def __repr__(self):
 		return "<Airport: %s>" % (self.apt_ident)
-	
+
+
 GeometryDDL(Airport.__table__)
 
 
@@ -169,7 +173,9 @@ class Fix(Base.navdata):
 			fix_center_lat84=self.fix_center_lat84, fix_center_lon84=self.fix_center_lon84
 		)
 		
-		
+
+GeometryDDL(Fix.__table__)	
+	
 ##################################################
 class Ils(Base.navdata):
 	
@@ -199,7 +205,8 @@ class Ils(Base.navdata):
 
 	def __repr__(self):
 		return "<Airport: %s>" % (self.apt_ident)
-	
+
+
 GeometryDDL(Airport.__table__)
 
 

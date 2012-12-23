@@ -430,7 +430,6 @@ show_blip: function(obj){
 	};
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
 	this.L.blip.addFeatures( [feature] );
-	console.log("blip");
 }
 
 

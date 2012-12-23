@@ -13,8 +13,8 @@ def setup_app(command, conf, vars):
 
     # Create the tables if they don't already exist
     #Base.metadata.drop_all(bind=Session.bind)
-    Base.data.metadata.create_all(bind=Sess.data.bind)
-    Base.secure.metadata.create_all(bind=Sess.secure.bind)
+    Base.navdata.metadata.create_all(bind=Sess.navdata.bind)
+    Base.users.metadata.create_all(bind=Sess.users.bind)
     Base.mpnet.metadata.create_all(bind=Sess.mpnet.bind)
 
     
