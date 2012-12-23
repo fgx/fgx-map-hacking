@@ -23,8 +23,7 @@ initComponent: function() {
 	});
 	this.callParent();
 		
-	this.map.addLayer( make_base_layer("OSM") );
-	this.set_base_layer("OSM");
+
 	this.map.zoomTo(3);
 	
 

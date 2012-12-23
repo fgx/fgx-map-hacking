@@ -11,20 +11,65 @@ get_display_projection: function(){
 	return new OpenLayers.Projection("EPSG:4326");
 },
 
-/*
+
+
 get_map: function(){
-	if(!this.xMap){
-		//this.xMap =  
-		this.xMap.events.register("mousemove", this, function (e) {
-			var pos = this.xMap.getLonLatFromPixel(e.xy);
-			pos.transform(new OpenLayers.Projection("EPSG:3857"), new OpenLayers.Projection("EPSG:4326"));
-			this.lbl_lat().setValue(pos.lat);
-			this.lbl_lon().setValue(pos.lon);
+	if(!this.xxxxMap){
+		this.xxxxMap =  new OpenLayers.Map({
+			allOverlays: false,
+			units: 'm',
+			// this is the map projection here
+			projection: new OpenLayers.Projection("EPSG:3857"), // this.get_projection(),
+			//sphericalMercator: true,
+			
+			// this is the display projection, I need that to show lon/lat in degrees and not in meters
+			displayProjection: this.get_display_projection(),
+			
+			// the resolutions are calculated by tilecache, when there is no resolution parameter but a bbox in
+			// tilecache.cfg it shows you resolutions for all calculated zoomlevels in your browser: 
+			// by http://yoururltothemap.org/tilecache.py/1.0.0/layername/ etc.
+			// (This would not be necessary for 4326/900913 because this values are widely spread in
+			// openlayer/osm/google threads, you will find the resolutions there)
+			resolutions: [
+				//156543.03390625, 
+				//78271.516953125, 
+				//39135.7584765625, 
+				19567.87923828125, 
+				9783.939619140625, 
+				4891.9698095703125, 
+				2445.9849047851562, 
+				1222.9924523925781, 
+				611.4962261962891, 
+				305.74811309814453, 
+				152.87405654907226, 
+				76.43702827453613, 
+				38.218514137268066, 
+				19.109257068634033, 
+				9.554628534317017, 
+				4.777314267158508, 
+				2.388657133579254, 
+				1.194328566789627, 
+				0.5971642833948135, 
+				0.29858214169740677
+			],
+			
+			// I set a max and min resolution, means setting available zoomlevels by default
+			//maxResolution: 19567.87923828125, //156543.03390624999883584678,
+			//minResolution: 0.29858214169740676658,
+			
+			// i.e. maxExtent for EPSG 3572 is derived by browsing the very useful map at
+			// http://nsidc.org/data/atlas/epsg_3572.html. I tried to get this values with mapnik2 and
+			// proj4, but the values I get back with box2d are not very useful at the moment
+			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+			
+			//TODO make a config zoomlevels 0-13 = 14 levels ?
+			zoomLevels: 17, 
+			//layers: this.get_layers()
 		});
 	}
-	return this.xMap;
+	return this.xxxxMap;
 },
-*/
+
 
 
 
@@ -313,8 +358,6 @@ get_store: function(){
 //===========================================================
 initComponent: function() {
 	
-	//console.log(">> MapPanel.constructor", this.xConfig);
-	//return;
 	var config = this.xConfig;
 	
 	var ll;
@@ -326,81 +369,29 @@ initComponent: function() {
 		ll = new OpenLayers.LonLat(939262.20344, 5938898.34882);
 		ll.xFlag = "DEAFAUT: "
 	}
-	//console.log(ll.xFlag, ll.x, ll.y, config);
+
 	Ext.apply(this, {
 		
 		fgxType: "MapCore",
 		frame: false, border: false, bodyBorder: false,
-		map: new OpenLayers.Map({
-			allOverlays: false,
-			units: 'm',
-			// this is the map projection here
-			projection: new OpenLayers.Projection("EPSG:3857"), // this.get_projection(),
-			//sphericalMercator: true,
-			
-			// this is the display projection, I need that to show lon/lat in degrees and not in meters
-			displayProjection: this.get_display_projection(),
-			
-			// the resolutions are calculated by tilecache, when there is no resolution parameter but a bbox in
-			// tilecache.cfg it shows you resolutions for all calculated zoomlevels in your browser: 
-			// by http://yoururltothemap.org/tilecache.py/1.0.0/layername/ etc.
-			// (This would not be necessary for 4326/900913 because this values are widely spread in
-			// openlayer/osm/google threads, you will find the resolutions there)
-			resolutions: [
-				//156543.03390625, 
-				//78271.516953125, 
-				//39135.7584765625, 
-				19567.87923828125, 
-				9783.939619140625, 
-				4891.9698095703125, 
-				2445.9849047851562, 
-				1222.9924523925781, 
-				611.4962261962891, 
-				305.74811309814453, 
-				152.87405654907226, 
-				76.43702827453613, 
-				38.218514137268066, 
-				19.109257068634033, 
-				9.554628534317017, 
-				4.777314267158508, 
-				2.388657133579254, 
-				1.194328566789627, 
-				0.5971642833948135, 
-				0.29858214169740677
-			],
-			
-			// I set a max and min resolution, means setting available zoomlevels by default
-			//maxResolution: 19567.87923828125, //156543.03390624999883584678,
-			//minResolution: 0.29858214169740676658,
-			
-			// i.e. maxExtent for EPSG 3572 is derived by browsing the very useful map at
-			// http://nsidc.org/data/atlas/epsg_3572.html. I tried to get this values with mapnik2 and
-			// proj4, but the values I get back with box2d are not very useful at the moment
-			maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
-			
-			//TODO make a config zoomlevels 0-13 = 14 levels ?
-			zoomLevels: 17, 
-			//layers: this.get_layers()
-		}),
+		map: this.get_map(),
 		center:  ll, 
 		zoom:  5,
-		//layers: this.get_layers(),
-		//xFlightsStore: this.get_store(),
-		
-	
 	});
 	this.callParent();
 
+	this.map.addLayer( make_base_layer("OSM") );
+	this.set_base_layer("OSM");
+	
 	this.L.blip = new OpenLayers.Layer.Vector("Blip");
 	this.map.addLayer(  this.L.blip );
 	
 	this.L.line = new OpenLayers.Layer.Vector("Line");	
 	this.map.addLayer( this.L.line );
-	console.log("HEre");
 	
-}, // initComponent	
+}, // << initComponent	
 
-on_base_layer: function(butt, checked){
+DEADon_base_layer: function(butt, checked){
 	//console.log(butt.xLayer);
 	//var bbButton = Ext.getCmp( this.getId() + "map-base-button");
 	//if(checked){
@@ -430,17 +421,14 @@ pan_to: function(obj){
 },
 
 show_blip: function(obj){
-	var lay = this.map.getLayersByName("Blip");
-	//console.log("show_blip", obj);
-	this.L.line.removeAllFeatures();
+	
+	this.L.blip.removeAllFeatures();
 	if(!obj){
 		return;
 	}
 	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
 		).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857"));
-	//console.log(lonLat);
 	this.map.panTo( lonLat );
-	//this.map.zoomTo( 10 );
 	
 	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
 				).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857") );	
@@ -448,16 +436,16 @@ show_blip: function(obj){
 		pt,
 			0, // wtf. .I want a larger cicle
 			20
-		);
+	);
 	var style = {
 		strokeColor: "red",
 		strokeOpacity: 1,
 		strokeWidth: 4,
 		fillColor: "yellow",
-		fillOpacity: 0.8 };
+		fillOpacity: 0.8 
+	};
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	lay[0].addFeatures([feature]);
-	//console.log("YES");
+	this.L.blip.addFeatures( [feature] );
 },
 
 
