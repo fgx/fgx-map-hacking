@@ -8,9 +8,8 @@ W: {
 },
 
 get_mini_map: function(){
-	
 	if(!this.xMiniMap){
-		this.xMiniMap = Ext.create("FGx.map.MiniMapPanel", {
+		this.xMiniMap = Ext.create("FGx.map.MapMini", {
 			region: "south", height: 250, collapsible: true,
 			ddflex: 1, xConfig: this.xConfig
 		});
@@ -19,9 +18,8 @@ get_mini_map: function(){
 	return this.xMiniMap;
 },
 
-get_map_panel: function(){
+get_main_map: function(){
 	if(!this.xMapPanel){
-		//this.xConfig.region = "center";
 		this.xMapPanel =  Ext.create("FGx.map.MapBasic", {
 			xConfig: this.xConfig, flex: 1, region: "center"
 		});

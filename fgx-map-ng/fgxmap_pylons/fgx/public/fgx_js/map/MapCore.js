@@ -371,8 +371,7 @@ initComponent: function() {
 	}
 
 	Ext.apply(this, {
-		
-		fgxType: "MapCore",
+		DEADfgxType: "INHERITED MapCore",
 		frame: false, border: false, bodyBorder: false,
 		map: this.get_map(),
 		center:  ll, 
@@ -391,25 +390,10 @@ initComponent: function() {
 	
 }, // << initComponent	
 
-DEADon_base_layer: function(butt, checked){
-	//console.log(butt.xLayer);
-	//var bbButton = Ext.getCmp( this.getId() + "map-base-button");
-	//if(checked){
-	this.set_base_layer(butt.xLayer);
-	//}
-	bbButton.setIconCls(butt.xiconCls);
-	bbButton.setText(butt.text);
-},
 
 set_base_layer: function(layer_name){
 	var layer = this.map.getLayersByName(layer_name)[0];
 	this.map.setBaseLayer( layer );
-},
-
-
-
-DEADon_zoom_to: function(butt){
-	this.map.zoomTo( butt.zoom );
 },
 
 
@@ -446,39 +430,7 @@ show_blip: function(obj){
 	};
 	var feature = new OpenLayers.Feature.Vector(circle, null, style);
 	this.L.blip.addFeatures( [feature] );
-},
-
-
-DEADon_goto: function(butt){
-	this.fireEvent("OPEN_MAP", {
-		title: butt.text, closable: true, lon: butt.lon, lat: butt.lat, zoom: butt.zoom
-	});
-},
-
-
-ssshow_blip: function(obj){
-	this.L.blip.removeAllFeatures();
-	var lonLat = new OpenLayers.LonLat(obj.lon, obj.lat
-		).transform(this.get_display_projection(),  this.get_map().getProjectionObject() );
-
-	this.get_map().panTo( lonLat );
-	this.get_map().zoomTo( 10 );
-	
-	var pt =  new OpenLayers.Geometry.Point(obj.lon, obj.lat
-				).transform(this.get_display_projection(), this.get_map().getProjectionObject() );	
-	var circle = OpenLayers.Geometry.Polygon.createRegularPolygon(
-		pt,
-			0, // wtf. .I want a larger cicle
-			20
-		);
-	var style = {
-		strokeColor: "red",
-		strokeOpacity: 1,
-		strokeWidth: 4,
-		fillColor: "yellow",
-		fillOpacity: 0.8 };
-	var feature = new OpenLayers.Feature.Vector(circle, null, style);
-	this.L.blip.addFeatures([feature]);
+	console.log("blip");
 }
 
 
