@@ -1,4 +1,4 @@
-
+/*global Ext: false, console: false, FGx: false */
 
 Ext.define("FGx.nav.NavWidget", {
 
@@ -128,7 +128,7 @@ initComponent: function() {
 		listeners: {
 			scope: this,
 			selectionchange:  function(store, selected, e){
-				//var rec = this.get_store().getAt(rowIdx);
+				var rec = selected[0];
 				console.log("lat/lon", selected);
 				obj = {};
 				obj.lat = rec.get("lat");
