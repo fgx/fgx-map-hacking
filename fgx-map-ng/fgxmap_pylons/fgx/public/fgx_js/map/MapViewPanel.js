@@ -33,14 +33,13 @@ get_main_map: function(){
 // Airports Grid
 get_airports_panel: function(){
 	if(!this.xAirportsPanel){
-		
 		this.xAirportsPanel =  Ext.create("FGx.airport.AirportsPanel", {});
 		this.xAirportsPanel.on("rowclick", function(grid, idx, e){
 			var rec = grid.getStore().getAt(idx);
 			var r = rec.data
 			r.lat = r.apt_center_lat;
 			r.lon = r.apt_center_lon;
-			console.log(r);
+			//console.log(r);
 			this.get_mini_map().show_blip(r);
 		}, this); 
 		this.xAirportsPanel.on("rowdblclick", function(grid, idx, e){
@@ -48,8 +47,7 @@ get_airports_panel: function(){
 			var r = rec.data
 			r.lat = r.apt_center_lat;
 			r.lon = r.apt_center_lon;
-			this.get_map_panel().pan_to( r, 10 );
-			//this.get_map().zoomTo( 10 );
+			this.get_main_map().pan_to( r, 10 );
 		}, this);  
 	}
 	return this.xAirportsPanel;
@@ -146,7 +144,7 @@ initComponent: function() {
 						frame: false,
 						border: false,
 						flex: 2,
-						activeTab: 1,
+						activeTab: 0,
 						items: [
 							this.get_airports_panel(),
 							this.get_nav_widget(),

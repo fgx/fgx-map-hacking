@@ -23,7 +23,6 @@ initComponent: function() {
 	});
 	this.callParent();
 		
-
 	this.map.zoomTo(3);
 	
 
