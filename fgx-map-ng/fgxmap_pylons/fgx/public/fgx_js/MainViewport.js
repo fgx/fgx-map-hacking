@@ -18,7 +18,7 @@ widgets: {
 //===========================================================
 //== Flights data LIVE state
 // This this is location of the the "multiplayer stuff"..
-refresh_rate: 10,
+refresh_rate: 0,
 runner: Ext.create("Ext.util.TaskRunner", {}),
 
 xFlightsStore: Ext.create("Ext.data.JsonStore", {

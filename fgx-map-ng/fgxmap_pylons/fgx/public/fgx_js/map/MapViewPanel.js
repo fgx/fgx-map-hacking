@@ -22,7 +22,7 @@ get_mini_map: function(){
 get_map_panel: function(){
 	if(!this.xMapPanel){
 		//this.xConfig.region = "center";
-		this.xMapPanel =  Ext.create("FGx.map.MapCore", {
+		this.xMapPanel =  Ext.create("FGx.map.MapBasic", {
 			xConfig: this.xConfig, flex: 1, region: "center"
 		});
 	}

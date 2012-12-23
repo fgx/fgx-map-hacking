@@ -18,18 +18,14 @@ var VP = null;
 {{ mac.openlayers_js() }}
 
 <script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/main.js"></script>
-
-
-
-{# <script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/MainViewport.js"></script>	#}
-
+<script type="text/javascript" src="/fgx_js.{{app_globals.fgx_js_version}}/layers.js"></script>
 {% endblock header %}
 
 
 
 {#=======================================================#}
 {% block content %}
-
+Loading, please wait....
 
 <script>
 Ext.onReady(function(){
