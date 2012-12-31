@@ -49,7 +49,7 @@ get_airports_grid: function(){
 			}, 
 			
 			stripeRows: true,
-			store: this.get_store(),
+			store: this.get_airports_store(),
 			loadMask: true,
 			tbar: [
 				this.action_new_tab()
@@ -202,7 +202,11 @@ initComponent: function() {
 								txtFld.setValue( txtFld.getValue().trim() );
 								var s = txtFld.getValue();
 								if(s.length > 1){
-									this.get_store().load({params: {apt_ident: s}});
+									this.get_airports_store().load({params: {
+										apt_ident: s,
+										apt_type: this.get_apt_types(),
+										apt_size: this.get_apt_sizes()
+									}});
 								}
 							}
 						}
@@ -226,10 +230,10 @@ initComponent: function() {
 						listeners: {
 							scope: this,
 							keyup: function(txtFld, e){
-								if(txtFld.getValue().length > 1){
+								if(txtFld.getValue().length > 3){
 									var s = txtFld.getValue().trim();
-									if(s.length > 2){
-										this.get_store().load({params: {apt_name_ascii: 1}});
+									if(s.length > 3){
+										this.get_airports_store().load({params: {apt_name_ascii: 1}});
 									}
 								}
 							}
@@ -238,14 +242,14 @@ initComponent: function() {
 				]
 			},
 			{xtype: 'buttongroup', 
-				title: 'Show Selected - TODO',
+				title: 'Search For - TODO',
 				columns: 5,
 				items: [
-					{text: "Major", pressed: true, enableToggle: true},
-					{text: "Minor", pressed: true, enableToggle: true},
-					{text: "Small", enableToggle: true},
-					{text: "Water", enableToggle: true},
-					{text: "HeliPad", enableToggle: true}
+					{text: "Major", apt_filter: 1, pressed: true, enableToggle: true, apt_type: "land", apt_size: "large"},
+					{text: "Regional", apt_filter: 1, pressed: true, enableToggle: true,  apt_type: "land", apt_size: "medium"},
+					{text: "Small", apt_filter: 1, enableToggle: true,  apt_type: "land", apt_size: "small"},
+					{text: "SeaPort", apt_filter: 1, enableToggle: true,  apt_type: "sea"},
+					{text: "HeliPort", apt_filter: 1, enableToggle: true, apt_type: "heli"}
 				]
 			}
 		]
@@ -254,8 +258,34 @@ initComponent: function() {
 	this.callParent();
 }, // initComponent
 
+get_apt_types: function(){
+	var widgets = this.query("[apt_filter=1]");
+	var arr = [];
+	for(var w in widgets){
+		if(w.pressed){
+			arr.push(w.apt_size);
+		}
+	}
+	console.log("types", widgets, arr);
+	return "-";
+},
+get_apt_sizes: function(){
+	var widgets = this.query("[apt_type=land]");
+	var arr = [];
+	for(var idx in widgets){
+		var w = widgets[idx]
+		if(w.pressed){
+			arr.push(w.apt_size);
+		}
+		//console.log(w.pressed, w.text, w);
+	}
+	console.log("sizes=", arr.join(",");
+	return arr.join(",");
+},
+
+
 //== Store
-get_store: function(){
+get_airports_store: function(){
 	if(!this.xStore){
 		this.xStore = Ext.create("Ext.data.JsonStore", {
 			model: "mAirport",

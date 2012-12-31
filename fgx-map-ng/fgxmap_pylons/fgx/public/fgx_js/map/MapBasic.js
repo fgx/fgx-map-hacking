@@ -215,8 +215,8 @@ initComponent: function() {
 
 	this.callParent();
 	
-	this.map.addLayer( make_base_layer("Light") );
-	this.set_base_layer("Light");
+	//this.map.addLayer( make_base_layer("Light") );
+	//this.set_base_layer("Light");
 	
 	//== Add the layers here
 	var xLayers = ['VOR','DME','NDB','FIX', "Airport", "Seaport", "Heliport"];
