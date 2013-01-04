@@ -14,13 +14,13 @@ Ext.application({
         ' FGx.store.flight'
     ],
     controllers: [
-        'User'
+        'flight'
     ],
     models: [
-        'Flight'
+        'flight'
     ],
     stores: [
-        'Flight'
+        'flight'
     ],
     autoCreateViewport: true
 });

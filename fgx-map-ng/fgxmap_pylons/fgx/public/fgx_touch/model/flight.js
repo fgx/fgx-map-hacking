@@ -1,4 +1,4 @@
-Ext.define('FGx.model.Flight', {
+Ext.define('FGx.model.flight', {
     extend: 'Ext.data.Model',
      
     fields: [

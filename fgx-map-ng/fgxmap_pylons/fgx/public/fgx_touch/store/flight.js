@@ -1,7 +1,7 @@
-Ext.define('FGx.store.Flight', {
+Ext.define('FGx.store.flight', {
     extend: 'Ext.data.Store',
  
-    model: 'FGx.model.Flight',
+    model: 'FGx.model.flight',
     autoLoad: true,
     proxy: {
         type: 'jsonp',

@@ -1,4 +1,4 @@
-Ext.define('FGx.view.Viewport', {
+Ext.define('FGx.view.viewport', {
     extend: 'Ext.Panel',
  
     config: {
