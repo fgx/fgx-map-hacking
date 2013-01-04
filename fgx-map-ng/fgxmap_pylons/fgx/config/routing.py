@@ -121,6 +121,8 @@ def make_map(config):
 	##=======================================================================
 	map.connect('/m', controller="html_pages", action="mobile")
 	map.connect('/mobile', controller="html_pages", action="mobile")
+	map.connect('/m/{page}', controller="html_pages", action="mobile")
+	map.connect('/mobile/{page}', controller="html_pages", action="mobile")
 	
 	##=======================================================================
 	## HTML Pages

@@ -57,3 +57,14 @@ class HtmlPagesController(BaseController):
 		
 		return "FOoooooooooooooooooo"
 	"""
+	
+	""" Am trying to future prrof with various flavours of mobile eg /m/ext or /m/jsmobile etc """
+	def mobile(self, page=None):
+		
+		mobile_template = "mobile.html"
+		if page:
+			mobile_template = "mobile.%s.html"
+		
+		return render(mobile_template)
+		
+		
