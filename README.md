@@ -9,7 +9,7 @@ This whole repository is a work in progress and has two parts.
  - <http://maptest.fgx.ch>
 
 
--fgx-map-ng/
+- fgx-map-ng/
   - Next generation mapping toolkit and services
   - This is where most active development is happening
   - <http://map-ng.fgx.ch> TODO
