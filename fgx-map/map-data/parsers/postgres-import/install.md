@@ -11,3 +11,5 @@ sudo apt-get install libpython2.7-dev
 # postgres driver
 sudo easy_install psycopg2
 
+#geographic lib
+sudo easy_install geographiclib

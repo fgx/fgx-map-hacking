@@ -7,6 +7,8 @@ import psycopg2
 # database connection
 global CONN
 CONN = None
+
+
 global DB
 DB = None
 
@@ -71,4 +73,3 @@ def load_yaml(file_path, as_object=False):
 	if as_object:
 		return FGxOO(data_dict)
 	return data_dict
-	
